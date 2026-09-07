@@ -1,0 +1,358 @@
+{
+  "_note": "Tracked cross-unit threads. Hand-authored — this is policy, nothing derives it. A data-root listed here as `root` gets this thread's colour in EVERY unit it appears in (global tier). Roots not listed here fall back to the unit's local palette in units.json. To recolour a thread book-wide, change its `color` here. `opens`/`payoffs` are for the trajectory popover; `status` open|closed. `tagged: false` means the thread is real in the commentary but not yet marked with data-root spans in the fragments — see pipeline/out/retrofit-*.md.",
+  "version": 1,
+  "threads": [
+    {
+      "id": "light",
+      "root": "light",
+      "translit": "phōs",
+      "gloss": "light",
+      "color": "#c99a2e",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 4,
+        "ref": "4:16"
+      },
+      "payoffs": [
+        {
+          "unit": 5,
+          "ref": "5:14"
+        },
+        {
+          "unit": 6,
+          "ref": "6:23",
+          "note": "light curdling back to darkness"
+        }
+      ],
+      "note": "Isa 9 light dawns on the people (4:16) -> 'y'all are the light of the world' (5:14). Watch the light/dark pair across the 4/5 seam."
+    },
+    {
+      "id": "nations",
+      "root": "nations",
+      "translit": "ethnē",
+      "gloss": "nations / Gentiles",
+      "color": "#b06a3a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 4,
+        "ref": "4:15"
+      },
+      "payoffs": [
+        {
+          "unit": 28,
+          "ref": "28:19"
+        }
+      ],
+      "note": "'Galilee of the nations' (4:15) -> 'make disciples of all the nations' (28:19). One leg of the Emmanuel/nations frame around the whole book."
+    },
+    {
+      "id": "follow",
+      "root": "follow",
+      "translit": "akoloutheō",
+      "gloss": "follow (after)",
+      "color": "#3f7d3a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 4,
+        "ref": "4:20"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:23",
+          "note": "lands cleanly on 'the disciples' after two failed would-be followers"
+        }
+      ],
+      "note": "Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on."
+    },
+    {
+      "id": "fish",
+      "root": "fish",
+      "translit": "halieus / amphiblēstron",
+      "gloss": "fishers / net",
+      "color": "#4a4f93",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 4,
+        "ref": "4:19"
+      },
+      "payoffs": [
+        {
+          "unit": 13,
+          "ref": "13:47",
+          "note": "the dragnet parable"
+        }
+      ],
+      "note": "'Fishers of men' (4:19) carries OT judgement freight (Jer 16:16; Hab 1; Amos 4; Ezek 29) in tension with gathering-for-restoration."
+    },
+    {
+      "id": "sea",
+      "root": "sea",
+      "translit": "thalassa",
+      "gloss": "sea",
+      "color": "#2f6db3",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 4,
+        "ref": "4:15"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:24-32",
+          "note": "the sea as a structural mirror between the storm (8:24-25) and the pigs (8:32)"
+        }
+      ],
+      "note": "Sea/Galilee geography in Unit 4; in Unit 8 the sea becomes a chaos-and-authority stage."
+    },
+    {
+      "id": "apo-tote",
+      "root": "apo-tote",
+      "translit": "apo tote",
+      "gloss": "\"from that time\"",
+      "color": "#8a3c70",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 4,
+        "ref": "4:17"
+      },
+      "payoffs": [
+        {
+          "unit": 17,
+          "ref": "16:21"
+        }
+      ],
+      "note": "Two 'from that time' hinges: 4:17 ('began to proclaim') <-> 16:21 ('began to show he must suffer'). Read the two together at Unit 17."
+    },
+    {
+      "id": "law-prophets",
+      "root": "law-prophets",
+      "translit": "ho nomos kai hoi prophētai",
+      "gloss": "the Law & the Prophets",
+      "color": "#7d6b3f",
+      "status": "closed",
+      "tagged": true,
+      "opens": {
+        "unit": 5,
+        "ref": "5:17"
+      },
+      "payoffs": [
+        {
+          "unit": 7,
+          "ref": "7:12",
+          "note": "'this is the Law and the Prophets' — inclusio closed"
+        }
+      ],
+      "note": "Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed."
+    },
+    {
+      "id": "little-faith",
+      "root": "little-faith",
+      "translit": "oligopistoi",
+      "gloss": "\"little-faiths\"",
+      "color": "#8f6f9a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 6,
+        "ref": "6:30"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:26",
+          "note": "applied to the disciples themselves for the first time"
+        },
+        {
+          "unit": 14,
+          "ref": "14:31"
+        },
+        {
+          "unit": 16,
+          "ref": "16:8"
+        }
+      ],
+      "note": "Matthew's near-nickname for the disciples. Distinct from the centurion's pistis (Unit 8, a unit-local root)."
+    },
+    {
+      "id": "release",
+      "root": "release",
+      "translit": "aphiēmi",
+      "gloss": "release / forgive / leave",
+      "color": "#147a63",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 6,
+        "ref": "6:12"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:15"
+        },
+        {
+          "unit": 9,
+          "ref": "9:2",
+          "note": "the fever's release points forward to the paralytic's forgiveness"
+        }
+      ],
+      "note": "Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness."
+    },
+    {
+      "id": "build-rock",
+      "root": "build",
+      "translit": "oikodomeō / petra",
+      "gloss": "build / rock",
+      "color": "#6b5f4f",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 7,
+        "ref": "7:24"
+      },
+      "payoffs": [
+        {
+          "unit": 16,
+          "ref": "16:18",
+          "note": "'on this rock I will build my assembly'"
+        }
+      ],
+      "note": "The wise builder on rock (7:24) points forward to Peter the rock (16:18)."
+    },
+    {
+      "id": "wise-foolish",
+      "root": "wise-foolish",
+      "translit": "phronimos / mōros",
+      "gloss": "wise vs. foolish",
+      "color": "#a83e6b",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 7,
+        "ref": "7:24-26"
+      },
+      "payoffs": [
+        {
+          "unit": 25,
+          "ref": "25:2",
+          "note": "the wise and foolish virgins"
+        }
+      ],
+      "note": "The wise/foolish builder contrast (7:24-26) planted toward the ten virgins (25:2)."
+    },
+    {
+      "id": "authority",
+      "root": "authority",
+      "translit": "exousia",
+      "gloss": "authority",
+      "color": "#7b2fb3",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 7,
+        "ref": "7:29"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:9",
+          "note": "the centurion, a man under authority"
+        },
+        {
+          "unit": 28,
+          "ref": "28:18",
+          "note": "'all authority has been given to me'"
+        }
+      ],
+      "note": "The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18)."
+    },
+    {
+      "id": "throw",
+      "root": "throw",
+      "translit": "ballō / ekballō",
+      "gloss": "throw / cast (out)",
+      "color": "#a85520",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 8,
+        "ref": "8:6"
+      },
+      "payoffs": [],
+      "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later."
+    },
+    {
+      "id": "shake",
+      "root": "shake",
+      "translit": "seismos",
+      "gloss": "shaking / earthquake / storm",
+      "color": "#4a5a68",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 8,
+        "ref": "8:24"
+      },
+      "payoffs": [
+        {
+          "unit": 27,
+          "ref": "27:51-54"
+        },
+        {
+          "unit": 28,
+          "ref": "28:2"
+        }
+      ],
+      "note": "The 'great seismos' on the sea (8:24) is the same word as the earthquakes at the cross and the tomb."
+    },
+    {
+      "id": "torment",
+      "root": "torment",
+      "translit": "basanizō",
+      "gloss": "torment",
+      "color": "#7a2230",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 8,
+        "ref": "8:6"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:29",
+          "note": "the demons: 'have you come to torment us before the time?'"
+        }
+      ],
+      "note": "Inclusio inside Unit 8 — the servant tormented by illness (8:6) and the demons fearing torment (8:29). Watch for eschatological torment later."
+    },
+    {
+      "id": "urge",
+      "root": "urge",
+      "translit": "parakaleō",
+      "gloss": "urge / entreat / call alongside",
+      "color": "#9c2f8f",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 8,
+        "ref": "8:5"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:31-34",
+          "note": "the demons beg, then the whole town begs him to leave"
+        }
+      ],
+      "note": "The centurion entreats (8:5), the demons entreat (8:31), the town entreats him to go (8:34) — the same verb bends from faith to rejection."
+    }
+  ]
+}

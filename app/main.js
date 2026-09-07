@@ -2,7 +2,13 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend } from "./threads.js?v=4";
+
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
+
+// always revalidate — a no-build static site changes the moment files are pushed
+// no build step: always fetch the current file, never a cached copy
+const bust = (u) => { const x = new URL(u); x.searchParams.set("v", Date.now()); return x; };
 
 const content = document.getElementById("content");
 const unitNav = document.getElementById("unit-nav");
@@ -16,9 +22,12 @@ init();
 
 async function init() {
   try {
-    manifest = await (await fetch(UNITS_URL)).json();
+    [manifest] = await Promise.all([
+      fetch(bust(UNITS_URL)).then((r) => r.json()),
+      loadThreadData(),
+    ]);
   } catch (e) {
-    content.innerHTML = `<p class="missing">Could not load <code>data/units.json</code>.</p>`;
+    content.innerHTML = `<p class="missing">Could not load site data (<code>data/*.json</code>).</p>`;
     return;
   }
   buildUnitNav();
@@ -96,7 +105,7 @@ async function loadUnit(unit, anchor) {
 
   let html;
   try {
-    const url = new URL(`../units/${unit.slug}.html`, import.meta.url);
+    const url = bust(new URL(`../units/${unit.slug}.html`, import.meta.url));
     html = await (await fetch(url)).text();
   } catch (e) {
     content.innerHTML = `<p class="missing">Could not load <code>units/${unit.slug}.html</code>.</p>`;
@@ -104,7 +113,9 @@ async function loadUnit(unit, anchor) {
   }
 
   content.innerHTML = html;
-  injectPalette(unit);
+  const resolved = resolveUnit(unit);
+  injectPalette(unit, resolved);
+  rebuildLegend(content, resolved);
   wireFootnotes();
   buildPager(unit);
   document.title = `Unit ${unit.n} · ${unit.title} — Matthew Study`;
@@ -125,22 +136,6 @@ function markCurrent(slug) {
   }
   const u = manifest.units.find((x) => x.slug === slug);
   navToggleCtx.textContent = u ? `· Unit ${u.n} of ${manifest.unit_count}` : "";
-}
-
-/* --------------------------------------------------------- per-unit palette */
-
-function injectPalette(unit) {
-  document.getElementById("unit-palette")?.remove();
-  if (!unit.roots) return;
-  const rules = Object.entries(unit.roots)
-    .map(([root, hex]) =>
-      `.unit[data-unit="${unit.n}"] [data-root="${cssEsc(root)}"]{color:${hex}}` +
-      `\n.unit[data-unit="${unit.n}"] .swatch[style*="--c-${cssEsc(root)}"]{background:${hex}!important}`)
-    .join("\n");
-  const style = document.createElement("style");
-  style.id = "unit-palette";
-  style.textContent = rules;
-  document.head.appendChild(style);
 }
 
 /* --------------------------------------------------- footnote jump + return */
@@ -221,4 +216,3 @@ function buildPager(unit) {
 
 function roman(n) { return ["", "I", "II", "III", "IV", "V"][n] || String(n); }
 function escapeHtml(s) { return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
-function cssEsc(s) { return s.replace(/[^a-zA-Z0-9_-]/g, "\\$&"); }

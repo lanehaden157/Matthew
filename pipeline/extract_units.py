@@ -187,21 +187,29 @@ def strip_leftover_script(body, u):
     return body
 
 
+# normalise a few inconsistent data-root spellings to one canonical name
+ROOT_ALIASES = {"wild": "wilderness"}
+
+
 def rewrite_roots(body, palette, u):
     names = set(palette)
 
     def two(m):
         a, b = m.group(1), m.group(2)
         root = b if a == "r" else a
-        return f'class="r" data-root="{root}"'
+        return f'class="r" data-root="{ROOT_ALIASES.get(root, root)}"'
 
     body = re.sub(r'class="(r) ([a-z0-9-]+)"', two, body)
     body = re.sub(r'class="([a-z0-9-]+) (r)"', two, body)
 
+    # drop inline colour overrides that referenced per-unit CSS vars (now gone);
+    # colours come from data/units.json + data/threads.json at render time
+    body = re.sub(r'(<span class="r[l]?"[^>]*?)\s*style="color:var\(--c-[^"]*"', r"\1", body)
+
     def bare(m):
         cls = m.group(1)
         if cls in names:
-            return f'<span class="rl" data-root="{cls}">'
+            return f'<span class="rl" data-root="{ROOT_ALIASES.get(cls, cls)}">'
         return m.group(0)
 
     body = re.sub(r'<span class="([a-z0-9-]+)">', bare, body)

@@ -1,48 +1,679 @@
 {
-  "_note": "Unit manifest for the whole gospel. `built` units have a fragment in /units and a `roots` local-palette map. Titles are working titles from the Literary Unit Map (style reference 7.2). Phase 4 will regenerate the derived parts; the manifest and local palettes are hand-maintained.",
+  "_note": "Unit manifest for the whole gospel. built units carry a roots map name -> {color, translit, gloss}. A root also listed in threads.json takes that thread's colour instead (global tier); the local color here is the fallback. Hand-maintained; pipeline/extract_legends.py backfills translit/gloss from the fragments' legends. Some units list a few roots not (yet) tagged in the fragment — harmless superset.",
   "book": "Matthew",
   "unit_count": 28,
   "movements": [
-    { "id": 1, "label": "The Person of the Messiah", "range": "1:1-4:16/17" },
-    { "id": 2, "label": "The Kingdom Proclaimed in Galilee", "range": "4:17-16:20" },
-    { "id": 3, "label": "The Road to the Cross", "range": "16:21-28:20" }
+    {
+      "id": 1,
+      "label": "The Person of the Messiah",
+      "range": "1:1-4:16/17"
+    },
+    {
+      "id": 2,
+      "label": "The Kingdom Proclaimed in Galilee",
+      "range": "4:17-16:20"
+    },
+    {
+      "id": 3,
+      "label": "The Road to the Cross",
+      "range": "16:21-28:20"
+    }
   ],
   "units": [
-    { "n": 1, "slug": "unit-01", "passage": "Matthew 1:1-25", "title": "The Book of the Genesis", "movement": 1, "built": true,
-      "roots": { "beget": "#a8324a", "name": "#1c7d70", "save": "#c0641a", "spirit": "#4a4f93", "dream": "#2f6db3", "with": "#8a3c70", "david": "#8a6a2a" } },
-    { "n": 2, "slug": "unit-02", "passage": "Matthew 2:1-23", "title": "Out of Egypt I Called My Son", "movement": 1, "built": true,
-      "roots": { "beget": "#a8324a", "name": "#1c7d70", "call": "#1c7d70", "save": "#c0641a", "dream": "#2f6db3", "david": "#8a6a2a", "king": "#8a6a2a", "worship": "#6b2fb3", "child": "#3f7d3a", "fulfill": "#455a6b", "withdraw": "#9c4f1c" } },
-    { "n": 3, "slug": "unit-03", "passage": "Matthew 3:1-4:11", "title": "Wilderness, Water, Wilderness", "movement": 1, "built": true,
-      "roots": { "beget": "#a8324a", "name": "#1c7d70", "save": "#c0641a", "spirit": "#4a4f93", "dream": "#2f6db3", "with": "#8a3c70", "david": "#8a6a2a", "worship": "#6b2fb3", "child": "#3f7d3a", "fulfill": "#455a6b", "withdraw": "#9c4f1c", "kingdom": "#9c2f8f", "repent": "#1f8f5f", "immerse": "#0e8aa0", "wilderness": "#8a7a4a", "wild": "#8a7a4a", "test": "#7a2230", "son": "#c0285f", "right": "#b07a1e" } },
-    { "n": 4, "slug": "unit-04", "passage": "Matthew 4:12-25", "title": "The Light Has Dawned", "movement": 2, "built": true,
-      "roots": { "light": "#bd8b16", "dark": "#455a6b", "withdraw": "#9c4f1c", "kingdom": "#9c2f8f", "proclaim": "#1c7d70", "follow": "#3f7d3a", "fish": "#4a4f93", "sea": "#0e8aa0", "beget": "#a8324a" } },
-    { "n": 5, "slug": "unit-05", "passage": "Matthew 5:1-48", "title": "The Greater Righteousness", "movement": 2, "built": true,
-      "roots": { "righteous": "#b07a1e", "kingdom": "#9c2f8f", "father": "#1c7d70", "said": "#2f6db3", "isay": "#a8324a", "whole": "#5a3fa0", "gehenna": "#5e1822", "evil": "#7a5a10", "yall": "#3f7d3a" } },
-    { "n": 6, "slug": "unit-06", "passage": "Matthew 6:1-34", "title": "Before Your Father Who Sees", "movement": 2, "built": true,
-      "roots": { "wage": "#a8324a", "father": "#2f6db3", "hidden": "#455a6b", "seen": "#1c7d70", "treasure": "#8a6a2a", "release": "#6b2fb3", "anxious": "#3f7d3a", "right": "#9c2f8f", "seek": "#9c4f1c" } },
-    { "n": 7, "slug": "unit-07", "passage": "Matthew 7:1-29", "title": "The Two Ways", "movement": 2, "built": true,
-      "roots": { "judge": "#a8324a", "measure": "#4a4f93", "ask": "#1c7d70", "do": "#3f7d3a", "fruit": "#c0641a", "enter": "#9c2f8f", "way": "#6b2fb3", "build": "#8a6a2a", "eye": "#2f6db3" } },
-    { "n": 8, "slug": "unit-08", "passage": "Matthew 8:1-34", "title": "The Deeds of the Messiah (I)", "movement": 2, "built": true,
-      "roots": { "follow": "#3b3f93", "throw": "#9c4f1c", "touch": "#2e7d46", "release": "#147a63", "torment": "#7a2230", "urge": "#9c2f8f", "faith": "#b07a1e", "authority": "#7b2fb3", "clean": "#1596b8", "raise": "#2f6db3", "shake": "#4a5a68" } },
-    { "n": 9, "slug": "unit-09", "passage": "Matthew 9:1-34", "title": "The Deeds of the Messiah (II)", "movement": 2, "built": false },
-    { "n": 10, "slug": "unit-10", "passage": "Matthew 9:35-11:1", "title": "The Sending", "movement": 2, "built": false },
-    { "n": 11, "slug": "unit-11", "passage": "Matthew 11:2-30", "title": "Are You the Coming One?", "movement": 2, "built": false },
-    { "n": 12, "slug": "unit-12", "passage": "Matthew 12:1-50", "title": "Lord of the Sabbath, Servant of the Lord", "movement": 2, "built": false },
-    { "n": 13, "slug": "unit-13", "passage": "Matthew 13:1-53", "title": "The Parables of the Kingdom", "movement": 2, "built": false },
-    { "n": 14, "slug": "unit-14", "passage": "Matthew 13:54-14:36", "title": "Rejection, a Beheading, Bread, and the Sea", "movement": 2, "built": false },
-    { "n": 15, "slug": "unit-15", "passage": "Matthew 15:1-39", "title": "Clean and Unclean; Bread for the Dogs", "movement": 2, "built": false },
-    { "n": 16, "slug": "unit-16", "passage": "Matthew 16:1-20", "title": "On This Rock", "movement": 2, "built": false },
-    { "n": 17, "slug": "unit-17", "passage": "Matthew 16:21-17:27", "title": "The Road to the Cross Begins; Transfigured", "movement": 3, "built": false },
-    { "n": 18, "slug": "unit-18", "passage": "Matthew 18:1-35", "title": "Life in the Community", "movement": 3, "built": false },
-    { "n": 19, "slug": "unit-19", "passage": "Matthew 19:1-30", "title": "Leaving Galilee: Marriage, Children, Riches", "movement": 3, "built": false },
-    { "n": 20, "slug": "unit-20", "passage": "Matthew 20:1-34", "title": "The Last Shall Be First", "movement": 3, "built": false },
-    { "n": 21, "slug": "unit-21", "passage": "Matthew 21:1-46", "title": "The King Enters; the Temple Judged", "movement": 3, "built": false },
-    { "n": 22, "slug": "unit-22", "passage": "Matthew 22:1-46", "title": "The Banquet and the Four Questions", "movement": 3, "built": false },
-    { "n": 23, "slug": "unit-23", "passage": "Matthew 23:1-39", "title": "Seven Woes and a Lament", "movement": 3, "built": false },
-    { "n": 24, "slug": "unit-24", "passage": "Matthew 24:1-51", "title": "The Olivet Discourse (I): Temple and Son of Man", "movement": 3, "built": false },
-    { "n": 25, "slug": "unit-25", "passage": "Matthew 25:1-46", "title": "The Olivet Discourse (II): Three Parables of the End", "movement": 3, "built": false },
-    { "n": 26, "slug": "unit-26", "passage": "Matthew 26:1-75", "title": "The Night of Betrayal", "movement": 3, "built": false },
-    { "n": 27, "slug": "unit-27", "passage": "Matthew 27:1-66", "title": "The Crucifixion", "movement": 3, "built": false },
-    { "n": 28, "slug": "unit-28", "passage": "Matthew 28:1-20", "title": "The Mountain of Commission", "movement": 3, "built": false }
+    {
+      "n": 1,
+      "slug": "unit-01",
+      "passage": "Matthew 1:1-25",
+      "title": "The Book of the Genesis",
+      "movement": 1,
+      "built": true,
+      "roots": {
+        "beget": {
+          "color": "#a8324a",
+          "translit": "genesis / gennaō",
+          "gloss": "genesis / beget"
+        },
+        "name": {
+          "color": "#1c7d70",
+          "translit": "kaleō / onoma",
+          "gloss": "call / name"
+        },
+        "save": {
+          "color": "#c0641a",
+          "translit": "sōzō / Iēsous",
+          "gloss": "save / Jesus"
+        },
+        "spirit": {
+          "color": "#4a4f93",
+          "translit": "pneuma hagion",
+          "gloss": "Holy Spirit"
+        },
+        "dream": {
+          "color": "#2f6db3",
+          "translit": "onar / angelos kyriou",
+          "gloss": "dream / angel of the Lord"
+        },
+        "with": {
+          "color": "#8a3c70",
+          "translit": "meta / Emmanouēl",
+          "gloss": "with(-us)"
+        },
+        "david": {
+          "color": "#8a6a2a",
+          "translit": "Dauid / basileus",
+          "gloss": "David / king"
+        }
+      }
+    },
+    {
+      "n": 2,
+      "slug": "unit-02",
+      "passage": "Matthew 2:1-23",
+      "title": "Out of Egypt I Called My Son",
+      "movement": 1,
+      "built": true,
+      "roots": {
+        "beget": {
+          "color": "#a8324a",
+          "translit": "gennaō",
+          "gloss": "beget"
+        },
+        "name": {
+          "color": "#1c7d70",
+          "translit": "kaleō",
+          "gloss": "call"
+        },
+        "call": {
+          "color": "#1c7d70",
+          "translit": "kaleō",
+          "gloss": "call"
+        },
+        "save": {
+          "color": "#c0641a",
+          "translit": "Iēsous",
+          "gloss": "Jesus / \"saves"
+        },
+        "dream": {
+          "color": "#2f6db3",
+          "translit": "onar / angelos kyriou",
+          "gloss": "dream / angel of the Lord"
+        },
+        "david": {
+          "color": "#8a6a2a",
+          "translit": "basileus",
+          "gloss": "king"
+        },
+        "king": {
+          "color": "#8a6a2a",
+          "translit": "basileus",
+          "gloss": "king"
+        },
+        "worship": {
+          "color": "#6b2fb3",
+          "translit": "proskyneō",
+          "gloss": "worship / prostrate"
+        },
+        "child": {
+          "color": "#3f7d3a",
+          "translit": "paidion",
+          "gloss": "the child"
+        },
+        "fulfill": {
+          "color": "#455a6b",
+          "translit": "plēroō",
+          "gloss": "fill full"
+        },
+        "withdraw": {
+          "color": "#9c4f1c",
+          "translit": "anachōreō",
+          "gloss": "withdraw"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "slug": "unit-03",
+      "passage": "Matthew 3:1-4:11",
+      "title": "Wilderness, Water, Wilderness",
+      "movement": 1,
+      "built": true,
+      "roots": {
+        "beget": {
+          "color": "#a8324a",
+          "translit": "genesis / gennaō",
+          "gloss": "genesis / beget"
+        },
+        "name": {
+          "color": "#1c7d70",
+          "translit": "kaleō / onoma",
+          "gloss": "call / name"
+        },
+        "save": {
+          "color": "#c0641a",
+          "translit": "sōzō / Iēsous",
+          "gloss": "save / Jesus"
+        },
+        "spirit": {
+          "color": "#4a4f93",
+          "translit": "pneuma",
+          "gloss": "Spirit"
+        },
+        "dream": {
+          "color": "#2f6db3",
+          "translit": "onar / angelos kyriou",
+          "gloss": "dream / angel of the Lord"
+        },
+        "with": {
+          "color": "#8a3c70",
+          "translit": "meta / Emmanouēl",
+          "gloss": "with(-us)"
+        },
+        "david": {
+          "color": "#8a6a2a",
+          "translit": "Dauid / basileus",
+          "gloss": "David / king"
+        },
+        "worship": {
+          "color": "#6b2fb3",
+          "translit": "proskyneō",
+          "gloss": "worship / prostrate"
+        },
+        "child": {
+          "color": "#3f7d3a",
+          "translit": "paidion",
+          "gloss": "the child"
+        },
+        "fulfill": {
+          "color": "#455a6b",
+          "translit": "plēroō",
+          "gloss": "fill full / fulfill"
+        },
+        "withdraw": {
+          "color": "#9c4f1c",
+          "translit": "anachōreō",
+          "gloss": "withdraw"
+        },
+        "kingdom": {
+          "color": "#9c2f8f",
+          "translit": "basileia (tōn ouranōn)",
+          "gloss": "kingdom of the heavens"
+        },
+        "repent": {
+          "color": "#1f8f5f",
+          "translit": "metanoeō / metanoia",
+          "gloss": "turn / repentance"
+        },
+        "immerse": {
+          "color": "#0e8aa0",
+          "translit": "baptizō / baptisma",
+          "gloss": "immerse / immersion"
+        },
+        "wilderness": {
+          "color": "#8a7a4a",
+          "translit": "erēmos",
+          "gloss": "wilderness"
+        },
+        "test": {
+          "color": "#7a2230",
+          "translit": "peirazō / diabolos",
+          "gloss": "test / slanderer"
+        },
+        "son": {
+          "color": "#c0285f",
+          "translit": "huios … agapētos",
+          "gloss": "(beloved) Son"
+        },
+        "right": {
+          "color": "#b07a1e",
+          "translit": "dikaiosynē",
+          "gloss": "righteousness"
+        }
+      }
+    },
+    {
+      "n": 4,
+      "slug": "unit-04",
+      "passage": "Matthew 4:12-25",
+      "title": "The Light Has Dawned",
+      "movement": 2,
+      "built": true,
+      "roots": {
+        "light": {
+          "color": "#bd8b16",
+          "translit": "phōs",
+          "gloss": "light"
+        },
+        "dark": {
+          "color": "#455a6b",
+          "translit": "skotia / skia",
+          "gloss": "darkness, shadow"
+        },
+        "withdraw": {
+          "color": "#9c4f1c",
+          "translit": "anachōreō",
+          "gloss": "withdraw"
+        },
+        "kingdom": {
+          "color": "#9c2f8f",
+          "translit": "basileia",
+          "gloss": "kingdom"
+        },
+        "proclaim": {
+          "color": "#1c7d70",
+          "translit": "kēryssō",
+          "gloss": "proclaim, herald"
+        },
+        "follow": {
+          "color": "#3f7d3a",
+          "translit": "akoloutheō",
+          "gloss": "follow"
+        },
+        "fish": {
+          "color": "#4a4f93",
+          "translit": "halieus",
+          "gloss": "fisher"
+        },
+        "sea": {
+          "color": "#0e8aa0",
+          "translit": "thalassa",
+          "gloss": "sea"
+        },
+        "beget": {
+          "color": "#a8324a",
+          "translit": "genesis / gennaō",
+          "gloss": "genesis / beget"
+        }
+      }
+    },
+    {
+      "n": 5,
+      "slug": "unit-05",
+      "passage": "Matthew 5:1-48",
+      "title": "The Greater Righteousness",
+      "movement": 2,
+      "built": true,
+      "roots": {
+        "righteous": {
+          "color": "#b07a1e",
+          "translit": "dikaiosynē",
+          "gloss": "righteousness"
+        },
+        "kingdom": {
+          "color": "#9c2f8f",
+          "translit": "basileia tōn ouranōn",
+          "gloss": "kingdom of the heavens"
+        },
+        "father": {
+          "color": "#1c7d70",
+          "translit": "patēr",
+          "gloss": "Father"
+        },
+        "said": {
+          "color": "#2f6db3",
+          "translit": "ēkousate / errethē",
+          "gloss": "y'all heard / it was said"
+        },
+        "isay": {
+          "color": "#a8324a",
+          "translit": "egō de legō hymin",
+          "gloss": "but I say to y'all"
+        },
+        "whole": {
+          "color": "#5a3fa0",
+          "translit": "teleios / holos",
+          "gloss": "whole, complete"
+        },
+        "gehenna": {
+          "color": "#5e1822",
+          "translit": "geenna",
+          "gloss": "Gehenna"
+        },
+        "evil": {
+          "color": "#7a5a10",
+          "translit": "ponēros",
+          "gloss": "evil / the evil one"
+        },
+        "yall": {
+          "color": "#3f7d3a",
+          "translit": "hymeis este",
+          "gloss": "y'all are (emphatic)"
+        }
+      }
+    },
+    {
+      "n": 6,
+      "slug": "unit-06",
+      "passage": "Matthew 6:1-34",
+      "title": "Before Your Father Who Sees",
+      "movement": 2,
+      "built": true,
+      "roots": {
+        "wage": {
+          "color": "#a8324a",
+          "translit": "misthos / apechō / apodidōmi",
+          "gloss": "wage · have-in-full · pay back"
+        },
+        "father": {
+          "color": "#2f6db3",
+          "translit": "patēr",
+          "gloss": "Father"
+        },
+        "hidden": {
+          "color": "#455a6b",
+          "translit": "kryptos / kryphaios",
+          "gloss": "hidden"
+        },
+        "seen": {
+          "color": "#1596b8",
+          "translit": "theaomai / phainō / aphanizō / blepō",
+          "gloss": "gazed at · appear · un-appear · see"
+        },
+        "treasure": {
+          "color": "#8a6a2a",
+          "translit": "thēsauros / thēsaurizō",
+          "gloss": "treasure · treasure up"
+        },
+        "release": {
+          "color": "#6b2fb3",
+          "translit": "aphiēmi / opheilēma / paraptōma",
+          "gloss": "release · debt · false step"
+        },
+        "anxious": {
+          "color": "#3f7d3a",
+          "translit": "merimnaō",
+          "gloss": "be pulled apart with care"
+        },
+        "right": {
+          "color": "#9c2f8f",
+          "translit": "dikaiosynē",
+          "gloss": "right-doing"
+        },
+        "seek": {
+          "color": "#9c4f1c",
+          "translit": "zēteō / epizēteō",
+          "gloss": "seek · seek after"
+        }
+      }
+    },
+    {
+      "n": 7,
+      "slug": "unit-07",
+      "passage": "Matthew 7:1-29",
+      "title": "The Two Ways",
+      "movement": 2,
+      "built": true,
+      "roots": {
+        "judge": {
+          "color": "#a8324a",
+          "translit": "krinō / krima",
+          "gloss": "judge"
+        },
+        "measure": {
+          "color": "#4a4f93",
+          "translit": "metron / metreō",
+          "gloss": "measure"
+        },
+        "ask": {
+          "color": "#1c7d70",
+          "translit": "aiteō",
+          "gloss": "ask"
+        },
+        "do": {
+          "color": "#3f7d3a",
+          "translit": "poieō",
+          "gloss": "do, make"
+        },
+        "fruit": {
+          "color": "#c0641a",
+          "translit": "karpos",
+          "gloss": "fruit"
+        },
+        "enter": {
+          "color": "#9c2f8f",
+          "translit": "eiserchomai",
+          "gloss": "come in, enter"
+        },
+        "way": {
+          "color": "#6b2fb3",
+          "translit": "hodos / pylē",
+          "gloss": "road, gate"
+        },
+        "build": {
+          "color": "#8a6a2a",
+          "translit": "oikodomeō / petra",
+          "gloss": "build, rock"
+        },
+        "eye": {
+          "color": "#2f6db3",
+          "translit": "ophthalmos / blepō",
+          "gloss": "eye, look"
+        }
+      }
+    },
+    {
+      "n": 8,
+      "slug": "unit-08",
+      "passage": "Matthew 8:1-34",
+      "title": "The Deeds of the Messiah (I)",
+      "movement": 2,
+      "built": true,
+      "roots": {
+        "follow": {
+          "color": "#3b3f93",
+          "translit": "akoloutheō",
+          "gloss": "follow, come along behind"
+        },
+        "throw": {
+          "color": "#9c4f1c",
+          "translit": "ballō",
+          "gloss": "throw, cast, fling down"
+        },
+        "touch": {
+          "color": "#8a5a2a",
+          "translit": "haptomai",
+          "gloss": "take hold of, touch"
+        },
+        "release": {
+          "color": "#147a63",
+          "translit": "aphiēmi",
+          "gloss": "let go, release, forgive"
+        },
+        "torment": {
+          "color": "#7a2230",
+          "translit": "basanizō",
+          "gloss": "torment, put to the test"
+        },
+        "urge": {
+          "color": "#9c2f8f",
+          "translit": "parakaleō",
+          "gloss": "urge, entreat, call alongside"
+        },
+        "faith": {
+          "color": "#b07a1e",
+          "translit": "pistis / pisteuō",
+          "gloss": "trust, faith, entrust oneself"
+        },
+        "authority": {
+          "color": "#7b2fb3",
+          "translit": "exousia",
+          "gloss": "authority, delegated right to act"
+        },
+        "clean": {
+          "color": "#1596b8",
+          "translit": "katharizō",
+          "gloss": "cleanse, make ritually pure"
+        },
+        "raise": {
+          "color": "#2f6db3",
+          "translit": "egeirō",
+          "gloss": "raise up, rouse from lying down"
+        },
+        "shake": {
+          "color": "#4a5a68",
+          "translit": "seismos",
+          "gloss": "shaking, quake"
+        }
+      }
+    },
+    {
+      "n": 9,
+      "slug": "unit-09",
+      "passage": "Matthew 9:1-34",
+      "title": "The Deeds of the Messiah (II)",
+      "movement": 2,
+      "built": false
+    },
+    {
+      "n": 10,
+      "slug": "unit-10",
+      "passage": "Matthew 9:35-11:1",
+      "title": "The Sending",
+      "movement": 2,
+      "built": false
+    },
+    {
+      "n": 11,
+      "slug": "unit-11",
+      "passage": "Matthew 11:2-30",
+      "title": "Are You the Coming One?",
+      "movement": 2,
+      "built": false
+    },
+    {
+      "n": 12,
+      "slug": "unit-12",
+      "passage": "Matthew 12:1-50",
+      "title": "Lord of the Sabbath, Servant of the Lord",
+      "movement": 2,
+      "built": false
+    },
+    {
+      "n": 13,
+      "slug": "unit-13",
+      "passage": "Matthew 13:1-53",
+      "title": "The Parables of the Kingdom",
+      "movement": 2,
+      "built": false
+    },
+    {
+      "n": 14,
+      "slug": "unit-14",
+      "passage": "Matthew 13:54-14:36",
+      "title": "Rejection, a Beheading, Bread, and the Sea",
+      "movement": 2,
+      "built": false
+    },
+    {
+      "n": 15,
+      "slug": "unit-15",
+      "passage": "Matthew 15:1-39",
+      "title": "Clean and Unclean; Bread for the Dogs",
+      "movement": 2,
+      "built": false
+    },
+    {
+      "n": 16,
+      "slug": "unit-16",
+      "passage": "Matthew 16:1-20",
+      "title": "On This Rock",
+      "movement": 2,
+      "built": false
+    },
+    {
+      "n": 17,
+      "slug": "unit-17",
+      "passage": "Matthew 16:21-17:27",
+      "title": "The Road to the Cross Begins; Transfigured",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 18,
+      "slug": "unit-18",
+      "passage": "Matthew 18:1-35",
+      "title": "Life in the Community",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 19,
+      "slug": "unit-19",
+      "passage": "Matthew 19:1-30",
+      "title": "Leaving Galilee: Marriage, Children, Riches",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 20,
+      "slug": "unit-20",
+      "passage": "Matthew 20:1-34",
+      "title": "The Last Shall Be First",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 21,
+      "slug": "unit-21",
+      "passage": "Matthew 21:1-46",
+      "title": "The King Enters; the Temple Judged",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 22,
+      "slug": "unit-22",
+      "passage": "Matthew 22:1-46",
+      "title": "The Banquet and the Four Questions",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 23,
+      "slug": "unit-23",
+      "passage": "Matthew 23:1-39",
+      "title": "Seven Woes and a Lament",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 24,
+      "slug": "unit-24",
+      "passage": "Matthew 24:1-51",
+      "title": "The Olivet Discourse (I): Temple and Son of Man",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 25,
+      "slug": "unit-25",
+      "passage": "Matthew 25:1-46",
+      "title": "The Olivet Discourse (II): Three Parables of the End",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 26,
+      "slug": "unit-26",
+      "passage": "Matthew 26:1-75",
+      "title": "The Night of Betrayal",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 27,
+      "slug": "unit-27",
+      "passage": "Matthew 27:1-66",
+      "title": "The Crucifixion",
+      "movement": 3,
+      "built": false
+    },
+    {
+      "n": 28,
+      "slug": "unit-28",
+      "passage": "Matthew 28:1-20",
+      "title": "The Mountain of Commission",
+      "movement": 3,
+      "built": false
+    }
   ]
 }
