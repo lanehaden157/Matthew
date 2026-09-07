@@ -294,6 +294,7 @@ Copy, fill in, done. All structural/visual blocks live inside `<div class="wrap"
 
 - [ ] **Every structural block** (`section.block`, `.compare`) has `page-break-inside:avoid` + `break-inside:avoid`. No chart, table, ring, or compare box may split across a page.
 - [ ] **Plural "you" → "y'all"** everywhere in the translation (e.g. 2:8 "when y'all find him").
+- [ ] **`ouranos` → "sky / skies"**, never "heaven / heavens", in the study's own wording — verse text, glosses, diagrams: "kingdom of the skies", "your Father in the skies", "sky and earth". Verbatim quotations from NASB / Hart / Lattimore keep their own wording ("kingdom of heaven"). (Units 1–8 were revised to match; see `pipeline/wording_skies.py`.)
 - [ ] **Transliteration only — no native Greek script anywhere** (masthead, legend, verse text, compare boxes, endnotes). On first use of a tracked term *in this unit*, give the transliteration plus a plain-English gloss: `sarx` ("flesh"). After that first gloss, the bare transliteration (`.translit` class; colored via `.r` + root class where tracked) can recur through that unit's artifact — but never assume a gloss carries over from a *prior* unit; reintroduce it there too.
 - [ ] **Same Greek root → same English root** across verses, even when it reads repetitively. That repetition is the point.
 - [ ] **Same Greek root → same color** *within this unit's artifact*, and every tracked root has a legend row. Colors are assigned fresh per unit (§1); no cross-unit registry to match.
@@ -380,7 +381,7 @@ the unit divisions below try to honor all four at once.
 **(a) The two *apo tote* ("from that time") hinges (Kingsbury).** Twice Matthew writes *Apo tote
 ērxato ho Iēsous* ("From that time Jesus began to…"), at **4:17** and **16:21**, and each time the verb that
 follows turns the whole story:
-- 4:17 — *began to proclaim*: "Repent, for the kingdom of the heavens has drawn near."
+- 4:17 — *began to proclaim*: "Repent, for the kingdom of the skies has drawn near."
 - 16:21 — *began to show*: that he must go to Jerusalem, suffer, be killed, and be raised.
 
 This carves the gospel into three movements: **the person of the Messiah (1:1–4:16)**, **the

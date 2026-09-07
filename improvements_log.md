@@ -77,3 +77,9 @@
 - Footnote "↩ back" link now removes itself after one use (was lingering dead).
 - Verified on live deploy: 23 panels in U7, 0 loose asides, collapse/expand +
   show-all all work.
+
+## 2026-09-07 (cont.) — wording: heavens -> skies
+- pipeline/wording_skies.py — one-shot revision of source-artifacts: the study's
+  own 'heaven(s)' -> 'sky/skies' (units 1-5 had old wording; 6-8 already matched).
+  Verbatim NASB/Hart rows in compare boxes protected (still "kingdom of heaven").
+  31 substitutions. Re-ran build.py. Style reference §4 updated for units 9-28.
