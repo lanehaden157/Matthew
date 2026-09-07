@@ -1,7 +1,7 @@
 /* Concordance search — type a transliterated root or an English gloss, get
    every tagged occurrence across the built units with a context snippet. */
 
-import { getOccurrences, getThreadFor, resolveUnit } from "./threads.js?v=24";
+import { getOccurrences, getThreadFor, resolveUnit } from "./threads.js?v=25";
 
 const KEY = "matthew.search.q";
 

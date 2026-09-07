@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=24";
-import { enhanceSpotlights } from "./spotlight.js?v=24";
-import { renderSearch } from "./search.js?v=24";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=25";
+import { enhanceSpotlights } from "./spotlight.js?v=25";
+import { renderSearch } from "./search.js?v=25";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -49,7 +49,7 @@ function wireNavToggle() {
   navToggle.addEventListener("click", () => set(unitNav.hidden));
   backdrop.addEventListener("click", () => set(false));
   unitNav.addEventListener("click", (e) => {
-    if (e.target.closest(".unit-chip:not(.unbuilt)")) set(false);
+    if (e.target.closest("a.unit-chip, a.bm-tick")) set(false);
   });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") set(false); });
 }
