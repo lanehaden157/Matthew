@@ -40,6 +40,46 @@ def log(m):
     report.append(m)
 
 
+def normalize_verses(body, u):
+    """Unit 1 was built before the verse conventions settled: its verses are
+    <div class="v"><span class="n">N</span><span class="txt">…</span> with the
+    .gloss/.compare blocks nested INSIDE. Every other unit has <p class="v">…</p>
+    with those blocks as following siblings. Reshape U1 to match so the shared
+    engine (spotlight collapse, occurrence scan) treats it like the rest."""
+    def repl(m):
+        n, txt, blocks = m.group(1), m.group(2), m.group(3)
+        blocks = re.sub(
+            r'<div class="(gloss|compare)">(.*?)</div>(?=\s*(?:<div class="(?:gloss|compare)">|$))',
+            lambda b: f'<span class="{b.group(1)}">{b.group(2)}</span>', blocks, flags=re.S)
+        # normalise U1's compare internals to the shared shape
+        blocks = blocks.replace('<div class="row">', '<span class="row">')
+        blocks = re.sub(r'<span class="lab">', '<span class="src">', blocks)
+        blocks = _rebalance_rows(blocks)
+        return f'<p class="v"><span class="n">{n}</span>{txt.strip()}</p>\n      {blocks.strip()}'
+
+    body2, k = re.subn(
+        r'<div class="v"><span class="n">(\d+)</span><span class="txt">(.*?)</span>\s*'
+        r'((?:<div class="(?:gloss|compare)">.*?</div>\s*)*)</div>',
+        repl, body, flags=re.S)
+    if k:
+        log(f"- U{u}: normalised {k} nested-gloss verses to sibling form")
+    return body2
+
+
+def _rebalance_rows(s):
+    """After swapping <div class="row"> -> <span class="row">, the matching
+    </div> must become </span>. Rows contain no nested divs, so pair them up."""
+    out, i = [], 0
+    for m in re.finditer(r'<span class="row">', s):
+        out.append(s[i:m.end()])
+        j = s.find("</div>", m.end())
+        out.append(s[m.end():j])
+        out.append("</span>")
+        i = j + len("</div>")
+    out.append(s[i:])
+    return "".join(out)
+
+
 def get_body(html):
     m = re.search(r"<body[^>]*>(.*)</body>", html, re.S)
     body = m.group(1)
@@ -245,6 +285,7 @@ def main():
         body = get_body(html)
 
         log(f"\n## Unit {u}")
+        body = normalize_verses(body, u)
         body = fix_greek_title(body, u)
         body = strip_gk_spans(body, u)
         body = clean_redundancy(body)

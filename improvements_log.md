@@ -137,3 +137,12 @@
 - book-map strip, movement labels, and the movements/discourses key all centered.
 - discourse units now clearly marked in BOTH places: map ticks get a gold tint +
   gold-ish border; picker chips get a gold left-bar, warm tint, and a "◆ N" mark.
+
+## 2026-09-07 (cont.) — U1 structure normalized + book-map sizing
+- extract_units.normalize_verses(): Unit 1 (built pre-conventions) had
+  <div class="v"> with .gloss/.compare nested INSIDE and compare using
+  div.row/.lab. Now reshaped to <p class="v">…</p> + sibling blocks with
+  span.row/.src, matching units 2-8 — so spotlight collapse + occurrence
+  scan work on it. 20 verses normalized, 3 compare boxes.
+- book-map: .bm-row fills 100% width on desktop (movements flex by unit
+  count) so it's genuinely centred/full; scrolls sideways only below tablet.
