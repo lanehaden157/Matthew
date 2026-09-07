@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=17";
-import { enhanceSpotlights } from "./spotlight.js?v=17";
-import { renderSearch } from "./search.js?v=17";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=19";
+import { enhanceSpotlights } from "./spotlight.js?v=19";
+import { renderSearch } from "./search.js?v=19";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -61,11 +61,14 @@ function discourseOf(n) {
 }
 
 function chip(u) {
+  const d = discourseOf(u.n);
   const a = document.createElement("a");
-  a.className = "unit-chip" + (u.built ? "" : " unbuilt");
+  a.className = "unit-chip" + (u.built ? "" : " unbuilt") + (d ? " in-disc" : "");
   a.dataset.slug = u.slug;
   if (u.built) a.href = `#/${u.slug}`;
+  if (d) a.title = `Discourse ${roman(d.n)} — ${d.label}`;
   a.innerHTML =
+    (d ? `<span class="disc-mark" aria-hidden="true">◆&nbsp;${roman(d.n)}</span>` : "") +
     `<span class="n">${u.n}</span>${escapeHtml(u.title)}` +
     `<span class="passage">${escapeHtml(u.passage)}${u.built ? "" : " · not yet built"}</span>`;
   return a;

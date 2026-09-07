@@ -132,3 +132,8 @@
 - Names live only in the key, so nothing in the map can truncate.
 - Mobile: the strip scrolls inside its own container with a soft right edge; the
   page itself never scrolls sideways.
+
+## 2026-09-07 (cont.) — contents map: centered + discourse highlight
+- book-map strip, movement labels, and the movements/discourses key all centered.
+- discourse units now clearly marked in BOTH places: map ticks get a gold tint +
+  gold-ish border; picker chips get a gold left-bar, warm tint, and a "◆ N" mark.

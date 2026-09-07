@@ -102,7 +102,7 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
 .unit-nav .movement-label {
   font-family: var(--display); font-size: 13px; letter-spacing: .18em;
   text-transform: uppercase; color: var(--ink-soft); font-weight: 600;
-  margin: 14px 0 8px;
+  margin: 20px 0 9px; text-align: center;
 }
 .unit-nav .movement-label:first-child { margin-top: 0; }
 .unit-grid {
@@ -144,9 +144,13 @@ a.bm-tick:hover {
   border-color: var(--accent-gold);
   box-shadow: 0 3px 8px rgba(30, 22, 12, .14);
 }
-.bm-tick.in-disc { background: color-mix(in srgb, var(--accent-gold) 12%, var(--bg)); }
-@supports not (background: color-mix(in srgb, white, black)) {
-  .bm-tick.in-disc { background: #f2e8cf; }
+.bm-tick.in-disc {
+  background: #f4e6c2;
+  border-color: color-mix(in srgb, var(--accent-gold) 45%, var(--rule));
+  color: #6d5316;
+}
+@supports not (border-color: color-mix(in srgb, white, black)) {
+  .bm-tick.in-disc { border-color: #c3a458; }
 }
 .bm-tick.unbuilt { opacity: .38; border-style: dashed; color: var(--ink-soft); }
 .bm-tick[aria-current="page"] {
@@ -169,14 +173,19 @@ a.bm-tick:hover {
 
 /* names live in the key, so nothing in the map itself can truncate */
 .bm-key { margin-top: 13px; padding-top: 10px; border-top: 1px solid var(--rule-soft); }
-.bm-key-row { display: flex; gap: 10px; align-items: baseline; margin-top: 5px; }
+.bm-key-row {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  margin-top: 11px;
+}
 .bm-key-row:first-child { margin-top: 0; }
 .bm-key-h {
-  flex: none; width: 76px;
-  font-family: var(--display); font-size: 10px; letter-spacing: .16em;
-  text-transform: uppercase; color: var(--ink-soft);
+  font-family: var(--display); font-size: 9.5px; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--ink-soft); opacity: .8;
 }
-.bm-key-items { display: flex; flex-wrap: wrap; gap: 3px 16px; font-size: 12.5px; }
+.bm-key-items {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 3px 16px; font-size: 12.5px;
+}
 .bm-key-item { color: var(--ink-soft); white-space: nowrap; }
 .bm-key-item b { color: var(--accent-crimson); font-family: var(--display); font-weight: 600; margin-right: 3px; }
 .bm-key-row.disc .bm-key-item b { color: var(--accent-gold); }
@@ -191,6 +200,21 @@ a.bm-tick:hover {
 .unit-chip.unbuilt { opacity: .5; cursor: default; }
 .unit-chip.unbuilt:hover { border-color: var(--rule); border-bottom-style: dotted; }
 .unit-chip.unbuilt .n { color: var(--ink-soft); }
+
+/* a unit inside one of the five discourses */
+.unit-chip.in-disc {
+  position: relative;
+  background: #f7efdb;
+  border-color: #ddc894;
+  box-shadow: inset 3px 0 0 var(--accent-gold);
+  padding-left: 15px;
+}
+.unit-chip.in-disc:hover { border-color: var(--accent-gold); }
+.unit-chip .disc-mark {
+  float: right; margin-left: 8px;
+  font-family: var(--display); font-size: 11px; font-weight: 600;
+  letter-spacing: .06em; color: var(--accent-gold);
+}
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 26px 120px; }
 
