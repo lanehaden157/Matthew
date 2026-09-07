@@ -185,16 +185,15 @@ U3 (`wild`→`wilderness` rename), U7 (needs a full fresh 9-hue palette — its
 - Verified on the live Pages deploy: retrofit tags render, global thread colours
   identical across units, zero console errors.
 
-### Phase 5 — Thread & note interactions *(ideas.md "Now")*
+### Phase 5 — Thread & note interactions ✅ DONE
 
-- Root hover → light gloss-only tooltip (desktop; tap-equivalent on mobile).
-- Root click → popover: translit + gloss + count-in-this-unit + (if tracked)
-  trajectory with jump links to built units.
-- "Threads active here" footer on every unit, linking to the dashboard.
-- **Footnote jump + return:** click an endnote ref → smooth-scroll to the note
-  and flash-highlight ~1s; clicking the ref again (or the note's back-link)
-  returns to the exact verse and flashes it. Plain anchor without JS; highlight
-  and return-to-origin are the JS layer.
+- Root **hover** (desktop) → tip: transliteration + gloss.
+- Root **click** → popover: colour swatch, translit, gloss, "N× in this unit ·
+  vv. …", and for the 16 tracked threads the trajectory (`opens` → `payoffs` as
+  live `#/unit-NN` links where built, greyed where not), "also in Unit X", and
+  the thread note. Dismiss on outside-click / Esc / scroll.
+- Footnote jump + return: shipped in Phase 2 (+ polish).
+- "Threads active here" footer: **skipped** — redundant with the per-unit legend.
 
 ### Phase 6 — Dashboard + concordance
 

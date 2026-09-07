@@ -13,5 +13,6 @@ Read this first. 3 lines max per session.
 - Phase 4 done: data/threads.json (16 threads), two-tier colour engine
   (threads.js), occurrence pipeline + verify, data-driven legends, retrofit tags
   applied. Verified on live deploy.
-- Next: Phase 5 (thread hover tooltip + click popover w/ trajectory + 'threads
-  active here' footer).
+- Phase 5 done: root hover tip + click popover (thread trajectory w/ jump
+  links). Spotlight split (light * notes vs ✦ rendering boxes). heavens->skies.
+- Next: Phase 6 (threads dashboard + global concordance search).
