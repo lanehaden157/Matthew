@@ -43,15 +43,27 @@ export function resolveUnit(unit) {
   return out;
 }
 
-/** Inject `.unit[data-unit=N] [data-root=x]{color}` + legend swatch colours. */
+/** Inject `.unit[data-unit=N] [data-root=x]{color}` + legend swatch colours.
+    Tracked-thread roots also get a dotted underline in their own colour
+    (a "thread" stitched under the word) that glows on hover. */
 export function injectPalette(unit, resolved) {
   document.getElementById("unit-palette")?.remove();
   const rules = [];
+  const sel = `.unit[data-unit="${unit.n}"]`;
   for (const [root, m] of resolved) {
     if (!m.color) continue;
-    const sel = `.unit[data-unit="${unit.n}"]`;
-    rules.push(`${sel} [data-root="${cssEsc(root)}"]{color:${m.color}}`);
+    const r = `[data-root="${cssEsc(root)}"]`;
+    rules.push(`${sel} ${r}{color:${m.color}}`);
     rules.push(`${sel} .swatch[style*="--c-${cssEsc(root)}"]{background:${m.color}!important}`);
+    if (m.threadId) {
+      rules.push(
+        `${sel} ${r}{text-decoration:underline dotted ${m.color};` +
+        `text-underline-offset:3px;text-decoration-thickness:from-font}`);
+      rules.push(
+        `${sel} ${r}:hover{text-decoration-style:solid;` +
+        `text-shadow:0 0 7px ${hexA(m.color, 0.4)}}`);
+      rules.push(`${sel} ${r}.root-active{text-shadow:0 0 7px ${hexA(m.color, 0.45)}}`);
+    }
   }
   const s = document.createElement("style");
   s.id = "unit-palette";
@@ -59,38 +71,43 @@ export function injectPalette(unit, resolved) {
   document.head.appendChild(s);
 }
 
-/** Rebuild the unit's colour-key list from data. */
+function hexA(hex, a) {
+  const h = hex.replace("#", "");
+  const n = h.length === 3 ? h.split("").map((c) => c + c).join("") : h;
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(n.slice(i, i + 2), 16));
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+/** Rebuild the unit's colour-key from data, split into cross-unit threads
+    and unit-local roots. */
 export function rebuildLegend(contentEl, resolved) {
   const legend = contentEl.querySelector("section.legend, section.block.legend");
   if (!legend) return;
   const ul = legend.querySelector("ul");
   if (!ul) return;
 
-  const rows = [...resolved.entries()]
-    .filter(([, m]) => m.color && m.count > 0)
-    .sort((a, b) =>
-      (b[1].threadId ? 1 : 0) - (a[1].threadId ? 1 : 0) || b[1].count - a[1].count);
+  const all = [...resolved.entries()].filter(([, m]) => m.color && m.count > 0);
+  const byCount = (a, b) => b[1].count - a[1].count;
+  const threads = all.filter(([, m]) => m.threadId).sort(byCount);
+  const local = all.filter(([, m]) => !m.threadId).sort(byCount);
 
-  ul.innerHTML = rows.map(([root, m]) => {
-    const pill = m.threadId
-      ? ` <span class="tag tag-thread" title="tracked cross-unit thread — same colour everywhere">thread${m.status === "closed" ? " · closed" : ""}</span>`
-      : "";
+  const row = ([root, m]) => {
     const n = m.count > 1 ? ` <span class="tag">${m.count}×</span>` : "";
+    const st = m.status === "closed" ? ` <span class="tag">closed</span>` : "";
     return `<li><span class="swatch" style="background:${m.color}"></span>` +
       `<span class="r" data-root="${escAttr(root)}">${esc(m.translit)}</span>` +
-      `${m.gloss ? " — " + esc(m.gloss) : ""}${pill}${n}</li>`;
-  }).join("");
+      `${m.gloss ? " — " + esc(m.gloss) : ""}${st}${n}</li>`;
+  };
 
-  let cap = legend.querySelector(".cap");
-  if (!cap) {
-    cap = document.createElement("p");
-    cap.className = "cap";
-    legend.querySelector("h2")?.after(cap);
-  }
-  const nThreads = rows.filter(([, m]) => m.threadId).length;
-  cap.textContent = nThreads
-    ? `${rows.length} roots tracked in this unit — ${nThreads} are cross-unit threads (same colour book-wide).`
-    : `${rows.length} roots tracked in this unit.`;
+  const group = (label, items) => items.length
+    ? `<div class="legend-group"><h3>${label}</h3><ul>${items.map(row).join("")}</ul></div>`
+    : "";
+
+  ul.outerHTML =
+    group(`✦ Cross-unit threads`, threads) +
+    group(`In this unit`, local);
+
+  legend.querySelector(".cap")?.remove();
 }
 
 /* ---------------------------------------------- root hover tip + click popover */

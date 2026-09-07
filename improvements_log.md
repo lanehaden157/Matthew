@@ -92,3 +92,12 @@
   "also in Unit X", and the thread note. Dismiss on outside-click/Esc/scroll.
 - CSS: .root-tip, .root-pop, [data-root] hover underline + .root-active.
 - Skipped the "threads active here" footer (redundant with the legend).
+
+## 2026-09-07 (cont.) — thread polish
+- scan_occurrences: `count` is now verse-text only (was counting legend/gloss
+  too); `total` kept for verify's token cross-check. Popover + legend N× fixed.
+- threads.js injectPalette: tracked-thread roots get a dotted underline in
+  their own colour ("thread" under the word) + colour glow on hover/active.
+- rebuildLegend: split into two groups — "✦ Cross-unit threads" / "In this unit".
+- Confirmed: occurrences.json regenerates every build.py; threads.json
+  trajectory is hand-maintained per unit as loops close.

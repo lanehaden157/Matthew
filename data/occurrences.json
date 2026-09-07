@@ -23,7 +23,8 @@
         18,
         20,
         22
-      ]
+      ],
+      "total": 48
     },
     "david": {
       "count": 7,
@@ -32,14 +33,16 @@
         6,
         17,
         20
-      ]
+      ],
+      "total": 7
     },
     "dream": {
       "count": 3,
       "verses": [
         20,
         24
-      ]
+      ],
+      "total": 3
     },
     "name": {
       "count": 7,
@@ -48,10 +51,11 @@
         21,
         23,
         25
-      ]
+      ],
+      "total": 7
     },
     "save": {
-      "count": 8,
+      "count": 6,
       "verses": [
         1,
         16,
@@ -59,21 +63,22 @@
         21,
         25
       ],
-      "non_verse": 2
+      "total": 8
     },
     "spirit": {
       "count": 2,
       "verses": [
         18,
         20
-      ]
+      ],
+      "total": 2
     },
     "with": {
-      "count": 3,
+      "count": 2,
       "verses": [
         23
       ],
-      "non_verse": 1
+      "total": 3
     }
   },
   "unit-02": {
@@ -82,7 +87,8 @@
       "verses": [
         1,
         4
-      ]
+      ],
+      "total": 2
     },
     "call": {
       "count": 3,
@@ -90,10 +96,11 @@
         7,
         15,
         23
-      ]
+      ],
+      "total": 3
     },
     "child": {
-      "count": 12,
+      "count": 9,
       "verses": [
         8,
         9,
@@ -103,17 +110,17 @@
         20,
         21
       ],
-      "non_verse": 3
+      "total": 12
     },
     "dream": {
-      "count": 7,
+      "count": 4,
       "verses": [
         12,
         13,
         19,
         22
       ],
-      "non_verse": 3
+      "total": 7
     },
     "fulfill": {
       "count": 3,
@@ -121,35 +128,36 @@
         15,
         17,
         23
-      ]
+      ],
+      "total": 3
     },
     "king": {
-      "count": 5,
+      "count": 3,
       "verses": [
         1,
         2,
         3
       ],
-      "non_verse": 2
+      "total": 5
     },
     "withdraw": {
-      "count": 5,
+      "count": 4,
       "verses": [
         12,
         13,
         14,
         22
       ],
-      "non_verse": 1
+      "total": 5
     },
     "worship": {
-      "count": 5,
+      "count": 3,
       "verses": [
         2,
         8,
         11
       ],
-      "non_verse": 2
+      "total": 5
     }
   },
   "unit-03": {
@@ -157,7 +165,8 @@
       "count": 1,
       "verses": [
         15
-      ]
+      ],
+      "total": 1
     },
     "immerse": {
       "count": 8,
@@ -169,15 +178,16 @@
         13,
         14,
         16
-      ]
+      ],
+      "total": 8
     },
     "kingdom": {
-      "count": 4,
+      "count": 2,
       "verses": [
         2,
         8
       ],
-      "non_verse": 2
+      "total": 4
     },
     "repent": {
       "count": 3,
@@ -185,34 +195,36 @@
         2,
         8,
         11
-      ]
+      ],
+      "total": 3
     },
     "right": {
       "count": 1,
       "verses": [
         15
-      ]
+      ],
+      "total": 1
     },
     "son": {
-      "count": 5,
+      "count": 3,
       "verses": [
         3,
         6,
         17
       ],
-      "non_verse": 2
+      "total": 5
     },
     "spirit": {
-      "count": 5,
+      "count": 3,
       "verses": [
         1,
         11,
         16
       ],
-      "non_verse": 2
+      "total": 5
     },
     "test": {
-      "count": 8,
+      "count": 7,
       "verses": [
         1,
         3,
@@ -221,23 +233,23 @@
         8,
         11
       ],
-      "non_verse": 1
+      "total": 8
     },
     "wilderness": {
-      "count": 5,
+      "count": 3,
       "verses": [
         1,
         3
       ],
-      "non_verse": 2
+      "total": 5
     },
     "worship": {
-      "count": 4,
+      "count": 2,
       "verses": [
         9,
         10
       ],
-      "non_verse": 2
+      "total": 4
     }
   },
   "unit-04": {
@@ -245,21 +257,23 @@
       "count": 1,
       "verses": [
         17
-      ]
+      ],
+      "total": 1
     },
     "dark": {
-      "count": 5,
+      "count": 2,
       "verses": [
         16
       ],
-      "non_verse": 3
+      "total": 5
     },
     "fish": {
       "count": 2,
       "verses": [
         18,
         19
-      ]
+      ],
+      "total": 2
     },
     "follow": {
       "count": 4,
@@ -267,51 +281,54 @@
         20,
         22,
         25
-      ]
+      ],
+      "total": 4
     },
     "kingdom": {
-      "count": 4,
+      "count": 3,
       "verses": [
         17,
         23
       ],
-      "non_verse": 1
+      "total": 4
     },
     "light": {
-      "count": 6,
+      "count": 2,
       "verses": [
         16
       ],
-      "non_verse": 4
+      "total": 6
     },
     "nations": {
       "count": 1,
       "verses": [
         15
-      ]
+      ],
+      "total": 1
     },
     "proclaim": {
-      "count": 5,
+      "count": 3,
       "verses": [
         17,
         23
       ],
-      "non_verse": 2
+      "total": 5
     },
     "sea": {
-      "count": 5,
+      "count": 4,
       "verses": [
         13,
         15,
         18
       ],
-      "non_verse": 1
+      "total": 5
     },
     "withdraw": {
       "count": 2,
       "verses": [
         12
-      ]
+      ],
+      "total": 2
     }
   },
   "unit-05": {
@@ -322,7 +339,8 @@
         37,
         39,
         45
-      ]
+      ],
+      "total": 4
     },
     "father": {
       "count": 3,
@@ -330,7 +348,8 @@
         16,
         45,
         48
-      ]
+      ],
+      "total": 3
     },
     "gehenna": {
       "count": 3,
@@ -338,7 +357,8 @@
         22,
         29,
         30
-      ]
+      ],
+      "total": 3
     },
     "isay": {
       "count": 6,
@@ -349,38 +369,41 @@
         34,
         39,
         44
-      ]
+      ],
+      "total": 6
     },
     "kingdom": {
-      "count": 7,
+      "count": 5,
       "verses": [
         3,
         10,
         19,
         20
       ],
-      "non_verse": 2
+      "total": 7
     },
     "law-prophets": {
       "count": 1,
       "verses": [
         17
-      ]
+      ],
+      "total": 1
     },
     "light": {
       "count": 1,
       "verses": [
         14
-      ]
+      ],
+      "total": 1
     },
     "righteous": {
-      "count": 5,
+      "count": 3,
       "verses": [
         6,
         10,
         20
       ],
-      "non_verse": 2
+      "total": 5
     },
     "said": {
       "count": 5,
@@ -390,16 +413,17 @@
         33,
         38,
         43
-      ]
+      ],
+      "total": 5
     },
     "whole": {
-      "count": 7,
+      "count": 5,
       "verses": [
         29,
         30,
         48
       ],
-      "non_verse": 2
+      "total": 7
     },
     "yall": {
       "count": 3,
@@ -407,7 +431,8 @@
         11,
         13,
         14
-      ]
+      ],
+      "total": 3
     }
   },
   "unit-06": {
@@ -419,10 +444,11 @@
         28,
         31,
         34
-      ]
+      ],
+      "total": 6
     },
     "father": {
-      "count": 14,
+      "count": 12,
       "verses": [
         1,
         4,
@@ -435,54 +461,57 @@
         32,
         33
       ],
-      "non_verse": 2
+      "total": 14
     },
     "hidden": {
-      "count": 7,
+      "count": 6,
       "verses": [
         4,
         6,
         18
       ],
-      "non_verse": 1
+      "total": 7
     },
     "light": {
       "count": 1,
       "verses": [
         23
-      ]
+      ],
+      "total": 1
     },
     "little-faith": {
       "count": 1,
       "verses": [
         30
-      ]
+      ],
+      "total": 1
     },
     "release": {
-      "count": 11,
+      "count": 6,
       "verses": [
         14,
         15
       ],
-      "non_verse": 5
+      "total": 11
     },
     "right": {
-      "count": 3,
+      "count": 2,
       "verses": [
         1,
         33
       ],
-      "non_verse": 1
+      "total": 3
     },
     "seek": {
       "count": 2,
       "verses": [
         32,
         33
-      ]
+      ],
+      "total": 2
     },
     "seen": {
-      "count": 14,
+      "count": 10,
       "verses": [
         1,
         4,
@@ -493,19 +522,19 @@
         19,
         20
       ],
-      "non_verse": 4
+      "total": 14
     },
     "treasure": {
-      "count": 7,
+      "count": 5,
       "verses": [
         19,
         20,
         21
       ],
-      "non_verse": 2
+      "total": 7
     },
     "wage": {
-      "count": 9,
+      "count": 7,
       "verses": [
         1,
         2,
@@ -515,7 +544,7 @@
         16,
         18
       ],
-      "non_verse": 2
+      "total": 9
     }
   },
   "unit-07": {
@@ -527,7 +556,8 @@
         9,
         10,
         11
-      ]
+      ],
+      "total": 5
     },
     "build": {
       "count": 5,
@@ -535,7 +565,8 @@
         24,
         25,
         26
-      ]
+      ],
+      "total": 5
     },
     "do": {
       "count": 17,
@@ -551,14 +582,16 @@
         22,
         24,
         26
-      ]
+      ],
+      "total": 17
     },
     "enter": {
       "count": 3,
       "verses": [
         13,
         21
-      ]
+      ],
+      "total": 3
     },
     "eye": {
       "count": 9,
@@ -566,7 +599,8 @@
         3,
         4,
         5
-      ]
+      ],
+      "total": 9
     },
     "fruit": {
       "count": 7,
@@ -576,68 +610,74 @@
         18,
         19,
         20
-      ]
+      ],
+      "total": 7
     },
     "judge": {
       "count": 5,
       "verses": [
         1,
         2
-      ]
+      ],
+      "total": 5
     },
     "law-prophets": {
       "count": 1,
       "verses": [
         12
-      ]
+      ],
+      "total": 1
     },
     "measure": {
       "count": 3,
       "verses": [
         2
-      ]
+      ],
+      "total": 3
     },
     "way": {
       "count": 5,
       "verses": [
         13,
         14
-      ]
+      ],
+      "total": 5
     },
     "wise-foolish": {
       "count": 2,
       "verses": [
         24,
         26
-      ]
+      ],
+      "total": 2
     }
   },
   "unit-08": {
     "authority": {
-      "count": 3,
+      "count": 1,
       "verses": [
         9
       ],
-      "non_verse": 2
+      "total": 3
     },
     "clean": {
-      "count": 4,
+      "count": 3,
       "verses": [
         2,
         3
       ],
-      "non_verse": 1
+      "total": 4
     },
     "faith": {
-      "count": 3,
+      "count": 2,
       "verses": [
         10,
         13
       ],
-      "non_verse": 1
+      "total": 3
     },
     "follow": {
-      "count": 7,
+      "count": 5,
       "verses": [
         1,
         10,
@@ -645,40 +685,41 @@
         22,
         23
       ],
-      "non_verse": 2
+      "total": 7
     },
     "little-faith": {
       "count": 1,
       "verses": [
         26
-      ]
+      ],
+      "total": 1
     },
     "raise": {
-      "count": 4,
+      "count": 3,
       "verses": [
         15,
         25,
         26
       ],
-      "non_verse": 1
+      "total": 4
     },
     "release": {
-      "count": 4,
+      "count": 2,
       "verses": [
         15,
         22
       ],
-      "non_verse": 2
+      "total": 4
     },
     "shake": {
-      "count": 4,
+      "count": 1,
       "verses": [
         24
       ],
-      "non_verse": 3
+      "total": 4
     },
     "throw": {
-      "count": 6,
+      "count": 5,
       "verses": [
         6,
         12,
@@ -686,32 +727,32 @@
         16,
         31
       ],
-      "non_verse": 1
+      "total": 6
     },
     "torment": {
-      "count": 4,
+      "count": 2,
       "verses": [
         6,
         29
       ],
-      "non_verse": 2
+      "total": 4
     },
     "touch": {
-      "count": 4,
+      "count": 2,
       "verses": [
         3,
         15
       ],
-      "non_verse": 2
+      "total": 4
     },
     "urge": {
-      "count": 5,
+      "count": 3,
       "verses": [
         5,
         31,
         34
       ],
-      "non_verse": 2
+      "total": 5
     }
   }
 }

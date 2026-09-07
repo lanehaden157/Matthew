@@ -23,29 +23,25 @@ ROOTSPAN = re.compile(r'data-root="([a-z0-9-]+)"')
 
 
 def scan_unit(html):
+    """count = occurrences in the verse translation only (what a reader sees in
+    the text). total = every data-root in the fragment (legend, glosses,
+    diagrams too) — kept for verify_occurrences' token cross-check."""
     roots = {}
-    # verse-scoped occurrences
     for m in VBLOCK.finditer(html):
         seg = m.group(2)
         nums = NUM.findall(seg)
-        verse = nums[0] if nums else None
+        verse = int(nums[0]) if nums else None
         for r in ROOTSPAN.findall(seg):
-            roots.setdefault(r, {"count": 0, "verses": []})
-            roots[r]["count"] += 1
+            e = roots.setdefault(r, {"count": 0, "verses": [], "total": 0})
+            e["count"] += 1
             if verse:
-                roots[r]["verses"].append(int(verse))
-    # everything (to catch legend/ring/table occurrences too)
-    total = {}
+                e["verses"].append(verse)
+
     for r in ROOTSPAN.findall(html):
-        total[r] = total.get(r, 0) + 1
-    for r, n in total.items():
-        roots.setdefault(r, {"count": 0, "verses": []})
-        outside = n - roots[r]["count"]
-        roots[r]["count"] = n
-        if outside:
-            roots[r]["non_verse"] = outside
-    for r in roots:
-        roots[r]["verses"] = sorted(set(roots[r]["verses"]))
+        roots.setdefault(r, {"count": 0, "verses": [], "total": 0})["total"] += 1
+
+    for r, e in roots.items():
+        e["verses"] = sorted(set(e["verses"]))
     return dict(sorted(roots.items()))
 
 
@@ -56,7 +52,7 @@ def main():
         data[slug] = scan_unit(open(path, encoding="utf-8").read())
     json.dump(data, open(OUT, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     tot = sum(r["count"] for u in data.values() for r in u.values())
-    print(f"wrote {OUT} — {len(data)} units, {tot} root occurrences")
+    print(f"wrote {OUT} — {len(data)} units, {tot} in-verse root occurrences")
 
 
 if __name__ == "__main__":

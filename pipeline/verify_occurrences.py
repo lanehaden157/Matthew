@@ -67,7 +67,7 @@ def main():
         slug = os.path.splitext(os.path.basename(path))[0]
         html = open(path, encoding="utf-8").read()
         mine = recount(html)
-        theirs = {r: v["count"] for r, v in occ.get(slug, {}).items()}
+        theirs = {r: v["total"] for r, v in occ.get(slug, {}).items()}
         if mine != theirs:
             fail.append(f"{slug}: count mismatch\n   verify={mine}\n   json  ={theirs}")
 
