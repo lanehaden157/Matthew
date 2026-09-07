@@ -65,3 +65,15 @@
   global thread colours consistent across units, zero console errors.
 - Note: local python http.server + the in-app browser cache fragments very
   stickily; trust verify_occurrences.py + a fresh-origin check, not ctrl+shift+r.
+
+## 2026-09-07 (cont.) — Spotlight + footnote polish
+- app/spotlight.js — per-verse .gloss / .compare asides gathered into one
+  collapsible <aside class="spotlight"> (quiet ✦ toggle on the verse, unit-level
+  show-all/hide-all, collapsed by default, auto-expands for print). Runs on each
+  loaded unit; fragments untouched.
+- styles.css — unified spotlight panel (soft tint, gold left-accent, one style
+  for gloss + compare, dashed compare border dropped); .spot-toggle / .spot-all;
+  print block hides toggles + topbar.
+- Footnote "↩ back" link now removes itself after one use (was lingering dead).
+- Verified on live deploy: 23 panels in U7, 0 loose asides, collapse/expand +
+  show-all all work.
