@@ -157,11 +157,13 @@ U3 (`wild`→`wilderness` rename), U7 (needs a full fresh 9-hue palette — its
 **Run locally:** `python -m http.server 4180` in the project root, then open
 `http://localhost:4180`.
 
-### Phase 3 — Git + GitHub Pages *(Lane drives, I walk through it)*
+### Phase 3 — Git + GitHub Pages ✅ DONE
 
-`git init`, `.gitignore` (`pipeline/out/`, scratch), first commit, create the
-GitHub repo, push, enable Pages from the subpath, verify the deployed site (catch
-path bugs now, not at Unit 20).
+`git init -b main`, `.gitattributes` (`eol=lf`), `.gitignore`. First commit
+`ff46900`, pushed to **github.com/lanehaden157/Matthew** (public). Pages enabled
+(main / root) → **https://lanehaden157.github.io/Matthew/**. Verified live on the
+`/Matthew/` subpath: fragments load, palettes inject, footnote jump works,
+`data/units.json` fetches, zero console errors — relative paths hold.
 
 ### Phase 4 — Color engine + threads
 
