@@ -146,3 +146,10 @@
   scan work on it. 20 verses normalized, 3 compare boxes.
 - book-map: .bm-row fills 100% width on desktop (movements flex by unit
   count) so it's genuinely centred/full; scrolls sideways only below tablet.
+
+## 2026-09-07 (cont.) — legend box consistency
+- extract_units.normalize_blocks(): Unit 1's colour-key was <section class="legend">
+  (no panel box) while every other unit is "block legend". Normalized.
+- rebuildLegend: the "In this unit" / "✦ Cross-unit threads" sub-headings now
+  only appear when BOTH groups are present; a unit with no tracked threads
+  (U1, U2) just lists its roots under the h2, no orphan sub-header.

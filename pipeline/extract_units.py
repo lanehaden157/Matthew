@@ -40,6 +40,16 @@ def log(m):
     report.append(m)
 
 
+def normalize_blocks(body, u):
+    """Unit 1's colour-key section is `class="legend"` where every other unit
+    has `class="block legend"` — so it renders without the panel box."""
+    before = body
+    body = body.replace('<section class="legend"', '<section class="block legend"')
+    if body != before:
+        log(f"- U{u}: normalised legend section to `block legend`")
+    return body
+
+
 def normalize_verses(body, u):
     """Unit 1 was built before the verse conventions settled: its verses are
     <div class="v"><span class="n">N</span><span class="txt">…</span> with the
@@ -286,6 +296,7 @@ def main():
 
         log(f"\n## Unit {u}")
         body = normalize_verses(body, u)
+        body = normalize_blocks(body, u)
         body = fix_greek_title(body, u)
         body = strip_gk_spans(body, u)
         body = clean_redundancy(body)

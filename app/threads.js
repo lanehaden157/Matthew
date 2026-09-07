@@ -102,8 +102,11 @@ export function rebuildLegend(contentEl, resolved) {
       `${m.gloss ? " — " + esc(m.gloss) : ""}${st}${n}</li>`;
   };
 
+  // a heading only when there's more than one group to tell apart
+  const split = threads.length > 0 && local.length > 0;
   const group = (label, items) => items.length
-    ? `<div class="legend-group"><h3>${label}</h3><ul>${items.map(row).join("")}</ul></div>`
+    ? `<div class="legend-group">${split ? `<h3>${label}</h3>` : ""}` +
+      `<ul>${items.map(row).join("")}</ul></div>`
     : "";
 
   ul.outerHTML =
