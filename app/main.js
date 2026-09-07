@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=14";
-import { enhanceSpotlights } from "./spotlight.js?v=14";
-import { renderSearch } from "./search.js?v=14";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=17";
+import { enhanceSpotlights } from "./spotlight.js?v=17";
+import { renderSearch } from "./search.js?v=17";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -71,13 +71,99 @@ function chip(u) {
   return a;
 }
 
-function buildUnitNav() {
-  const byMovement = new Map();
+function unitsByMovement() {
+  const m = new Map();
   for (const u of manifest.units) {
-    if (!byMovement.has(u.movement)) byMovement.set(u.movement, []);
-    byMovement.get(u.movement).push(u);
+    if (!m.has(u.movement)) m.set(u.movement, []);
+    m.get(u.movement).push(u);
   }
+  return m;
+}
+
+/* A map of the whole book: 28 ticks grouped into the 3 movements, with the
+   5 discourses drawn as brackets spanning the units they cover. */
+function buildBookMap() {
+  const by = unitsByMovement();
+  const wrap = document.createElement("div");
+  wrap.className = "book-map";
+
+  const scroller = document.createElement("div");
+  scroller.className = "bm-scroll";
+  const row = document.createElement("div");
+  row.className = "bm-row";
+
+  for (const m of manifest.movements) {
+    const us = by.get(m.id) || [];
+    if (!us.length) continue;
+    const cols = `repeat(${us.length}, minmax(0, 1fr))`;
+
+    const grp = document.createElement("div");
+    grp.className = "bm-mv";
+    grp.style.flex = String(us.length);
+
+    const lab = document.createElement("div");
+    lab.className = "bm-mv-label";
+    lab.innerHTML = `<i></i><b>${roman(m.id)}</b><i></i>`;
+    lab.title = `Movement ${roman(m.id)} — ${m.label}`;
+    grp.appendChild(lab);
+
+    const ticks = document.createElement("div");
+    ticks.className = "bm-ticks";
+    ticks.style.gridTemplateColumns = cols;
+    for (const u of us) {
+      const t = document.createElement(u.built ? "a" : "span");
+      t.className = "bm-tick" + (u.built ? "" : " unbuilt") + (discourseOf(u.n) ? " in-disc" : "");
+      t.dataset.slug = u.slug;
+      t.textContent = u.n;
+      t.title = `Unit ${u.n} · ${u.title} · ${u.passage}${u.built ? "" : " (not yet built)"}`;
+      if (u.built) t.href = `#/${u.slug}`;
+      ticks.appendChild(t);
+    }
+    grp.appendChild(ticks);
+
+    const brs = document.createElement("div");
+    brs.className = "bm-brackets";
+    brs.style.gridTemplateColumns = cols;
+    const first = us[0].n;
+    for (const d of manifest.discourses || []) {
+      const inHere = d.units.filter((n) => us.some((u) => u.n === n));
+      if (!inHere.length) continue;
+      const a = Math.min(...inHere) - first + 1;
+      const b = Math.max(...inHere) - first + 2;
+      const el = document.createElement("div");
+      el.className = "bm-disc";
+      el.style.gridColumn = `${a} / ${b}`;
+      el.innerHTML = `<span class="bm-disc-bar"></span>` +
+        `<span class="bm-disc-label">◆&nbsp;${roman(d.n)}</span>`;
+      el.title = `Discourse ${roman(d.n)} — ${d.label} (Units ${d.units.join(", ")})`;
+      brs.appendChild(el);
+    }
+    grp.appendChild(brs);
+    row.appendChild(grp);
+  }
+
+  scroller.appendChild(row);
+  wrap.appendChild(scroller);
+
+  const key = document.createElement("div");
+  key.className = "bm-key";
+  key.innerHTML =
+    `<div class="bm-key-row"><span class="bm-key-h">Movements</span><span class="bm-key-items">` +
+      manifest.movements.map((m) =>
+        `<span class="bm-key-item"><b>${roman(m.id)}</b> ${escapeHtml(m.label)}</span>`).join("") +
+    `</span></div>` +
+    `<div class="bm-key-row disc"><span class="bm-key-h">Discourses</span><span class="bm-key-items">` +
+      (manifest.discourses || []).map((d) =>
+        `<span class="bm-key-item"><b>◆&nbsp;${roman(d.n)}</b> ${escapeHtml(d.label)}</span>`).join("") +
+    `</span></div>`;
+  wrap.appendChild(key);
+  return wrap;
+}
+
+function buildUnitNav() {
+  const by = unitsByMovement();
   const frag = document.createDocumentFragment();
+  frag.appendChild(buildBookMap());
 
   for (const m of manifest.movements) {
     const label = document.createElement("div");
@@ -85,31 +171,10 @@ function buildUnitNav() {
     label.textContent = `Movement ${roman(m.id)} · ${m.label}`;
     frag.appendChild(label);
 
-    // walk this movement's units in order, splitting off discourse runs
-    let grid = null, discBlock = null, discGrid = null, curDisc = null;
-    const newGrid = () => { grid = document.createElement("div"); grid.className = "unit-grid"; frag.appendChild(grid); };
-
-    for (const u of byMovement.get(m.id) || []) {
-      const d = discourseOf(u.n);
-      if (d) {
-        if (curDisc !== d) {
-          curDisc = d;
-          discBlock = document.createElement("div");
-          discBlock.className = "disc-block";
-          discBlock.innerHTML = `<div class="disc-head">◆ Discourse ${roman(d.n)} · ${escapeHtml(d.label)}</div>`;
-          discGrid = document.createElement("div");
-          discGrid.className = "unit-grid";
-          discBlock.appendChild(discGrid);
-          frag.appendChild(discBlock);
-          grid = null;
-        }
-        discGrid.appendChild(chip(u));
-      } else {
-        curDisc = null;
-        if (!grid) newGrid();
-        grid.appendChild(chip(u));
-      }
-    }
+    const grid = document.createElement("div");
+    grid.className = "unit-grid";
+    for (const u of by.get(m.id) || []) grid.appendChild(chip(u));
+    frag.appendChild(grid);
   }
   unitNav.innerHTML = "";
   unitNav.appendChild(frag);
@@ -204,9 +269,8 @@ function renderPlacement(root, unit) {
 }
 
 function markCurrent(slug) {
-  let cur = null;
-  for (const a of unitNav.querySelectorAll(".unit-chip")) {
-    if (a.dataset.slug === slug) { a.setAttribute("aria-current", "page"); cur = a; }
+  for (const a of unitNav.querySelectorAll(".unit-chip, .bm-tick")) {
+    if (a.dataset.slug === slug) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");
   }
   const u = manifest.units.find((x) => x.slug === slug);

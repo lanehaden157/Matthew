@@ -120,3 +120,15 @@
   "◆ Discourse N · Label" heading, nested inside their movement.
 - Each unit page: a placement line under the masthead —
   "Movement II · … — ◆ Discourse I: Sermon on the Mount (2 of 3)".
+
+## 2026-09-07 (cont.) — book structure map (replaces nested discourse blocks)
+- Contents panel now opens with a map of the whole book: 28 unit ticks in three
+  movement groups (roman-numeral hairline headers), the 5 discourses drawn as
+  gold brackets spanning the units they cover, and a two-row key naming the
+  movements and discourses. Ticks: built = solid + clickable, unbuilt = dashed
+  and faded, in-discourse = gold-tinted, current = gold fill.
+- The unit grid below is left uninterrupted (no more brackets over a wrapping
+  grid, which was the confusing part).
+- Names live only in the key, so nothing in the map can truncate.
+- Mobile: the strip scrolls inside its own container with a soft right edge; the
+  page itself never scrolls sideways.

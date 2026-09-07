@@ -109,18 +109,77 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
   display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 6px;
 }
-.unit-grid + .unit-grid { margin-top: 6px; }
+/* ---------------------------------------------------------- book structure map
+   28 unit ticks grouped into the 3 movements, with the 5 discourses
+   bracketed underneath the units they span. */
 
-/* discourse run nested inside a movement */
-.disc-block {
-  margin: 8px 0 4px; padding: 8px 0 8px 12px;
-  border-left: 2px solid var(--accent-gold);
+.book-map {
+  margin: 2px 0 22px; padding: 16px 18px 12px;
+  background: var(--panel);
+  border: 1px solid var(--rule-soft); border-radius: 8px;
 }
-.disc-head {
-  font-family: var(--display); font-size: 12px; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--accent-gold); font-weight: 600;
-  margin: 0 0 7px;
+.bm-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 2px; }
+.bm-row { display: flex; gap: 18px; min-width: 600px; }
+.bm-mv { display: flex; flex-direction: column; min-width: 0; }
+
+/* movement header: roman numeral centred between two hairlines — never truncates */
+.bm-mv-label { display: flex; align-items: center; gap: 7px; margin-bottom: 8px; }
+.bm-mv-label i { flex: 1; height: 1px; background: var(--rule); }
+.bm-mv-label b {
+  font-family: var(--display); font-size: 11.5px; font-weight: 600;
+  letter-spacing: .14em; color: var(--accent-crimson);
 }
+
+.bm-ticks { display: grid; gap: 3px; }
+.bm-tick {
+  display: flex; align-items: center; justify-content: center;
+  height: 26px; border-radius: 4px;
+  border: 1px solid var(--rule); background: var(--bg);
+  font-family: var(--display); font-size: 12.5px; font-weight: 600;
+  color: var(--ink); text-decoration: none;
+  transition: transform .12s, border-color .12s, background .12s, box-shadow .12s;
+}
+a.bm-tick:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 3px 8px rgba(30, 22, 12, .14);
+}
+.bm-tick.in-disc { background: color-mix(in srgb, var(--accent-gold) 12%, var(--bg)); }
+@supports not (background: color-mix(in srgb, white, black)) {
+  .bm-tick.in-disc { background: #f2e8cf; }
+}
+.bm-tick.unbuilt { opacity: .38; border-style: dashed; color: var(--ink-soft); }
+.bm-tick[aria-current="page"] {
+  background: var(--accent-gold); border-color: var(--accent-gold); color: var(--panel);
+  box-shadow: 0 0 0 2px rgba(138, 106, 42, .22);
+}
+
+/* discourse brackets, aligned to the tick grid above */
+.bm-brackets { display: grid; margin-top: 5px; min-height: 26px; }
+.bm-disc { grid-row: 1; display: flex; flex-direction: column; align-items: center; min-width: 0; }
+.bm-disc-bar {
+  display: block; width: 100%; height: 6px;
+  border: 1px solid var(--accent-gold); border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+.bm-disc-label {
+  margin-top: 3px; font-family: var(--display); font-size: 10.5px; font-weight: 600;
+  letter-spacing: .08em; color: var(--accent-gold); white-space: nowrap;
+}
+
+/* names live in the key, so nothing in the map itself can truncate */
+.bm-key { margin-top: 13px; padding-top: 10px; border-top: 1px solid var(--rule-soft); }
+.bm-key-row { display: flex; gap: 10px; align-items: baseline; margin-top: 5px; }
+.bm-key-row:first-child { margin-top: 0; }
+.bm-key-h {
+  flex: none; width: 76px;
+  font-family: var(--display); font-size: 10px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+.bm-key-items { display: flex; flex-wrap: wrap; gap: 3px 16px; font-size: 12.5px; }
+.bm-key-item { color: var(--ink-soft); white-space: nowrap; }
+.bm-key-item b { color: var(--accent-crimson); font-family: var(--display); font-weight: 600; margin-right: 3px; }
+.bm-key-row.disc .bm-key-item b { color: var(--accent-gold); }
 .unit-chip {
   display: block; padding: 8px 12px; border: 1px solid var(--rule);
   border-radius: 7px; background: var(--panel); font-size: 14.5px; line-height: 1.3;
@@ -480,6 +539,14 @@ sup.en a { border: none; }
   .topbar .brand { font-size: 17px; }
   .topbar nav { width: 100%; margin-left: 0; }
   .unit-nav { padding: 14px 16px 18px; }
+  .book-map { padding: 13px 12px 10px; }
+  .bm-key-row { flex-direction: column; gap: 3px; }
+  .bm-key-h { width: auto; }
+  /* the strip scrolls sideways on its own; hint at it with a soft right edge */
+  .bm-scroll {
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent);
+  }
   .unit .mast h1 { font-size: 32px; }
   .unit .mast .greek-title { font-size: 18px; }
   .unit section.block { padding: 16px 15px; margin: 22px 0; }
