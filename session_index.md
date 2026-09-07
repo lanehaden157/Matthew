@@ -9,4 +9,7 @@ Read this first. 3 lines max per session.
   (script stripped, translit-only, data-root spans, prefixed endnote ids).
 - Phase 2 done: index.html + app/main.js router + css/styles.css; all 8 units
   render in-browser, responsive, footnote jump works.
-- Next: Phase 3 (git init + GitHub Pages — Lane drives, walk through it).
+- Phase 3 done: pushed to github.com/lanehaden157/Matthew, live at
+  https://lanehaden157.github.io/Matthew/ (verified working on the subpath).
+- Next: Phase 4 (data/threads.json — the 16 tracked threads — + scan/verify
+  pipeline + data-driven legends + tag-retrofit review).

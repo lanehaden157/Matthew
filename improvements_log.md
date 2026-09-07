@@ -36,3 +36,11 @@
   overflow at 375px.
 - extract_units.py fixes found via browser QA: preserve trailing text when
   unwrapping Latin-in-gk spans; keep the closing paren on `(<gk>G</gk>, translit)`.
+
+## 2026-09-07 (cont.) — Phase 3: git + GitHub Pages
+- git init -b main; .gitattributes (eol=lf); .gitignore excludes root
+  matthew_0*_translation.html dupes (canonical in source-artifacts/).
+- First commit ff46900 (36 files), pushed to github.com/lanehaden157/Matthew (public).
+- Pages enabled: source main / root. Live at https://lanehaden157.github.io/Matthew/
+- Verified live on the /Matthew/ subpath: units load, palettes inject, footnote
+  jump works, data/units.json fetches, zero console errors — relative paths hold.
