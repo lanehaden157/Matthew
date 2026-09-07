@@ -266,6 +266,72 @@ sup.en a { border: none; }
 .unit .compare .src { font-variant: small-caps; letter-spacing: .05em; color: var(--ink-soft); font-style: normal; font-size: 13.5px; }
 .unit .compare .txt { line-height: 1.5; }
 
+/* ---- spotlight: collapsed per-verse asides ---- */
+
+/* the ✦ affordance at the end of a verse */
+.unit .spot-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; margin-left: 4px; padding: 0;
+  vertical-align: baseline; text-indent: 0;
+  font: inherit; font-size: 12px; line-height: 1;
+  color: var(--ink-soft); background: transparent;
+  border: 1px solid var(--rule); border-radius: 50%;
+  cursor: pointer; transition: color .15s, border-color .15s, background .15s;
+}
+.unit .spot-toggle:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+.unit .spot-toggle.is-open {
+  color: var(--panel); background: var(--accent-gold); border-color: var(--accent-gold);
+}
+
+/* unit-level show/hide-all */
+.unit .spot-controls { margin: 22px 0 4px; }
+.unit .spot-all {
+  font: inherit; font-size: 13px; color: var(--ink-soft);
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 4px 12px; cursor: pointer;
+}
+.unit .spot-all:hover { border-color: var(--ink-soft); color: var(--ink); }
+
+/* the panel */
+.unit .spotlight {
+  text-indent: 0;
+  margin: 6px 0 18px; padding: 12px 16px 14px;
+  background: color-mix(in srgb, var(--panel) 78%, var(--bg));
+  border: 1px solid var(--rule-soft);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 4px;
+  font-size: 15px; line-height: 1.55;
+  page-break-inside: avoid; break-inside: avoid;
+}
+@supports not (background: color-mix(in srgb, white, black)) {
+  .unit .spotlight { background: var(--panel); }
+}
+.unit .spot-head {
+  font-family: var(--display); font-size: 11.5px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.unit .spot-head::before { content: "✦ "; color: var(--accent-gold); }
+.unit .spot-div { height: 1px; background: var(--rule-soft); margin: 12px -16px; }
+
+/* gloss + compare, restyled for inside the panel (flatter, unified) */
+.unit .spotlight .gloss {
+  display: block; margin: 0; padding: 0; border: none;
+  color: var(--ink); font-style: normal; font-size: 15px; line-height: 1.55;
+}
+.unit .spotlight .compare {
+  display: block; margin: 0; padding: 0; border: none; background: none; border-radius: 0;
+}
+.unit .spotlight .compare .row {
+  display: grid; grid-template-columns: 116px 1fr; gap: 3px 14px;
+  align-items: baseline; padding: 4px 0; border-top: 1px solid var(--rule-soft);
+}
+.unit .spotlight .compare .row:first-child { border-top: none; padding-top: 0; }
+.unit .spotlight .compare .src {
+  font-variant: small-caps; letter-spacing: .05em; font-size: 13px;
+  color: var(--ink-soft); font-style: normal;
+}
+
 /* endnotes */
 .unit .notes, .unit .endnotes { margin-top: 48px; border-top: 2px solid var(--ink); padding-top: 18px; }
 .unit .notes h2, .unit .endnotes h2 { font-family: var(--display); font-size: 17px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin: 0 0 16px; }
@@ -290,7 +356,11 @@ sup.en a { border: none; }
   .unit .legend ul { grid-template-columns: 1fr; }
   .unit .v { padding-left: 26px; text-indent: -26px; }
   .unit .v .n { width: 22px; }
-  .unit .compare .row { grid-template-columns: 1fr; gap: 1px; }
+  .unit .spot-toggle { width: 26px; height: 26px; font-size: 13px; }
+  .unit .spotlight { padding: 11px 13px 12px; }
+  .unit .spot-div { margin-left: -13px; margin-right: -13px; }
+  .unit .compare .row,
+  .unit .spotlight .compare .row { grid-template-columns: 1fr; gap: 1px; }
   .unit .triad { flex-direction: column; align-items: flex-start; gap: 3px; }
   .unit .triad .cnt { white-space: normal; }
   .unit-pager { flex-direction: column; padding-bottom: 60px; }
@@ -299,5 +369,11 @@ sup.en a { border: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .flash { animation: none; }
+  .flash { animation: none; background: var(--flash); transition: background 1.2s ease-out; }
+}
+
+@media print {
+  .topbar-wrap, .nav-backdrop, .unit-pager,
+  .spot-toggle, .spot-controls { display: none !important; }
+  .spotlight { border-left-width: 2px; }
 }
