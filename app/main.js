@@ -2,8 +2,8 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend } from "./threads.js?v=10";
-import { enhanceSpotlights } from "./spotlight.js?v=10";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=11";
+import { enhanceSpotlights } from "./spotlight.js?v=11";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -122,6 +122,7 @@ async function loadUnit(unit, anchor) {
   injectPalette(unit, resolved);
   rebuildLegend(content, resolved);
   enhanceSpotlights(content);
+  wireRoots(content, unit, manifest.units);
   wireFootnotes();
   buildPager(unit);
   document.title = `Unit ${unit.n} · ${unit.title} — Matthew Study`;

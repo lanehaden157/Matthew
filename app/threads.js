@@ -93,6 +93,158 @@ export function rebuildLegend(contentEl, resolved) {
     : `${rows.length} roots tracked in this unit.`;
 }
 
+/* ---------------------------------------------- root hover tip + click popover */
+
+let _tip, _pop, _popAnchor = null;
+
+export function wireRoots(root, unit, units) {
+  root._rootsAbort?.abort();
+  const ac = new AbortController();
+  root._rootsAbort = ac;
+  const opt = { signal: ac.signal };
+
+  const resolved = resolveUnit(unit);
+  const builtByN = new Map(units.map((u) => [u.n, u]));
+
+  const hoverable = () => window.matchMedia("(hover: hover)").matches;
+
+  root.addEventListener("pointerover", (e) => {
+    if (!hoverable() || _popAnchor) return;
+    const el = e.target.closest("[data-root]");
+    if (el && !el.closest("a")) showTip(el, resolved);
+  }, opt);
+  root.addEventListener("pointerout", (e) => {
+    if (e.target.closest("[data-root]")) hideTip();
+  }, opt);
+
+  root.addEventListener("click", (e) => {
+    const el = e.target.closest("[data-root]");
+    if (!el || e.target.closest("a")) return;
+    e.preventDefault();
+    hideTip();
+    if (_popAnchor === el) return closePop();
+    openPop(el, resolved, unit, builtByN);
+  }, opt);
+}
+
+function tipEl() {
+  if (!_tip) {
+    _tip = document.createElement("div");
+    _tip.className = "root-tip";
+    _tip.hidden = true;
+    document.body.append(_tip);
+  }
+  return _tip;
+}
+
+function showTip(el, resolved) {
+  const m = resolved.get(el.dataset.root);
+  if (!m) return;
+  const t = tipEl();
+  t.innerHTML = `<i>${esc(m.translit)}</i>${m.gloss ? " — " + esc(m.gloss) : ""}`;
+  place(el, t, 6);
+}
+function hideTip() { if (_tip) _tip.hidden = true; }
+
+function popEl() {
+  if (!_pop) {
+    _pop = document.createElement("div");
+    _pop.className = "root-pop";
+    _pop.hidden = true;
+    _pop.setAttribute("role", "dialog");
+    document.body.append(_pop);
+  }
+  return _pop;
+}
+
+function openPop(el, resolved, unit, builtByN) {
+  const root = el.dataset.root;
+  const m = resolved.get(root);
+  if (!m) return;
+  const th = _threads.byRoot.get(root);
+  const occ = (_occ[unit.slug] || {})[root] || { count: 0, verses: [] };
+
+  const rows = [];
+  rows.push(`<div class="rp-head">
+    <span class="swatch" style="background:${m.color || "transparent"}"></span>
+    <i>${esc(m.translit)}</i>${th ? ` <span class="rp-tag">thread${th.status === "closed" ? " · closed" : ""}</span>` : ""}
+  </div>`);
+  if (m.gloss) rows.push(`<p class="rp-gloss">${esc(m.gloss)}</p>`);
+
+  if (occ.count) {
+    const vv = (occ.verses || []).length
+      ? ` · ${occ.verses.length > 6 ? occ.verses.length + " verses" : "vv. " + occ.verses.join(", ")}`
+      : "";
+    rows.push(`<p class="rp-count">${occ.count}× in this unit${vv}</p>`);
+  }
+
+  if (th) {
+    const leg = [];
+    if (th.opens) leg.push(`opens ${esc(th.opens.ref)}`);
+    for (const p of th.payoffs || []) {
+      const u = builtByN.get(p.unit);
+      const label = `Unit ${p.unit}${p.ref ? ` (${esc(p.ref)})` : ""}`;
+      leg.push(u && u.built
+        ? `<a href="#/${u.slug}">${label}</a>`
+        : `<span class="rp-soon">${label}</span>`);
+    }
+    if (leg.length) rows.push(`<p class="rp-traj">${leg.join(" → ")}</p>`);
+
+    const elsewhere = Object.keys(_occ)
+      .filter((s) => s !== unit.slug && (_occ[s][root]?.count))
+      .map((s) => builtByN.get(Number(s.split("-")[1]))).filter(Boolean);
+    if (elsewhere.length) {
+      rows.push(`<p class="rp-also">also in ${elsewhere
+        .map((u) => `<a href="#/${u.slug}">Unit ${u.n}</a>`).join(", ")}</p>`);
+    }
+    if (th.note) rows.push(`<p class="rp-note">${esc(th.note)}</p>`);
+  }
+
+  const p = popEl();
+  p.innerHTML = rows.join("");
+  p.querySelectorAll("a[href^='#/']").forEach((a) =>
+    a.addEventListener("click", () => closePop()));
+  _popAnchor = el;
+  el.classList.add("root-active");
+  place(el, p, 8);
+  bindDismiss();
+}
+
+function closePop() {
+  if (_pop) _pop.hidden = true;
+  _popAnchor?.classList.remove("root-active");
+  _popAnchor = null;
+  unbindDismiss();
+}
+
+let _dismiss;
+function bindDismiss() {
+  unbindDismiss();
+  _dismiss = new AbortController();
+  const s = { signal: _dismiss.signal };
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".root-pop") && !e.target.closest("[data-root]")) closePop();
+  }, s);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closePop(); }, s);
+  window.addEventListener("scroll", closePop, { ...s, passive: true });
+  window.addEventListener("resize", closePop, s);
+}
+function unbindDismiss() { _dismiss?.abort(); _dismiss = null; }
+
+function place(anchor, node, gap) {
+  const r = anchor.getBoundingClientRect();
+  node.hidden = false;
+  node.style.visibility = "hidden";
+  const w = node.offsetWidth, h = node.offsetHeight;
+  let left = r.left + r.width / 2 - w / 2;
+  left = Math.max(8, Math.min(left, window.innerWidth - w - 8));
+  let top = r.bottom + gap;
+  if (top + h > window.innerHeight - 8) top = Math.max(8, r.top - h - gap);
+  node.style.left = `${Math.round(left)}px`;
+  node.style.top = `${Math.round(top)}px`;
+  node.style.visibility = "";
+}
+
 function esc(s) { return String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c])); }
 function escAttr(s) { return String(s).replace(/"/g, "&quot;"); }
 function cssEsc(s) { return s.replace(/[^a-zA-Z0-9_-]/g, "\\$&"); }

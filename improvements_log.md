@@ -83,3 +83,12 @@
   own 'heaven(s)' -> 'sky/skies' (units 1-5 had old wording; 6-8 already matched).
   Verbatim NASB/Hart rows in compare boxes protected (still "kingdom of heaven").
   31 substitutions. Re-ran build.py. Style reference §4 updated for units 9-28.
+
+## 2026-09-07 (cont.) — Phase 5: root interactions
+- threads.js wireRoots() — hover any coloured root (desktop) -> tip with
+  translit + gloss; click any root -> popover: swatch, translit, gloss,
+  "N× in this unit · vv…", and for tracked threads the trajectory
+  (opens … → payoff Unit N links, built = live / unbuilt = greyed),
+  "also in Unit X", and the thread note. Dismiss on outside-click/Esc/scroll.
+- CSS: .root-tip, .root-pop, [data-root] hover underline + .root-active.
+- Skipped the "threads active here" footer (redundant with the legend).

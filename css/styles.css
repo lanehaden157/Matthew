@@ -346,6 +346,49 @@ sup.en a { border: none; }
   color: var(--ink-soft); font-style: normal;
 }
 
+/* ---- root hover tip + click popover ---- */
+
+.unit [data-root] { cursor: pointer; }
+.unit [data-root]:hover { text-decoration: underline dotted; text-underline-offset: 3px; }
+.unit [data-root].root-active {
+  text-decoration: underline; text-underline-offset: 3px;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 2px;
+}
+
+.root-tip {
+  position: fixed; z-index: 60; max-width: 280px;
+  padding: 6px 10px; border-radius: 5px;
+  background: var(--ink); color: var(--panel);
+  font-family: var(--serif); font-size: 13.5px; line-height: 1.4;
+  box-shadow: 0 4px 14px rgba(20, 16, 10, .25);
+  pointer-events: none;
+}
+.root-tip i { font-style: italic; }
+
+.root-pop {
+  position: fixed; z-index: 60; width: min(320px, calc(100vw - 16px));
+  padding: 12px 14px; border-radius: 7px;
+  background: var(--panel); border: 1px solid var(--rule);
+  box-shadow: 0 12px 32px rgba(20, 16, 10, .22);
+  font-family: var(--serif); font-size: 14px; line-height: 1.5; color: var(--ink);
+}
+.root-pop .rp-head { display: flex; align-items: center; gap: 7px; font-size: 15.5px; }
+.root-pop .rp-head i { font-style: italic; font-weight: 600; }
+.root-pop .rp-head .swatch { width: 11px; height: 11px; border-radius: 50%; flex: none; }
+.root-pop .rp-tag {
+  font-family: var(--display); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--accent-gold); border: 1px solid currentColor; border-radius: 3px; padding: 0 4px;
+}
+.root-pop p { margin: 7px 0 0; }
+.root-pop .rp-gloss { color: var(--ink); }
+.root-pop .rp-count { font-size: 13px; color: var(--ink-soft); }
+.root-pop .rp-traj { font-size: 13.5px; }
+.root-pop .rp-traj a, .root-pop .rp-also a { color: var(--accent-gold); border-bottom: 1px dotted currentColor; }
+.root-pop .rp-soon { color: var(--ink-soft); opacity: .7; }
+.root-pop .rp-also { font-size: 12.5px; color: var(--ink-soft); }
+.root-pop .rp-note { font-size: 12.5px; font-style: italic; color: var(--ink-soft); border-top: 1px solid var(--rule-soft); padding-top: 7px; }
+
 /* endnotes */
 .unit .notes, .unit .endnotes { margin-top: 48px; border-top: 2px solid var(--ink); padding-top: 18px; }
 .unit .notes h2, .unit .endnotes h2 { font-family: var(--display); font-size: 17px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin: 0 0 16px; }
