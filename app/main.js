@@ -2,7 +2,7 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend } from "./threads.js?v=7";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend } from "./threads.js?v=8";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -199,17 +199,12 @@ function jumpTo(el, flashEl) {
   requestAnimationFrame(tick);
 }
 
-let _flashed = null;
 function flash(el) {
-  if (_flashed === el) return;
-  _flashed = el;
+  clearTimeout(el._flashT);
   el.classList.remove("flash");
-  void el.offsetWidth;
+  void el.offsetWidth; // restart the animation
   el.classList.add("flash");
-  el.addEventListener("animationend", () => {
-    el.classList.remove("flash");
-    if (_flashed === el) _flashed = null;
-  }, { once: true });
+  el._flashT = setTimeout(() => el.classList.remove("flash"), 2100);
 }
 
 function inView(el) {
