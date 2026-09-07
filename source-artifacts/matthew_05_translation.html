@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matthew 5:1–48 — The Greater Righteousness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5efe2;
+    --panel:#fbf7ee;
+    --panel-2:#f1e8d5;
+    --ink:#2a2520;
+    --ink-soft:#5c5347;
+    --rule:#d8cdb6;
+    --rule-soft:#e7dec9;
+    /* === Greek-root colors — assigned fresh for THIS unit (§1) === */
+    --c-righteous:#b07a1e;  /* δικαιοσύνη righteousness */
+    --c-kingdom:#9c2f8f;    /* βασιλεία τῶν οὐρανῶν kingdom of the heavens */
+    --c-father:#1c7d70;     /* πατήρ Father */
+    --c-said:#2f6db3;       /* ἠκούσατε / ἐρρέθη — "y'all heard / it was said" */
+    --c-isay:#a8324a;       /* ἐγὼ δὲ λέγω — "but I say to y'all" */
+    --c-whole:#5a3fa0;      /* τέλειος / ὅλος — whole, complete */
+    --c-gehenna:#5e1822;    /* γέεννα Gehenna */
+    --c-evil:#7a5a10;       /* πονηρός evil / the evil one */
+    --c-yall:#3f7d3a;       /* ὑμεῖς ἐστε — emphatic "y'all are" */
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 18% -5%, #faf5ea 0%, transparent 55%),
+      radial-gradient(circle at 105% 102%, #ece2cc 0%, transparent 50%),
+      var(--bg);
+    color:var(--ink);
+    font-family:"EB Garamond", Georgia, serif;
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:790px;margin:0 auto;padding:56px 26px 120px;}
+
+  a{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;}
+  a:hover{border-bottom-style:solid;}
+
+  /* ---- masthead ---- */
+  header.mast{text-align:center;border-bottom:2px solid var(--ink);padding-bottom:26px;margin-bottom:8px;}
+  .mast .kicker{letter-spacing:.32em;text-transform:uppercase;font-size:12.5px;color:var(--ink-soft);}
+  .mast h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:43px;line-height:1.05;margin:.18em 0 .12em;letter-spacing:.01em;}
+  .mast .greek-title{font-size:21px;color:var(--c-righteous);font-style:italic;margin-bottom:.2em;}
+  .mast .unit{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--ink-soft);font-style:italic;}
+
+  /* ---- shared section frame (ALWAYS page-break-protected) ---- */
+  section.block{background:var(--panel);border:1px solid var(--rule);border-radius:7px;padding:20px 24px;margin:30px 0;page-break-inside:avoid;break-inside:avoid;}
+  section.block h2{font-family:"Cormorant Garamond",serif;font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 4px;}
+  section.block .cap{font-style:italic;color:var(--ink-soft);font-size:15px;margin:0 0 16px;}
+
+  /* ---- legend ---- */
+  .legend ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 26px;}
+  .legend li{font-size:15.5px;line-height:1.4;}
+  .swatch{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px;vertical-align:baseline;}
+  .legend .gk{font-style:italic;}
+  .legend .tag{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-left:6px;}
+  @media(max-width:560px){.legend ul{grid-template-columns:1fr;}}
+
+  /* ---- root spans ---- */
+  .r{font-weight:600;}
+  .righteous{color:var(--c-righteous);}
+  .kingdom{color:var(--c-kingdom);}
+  .father{color:var(--c-father);}
+  .said{color:var(--c-said);}
+  .isay{color:var(--c-isay);}
+  .whole{color:var(--c-whole);}
+  .gehenna{color:var(--c-gehenna);}
+  .evil{color:var(--c-evil);}
+  .yall{color:var(--c-yall);}
+  .star{color:#9a7a12;font-style:italic;}
+
+  /* ---- ring / concentric structure maps ---- */
+  .ring{display:grid;grid-template-columns:1fr;gap:10px;}
+  .ringrow{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;padding:9px 12px;border-radius:6px;background:var(--panel-2);}
+  .ringrow.center{background:#efe4cb;border:1px solid var(--rule);}
+  .ringrow .lab{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:20px;color:var(--c-righteous);text-align:center;}
+  .ringrow .lab small{display:block;font-size:11px;color:var(--ink-soft);letter-spacing:.06em;font-weight:400;}
+  .ringrow .txt{font-size:15.5px;line-height:1.45;}
+  .ringrow .ref{color:var(--ink-soft);font-style:italic;}
+
+  /* ---- correspondence / comparison table ---- */
+  table.exod{width:100%;border-collapse:collapse;font-size:15.5px;}
+  table.exod th,table.exod td{padding:8px 10px;border:1px solid var(--rule);text-align:left;vertical-align:top;}
+  table.exod th{background:var(--panel-2);font-family:"Cormorant Garamond",serif;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px;color:var(--ink-soft);font-weight:600;}
+  table.exod td.mt{color:var(--c-isay);font-weight:600;}
+  table.exod td.eg{color:var(--ink-soft);}
+
+  /* ---- verses ---- */
+  .verses{margin-top:40px;}
+  .movement{font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:600;color:var(--c-righteous);letter-spacing:.02em;margin:38px 0 4px;border-bottom:1px solid var(--rule);padding-bottom:5px;}
+  .movement small{display:block;font-size:13.5px;font-weight:400;font-style:italic;color:var(--ink-soft);letter-spacing:0;text-transform:none;}
+  .v{margin:0 0 14px;padding-left:42px;text-indent:-42px;line-height:1.7;}
+  .v .n{display:inline-block;width:30px;text-indent:0;font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--c-kingdom);font-weight:600;vertical-align:top;}
+  .gloss{display:block;text-indent:0;margin:3px 0 14px 0;padding:6px 14px;border-left:2px solid var(--rule);color:var(--ink-soft);font-style:italic;font-size:15px;line-height:1.5;}
+  sup.en{font-size:.62em;font-style:normal;color:var(--c-isay);font-weight:700;vertical-align:super;line-height:0;}
+  sup.en a{border:none;}
+
+  /* ---- compare box ---- */
+  .compare{display:block;text-indent:0;margin:6px 0 14px 0;border:1px dashed var(--rule);border-radius:6px;background:var(--panel);padding:10px 14px;font-size:15px;page-break-inside:avoid;break-inside:avoid;}
+  .compare .row{margin:3px 0;}
+  .compare .src{display:inline-block;min-width:108px;font-variant:small-caps;letter-spacing:.05em;color:var(--ink-soft);font-style:normal;font-size:13.5px;}
+
+  .gk{font-style:italic;}
+  .tr{font-style:italic;color:var(--ink-soft);font-size:.92em;}
+
+  /* ---- endnotes ---- */
+  .notes{margin-top:48px;border-top:2px solid var(--ink);padding-top:18px;}
+  .notes h2{font-family:"Cormorant Garamond",serif;font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 16px;}
+  .notes ol{margin:0;padding-left:26px;}
+  .notes li{margin:0 0 15px;font-size:16px;line-height:1.55;}
+
+  footer{margin-top:50px;text-align:center;font-size:13px;color:var(--ink-soft);font-style:italic;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="kicker">The Gospel According to Matthew · Study Translation</div>
+  <h1>The Greater Righteousness</h1>
+  <div class="greek-title">περισσεύσῃ ὑμῶν ἡ δικαιοσύνη — <span style="font-style:normal;font-size:.8em;color:var(--ink-soft)">perisseusē hymōn hē dikaiosynē</span></div>
+  <div class="unit">Unit 5 · Matthew 5:1–48 · the Sermon on the Mount (I): the Beatitudes, salt and light, the Law, and the six contrasts</div>
+</header>
+
+<section class="block legend" aria-label="color key">
+  <h2>Recurring Greek roots — color key</h2>
+  <p class="cap">The roots tracked in this unit and the color each holds throughout the artifact. (Colors are assigned per-unit; they do not carry over from earlier units.)</p>
+  <ul>
+    <li><span class="swatch" style="background:var(--c-righteous)"></span><span class="gk">δικαιοσύνη</span> — righteousness <span class="tag">spine: 5:6,10,20</span></li>
+    <li><span class="swatch" style="background:var(--c-kingdom)"></span><span class="gk">βασιλεία τῶν οὐρανῶν</span> — kingdom of the heavens <span class="tag">bracket: 5:3,10,19,20</span></li>
+    <li><span class="swatch" style="background:var(--c-father)"></span><span class="gk">πατήρ</span> — Father <span class="tag">5:16,45,48</span></li>
+    <li><span class="swatch" style="background:var(--c-said)"></span><span class="gk">ἠκούσατε / ἐρρέθη</span> — y'all heard / it was said</li>
+    <li><span class="swatch" style="background:var(--c-isay)"></span><span class="gk">ἐγὼ δὲ λέγω ὑμῖν</span> — but I say to y'all</li>
+    <li><span class="swatch" style="background:var(--c-whole)"></span><span class="gk">τέλειος / ὅλος</span> — whole, complete <span class="tag">5:29,30,48</span></li>
+    <li><span class="swatch" style="background:var(--c-gehenna)"></span><span class="gk">γέεννα</span> — Gehenna <span class="tag">5:22,29,30</span></li>
+    <li><span class="swatch" style="background:var(--c-evil)"></span><span class="gk">πονηρός</span> — evil / the evil one <span class="tag">5:11,37,39,45</span></li>
+    <li><span class="swatch" style="background:var(--c-yall)"></span><span class="gk">ὑμεῖς ἐστε</span> — y'all are (emphatic) <span class="tag">5:13,14</span></li>
+  </ul>
+</section>
+
+<section class="block">
+  <h2>The Beatitudes — two quartets bracketed by the kingdom · 5:3–10</h2>
+  <p class="cap">Eight third-person makarisms. The first and eighth close an <em>inclusio</em> (“theirs is the kingdom of the heavens”), and <span class="gk">δικαιοσύνη</span> stands at the seam (4th) and the close (8th). Present-tense kingdom brackets enclose six future-tense promises — the already-and-not-yet in the grammar.</p>
+  <div class="ring">
+    <div class="ringrow"><div class="lab">A<small>v3</small></div><div class="txt">poor in the spirit — <b class="r kingdom">theirs is the kingdom of the heavens</b> <span class="ref">(present)</span></div></div>
+    <div class="ringrow"><div class="lab">B<small>v4</small></div><div class="txt">the mourning — shall be comforted <span class="ref">— Isa 61:2</span></div></div>
+    <div class="ringrow"><div class="lab">C<small>v5</small></div><div class="txt">the meek — shall inherit the earth <span class="ref">— Ps 37:11</span></div></div>
+    <div class="ringrow center"><div class="lab">D<small>v6</small></div><div class="txt">hungering &amp; thirsting for <b class="r righteous">righteousness</b> — shall be fed full <span class="ref">— hinge of quartet 1</span></div></div>
+    <div class="ringrow"><div class="lab">D′<small>v7</small></div><div class="txt">the merciful — shall be shown mercy</div></div>
+    <div class="ringrow"><div class="lab">C′<small>v8</small></div><div class="txt">the pure in heart — shall see God <span class="ref">— Ps 24:4</span></div></div>
+    <div class="ringrow"><div class="lab">B′<small>v9</small></div><div class="txt">the peacemakers — shall be called sons of God</div></div>
+    <div class="ringrow"><div class="lab">A′<small>v10</small></div><div class="txt">persecuted for <b class="r righteous">righteousness</b> — <b class="r kingdom">theirs is the kingdom of the heavens</b> <span class="ref">(present)</span></div></div>
+  </div>
+</section>
+
+<div class="verses">
+
+<div class="movement">The Setting<small>Matthew 5:1–2 · the second mountain — Jesus ascends and sits to teach</small></div>
+
+<p class="v"><span class="n">1</span>And seeing the crowds he went up onto the mountain;<sup class="en"><a href="#n1">1</a></sup> and when he had sat down, his disciples came to him.</p>
+<p class="v"><span class="n">2</span>And opening his mouth he was teaching them, saying:</p>
+<span class="gloss">“Opening his mouth” (<span class="gk">ἀνοίξας τὸ στόμα</span>) is a Septuagintal solemnity-marker — the gesture before a weighty, oracular utterance (cf. Job 3:1; Ps 78:2, quoted at Matt 13:35). The narrator is telling us to lean in.</span>
+
+<div class="movement">The Beatitudes<small>Matthew 5:3–12 · the makarisms — eight, then a turn to “y'all”</small></div>
+
+<p class="v"><span class="n">3</span>Blessed<sup class="en"><a href="#n2">2</a></sup> are the poor in the spirit,<sup class="en"><a href="#n3">3</a></sup> for theirs is the <span class="r kingdom">kingdom of the heavens</span>.</p>
+<p class="v"><span class="n">4</span>Blessed are the mourning, for they shall be comforted.</p>
+<span class="gloss">Verses 3–4 paraphrase Isaiah 61:1–2 (LXX): the Servant is anointed to bring good news to the <span class="gk">πτωχοί</span> (poor) and “to comfort all who mourn” (<span class="gk">παρακαλέσαι πάντας τοὺς πενθοῦντας</span>). The kingdom-people receive the very consolation the Anointed One came to bring.</span>
+<p class="v"><span class="n">5</span>Blessed are the meek, for they shall inherit the earth.</p>
+<span class="gloss">A near-verbatim quotation of Psalm 37:11 (LXX 36:11): <span class="gk">οἱ δὲ πραεῖς κληρονομήσουσιν γῆν</span>. The same word <span class="gk">πραΰς</span> (meek, gentle) is twice applied to Jesus himself (11:29; 21:5). A quiet anti-zealot note: the land comes to the gentle, not the violent.</span>
+<p class="v"><span class="n">6</span>Blessed are those hungering and thirsting for <span class="r righteous">righteousness</span>,<sup class="en"><a href="#n4">4</a></sup> for they shall be fed full.</p>
+<span class="gloss">“Fed full” renders <span class="gk">χορτασθήσονται</span> — a hearty, almost barnyard word (“foddered up”) that recurs at the feedings, where the crowds “were fed full” (14:20; 15:37). The satisfaction promised here gets a narrative preview in the wilderness.</span>
+<p class="v"><span class="n">7</span>Blessed are the merciful, for they shall be shown mercy.</p>
+<p class="v"><span class="n">8</span>Blessed are the pure in heart, for they shall see God.</p>
+<span class="gloss">Psalm 24:3–4 asks who may ascend the LORD’s mountain: “he who has clean hands and a pure heart” (<span class="gk">καθαρὸς τῇ καρδίᾳ</span>). To “see God” reverses Exodus 33:20 (“no one may see me and live”); John answers it — the unseen God is seen in the Son (John 1:18; 14:9) — and Revelation 22:4 consummates it.</span>
+<p class="v"><span class="n">9</span>Blessed are the peacemakers, for they shall be called sons of God.</p>
+<span class="gloss"><span class="gk">εἰρηνοποιοί</span> — not the merely peaceful but those who actively <em>make</em> peace (Heb. <em>shalom</em>, the wholeness of a world set right). Sonship by family likeness; the logic returns at v45.</span>
+<p class="v"><span class="n">10</span>Blessed are those who have been persecuted for the sake of <span class="r righteous">righteousness</span>, for theirs is the <span class="r kingdom">kingdom of the heavens</span>.</p>
+<span class="gloss">The bracket snaps shut: “righteousness” and “theirs is the kingdom” return together, sealing the eight (cf. 1 Pet 3:14).</span>
+<p class="v"><span class="n">11</span>Blessed are <span class="r yall">y'all</span> whenever they revile y'all and persecute and say every <span class="r evil">evil</span> thing against y'all,<sup class="en"><a href="#n5">5</a></sup> lying, for my sake.</p>
+<span class="gloss">The grammar lurches from third person to second, and the ground shifts from “for righteousness’ sake” (v10) to <span class="gk">ἕνεκεν ἐμοῦ</span>, “for my sake” — allegiance to Jesus quietly takes the place of righteousness itself.</span>
+<p class="v"><span class="n">12</span>Rejoice and exult, for y'all's reward is much in the heavens; for so they persecuted the prophets who were before y'all.</p>
+<span class="gloss">“Exult” (<span class="gk">ἀγαλλιᾶσθε</span>) is the cultic, near-ecstatic joy of the Psalms. The disciples are slotted into the line of persecuted prophets — a master-theme that detonates in ch. 23 and in Acts 7:52.</span>
+
+<div class="movement">Salt and Light<small>Matthew 5:13–16 · description becomes vocation</small></div>
+
+<p class="v"><span class="n">13</span><span class="r yall">Y'all are</span> the salt of the earth; but if the salt is made foolish,<sup class="en"><a href="#n6">6</a></sup> with what will it be salted? It is strong for nothing any longer except, being thrown out, to be trampled underfoot by men.</p>
+<span class="gloss">“Made foolish” renders <span class="gk">μωρανθῇ</span> — literally “played the fool,” the verb behind <span class="gk">μωρός</span>, the “fool” of v22. Salt was the covenant-bond (Lev 2:13; Num 18:19). The unthinkable thing — that the unfailing thing should fail — is the paradox.</span>
+<p class="v"><span class="n">14</span><span class="r yall">Y'all are</span> the light of the world.<sup class="en"><a href="#n7">7</a></sup> A city set upon a mountain cannot be hidden;</p>
+<span class="gloss">The light that <em>dawned</em> on the people sitting in darkness (4:16, quoting Isa 9) is now declared to <em>be</em> them — gift becomes vocation. The mountain-city evokes Zion, to which the nations stream (Isa 2; Mic 4), folding the inclusion-of-the-nations theme into the Sermon’s opening.</span>
+<p class="v"><span class="n">15</span>nor do they light a lamp and put it under the measuring-bowl, but upon the lampstand, and it shines for all those in the house.</p>
+<span class="gloss">The <span class="gk">μόδιον</span> (modios) is a Latin loanword — a two-gallon grain-measure; inverted over a lamp it would simply snuff it. The <span class="gk">λυχνία</span> (lampstand) is the word for the temple menorah in the Greek OT.</span>
+<p class="v"><span class="n">16</span>So let y'all's light shine before men, that they may see y'all's good works and glorify y'all's <span class="r father">Father</span> who is in the heavens.</p>
+<span class="gloss">The Father appears for the first time in the Sermon — and will saturate ch. 6. Note the tension held in suspension: here good works are to be <em>seen</em>; at 6:1 righteousness is not to be done “to be seen.” The difference is the direction the glory flows.</span>
+
+<div class="movement">The Law and the Prophets<small>Matthew 5:17–20 · the thesis — fulfillment, not abolition; the inclusio opens</small></div>
+
+<p class="v"><span class="n">17</span>Do not think that I came to tear down<sup class="en"><a href="#n8">8</a></sup> the Law or the Prophets; I came not to tear down but to fulfill.</p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">οὐκ ἦλθον καταλῦσαι ἀλλὰ πληρῶσαι</span></span>
+  <span class="row"><span class="src">This translation</span> “not to tear down but to fulfill”</span>
+  <span class="row"><span class="src">NASB</span> “I did not come to abolish but to fulfill”</span>
+  <span class="row"><span class="src">Note</span> <span class="gk">καταλῦσαι</span> is a demolition word — used of razing the temple (24:2; 26:61). Against it stands <span class="gk">πληρῶσαι</span>, the verb of Matthew’s formula quotations. This opens the inclusio closed only at 7:12 (“this is the Law and the Prophets”).</span>
+</span>
+<p class="v"><span class="n">18</span>For amen<sup class="en"><a href="#n9">9</a></sup> I say to y'all, until heaven and earth pass away, not one iota or one little-stroke shall pass from the Law, until all things come to pass.</p>
+<span class="gloss">The <span class="gk">ἰῶτα</span> (iota) stands for the Hebrew <em>yod</em>, smallest letter; the <span class="gk">κεραία</span> (keraia, “little horn”) is the serif distinguishing near-identical letters. The Torah binds down to its typography — held in deliberate tension with the freedom Jesus is about to take.</span>
+<p class="v"><span class="n">19</span>Whoever therefore relaxes<sup class="en"><a href="#n10">10</a></sup> one of the least of these commandments and so teaches men shall be called least in the <span class="r kingdom">kingdom of the heavens</span>; but whoever does and teaches them, this one shall be called great in the <span class="r kingdom">kingdom of the heavens</span>.</p>
+<span class="gloss">“Relaxes” (<span class="gk">λύσῃ</span>) is the simple form of v17’s “tear down” (<span class="gk">καταλῦσαι</span>) — to relax a commandment is to begin demolishing the Law. A measure-for-measure pun: relax a <em>least</em> command, be called <em>least</em>.</span>
+<p class="v"><span class="n">20</span>For I say to y'all that unless y'all's <span class="r righteous">righteousness</span> abounds beyond<sup class="en"><a href="#n11">11</a></sup> that of the scribes and Pharisees, y'all shall by no means enter into the <span class="r kingdom">kingdom of the heavens</span>.</p>
+<span class="gloss">The thesis sentence the rest of the chapter unfolds. Not a <em>different</em> righteousness but a more abundant one — <span class="gk">περισσεύσῃ</span>, “overflow.” To out-righteous the most scrupulous keepers of Torah in the land is an impossibly high bar — the door into the six case studies.</span>
+
+<div class="movement">The Six Contrasts<small>Matthew 5:21–48 · “y'all heard… but I say” — the Law driven to the heart</small></div>
+
+<p class="v"><span class="n">21</span><span class="r said">Y'all heard that it was said</span> to the ancients: “You shall not murder; and whoever murders shall be liable to the judgment.”</p>
+<p class="v"><span class="n">22</span><span class="r isay">But I say to y'all</span> that everyone who is angry with his brother shall be liable to the judgment; and whoever says to his brother, “Raca,”<sup class="en"><a href="#n12">12</a></sup> shall be liable to the council; and whoever says, “Fool,” shall be liable to the <span class="r gehenna">Gehenna of fire</span>.</p>
+<span class="gloss">A built triad of escalating tribunals — local court → Sanhedrin → Gehenna. <span class="gk">Ῥακά</span> (Aramaic, “empty-head”) and <span class="gk">Μωρέ</span> (“fool,” the same root as the “foolish” salt of v13) are contempt-words; the point is that the contempt behind murder is itself murderous.</span>
+<p class="v"><span class="n">23</span>If therefore you are offering your gift upon the altar and there remember that your brother has something against you,</p>
+<p class="v"><span class="n">24</span>leave there your gift before the altar, and go — first be reconciled to your brother, and then come, offer your gift.</p>
+<span class="gloss">Reconciliation outranks sacrifice — the prophetic “I desire mercy and not sacrifice” (Hos 6:6), which Matthew twice puts on Jesus’ lips (9:13; 12:7).</span>
+<p class="v"><span class="n">25</span>Be well-disposed to your adversary quickly, while you are with him on the way, lest the adversary hand you over to the judge, and the judge to the officer, and you be thrown into prison.</p>
+<p class="v"><span class="n">26</span>Amen I say to you, you shall by no means come out from there until you pay back the last quadrans.<sup class="en"><a href="#n13">13</a></sup></p>
+<span class="gloss">The <span class="gk">κοδράντης</span> (kodrantēs) is the Latin <em>quadrans</em>, the smallest Roman coin. Deal with the breach <em>now</em>, before judgment closes the account.</span>
+
+<p class="v"><span class="n">27</span><span class="r said">Y'all heard that it was said</span>: “You shall not commit adultery.”</p>
+<p class="v"><span class="n">28</span><span class="r isay">But I say to y'all</span> that everyone who looks at a woman in order to covet her<sup class="en"><a href="#n14">14</a></sup> has already committed adultery with her in his heart.</p>
+<span class="gloss">“Covet” renders <span class="gk">ἐπιθυμῆσαι</span> — the exact verb of the tenth commandment (Exod 20:17 LXX, “you shall not covet… your neighbor’s wife”). Jesus collapses the seventh commandment into the tenth: the act was always also about the covetous look that fathers it.</span>
+<p class="v"><span class="n">29</span>And if your right eye trips you up,<sup class="en"><a href="#n15">15</a></sup> tear it out and throw it from you; for it is better for you that one of your members perish than that your <span class="r whole">whole</span> body be thrown into <span class="r gehenna">Gehenna</span>.</p>
+<p class="v"><span class="n">30</span>And if your right hand trips you up, cut it off and throw it from you; for it is better for you that one of your members perish than that your <span class="r whole">whole</span> body go away into <span class="r gehenna">Gehenna</span>.</p>
+<span class="gloss">Semitic hyperbole, not surgery: nothing — not the most valued faculty (“right” eye, “right” hand) — is worth keeping if it drags the <span class="r whole">whole</span> self to ruin. Repeated at 18:8–9, there about causing the “little ones” to stumble.</span>
+
+<p class="v"><span class="n">31</span>And it was said: “Whoever divorces his wife, let him give her a certificate of divorce.”</p>
+<p class="v"><span class="n">32</span><span class="r isay">But I say to y'all</span> that everyone who divorces his wife — except for a matter of sexual immorality<sup class="en"><a href="#n16">16</a></sup> — makes her commit adultery, and whoever marries a divorced woman commits adultery.</p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">παρεκτὸς λόγου πορνείας</span> — “apart from a word/matter of <em>porneia</em>”</span>
+  <span class="row"><span class="src">NASB</span> “except for the reason of sexual immorality”</span>
+  <span class="row"><span class="src">Synoptic</span> Mark 10:11 &amp; Luke 16:18 have <em>no</em> exception — the absolute saying. Matthew alone adds the clause.</span>
+  <span class="row"><span class="src">Note</span> <span class="gk">πορνεία</span> is disputed: adultery? immorality broadly? marriage within forbidden kinship (its sense in Acts 15; Lev 18 LXX)? The exception lands Jesus roughly on the Shammai side of the Hillel–Shammai debate (m. Gittin 9:10) — or rejects its premise altogether (cf. 19:4–8).</span>
+</span>
+
+<p class="v"><span class="n">33</span>Again, <span class="r said">y'all heard that it was said</span> to the ancients: “You shall not swear falsely, but shall render to the Lord your oaths.”</p>
+<p class="v"><span class="n">34</span><span class="r isay">But I say to y'all</span> not to swear at all: neither by heaven, for it is God's throne;</p>
+<p class="v"><span class="n">35</span>nor by the earth, for it is the footstool of his feet; nor toward Jerusalem, for it is the city of the great King;</p>
+<span class="gloss">Heaven-throne and earth-footstool quote Isaiah 66:1; “city of the great King” is Psalm 48:2. Every oath-substitute people used to keep technical deniability is shown to touch God after all — there is nowhere to swear that escapes his presence.</span>
+<p class="v"><span class="n">36</span>nor by your head shall you swear, for you cannot make one hair white or black.</p>
+<p class="v"><span class="n">37</span>But let y'all's word be “yes, yes,” “no, no”; and what is beyond these is from the <span class="r evil">evil one</span>.<sup class="en"><a href="#n17">17</a></sup></p>
+<span class="gloss">Integrity that needs no oath to prop it up. James 5:12 carries this forward almost verbatim as a community standard. The literal reading made oath-refusers of the Anabaptists and Quakers; Augustine and most of the tradition read it as forbidding evasive, not solemn, oaths.</span>
+
+<p class="v"><span class="n">38</span><span class="r said">Y'all heard that it was said</span>: “An eye for an eye and a tooth for a tooth.”</p>
+<span class="gloss">The <em>lex talionis</em> (Exod 21:24; Lev 24:20; Deut 19:21) was a <em>limit</em> on vengeance, court-administered and by the first century largely commuted to monetary compensation — not a license for it.</span>
+<p class="v"><span class="n">39</span><span class="r isay">But I say to y'all</span> not to resist the <span class="r evil">evildoer</span>;<sup class="en"><a href="#n18">18</a></sup> but whoever strikes you on the right cheek, turn to him the other also;</p>
+<span class="gloss">A right-handed blow to the <em>right</em> cheek is a backhand — primarily an insult, the blow given an inferior. Turning the other refuses both retaliation and humiliation: standing as an equal who will not be shamed into the cycle.</span>
+<p class="v"><span class="n">40</span>and to the one wanting to sue you and take your tunic, let him have also your cloak;</p>
+<span class="gloss">The outer cloak (<span class="gk">ἱμάτιον</span>) was the one garment the Torah required a creditor to return by nightfall, since the poor sleep in it (Exod 22:26–27). To hand it over is to stand stripped bare and expose the cruelty of the claim.</span>
+<p class="v"><span class="n">41</span>and whoever will compel you to go one mile,<sup class="en"><a href="#n19">19</a></sup> go with him two.</p>
+<span class="gloss">“Compel” (<span class="gk">ἀγγαρεύσει</span>) is the Roman right of military requisition — the same verb used when Simon of Cyrene is “compelled” to carry the cross (27:32). The second mile turns the instrument of subjugation into a free act.</span>
+<p class="v"><span class="n">42</span>To the one asking you, give; and the one wanting to borrow from you, do not turn away.</p>
+
+<p class="v"><span class="n">43</span><span class="r said">Y'all heard that it was said</span>: “You shall love your neighbor and hate your enemy.”<sup class="en"><a href="#n20">20</a></sup></p>
+<span class="gloss">“Love your neighbor” is Leviticus 19:18 — but “hate your enemy” is found <em>nowhere</em> in the Hebrew Scriptures. The nearest thing is sectarian: the Qumran Community Rule’s charge to “love the sons of light… and hate the sons of darkness” (1QS 1:9–10).</span>
+<p class="v"><span class="n">44</span><span class="r isay">But I say to y'all</span>, love y'all's enemies and pray for those persecuting y'all,</p>
+<p class="v"><span class="n">45</span>so that y'all may become sons of y'all's <span class="r father">Father</span> who is in the heavens, for he makes his sun rise on the <span class="r evil">evil</span> and the good and rains on the just and the unjust.</p>
+<span class="gloss"><em>Imitatio Dei</em> — picking up the peacemakers’ sonship (v9). The Father’s family likeness is indiscriminate, enemy-embracing generosity; sun and rain do not wait for desert (cf. Luke 6:35).</span>
+<p class="v"><span class="n">46</span>For if y'all love those loving y'all, what reward have y'all? Do not even the tax collectors do the same?</p>
+<p class="v"><span class="n">47</span>And if y'all greet only y'all's brothers, what extraordinary thing do y'all do? Do not even the Gentiles do the same?</p>
+<span class="gloss">The kingdom-righteousness is defined by <em>exceeding</em> the reciprocity that even the most despised (<span class="gk">τελῶναι</span>, collaborator tax-farmers) and the outsiders manage. The word for “extraordinary” (<span class="gk">περισσόν</span>) is the same root as the “abounding” righteousness of v20.</span>
+<p class="v"><span class="n">48</span>Y'all therefore shall be <span class="r whole">whole</span><sup class="en"><a href="#n21">21</a></sup> as y'all's heavenly <span class="r father">Father</span> is <span class="r whole">whole</span>.</p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">ἔσεσθε οὖν ὑμεῖς τέλειοι ὡς ὁ πατὴρ ὑμῶν ὁ οὐράνιος τέλειός ἐστιν</span></span>
+  <span class="row"><span class="src">This translation</span> “y'all shall be whole as y'all's heavenly Father is whole”</span>
+  <span class="row"><span class="src">NASB</span> “you are to be perfect, as your heavenly Father is perfect”</span>
+  <span class="row"><span class="src">Luke 6:36</span> “be merciful, as your Father is merciful” — the parallel reads the wholeness specifically as <em>mercy</em>.</span>
+  <span class="row"><span class="src">Note</span> <span class="gk">τέλειος</span> (from <span class="gk">τέλος</span>, end/goal) renders Heb. <em>tamim</em> — whole, sound, single-hearted (Deut 18:13; Gen 17:1), not flawless. The chapter that opened calling these people salt and light closes calling them to God’s own wholeness — an inclusio of vocation.</span>
+</span>
+
+</div><!-- /verses -->
+
+<div class="notes">
+  <h2>Notes</h2>
+  <ol>
+    <li id="n1"><strong>went up onto the mountain (v1).</strong> <span class="gk">ἀνέβη εἰς τὸ ὄρος</span> is the precise idiom Greek Exodus uses for Moses ascending Sinai (<a href="https://biblehub.com/exodus/19-3.htm">Exod 19:3</a>; 24:18 LXX), with the article — “<em>the</em> mountain,” as if there were only one. The new-Moses staging; but where Moses ascended to <em>receive</em> the law and descended to deliver it, Jesus ascends, sits, and speaks his own words. This is the second of Matthew’s three weighted mountains: testing (ch. 4), teaching (here), commission (28:16).</li>
+    <li id="n2"><strong>Blessed (v3).</strong> <span class="gk">μακάριος</span> (<a href="https://logeion.uchicago.edu/%CE%BC%CE%B1%CE%BA%CE%AC%CF%81%CE%B9%CE%BF%CF%82">makarios</a>) — not “happy” in the shallow sense but a wisdom-pronouncement that someone is well-off, congratulated, on the right side of reality. The whole Psalter opens with it (<a href="https://biblehub.com/psalms/1-1.htm">Ps 1:1</a> LXX, <span class="gk">μακάριος ἀνήρ</span>). The Qumran “Beatitudes Scroll” (4Q525) welds the form to Torah-wisdom; what Matthew adds is the eschatological, kingdom horizon those collections lack.</li>
+    <li id="n3"><strong>poor in the spirit (v3).</strong> <span class="gk">πτωχοί</span> is the <em>destitute</em>, the crouching beggar — a stronger word than Luke’s simple “poor” (<a href="https://biblehub.com/luke/6-20.htm">Luke 6:20</a>). The old charge is that Matthew spiritualizes Luke’s economic blessing; the better reading is that he draws out the sense already in the Hebrew <em>‘anawim</em> — the humble faithful who have nothing but God (Isa 61:1). Chrysostom (Hom. 15) glosses it “the humble and contrite,” adding that Jesus said “poor” rather than “humble” because it is the stronger word — those who tremble at God’s word (Isa 66:2) — and makes humility the “mother of the virtues,” the foundation the rest climb from. Cf. James 2:5.</li>
+    <li id="n4"><strong>righteousness (v6).</strong> <span class="gk">δικαιοσύνη</span> in Matthew is closer to covenant faithfulness — doing God’s will, the right ordering of life under the reign of heaven — and also God’s own setting-right of the world, than to the imputed-righteousness category of later Pauline systematics. Already planted at the baptism (3:15, “to fulfill all righteousness”), it is the spine of this unit: the hinge of the first beatitude-quartet (v6), the seal of the eighth (v10), and the entrance requirement of v20.</li>
+    <li id="n5"><strong>every evil thing (v11).</strong> The variant marked in the apparatus adds “word/utterance” (<span class="gk">ῥῆμα</span>); the sense is unchanged — reviling speech. The grammar turns here from describing a class (“blessed are the…”) to addressing this community (“blessed are <em>y'all</em>”), the bridge into the salt-and-light sayings. Chrysostom notes the shift signals that persecution is the special portion of those who will carry Jesus’ word.</li>
+    <li id="n6"><strong>made foolish (v13).</strong> <span class="gk">μωρανθῇ</span> — usually “lose its savor,” but the root is <em>folly</em>, not flavor (cf. <span class="gk">μωρός</span>, “fool,” v22; the foolish builder, 7:26). Since pure salt does not lose saltiness, the saying trades on impossibility — the rabbis caught the same paradox in a riddle exchange (b. Bekhorot 8b): “when salt spoils, with what does one salt it?” … “and does salt spoil?” The kingdom-people are like the one thing that should not be able to fail — which makes the failure unthinkable, and the warning sharp. Salt was covenant (<a href="https://biblehub.com/leviticus/2-13.htm">Lev 2:13</a>; Num 18:19); Paul applies it to speech (Col 4:6).</li>
+    <li id="n7"><strong>light of the world (v14).</strong> Closes the thread opened at 4:16, where Matthew quoted <a href="https://biblehub.com/isaiah/9-2.htm">Isaiah 9:2</a> over Galilee — the people sitting in darkness who “saw a great light.” That light is now declared to <em>be</em> them. The claim is intelligible only as <em>derived</em> light: John makes Jesus himself “the light of the world” (8:12; 9:5); Paul, “you were once darkness, but now light in the Lord” (Eph 5:8; Phil 2:15, <span class="gk">φωστῆρες</span>). The unhideable mountain-city is Zion drawing the nations (Isa 2:2–3; Mic 4:1–2).</li>
+    <li id="n8"><strong>tear down (v17).</strong> <span class="gk">καταλῦσαι</span> — to demolish a building; Matthew uses it of the temple’s destruction (24:2; 26:61). Set against <span class="gk">πληρῶσαι</span>, “fulfill,” the verb that structured the infancy formula quotations. What “fulfill” means is the chapter’s most contested question. <em>Bible Project / France / Wright:</em> new-covenant Torah — Jesus fills the Law full by bringing out its true intent and embodying its goal, the law written on the heart (Jer 31; Ezek 36), livable now by the Spirit. <em>Constable (dispensationalist):</em> the “interim” view — ethical instruction for disciples from now until the earthly kingdom (rejecting both the strict-millennial and church-only readings). Paul leans the first way: love is the <span class="gk">πλήρωμα</span> of the Law (<a href="https://biblehub.com/romans/13-10.htm">Rom 13:10</a>; Gal 5:14). Held open.</li>
+    <li id="n9"><strong>amen I say to y'all (v18).</strong> In the Hebrew Scriptures and synagogue, “amen” is the <em>response</em> to another’s word; Jesus uses it to <em>preface</em> his own — a self-authenticating solemnity formula unparalleled in the tradition, of a piece with the “but I say to you” of the contrasts. The same “heaven and earth will pass away” is said of his own words at 24:35.</li>
+    <li id="n10"><strong>relaxes (v19).</strong> <span class="gk">λύσῃ</span>, “loosen, relax” — the simple form of v17’s <span class="gk">κατα-λῦσαι</span>. The kingdom has a ranking, and one’s standing tracks fidelity even to the commandments one thought too small to matter. The verse most embarrasses readers wanting a Law-abolishing Jesus; Matthew’s Jesus does the opposite.</li>
+    <li id="n11"><strong>abounds beyond (v20).</strong> <span class="gk">περισσεύσῃ … πλεῖον</span> — not a different righteousness but a <em>more abundant</em> one, overflowing the scrupulous Torah-keeping of the scribes and Pharisees (who were, to the original hearers, precisely <em>the</em> righteous ones). The double negative <span class="gk">οὐ μὴ εἰσέλθητε</span> is the strongest Greek negation: “absolutely never enter.” Same root returns at v47 (<span class="gk">περισσόν</span>, “extraordinary”).</li>
+    <li id="n12"><strong>Raca / Fool (v22).</strong> <span class="gk">Ῥακά</span> is Aramaic <em>reqa</em>, “empty-head, good-for-nothing”; <span class="gk">Μωρέ</span> is Greek “fool.” The escalation (judgment → Sanhedrin → Gehenna) is rhetorical, not a penal code for insults; the point is that contempt is murder’s root. <span class="gk">γέεννα</span> (Gehenna) is Ge-Hinnom, the valley south of Jerusalem where children were once burned to Molech, which Jeremiah renamed “the Valley of Slaughter” (<a href="https://biblehub.com/jeremiah/7-31.htm">Jer 7:31–32</a>; 19:6) — a real, defiled place that became the standard image of fiery judgment.</li>
+    <li id="n13"><strong>quadrans (v26).</strong> <span class="gk">κοδράντης</span>, the Latin <em>quadrans</em>, smallest Roman coin (¼ of an <em>as</em>). Verses 25–26 are a little parable of urgency: settle the breach now, while there is still “the way,” before judgment closes the account.</li>
+    <li id="n14"><strong>in order to covet her (v28).</strong> <span class="gk">πρὸς τὸ ἐπιθυμῆσαι</span> expresses purpose — the look that <em>aims</em> at possessing, not the involuntary glance — which keeps the saying from being a counsel of despair. <span class="gk">ἐπιθυμέω</span> is the verb of the tenth commandment (<a href="https://biblehub.com/exodus/20-17.htm">Exod 20:17</a> LXX), so the seventh commandment is being read through the tenth.</li>
+    <li id="n15"><strong>trips you up (v29).</strong> <span class="gk">σκανδαλίζει</span> — “causes to stumble,” the verb behind “scandalize,” from <span class="gk">σκάνδαλον</span>, the trigger-stick of a trap. The hyperbole of eye and hand conveys radical, costly seriousness; the early church (Origen excepted) did not read it as a mandate for literal mutilation. Repeated at 18:8–9.</li>
+    <li id="n16"><strong>except for a matter of sexual immorality (v32).</strong> The exception clause is unique to Matthew; Mark 10:11 and Luke 16:18 give the saying absolutely. The Hillel–Shammai dispute hung on the odd phrase <em>‘ervat davar</em> in <a href="https://biblehub.com/deuteronomy/24-1.htm">Deut 24:1</a>: Shammai restricted divorce to sexual indecency, Hillel allowed it for “any matter” — “even if she spoiled his dish” — and Akiva, “even if he found another prettier” (m. Gittin 9:10). Jesus lands near Shammai, or rejects the premise that Deut 24 legislates grounds at all (so 19:4–8, going back behind Moses to Gen 2). Note the gender reframing: the husband “makes <em>her</em> commit adultery” — the woman is the one wronged.</li>
+    <li id="n17"><strong>from the evil one (v37).</strong> <span class="gk">ἐκ τοῦ πονηροῦ</span> — “from the evil one” or “from evil”; the same ambiguity recurs in the Lord’s Prayer (6:13). Josephus reports the Essenes refused oaths on principle (<em>War</em> 2.135), so total truthfulness as a piety was already abroad in Second Temple Judaism.</li>
+    <li id="n18"><strong>do not resist the evildoer (v39).</strong> <span class="gk">μὴ ἀντιστῆναι τῷ πονηρῷ</span> — “the evildoer” or, again, “the evil one.” The three illustrations (cheek, cloak, mile) have been read by Walter Wink as a creative nonviolent “third way” that exposes and shames the oppressor, and more straightforwardly by others as radical, unprotesting generosity. The long argument over force — Anabaptist/Tolstoyan pacifism vs. the Augustinian–Lutheran two-kingdoms distinction between private ethics and the magistrate’s sword — lives here; the text does not settle it. Chrysostom (Hom. 18) reads the cheek-turning as directed at personal injury “toward those without,” distinguishing it from the active correction commanded for a sinning brother (ch. 18).</li>
+    <li id="n19"><strong>one mile (v41).</strong> <span class="gk">ἀγγαρεύσει</span> is from a Persian loanword for the imperial postal-requisition system — a soldier’s legal right to conscript a provincial to carry his pack one Roman mile (<span class="gk">μίλιον</span>, ~1,480 m). Same verb at 27:32 (Simon of Cyrene “compelled” to bear the cross).</li>
+    <li id="n20"><strong>hate your enemy (v43).</strong> Only the first half (Lev 19:18, <a href="https://biblehub.com/leviticus/19-18.htm">love your neighbor</a>) is Scripture. The second half matches no Torah command but does match the sectarian dualism of Qumran: 1QS 1:9–10 charges members “to love all the sons of light… and to hate all the sons of darkness, each according to his guilt in God’s vengeance” (<a href="https://ccat.sas.upenn.edu/rak/courses/225/texts/1QS(CommunityRule)">Community Rule</a>), and Josephus says the Essenes vowed to hate the wicked. Jesus’ answer (vv44–45) grounds enemy-love in <em>imitatio Dei</em>: the Father’s sun and rain fall on all alike. Cf. Rom 12:14, 20.</li>
+    <li id="n21"><strong>whole (v48).</strong> <span class="gk">τέλειος</span> (<a href="https://logeion.uchicago.edu/%CF%84%CE%AD%CE%BB%CE%B5%CE%B9%CE%BF%CF%82">teleios</a>), from <span class="gk">τέλος</span> (end, goal), means complete, mature, brought to one’s proper end — not morally flawless. In the LXX it renders Heb. <em>tamim</em>, the whole-heartedness asked of Abraham (“walk before me and be <em>tamim</em>,” <a href="https://biblehub.com/genesis/17-1.htm">Gen 17:1</a>) and Israel (“you shall be <em>tamim</em> before the LORD,” Deut 18:13), and the unblemished soundness of an acceptable sacrifice. Luke’s parallel (6:36) glosses the wholeness as <em>mercy</em>. The verse forms the chapter’s closing inclusio with v14: salt-and-light of the world → wholeness of God. The <span class="r whole">whole</span> body that must not go to Gehenna (vv29–30) and the <span class="r whole">whole</span> self called to God’s wholeness are the same word doing the chapter’s moral arithmetic.</li>
+  </ol>
+</div>
+
+<footer>Translation rendered from the SBLGNT Greek of Matthew 5:1–48 · Unit 5 of the Matthew study · wooden to the Greek by design</footer>
+
+</div><!-- /wrap -->
+</body>
+</html>

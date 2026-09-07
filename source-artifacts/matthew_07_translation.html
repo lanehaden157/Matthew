@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matthew 7 — The Two Ways</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5efe2;
+    --panel:#fbf7ee;
+    --panel-2:#f1e8d5;
+    --ink:#2a2520;
+    --ink-soft:#5c5347;
+    --rule:#d8cdb6;
+    --rule-soft:#e7dec9;
+    /* === Greek-root colors — assigned fresh for Unit 7 === */
+    --c-beget:#a8324a;   /* κρίνω  judge          */
+    --c-name:#1c7d70;    /* αἰτέω  ask            */
+    --c-save:#c0641a;    /* καρπός fruit          */
+    --c-spirit:#4a4f93;  /* εἰσέρχομαι enter      */
+    --c-dream:#0e8aa0;   /* ὀφθαλμός eye          */
+    --c-with:#9c2f8f;    /* ποιέω  do / make      */
+    --c-david:#8a6a2a;   /* (display accent)      */
+    --c-worship:#b07a1e; /* μέτρον measure        */
+    --c-child:#3f7d3a;   /* ὁδός / πύλη way, gate */
+    --c-fulfill:#455a6b; /* οἰκοδομέω / πέτρα     */
+    --c-withdraw:#9c4f1c;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 18% -5%, #faf5ea 0%, transparent 55%),
+      radial-gradient(circle at 105% 102%, #ece2cc 0%, transparent 50%),
+      var(--bg);
+    color:var(--ink);
+    font-family:"EB Garamond", Georgia, serif;
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:790px;margin:0 auto;padding:56px 26px 120px;}
+
+  a{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;}
+  a:hover{border-bottom-style:solid;}
+
+  /* ---- masthead ---- */
+  header.mast{text-align:center;border-bottom:2px solid var(--ink);padding-bottom:26px;margin-bottom:8px;}
+  .mast .kicker{letter-spacing:.32em;text-transform:uppercase;font-size:12.5px;color:var(--ink-soft);}
+  .mast h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:43px;line-height:1.05;margin:.18em 0 .12em;letter-spacing:.01em;}
+  .mast .greek-title{font-size:21px;color:var(--c-david);font-style:italic;margin-bottom:.2em;}
+  .mast .unit{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--ink-soft);font-style:italic;}
+
+  /* ---- shared section frame (ALWAYS page-break-protected) ---- */
+  section.block{background:var(--panel);border:1px solid var(--rule);border-radius:7px;padding:20px 24px;margin:30px 0;page-break-inside:avoid;break-inside:avoid;}
+  section.block h2{font-family:"Cormorant Garamond",serif;font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 4px;}
+  section.block .cap{font-style:italic;color:var(--ink-soft);font-size:15px;margin:0 0 16px;}
+
+  /* ---- legend ---- */
+  .legend ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 26px;}
+  .legend li{font-size:15.5px;line-height:1.4;}
+  .swatch{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px;vertical-align:baseline;}
+  .legend .gk{font-style:italic;}
+  .legend .tag{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-left:6px;}
+  @media(max-width:560px){.legend ul{grid-template-columns:1fr;}}
+
+  /* ---- root spans ---- */
+  .r{font-weight:600;}
+  .judge{color:var(--c-beget);}
+  .ask{color:var(--c-name);}
+  .fruit{color:var(--c-save);}
+  .enter{color:var(--c-spirit);}
+  .eye{color:var(--c-dream);}
+  .do{color:var(--c-with);}
+  .measure{color:var(--c-worship);}
+  .way{color:var(--c-child);}
+  .build{color:var(--c-fulfill);}
+  .star{color:#9a7a12;font-style:italic;}
+
+  /* ---- ring / triptych / concentric structure maps ---- */
+  .ring{display:grid;grid-template-columns:1fr;gap:10px;}
+  .ringrow{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:9px 12px;border-radius:6px;background:var(--panel-2);}
+  .ringrow.center{background:#efe4cb;border:1px solid var(--rule);}
+  .ringrow .lab{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:21px;color:var(--c-david);text-align:center;}
+  .ringrow .lab small{display:block;font-size:11px;color:var(--ink-soft);letter-spacing:.06em;font-weight:400;}
+  .ringrow .txt{font-size:15.5px;line-height:1.45;}
+  .ringrow .ref{color:var(--ink-soft);font-style:italic;}
+
+  /* ---- correspondence / comparison table ---- */
+  table.exod{width:100%;border-collapse:collapse;font-size:15.5px;}
+  table.exod th,table.exod td{padding:8px 10px;border:1px solid var(--rule);text-align:left;}
+  table.exod th{background:var(--panel-2);font-family:"Cormorant Garamond",serif;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px;color:var(--ink-soft);font-weight:600;}
+  table.exod td.mt{color:var(--c-withdraw);font-weight:600;}
+  table.exod td.eg{color:var(--ink-soft);}
+
+  /* ---- itinerary / sequence chips ---- */
+  .itin{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 4px;}
+  .itin .stop{font-family:"Cormorant Garamond",serif;font-size:17px;font-weight:600;padding:4px 11px;border-radius:20px;background:var(--panel-2);border:1px solid var(--rule);}
+  .itin .arr{color:var(--ink-soft);font-size:15px;}
+  .itin .stop sup{font-size:10px;color:var(--c-fulfill);font-weight:700;}
+
+  /* ---- verses ---- */
+  .verses{margin-top:40px;}
+  .v{margin:0 0 14px;padding-left:42px;text-indent:-42px;line-height:1.7;}
+  .v .n{display:inline-block;width:30px;text-indent:0;font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--c-beget);font-weight:600;vertical-align:top;}
+  .gloss{display:block;text-indent:0;margin:3px 0 14px 0;padding:6px 14px;border-left:2px solid var(--rule);color:var(--ink-soft);font-style:italic;font-size:15px;line-height:1.5;}
+  sup.en{font-size:.62em;font-style:normal;color:var(--c-beget);font-weight:700;vertical-align:super;line-height:0;}
+  sup.en a{border:none;}
+  h3.panel{font-family:"Cormorant Garamond",serif;font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:38px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--rule);}
+
+  /* ---- compare box ---- */
+  .compare{display:block;text-indent:0;margin:6px 0 14px 0;border:1px dashed var(--rule);border-radius:6px;background:var(--panel);padding:10px 14px;font-size:15px;page-break-inside:avoid;break-inside:avoid;}
+  .compare .row{margin:3px 0;}
+  .compare .src{display:inline-block;min-width:108px;font-variant:small-caps;letter-spacing:.05em;color:var(--ink-soft);font-style:normal;font-size:13.5px;}
+
+  .gk{font-style:italic;}
+  .tr{font-style:italic;color:var(--ink-soft);font-size:.92em;}
+
+  /* ---- endnotes ---- */
+  .notes{margin-top:48px;border-top:2px solid var(--ink);padding-top:18px;}
+  .notes h2{font-family:"Cormorant Garamond",serif;font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 16px;}
+  .notes ol{margin:0;padding-left:26px;}
+  .notes li{margin:0 0 15px;font-size:16px;line-height:1.55;}
+
+  footer{margin-top:50px;text-align:center;font-size:13px;color:var(--ink-soft);font-style:italic;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="kicker">The Gospel According to Matthew · Study Translation</div>
+  <h1>The Two Ways</h1>
+  <div class="greek-title">ἡ ὁδὸς ἡ ἀπάγουσα εἰς τὴν ζωήν — <span style="font-style:normal;font-size:.8em;color:var(--ink-soft)">hē hodos hē apagousa eis tēn zōēn, "the road that leads off to life"</span></div>
+  <div class="unit">Unit 7 · Matthew 7:1–29 · the close of the Sermon on the Mount</div>
+</header>
+
+<section class="block legend" aria-label="color key">
+  <h2>Recurring Greek roots — color key</h2>
+  <p class="cap">Nine roots tracked in this unit. Each holds one color throughout this artifact; colors are assigned fresh per unit and do not carry over from Units 1–6.</p>
+  <ul>
+    <li><span class="swatch" style="background:var(--c-beget)"></span><span class="gk">κρίνω / κρίμα</span> (krinō / krima) — judge<span class="tag">vv. 1–2</span></li>
+    <li><span class="swatch" style="background:var(--c-worship)"></span><span class="gk">μέτρον / μετρέω</span> (metron / metreō) — measure<span class="tag">v. 2</span></li>
+    <li><span class="swatch" style="background:var(--c-dream)"></span><span class="gk">ὀφθαλμός / βλέπω</span> (ophthalmos / blepō) — eye, look<span class="tag">vv. 3–5</span></li>
+    <li><span class="swatch" style="background:var(--c-name)"></span><span class="gk">αἰτέω</span> (aiteō) — ask<span class="tag">vv. 7–11</span></li>
+    <li><span class="swatch" style="background:var(--c-with)"></span><span class="gk">ποιέω</span> (poieō) — do, make<span class="tag">vv. 12–26</span></li>
+    <li><span class="swatch" style="background:var(--c-spirit)"></span><span class="gk">εἰσέρχομαι</span> (eiserchomai) — come in, enter<span class="tag">vv. 13, 21</span></li>
+    <li><span class="swatch" style="background:var(--c-child)"></span><span class="gk">ὁδός / πύλη</span> (hodos / pylē) — road, gate<span class="tag">vv. 13–14</span></li>
+    <li><span class="swatch" style="background:var(--c-save)"></span><span class="gk">καρπός</span> (karpos) — fruit<span class="tag">vv. 16–20</span></li>
+    <li><span class="swatch" style="background:var(--c-fulfill)"></span><span class="gk">οἰκοδομέω / πέτρα</span> (oikodomeō / petra) — build, rock<span class="tag">vv. 24–27</span></li>
+  </ul>
+  <p class="cap" style="margin:16px 0 0">Two further words are marked <span class="star">in gold italic</span> rather than tracked, because each occurs once here but detonates later in the gospel: <span class="star">ἀνομία</span> (anomia, "lawlessness," v. 23) and <span class="star">ἐξουσία</span> (exousia, "authority," v. 29).</p>
+</section>
+
+<section class="block">
+  <h2>The diptych — 6:19–34 answered by 7:1–11</h2>
+  <p class="cap">Chapter 7 does not begin a new movement. Its first eleven verses are the second wing of a two-panel structure that opened at 6:19, each panel running the same three beats in the same order.</p>
+  <table class="exod">
+    <tr><th>Panel one · 6:19–34 — God and wealth</th><th>Panel two · 7:1–11 — God and neighbor</th></tr>
+    <tr><td class="eg"><strong>6:19–21</strong> Allegiance: treasure on earth or treasure in the skies</td><td class="mt"><strong>7:1–2</strong> Allegiance: the judgment you deal out is dealt back</td></tr>
+    <tr><td class="eg"><strong>6:22–24</strong> Two small parables: the good and the evil <span class="gk">ὀφθαλμός</span> (ophthalmos, eye) · two masters who cannot be mixed</td><td class="mt"><strong>7:3–6</strong> Two small parables: the rafter in the <span class="gk">ὀφθαλμός</span> (ophthalmos, eye) · holy things and dogs, which cannot be mixed</td></tr>
+    <tr><td class="eg"><strong>6:25–34</strong> Anxiety — and the Father who feeds and clothes, so <em>seek first</em></td><td class="mt"><strong>7:7–11</strong> Asking — and the Father who gives good things to those who <em>seek</em></td></tr>
+    <tr><td class="eg" colspan="2" style="text-align:center;background:var(--panel-2)"><strong>7:12</strong> — capstone over both panels: <em>"this is the Law and the Prophets"</em></td></tr>
+  </table>
+</section>
+
+<section class="block">
+  <h2>The Law and the Prophets — an inclusio spanning three chapters · 5:17 → 7:12</h2>
+  <p class="cap">The same four-word phrase opens and seals the body of the Sermon. Everything between the two is offered as an exposition of what Israel's scriptures were driving at.</p>
+  <div class="ring">
+    <div class="ringrow"><div class="lab">A<small>5:17</small></div><div class="txt">"Don't think I came to tear down <span class="gk">τὸν νόμον ἢ τοὺς προφήτας</span> (ton nomon ē tous prophētas), the Law or the Prophets" <span class="ref">— the frame opens</span></div></div>
+    <div class="ringrow"><div class="lab">B<small>5:21–48</small></div><div class="txt">Six case studies: "y'all heard it said… but I say to y'all" <span class="ref">— Torah read to its root</span></div></div>
+    <div class="ringrow center"><div class="lab">C<small>6:1–18</small></div><div class="txt">The three practices — giving, praying, fasting — with the Father's Prayer at the exact center <span class="ref">— the pivot of the whole Sermon</span></div></div>
+    <div class="ringrow"><div class="lab">B′<small>6:19–7:11</small></div><div class="txt">Six examples of loving God and neighbor, in two matching panels <span class="ref">— see the diptych above</span></div></div>
+    <div class="ringrow"><div class="lab">A′<small>7:12</small></div><div class="txt">"For this is <span class="gk">ὁ νόμος καὶ οἱ προφῆται</span> (ho nomos kai hoi prophētai), the Law and the Prophets" <span class="ref">— the frame seals</span></div></div>
+  </div>
+  <p class="cap" style="margin:16px 0 0">Matthew uses this exact phrase in a summarizing position only one other time, at <a href="https://biblehub.com/matthew/22-40.htm">22:40</a>, where the whole Law and the Prophets <em>hang</em> on love of God and love of neighbor. Both summaries are, underneath, <a href="https://biblehub.com/leviticus/19-18.htm">Leviticus 19:18</a>.</p>
+</section>
+
+<section class="block">
+  <h2>The holy and the dogs — a four-cornered turn · 7:6</h2>
+  <p class="cap">The Greek pronoun in the second half is masculine plural, which pins the trampling to the pearls — so the two animals do not share the two crimes. Pigs waste; dogs attack. Read A B B′ A′.</p>
+  <div class="ring">
+    <div class="ringrow"><div class="lab">A<small>6a</small></div><div class="txt">Don't give <span class="gk">τὸ ἅγιον</span> (to hagion, the holy thing) <strong>to the dogs</strong> <span class="ref">— the priests' portion, Lev 22</span></div></div>
+    <div class="ringrow"><div class="lab">B<small>6b</small></div><div class="txt">Don't throw <span class="gk">τοὺς μαργαρίτας</span> (tous margaritas, the pearls) <strong>before the pigs</strong></div></div>
+    <div class="ringrow"><div class="lab">B′<small>6c</small></div><div class="txt"><strong>They stomp them</strong> underfoot <span class="ref">— the pigs, wasting the pearls</span></div></div>
+    <div class="ringrow"><div class="lab">A′<small>6d</small></div><div class="txt"><strong>And wheeling round, rip y'all open</strong> <span class="ref">— the dogs, turning on the giver</span></div></div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Three images of the choice · 7:13–27</h2>
+  <p class="cap">The Sermon ends the way Deuteronomy ends — not with more instruction but with a fork, blessing and curse, and a demand for decision. Three paired images, not four: the "Master, Master" scene belongs to the fruit-test, not beside it.</p>
+  <table class="exod">
+    <tr><th>Image</th><th>The pair</th><th>What it tests</th></tr>
+    <tr><td class="mt">1 · vv. 13–14</td><td class="eg">Two gates, two roads — roomy and squeezed</td><td class="eg">Where you are <em>going</em></td></tr>
+    <tr><td class="mt">2 · vv. 15–23</td><td class="eg">Two prophets, two trees — and the fruit each makes, up to and including miracles done in his name</td><td class="eg">What you are <em>producing</em></td></tr>
+    <tr><td class="mt">3 · vv. 24–27</td><td class="eg">Two builders, two houses — identical storm, opposite outcome</td><td class="eg">What is <em>underneath</em></td></tr>
+  </table>
+  <p class="cap" style="margin:16px 0 0">The last discourse ends the same way: three paired parables at <a href="https://biblehub.com/matthew/25-1.htm">25:1–46</a> — wise and foolish women, faithful and wicked slave, sheep and goats. The adjectives that sort the two builders here, <span class="gk">φρόνιμος</span> (phronimos, shrewd) and <span class="gk">μωρός</span> (mōros, stupid), are the same two that sort the ten women at 25:2. Jesus opens and closes his public teaching on one note.</p>
+</section>
+
+<section class="block">
+  <h2>Ezekiel 13 under the last two images</h2>
+  <p class="cap">False prophets → a storm → a structure down with its footing laid bare. Matthew runs the prophet's sequence in the prophet's order.</p>
+  <table class="exod">
+    <tr><th>Ezekiel 13:8–16</th><th>Matthew 7:15–27</th></tr>
+    <tr><td class="eg">Prophets who see false visions and say <em>peace</em> where there is no peace</td><td class="mt">False prophets in sheep-clothes, wolves inside (v. 15)</td></tr>
+    <tr><td class="eg">They build a wall and slather it with whitewash — it looks sound</td><td class="mt">Two houses that look identical until the weather comes (vv. 24, 26)</td></tr>
+    <tr><td class="eg">Flooding rain, hailstones, a storm-wind sent to tear it down</td><td class="mt">The rain came down, the rivers came, the winds blew (vv. 25, 27)</td></tr>
+    <tr><td class="eg">The wall falls; its foundation is stripped naked</td><td class="mt">It fell — and its fall was great (v. 27)</td></tr>
+  </table>
+  <p class="cap" style="margin:16px 0 0">Read against <a href="https://biblehub.com/ezekiel/13-11.htm">Ezekiel 13</a>, the two builders stop being a lesson about personal resilience and start sounding like a judgment oracle over a people trusting a false peace — which, for a gospel written within a few years of AD 70, has a city and a temple attached to it.</p>
+</section>
+
+<section class="block">
+  <h2>The formula that closes all five discourses</h2>
+  <p class="cap"><span class="gk">καὶ ἐγένετο ὅτε ἐτέλεσεν ὁ Ἰησοῦς</span> (kai egeneto hote etelesen ho Iēsous) — "and it happened when Jesus finished." Matthew uses this construction five times and nowhere else. Unit 7 supplies the first.</p>
+  <div class="itin">
+    <span class="stop">7:28 <sup>Sermon</sup></span><span class="arr">→</span>
+    <span class="stop">11:1 <sup>Mission</sup></span><span class="arr">→</span>
+    <span class="stop">13:53 <sup>Parables</sup></span><span class="arr">→</span>
+    <span class="stop">19:1 <sup>Community</sup></span><span class="arr">→</span>
+    <span class="stop">26:1 <sup>Olivet</sup></span>
+  </div>
+</section>
+
+<div class="verses">
+
+<h3 class="panel">Image of the eye · 7:1–5</h3>
+
+<p class="v"><span class="n">1</span>Don't y'all <span class="judge r">judge</span>, so that y'all not be <span class="judge r">judged</span>.<sup class="en"><a href="#n1">1</a></sup></p>
+<span class="gloss">Plural, aimed at the whole community. The unnamed judge in the second half is God — a reverent Jewish way of saying "God will judge you" without saying God.</span>
+
+<p class="v"><span class="n">2</span>For with whatever <span class="judge r">verdict</span> y'all <span class="judge r">judge</span>, y'all will be <span class="judge r">judged</span>; and with whatever <span class="measure r">measure</span> y'all <span class="measure r">measure out</span>, it will be <span class="measure r">measured back</span> to y'all.<sup class="en"><a href="#n2">2</a></sup></p>
+<span class="gloss">Five forms of one root, then three of another, stacked in a single line. It is a jingle in Greek and probably a proverb already in circulation.</span>
+
+<p class="v"><span class="n">3</span>And why do you <span class="eye r">stare at</span> the wood-chip in your brother's <span class="eye r">eye</span>, but the roof-beam in your own <span class="eye r">eye</span> — you don't even <span class="eye r">take it in</span>?</p>
+<span class="gloss">The Greek switches here from plural to singular and stays singular through v. 5: the rule went to everybody, the joke turns and points at one man. <span class="gk">κάρφος</span> (karphos) is a dry twig or chip off a threshing floor; <span class="gk">δοκός</span> (dokos) is a load-bearing rafter. Builder's-shop humor.</span>
+
+<p class="v"><span class="n">4</span>Or how will you say to your brother, "Let me <span class="do r">throw out</span> the wood-chip from your <span class="eye r">eye</span>" — and look, the roof-beam is in your own <span class="eye r">eye</span>!</p>
+
+<p class="v"><span class="n">5</span>Mask-wearer! <span class="do r">Throw out</span> the roof-beam from your own <span class="eye r">eye</span> first, and <em>then</em> you'll <span class="eye r">see clear through</span> to <span class="do r">throw out</span> the wood-chip from your brother's <span class="eye r">eye</span>.<sup class="en"><a href="#n3">3</a></sup></p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">ὑποκριτά</span> <span class="tr">(hypokrita)</span></span>
+  <span class="row"><span class="src">NASB</span> "hypocrite"</span>
+  <span class="row"><span class="src">Wooden</span> stage-actor, one who speaks from behind a mask</span>
+  <span class="row"><span class="src">Text-form</span> In the Greek Old Testament this word renders Hebrew <span class="gk">חָנֵף</span> (ḥanef) — not "pretender" but "godless, polluted." Both charges ride along.</span>
+</span>
+<span class="gloss">The speck still comes out. What is forbidden is operating blind, not operating.</span>
+
+<h3 class="panel">Image of the holy thing · 7:6</h3>
+
+<p class="v"><span class="n">6</span>Don't y'all give the holy thing to the dogs, and don't <span class="do r">throw</span> y'all's pearls out in front of the pigs — or else they'll stomp them down with their feet, and wheel around and rip y'all open.<sup class="en"><a href="#n4">4</a></sup></p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">τὸ ἅγιον… τοὺς μαργαρίτας</span> <span class="tr">(to hagion… tous margaritas)</span></span>
+  <span class="row"><span class="src">NASB</span> "what is holy"</span>
+  <span class="row"><span class="src">Wooden</span> the consecrated portion — the altar-meat only priests may eat</span>
+  <span class="row"><span class="src">Text-form</span> <a href="https://biblehub.com/exodus/22-31.htm">Exodus 22:31</a> fixes the opposite rule: torn meat <em>is</em> thrown to dogs. Dogs get the profane; the holy never leaves the sanctuary.</span>
+</span>
+<span class="gloss">The dog here is <span class="gk">κύων</span> (kyōn), the scavenging street dog — not <span class="gk">κυνάριον</span> (kynarion), the household pup Jesus uses at 15:26, which the Canaanite woman will seize on and turn into an argument. Matthew has the harsh word here and the gentle word there on purpose.</span>
+
+<h3 class="panel">Image of the asking child · 7:7–11</h3>
+
+<p class="v"><span class="n">7</span><span class="ask r">Ask</span> — and it will be given to y'all. Seek — and y'all will find. Knock — and it will be opened to y'all.<sup class="en"><a href="#n5">5</a></sup></p>
+<span class="gloss">Three commands, three promises, two of them again with God kept offstage in the passive. "Seek" is the same verb as 6:33, <em>seek first the kingdom</em>, and it carries exile freight: Deut 4:29, Jer 29:13, Isa 55:6 all promise a scattered people that God is still findable.</span>
+
+<p class="v"><span class="n">8</span>For everyone <span class="ask r">asking</span> receives, and the one seeking finds, and to the one knocking it will be opened.</p>
+<span class="gloss">"Everyone" — no qualifying clause, no worthiness test.</span>
+
+<p class="v"><span class="n">9</span>Or what person is there among y'all whose son will <span class="ask r">ask</span> him for a loaf — he won't hand him a stone, will he?</p>
+
+<p class="v"><span class="n">10</span>Or he'll <span class="ask r">ask</span> for a fish — he won't hand him a snake, will he?</p>
+<span class="gloss">Both pairs work by resemblance: a flat loaf and a smooth stone, an eel-like fish and a serpent. The bad father in view isn't cruel, he's a passer of convincing counterfeits.</span>
+
+<p class="v"><span class="n">11</span>So if y'all, being evil, know how to give good gifts to y'all's children, how much more will y'all's Father — the one in the skies — give good things to those <span class="ask r">asking</span> him!<sup class="en"><a href="#n6">6</a></sup></p>
+<span class="gloss">A light-to-heavy argument, what the rabbis call <em>qal vaḥomer</em>. "Being evil" is dropped in as a shared premise, no argument offered — same root as the evil eye of 6:23 and the evil one of 6:13.</span>
+
+<h3 class="panel">The capstone · 7:12</h3>
+
+<p class="v"><span class="n">12</span>So then — everything, however much y'all want people to <span class="do r">do</span> to y'all, that's what y'all <span class="do r">do</span> to them. For this is the Law and the Prophets.<sup class="en"><a href="#n7">7</a></sup></p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">οὗτος γάρ ἐστιν ὁ νόμος καὶ οἱ προφῆται</span> <span class="tr">(houtos gar estin ho nomos kai hoi prophētai)</span></span>
+  <span class="row"><span class="src">NASB</span> "this is the Law and the Prophets"</span>
+  <span class="row"><span class="src">Wooden</span> <em>this</em> — this single sentence — <em>is</em> the Law and the Prophets</span>
+  <span class="row"><span class="src">Note</span> The "so then" reaches back past vv. 7–11 all the way to 5:17. It concludes the whole body of the Sermon, not the paragraph.</span>
+</span>
+
+<h3 class="panel">Image one: two gates, two roads · 7:13–14</h3>
+
+<p class="v"><span class="n">13</span><span class="enter r">Come in</span> through the narrow <span class="way r">gate</span>. Because wide is the <span class="way r">gate</span> and roomy is the <span class="way r">road</span> that leads off into ruin — and many are the ones <span class="enter r">coming in</span> through it.<sup class="en"><a href="#n8">8</a></sup></p>
+
+<p class="v"><span class="n">14</span>Because narrow is the <span class="way r">gate</span> and squeezed is the <span class="way r">road</span> that leads off into life — and few are the ones who find it.</p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">τεθλιμμένη ἡ ὁδός</span> <span class="tr">(tethlimmenē hē hodos)</span></span>
+  <span class="row"><span class="src">NASB</span> "narrow"</span>
+  <span class="row"><span class="src">Wooden</span> pressed, squeezed, crushed-in — from <span class="gk">θλίβω</span> (thlibō), the root of <span class="gk">θλῖψις</span> (thlipsis), "tribulation"</span>
+  <span class="row"><span class="src">Text-form</span> SBLGNT reads <span class="gk">ὅτι στενή</span> (hoti stenē), "because narrow"; a well-attested variant reads <span class="gk">τί στενή</span> (ti stenē), "<em>how</em> narrow!" — an exclamation rather than a reason.</span>
+</span>
+<span class="gloss">"Finds" is the same verb promised in v. 8. The seeking that was guaranteed a finding four verses ago is now something few manage. The two sayings are not in contradiction; they are the two ways arriving early.</span>
+
+<h3 class="panel">Image two: two prophets, two trees · 7:15–23</h3>
+
+<p class="v"><span class="n">15</span>Keep yourselves clear of the sham-prophets, who come at y'all dressed in sheep's wool but underneath are wolves — wolves out to prey.<sup class="en"><a href="#n9">9</a></sup></p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">ψευδοπροφητῶν… λύκοι ἅρπαγες</span> <span class="tr">(pseudoprophētōn… lykoi harpages)</span></span>
+  <span class="row"><span class="src">NASB</span> "false prophets… ravenous wolves"</span>
+  <span class="row"><span class="src">Wooden</span> <span class="gk">ψευδοπροφήτης</span> is one compound word, the LXX's fixed term for a whole class of person — not a real prophet who lies, but a category, closer to "sham-prophet" or "quack" than "prophet, false one." <span class="gk">ἅρπαγες</span> is from <span class="gk">ἁρπάζω</span>, "seize, snatch, carry off" — the same verb John uses for what the wolf does to the sheep at 10:12, and elsewhere in the NT the word for a swindler or extortioner (1 Cor 5:10–11; 6:10; Luke 18:11).</span>
+</span>
+<span class="gloss">No doctrine is specified — only an outside and an inside. And the adjective is already an accusation: these are wolves in the sense of predators <em>for gain</em>, which is exactly what vv. 21–23 will show them doing.</span>
+
+<p class="v"><span class="n">16</span>From their <span class="fruit r">fruits</span> y'all will recognize them. They don't gather grapes off thornbushes, or figs off thistles, do they?</p>
+
+<p class="v"><span class="n">17</span>So every good tree <span class="do r">makes</span> fine <span class="fruit r">fruit</span>, but the rotten tree <span class="do r">makes</span> evil <span class="fruit r">fruit</span>.</p>
+
+<p class="v"><span class="n">18</span>A good tree <em>cannot</em> <span class="do r">make</span> evil <span class="fruit r">fruits</span>, and a rotten tree cannot <span class="do r">make</span> fine <span class="fruit r">fruits</span>.</p>
+<span class="gloss">Deliberately close to tautology. A tree doesn't try to bear; it discloses, in its fruit, what it already is.</span>
+
+<p class="v"><span class="n">19</span>Every tree not <span class="do r">making</span> fine <span class="fruit r">fruit</span> is chopped down and <span class="do r">thrown</span> into fire.<sup class="en"><a href="#n10">10</a></sup></p>
+<span class="gloss">Word for word, this is John the Baptist at 3:10. Matthew doesn't flag the quotation. He simply lets Jesus speak the forerunner's sentence.</span>
+
+<p class="v"><span class="n">20</span>So then — from their <span class="fruit r">fruits</span> y'all will recognize them.</p>
+<span class="gloss">Verses 16 and 20 are the same sentence, bracketing the tree logic between them like a chorus.</span>
+
+<p class="v"><span class="n">21</span>Not everyone saying to me "Master! Master!" will <span class="enter r">come into</span> the kingdom of the skies — but the one <span class="do r">doing</span> the will of my Father, the one in the skies.<sup class="en"><a href="#n11">11</a></sup></p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">Κύριε κύριε</span> <span class="tr">(kyrie kyrie)</span></span>
+  <span class="row"><span class="src">NASB</span> "Lord, Lord"</span>
+  <span class="row"><span class="src">Wooden</span> "Master! Master!" — the doubled vocative is Semitic intensity, the register of "Eli, Eli"</span>
+  <span class="row"><span class="src">Note</span> The same noun stood at 6:24, where no one can serve two <em>masters</em>. The people crying out here have picked a master; the question is whether they served him.</span>
+</span>
+
+<p class="v"><span class="n">22</span>Many will say to me on that Day: "Master! Master! Didn't we prophesy by your name — and by your name <span class="do r">throw out</span> demons — and by your name <span class="do r">make</span> many acts of power?"</p>
+<span class="gloss">Their evidence is the most impressive fruit imaginable, and it is exactly the ministry Jesus will authorize for the twelve at 10:1, 8. "Throw out" is the same verb used of the wood-chip in vv. 4–5 — these are people expert at extraction.</span>
+
+<p class="v"><span class="n">23</span>And then I'll declare to them: "I never knew y'all. Get away from me, y'all <span class="star">workers of lawlessness</span>."<sup class="en"><a href="#n12">12</a></sup></p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">ἀποχωρεῖτε ἀπ' ἐμοῦ οἱ ἐργαζόμενοι τὴν ἀνομίαν</span> <span class="tr">(apochōreite ap' emou hoi ergazomenoi tēn anomian)</span></span>
+  <span class="row"><span class="src">NASB</span> "practice lawlessness"</span>
+  <span class="row"><span class="src">Wooden</span> those whose <em>trade</em> is the un-Torah-ing of life</span>
+  <span class="row"><span class="src">Text-form</span> Nearly verbatim <a href="https://biblehub.com/psalms/6-8.htm">Psalm 6:9</a> in the Greek Old Testament — where the words belong to the vindicated sufferer dismissing his enemies. Jesus takes that seat.</span>
+</span>
+<span class="gloss">"I never knew you" turns <a href="https://biblehub.com/amos/3-2.htm">Amos 3:2</a> inside out — "you only have I known of all the families of the earth." This is covenant language withdrawn, not a claim about missing information.</span>
+
+<h3 class="panel">Image three: two builders, two houses · 7:24–27</h3>
+
+<p class="v"><span class="n">24</span>So everyone — whoever hears these words of mine and <span class="do r">does</span> them — will be likened to a shrewd man, who <span class="build r">built</span> his house on the <span class="build r">rock</span>.<sup class="en"><a href="#n13">13</a></sup></p>
+<span class="gloss">At v. 21 the object of obedience was the will of the Father. Here it is "these words of mine." Matthew makes no attempt to soften the equation.</span>
+
+<p class="v"><span class="n">25</span>And the rain came down, and the rivers came, and the winds blew and hurled themselves at that house — and it did not fall, for it had been <span class="build r">founded</span> on the <span class="build r">rock</span>.</p>
+
+<p class="v"><span class="n">26</span>And everyone hearing these words of mine and <em>not</em> <span class="do r">doing</span> them will be likened to a stupid man, who <span class="build r">built</span> his house on the sand.</p>
+<span class="gloss">Judean wadis floor out beautifully level and are dry eleven months of the year. Building there is not laziness; it is a perfectly reasonable-looking decision that fails once.</span>
+
+<p class="v"><span class="n">27</span>And the rain came down, and the rivers came, and the winds blew and slammed into that house — and it fell. And its fall was enormous.</p>
+<span class="compare">
+  <span class="row"><span class="src">Greek</span> <span class="gk">καὶ ἦν ἡ πτῶσις αὐτῆς μεγάλη</span> <span class="tr">(kai ēn hē ptōsis autēs megalē)</span></span>
+  <span class="row"><span class="src">NASB</span> "great was its fall"</span>
+  <span class="row"><span class="src">Wooden</span> and its <em>collapse</em> was great — the noun, not the verb, gets the last word</span>
+  <span class="row"><span class="src">Note</span> Both storms are described in identical words. The difference was never visible above ground.</span>
+</span>
+
+<h3 class="panel">The crowds · 7:28–29</h3>
+
+<p class="v"><span class="n">28</span>And it happened, when Jesus finished these words, the crowds were knocked clean out of themselves at his teaching.<sup class="en"><a href="#n14">14</a></sup></p>
+<span class="gloss"><span class="gk">ἐξεπλήσσοντο</span> (exeplēssonto) is literally "were struck out of" — the same startled violence English keeps in "thunderstruck."</span>
+
+<p class="v"><span class="n">29</span>For he was teaching them as one having <span class="star">authority</span> — and not like their scribes.<sup class="en"><a href="#n15">15</a></sup></p>
+<span class="gloss">A scribe's authority was borrowed: you taught by citing a chain of earlier names. Jesus has just spent three chapters saying "but <em>I</em> say to y'all," citing no one. The crowd registers the missing footnotes before anyone works out what their absence means.</span>
+
+</div>
+
+<div class="notes">
+  <h2>Notes</h2>
+  <ol>
+    <li id="n1"><strong><span class="gk">μὴ κρίνετε</span> (mē krinete), v. 1.</strong> A present imperative with the negative, which in Greek often means <em>stop</em> an action already underway rather than never begin one. The rabbinic tradition runs alongside rather than against this: <a href="https://www.sefaria.org/Pirkei_Avot.1.6">Avot 1:6</a> ("judge every person toward the scale of merit"), <a href="https://www.sefaria.org/Pirkei_Avot.2.5">Avot 2:5</a> ("do not judge your fellow until you have stood in his place"), and <a href="https://www.sefaria.org/Shabbat.127b">Shabbat 127b</a> (whoever judges his neighbor favorably is himself judged favorably). Lexicon: <a href="https://logeion.uchicago.edu/%CE%BA%CF%81%CE%AF%CE%BD%CF%89">κρίνω</a>.</li>
+    <li id="n2"><strong>Measure for measure, v. 2.</strong> <a href="https://www.sefaria.org/Mishnah_Sotah.1.7">Mishnah Sotah 1:7</a> states the principle almost word for word as the working logic of divine justice — <em>middah k'neged middah</em>, measure against measure. <span class="gk">μέτρον</span> (metron) is a market word before it is a courtroom word: the grain scoop you fill and level off. The same reciprocity governed the debt-clause of the Father's Prayer at 6:12, 14–15, and it will be dramatized at length in the unforgiving slave, 18:23–35.</li>
+    <li id="n3"><strong>Chip and rafter, vv. 3–5.</strong> A close rabbinic parallel stands at <a href="https://www.sefaria.org/Arakhin.16b">Arakhin 16b</a> (doublet at Bava Batra 15b), where Rabbi Tarfon doubts anyone in his generation can accept rebuke: say "take the splinter from between your eyes" and the answer comes back "take the beam from between yours." Tarfon lived through AD 70, so the direction of borrowing is genuinely open. Note the difference of use: in Tarfon the deflection is defiance; in Matthew it is legitimate. Chrysostom takes v. 1 as aimed not at all judgment but at people loaded with their own faults trampling others over trifles — <a href="https://www.newadvent.org/fathers/200123.htm">Homily 23 on Matthew ↗</a>.</li>
+    <li id="n4"><strong>The holy and the pearls, v. 6.</strong> The hardest verse in the Sermon, with at least five serious readings and no consensus: (i) <em>sacramental</em> — Didache 9:5 already quotes it to restrict the eucharist to the baptized (<a href="https://www.earlychristianwritings.com/didache.html">text ↗</a>); (ii) <em>Torah</em> — rabbinic idiom could call the Law a golden ring and its rulings its pearls, and Matthew Black proposed an Aramaic <em>qedasha</em> ("ring") misread as <em>qudsha</em> ("holy"), which would line the couplet up with the gold ring in a pig's snout at <a href="https://biblehub.com/proverbs/11-22.htm">Proverbs 11:22</a>; (iii) <em>mission</em> — a temporary restriction like 10:5–6, overturned at 28:19; (iv) <em>apostasy</em> — dogs and pigs as insiders who turned, the pairing 2 Peter 2:22 uses of false teachers; (v) <em>incompatibility</em> — its position in the diptych answers the two-masters saying of 6:24, making the point that some things cannot be mixed. Reading (v) is the one the structure supports; the saying also circulates free-standing and uninterpreted in Gospel of Thomas 93, which suggests Jesus left it on the table as a riddle.</li>
+    <li id="n5"><strong>Ask, seek, knock, v. 7.</strong> All three imperatives are present-tense, which can carry ongoing or repeated action — the old "keep on asking" is defensible, though the present is also simply the normal tense for a general command. The door that opens here is shut at 25:11–12, where the same doubled cry "Master, Master, open to us" receives "I do not know you" — almost exactly the verdict of v. 23 below.</li>
+    <li id="n6"><strong>Good things, v. 11.</strong> Luke's version of this saying ends with the Father giving the Holy Spirit (Luke 11:13); Matthew ends with an unspecified plural, <span class="gk">ἀγαθά</span> (agatha). Luke points the promise at Pentecost; Matthew leaves it open to everything asked for since 6:9. Neither is an improvement on the other. Note also that the bread-and-stone pair last appeared in the wilderness at 4:3, with the tempter proposing the transaction in reverse.</li>
+    <li id="n7"><strong>The golden rule, v. 12.</strong> Widely paralleled: Tobit 4:15, Letter of Aristeas 207, and Hillel's famous reply in <a href="https://www.sefaria.org/Shabbat.31a">Shabbat 31a</a> — what is hateful to you, do not do to your fellow; that is the whole Torah, the rest is commentary, go and learn. The old apologetic claim that the negative form is mere restraint while the positive form requires grace should be resisted: Hillel's "go and learn" opens onto a Torah of relentless positive obligation — leave the gleanings, lend without interest, pay the wage before sundown, love the stranger. What is distinctive in Matthew is not the polarity but the closing clause, and the authority implied in saying it.</li>
+    <li id="n8"><strong>Two ways, vv. 13–14.</strong> Covenant-ending form: <a href="https://biblehub.com/deuteronomy/30-15.htm">Deuteronomy 30:15,19</a>, <a href="https://biblehub.com/jeremiah/21-8.htm">Jeremiah 21:8</a>, Psalm 1, Sirach 15:17; developed into cosmic dualism at Qumran in 1QS III–IV, and opening the Didache ("two ways, one of life and one of death, and a great difference between the two"). <span class="gk">ἀπώλεια</span> (apōleia) in the Greek Old Testament regularly names historical catastrophe — a city's ruin, a nation's collapse — as often as final judgment, which is why the reading splits. Constable takes it as eternal destruction and few-versus-many as a soteriological ratio; France and Wright hear Jeremiah's fork, a nation on a trajectory toward a dated disaster. Both edges can be live at once.</li>
+    <li id="n9"><strong>Sham-prophets, ravenous wolves, v. 15.</strong> <span class="gk">ψευδοπροφήτης</span> is a single compound — the Septuagint's standing term for נָבִיא שֶׁקֶר (navi sheqer) — naming a class of person rather than qualifying an otherwise-real prophet as dishonest. <span class="gk">ἅρπαγες</span> shares its root with <span class="gk">ἁρπάζω</span>, "snatch, seize by force": the same verb describes the wolf's action against the sheep at <a href="https://biblehub.com/john/10-12.htm">John 10:12</a>, and the adjectival form elsewhere in the NT names swindlers and extortioners in vice-lists (1 Cor 5:10–11; 6:10; Luke 18:11) — predation specifically <em>for gain</em>, which anticipates the profit-shaped false discipleship of vv. 21–23. The prophetic backdrop for the sheep's-clothing figure itself is Deuteronomy 13 and 18, Jeremiah 6, 8, 23, and <a href="https://biblehub.com/ezekiel/13-11.htm">Ezekiel 13</a>. The harder question is where these figures stand: Constable assumes scribes and Pharisees; Davies &amp; Allison and Luz take seriously that vv. 21–23 describe people prophesying, exorcising, and working miracles <em>in Jesus' name</em> — insiders to Matthew's own community. If that is right, the sharpest warning in the Sermon points inward at the church reading it.</li>
+    <li id="n10"><strong>Verbatim John, v. 19.</strong> Compare 3:10. See also 12:33–37, where Matthew brings the tree-and-fruit test back and narrows "fruit" specifically to speech.</li>
+    <li id="n11"><strong>Doing the Father's will, v. 21.</strong> Constable, defending a faith-alone frame, redefines "doing the will of the Father" as believing in Jesus. The move is worth weighing against the text: <span class="gk">ποιέω</span> (poieō) has been drumming since v. 12 and runs through vv. 17–19, 21, 22, 24, 26 — the Sermon's ending is built on the verb <em>do</em>, and reading it as a synonym for <em>believe</em> requires importing the equation rather than finding it. Compare 21:28–31, where Matthew stages the same distinction as a parable about two sons and settles it on action.</li>
+    <li id="n12"><strong><span class="gk">ἀνομία</span> (anomia), v. 23.</strong> Matthew's word and no one else's among the gospel writers — here, 13:41, 23:28, 24:12. In the Greek Old Testament it renders the Hebrew vocabulary of iniquity and covenant treachery, so the charge is not rule-breaking but living as though Torah, as though covenant, did not apply. Chrysostom on "I never knew you": God knows all people by nature but seems not to know these, because he does not love them — <a href="https://www.newadvent.org/fathers/200124.htm">Homily 24 ↗</a>. LXX text: <a href="https://ccat.sas.upenn.edu/nets/edition/">NETS ↗</a>.</li>
+    <li id="n13"><strong>Build and rock, vv. 24–27.</strong> <span class="gk">οἰκοδομέω</span> + <span class="gk">πέτρα</span> is planted here and detonates at <a href="https://biblehub.com/matthew/16-18.htm">16:18</a> — "you are Peter, and on this rock I will build." <a href="https://biblehub.com/isaiah/28-16.htm">Isaiah 28:16</a>'s foundation stone stands behind both. Two rabbinic parallels make the same deeds-over-learning point: Hanina ben Dosa at <a href="https://www.sefaria.org/Pirkei_Avot.3.9">Avot 3:9</a> (the one whose deeds exceed his wisdom — his wisdom endures), and Elisha ben Abuyah in Avot de Rabbi Natan 24, where the man with deeds builds stone first and brick after, so rising water cannot dislodge him.</li>
+    <li id="n14"><strong>The discourse formula, v. 28.</strong> <span class="gk">καὶ ἐγένετο ὅτε ἐτέλεσεν</span> recurs at 11:1, 13:53, 19:1, 26:1 and nowhere else — the clearest hard evidence that Matthew is building on a five-discourse plan rather than reporting as events arrived. Chrysostom on the crowds' reaction: <a href="https://www.newadvent.org/fathers/200125.htm">Homily 25 ↗</a>.</li>
+    <li id="n15"><strong><span class="gk">ἐξουσία</span> (exousia), v. 29.</strong> First occurrence in the gospel, and it runs: 8:9, 9:6, 9:8, 10:1, 21:23–27, and finally <a href="https://biblehub.com/matthew/28-18.htm">28:18</a> — "all authority in sky and on earth has been given to me." The word quietly planted at the end of the first discourse is the word that ends the book.</li>
+  </ol>
+</div>
+
+<footer>Translation rendered from the SBLGNT Greek of Matthew 7:1–29 · Unit 7 of the Matthew study · wooden to the Greek by design</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 8 — Matthew 8:1–34 — The Deeds of the Messiah (I)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5efe2;
+    --panel:#fbf7ee;
+    --panel-2:#f1e8d5;
+    --ink:#2a2520;
+    --ink-soft:#5c5347;
+    --rule:#d8cdb6;
+    --rule-soft:#e7dec9;
+    /* === structural (verse numbers, endnote markers) === */
+    --c-beget:#a8324a;
+    /* === Greek-root colors — assigned fresh for Unit 8 === */
+    --c-follow:#3b3f93;    /* akoloutheō — follow      */
+    --c-throw:#9c4f1c;     /* ballō — throw / cast      */
+    --c-touch:#2e7d46;     /* haptomai — touch          */
+    --c-release:#147a63;   /* aphiēmi — release/forgive */
+    --c-torment:#7a2230;   /* basanizō — torment        */
+    --c-urge:#9c2f8f;      /* parakaleō — urge/entreat  */
+    --c-faith:#b07a1e;     /* pistis / pisteuō — trust  */
+    --c-authority:#7b2fb3; /* exousia — authority       */
+    --c-clean:#1596b8;     /* katharizō — cleanse       */
+    --c-raise:#2f6db3;     /* egeirō — raise            */
+    --c-shake:#4a5a68;     /* seismos — shaking         */
+    --c-david:#8a6a2a;
+    --c-fulfill:#455a6b;
+    --c-withdraw:#9c4f1c;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 18% -5%, #faf5ea 0%, transparent 55%),
+      radial-gradient(circle at 105% 102%, #ece2cc 0%, transparent 50%),
+      var(--bg);
+    color:var(--ink);
+    font-family:"EB Garamond", Georgia, serif;
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:790px;margin:0 auto;padding:56px 26px 120px;}
+
+  a{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;}
+  a:hover{border-bottom-style:solid;}
+
+  /* ---- masthead ---- */
+  header.mast{text-align:center;border-bottom:2px solid var(--ink);padding-bottom:26px;margin-bottom:8px;}
+  .mast .kicker{letter-spacing:.32em;text-transform:uppercase;font-size:12.5px;color:var(--ink-soft);}
+  .mast h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:43px;line-height:1.05;margin:.18em 0 .12em;letter-spacing:.01em;}
+  .mast .greek-title{font-size:21px;color:var(--c-david);font-style:italic;margin-bottom:.2em;}
+  .mast .unit{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--ink-soft);font-style:italic;}
+
+  /* ---- shared section frame (ALWAYS page-break-protected) ---- */
+  section.block{background:var(--panel);border:1px solid var(--rule);border-radius:7px;padding:20px 24px;margin:30px 0;page-break-inside:avoid;break-inside:avoid;}
+  section.block h2{font-family:"Cormorant Garamond",serif;font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 4px;}
+  section.block .cap{font-style:italic;color:var(--ink-soft);font-size:15px;margin:0 0 16px;}
+
+  /* ---- legend ---- */
+  .legend ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 26px;}
+  .legend li{font-size:15.5px;line-height:1.4;}
+  .swatch{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px;vertical-align:baseline;}
+  .legend .r{font-style:italic;}
+  .legend .tag{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-left:6px;}
+  @media(max-width:560px){.legend ul{grid-template-columns:1fr;}}
+
+  /* ---- root spans ---- */
+  .r{font-weight:600;}
+  .follow{color:var(--c-follow);}
+  .throw{color:var(--c-throw);}
+  .touch{color:var(--c-touch);}
+  .release{color:var(--c-release);}
+  .torment{color:var(--c-torment);}
+  .urge{color:var(--c-urge);}
+  .faith{color:var(--c-faith);}
+  .authority{color:var(--c-authority);}
+  .clean{color:var(--c-clean);}
+  .raise{color:var(--c-raise);}
+  .shake{color:var(--c-shake);}
+  .star{color:#9a7a12;font-style:italic;}
+
+  /* ---- ring / structure maps ---- */
+  .ring{display:grid;grid-template-columns:1fr;gap:10px;}
+  .ringrow{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:9px 12px;border-radius:6px;background:var(--panel-2);}
+  .ringrow.center{background:#efe4cb;border:1px solid var(--rule);}
+  .ringrow .lab{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:21px;color:var(--c-david);text-align:center;}
+  .ringrow .lab small{display:block;font-size:11px;color:var(--ink-soft);letter-spacing:.06em;font-weight:400;}
+  .ringrow .txt{font-size:15.5px;line-height:1.45;}
+  .ringrow .ref{color:var(--ink-soft);font-style:italic;}
+
+  /* ---- correspondence table ---- */
+  table.exod{width:100%;border-collapse:collapse;font-size:15.5px;}
+  table.exod th,table.exod td{padding:8px 10px;border:1px solid var(--rule);text-align:left;vertical-align:top;}
+  table.exod th{background:var(--panel-2);font-family:"Cormorant Garamond",serif;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px;color:var(--ink-soft);font-weight:600;}
+  table.exod td.mt{color:var(--c-withdraw);font-weight:600;}
+  table.exod td.eg{color:var(--ink-soft);}
+
+  /* ---- sequence chips ---- */
+  .itin{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 4px;}
+  .itin .stop{font-family:"Cormorant Garamond",serif;font-size:17px;font-weight:600;padding:4px 11px;border-radius:20px;background:var(--panel-2);border:1px solid var(--rule);}
+  .itin .arr{color:var(--ink-soft);font-size:15px;}
+  .itin .stop sup{font-size:10px;color:var(--c-fulfill);font-weight:700;}
+
+  /* ---- verses ---- */
+  .verses{margin-top:40px;}
+  .v{margin:0 0 14px;padding-left:42px;text-indent:-42px;line-height:1.7;}
+  .v .n{display:inline-block;width:30px;text-indent:0;font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--c-beget);font-weight:600;vertical-align:top;}
+  .gloss{display:block;text-indent:0;margin:3px 0 14px 0;padding:6px 14px;border-left:2px solid var(--rule);color:var(--ink-soft);font-style:italic;font-size:15px;line-height:1.5;}
+  sup.en{font-size:.62em;font-style:normal;color:var(--c-beget);font-weight:700;vertical-align:super;line-height:0;}
+  sup.en a{border:none;}
+  h3.pericope{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:600;color:var(--ink);margin:34px 0 4px;padding-bottom:5px;border-bottom:1px solid var(--rule-soft);}
+  h3.pericope span{font-style:italic;font-weight:400;font-size:15px;color:var(--ink-soft);}
+
+  /* ---- compare box ---- */
+  .compare{display:block;text-indent:0;margin:6px 0 14px 0;border:1px dashed var(--rule);border-radius:6px;background:var(--panel);padding:12px 16px;font-size:15px;page-break-inside:avoid;break-inside:avoid;}
+  .compare .row{display:grid;grid-template-columns:112px 1fr;gap:4px 14px;align-items:baseline;margin:0;padding:5px 0;border-top:1px solid var(--rule);}
+  .compare .row:first-child{border-top:none;padding-top:0;}
+  .compare .src{font-variant:small-caps;letter-spacing:.05em;color:var(--ink-soft);font-style:normal;font-size:13.5px;}
+  .compare .txt{line-height:1.5;}
+  @media(max-width:520px){.compare .row{grid-template-columns:1fr;gap:1px;}}
+
+  .translit{font-style:italic;}
+  .tr{font-style:italic;color:var(--ink-soft);font-size:.92em;}
+
+  /* ---- endnotes ---- */
+  .notes{margin-top:48px;border-top:2px solid var(--ink);padding-top:18px;}
+  .notes h2{font-family:"Cormorant Garamond",serif;font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 16px;}
+  .notes ol{margin:0;padding-left:26px;}
+  .notes li{margin:0 0 15px;font-size:16px;line-height:1.55;}
+
+  footer{margin-top:50px;text-align:center;font-size:13px;color:var(--ink-soft);font-style:italic;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="kicker">The Gospel According to Matthew · Study Translation</div>
+  <h1>The Deeds of the Messiah (I)</h1>
+  <div class="greek-title">exousia — <span style="font-style:normal;font-size:.8em;color:var(--ink-soft)">"authority," the word the Sermon ended on, now put to work</span></div>
+  <div class="unit">Unit 8 · Matthew 8:1–34 · down from the mountain, into the bodies</div>
+</header>
+
+<section class="block legend" aria-label="color key">
+  <h2>Recurring Greek roots — color key</h2>
+  <p class="cap">The roots tracked in this unit, transliterated, with the color each one holds throughout this artifact. Colors are assigned fresh per unit and carry no meaning from earlier units.</p>
+  <ul>
+    <li><span class="swatch" style="background:var(--c-follow)"></span><span class="r follow">akoloutheō</span> — "follow, come along behind"</li>
+    <li><span class="swatch" style="background:var(--c-throw)"></span><span class="r throw">ballō</span> — "throw, cast, fling down"</li>
+    <li><span class="swatch" style="background:var(--c-touch)"></span><span class="r touch">haptomai</span> — "take hold of, touch"</li>
+    <li><span class="swatch" style="background:var(--c-release)"></span><span class="r release">aphiēmi</span> — "let go, release, forgive"</li>
+    <li><span class="swatch" style="background:var(--c-torment)"></span><span class="r torment">basanizō</span> — "torment, put to the test"</li>
+    <li><span class="swatch" style="background:var(--c-urge)"></span><span class="r urge">parakaleō</span> — "urge, entreat, call alongside"</li>
+    <li><span class="swatch" style="background:var(--c-faith)"></span><span class="r faith">pistis / pisteuō</span> — "trust, faith, entrust oneself"</li>
+    <li><span class="swatch" style="background:var(--c-authority)"></span><span class="r authority">exousia</span> — "authority, delegated right to act"</li>
+    <li><span class="swatch" style="background:var(--c-clean)"></span><span class="r clean">katharizō</span> — "cleanse, make ritually pure"</li>
+    <li><span class="swatch" style="background:var(--c-raise)"></span><span class="r raise">egeirō</span> — "raise up, rouse from lying down"</li>
+    <li><span class="swatch" style="background:var(--c-shake)"></span><span class="r shake">seismos</span> — "shaking, quake" <span class="tag">forward echo</span></li>
+  </ul>
+</section>
+
+<section class="block">
+  <h2>Where this sits — the deed-block of Matthew 8–9</h2>
+  <p class="cap">Chapters 8–9 form one ten-deed answer to the words of chapters 5–7: three triads of miracle, each triad followed by an interlude on what following costs. Unit 8 covers the first triad, the first interlude, and the opening two-thirds of the second triad.</p>
+  <table class="exod">
+    <tr><th>Block</th><th>Content</th><th>Unit</th></tr>
+    <tr><td class="eg">8:1–17 · Triad I</td><td>leper cleansed · centurion's boy · Peter's mother-in-law, closed by the evening summary and the Isaiah citation</td><td class="mt">Unit 8</td></tr>
+    <tr><td class="eg">8:18–22 · Interlude</td><td>two would-be followers: the eager scribe, the hesitating disciple</td><td class="mt">Unit 8</td></tr>
+    <tr><td class="eg">8:23–9:8 · Triad II</td><td>the storm stilled · the Gadarene demoniacs · the paralytic forgiven</td><td class="mt">Unit 8 (first two) → Unit 9</td></tr>
+    <tr><td class="eg">9:9–17 · Interlude</td><td>the call of Matthew · the question about fasting</td><td class="mt">Unit 9</td></tr>
+    <tr><td class="eg">9:18–34 · Triad III</td><td>two women restored · two blind men · the mute demoniac</td><td class="mt">Unit 9</td></tr>
+  </table>
+  <p class="cap" style="margin:14px 0 0">Constable's outline and the Bible Project's own literary map arrive at this same three-triad shape independently — a convergence across a dispensationalist and a literary-canonical reader that makes the architecture hard to dismiss as a partisan reading.</p>
+</section>
+
+<section class="block">
+  <h2>Unit 8's own shape — a ring · 8:1–34</h2>
+  <p class="cap">Healings that cross a social barrier, then the interlude that names the cost, then wonders that cross a cosmic one.</p>
+  <div class="ring">
+    <div class="ringrow"><div class="lab">A<small>1–17</small></div><div class="txt">Three bodies no respectable teacher should be handling: a leper, a Gentile's boy, a woman. Each barrier crossed by <span class="r touch">haptomai</span> or by a word. <span class="ref">— closes on Isaiah 53:4</span></div></div>
+    <div class="ringrow center"><div class="lab">B<small>18–22</small></div><div class="txt">Two men who want to follow, on their own terms. The pivot: authority over bodies is one thing, authority over <em>lives</em> is the harder claim.</div></div>
+    <div class="ringrow"><div class="lab">A′<small>23–34</small></div><div class="txt">Two forces no human should be commanding: the sea, and the demonic. Each subdued by a word. <span class="ref">— closes on a town asking him to leave</span></div></div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>The outsider triad · 8:1–15</h2>
+  <p class="cap">Three healings, three different barriers, three different mechanisms — and notice the middle one is the only person Jesus never meets.</p>
+  <table class="exod">
+    <tr><th>Who</th><th>The barrier</th><th>How it is crossed</th></tr>
+    <tr><td class="eg">A leprous man <span class="tr">8:1–4</span></td><td>ritual impurity; excluded from camp, worship, and touch</td><td class="mt">Jesus touches him first</td></tr>
+    <tr><td class="eg">A centurion's boy <span class="tr">8:5–13</span></td><td>Gentile, occupier, an unclean house Jesus is asked <em>not</em> to enter</td><td class="mt">a word, at a distance — no contact at all</td></tr>
+    <tr><td class="eg">Peter's mother-in-law <span class="tr">8:14–15</span></td><td>a woman, fevered, in a private house</td><td class="mt">Jesus takes her hand</td></tr>
+  </table>
+</section>
+
+<section class="block">
+  <h2>The sea, twice · 8:24–25 ↔ 8:32</h2>
+  <p class="cap">A small structural mirror inside the unit: the same water that nearly swallows the faithful is where the unclean is finally sent.</p>
+  <div class="ring">
+    <div class="ringrow"><div class="lab">a<small>24–25</small></div><div class="txt">A <span class="r shake">seismos</span> on the sea; the boat is being buried; the disciples cry <em>save us, we are being destroyed</em>. <span class="ref">— the sea threatens the faithful</span></div></div>
+    <div class="ringrow center"><div class="lab">·<small>26–27</small></div><div class="txt">A word. Great stillness. <em>What sort of being is this?</em></div></div>
+    <div class="ringrow"><div class="lab">a′<small>32</small></div><div class="txt">The herd rushes down the cliff into the sea and dies in the waters. <span class="ref">— the sea receives the destruction of the unclean</span></div></div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Threads carried out of this unit</h2>
+  <p class="cap">Keywords planted or advanced here whose payoff lands in a later unit.</p>
+  <table class="exod">
+    <tr><th>Thread</th><th>Here</th><th>Where it pays off</th></tr>
+    <tr><td class="eg"><span class="r release">aphiēmi</span> — release/forgive</td><td class="mt">the fever <em>releases</em> her (8:15); <em>leave</em> the dead to bury their dead (8:22)</td><td>9:2 — "your sins are released" (Unit 9)</td></tr>
+    <tr><td class="eg"><span class="r follow">akoloutheō</span> — follow</td><td class="mt">crowds follow (8:1); two men offer to (8:19, 21); the disciples actually do (8:23)</td><td>9:9 (Matthew's call); running to 28:19</td></tr>
+    <tr><td class="eg">oligopistoi — "little-faiths"</td><td class="mt">applied to the disciples themselves for the first time (8:26)</td><td>14:31; 16:8</td></tr>
+    <tr><td class="eg"><span class="r shake">seismos</span> — shaking</td><td class="mt">the storm on the sea (8:24)</td><td>27:51–54; 28:2 — the quakes at cross and tomb</td></tr>
+    <tr><td class="eg"><span class="r torment">basanizō</span> — torment</td><td class="mt">the servant tormented (8:6) → the demons dread torment (8:29)</td><td>an inclusio closing inside this unit; recurs 14:24; 18:34</td></tr>
+    <tr><td class="eg"><span class="r urge">parakaleō</span> — urge</td><td class="mt">the demons urge him (8:31); the townspeople urge him (8:34) — same verb, same request</td><td>unit-local irony; watch it again at 14:36; 18:29</td></tr>
+    <tr><td class="eg"><span class="r authority">exousia</span> — authority</td><td class="mt">the centurion's argument from command (8:9)</td><td>9:6, 8; 10:1; 28:18</td></tr>
+  </table>
+</section>
+
+<div class="verses">
+
+<h3 class="pericope">The leper <span>· 8:1–4</span></h3>
+
+<p class="v"><span class="n">1</span>And as he was coming down from the mountain, large crowds <span class="r follow">followed</span> him.</p>
+<span class="gloss">The descent answers the ascent of 5:1. The Sermon began with him going up; the deeds begin with him coming down — and the same ambiguous verb <span class="translit">akoloutheō</span> ("follow") is still doing double duty for crowds and disciples alike.</span>
+
+<p class="v"><span class="n">2</span>And look — a leprous man,<sup class="en"><a href="#n1">1</a></sup> coming up, kept bowing low<sup class="en"><a href="#n2">2</a></sup> before him, saying, "Lord, if you are willing, you have the power to <span class="r clean">cleanse</span> me."</p>
+<span class="gloss">What he does not doubt is the power. The only thing in question is whether Jesus <em>wants</em> to — which is exactly the fear of a man whose disease has taught him that everyone keeps their distance on purpose.</span>
+
+<p class="v"><span class="n">3</span>And stretching out the hand he <span class="r touch">took hold of</span> him, saying, "I am willing — be <span class="r clean">cleansed</span>." And immediately his leprosy was <span class="r clean">cleansed</span>.</p>
+<span class="gloss">Under the Law the flow runs one way: touch the unclean and you become unclean. Here it runs backward. Jesus answers the man's exact words back to him — <em>willing</em> for <em>willing</em> — and the contact that should have defiled him purifies the other instead.</span>
+
+<p class="v"><span class="n">4</span>And Jesus says to him, "See that you tell no one, but go, show yourself to the priest and bring the gift Moses ordered — as evidence for them."<sup class="en"><a href="#n3">3</a></sup></p>
+<span class="gloss">Obedience to <a href="https://biblehub.com/leviticus/14-2.htm">Leviticus 14</a>, and simultaneously a calling card left with the Jerusalem priesthood: someone is doing in Galilee what the Bible records happening twice in a thousand years.</span>
+
+<h3 class="pericope">The centurion's boy <span>· 8:5–13</span></h3>
+
+<p class="v"><span class="n">5</span>And as he was entering Capernaum a centurion came up to him, <span class="r urge">urging</span> him</p>
+
+<p class="v"><span class="n">6</span>and saying, "Lord, my boy<sup class="en"><a href="#n4">4</a></sup> has been <span class="r throw">thrown down</span> in the house, paralyzed, dreadfully <span class="r torment">tormented</span>."</p>
+<div class="compare">
+  <div class="row"><span class="src">Greek (translit.)</span><span class="txt translit">ho pais mou beblētai … deinōs basanizomenos</span></div>
+  <div class="row"><span class="src">Wooden</span><span class="txt">"my boy has been thrown down … dreadfully tormented"</span></div>
+  <div class="row"><span class="src">NASB</span><span class="txt">smooths <span class="translit">beblētai</span> into simply lying down at home, and renders the participle as fearful torment</span></div>
+  <div class="row"><span class="src">Why it matters</span><span class="txt"><span class="translit">ballō</span> ("throw") is violent, and it recurs three times in fourteen verses: the boy thrown down (8:6), the sons of the kingdom thrown out (8:12), the mother-in-law thrown down by fever (8:15). And <span class="translit">basanizō</span> comes back at 8:29 in the mouths of the demons — the tormentors afraid of being tormented.</span></div>
+</div>
+
+<p class="v"><span class="n">7</span>And he says to him, "I myself will come and heal him."</p>
+<span class="gloss">The emphatic "I" can also be read as a question — <em>Am I to come?</em> — which would put the strain on whether a Jewish teacher enters a Gentile house at all. Either way the weight falls on Jesus' own person.</span>
+
+<p class="v"><span class="n">8</span>And answering, the centurion said, "Lord, I am not big enough<sup class="en"><a href="#n5">5</a></sup> for you to come under my roof; but only say it with a word, and my boy will be cured.</p>
+
+<p class="v"><span class="n">9</span>For I myself am a man set under <span class="r authority">authority</span>, with soldiers under me, and I say to this one 'March,' and he marches, and to another 'Come,' and he comes, and to my slave 'Do this,' and he does it."</p>
+<span class="gloss">This is the theological engine of the whole unit. He is not appealing to Jesus' compassion; he is reasoning from a chain of command. The word of a man under Rome's authority carries Rome; the word of this man carries whatever is over him. Chrysostom noticed the verb the centurion reaches for — not <em>beg</em>, not <em>pray</em>, but <em>command</em>.</span>
+
+<p class="v"><span class="n">10</span>And hearing this, Jesus marveled and said to those <span class="r follow">following</span>, "Amen I tell y'all, with no one in Israel have I found such <span class="r faith">faith</span>.</p>
+<span class="gloss">One of only two moments in all four Gospels where Jesus is said to wonder at a person, and the only one where the wonder is admiring. The other is his amazement at unbelief.</span>
+
+<p class="v"><span class="n">11</span>And I tell y'all that many will arrive from the risings and the settings<sup class="en"><a href="#n6">6</a></sup> and will recline at table with Abraham and Isaac and Jacob in the kingdom of the skies,</p>
+
+<p class="v"><span class="n">12</span>but the sons of the kingdom will be <span class="r throw">thrown out</span> into the darkness outside; there will be the weeping and the grinding of the teeth."<sup class="en"><a href="#n7">7</a></sup></p>
+<div class="compare">
+  <div class="row"><span class="src">Greek (translit.)</span><span class="txt translit">hoi de huioi tēs basileias ekblēthēsontai eis to skotos to exōteron</span></div>
+  <div class="row"><span class="src">Wooden</span><span class="txt">"the sons of the kingdom will be thrown out into the darkness outside"</span></div>
+  <div class="row"><span class="src">OT ground</span><span class="txt">the banquet of <a href="https://biblehub.com/isaiah/25-6.htm">Isaiah 25:6–9</a>, where the nations feast on the mountain and death is swallowed up; cf. <a href="https://biblehub.com/isaiah/65-13.htm">Isaiah 65:13–14</a></span></div>
+  <div class="row"><span class="src">Constable</span><span class="txt">reads "sons of the kingdom" as Israel presuming on descent; the banquet itself is still future, so this is warning of a coming reversal rather than a present one</span></div>
+  <div class="row"><span class="src">France · Wright · D&amp;A</span><span class="txt">read the reversal as already underway in this very scene: the boundary of the kingdom's people is being redrawn around trust rather than ancestry, and a Roman officer is the demonstration</span></div>
+  <div class="row"><span class="src">Held open</span><span class="txt">everyone agrees the verbs are future. The live question is whether that future has already begun leaking backward into 8:10 — and even the Bible Project's own notes file 8:11 among Jesus' <em>future</em>-kingdom sayings, so this is not simply traditional-vs-literary.</span></div>
+</div>
+
+<p class="v"><span class="n">13</span>And Jesus said to the centurion, "Go — as you <span class="r faith">trusted</span>, let it happen for you." And the boy was cured in that hour.</p>
+
+<h3 class="pericope">Peter's mother-in-law, and evening <span>· 8:14–17</span></h3>
+
+<p class="v"><span class="n">14</span>And coming into Peter's house, Jesus saw his mother-in-law <span class="r throw">thrown down</span> and burning with fever.</p>
+
+<p class="v"><span class="n">15</span>And he <span class="r touch">took hold of</span> her hand, and the fever <span class="r release">released</span> her, and she was <span class="r raise">raised</span> and began waiting on him.</p>
+<span class="gloss">Three roots land in one sentence. The <em>touch</em> that cleansed the leper; the <em>release</em> that will carry the paralytic's forgiveness one chapter from now (9:2); and the <em>raising</em> that runs through the storm (8:25–26) and out toward the empty tomb. "Waiting on him" is the same verb used of the angels serving Jesus after the wilderness (4:11) — healing here produces service immediately, without a gap.</span>
+
+<p class="v"><span class="n">16</span>And when evening came, they brought him many who were demonized; and he <span class="r throw">threw</span> the spirits out with a word, and healed all who were in a bad way —</p>
+<span class="gloss">"With a word" is the centurion's own phrase from 8:8, now shown working exactly as he said it would.</span>
+
+<p class="v"><span class="n">17</span>so that what was spoken through Isaiah the prophet might be filled full: "He himself took our weaknesses and carried off our diseases."</p>
+<div class="compare">
+  <div class="row"><span class="src">Greek (translit.)</span><span class="txt translit">autos tas astheneias hēmōn elaben kai tas nosous ebastasen</span></div>
+  <div class="row"><span class="src">Source</span><span class="txt"><a href="https://biblehub.com/isaiah/53-4.htm">Isaiah 53:4</a> — Hebrew <span class="translit">holayenu hu nasa</span>, "our sicknesses he himself bore"</span></div>
+  <div class="row"><span class="src">Text-form</span><span class="txt">Matthew renders the Hebrew freshly rather than following the Greek Old Testament, which had already shifted the line toward bearing <em>sin</em>. Matthew restores the plain sense — sickness — and applies it to what Jesus is doing tonight.</span></div>
+  <div class="row"><span class="src">The tension</span><span class="txt">Does this put physical healing <em>inside</em> the atonement, claimable now on the same footing as forgiveness? Or are these healings a down payment on a cross still eighteen chapters away? The second reading holds the timeline better: Isaiah 53 casts its shadow forward over the healing ministry without the transaction having yet landed.</span></div>
+</div>
+
+<h3 class="pericope">Two who would follow <span>· 8:18–22</span></h3>
+
+<p class="v"><span class="n">18</span>And seeing large crowds around him, Jesus gave the order to go off to the other side.</p>
+<span class="gloss">"The other side" is Gentile territory, and it sets up 8:28. Note the trigger: he sees a crowd and leaves. The miracles are not being used to gather a following.</span>
+
+<p class="v"><span class="n">19</span>And one scribe, coming up, said to him, "Teacher, I will <span class="r follow">follow</span> you wherever you go off to."</p>
+<span class="gloss">The address matters. "Teacher" is professional courtesy — the same word Jesus' opponents use later (9:11; 12:38; 22:16) when they mean nothing more than <em>rabbi</em>. Nobody in Matthew who calls him Teacher is confessing anything.</span>
+
+<p class="v"><span class="n">20</span>And Jesus says to him, "The foxes have burrows and the birds of the sky have roosts, but the Son of Man has nowhere to lean his head."</p>
+<div class="compare">
+  <div class="row"><span class="src">Greek (translit.)</span><span class="txt translit">ho huios tou anthrōpou ouk echei pou tēn kephalēn klinē</span></div>
+  <div class="row"><span class="src">Wooden</span><span class="txt">"the Son of Man has nowhere to lean the head"</span></div>
+  <div class="row"><span class="src">Behind it</span><span class="txt"><a href="https://biblehub.com/daniel/7-13.htm">Daniel 7:13–14</a> — one like a son of man approaches the Ancient of Days and receives a dominion that will never pass away; see also the Son of Man of <a href="https://www.earlyjewishwritings.com/1enoch.html">1 Enoch</a></span></div>
+  <div class="row"><span class="src">The paradox</span><span class="txt">The title's first full outing in Matthew puts everlasting dominion and having no bed in the same breath. That refusal to resolve is the point — it is a self-designation that fits no ready-made box, which may be exactly why he chose it.</span></div>
+</div>
+
+<p class="v"><span class="n">21</span>And another of the disciples said to him, "Lord, let me first go off and bury my father."</p>
+
+<p class="v"><span class="n">22</span>But Jesus says to him, "<span class="r follow">Follow</span> me, and <span class="r release">leave</span> the dead to bury their own dead."<sup class="en"><a href="#n8">8</a></sup></p>
+<span class="gloss">The same root that released the fever now means <em>let go of</em>, and it is aimed at the fifth commandment's most solemn application. No rabbinic parallel exists for a saying this severe against filial duty; it was startling in its own world, not only in ours.</span>
+
+<h3 class="pericope">The shaking on the sea <span>· 8:23–27</span></h3>
+
+<p class="v"><span class="n">23</span>And as he stepped into the boat, his disciples <span class="r follow">followed</span> him.</p>
+<span class="gloss">After two men whose following stalled at the threshold, the verb finally lands cleanly on <em>the disciples</em> — and immediately gets tested by weather.</span>
+
+<p class="v"><span class="n">24</span>And look — a great <span class="r shake">shaking</span><sup class="en"><a href="#n9">9</a></sup> happened in the sea, so that the boat was being buried under the waves; but he himself was sleeping.</p>
+<span class="gloss">Sleeping through a storm at sea is <a href="https://biblehub.com/jonah/1-5.htm">Jonah's</a> posture, and Matthew will make the Jonah comparison explicit at 12:40. Meanwhile <a href="https://biblehub.com/psalms/107-28.htm">Psalm 107:28–30</a> is the shape of the whole scene: sailors cry out, the storm is hushed to a whisper, the waves stand still.</span>
+
+<p class="v"><span class="n">25</span>And coming up they <span class="r raise">roused</span> him, saying, "Lord, save — we are being destroyed!"</p>
+
+<p class="v"><span class="n">26</span>And he says to them, "Why are y'all cowards, y'all <span class="r faith">little-faiths</span>?" Then, having been <span class="r raise">raised</span>, he rebuked the winds and the sea, and there was a great stillness.</p>
+<div class="compare">
+  <div class="row"><span class="src">Greek (translit.)</span><span class="txt translit">ti deiloi este, oligopistoi</span></div>
+  <div class="row"><span class="src">Wooden</span><span class="txt">"why are y'all cowardly, y'all little-faiths" — a single compound word, plural, used as a name</span></div>
+  <div class="row"><span class="src">NASB</span><span class="txt">expands the compound into a phrase about men of little faith</span></div>
+  <div class="row"><span class="src">Why keep it ugly</span><span class="txt">Matthew coined <span class="translit">oligopistos</span> as a near-nickname for the disciples — it appears at 6:30, here, then 14:31 and 16:8. Smoothing it into a phrase loses that it functions as a label he keeps re-attaching to the same people.</span></div>
+  <div class="row"><span class="src">"Rebuked"</span><span class="txt">the verb <span class="translit">epitimaō</span> is Matthew's standard exorcism word (17:18). Jesus addresses the storm the way he addresses a demon — placing the sea inside the old combat imagery of <a href="https://biblehub.com/psalms/104-7.htm">Psalm 104:7</a>, <a href="https://biblehub.com/job/38-8.htm">Job 38:8–11</a>, and Genesis 1's unruly deep.</span></div>
+</div>
+
+<p class="v"><span class="n">27</span>And the people marveled, saying, "What sort of being is this, that even the winds and the sea listen under him?"</p>
+<span class="gloss">The question is left hanging for the reader to answer out of the Psalter, where commanding the sea is something exactly one being does.</span>
+
+<h3 class="pericope">The Gadarene demoniacs <span>· 8:28–34</span></h3>
+
+<p class="v"><span class="n">28</span>And when he came to the other side, into the country of the Gadarenes,<sup class="en"><a href="#n10">10</a></sup> two demonized men met him, coming out of the tombs — so dangerous that no one had the strength to pass by along that road.</p>
+<span class="gloss">Gentile Decapolis, confirmed two verses on by a pig herd. Matthew has two demoniacs where Mark and Luke have one — his habit of pairing figures (compare the two blind men at 9:27), possibly to satisfy the two-witness standard of <a href="https://biblehub.com/deuteronomy/19-15.htm">Deuteronomy 19:15</a>.</span>
+
+<p class="v"><span class="n">29</span>And look — they screamed, saying, "What is there between us and you,<sup class="en"><a href="#n11">11</a></sup> Son of God? Did you come here to <span class="r torment">torment</span> us before the appointed time?"</p>
+<div class="compare">
+  <div class="row"><span class="src">Greek (translit.)</span><span class="txt translit">ti hēmin kai soi, huie tou theou; ēlthes hōde pro kairou basanisai hēmas;</span></div>
+  <div class="row"><span class="src">Wooden</span><span class="txt">"what to us and to you, Son of God? Did you come here before the season to torment us?"</span></div>
+  <div class="row"><span class="src">Who says it</span><span class="txt">The demons name him <em>Son of God</em> — a title no human character in this unit has managed. The disciples got as far as "what sort of being is this?" (8:27) two verses earlier. The demons already know, and it terrifies them.</span></div>
+  <div class="row"><span class="src"><span class="translit">pro kairou</span></span><span class="txt">"before the appointed season" — the demons are working from an eschatological timetable and are startled to find judgment arriving early. Another data point for the inaugurated-but-unfinished tension running through this whole unit.</span></div>
+  <div class="row"><span class="src">The inclusio</span><span class="txt"><span class="translit">basanizō</span> opened the unit with a human being tormented by illness (8:6) and closes it with the tormentors dreading torment. The word runs the chapter's whole arc in reverse.</span></div>
+</div>
+
+<p class="v"><span class="n">30</span>Now far off from them there was a herd of many pigs, grazing.</p>
+
+<p class="v"><span class="n">31</span>And the demons kept <span class="r urge">urging</span> him, saying, "If you <span class="r throw">throw</span> us out, send us off into the herd of pigs."</p>
+<span class="gloss">Motive unstated: spite, or dread of the waterless places, or simply that demons hate homelessness — a horror Matthew spells out at 12:43–45.</span>
+
+<p class="v"><span class="n">32</span>And he said to them, "Go." And coming out, they went off into the pigs. And look — the whole herd rushed down the cliff into the sea and died in the waters.</p>
+<span class="gloss">One word. The same sea that was burying the disciples eight verses ago now closes over the unclean instead.</span>
+
+<p class="v"><span class="n">33</span>And the herdsmen fled, and going off into the city they reported everything, including the business of the demonized men.</p>
+
+<p class="v"><span class="n">34</span>And look — the whole city came out to meet Jesus, and seeing him they <span class="r urge">urged</span> him to move on away from their borders.<sup class="en"><a href="#n12">12</a></sup></p>
+<span class="gloss">The same verb the demons used three verses earlier. The demons and the townspeople end up making structurally the same request — one out of dread, the other out of ledgers — and both want him gone. This is the first flat rejection of the Messiah anywhere in the narrative, and Matthew lets the thread run unbroken to Golgotha.</span>
+
+</div>
+
+<div class="notes">
+  <h2>Notes</h2>
+  <ol>
+    <li id="n1"><strong>leprous (8:2).</strong> Hebrew <span class="translit">tsara'at</span> ("scale disease") in <a href="https://biblehub.com/leviticus/13-1.htm">Leviticus 13–14</a> covers a family of skin conditions, not modern Hansen's disease specifically. The exclusion was social and cultic as much as medical: outside the camp, outside worship, outside touch. Rabbinic tradition treated healing it as comparable to raising the dead, and a strand of interpretation reading <a href="https://biblehub.com/isaiah/53-4.htm">Isaiah 53:4</a> even pictured the Messiah himself as one so afflicted — which makes Matthew's citation of that exact verse fifteen lines later worth pausing over.</li>
+    <li id="n2"><strong>kept bowing low (8:2).</strong> <span class="translit">prosekynei</span>, imperfect of <a href="https://logeion.uchicago.edu/προσκυνέω">proskyneō</a> — the verb used of the magi (2:2, 11) and of worship generally, but also of ordinary obeisance to a superior. Matthew declines to disambiguate and leaves the reader to draw the conclusion.</li>
+    <li id="n3"><strong>as evidence for them (8:4).</strong> <span class="translit">eis martyrion autois</span> — the dative can mean "for" or "against." Chrysostom took the second: the healed man's Levitical offering functions as an accusation of the leaders' unbelief, since he became a witness to them precisely by trusting what they would not.</li>
+    <li id="n4"><strong>boy (8:6).</strong> <span class="translit">pais</span> sits between "servant," "slave," and "son/boy"; Luke's parallel (<a href="https://biblehub.com/luke/7-2.htm">Luke 7:2</a>) uses the unambiguous word for slave. "Boy" keeps the English as undecided as the Greek and preserves the evident affection.</li>
+    <li id="n5"><strong>not big enough (8:8).</strong> <span class="translit">hikanos</span> means "sufficient, up to the size of the thing" — a measuring word, not a moral one. "Worthy" (most versions) imports a guilt register the Greek does not have; the centurion is saying his house does not measure up, not that he is wicked.</li>
+    <li id="n6"><strong>risings and settings (8:11).</strong> <span class="translit">apo anatolōn kai dysmōn</span>, literally "from risings and settings" — sunrise and sunset as compass points. <span class="translit">anatolē</span> is the same word used of the magi "from the rising" in 2:1 and of the star's rising in 2:2, and it carries the Greek Old Testament's freight for Hebrew <span class="translit">tsemach</span>, "Branch" (Zechariah 3:8; 6:12). The Gentiles arriving at the banquet come in on the same word the Gentile magi came in on.</li>
+    <li id="n7"><strong>weeping and grinding of teeth (8:12).</strong> The formula appears six times in Matthew and nowhere else in the Gospels except once in Luke (8:12; 13:42, 50; 22:13; 24:51; 25:30). Note the definite articles — <em>the</em> weeping, <em>the</em> grinding — as though pointing at something already known rather than describing it fresh.</li>
+    <li id="n8"><strong>let the dead bury their own dead (8:22).</strong> Two readings compete. If the father has just died, burial was same-day, and the man would not be standing here talking — which argues for the second reading: he is asking to defer indefinitely, staying home until his father eventually dies. That makes Jesus' answer harder, not easier, since the request was reasonable by every standard of the culture.</li>
+    <li id="n9"><strong>shaking (8:24).</strong> <span class="translit">seismos</span> normally means earthquake; Matthew uses it of the sea here and of the ground at the crucifixion (27:54) and the tomb (28:2). The Sea of Galilee sits some six hundred feet below sea level with high ground east of it, and the resulting downdrafts make sudden violent squalls a standing feature of the lake.</li>
+    <li id="n10"><strong>Gadarenes (8:28).</strong> The manuscripts split three ways — Gadarenes, Gerasenes, Gergesenes — as later copyists tried to fit the geography, since Gerasa sits some thirty miles inland. Patristic writers were already noting that Gadara and Gergesa lie near enough that residents of the wider region could be described either way.</li>
+    <li id="n11"><strong>what is there between us and you (8:29).</strong> <span class="translit">ti hēmin kai soi</span> renders a Hebrew idiom of hostile disengagement — <em>what have we to do with each other</em> — used at <a href="https://biblehub.com/2_samuel/16-10.htm">2 Samuel 16:10</a> and <a href="https://biblehub.com/1_kings/17-18.htm">1 Kings 17:18</a>, and heard again from Jesus' own lips at John 2:4. It is a demand to be left alone.</li>
+    <li id="n12"><strong>urged him to leave (8:34).</strong> Chrysostom's reading of the whole episode is that Jesus permitted the pigs precisely so that a region which did not know him would learn his power — and that its inhabitants proved senseless, since what should have produced worship produced eviction. See <a href="https://www.newadvent.org/fathers/200128.htm">Homily 28 on Matthew</a>.</li>
+  </ol>
+</div>
+
+<footer>Translation rendered from the SBLGNT Greek of Matthew 8:1–34 · Unit 8 of the Matthew study · wooden to the Greek by design</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matthew 1:1–25 — Integrated Study Translation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5efe2;
+    --panel:#fbf7ee;
+    --ink:#2a2520;
+    --ink-soft:#5c5347;
+    --rule:#d8cdb6;
+    --rule-soft:#e7dec9;
+    /* recurring Greek-root colors — stable across units */
+    --c-beget:#a8324a;   /* γένεσις / γεννάω  — genesis / beget */
+    --c-name:#1c7d70;    /* καλέω / ὄνομα     — call / name */
+    --c-save:#c0641a;    /* σῴζω / Ἰησοῦς    — save / Jesus(=YHWH-saves) */
+    --c-spirit:#4a4f93;  /* πνεῦμα ἅγιον      — Holy Spirit */
+    --c-dream:#2f6db3;   /* ὄναρ / ἄγγελος κυρίου — dream / angel of the Lord */
+    --c-with:#8a3c70;    /* μετά / Ἐμμανουήλ  — with(-us) */
+    --c-david:#8a6a2a;   /* Δαυίδ / βασιλεύς  — David / king */
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 20% 0%, #faf5ea 0%, transparent 55%),
+      radial-gradient(circle at 100% 100%, #efe6d2 0%, transparent 50%),
+      var(--bg);
+    color:var(--ink);
+    font-family:"EB Garamond", Georgia, serif;
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:780px;margin:0 auto;padding:56px 26px 120px;}
+
+  /* ---- masthead ---- */
+  header.mast{text-align:center;border-bottom:2px solid var(--ink);padding-bottom:26px;margin-bottom:8px;}
+  .mast .kicker{font-family:"EB Garamond",serif;letter-spacing:.32em;text-transform:uppercase;font-size:12.5px;color:var(--ink-soft);}
+  .mast h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:43px;line-height:1.04;margin:.18em 0 .12em;letter-spacing:.01em;}
+  .mast .greek-title{font-size:21px;color:var(--c-beget);font-style:italic;margin-bottom:.2em;}
+  .mast .unit{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--ink-soft);font-style:italic;}
+
+  /* ---- legend ---- */
+  .legend{background:var(--panel);border:1px solid var(--rule);border-radius:7px;padding:16px 20px;margin:30px 0 36px;}
+  .legend h2{font-family:"Cormorant Garamond",serif;font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 12px;}
+  .legend ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:5px 26px;}
+  .legend li{font-size:15.5px;line-height:1.4;}
+  .swatch{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px;vertical-align:baseline;}
+  .legend .gk{font-style:italic;}
+  @media(max-width:560px){.legend ul{grid-template-columns:1fr;}}
+
+  /* root spans */
+  .r{font-weight:600;}
+  .beget{color:var(--c-beget);}
+  .name{color:var(--c-name);}
+  .save{color:var(--c-save);}
+  .spirit{color:var(--c-spirit);}
+  .dream{color:var(--c-dream);}
+  .with{color:var(--c-with);}
+  .david{color:var(--c-david);}
+  .tr{font-style:italic;font-size:.92em;}
+
+  /* ---- structure map ---- */
+  .structure{margin:34px 0 40px;border:1px solid var(--rule);border-radius:7px;background:var(--panel);padding:24px 24px 26px;}
+  .structure h2{font-family:"Cormorant Garamond",serif;font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 4px;text-align:center;}
+  .structure p.cap{text-align:center;font-style:italic;color:var(--ink-soft);font-size:15px;margin:0 0 20px;}
+  .frame{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;font-family:"Cormorant Garamond",serif;font-size:20px;margin-bottom:6px;}
+  .frame .node{padding:3px 10px;border-radius:5px;background:#fff;border:1px solid var(--rule);}
+  .frame .arrow{color:var(--ink-soft);}
+  .frame .j{color:var(--c-save);font-weight:600;}
+  .frame .d{color:var(--c-david);font-weight:600;}
+  .frame .a{color:var(--ink);font-weight:600;}
+  .mirror{text-align:center;color:var(--ink-soft);font-size:14px;font-style:italic;margin:2px 0 22px;}
+  .triads{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--rule-soft);}
+  .triad{display:flex;align-items:center;justify-content:space-between;padding:11px 4px;border-bottom:1px solid var(--rule-soft);gap:12px;}
+  .triad .span{font-family:"Cormorant Garamond",serif;font-size:18px;}
+  .triad .cnt{font-size:14px;color:var(--ink-soft);font-style:italic;white-space:nowrap;}
+  .triad .pivot{color:var(--c-david);font-weight:600;}
+  .triad .exile{color:var(--c-beget);font-weight:600;}
+  .gem{text-align:center;font-size:14.5px;color:var(--ink-soft);margin-top:16px;font-style:italic;line-height:1.5;}
+  .gem b{color:var(--c-david);font-style:normal;}
+
+  /* ---- verses ---- */
+  .verses{margin-top:14px;}
+  .v{margin:0 0 16px;padding-left:42px;position:relative;}
+  .v .n{position:absolute;left:0;top:1px;font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--c-beget);font-weight:600;width:34px;text-align:right;}
+  .v .txt{font-size:19.5px;}
+  .gloss{font-style:italic;color:var(--ink-soft);font-size:15.5px;line-height:1.5;margin-top:5px;padding-left:2px;border-left:2px solid var(--rule);padding-left:12px;}
+  sup.en{font-size:.62em;color:var(--c-dream);font-weight:600;vertical-align:super;cursor:pointer;}
+  sup.en a{color:var(--c-dream);text-decoration:none;}
+  sup.en a:hover{text-decoration:underline;}
+
+  .sectionhead{font-family:"Cormorant Garamond",serif;text-align:center;font-size:22px;color:var(--ink);margin:40px 0 24px;font-style:italic;}
+  .sectionhead::before,.sectionhead::after{content:"";display:inline-block;width:46px;height:1px;background:var(--rule);vertical-align:middle;margin:0 14px;}
+
+  /* comparison boxes */
+  .compare{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--c-with);border-radius:5px;padding:13px 17px;margin:12px 0 18px 42px;font-size:15.5px;}
+  .compare .row{margin:4px 0;}
+  .compare .lab{font-variant:small-caps;letter-spacing:.05em;font-weight:600;color:var(--ink-soft);font-size:13.5px;margin-right:7px;}
+  a.lex{color:inherit;text-decoration:none;border-bottom:1px dotted var(--rule);}
+  a.lex:hover{border-bottom-color:var(--ink-soft);}
+
+  /* endnotes */
+  .endnotes{margin-top:54px;border-top:2px solid var(--ink);padding-top:22px;}
+  .endnotes h2{font-family:"Cormorant Garamond",serif;font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 18px;}
+  .endnotes ol{padding-left:22px;margin:0;}
+  .endnotes li{font-size:16px;line-height:1.56;margin-bottom:14px;color:#3a342c;}
+  .endnotes li .gk{font-style:italic;}
+  .endnotes a{color:var(--c-dream);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .endnotes a:hover{border-bottom-color:var(--c-dream);}
+  .foot{margin-top:40px;text-align:center;font-size:13px;color:var(--ink-soft);font-style:italic;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="kicker">The Gospel According to Matthew · Study Translation</div>
+    <h1>The Book of the Genesis</h1>
+    <div class="greek-title">Βίβλος γενέσεως — <span style="font-style:normal;font-size:.8em;color:var(--ink-soft)">biblos geneseōs</span></div>
+    <div class="unit">Unit 1 · Matthew 1:1–25 · the genealogy &amp; the naming of Jesus</div>
+  </header>
+
+  <section class="legend" aria-label="color key">
+    <h2>Recurring Greek roots — color key</h2>
+    <ul>
+      <li><span class="swatch" style="background:var(--c-beget)"></span><span class="gk">γένεσις / γεννάω</span> — genesis / beget</li>
+      <li><span class="swatch" style="background:var(--c-name)"></span><span class="gk">καλέω / ὄνομα</span> — call / name</li>
+      <li><span class="swatch" style="background:var(--c-save)"></span><span class="gk">σῴζω / Ἰησοῦς</span> — save / Jesus</li>
+      <li><span class="swatch" style="background:var(--c-spirit)"></span><span class="gk">πνεῦμα ἅγιον</span> — Holy Spirit</li>
+      <li><span class="swatch" style="background:var(--c-dream)"></span><span class="gk">ὄναρ / ἄγγελος κυρίου</span> — dream / angel of the Lord</li>
+      <li><span class="swatch" style="background:var(--c-with)"></span><span class="gk">μετά / Ἐμμανουήλ</span> — with(-us)</li>
+      <li><span class="swatch" style="background:var(--c-david)"></span><span class="gk">Δαυίδ / βασιλεύς</span> — David / king</li>
+    </ul>
+  </section>
+
+  <section class="structure">
+    <h2>The Architecture of the Genealogy</h2>
+    <p class="cap">A frame that runs the line backward, then forward — Jesus is both the goal and the new beginning</p>
+    <div class="frame">
+      <span class="node">v. 1</span>
+      <span class="node j">Jesus</span><span class="arrow">→</span>
+      <span class="node d">David</span><span class="arrow">→</span>
+      <span class="node a">Abraham</span>
+    </div>
+    <div class="frame">
+      <span class="node">vv. 2–16</span>
+      <span class="node a">Abraham</span><span class="arrow">→</span>
+      <span class="node d">David</span><span class="arrow">→</span>
+      <span class="node j">Jesus</span>
+    </div>
+    <div class="mirror">the names that open v. 1 in reverse become the pillars of the list — A · D · J mirrored as J · D · A</div>
+
+    <div class="triads">
+      <div class="triad"><span class="span">Abraham → <span class="pivot">David the king</span></span><span class="cnt">14 generations · ascent · Abrahamic covenant</span></div>
+      <div class="triad"><span class="span"><span class="pivot">David</span> → the <span class="exile">deportation to Babylon</span></span><span class="cnt">14 generations · descent · the monarchy falls</span></div>
+      <div class="triad"><span class="span">the <span class="exile">deportation</span> → the Anointed</span><span class="cnt">14 generations · restoration · Messiah</span></div>
+    </div>
+    <p class="gem">Three sets of fourteen, with <b>David</b> as the numerical signature: in Hebrew דוד (D-V-D) = 4 + 6 + 4 = <b>14</b>.<br>Forty-two generations = six sevens; Jesus opens the seventh seven, the sabbath-fullness.</p>
+  </section>
+
+  <div class="sectionhead">The Genealogy &nbsp;·&nbsp; 1:1–17</div>
+
+  <div class="verses">
+
+    <div class="v"><span class="n">1</span><span class="txt"><span class="r beget">Book of the genesis</span> <span class="tr">(<span class="gk">βίβλος γενέσεως</span>, biblos geneseōs)</span> of <span class="r save">Jesus</span> <span class="david">Anointed</span>,<sup class="en"><a href="#n2">2</a></sup> son of <span class="r david">David</span>, son of Abraham.<sup class="en"><a href="#n1">1</a></sup></span>
+      <div class="gloss">The opening phrase is verbatim the Septuagint heading of <a class="lex" href="https://biblehub.com/genesis/2-4.htm" target="_blank">Genesis 2:4</a> and 5:1 — "book of the genesis of heaven and earth / of humankind." A new beginning is being announced. <span class="gk">David</span> is named before Abraham: the royal claim comes first.<sup class="en"><a href="#n3">3</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">2</span><span class="txt">Abraham <span class="r beget">begot</span> Isaac, and Isaac <span class="r beget">begot</span> Jacob, and Jacob <span class="r beget">begot</span> Judah and his brothers,</span>
+      <div class="gloss"><span class="gk">ἐγέννησεν</span> (egennēsen) — the same begetting verb as the Genesis genealogies. "And his brothers" gestures at the twelve tribes; Judah alone carries the scepter (Gen 49:10).</div>
+    </div>
+
+    <div class="v"><span class="n">3</span><span class="txt">and Judah <span class="r beget">begot</span> Perez and Zerah <em>from Tamar</em>, and Perez <span class="r beget">begot</span> Hezron, and Hezron <span class="r beget">begot</span> Aram,</span>
+      <div class="gloss">First rupture of the male rhythm: <span class="gk">ἐκ τῆς Θαμάρ</span> — the Canaanite who, judged "more righteous" than Judah, secured the line (Gen 38).<sup class="en"><a href="#n4">4</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">4</span><span class="txt">and Aram <span class="r beget">begot</span> Amminadab, and Amminadab <span class="r beget">begot</span> Nahshon, and Nahshon <span class="r beget">begot</span> Salmon,</span></div>
+
+    <div class="v"><span class="n">5</span><span class="txt">and Salmon <span class="r beget">begot</span> Boaz <em>from Rahab</em>, and Boaz <span class="r beget">begot</span> Obed <em>from Ruth</em>, and Obed <span class="r beget">begot</span> Jesse,</span>
+      <div class="gloss">Two more foreign women in one breath — Rahab the Canaanite of Jericho, Ruth the Moabite. Matthew is partly working from the genealogy that closes the book of Ruth (Ruth 4:18–22).</div>
+    </div>
+
+    <div class="v"><span class="n">6</span><span class="txt">and Jesse <span class="r beget">begot</span> <span class="r david">David the king</span>. And <span class="r david">David</span> <span class="r beget">begot</span> Solomon <em>from the [wife] of Uriah</em>,</span>
+      <div class="gloss">The summit of the line, and Matthew will not let it be clean: not "Bathsheba" but <span class="gk">τῆς τοῦ Οὐρίου</span>, "the [woman] of Uriah" — the murdered Hittite's name kept in the ear, David's sin unhidden at the throne.<sup class="en"><a href="#n5">5</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">7</span><span class="txt">and Solomon <span class="r beget">begot</span> Rehoboam, and Rehoboam <span class="r beget">begot</span> Abijah, and Abijah <span class="r beget">begot</span> <strong>Asaph</strong>,</span>
+      <div class="gloss">The best-attested text reads <span class="gk">Ἀσάφ</span> (Asaph, the psalmist) where the king's name should be Asa.<sup class="en"><a href="#n6">6</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">8</span><span class="txt">and <strong>Asaph</strong> <span class="r beget">begot</span> Jehoshaphat, and Jehoshaphat <span class="r beget">begot</span> Joram, and Joram <span class="r beget">begot</span> Uzziah,</span>
+      <div class="gloss">Three kings are silently omitted between Joram and Uzziah (Ahaziah, Joash, Amaziah) — the count of fourteen is built, not transcribed.</div>
+    </div>
+
+    <div class="v"><span class="n">9</span><span class="txt">and Uzziah <span class="r beget">begot</span> Jotham, and Jotham <span class="r beget">begot</span> Ahaz, and Ahaz <span class="r beget">begot</span> Hezekiah,</span></div>
+
+    <div class="v"><span class="n">10</span><span class="txt">and Hezekiah <span class="r beget">begot</span> Manasseh, and Manasseh <span class="r beget">begot</span> <strong>Amos</strong>, and <strong>Amos</strong> <span class="r beget">begot</span> Josiah,</span>
+      <div class="gloss">Again the surprising form: <span class="gk">Ἀμώς</span> (Amos, the prophet) for the king Amon — worship and prophecy folded into the royal names.<sup class="en"><a href="#n6">6</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">11</span><span class="txt">and Josiah <span class="r beget">begot</span> Jeconiah and his brothers, <em>at the <span class="r beget" style="color:var(--c-beget)">deportation</span> of Babylon</em>.</span>
+      <div class="gloss"><span class="gk">μετοικεσία</span> (metoikesia), "deportation," tolls three times across vv. 11–12, 17. "And his brothers" echoes Judah "and his brothers" (v. 2): the monarchy framed between brotherhood at its dawn and at its eclipse.<sup class="en"><a href="#n7">7</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">12</span><span class="txt">And after the deportation of Babylon, Jeconiah <span class="r beget">begot</span> Shealtiel, and Shealtiel <span class="r beget">begot</span> Zerubbabel,</span></div>
+    <div class="v"><span class="n">13</span><span class="txt">and Zerubbabel <span class="r beget">begot</span> Abiud, and Abiud <span class="r beget">begot</span> Eliakim, and Eliakim <span class="r beget">begot</span> Azor,</span></div>
+    <div class="v"><span class="n">14</span><span class="txt">and Azor <span class="r beget">begot</span> Zadok, and Zadok <span class="r beget">begot</span> Achim, and Achim <span class="r beget">begot</span> Eliud,</span></div>
+    <div class="v"><span class="n">15</span><span class="txt">and Eliud <span class="r beget">begot</span> Eleazar, and Eleazar <span class="r beget">begot</span> Matthan, and Matthan <span class="r beget">begot</span> Jacob,</span>
+      <div class="gloss">Jacob begetting a Joseph — the patriarchal pairing of Genesis, quietly cueing Joseph the dreamer who is about to appear.</div>
+    </div>
+
+    <div class="v"><span class="n">16</span><span class="txt">and Jacob <span class="r beget">begot</span> Joseph the husband of Mary, <strong>from whom <span class="r beget">was begotten</span></strong> <span class="r save">Jesus</span>, the one <span class="r name">called</span> Anointed.</span>
+      <div class="gloss">The hinge of the chapter. After 39 active "X begot Y" clauses, the verb flips to the passive <span class="gk">ἐγεννήθη</span> ("was begotten") and the relative pronoun <span class="gk">ἐξ ἧς</span> is feminine singular — "from <em>her</em>," Mary alone. The chain of fathers breaks; a divine agent stands behind the passive.<sup class="en"><a href="#n8">8</a></sup></div>
+      <div class="compare">
+        <div class="row"><span class="lab">NASB</span> "…Joseph the husband of Mary, by whom Jesus was born, who is called the Messiah."</div>
+        <div class="row"><span class="lab">note</span> "by whom Jesus was born" loses the passive's force; the wooden "from whom was begotten" preserves the deliberate seam.</div>
+      </div>
+    </div>
+
+    <div class="v"><span class="n">17</span><span class="txt">So all the <span class="r beget">generations</span> from Abraham until <span class="r david">David</span> [are] fourteen <span class="r beget">generations</span>, and from <span class="r david">David</span> until the deportation of Babylon fourteen <span class="r beget">generations</span>, and from the deportation of Babylon until the Anointed fourteen <span class="r beget">generations</span>.</span>
+      <div class="gloss">Matthew tells you he has counted — the flag that the number is symbolic. Fourteen = the numerical value of David's name; see the architecture panel above.<sup class="en"><a href="#n9">9</a></sup></div>
+    </div>
+
+  </div>
+
+  <div class="sectionhead">The Naming of Jesus &nbsp;·&nbsp; 1:18–25</div>
+
+  <div class="verses">
+
+    <div class="v"><span class="n">18</span><span class="txt">Now of <span class="r save">Jesus</span> Anointed the <span class="r beget">genesis</span> was thus. His mother Mary having been betrothed to Joseph, before they came together she was found having [a child] in [the] womb <em>from</em> <span class="r spirit">[the] Holy Spirit</span>.</span>
+      <div class="gloss"><span class="gk">γένεσις</span> returns from v. 1, binding the two halves of the chapter into one "genesis." Betrothal (<span class="gk">μνηστευθείσης</span>) was already a binding bond, dissolved only by divorce. Matthew tells the reader the cause before any character knows it.<sup class="en"><a href="#n10">10</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">19</span><span class="txt">And Joseph her husband, being <strong>righteous</strong> and not willing to <em>expose</em> her, resolved to release her secretly.</span>
+      <div class="gloss"><span class="gk">δίκαιος</span> (dikaios) — is he righteous <em>yet</em> merciful, or righteous <em>in</em> being merciful? The verb <span class="gk">δειγματίσαι</span> is "to make a public example of." Joseph already embodies the surpassing righteousness of 5:20.<sup class="en"><a href="#n11">11</a></sup></div>
+      <div class="compare">
+        <div class="row"><span class="lab">NASB</span> "being a righteous man and not wanting to disgrace her, planned to send her away secretly."</div>
+      </div>
+    </div>
+
+    <div class="v"><span class="n">20</span><span class="txt">But as he was pondering these things — behold, an <span class="r dream">angel of [the] Lord</span> appeared to him <span class="r dream">in a dream</span>, saying: Joseph, son of <span class="r david">David</span>, do not fear to take alongside Mary your wife, for the [thing] <span class="r beget">begotten</span> in her is <em>from</em> <span class="r spirit">[the] Holy Spirit</span>;</span>
+      <div class="gloss"><span class="gk">ἄγγελος κυρίου</span> = the LXX's <em>mal'akh YHWH</em>, the figure at Israel's hinges (Hagar, Moriah, the bush). <span class="gk">κατ' ὄναρ</span>, the first of five dreams in the prologue — Joseph the dreamer reborn. He alone besides Jesus is called "son of David."<sup class="en"><a href="#n8">8</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">21</span><span class="txt">and she will bear a son, and you shall <span class="r name">call</span> his <span class="r name">name</span> <span class="r save">Jesus</span>, for <strong>he himself will <span class="r save">save</span></strong> his people from their sins.</span>
+      <div class="gloss">The pun lives only in the Hebrew: <span class="gk">Ἰησοῦς</span> = Yēšûaʿ, "YHWH <span class="r save">saves</span>" — so "<span class="r save">save</span>" (<span class="gk">σώσει</span>) glosses the very name. The line all but quotes <a class="lex" href="https://biblehub.com/psalms/130-8.htm" target="_blank">Psalm 130:8</a> LXX: "he himself will redeem Israel from all its iniquities."<sup class="en"><a href="#n12">12</a></sup></div>
+    </div>
+
+    <div class="v"><span class="n">22</span><span class="txt">Now this whole [thing] has happened so that what was spoken <em>by [the] Lord through the prophet</em> might be <span class="r beget" style="color:#7a4b1e">filled full</span>, saying:</span>
+      <div class="gloss">The first formula quotation. The Lord is the speaker, the prophet the channel. <span class="gk">πληρόω</span>, "fill full" — for Matthew, fulfillment is a story brought to its fullness, not a prediction merely ticked off.</div>
+    </div>
+
+    <div class="v"><span class="n">23</span><span class="txt">"Behold, <strong>the virgin</strong> will have [a child] in [the] womb and will bear a son, and they will <span class="r name">call</span> his <span class="r name">name</span> <span class="r with">Emmanuel</span>" — which is, being translated, "<span class="r with">With us [is] God</span>."</span>
+      <div class="gloss">Isaiah 7:14. Matthew quotes the Greek <span class="gk">παρθένος</span> (parthenos) where the Hebrew has <em>almah</em>, "young woman." He stops to translate the name, because <span class="gk">μεθ' ἡμῶν ὁ θεός</span> is the gospel's thesis — and its frame: it returns at 18:20 and closes the book at 28:20, "I am <span class="r with">with</span> y'all always."<sup class="en"><a href="#n13">13</a></sup></div>
+      <div class="compare">
+        <div class="row"><span class="lab">NASB</span> "Behold, the virgin shall be with child and shall bear a son, and they shall call his name Immanuel."</div>
+        <div class="row"><span class="lab">Hart</span> leaves "Emmanuel" untranslated in the line and lets Matthew's own gloss "God is with us" carry it — keeping the name, and its meaning, as the point.</div>
+        <div class="row"><span class="lab">Heb / LXX</span> <em>almah</em> (young woman) → <span class="gk">παρθένος</span> (virgin): the choice was the Septuagint's, two centuries pre-Christian. <a class="lex" href="https://ccat.sas.upenn.edu/nets/edition/23-isaiah-nets.pdf" target="_blank">NETS Isaiah</a>.</div>
+      </div>
+    </div>
+
+    <div class="v"><span class="n">24</span><span class="txt">And Joseph, having been raised from sleep, did as the <span class="r dream">angel of [the] Lord</span> ordered him, and took alongside his wife,</span>
+      <div class="gloss">No recorded word — the silent, obedient man who "hears and does," the very thing Jesus will praise at the Sermon's close (7:24). <span class="gk">παρέλαβεν</span> ("took alongside") will recur through the Egypt journeys.</div>
+    </div>
+
+    <div class="v"><span class="n">25</span><span class="txt">and he was not <em>knowing</em> her until she bore a son; and he <span class="r name">called</span> his <span class="r name">name</span> <span class="r save">Jesus</span>.</span>
+      <div class="gloss"><span class="gk">ἐγίνωσκεν</span>, the biblical idiom for marital relations (Gen 4:1). "Until" (<span class="gk">ἕως οὗ</span>) marks the time up to the birth without settling what follows — Matthew's concern is only that Joseph had no part in the conception. The chapter ends as it aimed: the legal father names the child, and so Jesus is son of David.<sup class="en"><a href="#n14">14</a></sup></div>
+    </div>
+
+  </div>
+
+  <!-- ENDNOTES -->
+  <section class="endnotes">
+    <h2>Endnotes</h2>
+    <ol>
+      <li id="n1"><strong>1:1 — <span class="gk">βίβλος γενέσεως</span>.</strong> The phrase is not the ordinary way to head a genealogy; it is the LXX wording of <a href="https://biblehub.com/genesis/2-4.htm" target="_blank">Gen 2:4</a> and 5:1 (Hebrew <em>sefer toledot</em>). Davies &amp; Allison read it as deliberately multivalent — heading the genealogy, the birth account, and arguably the whole book: "the book of the new genesis wrought by Jesus." France: the effect on a Jewish ear is like John's "in the beginning." So Matthew opens by reaching behind David and Abraham to creation itself. Greek lexical entry: <a href="https://logeion.uchicago.edu/γένεσις" target="_blank">γένεσις on Logeion</a>.</li>
+
+      <li id="n2"><strong>1:1 — <span class="gk">χριστός</span> as title.</strong> Here still "the Anointed One" (Hebrew <em>māšîaḥ</em>), a royal title, not yet a surname. By 1:18 Matthew already uses it almost as a name. Hart's translation deliberately renders it "the Anointed" throughout to keep the title audible; worth doing in the ear at 1:1.</li>
+
+      <li id="n3"><strong>1:1 — David before Abraham.</strong> The non-chronological order is purposeful: "son of David" (the royal-messianic title that recurs on the lips of the blind, the Canaanite woman, and the crowds) is fronted as Matthew's most urgent claim; "son of Abraham" reaches behind it to <a href="https://biblehub.com/genesis/22-18.htm" target="_blank">Gen 22:18</a> — "in your seed all the nations will be blessed" — opening the Gentile horizon the women and 28:19 will fill.</li>
+
+      <li id="n4"><strong>1:3–6 — the four women.</strong> Tamar, Rahab, Ruth, "the wife of Uriah" — not the matriarchs one expects. Three readings, best held together: (a) all are Gentiles or reckoned so — the Messiah's line runs through the nations (so Luz; cf. <a href="https://www.earlyjewishwritings.com/psalmsofsolomon.html" target="_blank">Ps. Sol. 17</a>, which wanted Gentiles <em>purged</em>); (b) all are touched by sexual irregularity — so Mary's apparent scandal stands in a long line of God working through it; (c) all took bold initiative at the margins. Each converges on Mary, the climactic fifth.</li>
+
+      <li id="n5"><strong>1:6 — "the [wife] of Uriah."</strong> Matthew withholds "Bathsheba" and names the murdered Hittite husband instead, keeping David's adultery and judicial murder in view at the very summit he has just twice crowned "the king." Grace, not sanitization, is the genealogy's logic.</li>
+
+      <li id="n6"><strong>1:7–8, 10 — <span class="gk">Ἀσάφ</span> / <span class="gk">Ἀμώς</span>.</strong> The strongest text reads the names of the psalmist Asaph and the prophet Amos where the kings Asa and Amon belong. Possibly orthographic; possibly a deliberate (or traditional) folding of psalmody and prophecy into the royal line. Davies &amp; Allison treat it as a genuine reading rather than scribal error. The apparatus also marks ordinary spelling variants (Βόες/Βοός, Ἰωβήδ).</li>
+
+      <li id="n7"><strong>1:11–12 — <span class="gk">μετοικεσία</span> and the Jeconiah question.</strong> "Deportation" tolls three times; the exile is the genealogy's fulcrum. A dispensational tradition (cf. Constable) argues Jesus had to bypass Joseph's line because of the curse on Jeconiah (<a href="https://biblehub.com/jeremiah/22-30.htm" target="_blank">Jer 22:30</a>). But Matthew routes the legal line <em>straight through</em> Jeconiah: the point is not escape but that Messiah comes <em>through</em> Israel's catastrophe and judgment — the true return from exile in person (so France, Wright).</li>
+
+      <li id="n8"><strong>1:16, 20 — the broken chain &amp; Joseph the dreamer.</strong> The active <span class="gk">ἐγέννησεν</span> gives way to passive <span class="gk">ἐγεννήθη</span>; <span class="gk">ἐξ ἧς</span> is feminine — Mary alone. Joseph, son of a Jacob (v. 16), receives revelation <span class="gk">κατ' ὄναρ</span> (the first of five prologue dreams), descends to Egypt, and is marked by chastity — a deliberate rhyme with the patriarch Joseph of Genesis.</li>
+
+      <li id="n9"><strong>1:17 — fourteen / gematria.</strong> דוד (D-V-D) = 4+6+4 = 14; David is the 14th and central name, his name stamped numerically over the whole. A possible second layer: 6×7 generations, Jesus inaugurating the seventh seven (cf. the Apocalypse of Weeks, <a href="https://www.earlyjewishwritings.com/1enoch.html" target="_blank">1 Enoch 93</a>). The omitted kings confirm the structure is composed, not transcribed.</li>
+
+      <li id="n10"><strong>1:18 — <span class="gk">γένεσις</span> again.</strong> The harder reading <span class="gk">γένεσις</span> (vs. the "easier" <span class="gk">γέννησις</span>, "birth") is original and is what binds 1:18 back to 1:1 — one continuous "genesis." Copyists who changed it were flattening the link.</li>
+
+      <li id="n11"><strong>1:19 — <span class="gk">δίκαιος</span>.</strong> Two construals: righteous <em>and yet</em> unwilling to shame her (mercy tempering law), or righteous <em>precisely in</em> refusing the public exposure the law permitted. The latter increasingly favored and fits Matthew, where righteousness "exceeds that of the scribes and Pharisees" (5:20) by bending toward mercy. <span class="gk">δειγματίσαι</span> = expose to public disgrace.</li>
+
+      <li id="n12"><strong>1:21 — Jesus / <span class="gk">σώσει</span> / Psalm 130.</strong> <span class="gk">Ἰησοῦς</span> = Hebrew <em>Yēšûaʿ / Yəhôšuaʿ</em>, "YHWH saves"; "for he will <em>save</em>" glosses the name. The whole clause echoes <a href="https://biblehub.com/psalms/130-8.htm" target="_blank">Ps 130:8</a> (129:8 LXX). Against the Second Temple end-of-exile hope, "save his people from their sins" relocates messianic deliverance from political liberation to forgiveness — fulfilled at the cup "poured out for many for the forgiveness of sins" (26:28). "His people" will widen to "all the nations" (28:19).</li>
+
+      <li id="n13"><strong>1:23 — Isaiah 7:14 &amp; Emmanuel.</strong> Original setting: a sign to Ahaz, c. 734 BC (Isa 7). Hebrew <em>almah</em> = young woman (not specifically <em>betulah</em>, virgin); the LXX rendered it <span class="gk">παρθένος</span> two-plus centuries before any Christian motive — so Matthew quotes a Jewish Greek text, not a fresh "mistranslation." He shifts "you/she will call" to "<em>they</em> will call," and treats Emmanuel as title, not the literal name given (Joseph names him Jesus). The translated name <span class="gk">μεθ' ἡμῶν ὁ θεός</span> frames the gospel: 1:23 → 18:20 → 28:20. <a href="https://ccat.sas.upenn.edu/nets/edition/23-isaiah-nets.pdf" target="_blank">NETS Isaiah (LXX)</a>.</li>
+
+      <li id="n14"><strong>1:25 — "until" &amp; the variant.</strong> <span class="gk">ἕως οὗ</span> ("until") marks the period up to the birth as without relations, without itself settling the later period — so the verse cannot decide the perpetual-virginity question either way; Matthew's interest is solely the virginal conception. The longer reading "her firstborn son" is a harmonizing import from <a href="https://biblehub.com/luke/2-7.htm" target="_blank">Luke 2:7</a>; the short SBL reading "a son" is original.</li>
+    </ol>
+  </section>
+
+  <p class="foot">Translation rendered from the SBLGNT (Matt 1:1–25), as literally as the English will bear · colors track recurring Greek roots and will hold across units · Unit 1 of the Matthew study</p>
+
+</div>
+</body>
+</html>
