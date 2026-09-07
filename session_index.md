@@ -9,7 +9,9 @@ Read this first. 3 lines max per session.
   (script stripped, translit-only, data-root spans, prefixed endnote ids).
 - Phase 2 done: index.html + app/main.js router + css/styles.css; all 8 units
   render in-browser, responsive, footnote jump works.
-- Phase 3 done: pushed to github.com/lanehaden157/Matthew, live at
-  https://lanehaden157.github.io/Matthew/ (verified working on the subpath).
-- Next: Phase 4 (data/threads.json — the 16 tracked threads — + scan/verify
-  pipeline + data-driven legends + tag-retrofit review).
+- Phase 3 done: live at https://lanehaden157.github.io/Matthew/
+- Phase 4 done: data/threads.json (16 threads), two-tier colour engine
+  (threads.js), occurrence pipeline + verify, data-driven legends, retrofit tags
+  applied. Verified on live deploy.
+- Next: Phase 5 (thread hover tooltip + click popover w/ trajectory + 'threads
+  active here' footer).

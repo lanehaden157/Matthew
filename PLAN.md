@@ -165,20 +165,25 @@ U3 (`wild`→`wilderness` rename), U7 (needs a full fresh 9-hue palette — its
 `/Matthew/` subpath: fragments load, palettes inject, footnote jump works,
 `data/units.json` fetches, zero console errors — relative paths hold.
 
-### Phase 4 — Color engine + threads
+### Phase 4 — Colour engine + threads ✅ DONE
 
-- `data/threads.json` authored — the 16 threads from memory (13 live + torment /
-  urge / sea-mirror), with colors chosen to not collide.
-- `data/units.json` — local palettes from `units.seed.json`, Lane-approved.
-- `pipeline/scan_occurrences.py` + `verify_occurrences.py` → `occurrences.json`.
-- `app/threads.js` — runtime color resolution (global → local → verify-fail).
-- **Legend generated from data** per unit, replacing the hand-written `<section
-  class="legend">` in each fragment.
-- **Tag-retrofit review:** I hand Lane a per-unit list of proposed `data-root`
-  insertions for the 8 untagged threads (exact verses); Lane approves; pipeline
-  applies.
-**Deliverable:** every unit's colors driven by data; recolor test (one hex edit
-propagates).
+- `data/threads.json` — 16 tracked threads (13 from memory + torment/urge/sea).
+  Global tier: a root here holds its thread colour in every unit; recolour
+  book-wide = one hex edit.
+- `data/units.json` roots are now `{color, translit, gloss}`, backfilled from the
+  fragments' hand legends (`pipeline/extract_legends.py` + `legend-overrides.json`).
+- `pipeline/scan_occurrences.py` → `data/occurrences.json`;
+  `pipeline/verify_occurrences.py` independently re-counts and checks every
+  `data-root` resolves to a colour with no perceptual collisions.
+- `pipeline/apply_retrofit.py` (`retrofit-tags.json`) added the tracked-thread
+  spans the artifacts never marked: nations 4:15, apo-tote 4:17, law-prophets
+  5:17 & 7:12, little-faith 6:30, light 5:14 & 6:23, wise-foolish 7:24/26; retag
+  8:26 faith→little-faith; unwrapped a mis-tagged "deportation" in U1.
+- `pipeline/build.py` runs the whole chain.
+- `app/threads.js` resolves colours and rebuilds each unit's legend from data
+  (thread pills, occurrence counts). Fetches are cache-busted.
+- Verified on the live Pages deploy: retrofit tags render, global thread colours
+  identical across units, zero console errors.
 
 ### Phase 5 — Thread & note interactions *(ideas.md "Now")*
 

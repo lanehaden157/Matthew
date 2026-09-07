@@ -44,3 +44,24 @@
 - Pages enabled: source main / root. Live at https://lanehaden157.github.io/Matthew/
 - Verified live on the /Matthew/ subpath: units load, palettes inject, footnote
   jump works, data/units.json fetches, zero console errors — relative paths hold.
+
+## 2026-09-07 (cont.) — Phase 4: colour engine + threads
+- data/threads.json — 16 tracked cross-unit threads (13 from memory + torment /
+  urge / sea). id, colour, translit, gloss, opens, payoffs, status. Global tier:
+  a root here is that colour in every unit; recolour = one hex edit.
+- data/units.json roots → {color, translit, gloss} per root (was hex). Backfilled
+  from the fragments' hand legends by extract_legends.py (+ legend-overrides.json).
+- pipeline: scan_occurrences.py → data/occurrences.json; verify_occurrences.py
+  (independent re-count + colour-resolution + perceptual-collision check);
+  apply_retrofit.py (retrofit-tags.json); build.py runs the whole chain.
+- Retrofit applied to fragments: nations 4:15, apo-tote 4:17, law-prophets
+  5:17 & 7:12, little-faith 6:30, light 5:14 & 6:23, wise-foolish 7:24/26;
+  retag 8:26 faith→little-faith; unwrapped a mis-tagged "deportation" (U1).
+- app/threads.js — colour resolution + data-driven legend rebuild (thread pills,
+  occurrence counts). main.js fetches are cache-busted (?v=ts); index.html
+  script/css tagged ?v=4.
+- Colour collisions fixed: U6 seen→#1596b8, little-faith global→#8f6f9a.
+- Verified on the live Pages deploy (fresh origin): all retrofit tags render,
+  global thread colours consistent across units, zero console errors.
+- Note: local python http.server + the in-app browser cache fragments very
+  stickily; trust verify_occurrences.py + a fresh-origin check, not ctrl+shift+r.
