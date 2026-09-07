@@ -153,3 +153,12 @@
 - rebuildLegend: the "In this unit" / "✦ Cross-unit threads" sub-headings now
   only appear when BOTH groups are present; a unit with no tracked threads
   (U1, U2) just lists its roots under the h2, no orphan sub-header.
+
+## 2026-09-07 (cont.) — two formatting bugs
+- extract_units: bare Greek in a tag (Logeion href, title=...) was being wrapped
+  in <span class="translit">, which broke the <a> markup — U1/2/3/4/6/8 endnote
+  links. strip_leftover_script now splits on tags and only transliterates
+  visible text; script inside a tag is left as-is (Greek URLs resolve fine).
+- ring-diagram labels longer than 2 chars (e.g. "HINGE" in U4) overflowed the
+  narrow label column. normalize_blocks marks them .lab-word; CSS renders those
+  small-caps at 11px so they fit.

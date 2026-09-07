@@ -42,11 +42,19 @@ def log(m):
 
 def normalize_blocks(body, u):
     """Unit 1's colour-key section is `class="legend"` where every other unit
-    has `class="block legend"` — so it renders without the panel box."""
+    has `class="block legend"` — so it renders without the panel box. Also flag
+    ring-diagram labels longer than a letter or two (e.g. "HINGE") so CSS can
+    size them down to fit the narrow label column."""
     before = body
     body = body.replace('<section class="legend"', '<section class="block legend"')
     if body != before:
         log(f"- U{u}: normalised legend section to `block legend`")
+
+    body, k = re.subn(
+        r'<div class="lab">(?=[A-Za-z]{3})([^<]+)(<small>|</div>)',
+        r'<div class="lab lab-word">\1\2', body)
+    if k:
+        log(f"- U{u}: marked {k} long ring label(s) lab-word")
     return body
 
 
@@ -219,22 +227,31 @@ def clean_redundancy(body):
 
 
 def strip_leftover_script(body, u):
+    """Transliterate bare script runs in VISIBLE TEXT only. Script inside a tag
+    (e.g. Greek in a Logeion href) is left as-is — wrapping it in a <span> there
+    would break the markup, and Greek URLs resolve fine."""
     def gk(m):
         t = _translit_token(m.group(0), u)
         return "" if t is None else f'<span class="translit">{t}</span>'
 
-    def heb(m):
+    def heb(seg, m):
         s = m.group(0)
-        tail = body[m.end():m.end() + 4]
+        tail = seg[m.end():m.end() + 4]
         if tail.lstrip().startswith("("):
             log(f"- U{u}: dropped bare Hebrew `{s}` (translit follows in parens)")
             return ""
         t = _translit_token(s, u)
         return "" if t is None else f'<span class="translit">{t}</span>'
 
-    body = GREEK_RUN.sub(gk, body)
-    body = HEBREW_RUN.sub(heb, body)
-    return body
+    out = []
+    for part in re.split(r"(<[^>]+>)", body):
+        if part.startswith("<"):
+            out.append(part)
+        else:
+            part = GREEK_RUN.sub(gk, part)
+            part = HEBREW_RUN.sub(lambda m: heb(part, m), part)
+            out.append(part)
+    return "".join(out)
 
 
 # normalise a few inconsistent data-root spellings to one canonical name
