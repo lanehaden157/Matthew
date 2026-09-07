@@ -52,8 +52,8 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
 
 /* ---------------------------------------------------------------- app shell */
 
+.topbar-wrap { position: sticky; top: 0; z-index: 30; }
 .topbar {
-  position: sticky; top: 0; z-index: 20;
   background: rgba(245, 239, 226, 0.94);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--rule);
@@ -77,10 +77,20 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
 .nav-toggle[aria-expanded="true"] { color: var(--ink); border-color: var(--accent-gold); }
 .nav-toggle #nav-toggle-ctx { color: var(--ink-soft); font-style: italic; }
 
-/* unit picker */
+/* unit picker — drops down from the sticky bar, over the content */
 .unit-nav {
-  max-width: var(--maxw); margin: 0 auto; padding: 16px 26px 8px;
+  position: absolute; top: 100%; left: 0; right: 0;
+  max-height: min(72vh, calc(100vh - 60px));
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+  padding: 16px 26px 20px;
+  background: var(--bg);
   border-bottom: 1px solid var(--rule);
+  box-shadow: 0 14px 30px rgba(30, 22, 12, 0.16);
+}
+.unit-nav > * { max-width: var(--maxw); margin-left: auto; margin-right: auto; }
+.nav-backdrop {
+  position: fixed; inset: 0; z-index: 20;
+  background: rgba(28, 22, 14, 0.22);
 }
 .unit-nav .movement-label {
   font-family: var(--display); font-size: 13px; letter-spacing: .18em;
@@ -272,7 +282,7 @@ sup.en a { border: none; }
   .topbar .inner { padding: 9px 16px; gap: 8px; }
   .topbar .brand { font-size: 17px; }
   .topbar nav { width: 100%; margin-left: 0; }
-  .unit-nav { padding: 14px 16px 0; }
+  .unit-nav { padding: 14px 16px 18px; }
   .unit .mast h1 { font-size: 32px; }
   .unit .mast .greek-title { font-size: 18px; }
   .unit section.block { padding: 16px 15px; margin: 22px 0; }

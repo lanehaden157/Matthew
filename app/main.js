@@ -2,7 +2,7 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend } from "./threads.js?v=6";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend } from "./threads.js?v=7";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -37,11 +37,15 @@ async function init() {
 }
 
 function wireNavToggle() {
+  const backdrop = document.getElementById("nav-backdrop");
   const set = (open) => {
     unitNav.hidden = !open;
+    backdrop.hidden = !open;
     navToggle.setAttribute("aria-expanded", String(open));
+    if (open) unitNav.scrollTop = 0;
   };
   navToggle.addEventListener("click", () => set(unitNav.hidden));
+  backdrop.addEventListener("click", () => set(false));
   unitNav.addEventListener("click", (e) => {
     if (e.target.closest(".unit-chip:not(.unbuilt)")) set(false);
   });
@@ -163,7 +167,7 @@ function wireFootnotes() {
     const b = document.createElement("a");
     b.className = "note-back";
     b.href = "#";
-    b.textContent = "↩ back to the text";
+    b.textContent = "↩ back";
     b.addEventListener("click", (e) => { e.preventDefault(); back(id); });
     note.append(" ", b);
   }
