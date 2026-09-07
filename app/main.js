@@ -2,8 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=12";
-import { enhanceSpotlights } from "./spotlight.js?v=12";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=13";
+import { enhanceSpotlights } from "./spotlight.js?v=13";
+import { renderSearch } from "./search.js?v=13";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -91,8 +92,23 @@ function buildUnitNav() {
 function route() {
   const hash = location.hash.replace(/^#\/?/, "");
   const [slug, anchor] = hash.split("/");
-  const unit = manifest.units.find((u) => u.slug === slug && u.built);
 
+  const searchLink = document.querySelector('.topbar-link[href="#/search"]');
+  if (searchLink) {
+    if (slug === "search") searchLink.setAttribute("aria-current", "page");
+    else searchLink.removeAttribute("aria-current");
+  }
+
+  if (slug === "search") {
+    markCurrent(null);
+    pager.innerHTML = "";
+    document.title = "Concordance — Matthew Study";
+    renderSearch(content, manifest.units);
+    content.scrollIntoView({ block: "start" });
+    return;
+  }
+
+  const unit = manifest.units.find((u) => u.slug === slug && u.built);
   if (!unit) {
     const first = manifest.units.find((u) => u.built);
     if (first && !slug) { location.replace(`#/${first.slug}`); return; }
@@ -128,8 +144,12 @@ async function loadUnit(unit, anchor) {
   document.title = `Unit ${unit.n} · ${unit.title} — Matthew Study`;
 
   if (anchor) {
-    const el = document.getElementById(anchor);
+    const vm = anchor.match(/^v(\d+)$/);
+    const el = vm
+      ? [...content.querySelectorAll(".v")].find((v) => v.querySelector(".n")?.textContent.trim() === vm[1])
+      : document.getElementById(anchor);
     if (el) requestAnimationFrame(() => jumpTo(el));
+    else content.scrollIntoView({ block: "start" });
   } else {
     content.scrollIntoView({ block: "start" });
   }

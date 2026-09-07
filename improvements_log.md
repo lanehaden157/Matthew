@@ -101,3 +101,14 @@
 - rebuildLegend: split into two groups — "✦ Cross-unit threads" / "In this unit".
 - Confirmed: occurrences.json regenerates every build.py; threads.json
   trajectory is hand-maintained per unit as loops close.
+
+## 2026-09-07 (cont.) — Phase 6a: concordance search
+- scan_occurrences: each root now carries `hits: [{v, pre, hit, post}]` context
+  snippets (verse text only, sup/verse-number stripped). VBLOCK tightened to the
+  verse element itself (was over-capturing trailing glosses).
+- app/search.js — #/search route: type a translit root (diacritic-folded, so
+  "aphiemi" finds "aphiēmi") or English gloss -> results grouped by root then
+  unit, each hit a snippet linking to #/unit-NN/vNN (jumps + flashes the verse).
+- topbar "Search" link; main.js verse-anchor (#/unit-06/v14) support.
+- Note: U6 v14 tags "false steps" (paraptoma, the object) as data-root=release —
+  author's choice; shows up bolded in search. Left as-is.

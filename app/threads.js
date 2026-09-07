@@ -21,6 +21,9 @@ export async function loadThreadData() {
   return _threads;
 }
 
+export function getOccurrences() { return _occ || {}; }
+export function getThreadFor(root) { return _threads?.byRoot.get(root) || null; }
+
 /** root -> { color, translit, gloss, threadId|null, status, count } for one unit */
 export function resolveUnit(unit) {
   const out = new Map();
