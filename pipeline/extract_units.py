@@ -58,44 +58,86 @@ def normalize_blocks(body, u):
     return body
 
 
+_TAG = re.compile(r"<(/?)div\b[^>]*>", re.I)
+
+
+def _match_close(s, open_end):
+    """Given s and the index just past a `<div …>`, return the index of its
+    matching `</div>` (start) by counting nested divs."""
+    depth = 1
+    for m in _TAG.finditer(s, open_end):
+        depth += -1 if m.group(1) else 1
+        if depth == 0:
+            return m.start()
+    return -1
+
+
 def normalize_verses(body, u):
     """Unit 1 was built before the verse conventions settled: its verses are
     <div class="v"><span class="n">N</span><span class="txt">…</span> with the
-    .gloss/.compare blocks nested INSIDE. Every other unit has <p class="v">…</p>
-    with those blocks as following siblings. Reshape U1 to match so the shared
-    engine (spotlight collapse, occurrence scan) treats it like the rest."""
-    def repl(m):
-        n, txt, blocks = m.group(1), m.group(2), m.group(3)
-        blocks = re.sub(
-            r'<div class="(gloss|compare)">(.*?)</div>(?=\s*(?:<div class="(?:gloss|compare)">|$))',
-            lambda b: f'<span class="{b.group(1)}">{b.group(2)}</span>', blocks, flags=re.S)
-        # normalise U1's compare internals to the shared shape
-        blocks = blocks.replace('<div class="row">', '<span class="row">')
-        blocks = re.sub(r'<span class="lab">', '<span class="src">', blocks)
-        blocks = _rebalance_rows(blocks)
-        return f'<p class="v"><span class="n">{n}</span>{txt.strip()}</p>\n      {blocks.strip()}'
-
-    body2, k = re.subn(
-        r'<div class="v"><span class="n">(\d+)</span><span class="txt">(.*?)</span>\s*'
-        r'((?:<div class="(?:gloss|compare)">.*?</div>\s*)*)</div>',
-        repl, body, flags=re.S)
+    .gloss/.compare blocks nested INSIDE (and compare uses div.row/.lab). Every
+    other unit has <p class="v">…</p> with those blocks as following siblings.
+    Reshape U1 to match so the shared engine treats it like the rest."""
+    out, i, k = [], 0, 0
+    for m in re.finditer(r'<div class="v"><span class="n">(\d+)</span>'
+                         r'<span class="txt">', body):
+        out.append(body[i:m.start()])
+        n = m.group(1)
+        close = _match_close(body, m.end())          # matches <div class="v">
+        if close < 0:
+            out.append(body[m.start():m.end()]); i = m.end(); continue
+        inner = body[m.end():close]                  # inside .v, after <span class="txt">
+        cut = re.search(r'</span>\s*(?=<div class="(?:gloss|compare)">)', inner)
+        if cut:
+            txt = inner[:cut.start()]
+            blocks = _blocks_to_spans(inner[cut.end():])
+        else:
+            txt = re.sub(r'</span>\s*$', '', inner)
+            blocks = ""
+        out.append(f'<p class="v"><span class="n">{n}</span>{txt.strip()}</p>')
+        if blocks.strip():
+            out.append("\n      " + blocks.strip())
+        i = close + len("</div>")
+        k += 1
+    out.append(body[i:])
     if k:
         log(f"- U{u}: normalised {k} nested-gloss verses to sibling form")
-    return body2
+    return "".join(out)
 
 
-def _rebalance_rows(s):
-    """After swapping <div class="row"> -> <span class="row">, the matching
-    </div> must become </span>. Rows contain no nested divs, so pair them up."""
+def _blocks_to_spans(s):
+    """Turn U1's nested <div class="gloss/compare"> … <div class="row"><span
+    class="lab"> into the shared <span class="…"> / <span class="row"> /
+    <span class="src"> shape, closing tags correctly by depth."""
+    for cls in ("gloss", "compare"):
+        while True:
+            o = re.search(r'<div class="' + cls + r'">', s)
+            if not o:
+                break
+            end = _match_close(s, o.end())
+            inner = s[o.end():end]
+            if cls == "compare":
+                inner = re.sub(r'<div class="row">', '<span class="row">', inner)
+                inner = re.sub(r'<span class="lab">', '<span class="src">', inner)
+                inner = _close_rows(inner)
+            s = s[:o.start()] + f'<span class="{cls}">' + inner + "</span>" + s[end + len("</div>"):]
+    return s
+
+
+def _close_rows(s):
     out, i = [], 0
     for m in re.finditer(r'<span class="row">', s):
         out.append(s[i:m.end()])
-        j = s.find("</div>", m.end())
-        out.append(s[m.end():j])
-        out.append("</span>")
+        j = _first_div_close(s, m.end())
+        out.append(s[m.end():j] + "</span>")
         i = j + len("</div>")
     out.append(s[i:])
     return "".join(out)
+
+
+def _first_div_close(s, start):
+    m = re.search(r"</div>", s[start:])
+    return start + m.start() if m else len(s)
 
 
 def get_body(html):

@@ -162,3 +162,12 @@
 - ring-diagram labels longer than 2 chars (e.g. "HINGE" in U4) overflowed the
   narrow label column. normalize_blocks marks them .lab-word; CSS renders those
   small-caps at 11px so they fit.
+
+## 2026-09-07 (cont.) — Unit 1 verse normalization rewritten
+- normalize_verses was a flat regex that couldn't handle U1's 2-level div
+  nesting (verse > compare > row). It truncated verse 23's compare box,
+  leaving an unclosed <span>/<div> that swallowed everything after it —
+  raw markup showing in the verses, endnotes trapped in a white box.
+- Rewrote with a depth-counting div matcher (_match_close). All 8 units now
+  tag-balanced; U1 verses + compare boxes well-formed; endnotes a clean
+  top-ruled section like every other unit.
