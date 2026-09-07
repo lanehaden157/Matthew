@@ -25,7 +25,7 @@
   --display: "Cormorant Garamond", Georgia, serif;
 
   --maxw: 790px;
-  --flash: #fff3c4;
+  --flash: #ffdf8a;
 }
 
 * { box-sizing: border-box; }
@@ -128,19 +128,26 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
 
 /* ---------------------------------------------------- footnote jump + flash */
 
-@keyframes flash-bg {
-  from { background: var(--flash); }
-  to   { background: transparent; }
+@keyframes flash-hl {
+  0%   { background: var(--flash); box-shadow: -10px 0 0 var(--flash), 10px 0 0 var(--flash); }
+  70%  { background: var(--flash); box-shadow: -10px 0 0 var(--flash), 10px 0 0 var(--flash); }
+  100% { background: transparent;  box-shadow: -10px 0 0 transparent,  10px 0 0 transparent; }
 }
-.flash { animation: flash-bg 1.15s ease-out; border-radius: 4px; }
+.flash {
+  animation: flash-hl 1.9s ease-out;
+  border-radius: 3px;
+}
 
 sup.en a { border: none; }
-.notes li:target, .endnotes li:target { scroll-margin-top: 90px; }
+.notes li:target, .endnotes li:target,
 .v:target, .verses .v:target { scroll-margin-top: 90px; }
+
 .note-back {
-  margin-left: 8px; font-size: .7em; font-style: normal;
-  border: none; color: var(--ink-soft);
+  display: inline-block; margin-left: 6px;
+  font-size: .8em; font-style: normal; white-space: nowrap;
+  border: none; color: var(--accent-crimson); cursor: pointer;
 }
+.note-back:hover { text-decoration: underline; }
 
 /* ============================================================== unit content
    Everything below renders the /units fragments. Reconciled from all 8

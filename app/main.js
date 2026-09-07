@@ -2,7 +2,7 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend } from "./threads.js?v=4";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend } from "./threads.js?v=6";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -122,7 +122,7 @@ async function loadUnit(unit, anchor) {
 
   if (anchor) {
     const el = document.getElementById(anchor);
-    if (el) { el.scrollIntoView(); flash(el); }
+    if (el) requestAnimationFrame(() => jumpTo(el));
   } else {
     content.scrollIntoView({ block: "start" });
   }
@@ -141,46 +141,71 @@ function markCurrent(slug) {
 /* --------------------------------------------------- footnote jump + return */
 
 function wireFootnotes() {
-  let origin = null; // the <sup> a reader jumped from
+  const origin = new Map(); // note id -> the <sup> the reader jumped from
 
-  content.querySelectorAll("sup.en a[href^='#']").forEach((a) => {
-    const id = a.getAttribute("href").slice(1);
+  content.querySelectorAll("sup.en a[href*='#']").forEach((a) => {
+    const id = a.getAttribute("href").split("#").pop();
     a.addEventListener("click", (e) => {
       e.preventDefault();
       const note = document.getElementById(id);
       if (!note) return;
       const sup = a.closest("sup.en");
-
-      // second click on the same ref, while the note is roughly in view -> go back
-      if (origin === sup && inView(note)) { returnToOrigin(); return; }
-
-      origin = sup;
-      ensureBackLink(note);
-      note.scrollIntoView({ block: "center" });
-      flash(note);
+      // click the same ref again while the note is on screen -> jump back
+      if (origin.get(id) === sup && inView(note)) { back(id); return; }
+      origin.set(id, sup);
+      addBackLink(note, id);
+      jumpTo(note);
     });
   });
 
-  function ensureBackLink(note) {
-    let back = note.querySelector(".note-back");
-    if (!back) {
-      back = document.createElement("a");
-      back.className = "note-back";
-      back.href = "#";
-      back.textContent = "↩ back";
-      note.appendChild(document.createTextNode(" "));
-      note.appendChild(back);
-    }
-    back.onclick = (e) => { e.preventDefault(); returnToOrigin(); };
+  function addBackLink(note, id) {
+    if (note.querySelector(".note-back")) return;
+    const b = document.createElement("a");
+    b.className = "note-back";
+    b.href = "#";
+    b.textContent = "↩ back to the text";
+    b.addEventListener("click", (e) => { e.preventDefault(); back(id); });
+    note.append(" ", b);
   }
 
-  function returnToOrigin() {
-    if (!origin) return;
-    origin.scrollIntoView({ block: "center" });
-    const verse = origin.closest(".v") || origin;
-    flash(verse);
-    origin = null;
+  function back(id) {
+    const sup = origin.get(id);
+    if (!sup) return;
+    jumpTo(sup.closest(".v") || sup, sup);
+    origin.delete(id);
   }
+}
+
+function jumpTo(el, flashEl) {
+  const reduce = prefersReducedMotion();
+  el.scrollIntoView({ block: "center", behavior: reduce ? "auto" : "smooth" });
+  const target = flashEl || el;
+  if (reduce) { flash(target); return; }
+  // fire the highlight once the smooth scroll has settled (or after a cap)
+  let last = null, still = 0, fired = false, start = performance.now();
+  const done = () => { if (!fired) { fired = true; flash(target); } };
+  const tick = () => {
+    if (fired) return;
+    const y = window.scrollY;
+    still = y === last ? still + 1 : 0;
+    last = y;
+    if (still > 2 || performance.now() - start > 700) done();
+    else requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
+let _flashed = null;
+function flash(el) {
+  if (_flashed === el) return;
+  _flashed = el;
+  el.classList.remove("flash");
+  void el.offsetWidth;
+  el.classList.add("flash");
+  el.addEventListener("animationend", () => {
+    el.classList.remove("flash");
+    if (_flashed === el) _flashed = null;
+  }, { once: true });
 }
 
 function inView(el) {
@@ -188,11 +213,8 @@ function inView(el) {
   return r.top < window.innerHeight * 0.9 && r.bottom > window.innerHeight * 0.1;
 }
 
-function flash(el) {
-  el.classList.remove("flash");
-  void el.offsetWidth; // restart the animation
-  el.classList.add("flash");
-  el.addEventListener("animationend", () => el.classList.remove("flash"), { once: true });
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 /* -------------------------------------------------------------- prev / next */
