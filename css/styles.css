@@ -266,9 +266,19 @@ sup.en a { border: none; }
 .unit .compare .src { font-variant: small-caps; letter-spacing: .05em; color: var(--ink-soft); font-style: normal; font-size: 13.5px; }
 .unit .compare .txt { line-height: 1.5; }
 
-/* ---- spotlight: collapsed per-verse asides ---- */
+/* ---- collapsed per-verse asides: light "note" (*) + "spotlight" (✦) ---- */
 
-/* the ✦ affordance at the end of a verse */
+/* light note marker — bare, dim, no chrome */
+.unit .note-toggle {
+  padding: 0 3px; margin-left: 2px; vertical-align: baseline; text-indent: 0;
+  font: inherit; font-size: 1.05em; line-height: 1;
+  color: var(--ink-soft); background: none; border: none;
+  opacity: .55; cursor: pointer; transition: opacity .15s, color .15s;
+}
+.unit .note-toggle:hover { opacity: 1; color: var(--accent-crimson); }
+.unit .note-toggle.is-open { opacity: 1; color: var(--accent-crimson); }
+
+/* spotlight ✦ chip */
 .unit .spot-toggle {
   display: inline-flex; align-items: center; justify-content: center;
   width: 22px; height: 22px; margin-left: 4px; padding: 0;
@@ -307,18 +317,22 @@ sup.en a { border: none; }
   .unit .spotlight { background: var(--panel); }
 }
 .unit .spot-head {
+  display: block;
   font-family: var(--display); font-size: 11.5px; font-weight: 600;
   letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft);
   margin-bottom: 8px;
 }
-.unit .spot-head::before { content: "✦ "; color: var(--accent-gold); }
 .unit .spot-div { height: 1px; background: var(--rule-soft); margin: 12px -16px; }
 
-/* gloss + compare, restyled for inside the panel (flatter, unified) */
-.unit .spotlight .gloss {
-  display: block; margin: 0; padding: 0; border: none;
-  color: var(--ink); font-style: normal; font-size: 15px; line-height: 1.55;
+/* verse note — the old inline-gloss look, just now on a toggle: no box, no bg */
+.unit .verse-note {
+  text-indent: 0; margin: 4px 0 14px;
+  padding: 3px 0 3px 14px; border-left: 2px solid var(--rule);
+  color: var(--ink-soft); font-style: italic; font-size: 15px; line-height: 1.5;
 }
+.unit .verse-note .gloss { display: block; margin: 0; padding: 0; border: none; }
+.unit .verse-note .gloss + .gloss { margin-top: 8px; }
+
 .unit .spotlight .compare {
   display: block; margin: 0; padding: 0; border: none; background: none; border-radius: 0;
 }
@@ -357,7 +371,9 @@ sup.en a { border: none; }
   .unit .v { padding-left: 26px; text-indent: -26px; }
   .unit .v .n { width: 22px; }
   .unit .spot-toggle { width: 26px; height: 26px; font-size: 13px; }
+  .unit .note-toggle { padding: 0 6px; }
   .unit .spotlight { padding: 11px 13px 12px; }
+  .unit .verse-note { padding-left: 11px; }
   .unit .spot-div { margin-left: -13px; margin-right: -13px; }
   .unit .compare .row,
   .unit .spotlight .compare .row { grid-template-columns: 1fr; gap: 1px; }
@@ -374,6 +390,7 @@ sup.en a { border: none; }
 
 @media print {
   .topbar-wrap, .nav-backdrop, .unit-pager,
-  .spot-toggle, .spot-controls { display: none !important; }
+  .spot-toggle, .note-toggle, .spot-controls { display: none !important; }
   .spotlight { border-left-width: 2px; }
+  .verse-note { break-inside: avoid; }
 }
