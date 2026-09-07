@@ -112,3 +112,11 @@
 - topbar "Search" link; main.js verse-anchor (#/unit-06/v14) support.
 - Note: U6 v14 tags "false steps" (paraptoma, the object) as data-root=release —
   author's choice; shows up bolded in search. Left as-is.
+
+## 2026-09-07 (cont.) — discourse structure surfaced
+- units.json: added `discourses` (Sermon 5-7, Mission 10, Parables 13,
+  Community 18, Woes+Olivet 23-25).
+- Contents nav: discourse units wrapped in a gold left-bar sub-block with a
+  "◆ Discourse N · Label" heading, nested inside their movement.
+- Each unit page: a placement line under the masthead —
+  "Movement II · … — ◆ Discourse I: Sermon on the Mount (2 of 3)".

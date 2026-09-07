@@ -19,6 +19,47 @@
       "range": "16:21-28:20"
     }
   ],
+  "discourses": [
+    {
+      "n": 1,
+      "label": "Sermon on the Mount",
+      "units": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "n": 2,
+      "label": "The Mission",
+      "units": [
+        10
+      ]
+    },
+    {
+      "n": 3,
+      "label": "Parables of the Kingdom",
+      "units": [
+        13
+      ]
+    },
+    {
+      "n": 4,
+      "label": "Life in the Community",
+      "units": [
+        18
+      ]
+    },
+    {
+      "n": 5,
+      "label": "Woes & the Olivet Discourse",
+      "units": [
+        23,
+        24,
+        25
+      ]
+    }
+  ],
   "units": [
     {
       "n": 1,

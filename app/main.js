@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=13";
-import { enhanceSpotlights } from "./spotlight.js?v=13";
-import { renderSearch } from "./search.js?v=13";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=14";
+import { enhanceSpotlights } from "./spotlight.js?v=14";
+import { renderSearch } from "./search.js?v=14";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -56,6 +56,21 @@ function wireNavToggle() {
 
 /* ----------------------------------------------------------------- unit nav */
 
+function discourseOf(n) {
+  return (manifest.discourses || []).find((d) => d.units.includes(n)) || null;
+}
+
+function chip(u) {
+  const a = document.createElement("a");
+  a.className = "unit-chip" + (u.built ? "" : " unbuilt");
+  a.dataset.slug = u.slug;
+  if (u.built) a.href = `#/${u.slug}`;
+  a.innerHTML =
+    `<span class="n">${u.n}</span>${escapeHtml(u.title)}` +
+    `<span class="passage">${escapeHtml(u.passage)}${u.built ? "" : " · not yet built"}</span>`;
+  return a;
+}
+
 function buildUnitNav() {
   const byMovement = new Map();
   for (const u of manifest.units) {
@@ -63,25 +78,38 @@ function buildUnitNav() {
     byMovement.get(u.movement).push(u);
   }
   const frag = document.createDocumentFragment();
+
   for (const m of manifest.movements) {
     const label = document.createElement("div");
     label.className = "movement-label";
     label.textContent = `Movement ${roman(m.id)} · ${m.label}`;
     frag.appendChild(label);
 
-    const grid = document.createElement("div");
-    grid.className = "unit-grid";
+    // walk this movement's units in order, splitting off discourse runs
+    let grid = null, discBlock = null, discGrid = null, curDisc = null;
+    const newGrid = () => { grid = document.createElement("div"); grid.className = "unit-grid"; frag.appendChild(grid); };
+
     for (const u of byMovement.get(m.id) || []) {
-      const a = document.createElement("a");
-      a.className = "unit-chip" + (u.built ? "" : " unbuilt");
-      a.dataset.slug = u.slug;
-      if (u.built) a.href = `#/${u.slug}`;
-      a.innerHTML =
-        `<span class="n">${u.n}</span>${escapeHtml(u.title)}` +
-        `<span class="passage">${escapeHtml(u.passage)}${u.built ? "" : " · not yet built"}</span>`;
-      grid.appendChild(a);
+      const d = discourseOf(u.n);
+      if (d) {
+        if (curDisc !== d) {
+          curDisc = d;
+          discBlock = document.createElement("div");
+          discBlock.className = "disc-block";
+          discBlock.innerHTML = `<div class="disc-head">◆ Discourse ${roman(d.n)} · ${escapeHtml(d.label)}</div>`;
+          discGrid = document.createElement("div");
+          discGrid.className = "unit-grid";
+          discBlock.appendChild(discGrid);
+          frag.appendChild(discBlock);
+          grid = null;
+        }
+        discGrid.appendChild(chip(u));
+      } else {
+        curDisc = null;
+        if (!grid) newGrid();
+        grid.appendChild(chip(u));
+      }
     }
-    frag.appendChild(grid);
   }
   unitNav.innerHTML = "";
   unitNav.appendChild(frag);
@@ -134,6 +162,7 @@ async function loadUnit(unit, anchor) {
   }
 
   content.innerHTML = html;
+  renderPlacement(content, unit);
   const resolved = resolveUnit(unit);
   injectPalette(unit, resolved);
   rebuildLegend(content, resolved);
@@ -153,6 +182,25 @@ async function loadUnit(unit, anchor) {
   } else {
     content.scrollIntoView({ block: "start" });
   }
+}
+
+function renderPlacement(root, unit) {
+  const mast = root.querySelector("header.mast");
+  if (!mast) return;
+  const mv = manifest.movements.find((m) => m.id === unit.movement);
+  const d = discourseOf(unit.n);
+  let txt = mv ? `Movement ${roman(mv.id)} · ${mv.label}` : "";
+  if (d) {
+    const pos = d.units.length > 1
+      ? ` (${d.units.indexOf(unit.n) + 1} of ${d.units.length})`
+      : "";
+    txt += `${txt ? " — " : ""}◆ Discourse ${roman(d.n)}: ${d.label}${pos}`;
+  }
+  if (!txt) return;
+  const el = document.createElement("div");
+  el.className = "unit-place";
+  el.textContent = txt;
+  mast.appendChild(el);
 }
 
 function markCurrent(slug) {
