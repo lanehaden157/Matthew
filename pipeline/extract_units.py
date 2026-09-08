@@ -364,8 +364,10 @@ def main():
         body = rewrite_roots(body, palette, u)
         body = prefix_endnotes(body, u)
 
-        if SCRIPT.search(body):
-            log(f"- U{u}: !! SCRIPT STILL PRESENT after all passes")
+        visible = re.sub(r"<[^>]+>", "", body)   # script may remain inside hrefs
+        script_left = bool(SCRIPT.search(visible))
+        if script_left:
+            log(f"- U{u}: !! SCRIPT STILL PRESENT in visible text")
 
         roots = sorted(set(re.findall(r'data-root="([a-z0-9-]+)"', body)))
         missing = [r for r in roots if r not in palette]
@@ -384,7 +386,7 @@ def main():
             f.write(f'<article class="unit" data-unit="{int(u)}">\n{body}\n</article>\n')
         print(f"unit-{u}.html  roots={len(roots)} palette={len(palette)}"
               + (f"  MISSING={missing}" if missing else "")
-              + ("  SCRIPT-LEFT!" if SCRIPT.search(body) else ""))
+              + ("  SCRIPT-LEFT!" if script_left else ""))
 
     json.dump(seed, open(os.path.join(OUT_PIPE, "units.seed.json"), "w", encoding="utf-8"),
               indent=2, ensure_ascii=False)

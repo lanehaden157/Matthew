@@ -316,8 +316,44 @@
       ],
       "total": 48
     },
+    "call": {
+      "count": 4,
+      "verses": [
+        16,
+        21,
+        23,
+        25
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…husband of Mary, from whom was begotten Jesus, the one ",
+          "hit": "called",
+          "post": " Anointed.…"
+        },
+        {
+          "v": 21,
+          "pre": "…and she will bear a son, and you shall ",
+          "hit": "call",
+          "post": " his name Jesus, for he himself will save his people fr…"
+        },
+        {
+          "v": 23,
+          "pre": "…hild] in [the] womb and will bear a son, and they will ",
+          "hit": "call",
+          "post": " his name Emmanuel\" — which is, being translated, \"With…"
+        },
+        {
+          "v": 25,
+          "pre": "…nd he was not knowing her until she bore a son; and he ",
+          "hit": "called",
+          "post": " his name Jesus.…"
+        }
+      ],
+      "total": 4
+    },
     "david": {
-      "count": 7,
+      "count": 6,
       "verses": [
         1,
         6,
@@ -325,12 +361,6 @@
         20
       ],
       "hits": [
-        {
-          "v": 1,
-          "pre": "…Book of the genesis (biblos geneseōs) of Jesus ",
-          "hit": "Anointed",
-          "post": ", son of David, son of Abraham.…"
-        },
         {
           "v": 1,
           "pre": "…he genesis (biblos geneseōs) of Jesus Anointed, son of ",
@@ -368,68 +398,36 @@
           "post": ", do not fear to take alongside Mary your wife, for the…"
         }
       ],
-      "total": 7
+      "total": 6
     },
     "dream": {
-      "count": 3,
+      "count": 1,
       "verses": [
-        20,
-        24
+        20
       ],
       "hits": [
-        {
-          "v": 20,
-          "pre": "…But as he was pondering these things — behold, an ",
-          "hit": "angel of [the] Lord",
-          "post": " appeared to him in a dream, saying: Joseph, son of Dav…"
-        },
         {
           "v": 20,
           "pre": "…hings — behold, an angel of [the] Lord appeared to him ",
           "hit": "in a dream",
           "post": ", saying: Joseph, son of David, do not fear to take alo…"
-        },
-        {
-          "v": 24,
-          "pre": "…And Joseph, having been raised from sleep, did as the ",
-          "hit": "angel of [the] Lord",
-          "post": " ordered him, and took alongside his wife,…"
         }
       ],
-      "total": 3
+      "total": 1
     },
     "name": {
-      "count": 7,
+      "count": 3,
       "verses": [
-        16,
         21,
         23,
         25
       ],
       "hits": [
         {
-          "v": 16,
-          "pre": "…husband of Mary, from whom was begotten Jesus, the one ",
-          "hit": "called",
-          "post": " Anointed.…"
-        },
-        {
-          "v": 21,
-          "pre": "…and she will bear a son, and you shall ",
-          "hit": "call",
-          "post": " his name Jesus, for he himself will save his people fr…"
-        },
-        {
           "v": 21,
           "pre": "…and she will bear a son, and you shall call his ",
           "hit": "name",
           "post": " Jesus, for he himself will save his people from their…"
-        },
-        {
-          "v": 23,
-          "pre": "…hild] in [the] womb and will bear a son, and they will ",
-          "hit": "call",
-          "post": " his name Emmanuel\" — which is, being translated, \"With…"
         },
         {
           "v": 23,
@@ -439,67 +437,27 @@
         },
         {
           "v": 25,
-          "pre": "…nd he was not knowing her until she bore a son; and he ",
-          "hit": "called",
-          "post": " his name Jesus.…"
-        },
-        {
-          "v": 25,
           "pre": "…ot knowing her until she bore a son; and he called his ",
           "hit": "name",
           "post": " Jesus.…"
         }
       ],
-      "total": 7
+      "total": 3
     },
     "save": {
-      "count": 6,
+      "count": 1,
       "verses": [
-        1,
-        16,
-        18,
-        21,
-        25
+        21
       ],
       "hits": [
-        {
-          "v": 1,
-          "pre": "…Book of the genesis (biblos geneseōs) of ",
-          "hit": "Jesus",
-          "post": " Anointed, son of David, son of Abraham.…"
-        },
-        {
-          "v": 16,
-          "pre": "…got Joseph the husband of Mary, from whom was begotten ",
-          "hit": "Jesus",
-          "post": ", the one called Anointed.…"
-        },
-        {
-          "v": 18,
-          "pre": "…Now of ",
-          "hit": "Jesus",
-          "post": " Anointed the genesis was thus. His mother Mary having…"
-        },
-        {
-          "v": 21,
-          "pre": "…and she will bear a son, and you shall call his name ",
-          "hit": "Jesus",
-          "post": ", for he himself will save his people from their sins.…"
-        },
         {
           "v": 21,
           "pre": "…and you shall call his name Jesus, for he himself will ",
           "hit": "save",
           "post": " his people from their sins.…"
-        },
-        {
-          "v": 25,
-          "pre": "…owing her until she bore a son; and he called his name ",
-          "hit": "Jesus",
-          "post": ".…"
         }
       ],
-      "total": 8
+      "total": 3
     },
     "spirit": {
       "count": 2,
@@ -667,11 +625,9 @@
       "total": 12
     },
     "dream": {
-      "count": 4,
+      "count": 2,
       "verses": [
         12,
-        13,
-        19,
         22
       ],
       "hits": [
@@ -682,25 +638,13 @@
           "post": " not to circle back to Herod, by another road they with…"
         },
         {
-          "v": 13,
-          "pre": "…And when they had withdrawn, behold, an ",
-          "hit": "angel of the Lord appears in a dream",
-          "post": " to Joseph, saying, \"Rising, take the child and his mot…"
-        },
-        {
-          "v": 19,
-          "pre": "…And Herod having come to his end, behold, an ",
-          "hit": "angel of the Lord appears in a dream",
-          "post": " to Joseph in Egypt,…"
-        },
-        {
           "v": 22,
           "pre": "…, he was afraid to go off there; and being warned in a ",
           "hit": "dream",
           "post": ", he withdrew into the regions of Galilee,…"
         }
       ],
-      "total": 7
+      "total": 3
     },
     "fulfill": {
       "count": 3,
@@ -971,6 +915,42 @@
       ],
       "total": 1
     },
+    "slanderer": {
+      "count": 4,
+      "verses": [
+        1,
+        5,
+        8,
+        11
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…into the wilderness by the Spirit, to be tested by the ",
+          "hit": "slanderer",
+          "post": ".…"
+        },
+        {
+          "v": 5,
+          "pre": "…Then the ",
+          "hit": "slanderer",
+          "post": " takes him along into the holy city, and he stood him o…"
+        },
+        {
+          "v": 8,
+          "pre": "…Again the ",
+          "hit": "slanderer",
+          "post": " takes him along to a very high mountain, and shows him…"
+        },
+        {
+          "v": 11,
+          "pre": "…Then the ",
+          "hit": "slanderer",
+          "post": " leaves him, and look, angels came and were ministering…"
+        }
+      ],
+      "total": 4
+    },
     "son": {
       "count": 3,
       "verses": [
@@ -1030,14 +1010,11 @@
       "total": 5
     },
     "test": {
-      "count": 7,
+      "count": 3,
       "verses": [
         1,
         3,
-        5,
-        7,
-        8,
-        11
+        7
       ],
       "hits": [
         {
@@ -1047,43 +1024,19 @@
           "post": " by the slanderer.…"
         },
         {
-          "v": 1,
-          "pre": "…into the wilderness by the Spirit, to be tested by the ",
-          "hit": "slanderer",
-          "post": ".…"
-        },
-        {
           "v": 3,
           "pre": "…And coming, the ",
           "hit": "tester",
           "post": " said to him, \"If you are Son of God, speak so that the…"
         },
         {
-          "v": 5,
-          "pre": "…Then the ",
-          "hit": "slanderer",
-          "post": " takes him along into the holy city, and he stood him o…"
-        },
-        {
           "v": 7,
           "pre": "…said to him, \"Again it stands written: 'You shall not ",
           "hit": "test-out",
           "post": " the Lord your God.'\" (Deut 6:16)…"
-        },
-        {
-          "v": 8,
-          "pre": "…Again the ",
-          "hit": "slanderer",
-          "post": " takes him along to a very high mountain, and shows him…"
-        },
-        {
-          "v": 11,
-          "pre": "…Then the ",
-          "hit": "slanderer",
-          "post": " leaves him, and look, angels came and were ministering…"
         }
       ],
-      "total": 8
+      "total": 4
     },
     "wilderness": {
       "count": 3,
@@ -1153,7 +1106,7 @@
       "total": 1
     },
     "dark": {
-      "count": 2,
+      "count": 1,
       "verses": [
         16
       ],
@@ -1163,15 +1116,9 @@
           "pre": "…the people, the one sitting in ",
           "hit": "darkness",
           "post": ", saw a great light, and to the ones sitting in a regio…"
-        },
-        {
-          "v": 16,
-          "pre": "…a great light, and to the ones sitting in a region and ",
-          "hit": "shadow",
-          "post": " of death — a light dawned upon them.”…"
         }
       ],
-      "total": 5
+      "total": 3
     },
     "fish": {
       "count": 2,
@@ -1338,6 +1285,21 @@
         }
       ],
       "total": 5
+    },
+    "shadow": {
+      "count": 1,
+      "verses": [
+        16
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…a great light, and to the ones sitting in a region and ",
+          "hit": "shadow",
+          "post": " of death — a light dawned upon them.”…"
+        }
+      ],
+      "total": 2
     },
     "withdraw": {
       "count": 1,
@@ -1920,7 +1882,7 @@
       "total": 1
     },
     "release": {
-      "count": 6,
+      "count": 4,
       "verses": [
         14,
         15
@@ -1934,12 +1896,6 @@
         },
         {
           "v": 14,
-          "pre": "…“For if y’all release for people their ",
-          "hit": "false steps",
-          "post": ", y’all’s heavenly Father will also release for y’all;…"
-        },
-        {
-          "v": 14,
           "pre": "…“For if y’all ",
           "hit": "release",
           "post": " for people their false steps, y’all’s heavenly Father…"
@@ -1955,15 +1911,9 @@
           "pre": "…but if y’all do not ",
           "hit": "release",
           "post": " for people, neither will y’all’s Father release y’all’…"
-        },
-        {
-          "v": 15,
-          "pre": "…or people, neither will y’all’s Father release y’all’s ",
-          "hit": "false steps",
-          "post": ".”…"
         }
       ],
-      "total": 11
+      "total": 9
     },
     "right": {
       "count": 2,
@@ -2419,7 +2369,7 @@
       "total": 3
     },
     "eye": {
-      "count": 9,
+      "count": 6,
       "verses": [
         3,
         4,
@@ -2428,12 +2378,6 @@
       "hits": [
         {
           "v": 3,
-          "pre": "…And why do you ",
-          "hit": "stare at",
-          "post": " the wood-chip in your brother's eye, but the roof-beam…"
-        },
-        {
-          "v": 3,
           "pre": "…nd why do you stare at the wood-chip in your brother's ",
           "hit": "eye",
           "post": ", but the roof-beam in your own eye — you don't even ta…"
@@ -2443,12 +2387,6 @@
           "pre": "…nd why do you stare at the wood-chip in your brother's ",
           "hit": "eye",
           "post": ", but the roof-beam in your own eye — you don't even ta…"
-        },
-        {
-          "v": 3,
-          "pre": "…ye, but the roof-beam in your own eye — you don't even ",
-          "hit": "take it in",
-          "post": "?…"
         },
         {
           "v": 4,
@@ -2467,12 +2405,6 @@
           "pre": "…Mask-wearer! Throw out the roof-beam from your own ",
           "hit": "eye",
           "post": " first, and then you'll see clear through to throw out…"
-        },
-        {
-          "v": 5,
-          "pre": "…the roof-beam from your own eye first, and then you'll ",
-          "hit": "see clear through",
-          "post": " to throw out the wood-chip from your brother's eye.…"
         },
         {
           "v": 5,
@@ -2481,7 +2413,7 @@
           "post": " first, and then you'll see clear through to throw out…"
         }
       ],
-      "total": 9
+      "total": 6
     },
     "fruit": {
       "count": 7,
@@ -2537,6 +2469,34 @@
         }
       ],
       "total": 7
+    },
+    "gate": {
+      "count": 3,
+      "verses": [
+        13,
+        14
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…Come in through the narrow ",
+          "hit": "gate",
+          "post": ". Because wide is the gate and roomy is the road that l…"
+        },
+        {
+          "v": 13,
+          "pre": "…Come in through the narrow ",
+          "hit": "gate",
+          "post": ". Because wide is the gate and roomy is the road that l…"
+        },
+        {
+          "v": 14,
+          "pre": "…Because narrow is the ",
+          "hit": "gate",
+          "post": " and squeezed is the road that leads off into life — an…"
+        }
+      ],
+      "total": 3
     },
     "judge": {
       "count": 5,
@@ -2621,24 +2581,12 @@
       "total": 3
     },
     "way": {
-      "count": 5,
+      "count": 2,
       "verses": [
         13,
         14
       ],
       "hits": [
-        {
-          "v": 13,
-          "pre": "…Come in through the narrow ",
-          "hit": "gate",
-          "post": ". Because wide is the gate and roomy is the road that l…"
-        },
-        {
-          "v": 13,
-          "pre": "…Come in through the narrow ",
-          "hit": "gate",
-          "post": ". Because wide is the gate and roomy is the road that l…"
-        },
         {
           "v": 13,
           "pre": "…narrow gate. Because wide is the gate and roomy is the ",
@@ -2647,18 +2595,12 @@
         },
         {
           "v": 14,
-          "pre": "…Because narrow is the ",
-          "hit": "gate",
-          "post": " and squeezed is the road that leads off into life — an…"
-        },
-        {
-          "v": 14,
           "pre": "…Because narrow is the gate and squeezed is the ",
           "hit": "road",
           "post": " that leads off into life — and few are the ones who fi…"
         }
       ],
-      "total": 5
+      "total": 2
     },
     "wise-foolish": {
       "count": 2,
@@ -2737,7 +2679,7 @@
         {
           "v": 10,
           "pre": "…I tell y'all, with no one in Israel have I found such ",
-          "hit": "faith",
+          "hit": "trust",
           "post": ".…"
         },
         {
@@ -2873,6 +2815,21 @@
       ],
       "total": 4
     },
+    "son-of-man": {
+      "count": 1,
+      "verses": [
+        20
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…have burrows and the birds of the sky have roosts, but ",
+          "hit": "the Son of Man",
+          "post": " has nowhere to lean his head.\"…"
+        }
+      ],
+      "total": 1
+    },
     "throw": {
       "count": 5,
       "verses": [
@@ -2903,7 +2860,7 @@
         },
         {
           "v": 16,
-          "pre": "…came, they brought him many who were demonized; and he ",
+          "pre": "…they brought him many who were demon-possessed; and he ",
           "hit": "threw",
           "post": " the spirits out with a word, and healed all who were i…"
         },

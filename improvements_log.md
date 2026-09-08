@@ -171,3 +171,22 @@
 - Rewrote with a depth-counting div matcher (_match_close). All 8 units now
   tag-balanced; U1 verses + compare boxes well-formed; endnotes a clean
   top-ruled section like every other unit.
+
+## 2026-09-07 (cont.) — root/motif taxonomy
+- Every tracked item is now kind:"root" (one Greek lexeme/family/phrase — colour
+  = the same word recurs) or kind:"motif" (kindred but distinct words — colour =
+  thematic grouping, called out).
+- threads.json: +emmanuel (meta/Emmanouēl, 1:23<->28:20), +son-of-man (opens
+  8:20); build-rock & wise-foolish -> motif; fish label -> halieus.
+- units.json relabelled to single lexemes; SPLIT name->call+name,
+  david(+king via U2), test->test+slanderer, dark->dark+shadow,
+  way->way+gate; UNTAGGED strays (Jesus off save, angel off dream, Anointed
+  off david, 'false steps' off release, blepō off eye); wage/seen/said -> motif.
+- fragment retags via retrofit-tags.json (new ops: retag_word, untag_word, text).
+- 'demonized' -> 'demon-possessed'; 8:10 pistis -> 'trust'.
+- legend: three sections (✦ threads / ◈ motifs / roots). In text: threads get a
+  dotted underline, motifs a dashed one, plain roots colour only. Popover says
+  "root — the same word, recurring" vs "motif — kindred words: …".
+- extract_legends.py retired from build.py (units.json is hand-maintained now).
+- Unit 1 pre-conventions structure fully normalized (verses, compare boxes,
+  legend box, endnotes).

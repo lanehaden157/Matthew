@@ -1,11 +1,16 @@
 """Apply pipeline/retrofit-tags.json to units/*.html.
 
 Runs AFTER extract_units.py (which regenerates fragments from source and would
-otherwise wipe these). Idempotent: skips a tag already present.
+otherwise wipe these). Idempotent.
 
-  add:   wrap the first untagged occurrence of `text` inside the .v block for
-         `verse` with <span class="r" data-root="ROOT">text</span>
-  retag: change data-root="from" -> "to" on the span wrapping `text` in that verse
+  add          wrap the first untagged occurrence of `text` in verse `verse`
+  retag        change data-root on the span wrapping `text` in `verse`
+  unwrap       strip the data-root span around every `text` (whole unit)
+  retag_word   whole unit: any `<span … data-root="from" …>TEXT</span> whose
+               TEXT matches the `match` regex -> data-root="to"
+  untag_word   whole unit: unwrap data-root="root" spans whose TEXT matches
+               `match` (or, with `nomatch`, whose TEXT does NOT match)
+  text         plain find/replace in the unit's visible text (wording fixes)
 """
 
 import json
@@ -17,48 +22,100 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UNITS = os.path.join(ROOT, "units")
 SPEC = os.path.join(ROOT, "pipeline", "retrofit-tags.json")
 
+SPAN = r'<span class="r[l]?"[^>]*\bdata-root="%s"[^>]*>([^<]*)</span>'
+
 
 def vblock(html, verse):
-    """(start, end) of the .v paragraph containing <span class="n">verse</span>."""
     m = re.search(r'<(?:div|p) class="v">(?:(?!</(?:div|p)>).)*?<span class="n">'
                   + str(verse) + r'</span>.*?</(?:div|p)>', html, re.S)
     return (m.start(), m.end()) if m else None
 
 
-def apply_add(html, item):
-    span = vblock(html, item["verse"])
+def apply_add(html, it):
+    span = vblock(html, it["verse"])
     if not span:
-        return html, f"SKIP {item['unit']} v{item['verse']}: no .v block"
+        return html, f"SKIP {it['unit']} v{it['verse']}: no .v block"
     a, b = span
     seg = html[a:b]
-    tag = f'<span class="r" data-root="{item["root"]}">{item["text"]}</span>'
-    if tag in seg or f'data-root="{item["root"]}"' in seg:
-        return html, f"ok   {item['unit']} v{item['verse']} {item['root']}: already tagged"
-    # wrap first occurrence of text that is not inside an existing tag
-    # (depth tracking handles tag-avoidance; boundary is alnum/hyphen only)
-    pat = re.compile(r'(?<![\w-])' + re.escape(item["text"]) + r'(?![\w-])')
-    depth_ok = _first_outside_tags(seg, pat)
-    if depth_ok is None:
-        return html, f"MISS {item['unit']} v{item['verse']}: '{item['text']}' not found free in verse"
-    i, j = depth_ok
+    tag = f'<span class="r" data-root="{it["root"]}">{it["text"]}</span>'
+    if tag in seg or f'data-root="{it["root"]}"' in seg:
+        return html, f"ok   {it['unit']} v{it['verse']} {it['root']}: already tagged"
+    pat = re.compile(r'(?<![\w-])' + re.escape(it["text"]) + r'(?![\w-])')
+    hit = _first_outside_tags(seg, pat)
+    if hit is None:
+        return html, f"MISS {it['unit']} v{it['verse']}: '{it['text']}' not free in verse"
+    i, j = hit
     seg = seg[:i] + tag + seg[j:]
-    return html[:a] + seg + html[b:], f"ADD  {item['unit']} v{item['verse']} {item['root']}: wrapped '{item['text']}'"
+    return html[:a] + seg + html[b:], f"ADD  {it['unit']} v{it['verse']} {it['root']}: '{it['text']}'"
 
 
-def apply_retag(html, item):
-    span = vblock(html, item["verse"])
+def apply_retag(html, it):
+    span = vblock(html, it["verse"])
     if not span:
-        return html, f"SKIP {item['unit']} v{item['verse']}: no .v block"
+        return html, f"SKIP {it['unit']} v{it['verse']}: no .v block"
     a, b = span
     seg = html[a:b]
-    old = f'data-root="{item["from"]}">{item["text"]}'
-    new = f'data-root="{item["to"]}">{item["text"]}'
+    old = f'data-root="{it["from"]}">{it["text"]}'
+    new = f'data-root="{it["to"]}">{it["text"]}'
     if new in seg:
-        return html, f"ok   {item['unit']} v{item['verse']}: already retagged"
+        return html, f"ok   {it['unit']} v{it['verse']}: already retagged"
     if old not in seg:
-        return html, f"MISS {item['unit']} v{item['verse']}: '{old}' not present"
-    seg = seg.replace(old, new, 1)
-    return html[:a] + seg + html[b:], f"RTAG {item['unit']} v{item['verse']}: {item['from']} -> {item['to']} on '{item['text']}'"
+        return html, f"MISS {it['unit']} v{it['verse']}: '{old}' not present"
+    return html[:a] + seg.replace(old, new, 1) + html[b:], \
+        f"RTAG {it['unit']} v{it['verse']}: {it['from']}->{it['to']} '{it['text']}'"
+
+
+def apply_unwrap(html, it):
+    pat = re.compile(
+        r'<span class="r[l]?"[^>]*\bdata-root="' + re.escape(it["root"]) + r'"[^>]*>'
+        + re.escape(it["text"]) + r'</span>')
+    new, n = pat.subn(it["text"], html)
+    return new, (f"UNWR {it['unit']}: {n}x '{it['text']}' (was {it['root']})"
+                 if n else f"ok   {it['unit']} unwrap '{it['text']}': nothing")
+
+
+def apply_retag_word(html, it):
+    m_re = re.compile(it["match"], re.I)
+    n = [0]
+
+    def repl(mm):
+        if m_re.search(mm.group(1)):
+            n[0] += 1
+            return mm.group(0).replace(f'data-root="{it["from"]}"',
+                                       f'data-root="{it["to"]}"', 1)
+        return mm.group(0)
+
+    new = re.sub(SPAN % re.escape(it["from"]), repl, html)
+    return new, (f"RTAGW {it['unit']}: {n[0]}x {it['from']}->{it['to']} /{it['match']}/"
+                 if n[0] else f"ok    {it['unit']} retag_word {it['from']}: no hit")
+
+
+def apply_untag_word(html, it):
+    pos = it.get("match")
+    neg = it.get("nomatch")
+    pr = re.compile(pos, re.I) if pos else None
+    nr = re.compile(neg, re.I) if neg else None
+    n = [0]
+
+    def repl(mm):
+        txt = mm.group(1)
+        drop = (pr and pr.search(txt)) or (nr and not nr.search(txt))
+        if drop:
+            n[0] += 1
+            return txt
+        return mm.group(0)
+
+    new = re.sub(SPAN % re.escape(it["root"]), repl, html)
+    return new, (f"UNTGW {it['unit']}: {n[0]}x untag {it['root']}"
+                 if n[0] else f"ok    {it['unit']} untag_word {it['root']}: no hit")
+
+
+def apply_text(html, it):
+    if it["to"] in html and it["from"] not in html:
+        return html, f"ok   {it['unit']} text '{it['from']}': already applied"
+    new, n = re.subn(re.escape(it["from"]), it["to"].replace("\\", "\\\\"), html)
+    return new, (f"TEXT {it['unit']}: {n}x '{it['from']}' -> '{it['to']}'"
+                 if n else f"MISS {it['unit']} text: '{it['from']}' not found")
 
 
 def _first_outside_tags(seg, pat):
@@ -68,42 +125,31 @@ def _first_outside_tags(seg, pat):
             depth += 1
         elif ch == ">":
             depth = max(0, depth - 1)
-        elif depth == 0:
+        elif depth == 0 and pat.match(seg, k):
             m = pat.match(seg, k)
-            if m:
-                return m.start(), m.end()
+            return m.start(), m.end()
     return None
 
 
-def apply_unwrap(html, item):
-    """Strip the <span class="r"[...]data-root="root"[...]>TEXT</span> wrapper
-    around every occurrence of TEXT, leaving TEXT."""
-    pat = re.compile(
-        r'<span class="r"[^>]*\bdata-root="' + re.escape(item["root"]) + r'"[^>]*>'
-        + re.escape(item["text"]) + r'</span>')
-    new, n = pat.subn(item["text"], html)
-    if not n:
-        return html, f"ok   {item['unit']} unwrap '{item['text']}': nothing to do"
-    return new, f"UNWR {item['unit']}: unwrapped {n}x '{item['text']}' (was {item['root']})"
+FNS = {"add": apply_add, "retag": apply_retag, "unwrap": apply_unwrap,
+       "retag_word": apply_retag_word, "untag_word": apply_untag_word,
+       "text": apply_text}
+ORDER = ["text", "untag_word", "retag_word", "unwrap", "retag", "add"]
 
 
 def main():
     spec = json.load(open(SPEC, encoding="utf-8"))
     by_unit = {}
-    for it in spec.get("unwrap", []):
-        by_unit.setdefault(it["unit"], []).append(("unwrap", it))
-    for it in spec.get("add", []):
-        by_unit.setdefault(it["unit"], []).append(("add", it))
-    for it in spec.get("retag", []):
-        by_unit.setdefault(it["unit"], []).append(("retag", it))
+    for op in ORDER:
+        for it in spec.get(op, []):
+            by_unit.setdefault(it["unit"], []).append((op, it))
 
     logs = []
     for unit, items in sorted(by_unit.items()):
         path = os.path.join(UNITS, unit + ".html")
         html = open(path, encoding="utf-8").read()
-        fn = {"add": apply_add, "retag": apply_retag, "unwrap": apply_unwrap}
-        for kind, it in items:
-            html, msg = fn[kind](html, it)
+        for op, it in items:
+            html, msg = FNS[op](html, it)
             logs.append(msg)
         open(path, "w", encoding="utf-8").write(html)
 

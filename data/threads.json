@@ -25,7 +25,8 @@
           "note": "light curdling back to darkness"
         }
       ],
-      "note": "Isa 9 light dawns on the people (4:16) -> 'y'all are the light of the world' (5:14). Watch the light/dark pair across the 4/5 seam."
+      "note": "Isa 9 light dawns on the people (4:16) -> 'y'all are the light of the world' (5:14). Watch the light/dark pair across the 4/5 seam.",
+      "kind": "root"
     },
     {
       "id": "nations",
@@ -45,7 +46,8 @@
           "ref": "28:19"
         }
       ],
-      "note": "'Galilee of the nations' (4:15) -> 'make disciples of all the nations' (28:19). One leg of the Emmanuel/nations frame around the whole book."
+      "note": "'Galilee of the nations' (4:15) -> 'make disciples of all the nations' (28:19). One leg of the Emmanuel/nations frame around the whole book.",
+      "kind": "root"
     },
     {
       "id": "follow",
@@ -66,13 +68,14 @@
           "note": "lands cleanly on 'the disciples' after two failed would-be followers"
         }
       ],
-      "note": "Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on."
+      "note": "Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on.",
+      "kind": "root"
     },
     {
       "id": "fish",
       "root": "fish",
-      "translit": "halieus / amphiblēstron",
-      "gloss": "fishers / net",
+      "translit": "halieus",
+      "gloss": "fisher",
       "color": "#4a4f93",
       "status": "open",
       "tagged": true,
@@ -87,7 +90,8 @@
           "note": "the dragnet parable"
         }
       ],
-      "note": "'Fishers of men' (4:19) carries OT judgement freight (Jer 16:16; Hab 1; Amos 4; Ezek 29) in tension with gathering-for-restoration."
+      "note": "'Fishers of men' (4:19) carries OT judgement freight (Jer 16:16; Hab 1; Amos 4; Ezek 29) in tension with gathering-for-restoration.",
+      "kind": "root"
     },
     {
       "id": "sea",
@@ -108,7 +112,8 @@
           "note": "the sea as a structural mirror between the storm (8:24-25) and the pigs (8:32)"
         }
       ],
-      "note": "Sea/Galilee geography in Unit 4; in Unit 8 the sea becomes a chaos-and-authority stage."
+      "note": "Sea/Galilee geography in Unit 4; in Unit 8 the sea becomes a chaos-and-authority stage.",
+      "kind": "root"
     },
     {
       "id": "apo-tote",
@@ -128,7 +133,8 @@
           "ref": "16:21"
         }
       ],
-      "note": "Two 'from that time' hinges: 4:17 ('began to proclaim') <-> 16:21 ('began to show he must suffer'). Read the two together at Unit 17."
+      "note": "Two 'from that time' hinges: 4:17 ('began to proclaim') <-> 16:21 ('began to show he must suffer'). Read the two together at Unit 17.",
+      "kind": "root"
     },
     {
       "id": "law-prophets",
@@ -149,7 +155,8 @@
           "note": "'this is the Law and the Prophets' — inclusio closed"
         }
       ],
-      "note": "Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed."
+      "note": "Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed.",
+      "kind": "root"
     },
     {
       "id": "little-faith",
@@ -178,7 +185,8 @@
           "ref": "16:8"
         }
       ],
-      "note": "Matthew's near-nickname for the disciples. Distinct from the centurion's pistis (Unit 8, a unit-local root)."
+      "note": "Matthew's near-nickname for the disciples. Distinct from the centurion's pistis (Unit 8, a unit-local root).",
+      "kind": "root"
     },
     {
       "id": "release",
@@ -203,7 +211,8 @@
           "note": "the fever's release points forward to the paralytic's forgiveness"
         }
       ],
-      "note": "Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness."
+      "note": "Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness.",
+      "kind": "root"
     },
     {
       "id": "build-rock",
@@ -224,7 +233,18 @@
           "note": "'on this rock I will build my assembly'"
         }
       ],
-      "note": "The wise builder on rock (7:24) points forward to Peter the rock (16:18)."
+      "note": "The wise builder on rock (7:24) points forward to Peter the rock (16:18).",
+      "kind": "motif",
+      "members": [
+        {
+          "translit": "oikodomeō",
+          "gloss": "build"
+        },
+        {
+          "translit": "petra",
+          "gloss": "rock"
+        }
+      ]
     },
     {
       "id": "wise-foolish",
@@ -245,7 +265,18 @@
           "note": "the wise and foolish virgins"
         }
       ],
-      "note": "The wise/foolish builder contrast (7:24-26) planted toward the ten virgins (25:2)."
+      "note": "The wise/foolish builder contrast (7:24-26) planted toward the ten virgins (25:2).",
+      "kind": "motif",
+      "members": [
+        {
+          "translit": "phronimos",
+          "gloss": "shrewd / wise"
+        },
+        {
+          "translit": "mōros",
+          "gloss": "foolish"
+        }
+      ]
     },
     {
       "id": "authority",
@@ -271,13 +302,14 @@
           "note": "'all authority has been given to me'"
         }
       ],
-      "note": "The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18)."
+      "note": "The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18).",
+      "kind": "root"
     },
     {
       "id": "throw",
       "root": "throw",
-      "translit": "ballō / ekballō",
-      "gloss": "throw / cast (out)",
+      "translit": "ballō",
+      "gloss": "throw / cast out",
       "color": "#a85520",
       "status": "open",
       "tagged": true,
@@ -286,7 +318,8 @@
         "ref": "8:6"
       },
       "payoffs": [],
-      "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later."
+      "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later.",
+      "kind": "root"
     },
     {
       "id": "shake",
@@ -310,7 +343,8 @@
           "ref": "28:2"
         }
       ],
-      "note": "The 'great seismos' on the sea (8:24) is the same word as the earthquakes at the cross and the tomb."
+      "note": "The 'great seismos' on the sea (8:24) is the same word as the earthquakes at the cross and the tomb.",
+      "kind": "root"
     },
     {
       "id": "torment",
@@ -331,7 +365,8 @@
           "note": "the demons: 'have you come to torment us before the time?'"
         }
       ],
-      "note": "Inclusio inside Unit 8 — the servant tormented by illness (8:6) and the demons fearing torment (8:29). Watch for eschatological torment later."
+      "note": "Inclusio inside Unit 8 — the servant tormented by illness (8:6) and the demons fearing torment (8:29). Watch for eschatological torment later.",
+      "kind": "root"
     },
     {
       "id": "urge",
@@ -352,7 +387,85 @@
           "note": "the demons beg, then the whole town begs him to leave"
         }
       ],
-      "note": "The centurion entreats (8:5), the demons entreat (8:31), the town entreats him to go (8:34) — the same verb bends from faith to rejection."
+      "note": "The centurion entreats (8:5), the demons entreat (8:31), the town entreats him to go (8:34) — the same verb bends from faith to rejection.",
+      "kind": "root"
+    },
+    {
+      "id": "emmanuel",
+      "root": "with",
+      "kind": "motif",
+      "translit": "meta / Emmanouēl",
+      "gloss": "with — God-with-us",
+      "members": [
+        {
+          "translit": "meta",
+          "gloss": "with"
+        },
+        {
+          "translit": "Emmanouēl",
+          "gloss": "\"God with us\""
+        }
+      ],
+      "color": "#8a3c70",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 1,
+        "ref": "1:23"
+      },
+      "payoffs": [
+        {
+          "unit": 28,
+          "ref": "28:20",
+          "note": "\"I am with y'all always\" — the inclusio closes"
+        }
+      ],
+      "note": "The Emmanuel inclusio: \"God with us\" (1:23) <-> \"I am with y'all always\" (28:20)."
+    },
+    {
+      "id": "son-of-man",
+      "root": "son-of-man",
+      "kind": "root",
+      "translit": "ho huios tou anthrōpou",
+      "gloss": "the Son of Man",
+      "color": "#3a4f8a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 8,
+        "ref": "8:20"
+      },
+      "payoffs": [
+        {
+          "unit": 17,
+          "ref": "16:13, 16:27"
+        },
+        {
+          "unit": 17,
+          "ref": "17:9, 17:22"
+        },
+        {
+          "unit": 19,
+          "ref": "19:28"
+        },
+        {
+          "unit": 20,
+          "ref": "20:18, 20:28"
+        },
+        {
+          "unit": 24,
+          "ref": "24:27-44"
+        },
+        {
+          "unit": 25,
+          "ref": "25:31"
+        },
+        {
+          "unit": 26,
+          "ref": "26:24, 26:64"
+        }
+      ],
+      "note": "Daniel 7:13-14 — one like a son of man given everlasting dominion. Runs from 8:20 to the trial and the parousia."
     }
   ]
 }
