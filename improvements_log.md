@@ -280,8 +280,10 @@
     with *no* matching CSS — rendered unstyled). Unit 6's two "Movement N · …"
     headers became pericopes keyed on their descriptive subtitle.
   - `matthew_study_style_reference.md` §3 + §4: `h3.pericope` spec + checklist.
-  - **Not yet addressed:** units 1–5 and 9 have no section dividers at all —
-    needs editorial titles authored (asked Lane).
+  - Units 1 (`div.sectionhead` ×2) and 3 (`div.panelhead` ×2) already had
+    dividers in other markup — converted at source + rebuilt.
+  - **Still open:** units 2, 4, 5, 9 have none — draft titles in
+    `pipeline/out/pericope-headings-proposal.md`, sent to Lane; apply on his ok.
 - "Show all notes" control (`app/spotlight.js` `addAllControl`): anchor was
   `.verses || firstVerse.parentElement`; in the v2 fragments (9, 10) there is no
   `.verses` wrapper so it fell to `article.before(bar)` — the bar rendered above

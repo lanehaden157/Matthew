@@ -43,8 +43,11 @@
   `article.before(bar)` when there's no `.verses` wrapper (units 9, 10). It now
   anchors just under the structural blocks / above the first section heading.
 - Asset version 27 → 28.
-- **Still open:** units 1–5 and 9 have no section dividers — asked Lane whether
-  to author pericope titles for them.
+- Units 1 & 3 had dividers in other markup (`div.sectionhead`, `div.panelhead`)
+  — converted at source, rebuilt, live.
+- **Still open:** units 2, 4, 5, 9 have no dividers. Lane chose "I draft, he
+  reviews"; drafts in `pipeline/out/pericope-headings-proposal.md`, sent to him.
+  Apply the approved set to fragments + source artifacts, then rebuild.
 
 ## Takeaways
 - The promoted candidates were already tagged in the artifact prose, so promotion
