@@ -43,3 +43,6 @@ Read this first. 3 lines max per session.
   cross (stauros, 10:38), lose (apollymi, 10:6), fear (phobeō, 10:26). Kept
   `worthy` local. Added unit-10 payoff refs to throw/authority/son-of-man/save/
   wise/nations/follow. build green — 10 units, 374 occurrences, 29 threads.
+- main.js hoistStructureBlocks(): all section.block (rings/tables/itineraries)
+  now render at the top of every unit, under the legend, before the translation.
+  App-side transform, fragments untouched. Asset version 26 → 27.

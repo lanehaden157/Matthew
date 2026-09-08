@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=26";
-import { enhanceSpotlights } from "./spotlight.js?v=26";
-import { renderSearch } from "./search.js?v=26";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=27";
+import { enhanceSpotlights } from "./spotlight.js?v=27";
+import { renderSearch } from "./search.js?v=27";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -231,6 +231,7 @@ async function loadUnit(unit, anchor) {
 
   content.innerHTML = html;
   renderPlacement(content, unit);
+  hoistStructureBlocks(content);
   const resolved = resolveUnit(unit);
   injectPalette(unit, resolved);
   rebuildLegend(content, resolved);
@@ -249,6 +250,24 @@ async function loadUnit(unit, anchor) {
     else content.scrollIntoView({ block: "start" });
   } else {
     content.scrollIntoView({ block: "start" });
+  }
+}
+
+/* Move every structural block (rings/chiasms, comparison tables, itineraries)
+   to the top of the unit, just under the colour key, keeping their authored
+   order. The research fragments drop these wherever they fall in the prose;
+   the site always shows them first, before the translation. */
+function hoistStructureBlocks(root) {
+  const article = root.querySelector("article.unit") || root;
+  const anchor =
+    article.querySelector("section.block.legend") ||
+    article.querySelector("header.mast");
+  if (!anchor || !anchor.parentNode) return;
+  let ref = anchor;
+  for (const b of article.querySelectorAll("section.block")) {
+    if (b.classList.contains("legend")) continue;
+    ref.after(b); // re-parents b to sit right after ref, in document order
+    ref = b;
   }
 }
 

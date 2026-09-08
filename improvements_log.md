@@ -268,6 +268,17 @@
   survive re-ports; U9 edits in its source artifact. build.py green — 9 units,
   every root resolves, no collisions. Threads: 22 → 24.
 
+## 2026-09-08 — structural blocks always render first
+- `app/main.js` `hoistStructureBlocks()` — on unit load, every
+  `section.block` (except the colour key) is moved to the top of the article,
+  just under the legend, in authored order. Rings/chiasms, comparison tables
+  (`table.exod`), and itineraries (`.itin`) now come before the translation in
+  every unit; the research fragments can keep dropping them wherever they fall
+  in the prose. Runs right after `renderPlacement`, before palette/legend/
+  spotlight wiring. Fragments untouched — pure app-side transform, like
+  spotlight.js. Visible change in units 4, 6, 10 (had blocks mid/after verses).
+- Asset version bumped 26 → 27 (index.html, main.js, search.js imports).
+
 ## 2026-09-08 — Unit 10 ported (Matt 9:35–11:1, Mission discourse)
 - `port_artifact.py 10` on `source-artifacts/matthew_10_translation.html` (v2
   fragment shape). Validated clean; merged into units.json (built:true), local

@@ -19,6 +19,18 @@
   `threads-digest.md` regenerated (29 threads).
 - Updated `session_index.md`, `improvements_log.md`, `CLAUDE.md` status.
 
+## Structural blocks moved to the top of every unit
+- Lane: "all of the charts and chiasm things in all units need to be at the
+  beginning, not in the middle or at the end."
+- `app/main.js` gained `hoistStructureBlocks()` — on unit load it moves every
+  `section.block` (rings/chiasms, `table.exod` comparison tables, `.itin`
+  itineraries), except the colour key, to just under the legend, keeping their
+  authored order. Pure app-side DOM transform (same pattern as `spotlight.js`);
+  no fragment edits, so it covers units 11–28 automatically.
+- Real visible change in Units 4, 6, 10 (each had blocks after verse content).
+  Units with all blocks already up top are unaffected (order preserved).
+- Asset version bumped 26 → 27.
+
 ## Takeaways
 - The promoted candidates were already tagged in the artifact prose, so promotion
   was pure `threads.json` + re-run — no retrofit-tags entries needed.
