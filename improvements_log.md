@@ -249,3 +249,21 @@
   deleted (one-shot, baked into units.json, referenced the removed taxonomy).
 - matthew_study_style_reference.md §1/§2/§3 updated: "Word-families" replaces
   "Motifs". build.py green.
+
+## 2026-09-07 — one lexical root per colour (retroactive)
+- Rule (style ref §1): a tracked root = one Greek stem + its same-stem forms
+  (`baptizō · baptisma`), never a theme/formula/bundle of distinct words. The
+  one exception: fixed titles/markers Matthew repeats verbatim (son-of-man,
+  son-of-david, law-prophets, apo-tote) — kept as threads.
+- Split: `wise-foolish` thread → `wise` (phronimos) + `foolish` (mōros);
+  `build-rock` → `build` (oikodomeō) + `rock` (petra). New hues foolish #5e1822,
+  rock #6b7280.
+- Trimmed to the head word: `wage` → misthos only (untag apechō "in full",
+  apodidōmi "pay back"); `seen` → theaomai only (untag phainō/aphanizō/blepō).
+- Dropped: `said` / `isay` / `yall` (U5 — rhetorical formulae, not roots),
+  `new-old` (U9 — one-passage wordplay; endnote already carries neos vs kainos).
+- Normalized `/` → `·` on same-stem translits (faith, mercy); `emmanuel`
+  translit → `meta`; `kingdom` → `basileia`.
+- Fragment edits via retrofit-tags.json (untag_word/retag_word/add) so they
+  survive re-ports; U9 edits in its source artifact. build.py green — 9 units,
+  every root resolves, no collisions. Threads: 22 → 24.

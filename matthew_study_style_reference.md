@@ -31,10 +31,22 @@ this file before building each unit's artifact.
 
 ## 1. Colour for recurring roots — declare, don't paint
 
+**A tracked root is exactly one Greek lexical root** — one stem, with all its inflected
+forms and same-stem derivatives (verb + noun + adjective off that stem: `baptizō` /
+`baptisma`, `krinō` / `krima`, `pistis` / `pisteuō`). It is **not** a theme, a formula, or
+a bundle of different words that happen to rhyme semantically. `misthos` is a root;
+"the reward economy" (misthos + apechō + apodidōmi) is not. `phōs` is a root;
+"wise vs. foolish" (phronimos + mōros) is two roots, not one. If you catch yourself
+grouping distinct lexemes under one colour because they share a *point*, stop — track the
+one that carries the most weight and recurs, or track each separately. Fixed titles and
+structural formulae Matthew repeats verbatim (*ho huios tou anthrōpou*, *apo tote*, *ho
+nomos kai hoi prophētai*) are the one allowed exception, and they live in `threads.json`,
+not in a unit's local roots.
+
 Within a unit, pick the roots worth tracing (a Greek root that recurs and is doing
-theological or structural work). For each one, decide the **transliteration** and a
-**plain-English gloss**. That's it — **do not choose a colour, do not write a `<style>`
-block, do not invent `--c-*` vars.**
+theological or structural work). For each one, decide the **transliteration** (list the
+same-stem forms with `·`, e.g. `gennaō · genesis`) and a **plain-English gloss**. That's
+it — **do not choose a colour, do not write a `<style>` block, do not invent `--c-*` vars.**
 
 - List every tracked root in the `unit-meta` block's `roots` array (§2).
 - Tag each occurrence in the prose as `<span class="r" data-root="X">word</span>`, where
@@ -50,13 +62,12 @@ block, do not invent `--c-*` vars.**
 - A `data-root` that resolves to no colour anywhere is a hard verify failure — so every
   slug you tag **must** appear either in `threads-digest.md` or in the `roots` array.
 
-### Word-families
+### Same-stem forms
 
-Everything tracked is a plain **root** — there is no separate "motif" tier. If you're
-tracing a small family together (e.g. `misthos / apechō / apodidōmi` as "the reward
-economy"), it's still one `roots` entry with one `data-root` slug: put the family in the
-`translit` string (`"misthos / apechō / apodidōmi"`) and a summary in `gloss`. Tag every
-occurrence, whichever family member it is, with that one slug.
+There is no "motif" tier — everything tracked is one lexical root. A root's `translit`
+lists its same-stem forms joined by `·` (`baptizō · baptisma`, `pistis · pisteuō`,
+`eleos · eleeō`); tag every form with the one slug. Different words are different roots
+(or not tracked) — see §1.
 
 ---
 
@@ -75,9 +86,8 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
   "descriptor": "the second triad, and what following costs",
   "discourse": false,
   "roots": [
-    { "root": "faith",   "translit": "pistis / pisteuō",  "gloss": "trust, entrust oneself" },
-    { "root": "forgive", "translit": "aphiēmi",           "gloss": "let go, release, forgive" },
-    { "root": "rise",    "translit": "egeirō / anistēmi",  "gloss": "get up, be raised (either verb)" }
+    { "root": "faith",   "translit": "pistis · pisteuō",  "gloss": "trust, entrust oneself" },
+    { "root": "forgive", "translit": "aphiēmi",           "gloss": "let go, release, forgive" }
   ],
   "threads": {
     "opens":   [],
@@ -108,7 +118,7 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
 | `unit` | ✓ | unit number (int) |
 | `passage` | ✓ | e.g. `"Matthew 9:1–34"` |
 | `title` | ✓ | working title from the Unit Map (§7), refined if needed |
-| `roots` | ✓ | every tracked root: `{root, translit, gloss}`. **No colour.** A word-family is one root — bundle it in `translit`. |
+| `roots` | ✓ | every tracked root: `{root, translit, gloss}`. **No colour.** One Greek lexical root each — same-stem forms joined by `·` in `translit`; never a bundle of different words (§1). |
 | `threads` | ✓ | `{opens, payoffs, candidates}` — see below |
 | `slug` | — | `"unit-09"`; derived if omitted |
 | `movement` | — | 1 / 2 / 3; looked up from the Unit Map if omitted |
@@ -245,6 +255,7 @@ if you must, the porter tags it `lab-word` so CSS can shrink it.
 - [ ] Plural "you" → **"y'all"** everywhere in the translation.
 - [ ] `ouranos` → **"sky / skies"**, never "heaven / heavens", in the study's own wording (verse text, glosses, diagrams). Verbatim NASB / Hart / Lattimore quotations keep their own wording.
 - [ ] Same Greek root → same English root across verses, even when repetitive.
+- [ ] Every `roots` entry is **one** Greek lexical root (same-stem forms only) — no themes, no formulae, no bundles of different words (§1).
 - [ ] On first use of a tracked term *in this unit*, give transliteration + gloss; reintroduce the gloss even if a prior unit already had it — nothing carries over.
 - [ ] Verses read on their own; glosses, notes, compare boxes are additive, never load-bearing.
 - [ ] Compare box only at genuinely contested verses; include NASB, bring in Hart / Lattimore where their rendering is provocative.

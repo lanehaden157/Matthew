@@ -55,7 +55,9 @@ Follow `matthew_study_style_reference.md` in full. Specifically, the artifact mu
 - **One `<article class="unit" data-unit="N">` and nothing else** — no `<!doctype>`,
   `<html>`, `<head>`, `<body>`, `<style>`, `<link>`. (§2)
 - **Opened by a valid `<script type="application/json" id="unit-meta">` block** carrying
-  `unit`, `passage`, `title`, `roots` (each `{root, translit, gloss}`, **no colour**), and
+  `unit`, `passage`, `title`, `roots` (each `{root, translit, gloss}`, **no colour**, and
+  each **one Greek lexical root** — same-stem forms only, never a theme or a bundle of
+  different words; see style reference §1), and
   `threads` (`opens` / `payoffs` referencing `threads-digest.md` ids, plus `candidates` for
   roots worth promoting). (§2)
 - **Colour-coded only via `<span class="r" data-root="X">` / `class="rl"`** — no class names

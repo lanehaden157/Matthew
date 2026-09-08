@@ -211,48 +211,6 @@
       "note": "Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness."
     },
     {
-      "id": "build-rock",
-      "root": "build",
-      "translit": "oikodomeō / petra",
-      "gloss": "build / rock",
-      "color": "#6b5f4f",
-      "status": "open",
-      "tagged": true,
-      "opens": {
-        "unit": 7,
-        "ref": "7:24"
-      },
-      "payoffs": [
-        {
-          "unit": 16,
-          "ref": "16:18",
-          "note": "'on this rock I will build my assembly'"
-        }
-      ],
-      "note": "The wise builder on rock (7:24) points forward to Peter the rock (16:18)."
-    },
-    {
-      "id": "wise-foolish",
-      "root": "wise-foolish",
-      "translit": "phronimos / mōros",
-      "gloss": "wise vs. foolish",
-      "color": "#a83e6b",
-      "status": "open",
-      "tagged": true,
-      "opens": {
-        "unit": 7,
-        "ref": "7:24-26"
-      },
-      "payoffs": [
-        {
-          "unit": 25,
-          "ref": "25:2",
-          "note": "the wise and foolish virgins"
-        }
-      ],
-      "note": "The wise/foolish builder contrast (7:24-26) planted toward the ten virgins (25:2)."
-    },
-    {
       "id": "authority",
       "root": "authority",
       "translit": "exousia",
@@ -373,8 +331,8 @@
     {
       "id": "emmanuel",
       "root": "with",
-      "translit": "meta / Emmanouēl",
-      "gloss": "with — God-with-us",
+      "translit": "meta",
+      "gloss": "with — God-with-us (meta / Emmanouēl at 1:23)",
       "color": "#8a3c70",
       "status": "open",
       "tagged": true,
@@ -475,7 +433,7 @@
     {
       "id": "mercy",
       "root": "mercy",
-      "translit": "eleos / eleeō",
+      "translit": "eleos · eleeō",
       "gloss": "loyal-love, covenant-kindness",
       "color": "#2f6db3",
       "status": "open",
@@ -556,6 +514,96 @@
         }
       ],
       "note": "kraspedon — the tzitzit of Numbers 15:38. Touched in faith and healing at 9:20 and 14:36; worn for display at 23:5."
+    },
+    {
+      "id": "wise",
+      "root": "wise",
+      "translit": "phronimos",
+      "gloss": "shrewd / prudent",
+      "color": "#a83e6b",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 7,
+        "ref": "7:24"
+      },
+      "payoffs": [
+        {
+          "unit": 24,
+          "ref": "24:45"
+        },
+        {
+          "unit": 25,
+          "ref": "25:2, 4, 8-9"
+        }
+      ],
+      "note": "The shrewd builder on rock (7:24); the faithful and shrewd slave (24:45); the five shrewd virgins (25:2)."
+    },
+    {
+      "id": "foolish",
+      "root": "foolish",
+      "translit": "mōros",
+      "gloss": "foolish / dull",
+      "color": "#5e1822",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 7,
+        "ref": "7:26"
+      },
+      "payoffs": [
+        {
+          "unit": 23,
+          "ref": "23:17"
+        },
+        {
+          "unit": 25,
+          "ref": "25:2, 3, 8"
+        }
+      ],
+      "note": "The foolish builder on sand (7:26); 'fools and blind' (23:17); the five foolish virgins (25:2)."
+    },
+    {
+      "id": "build",
+      "root": "build",
+      "translit": "oikodomeō",
+      "gloss": "build",
+      "color": "#6b5f4f",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 7,
+        "ref": "7:24"
+      },
+      "payoffs": [
+        {
+          "unit": 16,
+          "ref": "16:18",
+          "note": "'on this rock I will build my assembly'"
+        }
+      ],
+      "note": "The wise builder builds on rock (7:24) -> 'I will build my assembly' (16:18)."
+    },
+    {
+      "id": "rock",
+      "root": "rock",
+      "translit": "petra",
+      "gloss": "rock (bedrock)",
+      "color": "#6b7280",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 7,
+        "ref": "7:24-25"
+      },
+      "payoffs": [
+        {
+          "unit": 16,
+          "ref": "16:18",
+          "note": "'on this rock' — Petros / petra"
+        }
+      ],
+      "note": "The house founded on petra (7:24-25) -> Peter the rock (16:18). Distinct from Petros, the name."
     }
   ]
 }

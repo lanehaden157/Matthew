@@ -231,7 +231,7 @@
         },
         "kingdom": {
           "color": "#9c2f8f",
-          "translit": "basileia (tōn ouranōn)",
+          "translit": "basileia",
           "gloss": "kingdom of the skies"
         },
         "repent": {
@@ -351,23 +351,13 @@
         },
         "kingdom": {
           "color": "#9c2f8f",
-          "translit": "basileia tōn ouranōn",
+          "translit": "basileia",
           "gloss": "kingdom of the skies"
         },
         "father": {
           "color": "#1c7d70",
           "translit": "patēr",
           "gloss": "Father"
-        },
-        "said": {
-          "color": "#2f6db3",
-          "translit": "ēkousate / errethē",
-          "gloss": "\"you heard / it was said\""
-        },
-        "isay": {
-          "color": "#a8324a",
-          "translit": "egō de legō hymin",
-          "gloss": "but I say to y'all"
         },
         "whole": {
           "color": "#5a3fa0",
@@ -383,11 +373,6 @@
           "color": "#7a5a10",
           "translit": "ponēros",
           "gloss": "evil / the evil one"
-        },
-        "yall": {
-          "color": "#3f7d3a",
-          "translit": "hymeis este",
-          "gloss": "y'all are (emphatic)"
         }
       }
     },
@@ -401,8 +386,8 @@
       "roots": {
         "wage": {
           "color": "#a8324a",
-          "translit": "misthos / apechō / apodidōmi",
-          "gloss": "the reward economy"
+          "translit": "misthos",
+          "gloss": "wage / reward"
         },
         "father": {
           "color": "#2f6db3",
@@ -416,8 +401,8 @@
         },
         "seen": {
           "color": "#1596b8",
-          "translit": "theaomai / phainō / aphanizō / blepō",
-          "gloss": "seen / unseen"
+          "translit": "theaomai",
+          "gloss": "seen / gazed at (for show)"
         },
         "treasure": {
           "color": "#8a6a2a",
@@ -426,8 +411,8 @@
         },
         "release": {
           "color": "#6b2fb3",
-          "translit": "aphiēmi / opheilēma / paraptōma",
-          "gloss": "release · debt · false step"
+          "translit": "aphiēmi",
+          "gloss": "release / let go"
         },
         "anxious": {
           "color": "#3f7d3a",
@@ -491,8 +476,8 @@
         },
         "build": {
           "color": "#8a6a2a",
-          "translit": "oikodomeō / petra",
-          "gloss": "build, rock"
+          "translit": "oikodomeō",
+          "gloss": "build"
         },
         "eye": {
           "color": "#2f6db3",
@@ -581,13 +566,8 @@
       "roots": {
         "faith": {
           "color": "#a8324a",
-          "translit": "pistis / pisteuō",
+          "translit": "pistis · pisteuō",
           "gloss": "trust, entrust oneself"
-        },
-        "new-old": {
-          "color": "#8a6a2a",
-          "translit": "kainos / neos / palaios",
-          "gloss": "new-in-kind / new-in-time / worn out by use"
         }
       }
     },
