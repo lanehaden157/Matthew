@@ -45,7 +45,7 @@ Generated from `data/threads.json` (version 1). 25 threads, 24 open.
 - **`fringe`**: kraspedon — the tzitzit of Numbers 15:38. Touched in faith and healing at 9:20 and 14:36; worn for display at 23:5.
 - **`law-prophets`**: Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed.
 - **`light`**: Isa 9 light dawns on the people (4:16) -> 'y'all are the light of the world' (5:14). Watch the light/dark pair across the 4/5 seam.
-- **`little-faith`**: Matthew's near-nickname for the disciples. Distinct from the centurion's pistis (Unit 8, a unit-local root).
+- **`little-faith`**: Matthew's near-nickname for the disciples (oligopistoi). Distinct from the `faith` thread (pistis, the centurion's) — different word, own colour.
 - **`mercy`**: Hosea 6:6 (eleos = LXX for hesed, covenant loyalty, not mere pity): 'I want loyal-love and not sacrifice.' Cited at 9:13, repeated at 12:7, cried out at 9:27.
 - **`nations`**: 'Galilee of the nations' (4:15) -> 'make disciples of all the nations' (28:19). One leg of the Emmanuel/nations frame around the whole book.
 - **`release`**: Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness.
