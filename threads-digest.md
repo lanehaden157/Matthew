@@ -31,25 +31,25 @@ Generated from `data/threads.json` (version 1). 22 threads, 21 open.
 
 ## Notes per thread
 
-- **`apo-tote`** (root): Two 'from that time' hinges: 4:17 ('began to proclaim') <-> 16:21 ('began to show he must suffer'). Read the two together at Unit 17.
-- **`authority`** (root): The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18).
-- **`build-rock`** (motif) — members: oikodomeō (build), petra (rock): The wise builder on rock (7:24) points forward to Peter the rock (16:18).
-- **`emmanuel`** (motif) — members: meta (with), Emmanouēl ("God with us"): The Emmanuel inclusio: "God with us" (1:23) <-> "I am with y'all always" (28:20).
-- **`fish`** (root): 'Fishers of men' (4:19) carries OT judgement freight (Jer 16:16; Hab 1; Amos 4; Ezek 29) in tension with gathering-for-restoration.
-- **`follow`** (root): Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on.
-- **`fringe`** (root): kraspedon — the tzitzit of Numbers 15:38. Touched in faith and healing at 9:20 and 14:36; worn for display at 23:5.
-- **`law-prophets`** (root): Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed.
-- **`light`** (root): Isa 9 light dawns on the people (4:16) -> 'y'all are the light of the world' (5:14). Watch the light/dark pair across the 4/5 seam.
-- **`little-faith`** (root): Matthew's near-nickname for the disciples. Distinct from the centurion's pistis (Unit 8, a unit-local root).
-- **`mercy`** (root): Hosea 6:6 (eleos = LXX for hesed, covenant loyalty, not mere pity): 'I want loyal-love and not sacrifice.' Cited at 9:13, repeated at 12:7, cried out at 9:27.
-- **`nations`** (root): 'Galilee of the nations' (4:15) -> 'make disciples of all the nations' (28:19). One leg of the Emmanuel/nations frame around the whole book.
-- **`release`** (root): Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness.
-- **`save`** (root): sōzō — 'he will save his people from their sins' (1:21) carries a heal/rescue double sense Matthew never forces apart, running to the irony at the cross.
-- **`sea`** (root): Sea/Galilee geography in Unit 4; in Unit 8 the sea becomes a chaos-and-authority stage.
-- **`shake`** (root): The 'great seismos' on the sea (8:24) is the same word as the earthquakes at the cross and the tomb.
-- **`son-of-david`** (root): First direct address at 9:27, always a cry from the desperate and always tied to healing — the 'therapeutic Son of David' pattern. Runs to the entry and the temple (21:9, 15).
-- **`son-of-man`** (root): Daniel 7:13-14 — one like a son of man given everlasting dominion. Runs from 8:20 to the trial and the parousia.
-- **`throw`** (root): Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later.
-- **`torment`** (root): Inclusio inside Unit 8 — the servant tormented by illness (8:6) and the demons fearing torment (8:29). Watch for eschatological torment later.
-- **`urge`** (root): The centurion entreats (8:5), the demons entreat (8:31), the town entreats him to go (8:34) — the same verb bends from faith to rejection.
-- **`wise-foolish`** (motif) — members: phronimos (shrewd / wise), mōros (foolish): The wise/foolish builder contrast (7:24-26) planted toward the ten virgins (25:2).
+- **`apo-tote`**: Two 'from that time' hinges: 4:17 ('began to proclaim') <-> 16:21 ('began to show he must suffer'). Read the two together at Unit 17.
+- **`authority`**: The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18).
+- **`build-rock`**: The wise builder on rock (7:24) points forward to Peter the rock (16:18).
+- **`emmanuel`**: The Emmanuel inclusio: "God with us" (1:23) <-> "I am with y'all always" (28:20).
+- **`fish`**: 'Fishers of men' (4:19) carries OT judgement freight (Jer 16:16; Hab 1; Amos 4; Ezek 29) in tension with gathering-for-restoration.
+- **`follow`**: Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on.
+- **`fringe`**: kraspedon — the tzitzit of Numbers 15:38. Touched in faith and healing at 9:20 and 14:36; worn for display at 23:5.
+- **`law-prophets`**: Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed.
+- **`light`**: Isa 9 light dawns on the people (4:16) -> 'y'all are the light of the world' (5:14). Watch the light/dark pair across the 4/5 seam.
+- **`little-faith`**: Matthew's near-nickname for the disciples. Distinct from the centurion's pistis (Unit 8, a unit-local root).
+- **`mercy`**: Hosea 6:6 (eleos = LXX for hesed, covenant loyalty, not mere pity): 'I want loyal-love and not sacrifice.' Cited at 9:13, repeated at 12:7, cried out at 9:27.
+- **`nations`**: 'Galilee of the nations' (4:15) -> 'make disciples of all the nations' (28:19). One leg of the Emmanuel/nations frame around the whole book.
+- **`release`**: Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness.
+- **`save`**: sōzō — 'he will save his people from their sins' (1:21) carries a heal/rescue double sense Matthew never forces apart, running to the irony at the cross.
+- **`sea`**: Sea/Galilee geography in Unit 4; in Unit 8 the sea becomes a chaos-and-authority stage.
+- **`shake`**: The 'great seismos' on the sea (8:24) is the same word as the earthquakes at the cross and the tomb.
+- **`son-of-david`**: First direct address at 9:27, always a cry from the desperate and always tied to healing — the 'therapeutic Son of David' pattern. Runs to the entry and the temple (21:9, 15).
+- **`son-of-man`**: Daniel 7:13-14 — one like a son of man given everlasting dominion. Runs from 8:20 to the trial and the parousia.
+- **`throw`**: Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later.
+- **`torment`**: Inclusio inside Unit 8 — the servant tormented by illness (8:6) and the demons fearing torment (8:29). Watch for eschatological torment later.
+- **`urge`**: The centurion entreats (8:5), the demons entreat (8:31), the town entreats him to go (8:34) — the same verb bends from faith to rejection.
+- **`wise-foolish`**: The wise/foolish builder contrast (7:24-26) planted toward the ten virgins (25:2).

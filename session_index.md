@@ -25,5 +25,8 @@ Read this first. 3 lines max per session.
   refresh_meta.py, threads_digest.py; folded into build.py.
 - Units 1–8 re-normalized = meta block only, zero prose/tag change.
 - Unit 9 ported (first v2 artifact) — clean after a porter hue-collision fix.
-  Promoted son-of-david / mercy / save / fringe to threads.json. build green,
-  9 units. Next: Unit 10 (9:35–11:1, the Mission discourse).
+  Promoted son-of-david / mercy / save / fringe to threads.json. build green.
+- Dropped the motif tier entirely (Lane's call) — every tracked item is a plain
+  root now; word-families bundle in the translit string. Stripped kind/members
+  from data + fragments + app/threads.js + css + style reference; deleted
+  apply_taxonomy.py. Next: Unit 10 (9:35–11:1, the Mission discourse).

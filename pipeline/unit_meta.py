@@ -14,9 +14,10 @@ Shape:
   movement   int      1 | 2 | 3            (optional; looked up from units.json)
   descriptor str      masthead tail line   (optional)
   discourse  bool     (optional)
-  roots      [ {root, translit, gloss, kind?, members?} ]
-             every coloured root the unit tracks — translit + gloss ONLY.
-             NO colour. kind defaults to "root"; "motif" may carry members.
+  roots      [ {root, translit, gloss} ]
+             every coloured root the unit tracks — translit + gloss ONLY, NO
+             colour. A root whose translit bundles a small word-family
+             ("misthos / apechō / apodidōmi") is still one root, one slug.
   threads    { opens:[{id,ref}], payoffs:[{id,ref}], candidates:[{root,why}] }
              opens/payoffs reference threads.json ids; candidates PROPOSE new
              threads and are surfaced for Lane, never written automatically.
@@ -107,8 +108,9 @@ def validate(meta, threads_json=None):
                         "declare translit + gloss only")
         if not re.fullmatch(r"[a-z0-9-]+", r.get("root", "x")):
             errs.append(f"{where}: root '{r.get('root')}' must be [a-z0-9-]")
-        if r.get("kind", "root") not in ("root", "motif"):
-            errs.append(f"{where}: kind must be 'root' or 'motif'")
+        if "kind" in r or "members" in r:
+            errs.append(f"{where}: 'kind'/'members' are gone — every tracked "
+                        "item is a plain root now")
 
     th = meta.get("threads", {}) or {}
     for key in ("opens", "payoffs", "candidates"):
@@ -158,14 +160,9 @@ def generate(n, units_json=None, threads_json=None, occurrences_json=None):
         # either a tracked thread or actually carry translit/gloss
         if name not in thread_roots and not (e.get("translit") or e.get("gloss")):
             continue
-        entry = {"root": name,
-                 "translit": e.get("translit", ""),
-                 "gloss": e.get("gloss", "")}
-        if e.get("kind", "root") != "root":
-            entry["kind"] = e["kind"]
-        if e.get("members"):
-            entry["members"] = e["members"]
-        roots.append(entry)
+        roots.append({"root": name,
+                      "translit": e.get("translit", ""),
+                      "gloss": e.get("gloss", "")})
     roots.sort(key=lambda r: r["root"])
 
     opens, payoffs = _threads_touching(threads_json, n)

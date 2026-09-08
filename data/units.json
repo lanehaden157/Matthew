@@ -72,44 +72,37 @@
         "beget": {
           "color": "#a8324a",
           "translit": "gennaō · genesis",
-          "gloss": "beget (γεν-)",
-          "kind": "root"
+          "gloss": "beget (γεν-)"
         },
         "name": {
           "color": "#1c7d70",
           "translit": "onoma",
-          "gloss": "name",
-          "kind": "root"
+          "gloss": "name"
         },
         "save": {
           "color": "#c0641a",
           "translit": "sōzō",
-          "gloss": "save",
-          "kind": "root"
+          "gloss": "save"
         },
         "spirit": {
           "color": "#4a4f93",
           "translit": "pneuma hagion",
-          "gloss": "Holy Spirit",
-          "kind": "root"
+          "gloss": "Holy Spirit"
         },
         "dream": {
           "color": "#2f6db3",
           "translit": "onar",
-          "gloss": "dream",
-          "kind": "root"
+          "gloss": "dream"
         },
         "david": {
           "color": "#8a6a2a",
           "translit": "Dauid",
-          "gloss": "David",
-          "kind": "root"
+          "gloss": "David"
         },
         "call": {
           "color": "#9c2f8f",
           "translit": "kaleō",
-          "gloss": "call",
-          "kind": "root"
+          "gloss": "call"
         }
       }
     },
@@ -124,68 +117,57 @@
         "beget": {
           "color": "#a8324a",
           "translit": "gennaō · genesis",
-          "gloss": "beget (γεν-)",
-          "kind": "root"
+          "gloss": "beget (γεν-)"
         },
         "name": {
           "color": "#1c7d70",
           "translit": "kaleō",
-          "gloss": "call",
-          "kind": "root"
+          "gloss": "call"
         },
         "call": {
           "color": "#1c7d70",
           "translit": "kaleō",
-          "gloss": "call",
-          "kind": "root"
+          "gloss": "call"
         },
         "save": {
           "color": "#c0641a",
           "translit": "Iēsous",
-          "gloss": "Jesus / \"saves",
-          "kind": "root"
+          "gloss": "Jesus / \"saves"
         },
         "dream": {
           "color": "#2f6db3",
           "translit": "onar",
-          "gloss": "dream",
-          "kind": "root"
+          "gloss": "dream"
         },
         "david": {
           "color": "#8a6a2a",
           "translit": "basileus",
-          "gloss": "king",
-          "kind": "root"
+          "gloss": "king"
         },
         "king": {
           "color": "#8a6a2a",
           "translit": "basileus",
-          "gloss": "king",
-          "kind": "root"
+          "gloss": "king"
         },
         "worship": {
           "color": "#6b2fb3",
           "translit": "proskyneō",
-          "gloss": "worship / prostrate",
-          "kind": "root"
+          "gloss": "worship / prostrate"
         },
         "child": {
           "color": "#3f7d3a",
           "translit": "paidion",
-          "gloss": "the child",
-          "kind": "root"
+          "gloss": "the child"
         },
         "fulfill": {
           "color": "#455a6b",
           "translit": "plēroō",
-          "gloss": "fill full",
-          "kind": "root"
+          "gloss": "fill full"
         },
         "withdraw": {
           "color": "#9c4f1c",
           "translit": "anachōreō",
-          "gloss": "withdraw",
-          "kind": "root"
+          "gloss": "withdraw"
         }
       }
     },
@@ -200,116 +182,97 @@
         "beget": {
           "color": "#a8324a",
           "translit": "gennaō · genesis",
-          "gloss": "beget (γεν-)",
-          "kind": "root"
+          "gloss": "beget (γεν-)"
         },
         "name": {
           "color": "#1c7d70",
           "translit": "onoma",
-          "gloss": "name",
-          "kind": "root"
+          "gloss": "name"
         },
         "save": {
           "color": "#c0641a",
           "translit": "sōzō",
-          "gloss": "save",
-          "kind": "root"
+          "gloss": "save"
         },
         "spirit": {
           "color": "#4a4f93",
           "translit": "pneuma",
-          "gloss": "Spirit",
-          "kind": "root"
+          "gloss": "Spirit"
         },
         "dream": {
           "color": "#2f6db3",
           "translit": "onar",
-          "gloss": "dream",
-          "kind": "root"
+          "gloss": "dream"
         },
         "david": {
           "color": "#8a6a2a",
           "translit": "Dauid",
-          "gloss": "David",
-          "kind": "root"
+          "gloss": "David"
         },
         "worship": {
           "color": "#6b2fb3",
           "translit": "proskyneō",
-          "gloss": "worship / prostrate",
-          "kind": "root"
+          "gloss": "worship / prostrate"
         },
         "child": {
           "color": "#3f7d3a",
           "translit": "paidion",
-          "gloss": "the child",
-          "kind": "root"
+          "gloss": "the child"
         },
         "fulfill": {
           "color": "#455a6b",
           "translit": "plēroō",
-          "gloss": "fill full / fulfill",
-          "kind": "root"
+          "gloss": "fill full / fulfill"
         },
         "withdraw": {
           "color": "#9c4f1c",
           "translit": "anachōreō",
-          "gloss": "withdraw",
-          "kind": "root"
+          "gloss": "withdraw"
         },
         "kingdom": {
           "color": "#9c2f8f",
           "translit": "basileia (tōn ouranōn)",
-          "gloss": "kingdom of the skies",
-          "kind": "root"
+          "gloss": "kingdom of the skies"
         },
         "repent": {
           "color": "#1f8f5f",
           "translit": "metanoeō · metanoia",
-          "gloss": "repent (μετανο-)",
-          "kind": "root"
+          "gloss": "repent (μετανο-)"
         },
         "immerse": {
           "color": "#0e8aa0",
           "translit": "baptizō · baptisma",
-          "gloss": "immerse (βαπτ-)",
-          "kind": "root"
+          "gloss": "immerse (βαπτ-)"
         },
         "wilderness": {
           "color": "#8a7a4a",
           "translit": "erēmos",
-          "gloss": "wilderness",
-          "kind": "root"
+          "gloss": "wilderness"
         },
         "test": {
           "color": "#7a2230",
           "translit": "peirazō",
-          "gloss": "test",
-          "kind": "root"
+          "gloss": "test"
         },
         "son": {
           "color": "#c0285f",
           "translit": "huios",
-          "gloss": "Son",
-          "kind": "root"
+          "gloss": "Son"
         },
         "right": {
           "color": "#b07a1e",
           "translit": "dikaiosynē",
-          "gloss": "righteousness",
-          "kind": "root"
+          "gloss": "righteousness"
         },
         "slanderer": {
           "color": "#4a1c2a",
           "translit": "diabolos",
-          "gloss": "the slanderer",
-          "kind": "root"
+          "gloss": "the slanderer"
         },
         "call": {
           "color": "#9c2f8f",
           "translit": "kaleō",
-          "gloss": "call",
-          "kind": "root"
+          "gloss": "call"
         }
       }
     },
@@ -324,62 +287,52 @@
         "light": {
           "color": "#bd8b16",
           "translit": "phōs",
-          "gloss": "light",
-          "kind": "root"
+          "gloss": "light"
         },
         "dark": {
           "color": "#455a6b",
           "translit": "skotia",
-          "gloss": "darkness",
-          "kind": "root"
+          "gloss": "darkness"
         },
         "withdraw": {
           "color": "#9c4f1c",
           "translit": "anachōreō",
-          "gloss": "withdraw",
-          "kind": "root"
+          "gloss": "withdraw"
         },
         "kingdom": {
           "color": "#9c2f8f",
           "translit": "basileia",
-          "gloss": "kingdom",
-          "kind": "root"
+          "gloss": "kingdom"
         },
         "proclaim": {
           "color": "#1c7d70",
           "translit": "kēryssō",
-          "gloss": "proclaim, herald",
-          "kind": "root"
+          "gloss": "proclaim, herald"
         },
         "follow": {
           "color": "#3f7d3a",
           "translit": "akoloutheō",
-          "gloss": "follow",
-          "kind": "root"
+          "gloss": "follow"
         },
         "fish": {
           "color": "#4a4f93",
           "translit": "halieus",
-          "gloss": "fisher",
-          "kind": "root"
+          "gloss": "fisher"
         },
         "sea": {
           "color": "#0e8aa0",
           "translit": "thalassa",
-          "gloss": "sea",
-          "kind": "root"
+          "gloss": "sea"
         },
         "beget": {
           "color": "#a8324a",
           "translit": "gennaō · genesis",
-          "gloss": "beget (γεν-)",
-          "kind": "root"
+          "gloss": "beget (γεν-)"
         },
         "shadow": {
           "color": "#6b7280",
           "translit": "skia",
-          "gloss": "shadow",
-          "kind": "root"
+          "gloss": "shadow"
         }
       }
     },
@@ -394,66 +347,47 @@
         "righteous": {
           "color": "#b07a1e",
           "translit": "dikaiosynē",
-          "gloss": "righteousness",
-          "kind": "root"
+          "gloss": "righteousness"
         },
         "kingdom": {
           "color": "#9c2f8f",
           "translit": "basileia tōn ouranōn",
-          "gloss": "kingdom of the skies",
-          "kind": "root"
+          "gloss": "kingdom of the skies"
         },
         "father": {
           "color": "#1c7d70",
           "translit": "patēr",
-          "gloss": "Father",
-          "kind": "root"
+          "gloss": "Father"
         },
         "said": {
           "color": "#2f6db3",
           "translit": "ēkousate / errethē",
-          "gloss": "\"you heard / it was said\"",
-          "kind": "motif",
-          "members": [
-            {
-              "translit": "ēkousate",
-              "gloss": "you heard"
-            },
-            {
-              "translit": "errethē",
-              "gloss": "it was said"
-            }
-          ]
+          "gloss": "\"you heard / it was said\""
         },
         "isay": {
           "color": "#a8324a",
           "translit": "egō de legō hymin",
-          "gloss": "but I say to y'all",
-          "kind": "root"
+          "gloss": "but I say to y'all"
         },
         "whole": {
           "color": "#5a3fa0",
           "translit": "holos",
-          "gloss": "whole",
-          "kind": "root"
+          "gloss": "whole"
         },
         "gehenna": {
           "color": "#5e1822",
           "translit": "geenna",
-          "gloss": "Gehenna",
-          "kind": "root"
+          "gloss": "Gehenna"
         },
         "evil": {
           "color": "#7a5a10",
           "translit": "ponēros",
-          "gloss": "evil / the evil one",
-          "kind": "root"
+          "gloss": "evil / the evil one"
         },
         "yall": {
           "color": "#3f7d3a",
           "translit": "hymeis este",
-          "gloss": "y'all are (emphatic)",
-          "kind": "root"
+          "gloss": "y'all are (emphatic)"
         }
       }
     },
@@ -468,88 +402,47 @@
         "wage": {
           "color": "#a8324a",
           "translit": "misthos / apechō / apodidōmi",
-          "gloss": "the reward economy",
-          "kind": "motif",
-          "members": [
-            {
-              "translit": "misthos",
-              "gloss": "wage / reward"
-            },
-            {
-              "translit": "apechō",
-              "gloss": "have in full"
-            },
-            {
-              "translit": "apodidōmi",
-              "gloss": "pay back"
-            }
-          ]
+          "gloss": "the reward economy"
         },
         "father": {
           "color": "#2f6db3",
           "translit": "patēr",
-          "gloss": "Father",
-          "kind": "root"
+          "gloss": "Father"
         },
         "hidden": {
           "color": "#455a6b",
           "translit": "kryptos · kryphaios",
-          "gloss": "hidden (κρυπτ-)",
-          "kind": "root"
+          "gloss": "hidden (κρυπτ-)"
         },
         "seen": {
           "color": "#1596b8",
           "translit": "theaomai / phainō / aphanizō / blepō",
-          "gloss": "seen / unseen",
-          "kind": "motif",
-          "members": [
-            {
-              "translit": "theaomai",
-              "gloss": "be gazed at"
-            },
-            {
-              "translit": "phainō",
-              "gloss": "appear"
-            },
-            {
-              "translit": "aphanizō",
-              "gloss": "make vanish"
-            },
-            {
-              "translit": "blepō",
-              "gloss": "see"
-            }
-          ]
+          "gloss": "seen / unseen"
         },
         "treasure": {
           "color": "#8a6a2a",
           "translit": "thēsauros · thēsaurizō",
-          "gloss": "treasure (θησαυρ-)",
-          "kind": "root"
+          "gloss": "treasure (θησαυρ-)"
         },
         "release": {
           "color": "#6b2fb3",
           "translit": "aphiēmi / opheilēma / paraptōma",
-          "gloss": "release · debt · false step",
-          "kind": "root"
+          "gloss": "release · debt · false step"
         },
         "anxious": {
           "color": "#3f7d3a",
           "translit": "merimnaō",
-          "gloss": "be pulled apart with care",
-          "kind": "root"
+          "gloss": "be pulled apart with care"
         },
         "right": {
           "color": "#9c2f8f",
           "translit": "dikaiosynē",
-          "gloss": "right-doing",
-          "kind": "root"
+          "gloss": "right-doing"
         },
         "seek": {
           "color": "#9c4f1c",
           "translit": "zēteō · epizēteō",
-          "gloss": "seek (ζητ-)",
-          "kind": "root"
+          "gloss": "seek (ζητ-)"
         }
       }
     },
@@ -564,62 +457,52 @@
         "judge": {
           "color": "#a8324a",
           "translit": "krinō · krima",
-          "gloss": "judge (κρι-)",
-          "kind": "root"
+          "gloss": "judge (κρι-)"
         },
         "measure": {
           "color": "#4a4f93",
           "translit": "metron · metreō",
-          "gloss": "measure (μετρ-)",
-          "kind": "root"
+          "gloss": "measure (μετρ-)"
         },
         "ask": {
           "color": "#1c7d70",
           "translit": "aiteō",
-          "gloss": "ask",
-          "kind": "root"
+          "gloss": "ask"
         },
         "do": {
           "color": "#3f7d3a",
           "translit": "poieō",
-          "gloss": "do, make",
-          "kind": "root"
+          "gloss": "do, make"
         },
         "fruit": {
           "color": "#c0641a",
           "translit": "karpos",
-          "gloss": "fruit",
-          "kind": "root"
+          "gloss": "fruit"
         },
         "enter": {
           "color": "#9c2f8f",
           "translit": "eiserchomai",
-          "gloss": "come in, enter",
-          "kind": "root"
+          "gloss": "come in, enter"
         },
         "way": {
           "color": "#6b2fb3",
           "translit": "hodos",
-          "gloss": "road / way",
-          "kind": "root"
+          "gloss": "road / way"
         },
         "build": {
           "color": "#8a6a2a",
           "translit": "oikodomeō / petra",
-          "gloss": "build, rock",
-          "kind": "root"
+          "gloss": "build, rock"
         },
         "eye": {
           "color": "#2f6db3",
           "translit": "ophthalmos",
-          "gloss": "eye",
-          "kind": "root"
+          "gloss": "eye"
         },
         "gate": {
           "color": "#8a5a9c",
           "translit": "pylē",
-          "gloss": "gate",
-          "kind": "root"
+          "gloss": "gate"
         }
       }
     },
@@ -634,68 +517,57 @@
         "follow": {
           "color": "#3b3f93",
           "translit": "akoloutheō",
-          "gloss": "follow, come along behind",
-          "kind": "root"
+          "gloss": "follow, come along behind"
         },
         "throw": {
           "color": "#9c4f1c",
           "translit": "ballō",
-          "gloss": "throw, cast, fling down",
-          "kind": "root"
+          "gloss": "throw, cast, fling down"
         },
         "touch": {
           "color": "#8a5a2a",
           "translit": "haptomai",
-          "gloss": "take hold of, touch",
-          "kind": "root"
+          "gloss": "take hold of, touch"
         },
         "release": {
           "color": "#147a63",
           "translit": "aphiēmi",
-          "gloss": "let go, release, forgive",
-          "kind": "root"
+          "gloss": "let go, release, forgive"
         },
         "torment": {
           "color": "#7a2230",
           "translit": "basanizō",
-          "gloss": "torment, put to the test",
-          "kind": "root"
+          "gloss": "torment, put to the test"
         },
         "urge": {
           "color": "#9c2f8f",
           "translit": "parakaleō",
-          "gloss": "urge, entreat, call alongside",
-          "kind": "root"
+          "gloss": "urge, entreat, call alongside"
         },
         "faith": {
           "color": "#b07a1e",
           "translit": "pistis · pisteuō",
-          "gloss": "trust (πιστ-)",
-          "kind": "root"
+          "gloss": "trust (πιστ-)"
         },
         "authority": {
           "color": "#7b2fb3",
           "translit": "exousia",
-          "gloss": "authority, delegated right to act",
-          "kind": "root"
+          "gloss": "authority, delegated right to act"
         },
         "clean": {
           "color": "#1596b8",
           "translit": "katharizō",
-          "gloss": "cleanse, make ritually pure",
-          "kind": "root"
+          "gloss": "cleanse, make ritually pure"
         },
         "raise": {
           "color": "#2f6db3",
           "translit": "egeirō",
-          "gloss": "raise up, rouse from lying down",
-          "kind": "root"
+          "gloss": "raise up, rouse from lying down"
         },
         "shake": {
           "color": "#4a5a68",
           "translit": "seismos",
-          "gloss": "shaking, quake",
-          "kind": "root"
+          "gloss": "shaking, quake"
         }
       }
     },
@@ -710,28 +582,12 @@
         "faith": {
           "color": "#a8324a",
           "translit": "pistis / pisteuō",
-          "gloss": "trust, entrust oneself",
-          "kind": "root"
+          "gloss": "trust, entrust oneself"
         },
         "new-old": {
           "color": "#8a6a2a",
           "translit": "kainos / neos / palaios",
-          "gloss": "new-in-kind / new-in-time / worn out by use",
-          "kind": "motif",
-          "members": [
-            {
-              "translit": "kainos",
-              "gloss": "new in kind, of a different sort"
-            },
-            {
-              "translit": "neos",
-              "gloss": "new/recent in time"
-            },
-            {
-              "translit": "palaios",
-              "gloss": "old, worn out from use"
-            }
-          ]
+          "gloss": "new-in-kind / new-in-time / worn out by use"
         }
       }
     },

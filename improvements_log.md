@@ -233,3 +233,19 @@
   follow / throw.
 - build.py green: 9 units, 362 in-verse occurrences, every root resolves, no
   collisions. Unit 1 meta block gained the `save` open. Units 2–8 unchanged.
+
+## 2026-09-07 — drop the motif tier (everything is a root)
+- Reverses the root/motif taxonomy (8d096c9). A bundled word-family
+  (`wage` = misthos/apechō/apodidōmi, `seen`, `emmanuel`, `build-rock`,
+  `wise-foolish`, `new-old`) is now just a plain root — one slug, one colour,
+  the family listed in its `translit` string. No re-tagging, no colour changes.
+- `kind` + `members` stripped from data/threads.json, data/units.json, the
+  fragments' meta blocks, and source-artifacts/matthew_09.
+- app/threads.js: no more dashed-underline motif rendering or "◈ Grouped motifs"
+  legend section or "kindred words" popover copy — two tiers again (thread /
+  root). css: dropped `.legend-members`, `.lg-motif`, `.rp-members`, `.rp-k`.
+- pipeline/unit_meta.py now *rejects* `kind`/`members` in a meta block;
+  port_artifact.py + threads_digest.py drop them. pipeline/apply_taxonomy.py
+  deleted (one-shot, baked into units.json, referenced the removed taxonomy).
+- matthew_study_style_reference.md §1/§2/§3 updated: "Word-families" replaces
+  "Motifs". build.py green.

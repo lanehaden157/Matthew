@@ -51,12 +51,7 @@ def main():
 
     lines += ["", "## Notes per thread", ""]
     for t in sorted(threads, key=lambda x: x["id"]):
-        kind = t.get("kind", "root")
-        members = ""
-        if t.get("members"):
-            members = " — members: " + ", ".join(
-                f"{m['translit']} ({m['gloss']})" for m in t["members"])
-        lines.append(f"- **`{t['id']}`** ({kind}){members}: {t.get('note', '').strip()}")
+        lines.append(f"- **`{t['id']}`**: {t.get('note', '').strip()}")
 
     lines.append("")
     open(OUT, "w", encoding="utf-8").write("\n".join(lines))

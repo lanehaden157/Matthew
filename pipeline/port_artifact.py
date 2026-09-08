@@ -141,15 +141,11 @@ def merge_units_json(meta, dry):
         if name in threads:
             continue                                   # colour comes from threads.json
         prev = existing.get(name) if isinstance(existing.get(name), dict) else {}
-        entry = {
+        roots[name] = {
             "color": prev.get("color") or hues.get(name) or WELL[0],
             "translit": r["translit"],
             "gloss": r["gloss"],
-            "kind": r.get("kind", "root"),
         }
-        if r.get("members"):
-            entry["members"] = r["members"]
-        roots[name] = entry
 
     row.update({"slug": meta.get("slug", row["slug"]), "passage": meta["passage"],
                 "title": meta["title"], "built": True, "roots": roots})

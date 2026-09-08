@@ -50,11 +50,13 @@ block, do not invent `--c-*` vars.**
 - A `data-root` that resolves to no colour anywhere is a hard verify failure — so every
   slug you tag **must** appear either in `threads-digest.md` or in the `roots` array.
 
-### Motifs (a cluster of related words traced as one colour)
+### Word-families
 
-If you're tracing a small family together (e.g. `misthos / apechō / apodidōmi` as "the
-reward economy"), give the `roots` entry `"kind": "motif"` and a `members` list
-(`[{translit, gloss}, …]`). Tag every member occurrence with the same `data-root` slug.
+Everything tracked is a plain **root** — there is no separate "motif" tier. If you're
+tracing a small family together (e.g. `misthos / apechō / apodidōmi` as "the reward
+economy"), it's still one `roots` entry with one `data-root` slug: put the family in the
+`translit` string (`"misthos / apechō / apodidōmi"`) and a summary in `gloss`. Tag every
+occurrence, whichever family member it is, with that one slug.
 
 ---
 
@@ -73,14 +75,9 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
   "descriptor": "the second triad, and what following costs",
   "discourse": false,
   "roots": [
-    { "root": "faith",   "translit": "pistis / pisteuō", "gloss": "trust, entrust oneself" },
-    { "root": "forgive", "translit": "aphiēmi",          "gloss": "let go, release, forgive" },
-    { "root": "rise",    "translit": "egeirō / anistēmi", "gloss": "get up, be raised",
-      "kind": "motif",
-      "members": [
-        { "translit": "egeirō",   "gloss": "rouse, raise" },
-        { "translit": "anistēmi", "gloss": "stand up" }
-      ] }
+    { "root": "faith",   "translit": "pistis / pisteuō",  "gloss": "trust, entrust oneself" },
+    { "root": "forgive", "translit": "aphiēmi",           "gloss": "let go, release, forgive" },
+    { "root": "rise",    "translit": "egeirō / anistēmi",  "gloss": "get up, be raised (either verb)" }
   ],
   "threads": {
     "opens":   [],
@@ -111,7 +108,7 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
 | `unit` | ✓ | unit number (int) |
 | `passage` | ✓ | e.g. `"Matthew 9:1–34"` |
 | `title` | ✓ | working title from the Unit Map (§7), refined if needed |
-| `roots` | ✓ | every tracked root: `{root, translit, gloss}` + optional `kind`/`members`. **No colour.** |
+| `roots` | ✓ | every tracked root: `{root, translit, gloss}`. **No colour.** A word-family is one root — bundle it in `translit`. |
 | `threads` | ✓ | `{opens, payoffs, candidates}` — see below |
 | `slug` | — | `"unit-09"`; derived if omitted |
 | `movement` | — | 1 / 2 / 3; looked up from the Unit Map if omitted |

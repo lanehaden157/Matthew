@@ -24,7 +24,7 @@ export async function loadThreadData() {
 export function getOccurrences() { return _occ || {}; }
 export function getThreadFor(root) { return _threads?.byRoot.get(root) || null; }
 
-/** root -> { color, translit, gloss, kind, members, threadId, status, count } */
+/** root -> { color, translit, gloss, threadId, status, count } */
 export function resolveUnit(unit) {
   const out = new Map();
   const local = unit.roots || {};
@@ -38,8 +38,6 @@ export function resolveUnit(unit) {
       color: th ? th.color : lm.color || null,
       translit: (th && th.translit) || lm.translit || root,
       gloss: (th && th.gloss) || lm.gloss || "",
-      kind: (th && th.kind) || lm.kind || "root",
-      members: (th && th.members) || lm.members || null,
       threadId: th ? th.id : null,
       status: th ? th.status : null,
       count: (counts[root] && counts[root].count) || 0,
@@ -60,12 +58,11 @@ export function injectPalette(unit, resolved) {
     const r = `[data-root="${cssEsc(root)}"]`;
     rules.push(`${sel} ${r}{color:${m.color}}`);
     rules.push(`${sel} .swatch[style*="--c-${cssEsc(root)}"]{background:${m.color}!important}`);
-    // cross-unit thread -> dotted underline (same word recurs); motif -> dashed
-    // (kindred words, not the same one). plain local roots: colour only.
-    const style = m.threadId ? "dotted" : m.kind === "motif" ? "dashed" : null;
-    if (style) {
+    // cross-unit thread -> dotted underline (the same word recurring across
+    // units). plain local roots: colour only.
+    if (m.threadId) {
       rules.push(
-        `${sel} ${r}{text-decoration:underline ${style} ${m.color};` +
+        `${sel} ${r}{text-decoration:underline dotted ${m.color};` +
         `text-underline-offset:3px;text-decoration-thickness:from-font}`);
       rules.push(
         `${sel} ${r}:hover{text-decoration-style:solid;` +
@@ -97,21 +94,18 @@ export function rebuildLegend(contentEl, resolved) {
   const all = [...resolved.entries()].filter(([, m]) => m.color && m.count > 0);
   const byCount = (a, b) => b[1].count - a[1].count;
   const threads = all.filter(([, m]) => m.threadId).sort(byCount);
-  const motifs = all.filter(([, m]) => !m.threadId && m.kind === "motif").sort(byCount);
-  const roots = all.filter(([, m]) => !m.threadId && m.kind !== "motif").sort(byCount);
+  const roots = all.filter(([, m]) => !m.threadId).sort(byCount);
 
   const row = ([root, m]) => {
     const n = m.count > 1 ? ` <span class="tag">${m.count}×</span>` : "";
     const st = m.status === "closed" ? ` <span class="tag">closed</span>` : "";
-    const mem = m.kind === "motif" && m.members
-      ? ` <span class="legend-members">${m.members.map((x) => esc(x.translit)).join(" · ")}</span>`
-      : "";
-    return `<li class="lg-${m.kind}"><span class="swatch" style="background:${m.color}"></span>` +
+    return `<li class="lg-${m.threadId ? "thread" : "root"}">` +
+      `<span class="swatch" style="background:${m.color}"></span>` +
       `<span class="r" data-root="${escAttr(root)}">${esc(m.translit)}</span>` +
-      `${m.gloss ? " — " + esc(m.gloss) : ""}${st}${n}${mem}</li>`;
+      `${m.gloss ? " — " + esc(m.gloss) : ""}${st}${n}</li>`;
   };
 
-  const shown = [threads, motifs, roots].filter((g) => g.length).length;
+  const shown = [threads, roots].filter((g) => g.length).length;
   const group = (label, items) => items.length
     ? `<div class="legend-group">${shown > 1 ? `<h3>${label}</h3>` : ""}` +
       `<ul>${items.map(row).join("")}</ul></div>`
@@ -119,7 +113,6 @@ export function rebuildLegend(contentEl, resolved) {
 
   ul.outerHTML =
     group(`✦ Cross-unit threads`, threads) +
-    group(`◈ Grouped motifs`, motifs) +
     group(`Roots in this unit`, roots);
 
   legend.querySelector(".cap")?.remove();
@@ -196,21 +189,13 @@ function openPop(el, resolved, unit, builtByN) {
   const th = _threads.byRoot.get(root);
   const occ = (_occ[unit.slug] || {})[root] || { count: 0, verses: [] };
 
-  const isMotif = m.kind === "motif";
   const rows = [];
   rows.push(`<div class="rp-head">
     <span class="swatch" style="background:${m.color || "transparent"}"></span>
     <i>${esc(m.translit)}</i>
-    <span class="rp-tag">${isMotif ? "motif" : "root"}${th ? " · thread" : ""}${th && th.status === "closed" ? " · closed" : ""}</span>
+    <span class="rp-tag">root${th ? " · thread" : ""}${th && th.status === "closed" ? " · closed" : ""}</span>
   </div>`);
   if (m.gloss) rows.push(`<p class="rp-gloss">${esc(m.gloss)}</p>`);
-  if (isMotif && m.members) {
-    rows.push(`<p class="rp-members"><span class="rp-k">kindred words —</span> ` +
-      m.members.map((x) => `<i>${esc(x.translit)}</i>${x.gloss ? ` (${esc(x.gloss)})` : ""}`).join(" · ") +
-      `</p>`);
-  } else if (!isMotif) {
-    rows.push(`<p class="rp-k">the same word, recurring</p>`);
-  }
 
   if (occ.count) {
     const vv = (occ.verses || []).length
