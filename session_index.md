@@ -36,3 +36,10 @@ Read this first. 3 lines max per session.
   bits into instructions.md), rewrote instructions.md as the single chat-side +
   artifact spec, de-Greeked units.json glosses, fixed PLAN/CLAUDE staleness.
   build green, 9 units. Next: Unit 10 (9:35–11:1, Mission discourse).
+
+## 2026-09-08 — Unit 10 ported (Mission discourse)
+- `port_artifact.py 10` clean; local hues worthy/receive/harvest/send-out.
+- Promoted 4 candidates to threads.json: hand-over (paradidōmi, opens 10:4),
+  cross (stauros, 10:38), lose (apollymi, 10:6), fear (phobeō, 10:26). Kept
+  `worthy` local. Added unit-10 payoff refs to throw/authority/son-of-man/save/
+  wise/nations/follow. build green — 10 units, 374 occurrences, 29 threads.

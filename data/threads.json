@@ -41,6 +41,11 @@
       },
       "payoffs": [
         {
+          "unit": 10,
+          "ref": "10:5, 18",
+          "note": "the door held shut (10:5, 'no road of the nations') then cracked ajar (10:18, 'a testimony to the nations')"
+        },
+        {
           "unit": 28,
           "ref": "28:19"
         }
@@ -69,6 +74,11 @@
           "unit": 9,
           "ref": "9:9, 19, 27",
           "note": "Matthew rises and follows; the ruler and the two blind men followed"
+        },
+        {
+          "unit": 10,
+          "ref": "10:38",
+          "note": "'follow behind me' now paired with taking up a cross — the cost stated"
         }
       ],
       "note": "Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on."
@@ -234,6 +244,11 @@
           "note": "the Son of Man has authority on earth to release sins; the crowds see it given to human beings"
         },
         {
+          "unit": 10,
+          "ref": "10:1",
+          "note": "the exousia is handed to the Twelve — no precedent in Israel's story"
+        },
+        {
           "unit": 28,
           "ref": "28:18",
           "note": "'all authority has been given to me'"
@@ -258,6 +273,11 @@
           "unit": 9,
           "ref": "9:2, 16-17, 25, 33-34",
           "note": "the paralytic thrown on his mat, wine poured into skins, the mourners thrown out, demons cast out"
+        },
+        {
+          "unit": 10,
+          "ref": "9:38; 10:1, 8, 34",
+          "note": "God thrusts out workers, the Twelve throw out demons, then Jesus comes to throw not peace but a sword"
         }
       ],
       "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later."
@@ -366,6 +386,11 @@
           "unit": 9,
           "ref": "9:6",
           "note": "authority on earth to release sins — the first payoff of the 8:20 opening"
+        },
+        {
+          "unit": 10,
+          "ref": "10:23",
+          "note": "\"until the Son of Man comes\" — the coming-with-the-clouds sense, interpretively unsettled"
         },
         {
           "unit": 17,
@@ -478,6 +503,11 @@
           "note": "the double sense at full stretch — 'your trust has saved you'"
         },
         {
+          "unit": 10,
+          "ref": "10:22",
+          "note": "'the one enduring to the end will be saved' — rescue tied to endurance, not a crisis-moment"
+        },
+        {
           "unit": 14,
           "ref": "14:30"
         },
@@ -529,6 +559,11 @@
       },
       "payoffs": [
         {
+          "unit": 10,
+          "ref": "10:16",
+          "note": "'shrewd as the snakes and unalloyed as the doves' — sent into a hostile world"
+        },
+        {
           "unit": 24,
           "ref": "24:45"
         },
@@ -537,7 +572,7 @@
           "ref": "25:2, 4, 8-9"
         }
       ],
-      "note": "The shrewd builder on rock (7:24); the faithful and shrewd slave (24:45); the five shrewd virgins (25:2)."
+      "note": "The shrewd builder on rock (7:24); shrewd as snakes for the road (10:16); the faithful and shrewd slave (24:45); the five shrewd virgins (25:2)."
     },
     {
       "id": "foolish",
@@ -637,6 +672,147 @@
         }
       ],
       "note": "The centurion's pistis (8:10, 'not even in Israel') vs. the disciples' oligopistoi (see little-faith). Runs through the healings to 15:28 and the mountain-moving sayings."
+    },
+    {
+      "id": "hand-over",
+      "root": "hand-over",
+      "translit": "paradidōmi",
+      "gloss": "hand over, deliver up, betray",
+      "color": "#8a3c70",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 10,
+        "ref": "10:4"
+      },
+      "payoffs": [
+        {
+          "unit": 10,
+          "ref": "10:17, 19, 21",
+          "note": "the disciples handed over — to councils, in floggings, by their own families"
+        },
+        {
+          "unit": 17,
+          "ref": "17:22",
+          "note": "'the Son of Man is about to be handed over' — the verb turns toward the passion"
+        },
+        {
+          "unit": 20,
+          "ref": "20:18-19"
+        },
+        {
+          "unit": 26,
+          "ref": "26:2, 15-16, 21-25, 45-48"
+        },
+        {
+          "unit": 27,
+          "ref": "27:2, 18, 26"
+        }
+      ],
+      "note": "paradidōmi — Judas is introduced by it at 10:4, then it fires three times for the disciples (10:17, 19, 21); from 17:22 on it becomes the governing verb of the passion."
+    },
+    {
+      "id": "cross",
+      "root": "cross",
+      "translit": "stauros",
+      "gloss": "cross, execution-stake",
+      "color": "#455a6b",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 10,
+        "ref": "10:38"
+      },
+      "payoffs": [
+        {
+          "unit": 17,
+          "ref": "16:24",
+          "note": "'take up his cross and follow me' — restated right at the apo tote hinge"
+        },
+        {
+          "unit": 27,
+          "ref": "27:32, 40, 42",
+          "note": "the literal cross — Simon carries it, the mockers name it"
+        }
+      ],
+      "note": "stauros — first at 10:38 as a general condition of following, well before any passion prediction; recurs at 16:24 and then the crucifixion itself."
+    },
+    {
+      "id": "lose",
+      "root": "lose",
+      "translit": "apollymi",
+      "gloss": "lose, destroy, be lost",
+      "color": "#8a6a2a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 10,
+        "ref": "10:6"
+      },
+      "payoffs": [
+        {
+          "unit": 10,
+          "ref": "10:28, 39, 42",
+          "note": "one able to destroy body and life; finding/losing one's life; a wage that cannot be lost"
+        },
+        {
+          "unit": 15,
+          "ref": "15:24",
+          "note": "'the lost sheep of the house of Israel' again"
+        },
+        {
+          "unit": 18,
+          "ref": "18:11-14",
+          "note": "the one lost sheep left for — the shepherd goes after it"
+        }
+      ],
+      "note": "apollymi — the lost sheep (10:6), then the losing that is done on purpose (10:39) and a reward never lost (10:42); the lost sheep returns at 15:24 and 18:12-14."
+    },
+    {
+      "id": "fear",
+      "root": "fear",
+      "translit": "phobeō",
+      "gloss": "fear, be afraid",
+      "color": "#1c7d70",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 10,
+        "ref": "10:26"
+      },
+      "payoffs": [
+        {
+          "unit": 10,
+          "ref": "10:28, 31",
+          "note": "four imperatives against fear in six verses — the discourse's spine"
+        },
+        {
+          "unit": 14,
+          "ref": "14:26-27",
+          "note": "'take courage — do not be afraid' (mē phobeisthe), verbatim, on the sea"
+        },
+        {
+          "unit": 17,
+          "ref": "17:6-7",
+          "note": "the disciples terrified at the transfiguration; 'do not be afraid'"
+        },
+        {
+          "unit": 25,
+          "ref": "25:25",
+          "note": "'I was afraid' — the one-talent servant's account of himself"
+        },
+        {
+          "unit": 27,
+          "ref": "27:54",
+          "note": "the centurion and the guard terrified at the earthquake"
+        },
+        {
+          "unit": 28,
+          "ref": "28:4-10",
+          "note": "the guards shake for fear; 'do not be afraid' to the women, twice"
+        }
+      ],
+      "note": "phobeō — the mē phobeisthe imperative saturates 10:26-31 and then recurs verbatim at the two most loaded moments, the sea (14:27) and the empty tomb (28:5, 10)."
     }
   ]
 }

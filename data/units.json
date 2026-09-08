@@ -563,10 +563,32 @@
     {
       "n": 10,
       "slug": "unit-10",
-      "passage": "Matthew 9:35-11:1",
+      "passage": "Matthew 9:35–11:1",
       "title": "The Sending",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "worthy": {
+          "color": "#a8324a",
+          "translit": "axios",
+          "gloss": "worthy, of matching weight"
+        },
+        "receive": {
+          "color": "#2f6db3",
+          "translit": "dechomai",
+          "gloss": "receive, welcome"
+        },
+        "harvest": {
+          "color": "#9c2f8f",
+          "translit": "therismos",
+          "gloss": "harvest, reaping"
+        },
+        "send-out": {
+          "color": "#1f8f5f",
+          "translit": "apostellō · apostolos",
+          "gloss": "send out; one sent out, emissary"
+        }
+      }
     },
     {
       "n": 11,

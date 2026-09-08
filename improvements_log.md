@@ -268,6 +268,24 @@
   survive re-ports; U9 edits in its source artifact. build.py green — 9 units,
   every root resolves, no collisions. Threads: 22 → 24.
 
+## 2026-09-08 — Unit 10 ported (Matt 9:35–11:1, Mission discourse)
+- `port_artifact.py 10` on `source-artifacts/matthew_10_translation.html` (v2
+  fragment shape). Validated clean; merged into units.json (built:true), local
+  hues: worthy #a8324a, receive #2f6db3, harvest #9c2f8f, send-out #1f8f5f.
+- threads.json (Lane's call from the thread delta):
+  - Promoted 4 candidates — **hand-over** (paradidōmi, #8a3c70, opens 10:4 →
+    10:17/19/21, 17:22, 20:18-19, 26, 27), **cross** (stauros, #455a6b, opens
+    10:38 → 16:24, 27:32-42), **lose** (apollymi, #8a6a2a, opens 10:6 → 10:28/39/
+    42, 15:24, 18:11-14), **fear** (phobeō, #1c7d70, opens 10:26 → 14:26-27,
+    17:6-7, 25:25, 27:54, 28:4-10). Each kept its porter-assigned unit-10 local
+    hue as its thread colour. No retag needed — spans already in the fragment.
+  - Kept `worthy` (axios) local — dense in U10 but only 22:8 later.
+  - Added unit-10 payoff refs to throw / authority / son-of-man / save / wise /
+    nations / follow (status unchanged — none close at U10).
+- Re-ran port + build.py: green. 10 units, 374 in-verse occurrences, every root
+  resolves, no perceptual collisions. threads-digest.md → 29 threads. Units 1-8
+  fragments untouched (refresh_meta produced identical output).
+
 ## 2026-09-07 — doc reconciliation (no contradictions)
 - Deleted `old memory.md` + `old instructions.md` — fully superseded. Their live
   content (Greek-handling rules, research bash patterns, Constable-dialogue

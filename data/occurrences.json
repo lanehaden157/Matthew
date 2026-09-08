@@ -2986,5 +2986,444 @@
       ],
       "total": 8
     }
+  },
+  "unit-10": {
+    "authority": {
+      "count": 1,
+      "verses": [
+        1
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…And summoning his twelve learners, he gave them ",
+          "hit": "authority",
+          "post": " over unclean spirits, so as to throw them out and to t…"
+        }
+      ],
+      "total": 1
+    },
+    "cross": {
+      "count": 1,
+      "verses": [
+        38
+      ],
+      "hits": [
+        {
+          "v": 38,
+          "pre": "…and whoever does not take up his ",
+          "hit": "cross",
+          "post": " and follow behind me is not worthy of me.…"
+        }
+      ],
+      "total": 1
+    },
+    "fear": {
+      "count": 4,
+      "verses": [
+        26,
+        28,
+        31
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…So do not ",
+          "hit": "fear",
+          "post": " them; for nothing is covered that will not be uncovere…"
+        },
+        {
+          "v": 28,
+          "pre": "…And do not ",
+          "hit": "fear",
+          "post": " those killing the body but unable to kill the life; fe…"
+        },
+        {
+          "v": 28,
+          "pre": "…And do not ",
+          "hit": "fear",
+          "post": " those killing the body but unable to kill the life; fe…"
+        },
+        {
+          "v": 31,
+          "pre": "…So do not ",
+          "hit": "fear",
+          "post": "; y'all are worth more than many sparrows.…"
+        }
+      ],
+      "total": 4
+    },
+    "follow": {
+      "count": 1,
+      "verses": [
+        38
+      ],
+      "hits": [
+        {
+          "v": 38,
+          "pre": "…and whoever does not take up his cross and ",
+          "hit": "follow",
+          "post": " behind me is not worthy of me.…"
+        }
+      ],
+      "total": 1
+    },
+    "hand-over": {
+      "count": 6,
+      "verses": [
+        4,
+        17,
+        19,
+        21
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…imon the Zealot, and Judas Iscariot — the very one who ",
+          "hit": "handed him over",
+          "post": ".…"
+        },
+        {
+          "v": 17,
+          "pre": "…And beware of the people; for they will ",
+          "hit": "hand",
+          "post": " y'all over to councils, and in their gathering-places…"
+        },
+        {
+          "v": 17,
+          "pre": "…And beware of the people; for they will hand y'all ",
+          "hit": "over",
+          "post": " to councils, and in their gathering-places they will f…"
+        },
+        {
+          "v": 19,
+          "pre": "…And whenever they ",
+          "hit": "hand",
+          "post": " y'all over, do not be anxious how or what y'all should…"
+        },
+        {
+          "v": 19,
+          "pre": "…And whenever they hand y'all ",
+          "hit": "over",
+          "post": ", do not be anxious how or what y'all should speak; for…"
+        },
+        {
+          "v": 21,
+          "pre": "…And brother will ",
+          "hit": "hand over",
+          "post": " brother to death, and a father a child; and children w…"
+        }
+      ],
+      "total": 6
+    },
+    "harvest": {
+      "count": 3,
+      "verses": [
+        37,
+        38
+      ],
+      "hits": [
+        {
+          "v": 37,
+          "pre": "…Then he says to his learners: \"The ",
+          "hit": "harvest",
+          "post": " indeed is much, but the workers are few.…"
+        },
+        {
+          "v": 38,
+          "pre": "…So beg the Lord of the ",
+          "hit": "harvest",
+          "post": " that he may thrust out workers into his harvest.\"…"
+        },
+        {
+          "v": 38,
+          "pre": "…So beg the Lord of the ",
+          "hit": "harvest",
+          "post": " that he may thrust out workers into his harvest.\"…"
+        }
+      ],
+      "total": 3
+    },
+    "lose": {
+      "count": 5,
+      "verses": [
+        6,
+        28,
+        39,
+        42
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…go rather to the ",
+          "hit": "lost",
+          "post": " sheep of the house of Israel.…"
+        },
+        {
+          "v": 28,
+          "pre": "…t unable to kill the life; fear rather the one able to ",
+          "hit": "destroy",
+          "post": " both life and body in Gehenna.…"
+        },
+        {
+          "v": 39,
+          "pre": "…The one finding his life will ",
+          "hit": "lose",
+          "post": " it, and the one losing his life for my sake will find…"
+        },
+        {
+          "v": 39,
+          "pre": "…The one finding his life will lose it, and the one ",
+          "hit": "losing",
+          "post": " his life for my sake will find it.…"
+        },
+        {
+          "v": 42,
+          "pre": "…a learner — amen I say to y'all, he will certainly not ",
+          "hit": "lose",
+          "post": " his wage.\"…"
+        }
+      ],
+      "total": 5
+    },
+    "nations": {
+      "count": 2,
+      "verses": [
+        5,
+        18
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…s sent out, ordering them, saying: \"Onto a road of the ",
+          "hit": "nations",
+          "post": " do not go off, and into a town of Samaritans do not en…"
+        },
+        {
+          "v": 18,
+          "pre": "…be led, for my sake, as a testimony to them and to the ",
+          "hit": "nations",
+          "post": ".…"
+        }
+      ],
+      "total": 2
+    },
+    "receive": {
+      "count": 7,
+      "verses": [
+        14,
+        40,
+        41
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…And whoever does not ",
+          "hit": "receive",
+          "post": " y'all nor hear y'all's words — going out of that house…"
+        },
+        {
+          "v": 40,
+          "pre": "…\"The one ",
+          "hit": "receiving",
+          "post": " y'all receives me, and the one receiving me receives t…"
+        },
+        {
+          "v": 40,
+          "pre": "…\"The one receiving y'all ",
+          "hit": "receives",
+          "post": " me, and the one receiving me receives the one who sent…"
+        },
+        {
+          "v": 40,
+          "pre": "…\"The one ",
+          "hit": "receiving",
+          "post": " y'all receives me, and the one receiving me receives t…"
+        },
+        {
+          "v": 40,
+          "pre": "…\"The one receiving y'all ",
+          "hit": "receives",
+          "post": " me, and the one receiving me receives the one who sent…"
+        },
+        {
+          "v": 41,
+          "pre": "…The one ",
+          "hit": "receiving",
+          "post": " a prophet in the name of a prophet will take a prophet…"
+        },
+        {
+          "v": 41,
+          "pre": "…The one ",
+          "hit": "receiving",
+          "post": " a prophet in the name of a prophet will take a prophet…"
+        }
+      ],
+      "total": 7
+    },
+    "save": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…me; but the one enduring to the end — this one will be ",
+          "hit": "saved",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
+    "send-out": {
+      "count": 2,
+      "verses": [
+        2,
+        40
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…And of the twelve ",
+          "hit": "emissaries",
+          "post": " the names are these: first Simon, the one called Rock,…"
+        },
+        {
+          "v": 40,
+          "pre": "…ives me, and the one receiving me receives the one who ",
+          "hit": "sent",
+          "post": " me.…"
+        }
+      ],
+      "total": 2
+    },
+    "son-of-man": {
+      "count": 1,
+      "verses": [
+        23
+      ],
+      "hits": [
+        {
+          "v": 23,
+          "pre": "…y'all, y'all will not finish the towns of Israel until ",
+          "hit": "the Son of Man",
+          "post": " comes.…"
+        }
+      ],
+      "total": 1
+    },
+    "throw": {
+      "count": 5,
+      "verses": [
+        1,
+        8,
+        34,
+        38
+      ],
+      "hits": [
+        {
+          "v": 38,
+          "pre": "…So beg the Lord of the harvest that he may ",
+          "hit": "thrust out",
+          "post": " workers into his harvest.\"…"
+        },
+        {
+          "v": 1,
+          "pre": "…he gave them authority over unclean spirits, so as to ",
+          "hit": "throw them out",
+          "post": " and to tend every disease and every weakness.…"
+        },
+        {
+          "v": 8,
+          "pre": "…d the weak, raise the dead, cleanse the skin-diseased, ",
+          "hit": "throw out",
+          "post": " demons. As a gift y'all received; as a gift give.…"
+        },
+        {
+          "v": 34,
+          "pre": "…\"Do not suppose that I came to ",
+          "hit": "throw",
+          "post": " peace onto the earth; I did not come to throw peace, b…"
+        },
+        {
+          "v": 34,
+          "pre": "…\"Do not suppose that I came to ",
+          "hit": "throw",
+          "post": " peace onto the earth; I did not come to throw peace, b…"
+        }
+      ],
+      "total": 5
+    },
+    "wise": {
+      "count": 1,
+      "verses": [
+        16
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…y'all out as sheep in the middle of wolves. So become ",
+          "hit": "shrewd",
+          "post": " as the snakes and unalloyed as the doves.…"
+        }
+      ],
+      "total": 1
+    },
+    "worthy": {
+      "count": 7,
+      "verses": [
+        10,
+        11,
+        13,
+        37,
+        38
+      ],
+      "hits": [
+        {
+          "v": 10,
+          "pre": "…o tunics, nor sandals, nor a staff — for the worker is ",
+          "hit": "worthy",
+          "post": " of his food.…"
+        },
+        {
+          "v": 11,
+          "pre": "…r town or village y'all enter, search out who in it is ",
+          "hit": "worthy",
+          "post": ", and stay there until y'all go out.…"
+        },
+        {
+          "v": 13,
+          "pre": "…and if indeed the house is ",
+          "hit": "worthy",
+          "post": ", let y'all's peace come upon it; but if it is not wort…"
+        },
+        {
+          "v": 13,
+          "pre": "…and if indeed the house is ",
+          "hit": "worthy",
+          "post": ", let y'all's peace come upon it; but if it is not wort…"
+        },
+        {
+          "v": 37,
+          "pre": "…The one loving father or mother above me is not ",
+          "hit": "worthy",
+          "post": " of me; and the one loving son or daughter above me is…"
+        },
+        {
+          "v": 37,
+          "pre": "…The one loving father or mother above me is not ",
+          "hit": "worthy",
+          "post": " of me; and the one loving son or daughter above me is…"
+        },
+        {
+          "v": 38,
+          "pre": "…does not take up his cross and follow behind me is not ",
+          "hit": "worthy",
+          "post": " of me.…"
+        }
+      ],
+      "total": 7
+    }
   }
 }
