@@ -529,11 +529,6 @@
           "translit": "parakaleō",
           "gloss": "urge, entreat, call alongside"
         },
-        "faith": {
-          "color": "#b07a1e",
-          "translit": "pistis · pisteuō",
-          "gloss": "trust (pist-)"
-        },
         "authority": {
           "color": "#7b2fb3",
           "translit": "exousia",
@@ -563,13 +558,7 @@
       "title": "The Deeds of the Messiah (II): Boundary-Crossing Loyal-Love",
       "movement": 2,
       "built": true,
-      "roots": {
-        "faith": {
-          "color": "#a8324a",
-          "translit": "pistis · pisteuō",
-          "gloss": "trust, entrust oneself"
-        }
-      }
+      "roots": {}
     },
     {
       "n": 10,

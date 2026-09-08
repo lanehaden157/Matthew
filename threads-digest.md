@@ -1,6 +1,6 @@
 # Cross-unit threads — canonical digest
 
-Generated from `data/threads.json` (version 1). 24 threads, 23 open.
+Generated from `data/threads.json` (version 1). 25 threads, 24 open.
 
 **This is the source of truth for thread tagging.** In a unit's artifact, a root that appears in the `id` column below is a *tracked thread*: tag it `<span class="r" data-root="<id>">…</span>` and list it under `threads.opens` / `threads.payoffs` in the unit-meta block. A root that is recurring but *not* here is unit-local — tag it with its own name and just list it in `roots`. To propose promoting a local root to a tracked thread, add it to `threads.candidates` with a one-line reason; Lane decides.
 
@@ -22,6 +22,7 @@ Generated from `data/threads.json` (version 1). 24 threads, 23 open.
 | `foolish` | `foolish` | mōros | foolish / dull | 7 (7:26) | 23 (23:17) · 25 (25:2, 3, 8) | open |
 | `rock` | `rock` | petra | rock (bedrock) | 7 (7:24-25) | 16 (16:18) | open |
 | `wise` | `wise` | phronimos | shrewd / prudent | 7 (7:24) | 24 (24:45) · 25 (25:2, 4, 8-9) | open |
+| `faith` | `faith` | pistis · pisteuō | trust, faith | 8 (8:10) | 9 (9:2, 22, 29) · 15 (15:28) · 17 (17:20) · 21 (21:21) | open |
 | `shake` | `shake` | seismos | shaking / earthquake / storm | 8 (8:24) | 27 (27:51-54) · 28 (28:2) | open |
 | `son-of-man` | `son-of-man` | ho huios tou anthrōpou | the Son of Man | 8 (8:20) | 9 (9:6) · 17 (16:13, 16:27) · 17 (17:9, 17:22) · 19 (19:28) · 20 (20:18, 20:28) · 24 (24:27-44) · 25 (25:31) · 26 (26:24, 26:64) | open |
 | `throw` | `throw` | ballō | throw / cast out | 8 (8:6) | 9 (9:2, 16-17, 25, 33-34) | open |
@@ -37,6 +38,7 @@ Generated from `data/threads.json` (version 1). 24 threads, 23 open.
 - **`authority`**: The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18).
 - **`build`**: The wise builder builds on rock (7:24) -> 'I will build my assembly' (16:18).
 - **`emmanuel`**: The Emmanuel inclusio: "God with us" (1:23) <-> "I am with y'all always" (28:20).
+- **`faith`**: The centurion's pistis (8:10, 'not even in Israel') vs. the disciples' oligopistoi (see little-faith). Runs through the healings to 15:28 and the mountain-moving sayings.
 - **`fish`**: 'Fishers of men' (4:19) carries OT judgement freight (Jer 16:16; Hab 1; Amos 4; Ezek 29) in tension with gathering-for-restoration.
 - **`follow`**: Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on.
 - **`foolish`**: The foolish builder on sand (7:26); 'fools and blind' (23:17); the five foolish virgins (25:2).

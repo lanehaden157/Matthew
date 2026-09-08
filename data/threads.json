@@ -604,6 +604,39 @@
         }
       ],
       "note": "The house founded on petra (7:24-25) -> Peter the rock (16:18). Distinct from Petros, the name."
+    },
+    {
+      "id": "faith",
+      "root": "faith",
+      "translit": "pistis · pisteuō",
+      "gloss": "trust, faith",
+      "color": "#b07a1e",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 8,
+        "ref": "8:10"
+      },
+      "payoffs": [
+        {
+          "unit": 9,
+          "ref": "9:2, 22, 29"
+        },
+        {
+          "unit": 15,
+          "ref": "15:28",
+          "note": "'great is your faith' — the Canaanite woman"
+        },
+        {
+          "unit": 17,
+          "ref": "17:20"
+        },
+        {
+          "unit": 21,
+          "ref": "21:21"
+        }
+      ],
+      "note": "The centurion's pistis (8:10, 'not even in Israel') vs. the disciples' oligopistoi (see little-faith). Runs through the healings to 15:28 and the mountain-moving sayings."
     }
   ]
 }
