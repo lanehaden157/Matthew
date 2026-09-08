@@ -213,14 +213,30 @@ markup — no fragment edits.
 `app/store.js` — versioned `localStorage`: mark units read, per-verse personal
 notes. Schema version gate for future migration. No backend, no accounts.
 
-### Phase 9 — Author ergonomics *(payoff for units 9–28)*
+### Phase 9 — Author ergonomics ✅ DONE *(payoff for units 9–28)*
 
-- `pipeline/port_artifact.py` — drop a fresh artifact in, one command produces the
-  fragment (script strip, tag rewrite, id prefix, legend removal).
-- Rewrite `matthew_study_style_reference.md` §1–4: future artifacts emit
-  `data-root` directly, skip the `<style>` block, skip the hand legend, translit
-  only. Point thread tracking at `threads.json` instead of memory.
-- Unit 9 is the first test of the ported path.
+The research artifact is now a **drop-in site fragment**. Contract:
+
+- Artifact = one `<article class="unit" data-unit="N">`, no `<head>`/`<style>`/
+  fonts/`--c-*` vars. Opens with `<script type="application/json" id="unit-meta">`
+  carrying unit/passage/title, `roots` (translit+gloss, **no colour**), and
+  `threads` (opens/payoffs by id + `candidates`). Colour is `data-root` only.
+- `pipeline/unit_meta.py` — parse / validate / generate the meta block (the one
+  shared definition).
+- `pipeline/port_artifact.py <NN>` — one artifact → fragment: reduces a standalone
+  doc to the fragment if needed, validates the meta block against `threads.json`,
+  merges the unit into `units.json` (assigns a local hue per non-thread root,
+  collision-checked), writes a **thread delta** to `pipeline/out/thread-delta-NN.md`
+  for Lane (never touches `threads.json`), then runs retrofit + scan + verify.
+  `--backfill` did units 1–8 (meta block only — zero prose/tag change, see
+  `pipeline/out/renormalize-report.md`).
+- `pipeline/threads_digest.py` → `threads-digest.md` — human-readable thread list
+  for the Claude.ai project. `pipeline/refresh_meta.py` keeps built fragments'
+  meta blocks in sync with the data files. Both wired into `build.py`.
+- `matthew_study_style_reference.md` rewritten to v2 (§1–4 + §6a). New
+  `instructions.md` (v2 research-project instructions) written; `old
+  instructions.md` kept for reference.
+- **Unit 9 is the first true test of the authored path.**
 
 ---
 

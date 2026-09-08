@@ -15,4 +15,13 @@ Read this first. 3 lines max per session.
   applied. Verified on live deploy.
 - Phase 5 done: root hover tip + click popover (thread trajectory w/ jump
   links). Spotlight split (light * notes vs ✦ rendering boxes). heavens->skies.
-- Next: Phase 6 (threads dashboard + global concordance search).
+- Phase 5 done (cont.): root hover/click popovers.
+
+## 2026-09-07 — Phase 9 (author ergonomics)
+- Artifact contract v2: pure `<article>` fragment + `<script id="unit-meta">` JSON
+  block, `data-root` only, no `<style>`/colours. Rewrote matthew_study_style_reference.md
+  + new instructions.md; threads-digest.md now generated.
+- New pipeline: unit_meta.py, port_artifact.py (single-unit port + thread-delta),
+  refresh_meta.py, threads_digest.py; folded into build.py.
+- Units 1–8 re-normalized = meta block only, zero prose/tag change
+  (pipeline/out/renormalize-report.md). Next: port Unit 9 when the artifact lands.

@@ -190,3 +190,31 @@
 - extract_legends.py retired from build.py (units.json is hand-maintained now).
 - Unit 1 pre-conventions structure fully normalized (verses, compare boxes,
   legend box, endnotes).
+
+## 2026-09-07 — Phase 9: author ergonomics / drop-in artifact contract
+- Artifact contract v2. The Claude.ai project now emits a pure site fragment:
+  one `<article class="unit" data-unit="N">`, no `<head>`/`<style>`/fonts/`--c-*`,
+  opened by `<script type="application/json" id="unit-meta">` (unit, passage,
+  title, roots [translit+gloss, NO colour], threads {opens,payoffs,candidates}).
+- pipeline/unit_meta.py — single shared definition of the meta block: parse(),
+  strip(), inject(), validate(meta, threads_json), generate(n) from the data files.
+- pipeline/port_artifact.py — `NN` ports one artifact: standalone→fragment if
+  needed (reuses extract_units cleaners), validates meta vs threads.json, merges
+  the unit into units.json (assigns a local hue per non-thread root, dE≥12
+  collision check against the §1 well), writes pipeline/out/thread-delta-NN.md
+  for Lane, runs retrofit+scan+verify. Never writes threads.json. `--dry` +
+  `--backfill` modes.
+- pipeline/refresh_meta.py — regenerate built fragments' meta blocks from the data
+  (idempotent). pipeline/threads_digest.py — threads.json → threads-digest.md.
+  Both added to build.py (order: extract → retrofit → refresh_meta → scan →
+  verify → digest).
+- Units 1–8 backfilled: meta block prepended, **zero** change to prose/tags/ids
+  (git diff = pure insertions; pipeline/out/renormalize-report.md). build.py
+  re-run green: 332 occurrences, all roots resolve, no collisions.
+- Docs: matthew_study_style_reference.md rewritten to v2 (§1–4, §6a point at
+  threads-digest.md); new instructions.md (v2 research-project instructions,
+  `old instructions.md` kept); PLAN.md Phase 9 marked done; CLAUDE.md status +
+  layout updated.
+- Known carry-over (not touched): units.json glosses use `(γεν-)` morphology
+  shorthand with Greek chars — pre-existing taxonomy choice, already renders in
+  the site legend; revisit if strict translit-only matters there.

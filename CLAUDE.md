@@ -10,27 +10,40 @@ phase plan and the record of decisions.
 
 ## Status (2026-09-07)
 
-- Source research artifacts: units 1–8 exist (`source-artifacts/matthew_0N_translation.html`).
-  Research continues in the Claude.ai project; new units arrive as artifacts and
-  get ported in via `pipeline/`.
-- **Phase 1 done** — 8 artifacts normalized into `units/unit-0N.html`.
-- **Phase 2 next** — `index.html` shell + `app/main.js` router + `css/styles.css`.
+- Live at https://lanehaden157.github.io/Matthew/ . Units 1–8 built. **Phases 1–9
+  done.** Next content unit: **Unit 9 (Matt 9:1–34)**.
+- Research continues in the Claude.ai project. As of Phase 9 the artifact it
+  produces is a **drop-in fragment** (`matthew_study_style_reference.md` v2):
+  one `<article>`, no `<head>`/`<style>`, a `<script id="unit-meta">` JSON block,
+  `data-root` spans only. Port it with `python pipeline/port_artifact.py NN`,
+  review `pipeline/out/thread-delta-NN.md`, eyeball in the browser, commit.
+- `threads-digest.md` (generated) is the thread list the research project reads;
+  refresh it there when `data/threads.json` changes.
 
 ## Layout
 
 ```
-/units/        hand-authored HTML fragments, one per literary unit (unit-01.html …).
-               Body content only, wrapped in <article class="unit" data-unit="N">.
-               No <head>, no <style>. Reviewed like prose.
-/data/         threads.json    hand-authored — the ~16 tracked cross-unit threads
-                               (id, color, translit, gloss, origin unit, payoff
-                               unit(s), open/closed). Policy; nothing derives it.
+/units/        HTML fragments, one per literary unit (unit-01.html …). One
+               <article class="unit" data-unit="N"> opened by a
+               <script type="application/json" id="unit-meta"> block. No <head>,
+               no <style>. Prose reviewed like prose.
+/data/         threads.json    hand-authored — the tracked cross-unit threads
+                               (id, root, color, translit, gloss, opens/payoffs,
+                               open/closed). Policy; nothing derives it.
                units.json      seed + generated — per-unit title, passage, local
-                               palette, discourse flags.
+                               root palette + translit/gloss, discourse flags.
                occurrences.json  generated only — which data-root fires in which
                                unit, count, verse anchors. Never hand-edit.
+threads-digest.md  generated from threads.json — the thread list the Claude.ai
+               research project reads. Never hand-edit.
 /pipeline/     greek.py          deterministic Greek→Latin transliterator.
-               extract_units.py  Phase 1 one-shot: artifact → normalized fragment.
+               unit_meta.py      the unit-meta block: parse / validate / generate.
+               port_artifact.py  drop ONE new artifact in → fragment + data merge
+                                 + thread-delta report. `--backfill` did units 1–8.
+               extract_units.py  Phase-1 batch normalizer (still used by build.py).
+               refresh_meta.py   resync built fragments' meta blocks with the data.
+               threads_digest.py threads.json → threads-digest.md.
+               build.py          re-derive everything for the already-built units.
                scan_*.py         regenerate /data from the fragments.
                verify_*.py       independently re-derive the same result (no
                                  importing the generator) — run both before trusting.
