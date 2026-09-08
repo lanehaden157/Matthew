@@ -350,6 +350,14 @@ def main():
     for path in sorted(glob.glob(os.path.join(SRC, "matthew_*_translation.html"))):
         u = re.search(r"matthew_(\d+)_", path).group(1)
         html = open(path, encoding="utf-8").read()
+
+        # v2 artifacts arrive already in fragment shape (one <article class="unit">
+        # + a unit-meta block). Those are ported by pipeline/port_artifact.py, not
+        # by this Phase-1 batch normalizer — leave them untouched.
+        if '<article class="unit"' in html:
+            print(f"unit-{u}.html  (v2 fragment — skipped, use port_artifact.py)")
+            continue
+
         palette = local_palette(html)
         body = get_body(html)
 

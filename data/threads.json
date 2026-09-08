@@ -66,6 +66,11 @@
           "unit": 8,
           "ref": "8:23",
           "note": "lands cleanly on 'the disciples' after two failed would-be followers"
+        },
+        {
+          "unit": 9,
+          "ref": "9:9, 19, 27",
+          "note": "Matthew rises and follows; the ruler and the two blind men followed"
         }
       ],
       "note": "Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on.",
@@ -297,6 +302,11 @@
           "note": "the centurion, a man under authority"
         },
         {
+          "unit": 9,
+          "ref": "9:6, 8",
+          "note": "the Son of Man has authority on earth to release sins; the crowds see it given to human beings"
+        },
+        {
           "unit": 28,
           "ref": "28:18",
           "note": "'all authority has been given to me'"
@@ -317,7 +327,13 @@
         "unit": 8,
         "ref": "8:6"
       },
-      "payoffs": [],
+      "payoffs": [
+        {
+          "unit": 9,
+          "ref": "9:2, 16-17, 25, 33-34",
+          "note": "the paralytic thrown on his mat, wine poured into skins, the mourners thrown out, demons cast out"
+        }
+      ],
       "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later.",
       "kind": "root"
     },
@@ -437,6 +453,11 @@
       },
       "payoffs": [
         {
+          "unit": 9,
+          "ref": "9:6",
+          "note": "authority on earth to release sins — the first payoff of the 8:20 opening"
+        },
+        {
           "unit": 17,
           "ref": "16:13, 16:27"
         },
@@ -466,6 +487,86 @@
         }
       ],
       "note": "Daniel 7:13-14 — one like a son of man given everlasting dominion. Runs from 8:20 to the trial and the parousia."
+    },
+    {
+      "id": "son-of-david",
+      "root": "son-of-david",
+      "kind": "root",
+      "translit": "huios Dauid",
+      "gloss": "Son of David",
+      "color": "#8a3c70",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 9,
+        "ref": "9:27"
+      },
+      "payoffs": [
+        { "unit": 12, "ref": "12:23" },
+        { "unit": 15, "ref": "15:22" },
+        { "unit": 20, "ref": "20:30-31" },
+        { "unit": 21, "ref": "21:9, 21:15" }
+      ],
+      "note": "First direct address at 9:27, always a cry from the desperate and always tied to healing — the 'therapeutic Son of David' pattern. Runs to the entry and the temple (21:9, 15)."
+    },
+    {
+      "id": "mercy",
+      "root": "mercy",
+      "kind": "root",
+      "translit": "eleos / eleeō",
+      "gloss": "loyal-love, covenant-kindness",
+      "color": "#2f6db3",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 9,
+        "ref": "9:13"
+      },
+      "payoffs": [
+        { "unit": 9, "ref": "9:27" },
+        { "unit": 12, "ref": "12:7", "note": "Hosea 6:6 quoted verbatim again, same critics" },
+        { "unit": 20, "ref": "20:30-31" }
+      ],
+      "note": "Hosea 6:6 (eleos = LXX for hesed, covenant loyalty, not mere pity): 'I want loyal-love and not sacrifice.' Cited at 9:13, repeated at 12:7, cried out at 9:27."
+    },
+    {
+      "id": "save",
+      "root": "save",
+      "kind": "root",
+      "translit": "sōzō",
+      "gloss": "save / heal / rescue",
+      "color": "#c0641a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 1,
+        "ref": "1:21"
+      },
+      "payoffs": [
+        { "unit": 9, "ref": "9:21-22", "note": "the double sense at full stretch — 'your trust has saved you'" },
+        { "unit": 14, "ref": "14:30" },
+        { "unit": 27, "ref": "27:42", "note": "'he saved others; he cannot save himself'" }
+      ],
+      "note": "sōzō — 'he will save his people from their sins' (1:21) carries a heal/rescue double sense Matthew never forces apart, running to the irony at the cross."
+    },
+    {
+      "id": "fringe",
+      "root": "fringe",
+      "kind": "root",
+      "translit": "kraspedon",
+      "gloss": "tassel / hem",
+      "color": "#455a6b",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 9,
+        "ref": "9:20"
+      },
+      "payoffs": [
+        { "unit": 14, "ref": "14:36", "note": "the sick beg to touch it, and are healed" },
+        { "unit": 23, "ref": "23:5", "note": "the scribes lengthen theirs for show — the reversal" }
+      ],
+      "note": "kraspedon — the tzitzit of Numbers 15:38. Touched in faith and healing at 9:20 and 14:36; worn for display at 23:5."
     }
   ]
 }

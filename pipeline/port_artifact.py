@@ -127,8 +127,12 @@ def merge_units_json(meta, dry):
     threads = {t["root"]: t for t in um._load("threads.json")["threads"]}
     existing = row.get("roots") or {}
     local = [r["root"] for r in meta["roots"] if r["root"] not in threads]
+    # seed "taken" with existing local hues AND the global colour of every
+    # tracked thread this unit uses — a new local hue must clear both
     taken = [e["color"] for e in existing.values()
              if isinstance(e, dict) and e.get("color")]
+    taken += [threads[r["root"]]["color"] for r in meta["roots"]
+              if r["root"] in threads]
     hues = assign_hues([r for r in local if r not in existing], taken)
 
     roots = {}

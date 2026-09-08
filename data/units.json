@@ -702,10 +702,38 @@
     {
       "n": 9,
       "slug": "unit-09",
-      "passage": "Matthew 9:1-34",
-      "title": "The Deeds of the Messiah (II)",
+      "passage": "Matthew 9:1–34",
+      "title": "The Deeds of the Messiah (II): Boundary-Crossing Loyal-Love",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "faith": {
+          "color": "#a8324a",
+          "translit": "pistis / pisteuō",
+          "gloss": "trust, entrust oneself",
+          "kind": "root"
+        },
+        "new-old": {
+          "color": "#8a6a2a",
+          "translit": "kainos / neos / palaios",
+          "gloss": "new-in-kind / new-in-time / worn out by use",
+          "kind": "motif",
+          "members": [
+            {
+              "translit": "kainos",
+              "gloss": "new in kind, of a different sort"
+            },
+            {
+              "translit": "neos",
+              "gloss": "new/recent in time"
+            },
+            {
+              "translit": "palaios",
+              "gloss": "old, worn out from use"
+            }
+          ]
+        }
+      }
     },
     {
       "n": 10,

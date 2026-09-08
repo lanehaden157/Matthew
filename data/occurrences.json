@@ -2946,5 +2946,299 @@
       ],
       "total": 5
     }
+  },
+  "unit-09": {
+    "authority": {
+      "count": 2,
+      "verses": [
+        6,
+        8
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…But so that y'all may know that the Son of Man has ",
+          "hit": "authority",
+          "post": " on earth to release sins\" — then he says to the paraly…"
+        },
+        {
+          "v": 8,
+          "pre": "…ere afraid, and gave honour to God, who had given such ",
+          "hit": "authority",
+          "post": " to human beings.…"
+        }
+      ],
+      "total": 3
+    },
+    "faith": {
+      "count": 1,
+      "verses": [
+        2
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…aralyzed man, thrown on a mat. And Jesus, seeing their ",
+          "hit": "trust",
+          "post": ", said to the paralyzed man: \"Take heart, child — your…"
+        }
+      ],
+      "total": 3
+    },
+    "follow": {
+      "count": 4,
+      "verses": [
+        9,
+        19,
+        27
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…g at the toll booth, called Matthew, and says to him: \"",
+          "hit": "Follow",
+          "post": " me.\" And getting up, he followed him.…"
+        },
+        {
+          "v": 9,
+          "pre": "…thew, and says to him: \"Follow me.\" And getting up, he ",
+          "hit": "followed",
+          "post": " him.…"
+        },
+        {
+          "v": 19,
+          "pre": "…And Jesus got up and began ",
+          "hit": "following",
+          "post": " him, and his disciples too.…"
+        },
+        {
+          "v": 27,
+          "pre": "…And as Jesus was passing on from there, two blind men ",
+          "hit": "followed",
+          "post": " him, crying out and saying: \"Have loyal-love on us, So…"
+        }
+      ],
+      "total": 5
+    },
+    "fringe": {
+      "count": 1,
+      "verses": [
+        20
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…ng for twelve years came up behind him and touched the ",
+          "hit": "fringe",
+          "post": " of his cloak.…"
+        }
+      ],
+      "total": 2
+    },
+    "mercy": {
+      "count": 2,
+      "verses": [
+        13,
+        27
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…But go and learn what this is: 'I want ",
+          "hit": "loyal-love",
+          "post": " and not sacrifice.' For I didn't come to call the upri…"
+        },
+        {
+          "v": 27,
+          "pre": "…o blind men followed him, crying out and saying: \"Have ",
+          "hit": "loyal-love",
+          "post": " on us, Son of David!\"…"
+        }
+      ],
+      "total": 3
+    },
+    "new-old": {
+      "count": 5,
+      "verses": [
+        16,
+        17
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…And no one puts a patch of unshrunk cloth on a ",
+          "hit": "worn-out",
+          "post": " cloak — for its patch tears away from the cloak, and a…"
+        },
+        {
+          "v": 17,
+          "pre": "…Nor do people pour ",
+          "hit": "new",
+          "post": " wine into worn-out skins — otherwise, the skins burst,…"
+        },
+        {
+          "v": 17,
+          "pre": "…Nor do people pour new wine into ",
+          "hit": "worn-out",
+          "post": " skins — otherwise, the skins burst, and the wine spill…"
+        },
+        {
+          "v": 17,
+          "pre": "…Nor do people pour ",
+          "hit": "new",
+          "post": " wine into worn-out skins — otherwise, the skins burst,…"
+        },
+        {
+          "v": 17,
+          "pre": "…d the skins are destroyed. But they pour new wine into ",
+          "hit": "fresh",
+          "post": " skins, and both are kept safe together.…"
+        }
+      ],
+      "total": 6
+    },
+    "release": {
+      "count": 3,
+      "verses": [
+        2,
+        5,
+        6
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…the paralyzed man: \"Take heart, child — your sins are ",
+          "hit": "released",
+          "post": ".\"…"
+        },
+        {
+          "v": 5,
+          "pre": "…For which is easier — to say 'Your sins are ",
+          "hit": "released",
+          "post": ",' or to say 'Get up and walk'?…"
+        },
+        {
+          "v": 6,
+          "pre": "…may know that the Son of Man has authority on earth to ",
+          "hit": "release",
+          "post": " sins\" — then he says to the paralyzed man: \"Get up, pi…"
+        }
+      ],
+      "total": 4
+    },
+    "save": {
+      "count": 3,
+      "verses": [
+        21,
+        22
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…ying to herself: \"If I only touch his cloak, I will be ",
+          "hit": "saved",
+          "post": ".\"…"
+        },
+        {
+          "v": 22,
+          "pre": "…eing her, said: \"Take heart, daughter — your trust has ",
+          "hit": "saved",
+          "post": " you.\" And the woman was saved from that hour.…"
+        },
+        {
+          "v": 22,
+          "pre": "…eing her, said: \"Take heart, daughter — your trust has ",
+          "hit": "saved",
+          "post": " you.\" And the woman was saved from that hour.…"
+        }
+      ],
+      "total": 4
+    },
+    "son-of-david": {
+      "count": 1,
+      "verses": [
+        27
+      ],
+      "hits": [
+        {
+          "v": 27,
+          "pre": "…ed him, crying out and saying: \"Have loyal-love on us, ",
+          "hit": "Son of David",
+          "post": "!\"…"
+        }
+      ],
+      "total": 2
+    },
+    "son-of-man": {
+      "count": 1,
+      "verses": [
+        6
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…But so that y'all may know that the ",
+          "hit": "Son of Man",
+          "post": " has authority on earth to release sins\" — then he says…"
+        }
+      ],
+      "total": 2
+    },
+    "throw": {
+      "count": 7,
+      "verses": [
+        2,
+        16,
+        17,
+        25,
+        33,
+        34
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…And look — they were carrying to him a paralyzed man, ",
+          "hit": "thrown",
+          "post": " on a mat. And Jesus, seeing their trust, said to the p…"
+        },
+        {
+          "v": 16,
+          "pre": "…And no one ",
+          "hit": "puts",
+          "post": " a patch of unshrunk cloth on a worn-out cloak — for it…"
+        },
+        {
+          "v": 17,
+          "pre": "…Nor do people ",
+          "hit": "pour",
+          "post": " new wine into worn-out skins — otherwise, the skins bu…"
+        },
+        {
+          "v": 17,
+          "pre": "…Nor do people ",
+          "hit": "pour",
+          "post": " new wine into worn-out skins — otherwise, the skins bu…"
+        },
+        {
+          "v": 25,
+          "pre": "…But when the crowd had been ",
+          "hit": "thrown out",
+          "post": ", he went in and took hold of her hand, and the little…"
+        },
+        {
+          "v": 33,
+          "pre": "…And when the demon had been ",
+          "hit": "cast out",
+          "post": ", the mute man spoke. And the crowds were amazed, sayin…"
+        },
+        {
+          "v": 34,
+          "pre": "…Pharisees were saying: \"By the ruler of the demons he ",
+          "hit": "casts out",
+          "post": " demons.\"…"
+        }
+      ],
+      "total": 8
+    }
   }
 }

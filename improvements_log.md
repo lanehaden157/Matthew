@@ -218,3 +218,18 @@
 - Known carry-over (not touched): units.json glosses use `(γεν-)` morphology
   shorthand with Greek chars — pre-existing taxonomy choice, already renders in
   the site legend; revisit if strict translit-only matters there.
+- extract_units.py now skips any source-artifact already in v2 fragment shape
+  (`<article class="unit">`) — those go through port_artifact.py only.
+
+## 2026-09-07 — Unit 9 ported (first v2 artifact)
+- `matthew_09_translation.html` arrived already in v2 shape; `port_artifact.py 9`
+  ran clean after a porter fix (local-hue assignment now also clears the global
+  colours of threads the unit uses — first run collided release/mercy,
+  son-of-man/save).
+- Promoted all 4 candidates to `data/threads.json`: **son-of-david** (#8a3c70,
+  opens 9:27), **mercy** (#2f6db3, opens 9:13, Hosea 6:6), **save** (#c0641a =
+  its old local hue, opens 1:21 — now global across units 1/3/9), **fringe**
+  (#455a6b, opens 9:20). Added unit-9 payoff refs to authority / son-of-man /
+  follow / throw.
+- build.py green: 9 units, 362 in-verse occurrences, every root resolves, no
+  collisions. Unit 1 meta block gained the `save` open. Units 2–8 unchanged.
