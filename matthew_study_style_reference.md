@@ -1,31 +1,24 @@
-# Matthew Study — Artifact Style & Template Reference (v2)
+# Matthew Study — Artifact Style & Template Reference
 
 A stable reference for the per-unit HTML translation artifacts and the chat commentary.
-**As of v2 the artifact is a site fragment, not a standalone document** — it drops straight
-into the static site (`github.com/lanehaden157/Matthew`) via `pipeline/port_artifact.py`
-with no `<head>`, no `<style>`, no font links, and no per-unit colour assignment. Consult
-this file before building each unit's artifact.
+Consult it before building each unit's artifact.
 
 > This is a *reference* file — headers, tables, code blocks are fine here.
 > The no-headers/no-bullets rule applies only to the pre-read briefing and the
 > verse-by-verse commentary, which stay in flowing prose.
 
-**What changed from v1** (the old standalone-artifact era, units 1–8):
-- No `<style>` block, no `:root{--c-*}` palette, no `<link>` to Google Fonts. The site owns
-  all styling.
-- Colours are **resolved at runtime by the site**, two-tier: a root that is a tracked
-  cross-unit thread (`threads-digest.md`) gets that thread's fixed colour in every unit; any
-  other root gets a hue the pipeline assigns into `data/units.json`. **The artifact never
-  picks a hex.**
-- Every coloured word is `<span class="r" data-root="X">…</span>` (counted) or
-  `<span class="rl" data-root="X">…</span>` (root-linked, not counted). No class names like
-  `beget`, no inline `style="color:…"`.
-- The artifact opens with a machine-readable **`unit-meta` block** (§2) that drives the
-  site's data files. This replaces "recover the next unit and its threads from past chats."
-- The hand-built colour legend is optional — the site rebuilds it from data. Keep a legend
-  `<section>` for readability if you like, but it may be a stub (§3).
-- Output is `matthew_NN_translation.html` as before, but its content is just the
-  `<article>` fragment described below.
+**How the artifact works, in one paragraph.** The artifact is a **site fragment**, not a
+standalone page — one `<article class="unit" data-unit="N">` with **no `<head>`, `<style>`,
+font links, or hand-picked colours**. It drops into the static site
+(`github.com/lanehaden157/Matthew`) via `pipeline/port_artifact.py`. It opens with a
+machine-readable **`unit-meta` block** (§2) that drives the site's data files. Every
+coloured word is `<span class="r" data-root="X">…</span>` (counted) or `class="rl"`
+(root-linked, not counted) — no class names like `beget`, no inline `style`. The site
+resolves colour **two-tier**: a root that is a tracked cross-unit thread
+(`threads-digest.md`) gets that thread's fixed colour in every unit; any other root gets a
+hue the pipeline assigns into `data/units.json`. **The artifact never picks a hex.** The
+colour legend may be a stub — the site rebuilds it from data (§3). Output is still
+`/mnt/user-data/outputs/matthew_NN_translation.html`; its content is just the `<article>`.
 
 ---
 
@@ -310,8 +303,8 @@ the literary-canonical frame; Constable for traditional/dispensationalist, to be
 This file is **not** a running log. To find which unit is next, check `PLAN.md` and
 `session_index.md` in the site repo (or ask Lane), then take the following row from the
 Literary Unit Map (§7). The map is the plan of record: passages and seams are settled;
-titles are working titles. Roots and colours are decided fresh per unit (§1); the site's
-`data/units.json` records what each built unit tracks.
+titles are working titles. Which roots a unit traces is decided per unit (§1); colour is
+the site's job, and `data/units.json` records what each built unit tracks.
 
 ---
 
@@ -391,7 +384,7 @@ Format: **Unit — passage — title.** ✅ = built.
     scoping alternative: 5:1–48 / 6:1–7:12 / 7:13–29. Confirm at the Sermon.
 - **Unit 8 — 8:1–34 — The Deeds of the Messiah (I).** ✅ Leper, centurion, Peter's
   mother-in-law + summary, would-be followers, the storm, the Gadarene demoniacs.
-- **Unit 9 — 9:1–34 — The Deeds of the Messiah (II).** Paralytic, call of Matthew, the
+- **Unit 9 — 9:1–34 — The Deeds of the Messiah (II).** ✅ Paralytic, call of Matthew, the
   fasting question, Jairus's daughter + the haemorrhaging woman, two blind men, the mute
   demoniac. Ch. 9 *minus* the harvest summary. **Watch across the seam:** chs. 8–9 are one
   ten-miracle deed-block (three triads with interludes) answering chs. 5–7.

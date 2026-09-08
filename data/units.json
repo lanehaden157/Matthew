@@ -72,7 +72,7 @@
         "beget": {
           "color": "#a8324a",
           "translit": "gennaō · genesis",
-          "gloss": "beget (γεν-)"
+          "gloss": "beget (gen-)"
         },
         "name": {
           "color": "#1c7d70",
@@ -117,7 +117,7 @@
         "beget": {
           "color": "#a8324a",
           "translit": "gennaō · genesis",
-          "gloss": "beget (γεν-)"
+          "gloss": "beget (gen-)"
         },
         "name": {
           "color": "#1c7d70",
@@ -182,7 +182,7 @@
         "beget": {
           "color": "#a8324a",
           "translit": "gennaō · genesis",
-          "gloss": "beget (γεν-)"
+          "gloss": "beget (gen-)"
         },
         "name": {
           "color": "#1c7d70",
@@ -237,12 +237,12 @@
         "repent": {
           "color": "#1f8f5f",
           "translit": "metanoeō · metanoia",
-          "gloss": "repent (μετανο-)"
+          "gloss": "repent (metano-)"
         },
         "immerse": {
           "color": "#0e8aa0",
           "translit": "baptizō · baptisma",
-          "gloss": "immerse (βαπτ-)"
+          "gloss": "immerse (bapt-)"
         },
         "wilderness": {
           "color": "#8a7a4a",
@@ -327,7 +327,7 @@
         "beget": {
           "color": "#a8324a",
           "translit": "gennaō · genesis",
-          "gloss": "beget (γεν-)"
+          "gloss": "beget (gen-)"
         },
         "shadow": {
           "color": "#6b7280",
@@ -397,7 +397,7 @@
         "hidden": {
           "color": "#455a6b",
           "translit": "kryptos · kryphaios",
-          "gloss": "hidden (κρυπτ-)"
+          "gloss": "hidden (krypt-)"
         },
         "seen": {
           "color": "#1596b8",
@@ -407,7 +407,7 @@
         "treasure": {
           "color": "#8a6a2a",
           "translit": "thēsauros · thēsaurizō",
-          "gloss": "treasure (θησαυρ-)"
+          "gloss": "treasure (thēsaur-)"
         },
         "release": {
           "color": "#6b2fb3",
@@ -427,7 +427,7 @@
         "seek": {
           "color": "#9c4f1c",
           "translit": "zēteō · epizēteō",
-          "gloss": "seek (ζητ-)"
+          "gloss": "seek (zēt-)"
         }
       }
     },
@@ -442,12 +442,12 @@
         "judge": {
           "color": "#a8324a",
           "translit": "krinō · krima",
-          "gloss": "judge (κρι-)"
+          "gloss": "judge (kri-)"
         },
         "measure": {
           "color": "#4a4f93",
           "translit": "metron · metreō",
-          "gloss": "measure (μετρ-)"
+          "gloss": "measure (metr-)"
         },
         "ask": {
           "color": "#1c7d70",
@@ -532,7 +532,7 @@
         "faith": {
           "color": "#b07a1e",
           "translit": "pistis · pisteuō",
-          "gloss": "trust (πιστ-)"
+          "gloss": "trust (pist-)"
         },
         "authority": {
           "color": "#7b2fb3",

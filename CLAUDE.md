@@ -10,8 +10,11 @@ phase plan and the record of decisions.
 
 ## Status (2026-09-07)
 
-- Live at https://lanehaden157.github.io/Matthew/ . Units 1–8 built. **Phases 1–9
-  done.** Next content unit: **Unit 9 (Matt 9:1–34)**.
+- Live at https://lanehaden157.github.io/Matthew/ . Units 1–9 built. **Phases 1–9
+  done.** Next content unit: **Unit 10 (Matt 9:35–11:1, Mission discourse)**.
+- Colour policy: one Greek lexical root per `data-root` (stem + same-stem forms
+  only) — no themes/formulae/bundles. Exception: fixed titles Matthew repeats
+  verbatim (son-of-man, son-of-david, law-prophets, apo-tote) live in threads.json.
 - Research continues in the Claude.ai project. As of Phase 9 the artifact it
   produces is a **drop-in fragment** (`matthew_study_style_reference.md` v2):
   one `<article>`, no `<head>`/`<style>`, a `<script id="unit-meta">` JSON block,
@@ -82,9 +85,9 @@ GitHub Pages serves from a subpath and root-absolute paths 404 in production.
 **Persistence:** `localStorage` only (reading progress, notes), versioned for
 future migration. No backend, no accounts.
 
-**Transliteration only** — no native Greek or Hebrew script anywhere in the
-rendered units. Script may appear in `threads.json` / dashboard metadata later if
-wanted (data-driven, zero fragment edits).
+**Transliteration only** — no native Greek or Hebrew script anywhere: not in the
+fragments, and not in `data/*.json` translit/gloss fields either (they render in
+the rebuilt legend and popovers). Use Latin morphology shorthand (`gen-`, `pist-`).
 
 **Desktop and mobile are both first-class.** Every phase ships responsive. Hover
 affordances degrade to tap; everything else works and reads at ~375px. No

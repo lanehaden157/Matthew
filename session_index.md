@@ -32,4 +32,7 @@ Read this first. 3 lines max per session.
 - Then hardened to "one Greek lexical root per colour" retroactively: split
   wise/foolish + build/rock, trimmed wage→misthos & seen→theaomai, dropped
   said/isay/yall/new-old. Fixed titles (son-of-man etc.) kept as the exception.
-  build green, threads 22→24. Next: Unit 10 (9:35–11:1, Mission discourse).
+- Doc reconciliation: deleted old memory.md + old instructions.md (folded live
+  bits into instructions.md), rewrote instructions.md as the single chat-side +
+  artifact spec, de-Greeked units.json glosses, fixed PLAN/CLAUDE staleness.
+  build green, 9 units. Next: Unit 10 (9:35–11:1, Mission discourse).

@@ -6,21 +6,26 @@ tracking. Draft for Lane's sign-off; CLAUDE.md gets rewritten to match once appr
 
 ---
 
-## What exists today
+## What existed at kickoff (2026-09-07 — historical snapshot)
+
+> This section records the starting state and is **not maintained**. Current
+> architecture is `CLAUDE.md`; current phase status is below; the thread list is
+> `data/threads.json` / `threads-digest.md`; the artifact spec is
+> `matthew_study_style_reference.md`. `old memory.md` and `old instructions.md`
+> were the pre-site research-project files and have been removed — superseded by
+> `instructions.md` + the data files.
 
 - **8 artifacts** — `matthew_01_translation.html` … `matthew_08_translation.html`.
-  Each is a full standalone HTML doc: `<head>`, Google Fonts link, a ~6.5–7.4 KB
+  Each was a full standalone HTML doc: `<head>`, Google Fonts link, a ~6.5–7.4 KB
   inline `<style>` block, body inside `<div class="wrap">`.
-- **`matthew_study_style_reference.md`** — CSS/component library (§2–3), conventions
-  checklist (§4), Literary Unit Map for all 28 units (§7). Says "translit only, no
-  Greek script" and "per-unit color, no cross-unit registry."
-- **`old memory.md`** — project memory. Lists **13 live cross-unit threads** with
-  origin/payoff verses + open/closed status, plus 3 candidates (now approved →
-  **16 threads**). Says script-first policy and "memory is authoritative over the
-  style reference." Units 1–8 complete; **Unit 9 (Matt 9:1–34) is next**.
+- **`matthew_study_style_reference.md`** — CSS/component library, conventions
+  checklist, Literary Unit Map. Then said "per-unit color, no cross-unit registry"
+  (since replaced by the two-tier runtime system).
+- **`old memory.md`** — pre-site project memory. Listed 13 cross-unit threads and
+  a script-first policy — both since superseded.
 - **`ideas.md`** — feature backlog, split Now / Later.
 
-### Findings from inspecting the 8 files
+### Findings from inspecting the 8 files (kickoff)
 
 1. **The per-unit CSS-color system is already failing silently.**
    - Unit 2 uses root classes `call`, `king` with no color defined → render gray.
@@ -57,7 +62,7 @@ Every colored word gets identical markup, no classes, no vars in the fragment:
 
 `threads.js` resolves the color at load:
 
-1. `data-root` in **`data/threads.json`** (the ~16 tracked threads)? → global
+1. `data-root` in **`data/threads.json`** (the tracked cross-unit threads)? → global
    color, identical in every unit, forever. Recolor book-wide = one hex edit.
 2. Otherwise → that unit's **local palette** in `data/units.json`.
 

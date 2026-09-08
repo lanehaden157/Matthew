@@ -267,3 +267,22 @@
 - Fragment edits via retrofit-tags.json (untag_word/retag_word/add) so they
   survive re-ports; U9 edits in its source artifact. build.py green — 9 units,
   every root resolves, no collisions. Threads: 22 → 24.
+
+## 2026-09-07 — doc reconciliation (no contradictions)
+- Deleted `old memory.md` + `old instructions.md` — fully superseded. Their live
+  content (Greek-handling rules, research bash patterns, Constable-dialogue
+  principle, "y'all only for genuine plural", surgical-edit preference) folded
+  into `instructions.md`.
+- `instructions.md` rewritten as the single current chat-side + artifact spec:
+  translit-only + gloss-always + never-assume-known + explain-grammar-plainly;
+  three-pass per-unit workflow; one-lexical-root colour rule; threads-digest.md
+  is the thread source of truth (not memory).
+- `matthew_study_style_reference.md`: dropped the v1/v2 changelog framing (units
+  1–8 already conform), fixed "colours decided fresh per unit" → site's job,
+  marked Unit 9 built.
+- Stripped Greek-script morphology from units.json glosses (`(γεν-)` → `(gen-)`
+  etc.) — was rendering in the site legend against the translit-only rule. Zero
+  Greek/Hebrew chars now in data, fragments, or digest.
+- PLAN.md "What exists today" retitled as a non-maintained kickoff snapshot;
+  softened the stale "~16 threads" mention. CLAUDE.md status → units 1–9 built,
+  next Unit 10; added the one-root colour policy line.
