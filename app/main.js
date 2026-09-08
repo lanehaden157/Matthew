@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=28";
-import { enhanceSpotlights } from "./spotlight.js?v=28";
-import { renderSearch } from "./search.js?v=28";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=29";
+import { enhanceSpotlights } from "./spotlight.js?v=29";
+import { renderSearch } from "./search.js?v=29";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -273,23 +273,28 @@ function hoistStructureBlocks(root) {
 }
 
 /* One section-heading form site-wide: <h3 class="pericope">Title <span>· range</span></h3>
-   (Unit 8's shape). Older fragments used h2.secthead / h3.panel / h3.movement;
-   the research fragments are gradually being rewritten, this catches the rest and
-   any future drift. */
+   (Unit 8's shape). Older fragments used div.sectionhead / div.panelhead /
+   h3.panel / h3.movement / h2.secthead — normalise them all here, and wrap a
+   trailing verse range in the <span> if the author didn't. Catches any future
+   drift too. */
 function normalizeSectionHeadings(root) {
   const article = root.querySelector("article.unit") || root;
-  for (const h of [...article.querySelectorAll(
-    "h2.secthead, h3.panel, h3.movement, h2.sectionhead, .sectionhead")]) {
+  const LEGACY =
+    "h2.secthead, h2.sectionhead, h3.panel, h3.movement, .sectionhead, .panelhead";
+  for (const h of [...article.querySelectorAll(LEGACY)]) {
+    if (h.matches("h3.pericope")) continue;
     const h3 = document.createElement("h3");
     h3.className = "pericope";
     h3.innerHTML = h.innerHTML;
     h.replaceWith(h3);
   }
+  const SEP = "(?:\\s|&nbsp;|\\u00a0)*";
+  const RANGE = "((?:\\d+:\\d+)(?:\\s*[\\u2013-]\\s*(?:\\d+:)?\\d+)?)";
+  const tail = new RegExp(SEP + "[·\\u2013\\u2014-]" + SEP + RANGE + "\\s*$");
   for (const h of article.querySelectorAll("h3.pericope")) {
     if (h.querySelector("span")) continue; // already Title <span>· range</span>
-    h.innerHTML = h.innerHTML.replace(
-      /\s*[·–—-]\s*((?:\d+:\d+)(?:\s*[–-]\s*(?:\d+:)?\d+)?)\s*$/,
-      ' <span>· $1</span>');
+    let s = h.innerHTML.replace(/^\s*(?:Panel|Movement|Part)\s+[\w']+\s*[·|]\s*/i, "");
+    h.innerHTML = s.replace(tail, " <span>· $1</span>");
   }
 }
 
