@@ -87,9 +87,22 @@ function boxes(root) {
 }
 
 function addAllControl(root) {
-  const anchor = root.querySelector(".verses") ||
-    root.querySelector("p.v, div.v")?.parentElement;
-  if (!anchor) return;
+  const article = root.querySelector("article.unit") || root;
+  const firstVerse = article.querySelector("p.v, div.v");
+  if (!firstVerse) return;
+
+  // the article-level element that is or contains the first verse
+  let anchor = firstVerse;
+  while (anchor.parentElement && anchor.parentElement !== article) {
+    anchor = anchor.parentElement;
+  }
+  // if a section heading sits right above it, put the bar above that instead,
+  // so the control always lands just under the structural blocks
+  const prev = anchor.previousElementSibling;
+  if (prev && prev.matches("h2.secthead, h3.pericope, h3.panel, h3.movement, .sectionhead")) {
+    anchor = prev;
+  }
+
   const bar = document.createElement("div");
   bar.className = "spot-controls";
   const btn = document.createElement("button");

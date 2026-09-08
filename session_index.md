@@ -45,4 +45,8 @@ Read this first. 3 lines max per session.
   wise/nations/follow. build green — 10 units, 374 occurrences, 29 threads.
 - main.js hoistStructureBlocks(): all section.block (rings/tables/itineraries)
   now render at the top of every unit, under the legend, before the translation.
-  App-side transform, fragments untouched. Asset version 26 → 27.
+- Section headings normalized to <h3 class="pericope"> (Unit 8's form) via
+  main.js + fixed at source for units 6/7/10; style ref updated. Units 1-5, 9
+  have no dividers — needs authored titles (asked Lane).
+- spotlight.js "show all notes" bar now anchors consistently (was above the
+  masthead in units 9/10). Asset version 26 → 28.

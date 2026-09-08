@@ -194,6 +194,19 @@ if you must, the porter tags it `lab-word` so CSS can shrink it.
 </div>
 ```
 
+### Section heading (one per pericope / passage-group)
+
+```html
+<h3 class="pericope">The centurion's boy <span>· 8:5–13</span></h3>
+```
+
+One form only, site-wide: `<h3 class="pericope">`, an editorial title, then the
+verse range in a `<span>` (rendered small + italic). Use it to divide the
+translation into its natural passage units. Do **not** use `h2`, `secthead`,
+`panel`, or `movement` — the site rewrites those to `pericope` but new artifacts
+should emit the right thing. Every unit gets these; keep titles short and
+descriptive (a phrase, not a sentence).
+
 ### A verse + inline gloss
 
 ```html
@@ -243,6 +256,8 @@ if you must, the porter tags it `lab-word` so CSS can shrink it.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
 - [ ] `<p class="v">` verses with `.gloss`/`.compare` as siblings, not nested.
+- [ ] The translation is divided into passage groups by `<h3 class="pericope">Title <span>· C:V–V</span></h3>` — no other heading form.
+- [ ] Structural blocks (`.ring`, `table.exod`, `.itin`) come first, before the verses. The site also hoists them, but author them up top.
 
 **Translation & wording**
 - [ ] Plural "you" → **"y'all"** everywhere in the translation.

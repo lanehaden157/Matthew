@@ -31,6 +31,21 @@
   Units with all blocks already up top are unaffected (order preserved).
 - Asset version bumped 26 → 27.
 
+## Uniform section headings + "show all notes" placement
+- Lane: section titles should match Unit 8 everywhere; "show all notes" should
+  match Unit 6 everywhere.
+- **Headings** → `<h3 class="pericope">Title <span>· C:V–V</span></h3>` is now the
+  only form. `main.js normalizeSectionHeadings()` rewrites legacy
+  `h2.secthead` / `h3.panel` / `h3.movement` on load; also fixed in the source
+  artifacts for units 6, 7, 10 (Unit 10's `h2.secthead` had no CSS at all).
+  Style reference updated for future artifacts.
+- **"Show all notes"** → `spotlight.js addAllControl()` no longer falls back to
+  `article.before(bar)` when there's no `.verses` wrapper (units 9, 10). It now
+  anchors just under the structural blocks / above the first section heading.
+- Asset version 27 → 28.
+- **Still open:** units 1–5 and 9 have no section dividers — asked Lane whether
+  to author pericope titles for them.
+
 ## Takeaways
 - The promoted candidates were already tagged in the artifact prose, so promotion
   was pure `threads.json` + re-run — no retrofit-tags entries needed.

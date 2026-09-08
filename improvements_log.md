@@ -268,6 +268,28 @@
   survive re-ports; U9 edits in its source artifact. build.py green — 9 units,
   every root resolves, no collisions. Threads: 22 → 24.
 
+## 2026-09-08 — one section-heading form + consistent "show all notes"
+- Section titles: `<h3 class="pericope">Title <span>· C:V–V</span></h3>` (Unit 8's
+  form) is now the only section-divider markup.
+  - `app/main.js` `normalizeSectionHeadings()` rewrites legacy `h2.secthead` /
+    `h3.panel` / `h3.movement` / `.sectionhead` to `h3.pericope` on load and
+    wraps a trailing ` · range` in a `<span>` — covers past fragments and any
+    future drift.
+  - Also fixed at source: `source-artifacts/matthew_06/07/10_translation.html`
+    and the regenerated `units/unit-06/07/10.html` (Unit 10 was `h2.secthead`
+    with *no* matching CSS — rendered unstyled). Unit 6's two "Movement N · …"
+    headers became pericopes keyed on their descriptive subtitle.
+  - `matthew_study_style_reference.md` §3 + §4: `h3.pericope` spec + checklist.
+  - **Not yet addressed:** units 1–5 and 9 have no section dividers at all —
+    needs editorial titles authored (asked Lane).
+- "Show all notes" control (`app/spotlight.js` `addAllControl`): anchor was
+  `.verses || firstVerse.parentElement`; in the v2 fragments (9, 10) there is no
+  `.verses` wrapper so it fell to `article.before(bar)` — the bar rendered above
+  the masthead. Now: find the article-level node containing the first verse, and
+  if a section heading sits just above it, place the bar above that — so it
+  always lands just under the structural blocks, as in Unit 6.
+- Asset version 27 → 28.
+
 ## 2026-09-08 — structural blocks always render first
 - `app/main.js` `hoistStructureBlocks()` — on unit load, every
   `section.block` (except the colour key) is moved to the top of the article,
