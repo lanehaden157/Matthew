@@ -282,8 +282,10 @@
   - `matthew_study_style_reference.md` §3 + §4: `h3.pericope` spec + checklist.
   - Units 1 (`div.sectionhead` ×2) and 3 (`div.panelhead` ×2) already had
     dividers in other markup — converted at source + rebuilt.
-  - **Still open:** units 2, 4, 5, 9 have none — draft titles in
-    `pipeline/out/pericope-headings-proposal.md`, sent to Lane; apply on his ok.
+  - Units 2, 4, 5, 9 had none — **23 pericope headings authored** (Lane approved
+    the proposal, only edit: Unit 4 "Isaiah's light"). Inserted into the source
+    artifacts (2/4/5) + `units/unit-09.html` (v2, not regenerated) + unit-09
+    source. build.py green — every unit now carries `h3.pericope` dividers.
 - "Show all notes" control (`app/spotlight.js` `addAllControl`): anchor was
   `.verses || firstVerse.parentElement`; in the v2 fragments (9, 10) there is no
   `.verses` wrapper so it fell to `article.before(bar)` — the bar rendered above

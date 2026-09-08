@@ -45,9 +45,9 @@
 - Asset version 27 → 28.
 - Units 1 & 3 had dividers in other markup (`div.sectionhead`, `div.panelhead`)
   — converted at source, rebuilt, live.
-- **Still open:** units 2, 4, 5, 9 have no dividers. Lane chose "I draft, he
-  reviews"; drafts in `pipeline/out/pericope-headings-proposal.md`, sent to him.
-  Apply the approved set to fragments + source artifacts, then rebuild.
+- Units 2, 4, 5, 9 had no dividers — 23 pericope headings authored and approved
+  (only edit: Unit 4 → "Isaiah's light"). Inserted into the source artifacts and
+  unit-09.html; build green. Every unit now has `h3.pericope` dividers.
 
 ## Takeaways
 - The promoted candidates were already tagged in the artifact prose, so promotion
