@@ -432,3 +432,4 @@
 - css/styles.css: --maxw 790px -> 900px. Reduces desktop side margins;
   no effect on mobile (breakpoint 720px, narrower viewports already fill the
   column; 26px page padding unchanged).
+- css/styles.css: --maxw 900px -> 1150px (further cut of desktop dead space).
