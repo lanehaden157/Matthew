@@ -427,3 +427,8 @@
   blocks). threads.json _note + retrofit _c + audit report reworded to drop
   the .r/.rl split; policy is now simply "tag every occurrence as .r, even
   before the thread's opens".
+
+## 2026-09-09
+- css/styles.css: --maxw 790px -> 900px. Reduces desktop side margins;
+  no effect on mobile (breakpoint 720px, narrower viewports already fill the
+  column; 26px page padding unchanged).
