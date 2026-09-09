@@ -416,3 +416,14 @@
   exousia is now a tracked thread anyway).
 - authority 7:29 is now a plain thread span (no nested .star).
 - Still present in source-artifacts/ — noted in retrofit-tags.json _note.
+
+## 2026-09-09 (cont.) — rl -> r on the retro-tags
+- Lane's call: the 27 pre-opening/incidental thread spans added above used
+  class="rl" for the "not counted" property, but scan_occurrences counts any
+  data-root inside a <p class="v"> regardless of class — so `.rl` there was a
+  misleading label. Downgraded all 27 to class="r". No doc changes needed:
+  the `.rl` "not counted" wording in CLAUDE.md / style-ref stays correct for
+  its actual use (legend rows, diagram labels, glosses — all outside verse
+  blocks). threads.json _note + retrofit _c + audit report reworded to drop
+  the .r/.rl split; policy is now simply "tag every occurrence as .r, even
+  before the thread's opens".
