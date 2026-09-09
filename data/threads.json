@@ -1,5 +1,5 @@
 {
-  "_note": "Tracked cross-unit threads. Hand-authored — this is policy, nothing derives it. A data-root listed here as `root` gets this thread's colour in EVERY unit it appears in (global tier). Roots not listed here fall back to the unit's local palette in units.json. To recolour a thread book-wide, change its `color` here. `opens`/`payoffs` are for the trajectory popover; `status` open|closed. `tagged: false` means the thread is real in the commentary but not yet marked with data-root spans in the fragments — see pipeline/out/retrofit-*.md.",
+  "_note": "Tracked cross-unit threads. Hand-authored — this is policy, nothing derives it. A data-root listed here as `root` gets this thread's colour in EVERY unit it appears in (global tier). Roots not listed here fall back to the unit's local palette in units.json. To recolour a thread book-wide, change its `color` here. `opens`/`payoffs` are for the trajectory popover; `status` open|closed. `tagged: false` means the thread is real in the commentary but not yet marked with data-root spans in the fragments — see pipeline/out/retrofit-*.md. COVERAGE POLICY (2026-09-09): a tracked root is coloured at EVERY morphological occurrence in the fragments — `.r` from its opening unit onward, `.rl` for incidental/pre-opening hits. `opens` stays the editorial trajectory anchor, NOT the first sighting. Audit: pipeline/out/thread-retrofit-audit.md.",
   "version": 1,
   "threads": [
     {
@@ -200,7 +200,7 @@
       "root": "release",
       "translit": "aphiēmi",
       "gloss": "release / forgive / leave",
-      "color": "#147a63",
+      "color": "#0e6a3f",
       "status": "open",
       "tagged": true,
       "opens": {

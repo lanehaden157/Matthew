@@ -415,6 +415,21 @@
       ],
       "total": 1
     },
+    "fear": {
+      "count": 1,
+      "verses": [
+        20
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…o him in a dream, saying: Joseph, son of David, do not ",
+          "hit": "fear",
+          "post": " to take alongside Mary your wife, for the [thing] bego…"
+        }
+      ],
+      "total": 1
+    },
     "name": {
       "count": 3,
       "verses": [
@@ -646,6 +661,21 @@
       ],
       "total": 2
     },
+    "fear": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…reigns over Judea in place of his father Herod, he was ",
+          "hit": "afraid",
+          "post": " to go off there; and being warned in a dream, he withd…"
+        }
+      ],
+      "total": 1
+    },
     "fulfill": {
       "count": 3,
       "verses": [
@@ -703,6 +733,36 @@
         }
       ],
       "total": 3
+    },
+    "lose": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…l I tell you; for Herod is about to seek the child, to ",
+          "hit": "destroy",
+          "post": " it.\"…"
+        }
+      ],
+      "total": 1
+    },
+    "urge": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…Rachel weeping for her children, and she would not be ",
+          "hit": "comforted",
+          "post": ", because they are no more.\"…"
+        }
+      ],
+      "total": 1
     },
     "withdraw": {
       "count": 4,
@@ -870,6 +930,34 @@
         }
       ],
       "total": 2
+    },
+    "release": {
+      "count": 3,
+      "verses": [
+        11,
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…But answering, Jesus said to him, \"",
+          "hit": "Permit",
+          "post": " it now, for thus it is fitting for us to fulfill all r…"
+        },
+        {
+          "v": 15,
+          "pre": "…fitting for us to fulfill all righteousness.\" Then he ",
+          "hit": "permits",
+          "post": " him.…"
+        },
+        {
+          "v": 11,
+          "pre": "…Then the slanderer ",
+          "hit": "leaves",
+          "post": " him, and look, angels came and were ministering to him…"
+        }
+      ],
+      "total": 3
     },
     "repent": {
       "count": 3,
@@ -1251,6 +1339,28 @@
       ],
       "total": 5
     },
+    "release": {
+      "count": 2,
+      "verses": [
+        20,
+        22
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…And they, immediately ",
+          "hit": "leaving",
+          "post": " the nets, followed him.…"
+        },
+        {
+          "v": 22,
+          "pre": "…And they, immediately ",
+          "hit": "leaving",
+          "post": " the boat and their father, followed him.…"
+        }
+      ],
+      "total": 2
+    },
     "sea": {
       "count": 4,
       "verses": [
@@ -1383,6 +1493,28 @@
       ],
       "total": 3
     },
+    "foolish": {
+      "count": 2,
+      "verses": [
+        13,
+        22
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…Y'all are the salt of the earth; but if the salt is ",
+          "hit": "made foolish",
+          "post": ", with what will it be salted? It is strong for nothing…"
+        },
+        {
+          "v": 22,
+          "pre": "…a,” shall be liable to the council; and whoever says, “",
+          "hit": "Fool",
+          "post": ",” shall be liable to the Gehenna of fire.…"
+        }
+      ],
+      "total": 2
+    },
     "gehenna": {
       "count": 3,
       "verses": [
@@ -1470,9 +1602,10 @@
       "total": 1
     },
     "light": {
-      "count": 1,
+      "count": 2,
       "verses": [
-        14
+        14,
+        16
       ],
       "hits": [
         {
@@ -1480,9 +1613,95 @@
           "pre": "…Y'all are the ",
           "hit": "light",
           "post": " of the world. A city set upon a mountain cannot be hid…"
+        },
+        {
+          "v": 16,
+          "pre": "…So let y'all's ",
+          "hit": "light",
+          "post": " shine before men, that they may see y'all's good works…"
+        }
+      ],
+      "total": 2
+    },
+    "lose": {
+      "count": 2,
+      "verses": [
+        29,
+        30
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…you; for it is better for you that one of your members ",
+          "hit": "perish",
+          "post": " than that your whole body be thrown into Gehenna.…"
+        },
+        {
+          "v": 30,
+          "pre": "…you; for it is better for you that one of your members ",
+          "hit": "perish",
+          "post": " than that your whole body go away into Gehenna.…"
+        }
+      ],
+      "total": 2
+    },
+    "mercy": {
+      "count": 2,
+      "verses": [
+        7
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "…Blessed are the ",
+          "hit": "merciful",
+          "post": ", for they shall be shown mercy.…"
+        },
+        {
+          "v": 7,
+          "pre": "…Blessed are the merciful, for they shall be shown ",
+          "hit": "mercy",
+          "post": ".…"
+        }
+      ],
+      "total": 2
+    },
+    "nations": {
+      "count": 1,
+      "verses": [
+        47
+      ],
+      "hits": [
+        {
+          "v": 47,
+          "pre": "…what extraordinary thing do y'all do? Do not even the ",
+          "hit": "Gentiles",
+          "post": " do the same?…"
         }
       ],
       "total": 1
+    },
+    "release": {
+      "count": 2,
+      "verses": [
+        24,
+        40
+      ],
+      "hits": [
+        {
+          "v": 24,
+          "pre": "",
+          "hit": "leave",
+          "post": " there your gift before the altar, and go — first be re…"
+        },
+        {
+          "v": 40,
+          "pre": "…and to the one wanting to sue you and take your tunic, ",
+          "hit": "let him have",
+          "post": " also your cloak;…"
+        }
+      ],
+      "total": 2
     },
     "righteous": {
       "count": 3,
@@ -1512,6 +1731,21 @@
         }
       ],
       "total": 3
+    },
+    "urge": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…Blessed are the mourning, for they shall be ",
+          "hit": "comforted",
+          "post": ".…"
+        }
+      ],
+      "total": 1
     },
     "whole": {
       "count": 4,
@@ -1730,11 +1964,18 @@
       "total": 6
     },
     "light": {
-      "count": 1,
+      "count": 2,
       "verses": [
+        22,
         23
       ],
       "hits": [
+        {
+          "v": 22,
+          "pre": "…if your eye is single, your whole body will be full of ",
+          "hit": "light",
+          "post": ";…"
+        },
         {
           "v": 23,
           "pre": "…our whole body will be full of darkness. If, then, the ",
@@ -1742,7 +1983,7 @@
           "post": " in you is darkness — the darkness, how much!”…"
         }
       ],
-      "total": 1
+      "total": 2
     },
     "little-faith": {
       "count": 1,
@@ -1758,6 +1999,57 @@
         }
       ],
       "total": 1
+    },
+    "mercy": {
+      "count": 3,
+      "verses": [
+        2,
+        3,
+        4
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…“So whenever you do a ",
+          "hit": "mercy-deed",
+          "post": ", don’t blow a trumpet ahead of yourself, the way the s…"
+        },
+        {
+          "v": 3,
+          "pre": "…“But you, when you are doing a ",
+          "hit": "mercy-deed",
+          "post": ", don’t let your left hand know what your right hand is…"
+        },
+        {
+          "v": 4,
+          "pre": "…so that your ",
+          "hit": "mercy-deed",
+          "post": " may be in the hidden place; and your Father, the one s…"
+        }
+      ],
+      "total": 3
+    },
+    "nations": {
+      "count": 2,
+      "verses": [
+        7,
+        32
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "…“And when praying, don’t babble-on the way the ",
+          "hit": "nations",
+          "post": " do, for they suppose that in their many-wordiness they…"
+        },
+        {
+          "v": 32,
+          "pre": "…For all these things the ",
+          "hit": "nations",
+          "post": " seek after; for y’all’s heavenly Father has known that…"
+        }
+      ],
+      "total": 2
     },
     "release": {
       "count": 4,
@@ -1952,6 +2244,21 @@
         }
       ],
       "total": 5
+    },
+    "authority": {
+      "count": 1,
+      "verses": [
+        29
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…For he was teaching them as one having ",
+          "hit": "authority",
+          "post": " — and not like their scribes.…"
+        }
+      ],
+      "total": 1
     },
     "build": {
       "count": 2,
@@ -2324,6 +2631,21 @@
       ],
       "total": 1
     },
+    "lose": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…is the gate and roomy is the road that leads off into ",
+          "hit": "ruin",
+          "post": " — and many are the ones coming in through it.…"
+        }
+      ],
+      "total": 1
+    },
     "measure": {
       "count": 3,
       "verses": [
@@ -2350,6 +2672,21 @@
         }
       ],
       "total": 3
+    },
+    "release": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…Or how will you say to your brother, \"",
+          "hit": "Let me",
+          "post": " throw out the wood-chip from your eye\" — and look, the…"
+        }
+      ],
+      "total": 1
     },
     "rock": {
       "count": 2,
@@ -2535,6 +2872,21 @@
       ],
       "total": 1
     },
+    "lose": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…up they roused him, saying, \"Lord, save — we are being ",
+          "hit": "destroyed",
+          "post": "!\"…"
+        }
+      ],
+      "total": 1
+    },
     "raise": {
       "count": 3,
       "verses": [
@@ -2582,6 +2934,57 @@
           "pre": "…But Jesus says to him, \"Follow me, and ",
           "hit": "leave",
           "post": " the dead to bury their own dead.\"…"
+        }
+      ],
+      "total": 4
+    },
+    "save": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…And coming up they roused him, saying, \"Lord, ",
+          "hit": "save",
+          "post": " — we are being destroyed!\"…"
+        }
+      ],
+      "total": 1
+    },
+    "sea": {
+      "count": 4,
+      "verses": [
+        24,
+        26,
+        27,
+        32
+      ],
+      "hits": [
+        {
+          "v": 24,
+          "pre": "…And look — a great shaking happened in the ",
+          "hit": "sea",
+          "post": ", so that the boat was being buried under the waves; bu…"
+        },
+        {
+          "v": 26,
+          "pre": "…Then, having been raised, he rebuked the winds and the ",
+          "hit": "sea",
+          "post": ", and there was a great stillness.…"
+        },
+        {
+          "v": 27,
+          "pre": "…hat sort of being is this, that even the winds and the ",
+          "hit": "sea",
+          "post": " listen under him?\"…"
+        },
+        {
+          "v": 32,
+          "pre": "…d look — the whole herd rushed down the cliff into the ",
+          "hit": "sea",
+          "post": " and died in the waters.…"
         }
       ],
       "total": 4
@@ -2757,9 +3160,12 @@
       "total": 3
     },
     "faith": {
-      "count": 1,
+      "count": 4,
       "verses": [
-        2
+        2,
+        22,
+        28,
+        29
       ],
       "hits": [
         {
@@ -2767,9 +3173,42 @@
           "pre": "…aralyzed man, thrown on a mat. And Jesus, seeing their ",
           "hit": "trust",
           "post": ", said to the paralyzed man: \"Take heart, child — your…"
+        },
+        {
+          "v": 22,
+          "pre": "…ing and seeing her, said: \"Take heart, daughter — your ",
+          "hit": "trust",
+          "post": " has saved you.\" And the woman was saved from that hour…"
+        },
+        {
+          "v": 28,
+          "pre": "…men came up to him, and Jesus says to them: \"Do y'all ",
+          "hit": "trust",
+          "post": " that I'm able to do this?\" They say to him: \"Yes, Lord…"
+        },
+        {
+          "v": 29,
+          "pre": "…n he touched their eyes, saying: \"According to y'all's ",
+          "hit": "trust",
+          "post": ", let it be to y'all.\"…"
         }
       ],
-      "total": 2
+      "total": 5
+    },
+    "fear": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…And the crowds, seeing it, were ",
+          "hit": "afraid",
+          "post": ", and gave honour to God, who had given such authority…"
+        }
+      ],
+      "total": 1
     },
     "follow": {
       "count": 4,
@@ -2820,6 +3259,21 @@
         }
       ],
       "total": 2
+    },
+    "lose": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…kins burst, and the wine spills out, and the skins are ",
+          "hit": "destroyed",
+          "post": ". But they pour new wine into fresh skins, and both are…"
+        }
+      ],
+      "total": 1
     },
     "mercy": {
       "count": 2,
@@ -3143,6 +3597,21 @@
         }
       ],
       "total": 3
+    },
+    "light": {
+      "count": 1,
+      "verses": [
+        27
+      ],
+      "hits": [
+        {
+          "v": 27,
+          "pre": "…What I say to y'all in the dark, speak in the ",
+          "hit": "light",
+          "post": "; and what y'all hear in the ear, herald upon the rooft…"
+        }
+      ],
+      "total": 1
     },
     "lose": {
       "count": 5,

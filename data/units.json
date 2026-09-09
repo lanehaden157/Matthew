@@ -75,7 +75,7 @@
           "gloss": "beget (gen-)"
         },
         "name": {
-          "color": "#1c7d70",
+          "color": "#6b7280",
           "translit": "onoma",
           "gloss": "name"
         },
@@ -125,7 +125,7 @@
           "gloss": "call"
         },
         "call": {
-          "color": "#1c7d70",
+          "color": "#5a3a2a",
           "translit": "kaleō",
           "gloss": "call"
         },
@@ -145,7 +145,7 @@
           "gloss": "king"
         },
         "king": {
-          "color": "#8a6a2a",
+          "color": "#7a5a8c",
           "translit": "basileus",
           "gloss": "king"
         },
@@ -350,7 +350,7 @@
           "gloss": "righteousness"
         },
         "kingdom": {
-          "color": "#9c2f8f",
+          "color": "#5f7d2e",
           "translit": "basileia",
           "gloss": "kingdom of the skies"
         },
@@ -365,12 +365,12 @@
           "gloss": "whole"
         },
         "gehenna": {
-          "color": "#5e1822",
+          "color": "#7a5a8c",
           "translit": "geenna",
           "gloss": "Gehenna"
         },
         "evil": {
-          "color": "#7a5a10",
+          "color": "#6b7280",
           "translit": "ponēros",
           "gloss": "evil / the evil one"
         }
@@ -390,7 +390,7 @@
           "gloss": "wage / reward"
         },
         "father": {
-          "color": "#2f6db3",
+          "color": "#5a3a2a",
           "translit": "patēr",
           "gloss": "Father"
         },
@@ -470,7 +470,7 @@
           "gloss": "come in, enter"
         },
         "way": {
-          "color": "#6b2fb3",
+          "color": "#6a4a3a",
           "translit": "hodos",
           "gloss": "road / way"
         },
@@ -540,7 +540,7 @@
           "gloss": "cleanse, make ritually pure"
         },
         "raise": {
-          "color": "#2f6db3",
+          "color": "#5a3a2a",
           "translit": "egeirō",
           "gloss": "raise up, rouse from lying down"
         },

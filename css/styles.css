@@ -102,7 +102,7 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
 .unit-nav .movement-label {
   font-family: var(--display); font-size: 13px; letter-spacing: .18em;
   text-transform: uppercase; color: var(--ink-soft); font-weight: 600;
-  margin: 20px 0 9px; text-align: center;
+  margin: 20px auto 9px; text-align: center;
 }
 .unit-nav .movement-label:first-child { margin-top: 0; }
 .unit-grid {
@@ -114,7 +114,7 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
    bracketed underneath the units they span. */
 
 .book-map {
-  margin: 2px 0 22px; padding: 16px 18px 12px;
+  margin: 2px auto 22px; padding: 16px 18px 12px;
   background: var(--panel);
   border: 1px solid var(--rule-soft); border-radius: 8px;
 }
@@ -328,7 +328,6 @@ sup.en a { border: none; }
 /* root spans — colour injected per unit; weight/format here */
 .unit .r { font-weight: 600; }
 .unit .rl { font-weight: inherit; }
-.unit .star { color: #9a7a12; font-style: italic; }
 .unit .translit { font-style: italic; }
 .unit .tr { font-style: italic; color: var(--ink-soft); font-size: .92em; }
 

@@ -60,3 +60,11 @@ Read this first. 3 lines max per session.
   (28 boxes, aside.synoptic + data-anchor format) instead of re-requesting.
   Wrote pipeline/splice_synoptic.py, spliced 27/28 automatically, 1 by hand
   (unit 6 Lord's Prayer poem block). spotlight.js/style-ref updated to match.
+
+## 2026-09-09 (cont.) — book-map centering + cross-unit thread audit
+- Fixed contents-map strip: `.book-map`/`.movement-label` had `margin: … 0 …`
+  overriding the `.unit-nav > *` centering; → `margin: … auto …`.
+- Retro-tagged tracked roots at every morphological occurrence in U1–10
+  (35 spans, `retrofit-tags.json`): flagship = `sea` ×4 in U8 storm, missing.
+  New policy in threads.json `_note`; audit in pipeline/out/thread-retrofit-audit.md.
+- Colour ripple fixed: `release` thread #147a63→#0e6a3f, 8 local hexes nudged.

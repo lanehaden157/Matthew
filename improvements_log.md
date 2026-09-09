@@ -378,3 +378,41 @@
   opacity at rest, full on hover/focus; hidden while the contents overlay is
   open; excluded from print. Wired into buildPager() alongside the existing
   bottom pager. Asset version 32 -> 33.
+
+## 2026-09-09 — book-map centering fix
+- `.book-map` and `.unit-nav .movement-label` each carried `margin: … 0 …`,
+  which (equal specificity, later in the source) overrode the
+  `.unit-nav > * { margin-inline: auto }` centering rule — so the contents-map
+  strip sat flush-left instead of centred on the 790px column. Changed both to
+  `margin: … auto …`.
+
+## 2026-09-09 (cont.) — cross-unit thread retroactive coverage
+- New policy: a tracked root is coloured at EVERY morphological occurrence in
+  U1–10 — `.r` from its opening unit on, `.rl` before. `opens` stays the
+  editorial trajectory anchor, not the first sighting. threads.json `_note`
+  updated; full audit at pipeline/out/thread-retrofit-audit.md.
+- Scanned SBLGNT (new file `Matthew greek text.txt`) lemma-by-lemma vs the
+  fragments. 35 spans added via retrofit-tags.json `add`:
+  light 5:16/6:22/10:27 · nations 5:47/6:7/6:32 · SEA 8:24/26/27/32 (flagship
+  miss — storm narrative was untagged) · release 3:15/4:20/4:22/5:24/5:40/7:4 ·
+  faith 9:22/28/29 · fear 1:20/2:22/9:8 · lose 2:13/5:29/5:30/7:13/8:25/9:17 ·
+  save 8:25 · mercy 5:7×2/6:2/6:3/6:4 · foolish 5:13/5:22 · urge 2:18/5:4.
+- apply_retrofit.py `add` now takes optional "cls":"rl"; skips inline "_c" notes.
+- Colour collisions from the new co-occurrences (12) fixed:
+  release thread #147a63 → #0e6a3f (was dE 6.6 from fear teal, now co-occur U9);
+  8 local hexes in units.json nudged (u1 name, u2 call/king, u5
+  evil/gehenna/kingdom, u6 father, u8 raise). verify_occurrences green.
+- On review: authority 7:29 tagged by nesting data-root around the .star span
+  (keeps gold-italic + adds thread underline); release 4:11 tagged via `text`
+  op ('leaves', no .n marker). throw pre-opening left untagged (Lane); nations
+  ethnikos rl kept (Lane). New collision fixed: u7 `way` #6b2fb3 → #6a4a3a
+  (vs authority thread purple). Total 37 spans, 9 local hexes, verify green.
+
+## 2026-09-09 (cont.) — remove .star "motif" gold-italic device
+- Lane: never sanctioned it. Stripped all `<span class="star">` wrappers from
+  units 2 (star/rising wordplay), 3 (stones/fire/fruit/way/wrath — 14 of them),
+  7 (anomia/exousia cap). Dropped `.unit .star` from css/styles.css. Trimmed the
+  explanatory sentences (u3 legend cap, u3 n3 hodos note, u7 cap reworded — and
+  exousia is now a tracked thread anyway).
+- authority 7:29 is now a plain thread span (no nested .star).
+- Still present in source-artifacts/ — noted in retrofit-tags.json _note.

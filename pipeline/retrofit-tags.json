@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-authored fragment edits applied after extract_units. Ops: add / retag (per-verse), unwrap / retag_word / untag_word / text (whole-unit). See apply_retrofit.py.",
+  "_note": "Hand-authored fragment edits applied after extract_units. Ops: add / retag (per-verse), unwrap / retag_word / untag_word / text (whole-unit). See apply_retrofit.py. NOTE (2026-09-09): the `.star` gold-italic 'motif' device was removed from units 2/3/7 by direct fragment edit (not encoded here). It still lives in source-artifacts/, so if extract_units.py is ever re-run, strip `<span class=\"star\">…</span>` wrappers from units 2/3/7 again and drop the '.star' rule from css/styles.css.",
 
   "add": [
     { "unit": "unit-04", "verse": 15, "text": "nations",              "root": "nations",      "why": "Galilee of the nations 4:15" },
@@ -11,7 +11,59 @@
     { "unit": "unit-07", "verse": 26, "text": "stupid",                "root": "foolish",      "why": "moros builder (split from the old wise-foolish bundle)" },
     { "unit": "unit-05", "verse": 14, "text": "light",                 "root": "light",        "why": "light of the world" },
     { "unit": "unit-06", "verse": 23, "text": "light",                 "root": "light",        "why": "the light in you is darkness" },
-    { "unit": "unit-08", "verse": 20, "text": "the Son of Man",        "root": "son-of-man",   "why": "opens the Son of Man thread (8:20)" }
+    { "unit": "unit-08", "verse": 20, "text": "the Son of Man",        "root": "son-of-man",   "why": "opens the Son of Man thread (8:20)" },
+
+    { "_c": "--- retroactive cross-unit-thread coverage (2026-09-09 audit) --- policy: a tracked root is coloured at EVERY morphological occurrence; .r from its opening unit on, .rl (uncounted) before it. See pipeline/out/thread-retrofit-audit.md." },
+
+    { "unit": "unit-05", "verse": 16, "text": "light",        "root": "light",     "why": "phos 5:16 'let your light shine' — thematic, was untagged" },
+    { "unit": "unit-06", "verse": 22, "text": "light",        "root": "light",     "why": "phos/photeinon 6:22 'full of light' — pairs with tagged 6:23" },
+    { "unit": "unit-10", "verse": 27, "text": "light",        "root": "light",     "why": "phos 10:27 'speak in the light'" },
+
+    { "unit": "unit-05", "verse": 47, "text": "Gentiles",     "root": "nations",   "cls": "rl", "why": "ethnikoi 5:47 — the nations as foil; pre-opening for this nuance" },
+    { "unit": "unit-06", "verse": 7,  "text": "nations",      "root": "nations",   "cls": "rl", "why": "ethnikoi 6:7 'the way the nations pray'" },
+    { "unit": "unit-06", "verse": 32, "text": "nations",      "root": "nations",   "why": "ethne 6:32 'all these things the nations seek after'" },
+
+    { "unit": "unit-08", "verse": 24, "text": "sea",          "root": "sea",       "why": "thalassa 8:24 — the storm; thread names 8:24-32 as a payoff, all 4 were untagged" },
+    { "unit": "unit-08", "verse": 26, "text": "sea",          "root": "sea",       "why": "thalassa 8:26 'rebuked the winds and the sea'" },
+    { "unit": "unit-08", "verse": 27, "text": "sea",          "root": "sea",       "why": "thalassa 8:27 'the winds and the sea listen under him'" },
+    { "unit": "unit-08", "verse": 32, "text": "sea",          "root": "sea",       "why": "thalassa 8:32 'rushed down the cliff into the sea'" },
+
+    { "unit": "unit-03", "verse": 15, "text": "Permit",       "root": "release",   "cls": "rl", "why": "aphes 3:15 'Permit it now' — pre-opening aphiemi" },
+    { "unit": "unit-03", "verse": 15, "text": "permits",      "root": "release",   "cls": "rl", "why": "aphiesin 3:15 'then he permits him'" },
+    { "unit": "unit-04", "verse": 20, "text": "leaving",      "root": "release",   "cls": "rl", "why": "aphentes 4:20 'leaving the nets' — pre-opening" },
+    { "unit": "unit-04", "verse": 22, "text": "leaving",      "root": "release",   "cls": "rl", "why": "aphentes 4:22 'leaving the boat and their father'" },
+    { "unit": "unit-05", "verse": 24, "text": "leave",        "root": "release",   "cls": "rl", "why": "aphes 5:24 'leave there your gift'" },
+    { "unit": "unit-05", "verse": 40, "text": "let him have", "root": "release",   "cls": "rl", "why": "aphes 5:40 'let him have also your cloak'" },
+    { "unit": "unit-07", "verse": 4,  "text": "Let me",       "root": "release",   "why": "aphes 7:4 'Let me take out the speck' — post-opening" },
+
+    { "unit": "unit-09", "verse": 22, "text": "trust",        "root": "faith",     "why": "pistis 9:22 'your trust has saved you' — untagged" },
+    { "unit": "unit-09", "verse": 28, "text": "trust",        "root": "faith",     "why": "pisteuete 9:28 'Do y'all trust that I am able'" },
+    { "unit": "unit-09", "verse": 29, "text": "trust",        "root": "faith",     "why": "pistin 9:29 'according to y'all's trust'" },
+
+    { "unit": "unit-01", "verse": 20, "text": "fear",         "root": "fear",      "cls": "rl", "why": "phobethes 1:20 'do not fear to take Mary' — first phobeo in Matthew" },
+    { "unit": "unit-02", "verse": 22, "text": "afraid",       "root": "fear",      "cls": "rl", "why": "ephobethe 2:22 'he was afraid to go'" },
+    { "unit": "unit-09", "verse": 8,  "text": "afraid",       "root": "fear",      "cls": "rl", "why": "ephobethesan 9:8 'the crowds were afraid'" },
+
+    { "unit": "unit-02", "verse": 13, "text": "destroy",      "root": "lose",      "cls": "rl", "why": "apolesai 2:13 'Herod is about to... destroy it'" },
+    { "unit": "unit-05", "verse": 29, "text": "perish",       "root": "lose",      "cls": "rl", "why": "apoletai 5:29 'one of your members perish'" },
+    { "unit": "unit-05", "verse": 30, "text": "perish",       "root": "lose",      "cls": "rl", "why": "apoletai 5:30 'one of your members perish'" },
+    { "unit": "unit-07", "verse": 13, "text": "ruin",         "root": "lose",      "cls": "rl", "why": "apoleian 7:13 'the road that leads off into ruin'" },
+    { "unit": "unit-08", "verse": 25, "text": "destroyed",    "root": "lose",      "cls": "rl", "why": "apollymetha 8:25 'we are being destroyed' — the wordplay the prose flags" },
+    { "unit": "unit-09", "verse": 17, "text": "destroyed",    "root": "lose",      "cls": "rl", "why": "apollyntai 9:17 'the skins are destroyed'" },
+
+    { "unit": "unit-08", "verse": 25, "text": "save",         "root": "save",      "why": "soson 8:25 'Lord, save' — post-opening (save opens 1:21), paired with 'destroyed'" },
+
+    { "unit": "unit-05", "verse": 7,  "text": "merciful",     "root": "mercy",     "cls": "rl", "why": "eleemones 5:7 'blessed are the merciful' — pre-opening" },
+    { "unit": "unit-05", "verse": 7,  "text": "mercy",        "root": "mercy",     "cls": "rl", "why": "eleethesontai 5:7 'they shall be shown mercy'" },
+    { "unit": "unit-06", "verse": 2,  "text": "mercy-deed",   "root": "mercy",     "cls": "rl", "why": "eleemosyne 6:2 'when you do a mercy-deed'" },
+    { "unit": "unit-06", "verse": 3,  "text": "mercy-deed",   "root": "mercy",     "cls": "rl", "why": "eleemosyne 6:3" },
+    { "unit": "unit-06", "verse": 4,  "text": "mercy-deed",   "root": "mercy",     "cls": "rl", "why": "eleemosyne 6:4" },
+
+    { "unit": "unit-05", "verse": 13, "text": "made foolish", "root": "foolish",   "cls": "rl", "why": "moranthe 5:13 'if the salt is made foolish' — the prose links it to v22" },
+    { "unit": "unit-05", "verse": 22, "text": "Fool",         "root": "foolish",   "cls": "rl", "why": "More 5:22 'whoever says, Fool' — pre-opening moros" },
+
+    { "unit": "unit-02", "verse": 18, "text": "comforted",    "root": "urge",      "cls": "rl", "why": "paraklethenai 2:18 'she would not be comforted' — pre-opening parakaleo" },
+    { "unit": "unit-05", "verse": 4,  "text": "comforted",    "root": "urge",      "cls": "rl", "why": "paraklethesontai 5:4 'they shall be comforted'" }
   ],
 
   "retag": [
@@ -70,6 +122,13 @@
     { "unit": "unit-08", "from": "demonized", "to": "demon-possessed",
       "why": "'demonized' now reads as modern jargon" },
     { "unit": "unit-08", "from": "data-root=\"faith\">faith</span>", "to": "data-root=\"faith\">trust</span>",
-      "why": "8:10 — default pistis to 'trust'; keeps the tag" }
+      "why": "8:10 — default pistis to 'trust'; keeps the tag" },
+
+    { "unit": "unit-07", "from": "having authority — and not like their",
+      "to": "having <span class=\"r\" data-root=\"authority\">authority</span> — and not like their",
+      "why": "7:29 exousia — the authority thread's opening verse (the old .star gold-italic motif mark was removed here)" },
+    { "unit": "unit-03", "from": "slanderer</span> leaves him",
+      "to": "slanderer</span> <span class=\"rl\" data-root=\"release\">leaves</span> him",
+      "why": "4:11 aphiesin 'then the slanderer leaves him' — pre-opening release; verse has no .n marker so add can't reach it" }
   ]
 }

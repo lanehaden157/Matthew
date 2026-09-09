@@ -4,6 +4,8 @@ Runs AFTER extract_units.py (which regenerates fragments from source and would
 otherwise wipe these). Idempotent.
 
   add          wrap the first untagged occurrence of `text` in verse `verse`
+               (optional "cls": "rl" to add a root-linked, uncounted span;
+                default "r")
   retag        change data-root on the span wrapping `text` in `verse`
   unwrap       strip the data-root span around every `text` (whole unit)
   retag_word   whole unit: any `<span … data-root="from" …>TEXT</span> whose
@@ -37,8 +39,11 @@ def apply_add(html, it):
         return html, f"SKIP {it['unit']} v{it['verse']}: no .v block"
     a, b = span
     seg = html[a:b]
-    tag = f'<span class="r" data-root="{it["root"]}">{it["text"]}</span>'
-    if tag in seg or f'data-root="{it["root"]}"' in seg:
+    cls = it.get("cls", "r")
+    tag = f'<span class="{cls}" data-root="{it["root"]}">{it["text"]}</span>'
+    already = re.search(r'<span class="r[l]?" data-root="%s">%s</span>'
+                        % (re.escape(it["root"]), re.escape(it["text"])), seg)
+    if already:
         return html, f"ok   {it['unit']} v{it['verse']} {it['root']}: already tagged"
     pat = re.compile(r'(?<![\w-])' + re.escape(it["text"]) + r'(?![\w-])')
     hit = _first_outside_tags(seg, pat)
@@ -142,6 +147,8 @@ def main():
     by_unit = {}
     for op in ORDER:
         for it in spec.get(op, []):
+            if "unit" not in it:  # skip inline "_c" comment entries
+                continue
             by_unit.setdefault(it["unit"], []).append((op, it))
 
     logs = []
