@@ -433,3 +433,5 @@
   no effect on mobile (breakpoint 720px, narrower viewports already fill the
   column; 26px page padding unchanged).
 - css/styles.css: --maxw 900px -> 1150px (further cut of desktop dead space).
+- css/styles.css: --maxw -> 100% (full-monitor width; margins now just the
+  26px side padding on .wrap/.topbar/.unit-pager). Mobile unchanged.
