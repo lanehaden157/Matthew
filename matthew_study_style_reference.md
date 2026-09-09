@@ -293,7 +293,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Verses read on their own; glosses, notes, compare boxes are additive, never load-bearing.
 - [ ] Compare box only at genuinely contested verses; include NASB, bring in Hart / Lattimore where their rendering is provocative.
 - [ ] Hyperlinks for significant LXX/OT citations and key terms (biblehub, Logeion, NETS, earlyjewishwritings).
-- [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described.
+- [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described. These should e real and verifiable only, not loose made up connections forcing a pattern.
 - [ ] Repeated-word counts noted only where the frequency is theologically significant (3, 7, 10, 12, 40, 70…).
 - [ ] Transliteration only — zero native Greek or Hebrew script anywhere.
 

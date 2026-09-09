@@ -10,7 +10,7 @@ dative, participle, middle voice…), explain it in plain terms; don't make an a
 depend on Lane parsing morphology unaided. Any older note claiming Lane reads Greek is
 wrong.
 
-Lens: Bible Project style — narrative structure, keyword tracing, chiasms, type-scenes, the
+Lens: Bible Project style — narrative structure, keyword tracing, chiasms (real and verifiable, be tough on how you weight these, they're easy to make up. Avoid seeing patterns where there are none), type-scenes, the
 creation–covenant–exile–presence metanarrative. Constable's dispensationalist commentary is
 the baseline reading, held in **active dialogue** with France, Wright, Davies & Allison,
 Bible Project, Jewish (Second Temple + rabbinic), and patristic voices (esp. Chrysostom) —

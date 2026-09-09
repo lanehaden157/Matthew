@@ -359,3 +359,22 @@
   28th (unit 6, 6:13 — the Lord's Prayer poem block has no numbered `<p class="v">`) inserted
   by hand after the block's trailing `.compare` siblings. Verified: 0 `data-root`/`.r`/`.rl`
   inside any spliced box. Asset version 30 -> 31.
+- Toggle-chip styling: spot-toggle (gold, ✦) and syn-toggle (crimson, ✧) now
+  keep their outline colour at rest, not just on hover — outline stays visible
+  always, fills solid on open/click. Synoptic symbol changed from ✦ to ✧ (open
+  star) so it reads as a variant of the rendering-box chip, not identical to
+  it. Asset version 31 -> 32.
+- Cut 8 over-reaching structural diagrams per Lane's call — they didn't hold up:
+  Unit 2 Magi ring + Exile/Return triptych, Unit 3 "Mackie's symmetry" 3-panel
+  frame, Unit 5 Beatitudes chiasm, Unit 6 devotion-panel ring, Unit 8's own-shape
+  ring, Unit 9 paralytic ring-inside-ring, Unit 10 discourse-shape ring + ladder-
+  of-receiving ring. Left the comparison tables (Inverted Exodus, Ezekiel 34,
+  Israel/Adam/Jesus) and the smaller triads/itineraries in place — only cut
+  where Lane named it. scan_occurrences + verify_occurrences green after
+  (374 occurrences, every root still resolves elsewhere in its unit).
+- Persistent prev/next unit buttons: small subtle circular fabs fixed to the
+  bottom corners of the viewport (`.unit-fab`), always reachable regardless of
+  scroll position — not just the pager at the bottom of a long unit. Low
+  opacity at rest, full on hover/focus; hidden while the contents overlay is
+  open; excluded from print. Wired into buildPager() alongside the existing
+  bottom pager. Asset version 32 -> 33.

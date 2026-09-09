@@ -85,7 +85,7 @@ function mountReady(verse, box) {
   btn.className = "spot-toggle syn-toggle";
   btn.setAttribute("aria-expanded", "false");
   btn.setAttribute("aria-label", "Show synoptic parallel for this verse");
-  btn.textContent = "✦";
+  btn.textContent = "✧";
   btn.addEventListener("click", (e) => { e.stopPropagation(); setOpen(box, btn, box.hidden); });
   verse.append(" ", btn);
   box._btn = btn;

@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=31";
-import { enhanceSpotlights } from "./spotlight.js?v=31";
-import { renderSearch } from "./search.js?v=31";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=33";
+import { enhanceSpotlights } from "./spotlight.js?v=33";
+import { renderSearch } from "./search.js?v=33";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -15,6 +15,8 @@ const bust = (u) => { const x = new URL(u); x.searchParams.set("v", Date.now());
 const content = document.getElementById("content");
 const unitNav = document.getElementById("unit-nav");
 const pager = document.getElementById("unit-pager");
+const fabPrev = document.getElementById("fab-prev");
+const fabNext = document.getElementById("fab-next");
 const navToggle = document.getElementById("nav-toggle");
 const navToggleCtx = document.getElementById("nav-toggle-ctx");
 
@@ -44,6 +46,8 @@ function wireNavToggle() {
     unitNav.hidden = !open;
     backdrop.hidden = !open;
     navToggle.setAttribute("aria-expanded", String(open));
+    fabPrev.classList.toggle("nav-open", open);
+    fabNext.classList.toggle("nav-open", open);
     if (open) unitNav.scrollTop = 0;
   };
   navToggle.addEventListener("click", () => set(unitNav.hidden));
@@ -411,10 +415,19 @@ function buildPager(unit) {
   pager.innerHTML =
     (prev ? link(prev, "prev", "← Previous") : "<span></span>") +
     (next ? link(next, "next", "Next →") : "<span></span>");
+  fab(fabPrev, prev, `Previous — Unit ${prev ? prev.n : ""}`);
+  fab(fabNext, next, `Next — Unit ${next ? next.n : ""}`);
 
   function link(u, cls, dir) {
     return `<a class="${cls}" href="#/${u.slug}">` +
       `<span class="dir">${dir}</span>Unit ${u.n} · ${escapeHtml(u.title)}</a>`;
+  }
+  function fab(el, u, label) {
+    el.hidden = !u;
+    if (!u) return;
+    el.href = `#/${u.slug}`;
+    el.title = `${label} · ${u.title}`;
+    el.setAttribute("aria-label", `${label}: ${u.title}`);
   }
 }
 
