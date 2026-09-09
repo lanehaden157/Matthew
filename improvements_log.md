@@ -341,3 +341,21 @@
 - PLAN.md "What exists today" retitled as a non-maintained kickoff snapshot;
   softened the stale "~16 threads" mention. CLAUDE.md status → units 1–9 built,
   next Unit 10; added the one-root colour policy line.
+- Synoptic-parallel component added: `.synpar` div (sibling after `<p class="v">`,
+  same rule as `.gloss`/`.compare`) auto-wraps via spotlight.js into a collapsible
+  ✦-chip aside — third kind alongside note/spotlight, crimson accent to
+  distinguish from the gold "Rendering" boxes. CSS + spotlight.js updated;
+  matthew_study_style_reference.md documents the markup + checklist rule
+  (translit only, no data-root inside it — corrupts occurrence counts). Asset
+  version 29 → 30. Not yet applied to units 1–10 — pending the Claude.ai
+  research project's synoptic-parallels.md handoff file.
+- Correction to the above: Lane had already produced `synoptic_parallels_units_01_10.md`
+  (28 boxes) using self-contained `<aside class="synoptic" data-anchor="C:V">` blocks with
+  their own `<h4>` header — not the `.synpar` div format first sketched. Reworked
+  spotlight.js to match: it now hides pre-authored `aside.synoptic` siblings in place and
+  adds a toggle chip per box, rather than wrapping a bare div. matthew_study_style_reference.md
+  updated to document the real shape. New `pipeline/splice_synoptic.py` spliced 27/28 boxes
+  automatically (anchor -> chapter:verse resolved via running pericope-heading state); the
+  28th (unit 6, 6:13 — the Lord's Prayer poem block has no numbered `<p class="v">`) inserted
+  by hand after the block's trailing `.compare` siblings. Verified: 0 `data-root`/`.r`/`.rl`
+  inside any spliced box. Asset version 30 -> 31.

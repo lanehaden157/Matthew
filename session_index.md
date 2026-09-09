@@ -50,3 +50,13 @@ Read this first. 3 lines max per session.
   have no dividers — needs authored titles (asked Lane).
 - spotlight.js "show all notes" bar now anchors consistently (was above the
   masthead in units 9/10). Asset version 26 → 28.
+
+## 2026-09-09 — Synoptic parallel component
+- Designed synoptic-comparison feature: chat-side research produces a markdown
+  handoff file, backported into units 1-10, then built-in going forward.
+- Wired `.synpar` into spotlight.js/css as a 3rd collapsible kind (crimson
+  accent). Style reference + checklist updated. Waiting on handoff file.
+- Corrected: reused Lane's already-produced synoptic_parallels_units_01_10.md
+  (28 boxes, aside.synoptic + data-anchor format) instead of re-requesting.
+  Wrote pipeline/splice_synoptic.py, spliced 27/28 automatically, 1 by hand
+  (unit 6 Lord's Prayer poem block). spotlight.js/style-ref updated to match.

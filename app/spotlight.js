@@ -1,6 +1,11 @@
-/* Per-verse asides, collapsed by default. Two kinds:
-     .gloss   -> a light "note" (bare * marker, plain italic aside, no box)
-     .compare -> a "spotlight" (✦ chip, tinted panel with a header)
+/* Per-verse asides, collapsed by default. Three kinds:
+     .gloss              -> a light "note" (bare * marker, plain italic aside, no box)
+     .compare            -> a "spotlight" (✦ chip, tinted panel with a header)
+     aside.synoptic       -> a synoptic parallel: author-authored, already a
+                             complete <aside class="synoptic"><h4>…</h4>…</aside>
+                             (its own header text, one per parallel — not merged
+                             under a shared header the way .compare is). This
+                             script only hides it and adds its toggle chip.
    Runs on the freshly-loaded fragment; the fragments themselves are untouched. */
 
 const STOP_SEL =
@@ -12,21 +17,24 @@ export function enhanceSpotlights(root) {
   for (const verse of root.querySelectorAll("p.v, div.v")) {
     const glosses = [];
     const compares = [];
+    const synoptics = [];
     let n = verse.nextElementSibling;
     while (n && !n.matches(STOP_SEL)) {
       const next = n.nextElementSibling;
       if (n.matches(".gloss")) glosses.push(n);
       else if (n.matches(".compare")) compares.push(n);
-      else if (glosses.length || compares.length) break;
+      else if (n.matches("aside.synoptic")) synoptics.push(n);
+      else if (glosses.length || compares.length || synoptics.length) break;
       n = next;
     }
-    if (!glosses.length && !compares.length) continue;
+    if (!glosses.length && !compares.length && !synoptics.length) continue;
 
     // insertion point after the verse; keep spotlight below note if both exist
     let after = verse;
     if (glosses.length) after = mount(verse, after, "note", glosses);
     if (compares.length) mount(verse, after, "spot", compares);
-    count += glosses.length + compares.length;
+    synoptics.forEach((box) => mountReady(verse, box));
+    count += glosses.length + compares.length + synoptics.length;
   }
 
   if (count) addAllControl(root);
@@ -70,6 +78,20 @@ function mount(verse, insertAfter, kind, items) {
   return box;
 }
 
+function mountReady(verse, box) {
+  box.hidden = true;
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "spot-toggle syn-toggle";
+  btn.setAttribute("aria-expanded", "false");
+  btn.setAttribute("aria-label", "Show synoptic parallel for this verse");
+  btn.textContent = "✦";
+  btn.addEventListener("click", (e) => { e.stopPropagation(); setOpen(box, btn, box.hidden); });
+  verse.append(" ", btn);
+  box._btn = btn;
+  return box;
+}
+
 function setOpen(box, btn, open) {
   box.hidden = !open;
   btn.setAttribute("aria-expanded", String(open));
@@ -83,7 +105,7 @@ function divider() {
 }
 
 function boxes(root) {
-  return [...root.querySelectorAll(".verse-note, .spotlight")];
+  return [...root.querySelectorAll(".verse-note, .spotlight, .synoptic")];
 }
 
 function addAllControl(root) {
@@ -126,13 +148,13 @@ function addAllControl(root) {
 /* print / PDF: open everything so nothing is lost on paper */
 if (typeof window !== "undefined") {
   window.addEventListener("beforeprint", () => {
-    document.querySelectorAll(".verse-note, .spotlight").forEach((b) => {
+    document.querySelectorAll(".verse-note, .spotlight, .synoptic").forEach((b) => {
       b._wasHidden = b.hidden;
       b.hidden = false;
     });
   });
   window.addEventListener("afterprint", () => {
-    document.querySelectorAll(".verse-note, .spotlight").forEach((b) => {
+    document.querySelectorAll(".verse-note, .spotlight, .synoptic").forEach((b) => {
       if (b._wasHidden) b.hidden = true;
     });
   });

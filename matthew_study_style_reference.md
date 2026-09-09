@@ -228,6 +228,30 @@ descriptive (a phrase, not a sentence).
 </div>
 ```
 
+### Synoptic parallel (contested / illuminating divergences only)
+
+```html
+<aside class="synoptic" data-anchor="9:2">
+  <h4>Mark 2:5 · Luke 5:20 <span>— short label for what the difference is</span></h4>
+  <div class="row"><span class="src">Mark 2:5</span><span class="txt">wooden English, with <span class="translit">greek term</span> where it matters</span></div>
+  <div class="row"><span class="src">Luke 5:20</span><span class="txt">…</span></div>
+  <p class="take">Two or three sentences: what Matthew did with the parallel and why it matters for his argument — not a summary of the parallel.</p>
+</aside>
+```
+
+`<aside class="synoptic" data-anchor="C:V">` as a **following sibling** of the anchor
+verse's `<p class="v">` — after any `.gloss`/`.compare` already attached to that verse, same
+placement rule as those. It is emitted whole, with its own `<h4>` header naming the
+parallel(s) — the app doesn't rewrite the header, it only hides the aside by default and
+adds its ✦-chip toggle (crimson accent, distinct from the gold "Rendering" chip; a separate
+toggle per parallel, not merged the way multiple `.compare` boxes are). `data-anchor` is
+informational (matches the verse it sits after) — the app locates it by DOM position, not
+by the attribute. Never nest it inside the verse. Never put `data-root`/`class="r"`/
+`class="rl"` inside it — the occurrence scanner counts every `data-root` in the file and a
+coloured word here corrupts cross-unit thread counts. Greek inside a row is
+`<span class="translit">…</span>`, plain, uncoloured. Use sparingly — 0–3 per unit, only
+where the divergence does real exegetical work, not for every triple-tradition pericope.
+
 ### Endnotes
 
 ```html
@@ -255,7 +279,8 @@ descriptive (a phrase, not a sentence).
 - [ ] No `roots` entry carries a colour. No `--c-*` vars anywhere. No inline `style="color:…"` / `style="background:…"`.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
-- [ ] `<p class="v">` verses with `.gloss`/`.compare` as siblings, not nested.
+- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic` as siblings, not nested.
+- [ ] No `aside.synoptic` block contains `data-root`, `class="r"`, or `class="rl"` — translit only.
 - [ ] The translation is divided into passage groups by `<h3 class="pericope">Title <span>· C:V–V</span></h3>` — no other heading form.
 - [ ] Structural blocks (`.ring`, `table.exod`, `.itin`) come first, before the verses. The site also hoists them, but author them up top.
 
