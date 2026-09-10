@@ -453,3 +453,10 @@
   retrofit-tags.json: 3 strip_span entries for the cut `.star` device (U2/3/7).
 - .gitignore: /MatthewSBLGNT.txt (source text, outside-repo by policy).
 - CLAUDE.md: documented the add-a-thread workflow + build.py danger.
+- pipeline/build.py: dropped extract_units.py from STEPS. It was the Phase-1
+  batch normalizer (source-artifacts -> units/); re-running it as a build step
+  wiped post-extract direct edits (pericope headings, synoptic boxes, chiasm
+  cuts — 8 units diverged in a test). extract_units stays as a library
+  (port_artifact.py imports its cleaners). build.py is now
+  apply_retrofit -> refresh_meta -> scan -> verify -> digest -> audit(advisory);
+  fragments are the source of truth. Verified idempotent.

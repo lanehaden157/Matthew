@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-authored fragment edits applied after extract_units. Ops: strip_span / text / untag_word / retag_word / unwrap (whole-unit), retag / add (per-verse). See apply_retrofit.py. The cut `.star` motif device (units 2/3/7) is now encoded as strip_span below, so build.py / extract_units is safe to re-run.",
+  "_note": "The record of hand-authored fragment edits, replayed idempotently by apply_retrofit.py (build.py step 1). Ops: strip_span / text / untag_word / retag_word / unwrap (whole-unit), retag / add (per-verse) — see apply_retrofit.py. The committed units/*.html already contain all of this; these entries are the audit trail and the safety net for port_artifact.py, which re-runs the extract_units cleaners on a fragment it (re)ports.",
 
   "strip_span": [
     { "unit": "unit-02", "class": "star", "why": "gold-italic 'motif' device, cut from the design 2026-09-09; still in source-artifacts/" },

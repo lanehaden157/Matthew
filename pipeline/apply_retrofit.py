@@ -1,11 +1,13 @@
 """Apply pipeline/retrofit-tags.json to units/*.html.
 
-Runs AFTER extract_units.py (which regenerates fragments from source and would
-otherwise wipe these). Idempotent.
+Idempotent — every op no-ops if already applied, so build.py re-runs it each
+time. The committed fragments already have all of this; the file is the record
+of what was done, and the safety net if port_artifact.py re-derives a fragment
+(it imports extract_units cleaners, which don't know about these edits).
 
   strip_span   whole unit: unwrap every <span class="CLS">…</span>, keeping the
                inner text (for design devices cut from the fragments but still
-               present in source-artifacts/)
+               present in source-artifacts/ — e.g. the .star motif in 2/3/7)
   add          wrap the first untagged occurrence of `text` in verse `verse`
                (optional "cls": "rl" to add a root-linked, uncounted span;
                 default "r")

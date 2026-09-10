@@ -43,10 +43,19 @@ threads-digest.md  generated from threads.json — the thread list the Claude.ai
                unit_meta.py      the unit-meta block: parse / validate / generate.
                port_artifact.py  drop ONE new artifact in → fragment + data merge
                                  + thread-delta report. `--backfill` did units 1–8.
-               extract_units.py  Phase-1 batch normalizer (still used by build.py).
+               extract_units.py  Phase-1 batch normalizer. Done its job; now just
+                                 a library port_artifact.py imports. NOT a build
+                                 step — re-running it drops post-extract edits.
+               apply_retrofit.py replay retrofit-tags.json onto units/*.html
+                                 (idempotent; the edit record + safety net).
                refresh_meta.py   resync built fragments' meta blocks with the data.
                threads_digest.py threads.json → threads-digest.md.
-               build.py          re-derive everything for the already-built units.
+               thread-stems.json + audit_thread_coverage.py  Greek-root coverage
+                                 audit: scans MatthewSBLGNT.txt, flags tracked
+                                 roots present in a built unit but untagged.
+               build.py          replay retrofit → refresh_meta → scan → verify →
+                                 digest → coverage audit. Fragments are the
+                                 source of truth; it never rebuilds them.
                scan_*.py         regenerate /data from the fragments.
                verify_*.py       independently re-derive the same result (no
                                  importing the generator) — run both before trusting.

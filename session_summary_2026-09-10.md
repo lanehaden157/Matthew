@@ -43,15 +43,14 @@
   then add the 2 tags. Small separate task.
 
 ## Takeaways / decisions
-- **`build.py` is not safe to run casually.** Its step 1 (`extract_units.py`)
-  regenerates fragments from `source-artifacts/` and drops every post-extract
-  direct edit not in `retrofit-tags.json` — pericope headings, synoptic boxes,
-  chiasm cuts, prev/next nav. Confirmed by test (8 units diverged). `strip_span`
-  fixes only the `.star` case. For a data/thread change, run the 4 downstream
-  steps directly (`apply_retrofit → refresh_meta → scan_occurrences →
-  verify_occurrences → threads_digest`). Documented in CLAUDE.md. Making build.py
-  truly safe is a real architectural question (encode every divergence, or treat
-  units/ as source of truth) — for a future session.
+- **`build.py` made safe** (Lane's call, done this session). Dropped
+  `extract_units.py` from `STEPS` — it was the Phase-1 batch normalizer, already
+  finished its job, and now exists only as a library `port_artifact.py` imports.
+  Running it as a build step regenerated fragments from `source-artifacts/` and
+  dropped every post-extract direct edit (confirmed by test: 8 units diverged).
+  `build.py` now = replay `retrofit-tags.json` (idempotent) → `refresh_meta` →
+  `scan` → `verify` → `digest` → coverage audit (advisory). Fragments are the
+  source of truth. Verified idempotent (re-run touches nothing).
 - `MatthewSBLGNT.txt` is **tracked** in the repo root — Lane's call (he edited
   CLAUDE.md mid-session: "Greek (SBLGNT) lives in the repo for easy access", and
   loosened the transliteration rule to only cover the rendered `unit.html` page,
@@ -68,4 +67,4 @@
 - Desktop line length at `--maxw: 100%`.
 - `hand-over` colour + its 2 gaps.
 - The 16 undefined thread stems — incremental backlog, audit tracks it.
-- build.py safety — architectural.
+- (resolved) build.py safety — done, see above.

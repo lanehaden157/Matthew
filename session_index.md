@@ -83,5 +83,7 @@ Read this first. 3 lines max per session.
 - `strip_span` op added to apply_retrofit (`.star` device now encoded).
 - Known: `hand-over` has 2 pre-opening gaps (4:12, 5:25) — deferred, needs a
   distinct colour (currently shares #8a3c70 with apo-tote → same-unit collision).
-- build.py stays unsafe to run casually (extract_units drops direct edits) —
-  documented in CLAUDE.md.
+- build.py made safe: dropped extract_units from its STEPS (it's now a
+  port_artifact-only library), added the coverage audit as an advisory step.
+  Fragments are the source of truth; build.py replays retrofit + regenerates
+  data only. Verified idempotent.
