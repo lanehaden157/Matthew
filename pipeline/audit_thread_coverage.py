@@ -54,7 +54,10 @@ GREEKWORD = re.compile(r"[^\W\d_]+", re.UNICODE)
 
 def strip_accents(s):
     d = unicodedata.normalize("NFD", s)
-    return "".join(c for c in d if not unicodedata.combining(c)).lower()
+    # drop combining marks, lowercase, and fold final sigma ς -> σ so a stem
+    # written with medial σ matches a word that ends in the stem (φωσ ~ φῶς)
+    return ("".join(c for c in d if not unicodedata.combining(c))
+            .lower().replace("ς", "σ"))
 
 
 def detag(s):
