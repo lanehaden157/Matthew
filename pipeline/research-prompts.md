@@ -93,3 +93,27 @@ python pipeline/audit_thread_coverage.py <ids…>           # coverage gaps in b
 
 Fix `exclude` for any junk `--forms` shows; re-run until each thread is `✓ clean`
 or its gaps are real misses to retro-tag.
+
+---
+
+## 2. Re-upload the style reference (one-time, after 2026-09-10)
+
+`matthew_study_style_reference.md` gained three optional `unit-meta` fields. Tell the
+research project (or just re-sync it from the repo — it's connected to GitHub):
+
+> `matthew_study_style_reference.md` §2 now documents three optional fields in the
+> `threads` block:
+> - **`note`** on an `opens`/`payoffs` entry — the one-line popover prose for that
+>   beat. Write it here, not only in the commentary; the porter drops it straight
+>   into the `threads.json` entry.
+> - **`stems`** / **`exclude`** on a `candidates` entry — the accent-stripped Greek
+>   for `thread-stems.json` if the candidate is promoted (same rules as §1 above).
+> - **`retro`** — a fix-list for **earlier** units. When your close reading of unit N
+>   turns up a missed or wrong tag in an earlier unit, put a `retrofit-tags.json`-shape
+>   entry here (`{unit: "unit-06", verse, text, root, why}`, or `op: "retag"` with
+>   `from`/`to`) instead of a prose "we should revisit Unit 6" note. The porter
+>   dry-checks and applies them.
+>
+> Also: **tag every morphological occurrence of a tracked thread's Greek root**, even
+> where the English uses a different word — the tag follows the lexeme, not the gloss.
+> And pericopes that cross a chapter boundary must carry the full `· C:V–C:V` range.

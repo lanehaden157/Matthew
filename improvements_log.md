@@ -493,3 +493,11 @@
     movement/panel/panelhead/sectionhead heading classes, aside.synoptic has
     data-anchor and contains no data-root/class=r spans.
 - CLAUDE.md + port_artifact docstring updated.
+
+## 2026-09-10 (cont.) — Phase 5: style reference updated
+- matthew_study_style_reference.md §2: documented threads.note / candidates.stems
+  / threads.retro. §3: pericopes crossing a chapter carry full C:V-C:V range.
+  §4 + §6a checklist: tag EVERY occurrence of a Greek root (follow the lexeme,
+  not the English gloss).
+- pipeline/research-prompts.md §2: paste-note for re-syncing the research project.
+- Thread-add restructure (5 phases) complete.

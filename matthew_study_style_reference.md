@@ -84,9 +84,18 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
   ],
   "threads": {
     "opens":   [],
-    "payoffs": [ { "id": "release", "ref": "9:2" }, { "id": "little-faith", "ref": "9:22" } ],
+    "payoffs": [
+      { "id": "release", "ref": "9:2",
+        "note": "'your sins are released' — the forgiveness the name promised (1:21), now enacted" },
+      { "id": "little-faith", "ref": "9:22" }
+    ],
     "candidates": [
-      { "root": "compassion", "why": "splanchnizomai — fires 9:36, again 14:14, 15:32; worth promoting" }
+      { "root": "compassion", "why": "splanchnizomai — fires 9:36, again 14:14, 15:32; worth promoting",
+        "stems": ["σπλαγχ"] }
+    ],
+    "retro": [
+      { "unit": "unit-06", "verse": 12, "text": "debts", "root": "release",
+        "why": "opheilēmata 6:12 — aphiēmi 'release' fires in the same verse, untagged" }
     ]
   }
 }
@@ -112,18 +121,31 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
 | `passage` | ✓ | e.g. `"Matthew 9:1–34"` |
 | `title` | ✓ | working title from the Unit Map (§7), refined if needed |
 | `roots` | ✓ | every tracked root: `{root, translit, gloss}`. **No colour.** One Greek lexical root each — same-stem forms joined by `·` in `translit`; never a bundle of different words (§1). |
-| `threads` | ✓ | `{opens, payoffs, candidates}` — see below |
+| `threads` | ✓ | `{opens, payoffs, candidates, retro}` — see below |
 | `slug` | — | `"unit-09"`; derived if omitted |
 | `movement` | — | 1 / 2 / 3; looked up from the Unit Map if omitted |
 | `descriptor` | — | the masthead tail line |
 | `discourse` | — | `true` for the five discourse units |
 
-`threads.opens` / `threads.payoffs` — list the tracked threads (by their `id` from
-`threads-digest.md`) that **begin** or **land** in this unit, each `{id, ref}`. The porter
-turns these into a delta file for Lane to fold into `threads.json`.
+`threads.opens` / `threads.payoffs` — the tracked threads (by their `id` from
+`threads-digest.md`) that **begin** or **land** in this unit, each `{id, ref, note?}`.
+Optional `note` is the one-line popover prose for that beat — the porter puts it straight
+into the ready `threads.json` entry, so write it here rather than only in the commentary.
+The porter turns these into a delta file for Lane to fold into `threads.json`.
 
-`threads.candidates` — roots recurring across units that you think should be *promoted* to
-tracked threads: `{root, why}`, one-line reason. Never assumed — surfaced for Lane.
+`threads.candidates` — roots recurring across units that should be *promoted* to tracked
+threads: `{root, why, stems?, exclude?}`. `why` is a one-line reason. `stems`/`exclude`
+are the accent-stripped Greek for `pipeline/thread-stems.json` if Lane promotes it —
+a stem is a substring, or `^αφι` for a word-start match; `exclude` lists whole
+accent-stripped forms a stem wrongly catches. Never assumed — surfaced for Lane.
+
+`threads.retro` — a fix-list for **earlier** units: things the close reading of *this*
+unit made you notice about a prior one. Entries are `retrofit-tags.json` shape —
+`{unit: "unit-06", verse, text, root, why}` (add the missing tag), or with
+`op: "retag"` / `from` / `to` to move a mis-tagged span. `root`/`to` must be a tracked
+thread or a declared root of that unit. The porter dry-checks each against the target
+fragment and merges the ones that apply. Use this instead of a prose "we should revisit
+Unit 6" note.
 
 ### Endnotes
 
@@ -206,6 +228,11 @@ translation into its natural passage units. Do **not** use `h2`, `secthead`,
 `panel`, or `movement` — the site rewrites those to `pericope` but new artifacts
 should emit the right thing. Every unit gets these; keep titles short and
 descriptive (a phrase, not a sentence).
+
+Always include the `· C:V–V` range — the coverage audit reads chapter context
+from it. When a unit **crosses a chapter boundary** (e.g. 3:1–4:11), the pericope
+that spans the break must show the full `C:V–C:V` range so the new chapter's
+start is explicit (`· 3:13–4:11`).
 
 ### A verse + inline gloss
 
@@ -298,8 +325,9 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Transliteration only — zero native Greek or Hebrew script anywhere.
 
 **Threads**
-- [ ] Checked `threads-digest.md`: every tracked thread that surfaces in this passage is tagged with its thread `id` and listed under `threads.opens` / `threads.payoffs`.
-- [ ] Any root recurring across units that isn't yet a thread → added to `threads.candidates` with a reason (not tagged as a thread until Lane promotes it).
+- [ ] Checked `threads-digest.md`: **every** morphological occurrence of a tracked thread's Greek root in this passage is tagged with its thread `id` — even where the English renders it with a different word (ἁμαρτωλός → "sinner" still tags `sin`; περιβάλλω → "clothe" still tags `throw`). The tag follows the Greek lexeme, not the gloss. Threads that open or land here are also listed under `threads.opens` / `threads.payoffs`. The porter's coverage audit will list any you missed.
+- [ ] Any root recurring across units that isn't yet a thread → `threads.candidates` with a reason (+ `stems` if you can). Not tagged until Lane promotes it.
+- [ ] Anything you noticed about an **earlier** unit (a missed tag, a mis-tag) → `threads.retro`, not a prose aside.
 
 **Ship**
 - [ ] Saved to `/mnt/user-data/outputs/matthew_NN_translation.html` (zero-padded), then `present_files`.
@@ -354,10 +382,13 @@ The canonical list of tracked threads (id, root slug, translit, gloss, origin �
 open/closed, per-thread note) is **`threads-digest.md`** in the site repo, generated from
 `data/threads.json`. Lane refreshes it in the research project whenever it changes.
 
-When you build a unit: tag each tracked thread that surfaces with its `id`, list it under
-`threads.opens` / `threads.payoffs` in the `unit-meta` block, and close the loop in the
-commentary when a payoff lands. Propose new threads via `threads.candidates` — Lane
-promotes them; only then are they tagged as threads.
+When you build a unit: tag **every occurrence** of a tracked thread's Greek root with its
+`id` (follow the lexeme, not the English gloss); list threads that open or land under
+`threads.opens` / `threads.payoffs` with a one-line `note`; and close the loop in the
+commentary when a payoff lands. Propose new threads via `threads.candidates` (+ `stems`) —
+Lane promotes them; only then are they tagged. Flag anything you notice about an earlier
+unit in `threads.retro`. The site's coverage audit (`pipeline/audit_thread_coverage.py`)
+cross-checks every thread's Greek root against the built fragments and reports misses.
 
 ---
 
