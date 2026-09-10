@@ -7,15 +7,19 @@ structured data the code side ingests directly.
 
 ## 1. Greek stems for the 16 undefined tracked threads
 
-**Context to give it:** the project has all repo files. It should open
-`pipeline/thread-stems.json` and `data/threads.json` first.
+**Attach to the project:** `pipeline/thread-stems.json` (current version — for the
+format and the 8 worked examples) and `MatthewSBLGNT.txt` (unless the project
+already has the SBLGNT Greek of Matthew — it must be the same text). Everything
+else the prompt needs is inline below.
 
 **Prompt:**
 
-> I need `pipeline/thread-stems.json` entries for the 16 tracked threads that
-> don't have one yet. That file drives `audit_thread_coverage.py`, which scans
-> `MatthewSBLGNT.txt` for every morphological occurrence of a thread's Greek
-> root and flags any that a built unit leaves untagged.
+> I've attached `thread-stems.json` and the SBLGNT Greek of Matthew. I need
+> `thread-stems.json` entries for the 16 tracked threads that don't have one yet.
+> That file drives a script that scans the Greek text for every morphological
+> occurrence of a thread's root and flags any that a built unit leaves untagged.
+> The 8 entries already in the file (sin, fear, sea, follow, fish, authority,
+> hand-over, cross) are the pattern to follow.
 >
 > **How the matcher works** (so your stems are right): a Greek word matches a
 > thread if its **accent-stripped, lowercased** form **contains** any string in
