@@ -1,5 +1,44 @@
 # Session summary — 2026-09-10
 
+## Headline: 5-phase thread-add restructure — complete
+
+Adding a tracked thread was error-prone because the hard part (finding every
+occurrence) was manual and the file-editing looked bigger than it was. All five
+phases shipped and pushed:
+
+1. **`audit_thread_coverage.py --forms`** + `pipeline/research-prompts.md` (the
+   stems prompt for the Claude.ai project).
+2. **Exact chapter/verse alignment** — the audit derives the canonical (ch,v)
+   sequence straight from `MatthewSBLGNT.txt`, no more heading heuristics;
+   `--unit` scope + `coverage_for_unit()` for the porter. Handles the Lord's
+   Prayer hole (`.prayer` not `.v`), unit-10's `11:1`, final-sigma folding,
+   `^`-anchored stems.
+3. **New meta fields** `note` / `candidates.stems` + a richer thread-delta
+   report (coverage gaps as retrofit lines, candidate stem previews, ready
+   `threads.json` entries). `port_artifact --src PATH` to dry-run on a practice
+   fragment.
+4. **`threads.retro[]`** — fix-list for earlier units, dry-checked and merged
+   into generated `pipeline/retro-tags.json` (kept separate so retrofit-tags.json
+   stays hand-formatted). Porter **structure checks**: pericope headings + ·C:V
+   range, no old heading classes, `aside.synoptic` data-anchor + translit-only.
+5. **Style reference** updated (§2 new fields, §3 chapter-crossing pericopes,
+   §4/§6a "tag every occurrence, follow the lexeme not the gloss").
+
+### build.py made safe (Lane's call, mid-session)
+Dropped `extract_units.py` from `STEPS` — it was the Phase-1 batch normalizer,
+now a `port_artifact` library only. Running it wiped post-extract direct edits.
+build.py is now replay-retrofit → refresh_meta → scan → verify → digest → audit
+(advisory). Verified idempotent.
+
+### All 24 audited threads clean — 0 coverage gaps
+16 remaining stems folded in (research project), with `release` retidied and
+`faith`/`little-faith` split. Pre-opening coverage pass: **throw** (+11 tags,
+units 3-6, broad range; +6 retagged from unit-07's misapplied local `do`;
+recoloured #a85520→#c2410c), **torment** (+1), **hand-over** (+2, recoloured
+#8a3c70→#0e8aa0 off the shared purple). occurrences 423 → 437.
+
+## Older items this session
+
 ## Done
 
 ### Desktop width
