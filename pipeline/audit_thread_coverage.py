@@ -281,19 +281,15 @@ def _classify(threads, stems):
     return defined, phrase, undefined
 
 
-def coverage_for_unit(slug, threads=None, stems=None):
-    """Structured gap report for ONE unit across every defined thread. For
-    port_artifact.py. Returns {"gaps": [...], "overs": [...], "warnings": [...]}
-    where each gap is {thread, root, ch, v, words, translit, text}."""
-    verses, maxv, present, th, st, uj = _load_all()
+def coverage_for_fragment(slug, html, passage, threads=None, stems=None):
+    """Structured gap report for one fragment string across every defined
+    thread — no units.json lookup, so it works during a port before the row
+    exists. Returns {"gaps": [...], "overs": [...], "warnings": [...]};
+    each gap is {thread, root, ch, v, words, translit, text}."""
+    verses, maxv, present, th, st, _ = _load_all()
     threads = threads or th
     stems = stems or st
-    row = next((u for u in uj["units"] if u["slug"] == slug), None)
-    if row is None:
-        return {"gaps": [], "overs": [], "warnings": [f"{slug}: not in units.json"]}
-    path = os.path.join(UNITS, slug + ".html")
-    html = open(path, encoding="utf-8").read()
-    lo, hi = parse_range(row["passage"])
+    lo, hi = parse_range(passage)
     tmap, warn = tagged_map(html, lo, hi, maxv, present, slug)
     defined, _, _ = _classify(threads, stems)
 
@@ -313,6 +309,40 @@ def coverage_for_unit(slug, threads=None, stems=None):
                 overs.append({"thread": tid, "root": root,
                               "ch": cv[0], "v": cv[1]})
     return {"gaps": gaps, "overs": overs, "warnings": warn}
+
+
+def coverage_for_unit(slug, threads=None, stems=None):
+    """coverage_for_fragment for a BUILT unit, reading its passage from
+    units.json and its html from units/<slug>.html."""
+    uj = json.load(open(os.path.join(DATA, "units.json"), encoding="utf-8"))
+    row = next((u for u in uj["units"] if u["slug"] == slug), None)
+    if row is None:
+        return {"gaps": [], "overs": [], "warnings": [f"{slug}: not in units.json"]}
+    html = open(os.path.join(UNITS, slug + ".html"), encoding="utf-8").read()
+    return coverage_for_fragment(slug, html, row["passage"], threads, stems)
+
+
+def stem_preview(stems_list, exclude_list=None):
+    """What a candidate stem set would match across the whole book — for the
+    thread-delta report. Returns a list of {surface, translit, n, chapters},
+    most frequent first, plus a `dropped` list for the exclude entries."""
+    verses = load_greek()
+    raw = [strip_accents(s) for s in stems_list]
+    exclude = {strip_accents(x) for x in (exclude_list or [])}
+    kept, dropped = {}, {}
+    for ch, v, txt in verses:
+        for w in GREEKWORD.findall(txt):
+            sw = strip_accents(w)
+            if not any(st in sw for st in raw):
+                continue
+            b = dropped if sw in exclude else kept
+            e = b.setdefault(sw, {"surface": w, "translit": _translit(w),
+                                  "n": 0, "chapters": set()})
+            e["n"] += 1
+            e["chapters"].add(ch)
+    fmt = lambda d: sorted(({**e, "chapters": sorted(e["chapters"])}
+                            for e in d.values()), key=lambda e: -e["n"])
+    return {"kept": fmt(kept), "dropped": fmt(dropped)}
 
 
 def audit(only=None, stub_for=None, unit_slugs=None):

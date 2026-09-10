@@ -18,9 +18,16 @@ Shape:
              every coloured root the unit tracks — translit + gloss ONLY, NO
              colour. A root whose translit bundles a small word-family
              ("misthos / apechō / apodidōmi") is still one root, one slug.
-  threads    { opens:[{id,ref}], payoffs:[{id,ref}], candidates:[{root,why}] }
-             opens/payoffs reference threads.json ids; candidates PROPOSE new
-             threads and are surfaced for Lane, never written automatically.
+  threads    { opens:[{id,ref,note?}], payoffs:[{id,ref,note?}],
+               candidates:[{root,why,stems?,exclude?}] }
+             opens/payoffs reference threads.json ids; optional `note` is the
+             one-line popover prose for that beat, echoed into the thread-delta
+             report ready to paste. candidates PROPOSE new threads (never written
+             automatically); optional `stems`/`exclude` are accent-stripped Greek
+             for thread-stems.json if Lane promotes the candidate.
+             All of opens/payoffs/candidates are consumed by the porter's
+             thread-delta report and dropped — generate() rebuilds the block
+             from the data files, so none of this reaches the rendered page.
 
 The block is inert (type="application/json", not executed) and invisible; the
 site injects fragments with innerHTML so it just sits in the DOM.
@@ -116,6 +123,24 @@ def validate(meta, threads_json=None):
     for key in ("opens", "payoffs", "candidates"):
         if key in th and not isinstance(th[key], list):
             errs.append(f"threads.{key} must be a list")
+
+    for key in ("opens", "payoffs"):
+        for i, e in enumerate(th.get(key, []) or []):
+            if "note" in e and not isinstance(e["note"], str):
+                errs.append(f"threads.{key}[{i}]: 'note' must be a string "
+                            "(the popover line for this opens/payoff)")
+
+    for i, c in enumerate(th.get("candidates", []) or []):
+        if not c.get("root"):
+            errs.append(f"threads.candidates[{i}]: missing 'root'")
+        elif not re.fullmatch(r"[a-z0-9-]+", c["root"]):
+            errs.append(f"threads.candidates[{i}]: root '{c['root']}' must be "
+                        "[a-z0-9-]")
+        for k in ("stems", "exclude"):
+            if k in c and not (isinstance(c[k], list)
+                               and all(isinstance(x, str) for x in c[k])):
+                errs.append(f"threads.candidates[{i}]: '{k}' must be a list of "
+                            "strings (accent-stripped Greek, for thread-stems.json)")
 
     if threads_json is not None:
         ids = {t["id"] for t in threads_json["threads"]}

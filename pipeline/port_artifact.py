@@ -1,8 +1,9 @@
 """Drop one research artifact into the site.
 
-    python pipeline/port_artifact.py 9           # port source-artifacts/matthew_09_translation.html
-    python pipeline/port_artifact.py 9 --dry     # show what would change, write nothing
-    python pipeline/port_artifact.py --backfill  # units 1-8: inject a meta block, nothing else
+    python pipeline/port_artifact.py 9              # port source-artifacts/matthew_09_translation.html
+    python pipeline/port_artifact.py 9 --dry        # show what would change, write nothing
+    python pipeline/port_artifact.py 11 --src X.html  # build the thread-delta report from X, write nothing
+    python pipeline/port_artifact.py --backfill     # units 1-8: inject a meta block, nothing else
 
 Pipeline for a new unit N:
   1. read  source-artifacts/matthew_0N_translation.html
@@ -11,8 +12,13 @@ Pipeline for a new unit N:
   3. read the unit-meta block, validate it against data/threads.json
   4. merge the unit into data/units.json  (built:true; assign a local hue to
      every declared root that is NOT a tracked thread, avoiding collisions)
-  5. write the threads.json DELTA to pipeline/out/thread-delta-0N.md for Lane —
-     opens/payoffs that need a `tagged`/`status` flip, and every candidate.
+  5. write the threads.json DELTA to pipeline/out/thread-delta-0N.md for Lane:
+     - opens/payoffs that need a `tagged`/`status` flip, with a ready
+       payoffs entry (incl. any `note` from the meta block)
+     - new-thread candidates, each with a stem preview (what its proposed
+       `stems` would match book-wide) and a ready thread-stems.json entry
+     - tracked-thread COVERAGE: every occurrence the Greek has in this
+       passage that the fragment left untagged, as ready retrofit-tags lines
      threads.json is never written here; it is policy Lane owns.
   6. re-inject a normalised meta block, write units/unit-0N.html
   7. apply_retrofit (if retrofit-tags.json has entries for the unit),
@@ -161,9 +167,10 @@ def merge_units_json(meta, dry):
 
 # --------------------------------------------------------------- thread delta
 
-def thread_delta(meta):
+def thread_delta(meta, fragment_html=None, retrofit_applied=True):
     threads = {t["id"]: t for t in um._load("threads.json")["threads"]}
     n = meta["unit"]
+    slug = meta.get("slug", f"unit-{n:02d}")
     lines = [f"# Thread delta — Unit {n}", "",
              "Apply by hand to `data/threads.json` if you accept it. "
              "The porter does not touch threads.json.", ""]
@@ -185,23 +192,101 @@ def thread_delta(meta):
             lines.append(f"- **{kind[:-1]}** `{e['id']}` at {e.get('ref', '?')}{note}")
             if kind == "payoffs" and not any(
                     p.get("unit") == n for p in t.get("payoffs", [])):
-                lines.append(f"    - add `{{ \"unit\": {n}, \"ref\": \"{e.get('ref','')}\" }}` "
-                             f"to `{e['id']}`.payoffs")
+                entry = {"unit": n, "ref": e.get("ref", "")}
+                if e.get("note"):
+                    entry["note"] = e["note"]
+                lines.append(f"    - add to `{e['id']}`.payoffs: "
+                             f"`{json.dumps(entry, ensure_ascii=False)}`")
+            elif kind == "opens" and e.get("note"):
+                lines.append(f"    - popover note for the opens: “{e['note']}”")
 
     cands = th.get("candidates", []) or []
     if cands:
         lines += ["", "## New-thread candidates (Lane decides)", ""]
         for c in cands:
-            lines.append(f"- `{c.get('root', '?')}` — {c.get('why', '').strip()}")
-            lines.append(f"    - if promoted: add a threads.json entry with "
-                         f"`\"root\": \"{c.get('root','?')}\"`, then re-tag this "
-                         f"fragment's spans and re-run the pipeline")
+            root = c.get("root", "?")
+            lines.append(f"- `{root}` — {c.get('why', '').strip()}")
+            if c.get("stems"):
+                _append_stem_preview(lines, root, c)
+            else:
+                lines.append(f"    - no stems proposed; if promoted, add a "
+                             f"`thread-stems.json` entry and run "
+                             f"`audit_thread_coverage.py --forms {root}`")
+
+    if fragment_html is not None:
+        _append_coverage(lines, slug, fragment_html, meta.get("passage", ""),
+                         retrofit_applied)
+
     if not touched and not cands:
-        lines.append("_no tracked threads opened or paid off in this unit, no candidates._")
+        lines.append("_no tracked threads opened or paid off in this unit, "
+                     "no candidates._")
 
     path = os.path.join(OUT, f"thread-delta-{n:02d}.md")
     open(path, "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return path
+
+
+def _append_stem_preview(lines, root, cand):
+    try:
+        import audit_thread_coverage as atc
+        pv = atc.stem_preview(cand["stems"], cand.get("exclude"))
+    except Exception as ex:                                   # pragma: no cover
+        lines.append(f"    - (stem preview unavailable: {ex})")
+        return
+    entry = {"stems": cand["stems"]}
+    if cand.get("exclude"):
+        entry["exclude"] = cand["exclude"]
+    lines.append(f"    - if promoted, `thread-stems.json` entry: "
+                 f"`\"{root}\": {json.dumps(entry, ensure_ascii=False)}`")
+    kept = pv["kept"]
+    total = sum(e["n"] for e in kept)
+    lines.append(f"    - those stems match **{total}** words book-wide "
+                 f"({len(kept)} distinct forms):")
+    for e in kept[:12]:
+        lines.append(f"        {e['surface']} ({e['translit']}) ×{e['n']}  "
+                     f"ch {','.join(map(str, e['chapters']))}")
+    extra = len(kept) - 12
+    if extra > 0:
+        lines.append(f"        …and {extra} more form" + ("s" if extra != 1 else ""))
+    if pv["dropped"]:
+        drp = ", ".join(f"{e['surface']}×{e['n']}" for e in pv["dropped"])
+        lines.append(f"    - `exclude` drops: {drp}")
+
+
+def _append_coverage(lines, slug, html, passage, retrofit_applied=True):
+    try:
+        import audit_thread_coverage as atc
+        cov = atc.coverage_for_fragment(slug, html, passage)
+    except Exception as ex:                                   # pragma: no cover
+        lines.append(f"\n## Tracked-thread coverage\n\n(unavailable: {ex})")
+        return
+    lines += ["", "## Tracked-thread coverage in this unit", ""]
+    if not retrofit_applied:
+        lines.append("_(checked on the raw fragment — retrofit-tags.json not yet "
+                     "applied; entries already there will show as gaps)_")
+        lines.append("")
+    if cov["warnings"]:
+        lines.append("**alignment warnings — check these first:**")
+        lines += [f"- {w}" for w in cov["warnings"]] + [""]
+    if not cov["gaps"] and not cov["overs"]:
+        lines.append("Every tracked-thread occurrence in this passage is tagged. ✓")
+        return
+    if cov["gaps"]:
+        lines.append(f"**{len(cov['gaps'])} occurrence(s) the Greek has but the "
+                     f"fragment leaves untagged** — add to `retrofit-tags.json` "
+                     f"`add` (fill in `text`):")
+        lines.append("")
+        for g in cov["gaps"]:
+            txt = (g["text"][:90] + "…") if len(g["text"]) > 90 else g["text"]
+            lines.append(f'    {{ "unit": "{slug}", "verse": {g["v"]}, '
+                         f'"text": "???", "root": "{g["root"]}", '
+                         f'"why": "{g["translit"]} {g["ch"]}:{g["v"]}" }},')
+            if txt:
+                lines.append(f"        # “{txt}”")
+    if cov["overs"]:
+        lines += ["", "**tagged but the Greek root isn't there — wrong verse?**"]
+        for o in cov["overs"]:
+            lines.append(f"- `{o['root']}` at {o['ch']}:{o['v']}")
 
 
 # --------------------------------------------------------------- retrofit + scan
@@ -221,12 +306,17 @@ def run_retrofit_and_scan():
 
 # --------------------------------------------------------------- commands
 
-def port_one(n, dry):
+def port_one(n, dry, src=None):
     os.makedirs(OUT, exist_ok=True)
-    matches = glob.glob(os.path.join(SRC, f"matthew_{n:02d}_*.html"))
-    if not matches:
-        sys.exit(f"no source artifact: source-artifacts/matthew_{n:02d}_*.html")
-    raw = open(matches[0], encoding="utf-8").read()
+    if src:
+        if not os.path.exists(src):
+            sys.exit(f"--src not found: {src}")
+        raw = open(src, encoding="utf-8").read()
+    else:
+        matches = glob.glob(os.path.join(SRC, f"matthew_{n:02d}_*.html"))
+        if not matches:
+            sys.exit(f"no source artifact: source-artifacts/matthew_{n:02d}_*.html")
+        raw = open(matches[0], encoding="utf-8").read()
 
     meta = um.parse(raw)
     if meta is None:
@@ -244,25 +334,31 @@ def port_one(n, dry):
     meta_roots = [r["root"] for r in meta["roots"]]
     fragment = to_fragment(raw, n, meta_roots)
 
-    roots = merge_units_json(meta, dry)
+    no_write = dry or bool(src)
+    roots = merge_units_json(meta, no_write)
     if not meta.get("movement"):
         r = um._unit_row(um._load("units.json"), n)
         if r and r.get("movement"):
             meta["movement"] = r["movement"]
-    fragment = um.inject(fragment, um.generate(n) if not dry else meta)
+    fragment = um.inject(fragment, um.generate(n) if not no_write else meta)
 
-    delta = thread_delta(meta)
     dest = os.path.join(UNITS, f"unit-{n:02d}.html")
-    if dry:
-        print(f"[dry] would write {dest}")
-        print(f"[dry] local hues: { {k: v['color'] for k, v in roots.items()} }")
-        print(f"[dry] thread delta -> {delta}")
+    if no_write:
+        why = "dry run" if dry else "--src: writing nothing"
+        delta = thread_delta(meta, fragment, retrofit_applied=False)
+        print(f"[{why}] would write {dest}")
+        print(f"[{why}] local hues: { {k: v['color'] for k, v in roots.items()} }")
+        print(f"[{why}] thread delta -> {delta}  "
+              f"(coverage checked before retrofit-tags.json is applied)")
         return
     open(dest, "w", encoding="utf-8").write(fragment)
     print(f"wrote {dest}")
     print(f"local hues: { {k: v['color'] for k, v in roots.items()} }")
-    print(f"\n>>> REVIEW THE THREAD DELTA: {delta}")
     run_retrofit_and_scan()
+    # coverage against the fragment as it now stands on disk (retrofit applied)
+    final = open(dest, encoding="utf-8").read()
+    delta = thread_delta(meta, final, retrofit_applied=True)
+    print(f"\n>>> REVIEW THE THREAD DELTA: {delta}")
     print("\nported. view in the browser, apply the thread delta if you accept it, then commit.")
 
 
@@ -307,11 +403,15 @@ def main():
     ap.add_argument("unit", nargs="?", type=int)
     ap.add_argument("--dry", action="store_true")
     ap.add_argument("--backfill", action="store_true")
+    ap.add_argument("--src", metavar="PATH",
+                    help="port from this file instead of source-artifacts/; "
+                         "writes nothing, just builds the thread-delta report "
+                         "(for dry-running the porter on a practice fragment)")
     a = ap.parse_args()
     if a.backfill:
         backfill(a.dry)
     elif a.unit:
-        port_one(a.unit, a.dry)
+        port_one(a.unit, a.dry, a.src)
     else:
         ap.error("give a unit number or --backfill")
 
