@@ -51,11 +51,13 @@
   `build.py` now = replay `retrofit-tags.json` (idempotent) → `refresh_meta` →
   `scan` → `verify` → `digest` → coverage audit (advisory). Fragments are the
   source of truth. Verified idempotent (re-run touches nothing).
-- `MatthewSBLGNT.txt` is **tracked** in the repo root — Lane's call (he edited
-  CLAUDE.md mid-session: "Greek (SBLGNT) lives in the repo for easy access", and
-  loosened the transliteration rule to only cover the rendered `unit.html` page,
-  so Greek in `pipeline/` and `data/` is now explicitly fine). Audit still
-  degrades with a clear message if the file is absent.
+- `MatthewSBLGNT.txt` is **tracked** in the repo root (Lane put it there and
+  wants it in the repo). He also loosened the transliteration rule to only cover
+  the rendered `unit.html` page, so Greek in `pipeline/` and `data/` is fine.
+  Audit degrades with a clear message if the file is absent. CLAUDE.md "Source
+  texts" rewritten to point only at the in-repo file — the old external
+  `Personal/Biblical Texts/Gospels/` path was a mistake and is gone; nothing
+  outside the Matthew folder is needed.
 - CLAUDE.md doc for the new tools: Lane trimmed my additions to the pipeline
   section — left to him to place (PLAN.md or a lean CLAUDE.md line). The
   add-a-thread workflow is written up in this summary and improvements_log.

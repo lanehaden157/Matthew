@@ -104,11 +104,12 @@ horizontal page scroll; wide diagrams/tables scroll in their own container.
 
 ## Source texts
 
-NASB, Constable, Bible Project notes, Mark/Luke/John comparisons
-live outside this repo (Claude.ai project) The `/units` fragments are
-the *output* of that research, not the research itself. 
-
-Greek (SBLGNT) lives in the repo for easy access
+`MatthewSBLGNT.txt` (SBLGNT Greek of Matthew, whole book, `Matt C:V\t<text>`
+lines) is in the repo root — `pipeline/audit_thread_coverage.py` reads it.
+Everything else (NASB, Constable, Bible Project notes, Mark/Luke/John
+comparisons) is research that lives in the Claude.ai project, not on disk. The
+`/units` fragments are the *output* of that research. Nothing outside the
+Matthew project folder is needed.
 
 ## Session Context System (Lane's global convention)
 
