@@ -14,6 +14,8 @@ verse / over-tag).
     python pipeline/audit_thread_coverage.py --forms mercy light
                         # every word form those stems match, counts + chapters +
                         # what `exclude` drops — sanity-check a stem set
+    python pipeline/audit_thread_coverage.py --unit unit-11
+                        # just one unit (port_artifact.py uses coverage_for_unit)
 
 Informational: exits 0 even with gaps (units 11-28 don't exist yet, so most
 threads legitimately show gaps past unit 10).
@@ -45,8 +47,6 @@ GREEK = os.path.join(ROOT, "MatthewSBLGNT.txt")
 VBLOCK = re.compile(r'<(?:div|p)\s+class="v"[^>]*>(.*?)</(?:div|p)>', re.S)
 NUM = re.compile(r'<span class="n">(\d+)</span>')
 ROOTSPAN = re.compile(r'data-root="([a-z0-9-]+)"')
-HEAD = re.compile(r'<h[1-4][^>]*>(.*?)</h[1-4]>', re.S)
-HEAD_CV = re.compile(r'·\s*(\d+):\d+')
 TAGS = re.compile(r"<[^>]+>")
 WS = re.compile(r"\s+")
 GREEKWORD = re.compile(r"[^\W\d_]+", re.UNICODE)
@@ -97,6 +97,9 @@ def greek_hits(verses, spec):
 
 # ----------------------------------------------------------------- fragment side
 
+NUM_CV = re.compile(r'<span class="n">\s*(?:(\d+):)?(\d+)\s*</span>')
+
+
 def parse_range(passage):
     m = re.search(r"(\d+):(\d+)\s*[-–]\s*(?:(\d+):)?(\d+)", passage)
     if not m:
@@ -109,42 +112,76 @@ def parse_range(passage):
     return (c1, v1), (c2, v2)
 
 
-def tagged_map(html, start_ch, end_ch):
-    """{ (ch,v): set(roots) } from the fragment's .v blocks, in document order.
+def greek_index(verses):
+    """maxv[ch] = last verse number of that chapter; present = set of (ch,v)
+    that actually exist in the SBLGNT (so the three textual omissions —
+    17:21, 18:11, 23:14 — are simply absent)."""
+    maxv, present = {}, set()
+    for ch, v, _ in verses:
+        maxv[ch] = max(maxv.get(ch, 0), v)
+        present.add((ch, v))
+    return maxv, present
 
-    Chapter is tracked from section headings that carry '· C:V', with a
-    fallback bump when a verse number drops sharply and no heading intervened.
-    """
-    tagged = {}
-    ch = start_ch
-    prev_v = 0
-    # walk .v blocks and headings together, in order
-    marks = []
-    for m in VBLOCK.finditer(html):
-        marks.append((m.start(), "v", m.group(1)))
-    for m in HEAD.finditer(html):
-        cv = HEAD_CV.search(detag(m.group(1)))
-        if cv:
-            marks.append((m.start(), "ch", int(cv.group(1))))
-    marks.sort()
 
-    for _, kind, payload in marks:
-        if kind == "ch":
-            if start_ch <= payload <= end_ch:
-                ch = payload
-                prev_v = 0
-            continue
-        seg = payload
-        nums = NUM.findall(seg)
-        if not nums:
-            continue
-        v = int(nums[0])
-        if v < prev_v - 2 and ch < end_ch:
-            ch += 1
-        prev_v = v
-        roots = tagged.setdefault((ch, v), set())
-        roots.update(ROOTSPAN.findall(seg))
-    return tagged
+def expected_seq(lo, hi, maxv, present):
+    """The canonical (ch,v) list for a unit's passage, straight from the Greek —
+    the authority on how many verses each chapter has and where it rolls over."""
+    (c1, v1), (c2, v2) = lo, hi
+    seq, ch, v = [], c1, v1
+    while (ch, v) <= (c2, v2):
+        if (ch, v) in present:
+            seq.append((ch, v))
+        if ch < c2 and v >= maxv.get(ch, v):
+            ch, v = ch + 1, 1
+        else:
+            v += 1
+    return seq
+
+
+def tagged_map(html, lo, hi, maxv, present, slug="?"):
+    """{ (ch,v): set(data-root) } from the fragment, plus a list of warnings.
+
+    Verse blocks (.v) are one-per-verse in canonical order; the chapter for a
+    bare-integer number comes from position in the expected sequence (from the
+    Greek), an explicit 'C:V' number is trusted as-is. Where the .v sequence
+    skips verses — an embedded set-piece like the Lord's Prayer (6:9b-13) is a
+    .prayer block, not .v — every data-root in the HTML between the bracketing
+    verses is attributed to each skipped verse. No heuristics for the chapter:
+    anything that won't line up is reported, never guessed."""
+    seq = expected_seq(lo, hi, maxv, present)
+    blocks = [(m.start(), m.end(), m.group(1)) for m in VBLOCK.finditer(html)]
+    numbered = [(s, e, seg, NUM_CV.search(seg)) for s, e, seg in blocks]
+    numbered = [(s, e, seg, m) for s, e, seg, m in numbered if m]
+
+    tagged, warn, si = {}, [], 0
+    placed = []  # (cv, block_end) for hole-filling
+    for bi, (s, e, seg, m) in enumerate(numbered):
+        if m.group(1):
+            cv = (int(m.group(1)), int(m.group(2)))
+            while si < len(seq) and seq[si] < cv:
+                si += 1
+        else:
+            v = int(m.group(2))
+            # find this verse in what's left of the expected sequence
+            ahead = next((k for k in range(si, len(seq)) if seq[k][1] == v), None)
+            if ahead is None:
+                warn.append(f"{slug}: verse block #{bi} (v{v}) has no match in "
+                            f"the expected sequence from {seq[si] if si < len(seq) else 'end'}"
+                            f" — numbering drift")
+                continue
+            cv = seq[ahead]
+            si = ahead
+        tagged.setdefault(cv, set()).update(ROOTSPAN.findall(seg))
+        if placed:
+            prev_cv, prev_end = placed[-1]
+            skipped = [q for q in seq if prev_cv < q < cv]
+            if skipped:
+                roots = set(ROOTSPAN.findall(html[prev_end:s]))
+                for q in skipped:
+                    tagged.setdefault(q, set()).update(roots)
+        si += 1
+        placed.append((cv, e))
+    return tagged, warn
 
 
 def verse_text(html, v):
@@ -221,15 +258,18 @@ def forms_report(only=None):
     return 0
 
 
-def audit(only=None, stub_for=None):
+def _load_all():
     verses = load_greek()
+    maxv, present = greek_index(verses)
     threads = {t["id"]: t for t in json.load(
         open(os.path.join(DATA, "threads.json"), encoding="utf-8"))["threads"]}
     stems = json.load(open(os.path.join(os.path.dirname(__file__),
                       "thread-stems.json"), encoding="utf-8"))["stems"]
     units_json = json.load(open(os.path.join(DATA, "units.json"), encoding="utf-8"))
-    units = list(built_units(units_json))
+    return verses, maxv, present, threads, stems, units_json
 
+
+def _classify(threads, stems):
     defined, phrase, undefined = [], [], []
     for tid in threads:
         if tid in stems and stems[tid].get("phrase"):
@@ -238,10 +278,60 @@ def audit(only=None, stub_for=None):
             defined.append(tid)
         else:
             undefined.append(tid)
+    return defined, phrase, undefined
+
+
+def coverage_for_unit(slug, threads=None, stems=None):
+    """Structured gap report for ONE unit across every defined thread. For
+    port_artifact.py. Returns {"gaps": [...], "overs": [...], "warnings": [...]}
+    where each gap is {thread, root, ch, v, words, translit, text}."""
+    verses, maxv, present, th, st, uj = _load_all()
+    threads = threads or th
+    stems = stems or st
+    row = next((u for u in uj["units"] if u["slug"] == slug), None)
+    if row is None:
+        return {"gaps": [], "overs": [], "warnings": [f"{slug}: not in units.json"]}
+    path = os.path.join(UNITS, slug + ".html")
+    html = open(path, encoding="utf-8").read()
+    lo, hi = parse_range(row["passage"])
+    tmap, warn = tagged_map(html, lo, hi, maxv, present, slug)
+    defined, _, _ = _classify(threads, stems)
+
+    gaps, overs = [], []
+    for tid in defined:
+        root = threads[tid]["root"]
+        hits = {cv: w for cv, w in greek_hits(verses, stems[tid]).items()
+                if in_range(cv, lo, hi)}
+        for cv, words in sorted(hits.items()):
+            if root not in tmap.get(cv, set()):
+                gaps.append({"thread": tid, "root": root, "ch": cv[0], "v": cv[1],
+                             "words": words,
+                             "translit": " ".join(_translit(w) for w in words),
+                             "text": verse_text(html, cv[1])})
+        for cv, roots in sorted(tmap.items()):
+            if root in roots and cv not in hits:
+                overs.append({"thread": tid, "root": root,
+                              "ch": cv[0], "v": cv[1]})
+    return {"gaps": gaps, "overs": overs, "warnings": warn}
+
+
+def audit(only=None, stub_for=None, unit_slugs=None):
+    verses, maxv, present, threads, stems, units_json = _load_all()
+    units = [(u, h) for u, h in built_units(units_json)
+             if not unit_slugs or u["slug"] in unit_slugs]
+
+    defined, phrase, undefined = _classify(threads, stems)
 
     targets = defined if not only else [t for t in defined if t in only]
     total_gaps = 0
     stub_lines = []
+    all_warn = []
+
+    tmaps = {}
+    for u, html in units:
+        lo, hi = parse_range(u["passage"])
+        tmaps[u["slug"]], w = tagged_map(html, lo, hi, maxv, present, u["slug"])
+        all_warn += w
 
     for tid in targets:
         root = threads[tid]["root"]
@@ -249,7 +339,7 @@ def audit(only=None, stub_for=None):
         gaps, overs = [], []
         for u, html in units:
             lo, hi = parse_range(u["passage"])
-            tmap = tagged_map(html, lo[0], hi[0])
+            tmap = tmaps[u["slug"]]
             u_hits = {cv: w for cv, w in hits.items() if in_range(cv, lo, hi)}
             for cv, words in sorted(u_hits.items()):
                 if root not in tmap.get(cv, set()):
@@ -260,7 +350,9 @@ def audit(only=None, stub_for=None):
                     overs.append((u["slug"], cv))
 
         if not gaps and not overs:
-            print(f"  ✓ {tid:14} clean across {len(units)} built units "
+            scope = (f"{len(units)} built unit" + ("s" if len(units) != 1 else "")
+                     if not unit_slugs else ", ".join(unit_slugs))
+            print(f"  ✓ {tid:14} clean across {scope} "
                   f"({len(hits)} occ. book-wide)")
             continue
         print(f"  ✗ {tid:14} {len(gaps)} gap(s), {len(overs)} tagged-but-no-root")
@@ -278,10 +370,10 @@ def audit(only=None, stub_for=None):
             print(f"      OVER {slug}  {c}:{v}  tagged {root}, Greek has no "
                   f"{tid} root here — wrong verse?")
 
-    if phrase:
+    if phrase and not unit_slugs:
         print(f"\n  phrase threads (coverage by hand, not audited): "
               f"{', '.join(sorted(phrase))}")
-    if undefined:
+    if undefined and not unit_slugs:
         print(f"\n  NO STEMS DEFINED — add to pipeline/thread-stems.json:")
         for tid in sorted(undefined):
             print(f"      {tid:14} root=‹{threads[tid]['root']}›  "
@@ -298,7 +390,14 @@ def audit(only=None, stub_for=None):
         if not lines:
             print("    (no gaps)")
 
-    print(f"\n{total_gaps} built-unit gap(s) across "
+    if all_warn:
+        print(f"\n  ⚠ chapter/verse alignment — audit could not line these up "
+              f"cleanly against the Greek:")
+        for w in all_warn:
+            print(f"      {w}")
+
+    scope = "built-unit" if not unit_slugs else "/".join(unit_slugs)
+    print(f"\n{total_gaps} {scope} gap(s) across "
           f"{len(targets)} audited thread(s).")
     return total_gaps
 
@@ -310,6 +409,11 @@ def main():
         i = args.index("--stub")
         stub = args[i + 1:] if len(args) > i + 1 else []
         args = args[:i]
+    unit_slugs = None
+    if "--unit" in args:
+        i = args.index("--unit")
+        unit_slugs = [a for a in args[i + 1:] if not a.startswith("--")]
+        args = args[:i]
     check = "--check" in args
     forms = "--forms" in args
     args = [a for a in args if not a.startswith("--")]
@@ -319,8 +423,9 @@ def main():
         print("thread stem forms — every word each stem set matches\n")
         sys.exit(forms_report(only=only))
 
-    print("thread coverage audit — Greek vs. built fragments\n")
-    gaps = audit(only=only, stub_for=stub)
+    scope = f" — {', '.join(unit_slugs)}" if unit_slugs else " vs. built fragments"
+    print(f"thread coverage audit — Greek{scope}\n")
+    gaps = audit(only=only, stub_for=stub, unit_slugs=unit_slugs)
     if check and gaps:
         print("\n[audit] built-unit gaps exist — see above "
               "(warning only, not a build failure)")
