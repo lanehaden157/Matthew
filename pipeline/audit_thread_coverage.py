@@ -80,19 +80,28 @@ def load_greek():
     return verses
 
 
+def _compile_stems(stem_list):
+    """A stem is a substring match, or — with a leading '^' — a word-start
+    match (`^αφι` = word begins αφι). Returns a predicate on an accent-stripped
+    word."""
+    subs = [strip_accents(s[1:]) if s.startswith("^") else strip_accents(s)
+            for s in stem_list]
+    anchored = [s.startswith("^") for s in stem_list]
+    pairs = list(zip(subs, anchored))
+
+    def match(sw):
+        return any(sw.startswith(s) if a else s in sw for s, a in pairs)
+    return match
+
+
 def greek_hits(verses, spec):
     """{ (ch,v): [surface words] } for one thread's stem spec."""
-    stems = [strip_accents(s) for s in spec["stems"]]
+    match = _compile_stems(spec["stems"])
     exclude = {strip_accents(x) for x in spec.get("exclude", [])}
     out = {}
     for ch, v, txt in verses:
-        hits = []
-        for w in GREEKWORD.findall(txt):
-            sw = strip_accents(w)
-            if sw in exclude:
-                continue
-            if any(st in sw for st in stems):
-                hits.append(w)
+        hits = [w for w in GREEKWORD.findall(txt)
+                if strip_accents(w) not in exclude and match(strip_accents(w))]
         if hits:
             out[(ch, v)] = hits
     return out
@@ -157,6 +166,9 @@ def tagged_map(html, lo, hi, maxv, present, slug="?"):
     numbered = [(s, e, seg, m) for s, e, seg, m in numbered if m]
 
     tagged, warn, si = {}, [], 0
+    holefilled = set()   # verses whose tags were read from surrounding HTML,
+                         # not their own .v block — imprecise, so exempt from
+                         # the "tagged but no Greek root" (over-tag) check
     placed = []  # (cv, block_end) for hole-filling
     for bi, (s, e, seg, m) in enumerate(numbered):
         if m.group(1):
@@ -182,9 +194,10 @@ def tagged_map(html, lo, hi, maxv, present, slug="?"):
                 roots = set(ROOTSPAN.findall(html[prev_end:s]))
                 for q in skipped:
                     tagged.setdefault(q, set()).update(roots)
+                    holefilled.add(q)
         si += 1
         placed.append((cv, e))
-    return tagged, warn
+    return tagged, warn, holefilled
 
 
 def verse_text(html, v):
@@ -234,13 +247,13 @@ def forms_report(only=None):
 
     for tid in targets:
         spec = stems[tid]
-        raw_stems = [strip_accents(s) for s in spec["stems"]]
+        match = _compile_stems(spec["stems"])
         exclude = {strip_accents(x) for x in spec.get("exclude", [])}
         kept, dropped = {}, {}
         for ch, v, txt in verses:
             for w in GREEKWORD.findall(txt):
                 sw = strip_accents(w)
-                if not any(st in sw for st in raw_stems):
+                if not match(sw):
                     continue
                 bucket = dropped if sw in exclude else kept
                 e = bucket.setdefault(sw, {"surface": w, "n": 0, "ch": set()})
@@ -293,7 +306,7 @@ def coverage_for_fragment(slug, html, passage, threads=None, stems=None):
     threads = threads or th
     stems = stems or st
     lo, hi = parse_range(passage)
-    tmap, warn = tagged_map(html, lo, hi, maxv, present, slug)
+    tmap, warn, holefilled = tagged_map(html, lo, hi, maxv, present, slug)
     defined, _, _ = _classify(threads, stems)
 
     gaps, overs = [], []
@@ -308,7 +321,7 @@ def coverage_for_fragment(slug, html, passage, threads=None, stems=None):
                              "translit": " ".join(_translit(w) for w in words),
                              "text": verse_text(html, cv[1])})
         for cv, roots in sorted(tmap.items()):
-            if root in roots and cv not in hits:
+            if root in roots and cv not in hits and cv not in holefilled:
                 overs.append({"thread": tid, "root": root,
                               "ch": cv[0], "v": cv[1]})
     return {"gaps": gaps, "overs": overs, "warnings": warn}
@@ -330,13 +343,13 @@ def stem_preview(stems_list, exclude_list=None):
     thread-delta report. Returns a list of {surface, translit, n, chapters},
     most frequent first, plus a `dropped` list for the exclude entries."""
     verses = load_greek()
-    raw = [strip_accents(s) for s in stems_list]
+    match = _compile_stems(stems_list)
     exclude = {strip_accents(x) for x in (exclude_list or [])}
     kept, dropped = {}, {}
     for ch, v, txt in verses:
         for w in GREEKWORD.findall(txt):
             sw = strip_accents(w)
-            if not any(st in sw for st in raw):
+            if not match(sw):
                 continue
             b = dropped if sw in exclude else kept
             e = b.setdefault(sw, {"surface": w, "translit": _translit(w),
@@ -360,10 +373,12 @@ def audit(only=None, stub_for=None, unit_slugs=None):
     stub_lines = []
     all_warn = []
 
-    tmaps = {}
+    tmaps, holefilled, seqs = {}, {}, {}
     for u, html in units:
         lo, hi = parse_range(u["passage"])
-        tmaps[u["slug"]], w = tagged_map(html, lo, hi, maxv, present, u["slug"])
+        tmaps[u["slug"]], w, holefilled[u["slug"]] = tagged_map(
+            html, lo, hi, maxv, present, u["slug"])
+        seqs[u["slug"]] = expected_seq(lo, hi, maxv, present)
         all_warn += w
 
     for tid in targets:
@@ -379,7 +394,8 @@ def audit(only=None, stub_for=None, unit_slugs=None):
                     gaps.append((u["slug"], cv, words,
                                  verse_text(html, cv[1])))
             for cv, roots in sorted(tmap.items()):
-                if root in roots and cv not in u_hits:
+                if (root in roots and cv not in u_hits
+                        and cv not in holefilled[u["slug"]]):
                     overs.append((u["slug"], cv))
 
         if not gaps and not overs:
@@ -393,11 +409,14 @@ def audit(only=None, stub_for=None, unit_slugs=None):
             total_gaps += 1
             wl = " ".join(words)
             tl = " ".join(_translit(w) for w in words)
-            print(f"      GAP  {slug}  {c}:{v}  ‹{wl}› ({tl})")
+            nth = 1 + sum(1 for q in seqs.get(slug, []) if q < (c, v) and q[1] == v)
+            nth_f = f' "nth": {nth},' if nth > 1 else ""
+            amb = "  ⚠ repeats across chapters — nth set" if nth > 1 else ""
+            print(f"      GAP  {slug}  {c}:{v}  ‹{wl}› ({tl}){amb}")
             if txt:
                 print(f"           “{txt[:96]}”")
             stub_lines.append((tid,
-                f'    {{ "unit": "{slug}", "verse": {v}, "text": "???", '
+                f'    {{ "unit": "{slug}", "verse": {v},{nth_f} "text": "???", '
                 f'"root": "{root}", "why": "{tl} {c}:{v}" }},'))
         for slug, (c, v) in overs:
             print(f"      OVER {slug}  {c}:{v}  tagged {root}, Greek has no "

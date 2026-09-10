@@ -1,20 +1,206 @@
 {
-  "_note": "Greek stems per tracked thread, for pipeline/audit_thread_coverage.py. Match is accent-insensitive, lowercase, SUBSTRING (augment/reduplication defeat prefix matching, e.g. akolouth- vs ēkolouth-). A word matches the thread if its accent-stripped form contains any string in `stems` and is not listed in `exclude`. `exclude`: accent-stripped whole word-forms that a stem catches but that belong to a different lexeme (homographs). `phrase: true`: a fixed multi-word title (son-of-man, apo-tote, ...) with no single stem — the audit skips it; its coverage is maintained by hand. A thread in data/threads.json with NO entry here is reported by the audit as undefined — add it one at a time, running the audit to see what each stem drags in and tuning `exclude`. Greek source: MatthewSBLGNT.txt at the repo root.",
+  "_note": "Greek stems per tracked thread, for pipeline/audit_thread_coverage.py. Match is accent-insensitive, lowercase, SUBSTRING (augment/reduplication defeat prefix matching, e.g. akolouth- vs ēkolouth-). A word matches the thread if its accent-stripped form (final sigma folded to medial) contains any string in `stems`, or — for a stem written with a leading `^` — begins with it (`^αφι` = word starts αφι), and is not listed in `exclude`. `exclude`: accent-stripped whole word-forms that a stem catches but that belong to a different lexeme (homographs). `phrase: true`: a fixed multi-word title (son-of-man, apo-tote, ...) with no single stem — the audit skips it; its coverage is maintained by hand. A thread in data/threads.json with NO entry here is reported by the audit as undefined — add it one at a time, running the audit to see what each stem drags in and tuning `exclude`. Greek source: MatthewSBLGNT.txt at the repo root.",
   "stems": {
-    "sin":        { "stems": ["αμαρτ", "ημαρτ"], "exclude": ["καταμαρτυρουσιν"] },
-    "fear":       { "stems": ["φοβ"] },
-    "sea":        { "stems": ["θαλασσ"] },
-    "follow":     { "stems": ["ακολουθ", "ηκολουθ"] },
-    "fish":       { "stems": ["αλιε"] },
-    "authority":  { "stems": ["εξουσ"], "exclude": ["συλλεξουσιν", "κατεξουσιαζουσιν"] },
-    "hand-over":  { "stems": ["παραδ", "παρεδ"], "exclude": ["παραδοσιν"] },
-    "cross":      { "stems": ["σταυρ"] },
-
-    "son-of-man":   { "phrase": true },
-    "son-of-david": { "phrase": true },
-    "law-prophets": { "phrase": true },
-    "apo-tote":     { "phrase": true },
-    "emmanuel":     { "phrase": true },
-    "little-faith": { "phrase": true }
+    "sin": {
+      "stems": [
+        "αμαρτ",
+        "ημαρτ"
+      ],
+      "exclude": [
+        "καταμαρτυρουσιν"
+      ]
+    },
+    "fear": {
+      "stems": [
+        "φοβ"
+      ]
+    },
+    "sea": {
+      "stems": [
+        "θαλασσ"
+      ]
+    },
+    "follow": {
+      "stems": [
+        "ακολουθ",
+        "ηκολουθ"
+      ]
+    },
+    "fish": {
+      "stems": [
+        "αλιε"
+      ]
+    },
+    "authority": {
+      "stems": [
+        "εξουσ"
+      ],
+      "exclude": [
+        "συλλεξουσιν",
+        "κατεξουσιαζουσιν"
+      ]
+    },
+    "hand-over": {
+      "stems": [
+        "παραδ",
+        "παρεδ"
+      ],
+      "exclude": [
+        "παραδοσιν"
+      ]
+    },
+    "cross": {
+      "stems": [
+        "σταυρ"
+      ]
+    },
+    "son-of-man": {
+      "phrase": true
+    },
+    "son-of-david": {
+      "phrase": true
+    },
+    "law-prophets": {
+      "phrase": true
+    },
+    "apo-tote": {
+      "phrase": true
+    },
+    "emmanuel": {
+      "phrase": true
+    },
+    "little-faith": {
+      "phrase": true
+    },
+    "build": {
+      "stems": [
+        "οικοδομ",
+        "ωκοδομ"
+      ]
+    },
+    "faith": {
+      "stems": [
+        "πιστ"
+      ],
+      "exclude": [
+        "επιστρεψω",
+        "επιστρεψωσιν",
+        "επιστραφητω",
+        "επιστρεψατω",
+        "ολιγοπιστοι",
+        "ολιγοπιστε",
+        "ολιγοπιστιαν"
+      ]
+    },
+    "foolish": {
+      "stems": [
+        "μωρ"
+      ]
+    },
+    "fringe": {
+      "stems": [
+        "κρασπεδ"
+      ]
+    },
+    "light": {
+      "stems": [
+        "φωσ",
+        "φωτ"
+      ],
+      "exclude": [
+        "ειληφωσ"
+      ]
+    },
+    "lose": {
+      "stems": [
+        "απολεσ",
+        "απολλ",
+        "απολωλ",
+        "απολη",
+        "απολου",
+        "απωλ"
+      ]
+    },
+    "mercy": {
+      "stems": [
+        "ελεη",
+        "ελεο"
+      ]
+    },
+    "nations": {
+      "stems": [
+        "εθν"
+      ],
+      "exclude": [
+        "τεθνηκασιν"
+      ]
+    },
+    "release": {
+      "stems": [
+        "^αφι",
+        "^αφε",
+        "^αφη"
+      ],
+      "exclude": [
+        "αφειλεν",
+        "αφεδρωνα"
+      ]
+    },
+    "rock": {
+      "stems": [
+        "πετρ"
+      ],
+      "exclude": [
+        "πετρον",
+        "πετροσ",
+        "πετρου",
+        "πετρω",
+        "επετρεψεν"
+      ]
+    },
+    "save": {
+      "stems": [
+        "σωθ",
+        "σωσε",
+        "σωσαι",
+        "σωσον",
+        "σωσω",
+        "σεσω"
+      ],
+      "exclude": [
+        "εσωθεν"
+      ]
+    },
+    "shake": {
+      "stems": [
+        "σεισμ"
+      ]
+    },
+    "throw": {
+      "stems": [
+        "βαλ",
+        "βλη"
+      ]
+    },
+    "torment": {
+      "stems": [
+        "βασαν"
+      ],
+      "exclude": [
+        "αναβιβασαντεσ"
+      ]
+    },
+    "urge": {
+      "stems": [
+        "παρακαλ",
+        "παρεκαλ",
+        "παρακλη"
+      ]
+    },
+    "wise": {
+      "stems": [
+        "φρονιμ"
+      ]
+    }
   }
 }

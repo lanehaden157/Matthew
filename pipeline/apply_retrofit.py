@@ -9,8 +9,9 @@ of what was done, and the safety net if port_artifact.py re-derives a fragment
                inner text (for design devices cut from the fragments but still
                present in source-artifacts/ — e.g. the .star motif in 2/3/7)
   add          wrap the first untagged occurrence of `text` in verse `verse`
-               (optional "cls": "rl" to add a root-linked, uncounted span;
-                default "r")
+               (optional "cls": "rl" for a root-linked, uncounted span, default
+                "r"; optional "nth": 2 to pick the 2nd .v block with that number
+                in a cross-chapter unit, e.g. 4:6 vs 3:6 in unit-03)
   retag        change data-root on the span wrapping `text` in `verse`
   unwrap       strip the data-root span around every `text` (whole unit)
   retag_word   whole unit: any `<span … data-root="from" …>TEXT</span> whose
@@ -32,14 +33,22 @@ SPEC = os.path.join(ROOT, "pipeline", "retrofit-tags.json")
 SPAN = r'<span class="r[l]?"[^>]*\bdata-root="%s"[^>]*>([^<]*)</span>'
 
 
-def vblock(html, verse):
-    m = re.search(r'<(?:div|p) class="v">(?:(?!</(?:div|p)>).)*?<span class="n">'
-                  + str(verse) + r'</span>.*?</(?:div|p)>', html, re.S)
-    return (m.start(), m.end()) if m else None
+def vblock(html, verse, nth=1):
+    """(start, end) of the nth .v block whose number is `verse`. `nth` (default
+    1) disambiguates cross-chapter units where a bare verse number repeats
+    (unit-03 has 3:6 and 4:6, both `<span class="n">6</span>`)."""
+    pat = re.compile(r'<(?:div|p) class="v">(?:(?!</(?:div|p)>).)*?<span class="n">'
+                     + re.escape(str(verse)) + r'</span>.*?</(?:div|p)>', re.S)
+    hits = list(pat.finditer(html))
+    if len(hits) < nth:
+        return None
+    m = hits[nth - 1]
+    return (m.start(), m.end())
 
 
 def apply_add(html, it):
-    span = vblock(html, it["verse"])
+    nth = it.get("nth", 1)
+    span = vblock(html, it["verse"], nth)
     if not span:
         return html, f"SKIP {it['unit']} v{it['verse']}: no .v block"
     a, b = span
@@ -60,7 +69,7 @@ def apply_add(html, it):
 
 
 def apply_retag(html, it):
-    span = vblock(html, it["verse"])
+    span = vblock(html, it["verse"], it.get("nth", 1))
     if not span:
         return html, f"SKIP {it['unit']} v{it['verse']}: no .v block"
     a, b = span
