@@ -12,17 +12,21 @@ Pipeline for a new unit N:
   3. read the unit-meta block, validate it against data/threads.json
   4. merge the unit into data/units.json  (built:true; assign a local hue to
      every declared root that is NOT a tracked thread, avoiding collisions)
-  5. write the threads.json DELTA to pipeline/out/thread-delta-0N.md for Lane:
+  5. merge threads.retro (fixes for EARLIER units) into retro-tags.json,
+     dry-checking each against its target fragment first
+  6. write the thread-delta report to pipeline/out/thread-delta-0N.md for Lane:
      - opens/payoffs that need a `tagged`/`status` flip, with a ready
        payoffs entry (incl. any `note` from the meta block)
-     - new-thread candidates, each with a stem preview (what its proposed
-       `stems` would match book-wide) and a ready thread-stems.json entry
+     - new-thread candidates, each with a stem preview and a ready
+       thread-stems.json entry
+     - fragment-structure warnings (pericope headings, aside.synoptic)
+     - the retro fixes that were merged
      - tracked-thread COVERAGE: every occurrence the Greek has in this
        passage that the fragment left untagged, as ready retrofit-tags lines
      threads.json is never written here; it is policy Lane owns.
-  6. re-inject a normalised meta block, write units/unit-0N.html
-  7. apply_retrofit (if retrofit-tags.json has entries for the unit),
-     then scan_occurrences + verify_occurrences
+  7. re-inject a normalised meta block, write units/unit-0N.html
+  8. apply_retrofit (retrofit-tags.json + retro-tags.json), then
+     scan_occurrences + verify_occurrences
 
 Nothing is committed. Review the fragment in the browser, apply the thread
 delta by hand if you accept it, then commit.
@@ -213,17 +217,64 @@ def thread_delta(meta, fragment_html=None, retrofit_applied=True):
                              f"`thread-stems.json` entry and run "
                              f"`audit_thread_coverage.py --forms {root}`")
 
+    retro = th.get("retro", []) or []
+    if retro:
+        lines += ["", "## Retro fixes for earlier units", "",
+                  "The porter dry-checks each against its target fragment, then "
+                  "merges the ones that apply into `pipeline/retro-tags.json` "
+                  "(a real port only — not `--dry`/`--src`):", ""]
+        for e in retro:
+            op = e.get("op", "add")
+            lines.append(f"- `{e.get('unit','?')}` {op} `{e.get('root', e.get('to','?'))}` "
+                         f"— {e.get('why','').strip()}")
+            body = {k: v for k, v in e.items() if k not in ("op", "why")}
+            lines.append(f"    `{json.dumps(body, ensure_ascii=False)}`")
+
     if fragment_html is not None:
+        _append_structure(lines, fragment_html)
         _append_coverage(lines, slug, fragment_html, meta.get("passage", ""),
                          retrofit_applied)
 
-    if not touched and not cands:
+    if not touched and not cands and not retro:
         lines.append("_no tracked threads opened or paid off in this unit, "
-                     "no candidates._")
+                     "no candidates, no retro fixes._")
 
     path = os.path.join(OUT, f"thread-delta-{n:02d}.md")
     open(path, "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return path
+
+
+def _append_structure(lines, html):
+    """Fragment-shape checks the style reference asks for (matthew_study_style
+    _reference.md §3-4). Warnings only — the port still writes the fragment."""
+    issues = []
+
+    pericopes = re.findall(r'<h3 class="pericope">(.*?)</h3>', html, re.S)
+    if not pericopes:
+        issues.append("no `<h3 class=\"pericope\">` headings — the translation "
+                      "should be divided into passage groups (style ref §3)")
+    for h in pericopes:
+        if not re.search(r'(?:·|&middot;)\s*\d+:\d+', h):
+            issues.append(f"pericope heading without a `· C:V` range: "
+                          f"“{re.sub(r'<[^>]+>', '', h).strip()[:50]}”")
+
+    for m in re.finditer(r'<h[1-4][^>]*class="(movement|panel|panelhead|sectionhead)"',
+                         html):
+        issues.append(f"heading uses the old `{m.group(1)}` class — new artifacts "
+                      "use `<h3 class=\"pericope\">` only (style ref §3)")
+
+    for m in re.finditer(r'<aside class="synoptic"([^>]*)>(.*?)</aside>', html, re.S):
+        attrs, inner = m.group(1), m.group(2)
+        if "data-anchor" not in attrs:
+            issues.append("`<aside class=\"synoptic\">` missing `data-anchor=\"C:V\"`")
+        if re.search(r'data-root=|class="rl?"', inner):
+            issues.append("`<aside class=\"synoptic\">` contains a tagged span — "
+                          "synoptic parallels are translit only, no `data-root` "
+                          "(style ref §4)")
+
+    if issues:
+        lines += ["", "## Fragment structure — fix in the artifact", ""]
+        lines += [f"- {i}" for i in issues]
 
 
 def _append_stem_preview(lines, root, cand):
@@ -291,6 +342,62 @@ def _append_coverage(lines, slug, html, passage, retrofit_applied=True):
 
 # --------------------------------------------------------------- retrofit + scan
 
+RETRO_FIELDS = {
+    "add": ("unit", "verse", "text", "root", "why", "nth", "cls"),
+    "retag": ("unit", "verse", "from", "to", "text", "why", "nth"),
+    "retag_word": ("unit", "from", "to", "match", "why"),
+    "untag_word": ("unit", "root", "match", "why"),
+    "unwrap": ("unit", "text", "root", "why"),
+    "strip_span": ("unit", "class", "why"),
+    "text": ("unit", "from", "to", "why"),
+}
+RETRO_SPEC = os.path.join(ROOT, "pipeline", "retro-tags.json")
+
+
+def merge_retro(meta, dry):
+    """Merge meta.threads.retro (fixes for earlier units) into the generated
+    pipeline/retro-tags.json, which apply_retrofit.py loads alongside the
+    hand-authored retrofit-tags.json. Each entry is dry-checked against its
+    target fragment first; ones that wouldn't apply cleanly are reported, not
+    written. Returns (n_written, [skip messages])."""
+    import apply_retrofit as ar
+    retro = (meta.get("threads", {}) or {}).get("retro", []) or []
+    if not retro:
+        return 0, []
+    rt = json.load(open(RETRO_SPEC, encoding="utf-8")) \
+        if os.path.exists(RETRO_SPEC) else {}
+    n = meta["unit"]
+    stamp = f"from Unit {n} port ({_today()})"
+    written, skips = 0, []
+    for e in retro:
+        op = e.get("op", "add")
+        entry = {k: e[k] for k in RETRO_FIELDS.get(op, ()) if k in e}
+        html = open(os.path.join(UNITS, e["unit"] + ".html"),
+                    encoding="utf-8").read()
+        _, msg = ar.FNS[op](html, entry)
+        if msg.startswith(("MISS", "SKIP")):
+            skips.append(f"{msg}  ({e.get('why','').strip()})")
+            continue
+        if msg.startswith("ok"):
+            continue                              # already tagged — nothing to record
+        arr = rt.setdefault(op, [])
+        if any(x == entry for x in arr):
+            continue
+        entry["_from"] = stamp
+        arr.append(entry)
+        written += 1
+    if (written or skips) and not dry:
+        json.dump(rt, open(RETRO_SPEC, "w", encoding="utf-8"), indent=2,
+                  ensure_ascii=False)
+        open(RETRO_SPEC, "a", encoding="utf-8").write("\n")
+    return written, skips
+
+
+def _today():
+    import datetime
+    return datetime.date.today().isoformat()
+
+
 def run_retrofit_and_scan():
     import subprocess
     env = dict(os.environ, PYTHONIOENCODING="utf-8")
@@ -348,12 +455,22 @@ def port_one(n, dry, src=None):
         delta = thread_delta(meta, fragment, retrofit_applied=False)
         print(f"[{why}] would write {dest}")
         print(f"[{why}] local hues: { {k: v['color'] for k, v in roots.items()} }")
+        nretro = len((meta.get("threads", {}) or {}).get("retro", []) or [])
+        if nretro:
+            print(f"[{why}] {nretro} retro fix(es) for earlier units — would be "
+                  f"merged into retrofit-tags.json (see the thread delta)")
         print(f"[{why}] thread delta -> {delta}  "
               f"(coverage checked before retrofit-tags.json is applied)")
         return
     open(dest, "w", encoding="utf-8").write(fragment)
     print(f"wrote {dest}")
     print(f"local hues: { {k: v['color'] for k, v in roots.items()} }")
+    written, skips = merge_retro(meta, dry=False)
+    if written:
+        print(f"merged {written} retro fix(es) for earlier units -> "
+              f"pipeline/retro-tags.json")
+    for s in skips:
+        print(f"  retro NOT merged — {s}")
     run_retrofit_and_scan()
     # coverage against the fragment as it now stands on disk (retrofit applied)
     final = open(dest, encoding="utf-8").read()

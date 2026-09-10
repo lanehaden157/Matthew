@@ -29,6 +29,9 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UNITS = os.path.join(ROOT, "units")
 SPEC = os.path.join(ROOT, "pipeline", "retrofit-tags.json")
+# generated: retro fixes for earlier units, merged in by port_artifact.py.
+# kept separate so retrofit-tags.json stays hand-authored and hand-formatted.
+RETRO_SPEC = os.path.join(ROOT, "pipeline", "retro-tags.json")
 
 SPAN = r'<span class="r[l]?"[^>]*\bdata-root="%s"[^>]*>([^<]*)</span>'
 
@@ -168,8 +171,18 @@ FNS = {"add": apply_add, "retag": apply_retag, "unwrap": apply_unwrap,
 ORDER = ["strip_span", "text", "untag_word", "retag_word", "unwrap", "retag", "add"]
 
 
-def main():
+def load_specs():
     spec = json.load(open(SPEC, encoding="utf-8"))
+    if os.path.exists(RETRO_SPEC):
+        retro = json.load(open(RETRO_SPEC, encoding="utf-8"))
+        for op, items in retro.items():
+            if isinstance(items, list):
+                spec.setdefault(op, []).extend(items)
+    return spec
+
+
+def main():
+    spec = load_specs()
     by_unit = {}
     for op in ORDER:
         for it in spec.get(op, []):

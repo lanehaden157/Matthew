@@ -46,8 +46,13 @@ threads-digest.md  generated from threads.json — the thread list the Claude.ai
                extract_units.py  Phase-1 batch normalizer. Done its job; now just
                                  a library port_artifact.py imports. NOT a build
                                  step — re-running it drops post-extract edits.
-               apply_retrofit.py replay retrofit-tags.json onto units/*.html
-                                 (idempotent; the edit record + safety net).
+               apply_retrofit.py replay retrofit-tags.json (+ generated
+                                 retro-tags.json) onto units/*.html (idempotent;
+                                 the edit record + safety net).
+               retro-tags.json   generated — fixes for EARLIER units that a
+                                 later unit's `threads.retro` meta block flagged;
+                                 port_artifact.py merges them here (dry-checked
+                                 first). Hand-authored edits go in retrofit-tags.
                refresh_meta.py   resync built fragments' meta blocks with the data.
                threads_digest.py threads.json → threads-digest.md.
                thread-stems.json + audit_thread_coverage.py  Greek-root coverage

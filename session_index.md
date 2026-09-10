@@ -96,5 +96,9 @@ Read this first. 3 lines max per session.
 - All 16 remaining stems folded in (research project). Coverage now 0 gaps
   across 24 threads: tagged throw (pre-opening + unit-07 `do` misfix, recolour),
   torment, hand-over (recolour off shared purple). occurrences 423 -> 437.
-- Phase 4 still TODO: `retro` fix-list in meta (auto-apply) + porter structure
-  checks (pericope headings, aside.synoptic).
+- Phase 4 DONE: `threads.retro[]` fix-list for earlier units (dry-checked,
+  merged into generated retro-tags.json, applied); porter structure checks
+  (pericope headings + ·C:V range, no old heading classes, aside.synoptic
+  data-anchor + translit-only). All 5 phases of the thread-add restructure
+  complete. Remaining: Phase 5 = update the style reference (repo-root
+  matthew_study_style_reference.md) to describe the new meta fields.

@@ -478,3 +478,18 @@
   - hand-over (paradidōmi): +2 (4:12, 5:25); recoloured #8a3c70 -> #0e8aa0
     off the shared purple so it can coexist with apo-tote in unit-04.
 - occurrences 423 -> 437.
+
+## 2026-09-10 (cont.) — Phase 4: retro fix-list + porter structure checks
+- unit_meta.py: threads.retro[] (fix-list for EARLIER units, retrofit-tags shape)
+  + note/stems already added in Phase 3. validate() checks each retro entry:
+  real slug, not this unit, valid op, and root resolves to a colour.
+- apply_retrofit.py: also loads pipeline/retro-tags.json (generated) alongside
+  retrofit-tags.json. load_specs() merges the op arrays.
+- port_artifact.py:
+  - merge_retro(): dry-checks each retro entry against its target fragment,
+    writes the ones that apply to retro-tags.json, reports MISS/SKIP ones.
+  - thread-delta report: new "Retro fixes" and "Fragment structure" sections.
+    Structure checks: pericope headings present + carry a ·C:V range, no old
+    movement/panel/panelhead/sectionhead heading classes, aside.synoptic has
+    data-anchor and contains no data-root/class=r spans.
+- CLAUDE.md + port_artifact docstring updated.

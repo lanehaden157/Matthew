@@ -19,15 +19,21 @@ Shape:
              colour. A root whose translit bundles a small word-family
              ("misthos / apechō / apodidōmi") is still one root, one slug.
   threads    { opens:[{id,ref,note?}], payoffs:[{id,ref,note?}],
-               candidates:[{root,why,stems?,exclude?}] }
+               candidates:[{root,why,stems?,exclude?}],
+               retro:[{unit,verse,text,root,why,nth?,op?}] }
              opens/payoffs reference threads.json ids; optional `note` is the
              one-line popover prose for that beat, echoed into the thread-delta
              report ready to paste. candidates PROPOSE new threads (never written
              automatically); optional `stems`/`exclude` are accent-stripped Greek
              for thread-stems.json if Lane promotes the candidate.
-             All of opens/payoffs/candidates are consumed by the porter's
-             thread-delta report and dropped — generate() rebuilds the block
-             from the data files, so none of this reaches the rendered page.
+             retro is a fix-list for EARLIER units in retrofit-tags.json shape
+             (op defaults to "add") — things the close reading of this unit
+             noticed about a prior one. The porter merges these into
+             retrofit-tags.json and applies them. `root` must be a tracked
+             thread or a declared root of the target unit.
+             All of opens/payoffs/candidates/retro are consumed by the porter
+             and dropped — generate() rebuilds the block from the data files, so
+             none of this reaches the rendered page.
 
 The block is inert (type="application/json", not executed) and invisible; the
 site injects fragments with innerHTML so it just sits in the DOM.
@@ -120,7 +126,7 @@ def validate(meta, threads_json=None):
                         "item is a plain root now")
 
     th = meta.get("threads", {}) or {}
-    for key in ("opens", "payoffs", "candidates"):
+    for key in ("opens", "payoffs", "candidates", "retro"):
         if key in th and not isinstance(th[key], list):
             errs.append(f"threads.{key} must be a list")
 
@@ -144,12 +150,47 @@ def validate(meta, threads_json=None):
 
     if threads_json is not None:
         ids = {t["id"] for t in threads_json["threads"]}
+        roots = {t["root"] for t in threads_json["threads"]}
         for key in ("opens", "payoffs"):
             for e in th.get(key, []) or []:
                 if e.get("id") not in ids:
                     errs.append(f"threads.{key}: '{e.get('id')}' is not a "
                                 "thread id in data/threads.json "
                                 "(use threads.candidates to propose a new one)")
+
+        this_slug = meta.get("slug") or f"unit-{meta.get('unit', 0):02d}"
+        try:
+            units_json = _load("units.json")
+        except Exception:
+            units_json = {"units": []}
+        unit_roots = {u["slug"]: set((u.get("roots") or {}).keys())
+                      for u in units_json["units"]}
+        VALID_OPS = {"add", "retag", "retag_word", "untag_word", "unwrap",
+                     "strip_span", "text"}
+        for i, e in enumerate(th.get("retro", []) or []):
+            w = f"threads.retro[{i}]"
+            slug = e.get("unit", "")
+            op = e.get("op", "add")
+            if not re.fullmatch(r"unit-\d{2}", slug):
+                errs.append(f"{w}: 'unit' must be a slug like 'unit-06'")
+            elif slug == this_slug:
+                errs.append(f"{w}: retro is for EARLIER units, not this one "
+                            f"({slug}) — tag this unit's own occurrences in the "
+                            "fragment or in retrofit-tags.json directly")
+            if not e.get("why"):
+                errs.append(f"{w}: missing 'why'")
+            if op not in VALID_OPS:
+                errs.append(f"{w}: op '{op}' not one of {sorted(VALID_OPS)}")
+            # the root(s) this entry resolves a span to must have a colour
+            targets = ([e.get("to")] if op in ("retag", "retag_word", "text")
+                       else [e.get("root")] if op in ("add", "unwrap", "untag_word")
+                       else [])
+            for r in filter(None, targets):
+                known = slug in unit_roots and r in unit_roots[slug]
+                if r not in roots and not known:
+                    errs.append(f"{w}: '{r}' is neither a tracked thread nor a "
+                                f"declared root of {slug} — a tag that resolves "
+                                "to no colour is a hard verify failure")
     return errs
 
 
