@@ -11,6 +11,9 @@ verse / over-tag).
     python pipeline/audit_thread_coverage.py sin follow  # just these
     python pipeline/audit_thread_coverage.py --stub sin  # print retrofit-tags
                                                          # lines for the gaps
+    python pipeline/audit_thread_coverage.py --forms mercy light
+                        # every word form those stems match, counts + chapters +
+                        # what `exclude` drops — sanity-check a stem set
 
 Informational: exits 0 even with gaps (units 11-28 don't exist yet, so most
 threads legitimately show gaps past unit 10).
@@ -169,6 +172,55 @@ def in_range(cv, lo, hi):
     return lo <= cv <= hi
 
 
+def forms_report(only=None):
+    """For each thread with a stem spec, list every distinct word form its
+    stems match across the whole book — counts, chapters, and which forms the
+    `exclude` list rules out. Use this to sanity-check a stem set (esp. one the
+    research project just handed back) before trusting the coverage audit."""
+    verses = load_greek()
+    threads = {t["id"]: t for t in json.load(
+        open(os.path.join(DATA, "threads.json"), encoding="utf-8"))["threads"]}
+    stems = json.load(open(os.path.join(os.path.dirname(__file__),
+                      "thread-stems.json"), encoding="utf-8"))["stems"]
+
+    want = set(only) if only else None
+    targets = [tid for tid in threads
+               if tid in stems and stems[tid].get("stems")
+               and (want is None or tid in want)]
+    if want:
+        for tid in want:
+            if tid not in targets:
+                print(f"  (no stem spec for '{tid}' in thread-stems.json)")
+
+    for tid in targets:
+        spec = stems[tid]
+        raw_stems = [strip_accents(s) for s in spec["stems"]]
+        exclude = {strip_accents(x) for x in spec.get("exclude", [])}
+        kept, dropped = {}, {}
+        for ch, v, txt in verses:
+            for w in GREEKWORD.findall(txt):
+                sw = strip_accents(w)
+                if not any(st in sw for st in raw_stems):
+                    continue
+                bucket = dropped if sw in exclude else kept
+                e = bucket.setdefault(sw, {"surface": w, "n": 0, "ch": set()})
+                e["n"] += 1
+                e["ch"].add(ch)
+        print(f"\n=== {tid}  stems: {', '.join(spec['stems'])}"
+              f"{'  exclude: ' + str(len(exclude)) if exclude else ''} ===")
+        for sw, e in sorted(kept.items(), key=lambda kv: -kv[1]["n"]):
+            chs = ",".join(str(c) for c in sorted(e["ch"]))
+            print(f"    {e['surface']:16} {_translit(e['surface']):18} "
+                  f"{e['n']:2}x  ch {chs}")
+        if dropped:
+            print("    — excluded —")
+            for sw, e in sorted(dropped.items(), key=lambda kv: -kv[1]["n"]):
+                chs = ",".join(str(c) for c in sorted(e["ch"]))
+                print(f"    {e['surface']:16} {_translit(e['surface']):18} "
+                      f"{e['n']:2}x  ch {chs}")
+    return 0
+
+
 def audit(only=None, stub_for=None):
     verses = load_greek()
     threads = {t["id"]: t for t in json.load(
@@ -259,8 +311,14 @@ def main():
         stub = args[i + 1:] if len(args) > i + 1 else []
         args = args[:i]
     check = "--check" in args
+    forms = "--forms" in args
     args = [a for a in args if not a.startswith("--")]
     only = args or None
+
+    if forms:
+        print("thread stem forms — every word each stem set matches\n")
+        sys.exit(forms_report(only=only))
+
     print("thread coverage audit — Greek vs. built fragments\n")
     gaps = audit(only=only, stub_for=stub)
     if check and gaps:
