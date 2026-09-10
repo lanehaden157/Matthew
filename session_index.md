@@ -68,3 +68,9 @@ Read this first. 3 lines max per session.
   (35 spans, `retrofit-tags.json`): flagship = `sea` ×4 in U8 storm, missing.
   New policy in threads.json `_note`; audit in pipeline/out/thread-retrofit-audit.md.
 - Colour ripple fixed: `release` thread #147a63→#0e6a3f, 8 local hexes nudged.
+
+## 2026-09-10 — desktop width + `sin` thread
+- css: `--maxw` 790px → 100% (kill desktop dead space; mobile untouched).
+- New tracked thread `sin` (hamartia/hamartanō, #8a4a5a): opens 1:21, payoff
+  9:2-6 + 26:28. Tagged 5 occ (U1 v21, U3 v6, U9 v2/5/6) via retrofit-tags.json.
+  threads.json + refresh_meta + scan/verify + digest all green.

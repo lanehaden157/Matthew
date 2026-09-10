@@ -474,6 +474,21 @@
       ],
       "total": 3
     },
+    "sin": {
+      "count": 1,
+      "verses": [
+        21
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…Jesus, for he himself will save his people from their ",
+          "hit": "sins",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
     "spirit": {
       "count": 2,
       "verses": [
@@ -999,6 +1014,21 @@
           "pre": "…t it now, for thus it is fitting for us to fulfill all ",
           "hit": "righteousness",
           "post": ".\" Then he permits him.…"
+        }
+      ],
+      "total": 1
+    },
+    "sin": {
+      "count": 1,
+      "verses": [
+        6
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…ersed in the Jordan river by him, confessing-out their ",
+          "hit": "sins",
+          "post": ".…"
         }
       ],
       "total": 1
@@ -3353,6 +3383,35 @@
         }
       ],
       "total": 4
+    },
+    "sin": {
+      "count": 3,
+      "verses": [
+        2,
+        5,
+        6
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…, said to the paralyzed man: \"Take heart, child — your ",
+          "hit": "sins",
+          "post": " are released.\"…"
+        },
+        {
+          "v": 5,
+          "pre": "…For which is easier — to say 'Your ",
+          "hit": "sins",
+          "post": " are released,' or to say 'Get up and walk'?…"
+        },
+        {
+          "v": 6,
+          "pre": "…that the Son of Man has authority on earth to release ",
+          "hit": "sins",
+          "post": "\" — then he says to the paralyzed man: \"Get up, pick up…"
+        }
+      ],
+      "total": 3
     },
     "son-of-david": {
       "count": 1,

@@ -520,6 +520,32 @@
       "note": "sōzō — 'he will save his people from their sins' (1:21) carries a heal/rescue double sense Matthew never forces apart, running to the irony at the cross."
     },
     {
+      "id": "sin",
+      "root": "sin",
+      "translit": "hamartia · hamartanō",
+      "gloss": "sin, failure to hit the mark",
+      "color": "#8a4a5a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 1,
+        "ref": "1:21"
+      },
+      "payoffs": [
+        {
+          "unit": 9,
+          "ref": "9:2, 5, 6",
+          "note": "'your sins are released' — the forgiveness the name promised, now enacted and then disputed"
+        },
+        {
+          "unit": 26,
+          "ref": "26:28",
+          "note": "the cup 'poured out for many for release of sins' — the thread's terminus"
+        }
+      ],
+      "note": "hamartia — named at 1:21 as the thing the whole rescue is aimed at ('he will save his people from their sins'), not political liberation. Runs through John's baptism of confession (3:6) to the paralytic (9:2-6), where releasing sins and healing a body are made the same act, and lands at the cup (26:28). Pairs with save (1:21) and release (aphiēmi, 9:2)."
+    },
+    {
       "id": "fringe",
       "root": "fringe",
       "translit": "kraspedon",

@@ -1,6 +1,6 @@
 # Cross-unit threads — canonical digest
 
-Generated from `data/threads.json` (version 1). 29 threads, 28 open.
+Generated from `data/threads.json` (version 1). 30 threads, 29 open.
 
 **This is the source of truth for thread tagging.** In a unit's artifact, a root that appears in the `id` column below is a *tracked thread*: tag it `<span class="r" data-root="<id>">…</span>` and list it under `threads.opens` / `threads.payoffs` in the unit-meta block. A root that is recurring but *not* here is unit-local — tag it with its own name and just list it in `roots`. To propose promoting a local root to a tracked thread, add it to `threads.candidates` with a one-line reason; Lane decides.
 
@@ -8,6 +8,7 @@ Generated from `data/threads.json` (version 1). 29 threads, 28 open.
 |---|---|---|---|---|---|---|
 | `emmanuel` | `with` | meta | with — God-with-us (meta / Emmanouēl at 1:23) | 1 (1:23) | 28 (28:20) | open |
 | `save` | `save` | sōzō | save / heal / rescue | 1 (1:21) | 9 (9:21-22) · 10 (10:22) · 14 (14:30) · 27 (27:42) | open |
+| `sin` | `sin` | hamartia · hamartanō | sin, failure to hit the mark | 1 (1:21) | 9 (9:2, 5, 6) · 26 (26:28) | open |
 | `apo-tote` | `apo-tote` | apo tote | "from that time" | 4 (4:17) | 17 (16:21) | open |
 | `fish` | `fish` | halieus | fisher | 4 (4:19) | 13 (13:47) | open |
 | `follow` | `follow` | akoloutheō | follow (after) | 4 (4:20) | 8 (8:23) · 9 (9:9, 19, 27) · 10 (10:38) | open |
@@ -61,6 +62,7 @@ Generated from `data/threads.json` (version 1). 29 threads, 28 open.
 - **`save`**: sōzō — 'he will save his people from their sins' (1:21) carries a heal/rescue double sense Matthew never forces apart, running to the irony at the cross.
 - **`sea`**: Sea/Galilee geography in Unit 4; in Unit 8 the sea becomes a chaos-and-authority stage.
 - **`shake`**: The 'great seismos' on the sea (8:24) is the same word as the earthquakes at the cross and the tomb.
+- **`sin`**: hamartia — named at 1:21 as the thing the whole rescue is aimed at ('he will save his people from their sins'), not political liberation. Runs through John's baptism of confession (3:6) to the paralytic (9:2-6), where releasing sins and healing a body are made the same act, and lands at the cup (26:28). Pairs with save (1:21) and release (aphiēmi, 9:2).
 - **`son-of-david`**: First direct address at 9:27, always a cry from the desperate and always tied to healing — the 'therapeutic Son of David' pattern. Runs to the entry and the temple (21:9, 15).
 - **`son-of-man`**: Daniel 7:13-14 — one like a son of man given everlasting dominion. Runs from 8:20 to the trial and the parousia.
 - **`throw`**: Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later.

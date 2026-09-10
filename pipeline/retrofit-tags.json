@@ -63,7 +63,14 @@
     { "unit": "unit-05", "verse": 22, "text": "Fool",         "root": "foolish",   "why": "More 5:22 'whoever says, Fool' — pre-opening moros" },
 
     { "unit": "unit-02", "verse": 18, "text": "comforted",    "root": "urge",      "why": "paraklethenai 2:18 'she would not be comforted' — pre-opening parakaleo" },
-    { "unit": "unit-05", "verse": 4,  "text": "comforted",    "root": "urge",      "why": "paraklethesontai 5:4 'they shall be comforted'" }
+    { "unit": "unit-05", "verse": 4,  "text": "comforted",    "root": "urge",      "why": "paraklethesontai 5:4 'they shall be comforted'" },
+
+    { "_c": "--- sin thread (hamartia/hamartano), new tracked thread 2026-09-10. opens 1:21, payoff 9:2-6. Every hamartia occurrence in Matthew's running text in the built units." },
+    { "unit": "unit-01", "verse": 21, "text": "sins",          "root": "sin",       "why": "hamartion 1:21 'save his people from their sins' — the thread opens" },
+    { "unit": "unit-03", "verse": 6,  "text": "sins",          "root": "sin",       "why": "hamartias 3:6 'confessing-out their sins'" },
+    { "unit": "unit-09", "verse": 2,  "text": "sins",          "root": "sin",       "why": "hamartiai 9:2 'your sins are released'" },
+    { "unit": "unit-09", "verse": 5,  "text": "sins",          "root": "sin",       "why": "hamartiai 9:5 'Your sins are released'" },
+    { "unit": "unit-09", "verse": 6,  "text": "sins",          "root": "sin",       "why": "hamartias 9:6 'authority on earth to release sins'" }
   ],
 
   "retag": [

@@ -435,3 +435,7 @@
 - css/styles.css: --maxw 900px -> 1150px (further cut of desktop dead space).
 - css/styles.css: --maxw -> 100% (full-monitor width; margins now just the
   26px side padding on .wrap/.topbar/.unit-pager). Mobile unchanged.
+- data/threads.json: added `sin` thread (hamartia/hamartano, #8a4a5a, opens
+  1:21, payoffs 9:2-6 and 26:28). pipeline/retrofit-tags.json: +5 add entries
+  tagging sins at U1 v21, U3 v6, U9 v2/5/6. Regenerated occurrences.json,
+  threads-digest.md; refresh_meta updated U1/U9 meta blocks. verify green.
