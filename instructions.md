@@ -20,6 +20,8 @@ name where readings diverge and why; don't let one silently displace the other.
 
 - **`Matt.txt`** — Greek (SBLGNT), primary source. Lines: `Matt C:V\t<text>`.
   Extract a passage: `sed -n '/^Matt 7:1\t/,/^Matt 8:1\t/p' Matt.txt | sed '$d'`
+  (identical text lives in the site repo as `MatthewSBLGNT.txt`, which the
+  coverage audit reads — keep the two in sync).
 - **`MatthewNASB.txt`** — NASB. Strip injected page markers:
   `sed -E 's/Gospel of Matthew NASB Page \| [0-9]+//g'`
 - **`matthew.pdf`** — Constable's notes (plain text despite the extension; use `grep -a` /
@@ -56,9 +58,12 @@ dialogue above, tensions left open; devotional weight noted lightly and left to 
 Search the web throughout.
 
 As roots and structures surface, check them against `threads-digest.md`: when a tracked
-thread opens or pays off in this passage, name it and close the loop. If a root recurs
-across units but isn't a tracked thread yet, flag it as a candidate — Lane decides whether
-to promote it; don't start treating it as a thread on your own.
+thread opens or pays off in this passage, name it and close the loop — and note the
+one-line popover sentence you'd want on that beat (it goes in the meta block's `note`
+field, pass 3). If a root recurs across units but isn't a tracked thread yet, flag it as a
+candidate — Lane decides whether to promote it; don't start treating it as a thread on
+your own. If the close reading turns up a **missed or wrong tag in an earlier unit**, note
+that too — it becomes a `threads.retro` entry in pass 3, not a "we should revisit" aside.
 
 **3. HTML translation artifact** — only after the prose is done and Lane confirms. A fresh,
 wooden-but-readable translation from the Greek; creative, intentional English glosses are
@@ -74,11 +79,20 @@ Follow `matthew_study_style_reference.md` in full. The artifact must be:
     **one Greek lexical root** (its stem and same-stem forms, joined by `·` in `translit`) —
     never a theme, a formula, or a bundle of different words. Split a "wise/foolish"-type
     pair into two roots; drop a one-passage wordplay. (§1)
-  - `threads` — `opens` / `payoffs` reference `threads-digest.md` ids; `candidates` propose
-    new threads with a one-line reason.
+  - `threads` — `{opens, payoffs, candidates, retro}` (§2):
+    - `opens` / `payoffs` reference `threads-digest.md` ids, each `{id, ref, note?}` —
+      `note` is the one-line popover prose for that beat.
+    - `candidates` propose new threads: `{root, why, stems?, exclude?}` — add the
+      accent-stripped Greek `stems` when you can (`^αφι` for a word-start match).
+    - `retro` — fixes for **earlier** units in `retrofit-tags.json` shape
+      (`{unit, verse, text, root, why}`, or `op:"retag"` with `from`/`to`).
 - **Colour-coded only via `<span class="r" data-root="X">` / `class="rl"`** — no class names
   like `beget`, no `--c-*` vars, no inline `style`. Tracked threads use their digest id;
-  other roots use any `[a-z0-9-]` slug and the site assigns the hue.
+  other roots use any `[a-z0-9-]` slug and the site assigns the hue. **Tag every
+  morphological occurrence of a tracked thread's Greek root** — including where the English
+  renders it with a different word (ἁμαρτωλός → "sinner" still tags `sin`). The tag follows
+  the lexeme, not the gloss. The site's `pipeline/audit_thread_coverage.py` cross-checks
+  every thread against the Greek and reports misses, so completeness here saves a fix later.
 - **Transliteration only** — zero Greek/Hebrew script in masthead, legend, verses, compare
   boxes, notes.
 - **`ouranos` → "sky / skies"** in the study's own wording (NASB/Hart/Lattimore quotations
@@ -88,8 +102,12 @@ Follow `matthew_study_style_reference.md` in full. The artifact must be:
 - Run the §4 checklist. Save to `/mnt/user-data/outputs/matthew_NN_translation.html`
   (zero-padded), then `present_files`.
 
-The artifact renders unstyled in this chat — expected. It's verified in the browser after
-Lane runs `python pipeline/port_artifact.py NN` on the site side.
+The artifact renders unstyled in this chat — expected. On the site side Lane runs
+`python pipeline/port_artifact.py NN`, which writes a thread-delta report
+(`pipeline/out/thread-delta-NN.md`): ready `threads.json` entries, new-thread stem
+previews, fragment-structure warnings, and any tracked-thread occurrences the fragment
+left untagged. Fewer items in that report = a cleaner artifact. Then it's verified in the
+browser.
 
 ## Scope
 
