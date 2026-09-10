@@ -3,6 +3,9 @@
 Runs AFTER extract_units.py (which regenerates fragments from source and would
 otherwise wipe these). Idempotent.
 
+  strip_span   whole unit: unwrap every <span class="CLS">…</span>, keeping the
+               inner text (for design devices cut from the fragments but still
+               present in source-artifacts/)
   add          wrap the first untagged occurrence of `text` in verse `verse`
                (optional "cls": "rl" to add a root-linked, uncounted span;
                 default "r")
@@ -123,6 +126,18 @@ def apply_text(html, it):
                  if n else f"MISS {it['unit']} text: '{it['from']}' not found")
 
 
+def apply_strip_span(html, it):
+    """Unwrap every <span class="CLS">…</span> in the unit, keeping inner text.
+    For decorative wrappers removed from the design but still in source-artifacts
+    (e.g. the cut `.star` motif in units 2/3/7) — so re-running extract_units
+    doesn't silently resurrect them."""
+    cls = re.escape(it["class"])
+    pat = re.compile(r'<span class="' + cls + r'">(.*?)</span>', re.S)
+    new, n = pat.subn(r"\1", html)
+    return new, (f"STRIP {it['unit']}: {n}x span.{it['class']}"
+                 if n else f"ok   {it['unit']} strip span.{it['class']}: none")
+
+
 def _first_outside_tags(seg, pat):
     depth = 0
     for k, ch in enumerate(seg):
@@ -138,8 +153,8 @@ def _first_outside_tags(seg, pat):
 
 FNS = {"add": apply_add, "retag": apply_retag, "unwrap": apply_unwrap,
        "retag_word": apply_retag_word, "untag_word": apply_untag_word,
-       "text": apply_text}
-ORDER = ["text", "untag_word", "retag_word", "unwrap", "retag", "add"]
+       "text": apply_text, "strip_span": apply_strip_span}
+ORDER = ["strip_span", "text", "untag_word", "retag_word", "unwrap", "retag", "add"]
 
 
 def main():

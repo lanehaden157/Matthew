@@ -1,0 +1,20 @@
+{
+  "_note": "Greek stems per tracked thread, for pipeline/audit_thread_coverage.py. Match is accent-insensitive, lowercase, SUBSTRING (augment/reduplication defeat prefix matching, e.g. akolouth- vs ēkolouth-). A word matches the thread if its accent-stripped form contains any string in `stems` and is not listed in `exclude`. `exclude`: accent-stripped whole word-forms that a stem catches but that belong to a different lexeme (homographs). `phrase: true`: a fixed multi-word title (son-of-man, apo-tote, ...) with no single stem — the audit skips it; its coverage is maintained by hand. A thread in data/threads.json with NO entry here is reported by the audit as undefined — add it one at a time, running the audit to see what each stem drags in and tuning `exclude`. Greek source: MatthewSBLGNT.txt at the repo root.",
+  "stems": {
+    "sin":        { "stems": ["αμαρτ", "ημαρτ"], "exclude": ["καταμαρτυρουσιν"] },
+    "fear":       { "stems": ["φοβ"] },
+    "sea":        { "stems": ["θαλασσ"] },
+    "follow":     { "stems": ["ακολουθ", "ηκολουθ"] },
+    "fish":       { "stems": ["αλιε"] },
+    "authority":  { "stems": ["εξουσ"], "exclude": ["συλλεξουσιν", "κατεξουσιαζουσιν"] },
+    "hand-over":  { "stems": ["παραδ", "παρεδ"], "exclude": ["παραδοσιν"] },
+    "cross":      { "stems": ["σταυρ"] },
+
+    "son-of-man":   { "phrase": true },
+    "son-of-david": { "phrase": true },
+    "law-prophets": { "phrase": true },
+    "apo-tote":     { "phrase": true },
+    "emmanuel":     { "phrase": true },
+    "little-faith": { "phrase": true }
+  }
+}

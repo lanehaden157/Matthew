@@ -85,9 +85,7 @@ GitHub Pages serves from a subpath and root-absolute paths 404 in production.
 **Persistence:** `localStorage` only (reading progress, notes), versioned for
 future migration. No backend, no accounts.
 
-**Transliteration only** — no native Greek or Hebrew script anywhere: not in the
-fragments, and not in `data/*.json` translit/gloss fields either (they render in
-the rebuilt legend and popovers). Use Latin morphology shorthand (`gen-`, `pist-`).
+**Transliteration only** — no native Greek or Hebrew script in the final rendered unit.html page. Use Latin morphology shorthand (`gen-`, `pist-`).
 
 **Desktop and mobile are both first-class.** Every phase ships responsive. Hover
 affordances degrade to tap; everything else works and reads at ~375px. No
@@ -97,10 +95,11 @@ horizontal page scroll; wide diagrams/tables scroll in their own container.
 
 ## Source texts
 
-Greek (SBLGNT), NASB, Constable, Bible Project notes, Mark/Luke/John comparisons
-live outside this repo (Claude.ai project, and
-`OneDrive/Documents/Personal/Biblical Texts/Gospels/`). The `/units` fragments are
-the *output* of that research, not the research itself.
+NASB, Constable, Bible Project notes, Mark/Luke/John comparisons
+live outside this repo (Claude.ai project) The `/units` fragments are
+the *output* of that research, not the research itself. 
+
+Greek (SBLGNT) lives in the repo for easy access
 
 ## Session Context System (Lane's global convention)
 

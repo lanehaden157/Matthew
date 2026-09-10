@@ -1,5 +1,11 @@
 {
-  "_note": "Hand-authored fragment edits applied after extract_units. Ops: add / retag (per-verse), unwrap / retag_word / untag_word / text (whole-unit). See apply_retrofit.py. NOTE (2026-09-09): the `.star` gold-italic 'motif' device was removed from units 2/3/7 by direct fragment edit (not encoded here). It still lives in source-artifacts/, so if extract_units.py is ever re-run, strip `<span class=\"star\">…</span>` wrappers from units 2/3/7 again and drop the '.star' rule from css/styles.css.",
+  "_note": "Hand-authored fragment edits applied after extract_units. Ops: strip_span / text / untag_word / retag_word / unwrap (whole-unit), retag / add (per-verse). See apply_retrofit.py. The cut `.star` motif device (units 2/3/7) is now encoded as strip_span below, so build.py / extract_units is safe to re-run.",
+
+  "strip_span": [
+    { "unit": "unit-02", "class": "star", "why": "gold-italic 'motif' device, cut from the design 2026-09-09; still in source-artifacts/" },
+    { "unit": "unit-03", "class": "star", "why": "same — cut 2026-09-09" },
+    { "unit": "unit-07", "class": "star", "why": "same — cut 2026-09-09" }
+  ],
 
   "add": [
     { "unit": "unit-04", "verse": 15, "text": "nations",              "root": "nations",      "why": "Galilee of the nations 4:15" },
@@ -65,12 +71,15 @@
     { "unit": "unit-02", "verse": 18, "text": "comforted",    "root": "urge",      "why": "paraklethenai 2:18 'she would not be comforted' — pre-opening parakaleo" },
     { "unit": "unit-05", "verse": 4,  "text": "comforted",    "root": "urge",      "why": "paraklethesontai 5:4 'they shall be comforted'" },
 
-    { "_c": "--- sin thread (hamartia/hamartano), new tracked thread 2026-09-10. opens 1:21, payoff 9:2-6. Every hamartia occurrence in Matthew's running text in the built units." },
-    { "unit": "unit-01", "verse": 21, "text": "sins",          "root": "sin",       "why": "hamartion 1:21 'save his people from their sins' — the thread opens" },
+    { "_c": "--- sin thread (hamartia/hamartōlos), new tracked thread 2026-09-10. opens 1:21, payoff 9:2-13. Every ἁμαρτ- occurrence in Matthew's running text in the built units (found by pipeline/audit_thread_coverage.py — hamartōlos 'sinner' shares the root)." },
+    { "unit": "unit-01", "verse": 21, "text": "sins",          "root": "sin",       "why": "hamartiōn 1:21 'save his people from their sins' — the thread opens" },
     { "unit": "unit-03", "verse": 6,  "text": "sins",          "root": "sin",       "why": "hamartias 3:6 'confessing-out their sins'" },
     { "unit": "unit-09", "verse": 2,  "text": "sins",          "root": "sin",       "why": "hamartiai 9:2 'your sins are released'" },
     { "unit": "unit-09", "verse": 5,  "text": "sins",          "root": "sin",       "why": "hamartiai 9:5 'Your sins are released'" },
-    { "unit": "unit-09", "verse": 6,  "text": "sins",          "root": "sin",       "why": "hamartias 9:6 'authority on earth to release sins'" }
+    { "unit": "unit-09", "verse": 6,  "text": "sins",          "root": "sin",       "why": "hamartias 9:6 'authority on earth to release sins'" },
+    { "unit": "unit-09", "verse": 10, "text": "sinners",       "root": "sin",       "why": "hamartōloi 9:10 'many tax collectors and sinners came'" },
+    { "unit": "unit-09", "verse": 11, "text": "sinners",       "root": "sin",       "why": "hamartōlōn 9:11 'why does your teacher eat with tax collectors and sinners'" },
+    { "unit": "unit-09", "verse": 13, "text": "sinners",       "root": "sin",       "why": "hamartōlous 9:13 'I did not come to call the upright, but sinners' — Hosea 6:6 verse, pairs with mercy" }
   ],
 
   "retag": [

@@ -439,3 +439,17 @@
   1:21, payoffs 9:2-6 and 26:28). pipeline/retrofit-tags.json: +5 add entries
   tagging sins at U1 v21, U3 v6, U9 v2/5/6. Regenerated occurrences.json,
   threads-digest.md; refresh_meta updated U1/U9 meta blocks. verify green.
+
+## 2026-09-10 (cont.) — thread-add tooling
+- pipeline/audit_thread_coverage.py (new): Greek-vs-fragment thread coverage
+  audit. Reads MatthewSBLGNT.txt (repo root, git-ignored). `--stub <id>` emits
+  retrofit-tags.json lines for the gaps. Accent-insensitive substring match.
+- pipeline/thread-stems.json (new): Greek stems + exclude lists per thread.
+  Seeded: sin, fear, sea, follow, fish, authority, hand-over, cross. 16 undefined.
+- data/threads.json + retrofit-tags.json: sin thread extended to ἁμαρτωλός
+  "sinner" — tagged U9 9:10, 9:11, 9:13 (the audit found these; 9:13 is the
+  Hosea 6:6 verse). sin payoff ref 9:2-6 -> 9:2-6, 10-13.
+- pipeline/apply_retrofit.py: new `strip_span` op (whole-unit span unwrap).
+  retrofit-tags.json: 3 strip_span entries for the cut `.star` device (U2/3/7).
+- .gitignore: /MatthewSBLGNT.txt (source text, outside-repo by policy).
+- CLAUDE.md: documented the add-a-thread workflow + build.py danger.

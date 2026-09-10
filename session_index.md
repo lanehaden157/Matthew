@@ -74,3 +74,14 @@ Read this first. 3 lines max per session.
 - New tracked thread `sin` (hamartia/hamartanō, #8a4a5a): opens 1:21, payoff
   9:2-6 + 26:28. Tagged 5 occ (U1 v21, U3 v6, U9 v2/5/6) via retrofit-tags.json.
   threads.json + refresh_meta + scan/verify + digest all green.
+
+## 2026-09-10 (cont.) — thread-add tooling
+- `audit_thread_coverage.py` + `thread-stems.json`: scans MatthewSBLGNT.txt
+  (git-ignored, repo root) for every morphological occ. of a thread's Greek
+  root, flags built-unit gaps. Caught 3 missed `sin` (9:10/11/13, ἁμαρτωλός
+  "sinner") — now fixed. Seeded stems for 8 threads; 16 still undefined.
+- `strip_span` op added to apply_retrofit (`.star` device now encoded).
+- Known: `hand-over` has 2 pre-opening gaps (4:12, 5:25) — deferred, needs a
+  distinct colour (currently shares #8a3c70 with apo-tote → same-unit collision).
+- build.py stays unsafe to run casually (extract_units drops direct edits) —
+  documented in CLAUDE.md.
