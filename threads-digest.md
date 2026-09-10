@@ -26,7 +26,7 @@ Generated from `data/threads.json` (version 1). 30 threads, 29 open.
 | `faith` | `faith` | pistis · pisteuō | trust, faith | 8 (8:10) | 9 (9:2, 22, 29) · 15 (15:28) · 17 (17:20) · 21 (21:21) | open |
 | `shake` | `shake` | seismos | shaking / earthquake / storm | 8 (8:24) | 27 (27:51-54) · 28 (28:2) | open |
 | `son-of-man` | `son-of-man` | ho huios tou anthrōpou | the Son of Man | 8 (8:20) | 9 (9:6) · 10 (10:23) · 17 (16:13, 16:27) · 17 (17:9, 17:22) · 19 (19:28) · 20 (20:18, 20:28) · 24 (24:27-44) · 25 (25:31) · 26 (26:24, 26:64) | open |
-| `throw` | `throw` | ballō | throw / cast out | 8 (8:6) | 9 (9:2, 16-17, 25, 33-34) · 10 (9:38; 10:1, 8, 34) | open |
+| `throw` | `throw` | ballō | throw / cast / put / pour / clothe (broad range) | 8 (8:6) | 9 (9:2, 16-17, 25, 33-34) · 10 (9:38; 10:1, 8, 34) | open |
 | `torment` | `torment` | basanizō | torment | 8 (8:6) | 8 (8:29) | open |
 | `urge` | `urge` | parakaleō | urge / entreat / call alongside | 8 (8:5) | 8 (8:31-34) | open |
 | `fringe` | `fringe` | kraspedon | tassel / hem | 9 (9:20) | 14 (14:36) · 23 (23:5) | open |

@@ -87,3 +87,14 @@ Read this first. 3 lines max per session.
   port_artifact-only library), added the coverage audit as an advisory step.
   Fragments are the source of truth; build.py replays retrofit + regenerates
   data only. Verified idempotent.
+
+## 2026-09-10 (cont. 2) — thread-add tooling phases 1-3 + stems
+- Phase 1: `--forms` mode + research-prompts.md (stems prompt). Phase 2: exact
+  chapter/verse alignment from the Greek + `--unit`/coverage_for_unit. Phase 3:
+  new meta fields (opens/payoffs `note`, candidate `stems`) + richer
+  thread-delta report (coverage gaps, stem previews) + `port_artifact --src`.
+- All 16 remaining stems folded in (research project). Coverage now 0 gaps
+  across 24 threads: tagged throw (pre-opening + unit-07 `do` misfix, recolour),
+  torment, hand-over (recolour off shared purple). occurrences 423 -> 437.
+- Phase 4 still TODO: `retro` fix-list in meta (auto-apply) + porter structure
+  checks (pericope headings, aside.synoptic).

@@ -1156,6 +1156,28 @@
       ],
       "total": 3
     },
+    "throw": {
+      "count": 2,
+      "verses": [
+        6,
+        10
+      ],
+      "hits": [
+        {
+          "v": 10,
+          "pre": "…so every tree not producing good fruit is cut down and ",
+          "hit": "thrown",
+          "post": " into fire.…"
+        },
+        {
+          "v": 6,
+          "pre": "…and says to him, \"If you are Son of God, ",
+          "hit": "throw",
+          "post": " yourself down; for it stands written: 'He will command…"
+        }
+      ],
+      "total": 2
+    },
     "wilderness": {
       "count": 3,
       "verses": [
@@ -1288,6 +1310,21 @@
         }
       ],
       "total": 4
+    },
+    "hand-over": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…Now, having heard that Iōannēs was ",
+          "hit": "handed over",
+          "post": ", he withdrew into the Galilee.…"
+        }
+      ],
+      "total": 1
     },
     "kingdom": {
       "count": 2,
@@ -1441,6 +1478,36 @@
       ],
       "total": 2
     },
+    "throw": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…Simōn the one called Petros, and Andreas his brother — ",
+          "hit": "casting",
+          "post": " a cast-net into the sea; for they were fishers.…"
+        }
+      ],
+      "total": 1
+    },
+    "torment": {
+      "count": 1,
+      "verses": [
+        24
+      ],
+      "hits": [
+        {
+          "v": 24,
+          "pre": "…im all those having it badly with various diseases and ",
+          "hit": "torments",
+          "post": " — demon-oppressed and moon-struck and paralytic — and…"
+        }
+      ],
+      "total": 1
+    },
     "withdraw": {
       "count": 1,
       "verses": [
@@ -1573,6 +1640,21 @@
         }
       ],
       "total": 3
+    },
+    "hand-over": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…while you are with him on the way, lest the adversary ",
+          "hit": "hand you over",
+          "post": " to the judge, and the judge to the officer, and you be…"
+        }
+      ],
+      "total": 1
     },
     "kingdom": {
       "count": 5,
@@ -1761,6 +1843,48 @@
         }
       ],
       "total": 3
+    },
+    "throw": {
+      "count": 5,
+      "verses": [
+        13,
+        25,
+        29,
+        30
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…ted? It is strong for nothing any longer except, being ",
+          "hit": "thrown out",
+          "post": ", to be trampled underfoot by men.…"
+        },
+        {
+          "v": 25,
+          "pre": "…to the judge, and the judge to the officer, and you be ",
+          "hit": "thrown",
+          "post": " into prison.…"
+        },
+        {
+          "v": 29,
+          "pre": "…And if your right eye trips you up, tear it out and ",
+          "hit": "throw",
+          "post": " it from you; for it is better for you that one of your…"
+        },
+        {
+          "v": 29,
+          "pre": "…ne of your members perish than that your whole body be ",
+          "hit": "thrown",
+          "post": " into Gehenna.…"
+        },
+        {
+          "v": 30,
+          "pre": "…And if your right hand trips you up, cut it off and ",
+          "hit": "throw",
+          "post": " it from you; for it is better for you that one of your…"
+        }
+      ],
+      "total": 5
     },
     "urge": {
       "count": 1,
@@ -2174,6 +2298,35 @@
       ],
       "total": 1
     },
+    "throw": {
+      "count": 3,
+      "verses": [
+        29,
+        30,
+        31
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…ay to y’all that not even Solomon in all his glory was ",
+          "hit": "wrapped",
+          "post": " like one of these.…"
+        },
+        {
+          "v": 30,
+          "pre": "…othes the grass of the field — here today and tomorrow ",
+          "hit": "thrown",
+          "post": " into an oven — will he not much more clothe y’all, y’a…"
+        },
+        {
+          "v": 31,
+          "pre": "…ill we eat?’ or ‘What will we drink?’ or ‘What will we ",
+          "hit": "wrap ourselves in",
+          "post": "?’…"
+        }
+      ],
+      "total": 3
+    },
     "treasure": {
       "count": 5,
       "verses": [
@@ -2313,11 +2466,8 @@
       "total": 2
     },
     "do": {
-      "count": 17,
+      "count": 11,
       "verses": [
-        4,
-        5,
-        6,
         12,
         17,
         18,
@@ -2328,30 +2478,6 @@
         26
       ],
       "hits": [
-        {
-          "v": 4,
-          "pre": "…Or how will you say to your brother, \"Let me ",
-          "hit": "throw out",
-          "post": " the wood-chip from your eye\" — and look, the roof-beam…"
-        },
-        {
-          "v": 5,
-          "pre": "…Mask-wearer! ",
-          "hit": "Throw out",
-          "post": " the roof-beam from your own eye first, and then you'll…"
-        },
-        {
-          "v": 5,
-          "pre": "…ur own eye first, and then you'll see clear through to ",
-          "hit": "throw out",
-          "post": " the wood-chip from your brother's eye.…"
-        },
-        {
-          "v": 6,
-          "pre": "…Don't y'all give the holy thing to the dogs, and don't ",
-          "hit": "throw",
-          "post": " y'all's pearls out in front of the pigs — or else they…"
-        },
         {
           "v": 12,
           "pre": "…o then — everything, however much y'all want people to ",
@@ -2395,22 +2521,10 @@
           "post": " fine fruit is chopped down and thrown into fire.…"
         },
         {
-          "v": 19,
-          "pre": "…Every tree not making fine fruit is chopped down and ",
-          "hit": "thrown",
-          "post": " into fire.…"
-        },
-        {
           "v": 21,
           "pre": "…will come into the kingdom of the skies — but the one ",
           "hit": "doing",
           "post": " the will of my Father, the one in the skies.…"
-        },
-        {
-          "v": 22,
-          "pre": "…er! Didn't we prophesy by your name — and by your name ",
-          "hit": "throw out",
-          "post": " demons — and by your name make many acts of power?\"…"
         },
         {
           "v": 22,
@@ -2431,7 +2545,7 @@
           "post": " them will be likened to a stupid man, who built his ho…"
         }
       ],
-      "total": 17
+      "total": 11
     },
     "enter": {
       "count": 3,
@@ -2739,6 +2853,55 @@
         }
       ],
       "total": 2
+    },
+    "throw": {
+      "count": 6,
+      "verses": [
+        4,
+        5,
+        6,
+        19,
+        22
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…Or how will you say to your brother, \"Let me ",
+          "hit": "throw out",
+          "post": " the wood-chip from your eye\" — and look, the roof-beam…"
+        },
+        {
+          "v": 5,
+          "pre": "…Mask-wearer! ",
+          "hit": "Throw out",
+          "post": " the roof-beam from your own eye first, and then you'll…"
+        },
+        {
+          "v": 5,
+          "pre": "…ur own eye first, and then you'll see clear through to ",
+          "hit": "throw out",
+          "post": " the wood-chip from your brother's eye.…"
+        },
+        {
+          "v": 6,
+          "pre": "…Don't y'all give the holy thing to the dogs, and don't ",
+          "hit": "throw",
+          "post": " y'all's pearls out in front of the pigs — or else they…"
+        },
+        {
+          "v": 19,
+          "pre": "…Every tree not making fine fruit is chopped down and ",
+          "hit": "thrown",
+          "post": " into fire.…"
+        },
+        {
+          "v": 22,
+          "pre": "…er! Didn't we prophesy by your name — and by your name ",
+          "hit": "throw out",
+          "post": " demons — and by your name make many acts of power?\"…"
+        }
+      ],
+      "total": 6
     },
     "way": {
       "count": 2,

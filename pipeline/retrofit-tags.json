@@ -79,7 +79,27 @@
     { "unit": "unit-09", "verse": 6,  "text": "sins",          "root": "sin",       "why": "hamartias 9:6 'authority on earth to release sins'" },
     { "unit": "unit-09", "verse": 10, "text": "sinners",       "root": "sin",       "why": "hamartōloi 9:10 'many tax collectors and sinners came'" },
     { "unit": "unit-09", "verse": 11, "text": "sinners",       "root": "sin",       "why": "hamartōlōn 9:11 'why does your teacher eat with tax collectors and sinners'" },
-    { "unit": "unit-09", "verse": 13, "text": "sinners",       "root": "sin",       "why": "hamartōlous 9:13 'I did not come to call the upright, but sinners' — Hosea 6:6 verse, pairs with mercy" }
+    { "unit": "unit-09", "verse": 13, "text": "sinners",       "root": "sin",       "why": "hamartōlous 9:13 'I did not come to call the upright, but sinners' — Hosea 6:6 verse, pairs with mercy" },
+
+    { "_c": "--- throw (ballō) pre-opening occurrences, found by audit_thread_coverage.py 2026-09-10. Thread opens 8:6. ballō has a broad range — throw / cast out / put / pour / place / clothe (peri-ballō) — the tag follows the Greek stem, not the English word. unit-07 5 more are retagged from the local `do` root below." },
+    { "unit": "unit-03", "verse": 10, "text": "thrown",            "root": "throw", "why": "balletai 3:10 'every tree not producing good fruit is thrown into fire'" },
+    { "unit": "unit-03", "verse": 6,  "nth": 2, "text": "throw",   "root": "throw", "why": "bale 4:6 'throw yourself down' (2nd v.6 block — 4:6, not 3:6)" },
+    { "unit": "unit-04", "verse": 18, "text": "casting",           "root": "throw", "why": "ballontas 4:18 'casting a cast-net into the sea'" },
+    { "unit": "unit-05", "verse": 13, "text": "thrown out",        "root": "throw", "why": "blēthen 5:13 'good for nothing except, being thrown out, to be trampled'" },
+    { "unit": "unit-05", "verse": 25, "text": "thrown",            "root": "throw", "why": "blēthēsē 5:25 'you be thrown into prison'" },
+    { "unit": "unit-05", "verse": 29, "text": "throw",             "root": "throw", "why": "bale 5:29 'tear it out and throw it from you'" },
+    { "unit": "unit-05", "verse": 29, "text": "thrown",            "root": "throw", "why": "blēthē 5:29 'than that your whole body be thrown into gehenna'" },
+    { "unit": "unit-05", "verse": 30, "text": "throw",             "root": "throw", "why": "bale 5:30 'cut it off and throw it from you'" },
+    { "unit": "unit-06", "verse": 29, "text": "wrapped",           "root": "throw", "why": "periebaleto 6:29 'not even Solomon was wrapped like one of these' — peri-ballō" },
+    { "unit": "unit-06", "verse": 30, "text": "thrown",            "root": "throw", "why": "ballomenon 6:30 'today, and tomorrow thrown into an oven'" },
+    { "unit": "unit-06", "verse": 31, "text": "wrap ourselves in", "root": "throw", "why": "peribalōmetha 6:31 'what will we wrap ourselves in?' — peri-ballō" },
+
+    { "_c": "--- torment (basanizō) pre-opening. Thread opens 8:6." },
+    { "unit": "unit-04", "verse": 24, "text": "torments",          "root": "torment", "why": "basanois 4:24 'various diseases and torments'" },
+
+    { "_c": "--- hand-over (paradidōmi) pre-opening. Thread opens 10:4 (Judas). Recoloured off the shared #8a3c70 to #0e8aa0 so it can coexist with apo-tote in unit-04." },
+    { "unit": "unit-04", "verse": 12, "text": "handed over",       "root": "hand-over", "why": "paredothē 4:12 'having heard that John was handed over'" },
+    { "unit": "unit-05", "verse": 25, "text": "hand you over",     "root": "hand-over", "why": "paradō 5:25 'lest the adversary hand you over to the judge'" }
   ],
 
   "retag": [
@@ -97,7 +117,9 @@
     { "unit": "unit-07", "from": "way",   "to": "gate", "match": "gate",
       "why": "hodos (road/way) and pylē (gate)" },
     { "unit": "unit-07", "from": "build", "to": "rock", "match": "^rock$",
-      "why": "split the old build-rock bundle: oikodomeō -> build, petra -> rock" }
+      "why": "split the old build-rock bundle: oikodomeō -> build, petra -> rock" },
+    { "unit": "unit-07", "from": "do",    "to": "throw", "match": "throw",
+      "why": "the local `do` root (poieō) was wrongly applied to ekballō/ballō at 7:4,5,6,19,22 — 'throw out the beam', 'thrown into fire', 'cast out demons'. Move those to the throw thread; poieō spans (make/do/does/doing) stay `do`." }
   ],
 
   "untag_word": [

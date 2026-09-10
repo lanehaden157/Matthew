@@ -260,8 +260,8 @@
       "id": "throw",
       "root": "throw",
       "translit": "ballō",
-      "gloss": "throw / cast out",
-      "color": "#a85520",
+      "gloss": "throw / cast / put / pour / clothe (broad range)",
+      "color": "#c2410c",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -704,7 +704,7 @@
       "root": "hand-over",
       "translit": "paradidōmi",
       "gloss": "hand over, deliver up, betray",
-      "color": "#8a3c70",
+      "color": "#0e8aa0",
       "status": "open",
       "tagged": true,
       "opens": {

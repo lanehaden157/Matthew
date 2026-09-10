@@ -460,3 +460,21 @@
   (port_artifact.py imports its cleaners). build.py is now
   apply_retrofit -> refresh_meta -> scan -> verify -> digest -> audit(advisory);
   fragments are the source of truth. Verified idempotent.
+
+## 2026-09-10 (cont.) — 16 stems folded + pre-opening coverage pass
+- pipeline/thread-stems.json: all 16 remaining threads defined (from research
+  project). release retidied to ^αφι/^αφε/^αφη + 2 excludes; faith excludes
+  ολιγοπιστ- (little-faith is its own phrase thread).
+- audit_thread_coverage.py: final-sigma folding (ς->σ); "^" word-start stems;
+  hole-filled verses exempt from over-tag check; --stub emits "nth" for
+  cross-chapter verse-number collisions.
+- apply_retrofit.py: add/retag take optional "nth" (Nth .v block with a number).
+- Coverage brought to 0 gaps across all 24 audited threads:
+  - throw (ballō): +11 tags units 3-6 (broad range — throw/cast/put/clothe,
+    tag follows the Greek stem); unit-07 5 verses (6 spans) retagged from the
+    local `do` root (poieō was wrongly on ekballō). Recoloured #a85520 ->
+    #c2410c (old was colliding-adjacent to nations/save anyway).
+  - torment (basanizō): +1 (4:24, pre-opening).
+  - hand-over (paradidōmi): +2 (4:12, 5:25); recoloured #8a3c70 -> #0e8aa0
+    off the shared purple so it can coexist with apo-tote in unit-04.
+- occurrences 423 -> 437.
