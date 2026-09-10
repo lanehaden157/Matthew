@@ -102,3 +102,14 @@ Read this first. 3 lines max per session.
   data-anchor + translit-only). All 5 phases of the thread-add restructure
   complete. Remaining: Phase 5 = update the style reference (repo-root
   matthew_study_style_reference.md) to describe the new meta fields.
+
+## 2026-09-10 (cont. 3) — OT citation pointer standardized
+- Unit 3's trailing linked `(Book C:V)` Bible Hub pointer on OT-quoting `p.v`
+  verses applied to U1/2/4/7/8/9/10 (10 verses; U2 quote-links unwrapped).
+- Sermon antitheses left alone by decision; style reference + checklist updated
+  so future artifacts emit the pointer.
+
+## 2026-09-10 (cont. 4) — buried synoptic asides
+- 8 synoptic asides (U1/4/5/8/9/10) were spliced inside an unclosed .gloss span
+  or .compare box → rendered with a bare `*`/`✦` chip instead of `✧`. Pulled out
+  to sibling position, split glosses rejoined. Porter now flags this. build green.

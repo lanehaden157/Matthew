@@ -271,6 +271,20 @@ def _append_structure(lines, html):
             issues.append("`<aside class=\"synoptic\">` contains a tagged span — "
                           "synoptic parallels are translit only, no `data-root` "
                           "(style ref §4)")
+        # the aside must be a sibling of the verse, never spliced inside an
+        # unclosed .gloss span or a .compare box — otherwise spotlight.js rolls
+        # it into a plain note (`*`) instead of giving it its own `✧` chip.
+        before = html[:m.start()]
+        open_gloss = before.rfind('<span class="gloss">')
+        if open_gloss != -1 and '</span>' not in before[open_gloss:]:
+            issues.append("`<aside class=\"synoptic\">` is nested inside an "
+                          "unclosed `<span class=\"gloss\">` — close the gloss "
+                          "first so the aside is a sibling (style ref §3)")
+        open_cmp = before.rfind('<div class="compare">')
+        if open_cmp != -1 and '</div>' not in before[open_cmp:]:
+            issues.append("`<aside class=\"synoptic\">` is nested inside a "
+                          "`<div class=\"compare\">` — move it out below the "
+                          "compare box (style ref §3)")
 
     if issues:
         lines += ["", "## Fragment structure — fix in the artifact", ""]

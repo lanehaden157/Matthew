@@ -501,3 +501,28 @@
   not the English gloss).
 - pipeline/research-prompts.md §2: paste-note for re-syncing the research project.
 - Thread-add restructure (5 phases) complete.
+
+## 2026-09-10 (cont. 3) — OT citation pointer standardized
+- Unit 3's format (trailing linked `(Book C:V)` Bible Hub pointer at the end of a
+  `p.v` verse that quotes/cites an OT text) applied across all built units:
+  - U1 1:23 (Isa 7:14); U2 2:6 (Mic 5:2), 2:15 (Hos 11:1), 2:18 (Jer 31:15),
+    2:20 (Exod 4:19); U4 4:16 (Isa 9:1-2); U7 7:23 (Ps 6:8); U8 8:17 (Isa 53:4);
+    U9 9:13 (Hos 6:6, mid-verse after the quote); U10 10:36 (Mic 7:6).
+  - U2 2:15/2:18/2:20 previously wrapped the quoted words in the link — unwrapped,
+    converted to trailing pointer.
+  - Sermon "y'all heard it said" antitheses (U5 5:21-48) left unpointered by
+    decision (not framed as citations; several are conflations).
+  - Compare/synoptic boxes keep their own OT links (both is fine).
+- matthew_study_style_reference.md: new "OT citation pointer" subsection under the
+  verse component + checklist line — future artifacts emit this.
+
+## 2026-09-10 (cont. 4) — buried synoptic asides fixed
+- The 2026-09-09 synoptic splice had dropped 8 `<aside class="synoptic">` blocks
+  *inside* an unclosed `<span class="gloss">` (U1 1:21, U4 4:17/4:23, U5 5:12,
+  U10 9:36/10:6) or a `<div class="compare">` (U8 8:26, U9 9:13). spotlight.js
+  rolled each into a plain note (bare `*` chip) or a `✦` spotlight instead of
+  giving it the synoptic `✧` chip. Now every aside is a proper sibling; split
+  gloss sentences rejoined. Verified in-browser: synChips == synBoxes, 0 buried,
+  across all 10 units.
+- port_artifact.py `_append_structure`: added a check that flags a synoptic aside
+  nested inside an unclosed .gloss span or a .compare box.

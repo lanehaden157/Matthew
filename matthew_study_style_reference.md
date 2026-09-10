@@ -244,6 +244,27 @@ start is explicit (`· 3:13–4:11`).
 
 `<p class="v">` with the `.gloss` / `.compare` as **following siblings**, never nested.
 
+### OT citation pointer
+
+When a `<p class="v">` verse quotes or directly cites an OT text (a formula
+quotation, an "it stands written" / "it was said" citation, or a near-verbatim
+reuse on a character's lips), close the verse with a linked short-ref pointer —
+book abbreviation + `C:V` in parentheses, linked to Bible Hub, **after** the
+quotation and **before** any endnote `<sup>`:
+
+```html
+<p class="v"><span class="n">3</span>…make straight his paths."
+<a href="https://biblehub.com/isaiah/40-3.htm">(Isa 40:3)</a></p>
+```
+
+Short SBL-style abbreviations (`Isa`, `Deut`, `Ps`, `Mic`, `Hos`, `Jer`, `Exod`).
+Range refs link to the first verse, label the range: `(Isa 9:1–2)`. If the quote
+sits mid-verse, the pointer goes right after it, not at the verse end. Do **not**
+wrap the quoted words themselves in the link, and do not pointer-tag loose
+allusions the verse only echoes — those stay in the gloss/compare box. The
+Sermon's "y'all heard that it was said" antitheses (5:21–48) are left unpointered
+by decision: Matthew doesn't frame them as citations and several are conflations.
+
 ### Compare box (contested verses only)
 
 ```html
@@ -320,6 +341,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Verses read on their own; glosses, notes, compare boxes are additive, never load-bearing.
 - [ ] Compare box only at genuinely contested verses; include NASB, bring in Hart / Lattimore where their rendering is provocative.
 - [ ] Hyperlinks for significant LXX/OT citations and key terms (biblehub, Logeion, NETS, earlyjewishwritings).
+- [ ] Every `<p class="v">` that quotes/cites an OT text ends with a linked `(Book C:V)` Bible Hub pointer (§ OT citation pointer) — after the quote, before any `<sup>`; quoted words not themselves wrapped in the link.
 - [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described. These should e real and verifiable only, not loose made up connections forcing a pattern.
 - [ ] Repeated-word counts noted only where the frequency is theologically significant (3, 7, 10, 12, 40, 70…).
 - [ ] Transliteration only — zero native Greek or Hebrew script anywhere.
