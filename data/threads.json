@@ -1450,6 +1450,37 @@
       "note": "axios — fruit worthy of repentance (3:8) becomes the mission discourse's repeated test of who and what is worthy (10:10-38).",
       "status": "open",
       "tagged": true
+    },
+    {
+      "id": "learn",
+      "root": "learn",
+      "translit": "mathētēs",
+      "gloss": "learner (disciple)",
+      "color": "#6e355a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 5,
+        "ref": "5:1"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:23",
+          "note": "the verb 'follow' finally lands cleanly on the learners themselves"
+        },
+        {
+          "unit": 9,
+          "ref": "9:14",
+          "note": "John's learners vs. Jesus' learners — the fasting question turns on the label"
+        },
+        {
+          "unit": 11,
+          "ref": "11:2",
+          "note": "John, in prison, sends through his own learners to ask"
+        }
+      ],
+      "note": "mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible."
     }
   ]
 }

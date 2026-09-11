@@ -1,6 +1,6 @@
 # Cross-unit threads — canonical digest
 
-Generated from `data/threads.json` (version 1). 53 threads, 53 open.
+Generated from `data/threads.json` (version 1). 54 threads, 54 open.
 
 **This is the source of truth for thread tagging.** In a unit's artifact, a root that appears in the `id` column below is a *tracked thread*: tag it `<span class="r" data-root="<id>">…</span>` and list it under `threads.opens` / `threads.payoffs` in the unit-meta block. A root that is recurring but *not* here is unit-local — tag it with its own name and just list it in `roots`. To propose promoting a local root to a tracked thread, add it to `threads.candidates` with a one-line reason; Lane decides.
 
@@ -34,6 +34,7 @@ Generated from `data/threads.json` (version 1). 53 threads, 53 open.
 | `gehenna` | `gehenna` | geenna | Gehenna (hell) | 5 (5:22) | 10 (10:28) · 23 (23:15, 33) | open |
 | `gentle` | `gentle` | praus | gentle, humble | 5 (5:5) | 11 (11:29) | open |
 | `law-prophets` | `law-prophets` | ho nomos kai hoi prophētai | the Law & the Prophets | 5 (5:17) | 7 (7:12) · 11 (11:13) | open |
+| `learn` | `learn` | mathētēs | learner (disciple) | 5 (5:1) | 8 (8:23) · 9 (9:14) · 11 (11:2) | open |
 | `peace` | `peace` | eirēnē | peace | 5 (5:9) | 10 (10:13, 34) | open |
 | `skandalon` | `skandalon` | skandalon · skandalizō | trip up / trap-trigger, cause to stumble | 5 (5:29) | 11 (11:6) · 26 (26:31-33) | open |
 | `wage` | `wage` | misthos | wage / reward | 5 (5:12) | 6 (6:1-16) · 10 (10:41-42) | open |
@@ -85,6 +86,7 @@ Generated from `data/threads.json` (version 1). 53 threads, 53 open.
 - **`hand-over`**: paradidōmi — Judas is introduced by it at 10:4, then it fires three times for the disciples (10:17, 19, 21); from 17:22 on it becomes the governing verb of the passion.
 - **`kingdom`**: basileia — 'the kingdom of the skies has drawn near' (3:2, 4:17) governs the Sermon's beatitudes and the parables to come. Distinct from basileus 'king' (10:18, 17:25, 18:23, 22:2), a different word not tracked here.
 - **`law-prophets`**: Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed.
+- **`learn`**: mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible.
 - **`light`**: Isa 9 light dawns on the people (4:16) -> 'y'all are the light of the world' (5:14). Watch the light/dark pair across the 4/5 seam.
 - **`little-faith`**: Matthew's near-nickname for the disciples (oligopistoi). Distinct from the `faith` thread (pistis, the centurion's) — different word, own colour.
 - **`lose`**: apollymi — the lost sheep (10:6), then the losing that is done on purpose (10:39) and a reward never lost (10:42); the lost sheep returns at 15:24 and 18:12-14.

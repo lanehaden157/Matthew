@@ -2040,6 +2040,21 @@
       ],
       "total": 1
     },
+    "learn": {
+      "count": 1,
+      "verses": [
+        1
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…nt up onto the mountain; and when he had sat down, his ",
+          "hit": "learners",
+          "post": " came to him.…"
+        }
+      ],
+      "total": 1
+    },
     "light": {
       "count": 2,
       "verses": [
@@ -3611,7 +3626,7 @@
         },
         {
           "v": 23,
-          "pre": "…And as he stepped into the boat, his disciples ",
+          "pre": "…And as he stepped into the boat, his learners ",
           "hit": "followed",
           "post": " him.…"
         }
@@ -3651,6 +3666,28 @@
           "pre": "…but the sons of the ",
           "hit": "kingdom",
           "post": " will be thrown out into the darkness outside; there wi…"
+        }
+      ],
+      "total": 2
+    },
+    "learn": {
+      "count": 2,
+      "verses": [
+        21,
+        23
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…And another of the ",
+          "hit": "learners",
+          "post": " said to him, \"Master, let me first go off and bury my…"
+        },
+        {
+          "v": 23,
+          "pre": "…And as he stepped into the boat, his ",
+          "hit": "learners",
+          "post": " followed him.…"
         }
       ],
       "total": 2
@@ -4092,7 +4129,7 @@
           "v": 19,
           "pre": "…And Jesus got up and began ",
           "hit": "following",
-          "post": " him, and his disciples too.…"
+          "post": " him, and his learners too.…"
         },
         {
           "v": 27,
@@ -4117,6 +4154,63 @@
         }
       ],
       "total": 2
+    },
+    "fulfill": {
+      "count": 1,
+      "verses": [
+        16
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…And no one puts a ",
+          "hit": "patch",
+          "post": " of unshrunk cloth on a worn-out cloak — for its patch…"
+        }
+      ],
+      "total": 1
+    },
+    "learn": {
+      "count": 5,
+      "verses": [
+        10,
+        11,
+        14,
+        19
+      ],
+      "hits": [
+        {
+          "v": 10,
+          "pre": "…came and reclined at table together with Jesus and his ",
+          "hit": "learners",
+          "post": ".…"
+        },
+        {
+          "v": 11,
+          "pre": "…And the Pharisees, seeing it, were saying to his ",
+          "hit": "learners",
+          "post": ": \"Why does y'all's teacher eat with tax collectors and…"
+        },
+        {
+          "v": 14,
+          "pre": "…Then John's ",
+          "hit": "learners",
+          "post": " come to him, saying: \"Why do we and the Pharisees fast…"
+        },
+        {
+          "v": 14,
+          "pre": "…Then John's ",
+          "hit": "learners",
+          "post": " come to him, saying: \"Why do we and the Pharisees fast…"
+        },
+        {
+          "v": 19,
+          "pre": "…And Jesus got up and began following him, and his ",
+          "hit": "learners",
+          "post": " too.…"
+        }
+      ],
+      "total": 5
     },
     "lose": {
       "count": 1,
@@ -4187,7 +4281,7 @@
           "v": 19,
           "pre": "…And Jesus ",
           "hit": "got up",
-          "post": " and began following him, and his disciples too.…"
+          "post": " and began following him, and his learners too.…"
         },
         {
           "v": 25,
@@ -5325,6 +5419,21 @@
           "pre": "…For all ",
           "hit": "the prophets and the law",
           "post": " prophesied until John;…"
+        }
+      ],
+      "total": 1
+    },
+    "learn": {
+      "count": 1,
+      "verses": [
+        2
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…the deeds of the Anointed One, having sent through his ",
+          "hit": "learners",
+          "post": ",…"
         }
       ],
       "total": 1

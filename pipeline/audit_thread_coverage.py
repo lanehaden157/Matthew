@@ -158,8 +158,13 @@ def tagged_map(html, lo, hi, maxv, present, slug="?"):
     Greek), an explicit 'C:V' number is trusted as-is. Where the .v sequence
     skips verses — an embedded set-piece like the Lord's Prayer (6:9b-13) is a
     .prayer block, not .v — every data-root in the HTML between the bracketing
-    verses is attributed to each skipped verse. No heuristics for the chapter:
-    anything that won't line up is reported, never guessed."""
+    verses is attributed to each skipped verse, AND to the verse immediately
+    before the skip run: a Greek verse that opens a set-piece (6:9's "Our
+    Father...") routinely has its own translation continue past its .v block's
+    close into the set-piece's own markup, so the verse right before the gap
+    gets the same gap content credited, not just the skipped ones. No
+    heuristics for the chapter: anything that won't line up is reported,
+    never guessed."""
     seq = expected_seq(lo, hi, maxv, present)
     blocks = [(m.start(), m.end(), m.group(1)) for m in VBLOCK.finditer(html)]
     numbered = [(s, e, seg, NUM_CV.search(seg)) for s, e, seg in blocks]
@@ -192,6 +197,8 @@ def tagged_map(html, lo, hi, maxv, present, slug="?"):
             skipped = [q for q in seq if prev_cv < q < cv]
             if skipped:
                 roots = set(ROOTSPAN.findall(html[prev_end:s]))
+                tagged.setdefault(prev_cv, set()).update(roots)
+                holefilled.add(prev_cv)
                 for q in skipped:
                     tagged.setdefault(q, set()).update(roots)
                     holefilled.add(q)
