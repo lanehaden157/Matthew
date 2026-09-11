@@ -22,6 +22,13 @@ phase plan and the record of decisions.
   review `pipeline/out/thread-delta-NN.md`, eyeball in the browser, commit.
 - `threads-digest.md` (generated) is the thread list the research project reads;
   refresh it there when `data/threads.json` changes.
+- `translation-choices.md` (hand-maintained) is the wording glossary the research
+  project reads. **Keep it current as part of the normal workflow, not as a
+  separate ask**: any session that changes a rendering (a word choice for a
+  Greek lexeme, or a general style convention like `y'all`/`sky-skies`) updates
+  the relevant row/bullet and the Log section in the same turn, before moving
+  on — the same way `build.py` gets run without being asked. See
+  "For the Claude.ai research project" below for the paste-ready instructions.
 
 ## Layout
 
@@ -39,6 +46,10 @@ phase plan and the record of decisions.
                                unit, count, verse anchors. Never hand-edit.
 threads-digest.md  generated from threads.json — the thread list the Claude.ai
                research project reads. Never hand-edit.
+translation-choices.md  hand-maintained glossary of deliberate English
+               renderings — the wording counterpart to threads.json. The
+               Claude.ai research project reads it too. Kept current as part
+               of the normal workflow (see Working notes), not regenerated.
 /pipeline/     greek.py          deterministic Greek→Latin transliterator.
                unit_meta.py      the unit-meta block: parse / validate / generate.
                port_artifact.py  drop ONE new artifact in → fragment + data merge
@@ -123,6 +134,20 @@ Matthew project folder is needed.
   duplicating past work.
 - `session_summary_[timestamp].md` — full summary at the END of each session; new
   file each time, never overwrite.
+
+## For the Claude.ai research project (paste into its project instructions)
+
+Copy everything between the lines below into the research project's own
+instructions field, verbatim:
+
+---START PASTE---
+Before rendering a Greek word in a new unit's translation, check
+`translation-choices.md` in the repo for a prior decision and match it. If a
+different rendering genuinely fits better in a specific verse, use it — but
+flag it explicitly in the artifact (a note, or in the thread-delta) rather
+than silently drifting, so Lane can decide whether it's a one-off exception
+or a correction that should propagate everywhere.
+---END PASTE---
 
 ## Working notes
 

@@ -16,10 +16,12 @@ better in a specific verse, use it — but say so explicitly in the artifact
 Lane reviews the flag and decides whether it's a one-off exception or a
 correction that should update this file everywhere.
 
-This file lags reality a little by design — it's refreshed by hand after a
-session changes wording, not regenerated automatically. If a unit's actual
-text and this file disagree, the unit is more likely right; flag the
-mismatch rather than trusting the file blindly.
+Claude Code keeps this file current as part of its normal workflow — any
+session that changes a rendering updates the relevant row/bullet and the Log
+section below in the same turn, without being asked separately. It's still
+hand-maintained prose, not generated from the fragments, so if a unit's
+actual text and this file ever disagree, the unit is more likely right;
+flag the mismatch rather than trusting the file blindly.
 
 ## Tracked colour-thread words (global — same colour in every unit)
 
