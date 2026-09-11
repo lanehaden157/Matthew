@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=35";
-import { enhanceSpotlights } from "./spotlight.js?v=35";
-import { renderSearch } from "./search.js?v=35";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=36";
+import { enhanceSpotlights } from "./spotlight.js?v=36";
+import { renderSearch } from "./search.js?v=36";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 
@@ -21,6 +21,8 @@ const navToggle = document.getElementById("nav-toggle");
 const navToggleCtx = document.getElementById("nav-toggle-ctx");
 
 let manifest = null;
+
+const CENTER_TEXT_KEY = "matthew:centerText";
 
 applySettings();
 init();
@@ -43,8 +45,6 @@ async function init() {
 }
 
 /* --------------------------------------------------------------- settings */
-
-const CENTER_TEXT_KEY = "matthew:centerText";
 
 function applySettings() {
   const centered = localStorage.getItem(CENTER_TEXT_KEY) === "1";
