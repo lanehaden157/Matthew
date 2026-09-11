@@ -1,191 +1,1284 @@
 {
   "_note": "The record of hand-authored fragment edits, replayed idempotently by apply_retrofit.py (build.py step 1). Ops: strip_span / text / untag_word / retag_word / unwrap (whole-unit), retag / add (per-verse) — see apply_retrofit.py. The committed units/*.html already contain all of this; these entries are the audit trail and the safety net for port_artifact.py, which re-runs the extract_units cleaners on a fragment it (re)ports.",
-
   "strip_span": [
-    { "unit": "unit-02", "class": "star", "why": "gold-italic 'motif' device, cut from the design 2026-09-09; still in source-artifacts/" },
-    { "unit": "unit-03", "class": "star", "why": "same — cut 2026-09-09" },
-    { "unit": "unit-07", "class": "star", "why": "same — cut 2026-09-09" }
+    {
+      "unit": "unit-02",
+      "class": "star",
+      "why": "gold-italic 'motif' device, cut from the design 2026-09-09; still in source-artifacts/"
+    },
+    {
+      "unit": "unit-03",
+      "class": "star",
+      "why": "same — cut 2026-09-09"
+    },
+    {
+      "unit": "unit-07",
+      "class": "star",
+      "why": "same — cut 2026-09-09"
+    }
   ],
-
   "add": [
-    { "unit": "unit-04", "verse": 15, "text": "nations",              "root": "nations",      "why": "Galilee of the nations 4:15" },
-    { "unit": "unit-04", "verse": 17, "text": "From then",             "root": "apo-tote",     "why": "first apo tote hinge" },
-    { "unit": "unit-05", "verse": 17, "text": "the Law or the Prophets", "root": "law-prophets", "why": "opens the inclusio" },
-    { "unit": "unit-07", "verse": 12, "text": "the Law and the Prophets", "root": "law-prophets", "why": "closes the inclusio" },
-    { "unit": "unit-06", "verse": 30, "text": "little-faiths",         "root": "little-faith", "why": "oligopistoi first appears" },
-    { "unit": "unit-07", "verse": 24, "text": "shrewd",                "root": "wise",         "why": "phronimos builder (split from the old wise-foolish bundle)" },
-    { "unit": "unit-07", "verse": 26, "text": "stupid",                "root": "foolish",      "why": "moros builder (split from the old wise-foolish bundle)" },
-    { "unit": "unit-05", "verse": 14, "text": "light",                 "root": "light",        "why": "light of the world" },
-    { "unit": "unit-06", "verse": 23, "text": "light",                 "root": "light",        "why": "the light in you is darkness" },
-    { "unit": "unit-08", "verse": 20, "text": "the Son of Man",        "root": "son-of-man",   "why": "opens the Son of Man thread (8:20)" },
-    { "unit": "unit-01", "verse": 17, "text": "generations",           "root": "generation",   "why": "genea 1:17 — same lexical root as 11:16's 'this generation', literal genealogical sense; flagged for completeness, not the same thread-sense" },
-
-    { "_c": "--- retroactive cross-unit-thread coverage (2026-09-09 audit) --- policy: a tracked root is tagged (class=r) at EVERY morphological occurrence in a unit, even before the thread's editorial `opens`. See pipeline/out/thread-retrofit-audit.md." },
-
-    { "unit": "unit-05", "verse": 16, "text": "light",        "root": "light",     "why": "phos 5:16 'let your light shine' — thematic, was untagged" },
-    { "unit": "unit-06", "verse": 22, "text": "light",        "root": "light",     "why": "phos/photeinon 6:22 'full of light' — pairs with tagged 6:23" },
-    { "unit": "unit-10", "verse": 27, "text": "light",        "root": "light",     "why": "phos 10:27 'speak in the light'" },
-
-    { "unit": "unit-05", "verse": 47, "text": "Gentiles",     "root": "nations",   "why": "ethnikoi 5:47 — the nations as foil; pre-opening for this nuance" },
-    { "unit": "unit-06", "verse": 7,  "text": "nations",      "root": "nations",   "why": "ethnikoi 6:7 'the way the nations pray'" },
-    { "unit": "unit-06", "verse": 32, "text": "nations",      "root": "nations",   "why": "ethne 6:32 'all these things the nations seek after'" },
-
-    { "unit": "unit-08", "verse": 24, "text": "sea",          "root": "sea",       "why": "thalassa 8:24 — the storm; thread names 8:24-32 as a payoff, all 4 were untagged" },
-    { "unit": "unit-08", "verse": 26, "text": "sea",          "root": "sea",       "why": "thalassa 8:26 'rebuked the winds and the sea'" },
-    { "unit": "unit-08", "verse": 27, "text": "sea",          "root": "sea",       "why": "thalassa 8:27 'the winds and the sea listen under him'" },
-    { "unit": "unit-08", "verse": 32, "text": "sea",          "root": "sea",       "why": "thalassa 8:32 'rushed down the cliff into the sea'" },
-
-    { "unit": "unit-03", "verse": 15, "text": "Permit",       "root": "release",   "why": "aphes 3:15 'Permit it now' — pre-opening aphiemi" },
-    { "unit": "unit-03", "verse": 15, "text": "permits",      "root": "release",   "why": "aphiesin 3:15 'then he permits him'" },
-    { "unit": "unit-04", "verse": 20, "text": "leaving",      "root": "release",   "why": "aphentes 4:20 'leaving the nets' — pre-opening" },
-    { "unit": "unit-04", "verse": 22, "text": "leaving",      "root": "release",   "why": "aphentes 4:22 'leaving the boat and their father'" },
-    { "unit": "unit-05", "verse": 24, "text": "leave",        "root": "release",   "why": "aphes 5:24 'leave there your gift'" },
-    { "unit": "unit-05", "verse": 40, "text": "let him have", "root": "release",   "why": "aphes 5:40 'let him have also your cloak'" },
-    { "unit": "unit-07", "verse": 4,  "text": "Let me",       "root": "release",   "why": "aphes 7:4 'Let me take out the speck' — post-opening" },
-
-    { "unit": "unit-09", "verse": 22, "text": "trust",        "root": "faith",     "why": "pistis 9:22 'your trust has saved you' — untagged" },
-    { "unit": "unit-09", "verse": 28, "text": "trust",        "root": "faith",     "why": "pisteuete 9:28 'Do y'all trust that I am able'" },
-    { "unit": "unit-09", "verse": 29, "text": "trust",        "root": "faith",     "why": "pistin 9:29 'according to y'all's trust'" },
-
-    { "unit": "unit-01", "verse": 20, "text": "fear",         "root": "fear",      "why": "phobethes 1:20 'do not fear to take Mary' — first phobeo in Matthew" },
-    { "unit": "unit-02", "verse": 22, "text": "afraid",       "root": "fear",      "why": "ephobethe 2:22 'he was afraid to go'" },
-    { "unit": "unit-09", "verse": 8,  "text": "afraid",       "root": "fear",      "why": "ephobethesan 9:8 'the crowds were afraid'" },
-
-    { "unit": "unit-02", "verse": 13, "text": "destroy",      "root": "lose",      "why": "apolesai 2:13 'Herod is about to... destroy it'" },
-    { "unit": "unit-05", "verse": 29, "text": "perish",       "root": "lose",      "why": "apoletai 5:29 'one of your members perish'" },
-    { "unit": "unit-05", "verse": 30, "text": "perish",       "root": "lose",      "why": "apoletai 5:30 'one of your members perish'" },
-    { "unit": "unit-07", "verse": 13, "text": "ruin",         "root": "lose",      "why": "apoleian 7:13 'the road that leads off into ruin'" },
-    { "unit": "unit-08", "verse": 25, "text": "destroyed",    "root": "lose",      "why": "apollymetha 8:25 'we are being destroyed' — the wordplay the prose flags" },
-    { "unit": "unit-09", "verse": 17, "text": "destroyed",    "root": "lose",      "why": "apollyntai 9:17 'the skins are destroyed'" },
-
-    { "unit": "unit-08", "verse": 25, "text": "save",         "root": "save",      "why": "soson 8:25 'Lord, save' — post-opening (save opens 1:21), paired with 'destroyed'" },
-
-    { "unit": "unit-05", "verse": 7,  "text": "merciful",     "root": "mercy",     "why": "eleemones 5:7 'blessed are the merciful' — pre-opening" },
-    { "unit": "unit-05", "verse": 7,  "text": "mercy",        "root": "mercy",     "why": "eleethesontai 5:7 'they shall be shown mercy'" },
-    { "unit": "unit-06", "verse": 2,  "text": "mercy-deed",   "root": "mercy",     "why": "eleemosyne 6:2 'when you do a mercy-deed'" },
-    { "unit": "unit-06", "verse": 3,  "text": "mercy-deed",   "root": "mercy",     "why": "eleemosyne 6:3" },
-    { "unit": "unit-06", "verse": 4,  "text": "mercy-deed",   "root": "mercy",     "why": "eleemosyne 6:4" },
-
-    { "unit": "unit-05", "verse": 13, "text": "made foolish", "root": "foolish",   "why": "moranthe 5:13 'if the salt is made foolish' — the prose links it to v22" },
-    { "unit": "unit-05", "verse": 22, "text": "Fool",         "root": "foolish",   "why": "More 5:22 'whoever says, Fool' — pre-opening moros" },
-
-    { "unit": "unit-02", "verse": 18, "text": "comforted",    "root": "urge",      "why": "paraklethenai 2:18 'she would not be comforted' — pre-opening parakaleo" },
-    { "unit": "unit-05", "verse": 4,  "text": "comforted",    "root": "urge",      "why": "paraklethesontai 5:4 'they shall be comforted'" },
-
-    { "_c": "--- sin thread (hamartia/hamartōlos), new tracked thread 2026-09-10. opens 1:21, payoff 9:2-13. Every ἁμαρτ- occurrence in Matthew's running text in the built units (found by pipeline/audit_thread_coverage.py — hamartōlos 'sinner' shares the root)." },
-    { "unit": "unit-01", "verse": 21, "text": "sins",          "root": "sin",       "why": "hamartiōn 1:21 'save his people from their sins' — the thread opens" },
-    { "unit": "unit-03", "verse": 6,  "text": "sins",          "root": "sin",       "why": "hamartias 3:6 'confessing-out their sins'" },
-    { "unit": "unit-09", "verse": 2,  "text": "sins",          "root": "sin",       "why": "hamartiai 9:2 'your sins are released'" },
-    { "unit": "unit-09", "verse": 5,  "text": "sins",          "root": "sin",       "why": "hamartiai 9:5 'Your sins are released'" },
-    { "unit": "unit-09", "verse": 6,  "text": "sins",          "root": "sin",       "why": "hamartias 9:6 'authority on earth to release sins'" },
-    { "unit": "unit-09", "verse": 10, "text": "sinners",       "root": "sin",       "why": "hamartōloi 9:10 'many tax collectors and sinners came'" },
-    { "unit": "unit-09", "verse": 11, "text": "sinners",       "root": "sin",       "why": "hamartōlōn 9:11 'why does your teacher eat with tax collectors and sinners'" },
-    { "unit": "unit-09", "verse": 13, "text": "sinners",       "root": "sin",       "why": "hamartōlous 9:13 'I did not come to call the upright, but sinners' — Hosea 6:6 verse, pairs with mercy" },
-
-    { "_c": "--- throw (ballō) pre-opening occurrences, found by audit_thread_coverage.py 2026-09-10. Thread opens 8:6. ballō has a broad range — throw / cast out / put / pour / place / clothe (peri-ballō) — the tag follows the Greek stem, not the English word. unit-07 5 more are retagged from the local `do` root below." },
-    { "unit": "unit-03", "verse": 10, "text": "thrown",            "root": "throw", "why": "balletai 3:10 'every tree not producing good fruit is thrown into fire'" },
-    { "unit": "unit-03", "verse": 6,  "nth": 2, "text": "throw",   "root": "throw", "why": "bale 4:6 'throw yourself down' (2nd v.6 block — 4:6, not 3:6)" },
-    { "unit": "unit-04", "verse": 18, "text": "casting",           "root": "throw", "why": "ballontas 4:18 'casting a cast-net into the sea'" },
-    { "unit": "unit-05", "verse": 13, "text": "thrown out",        "root": "throw", "why": "blēthen 5:13 'good for nothing except, being thrown out, to be trampled'" },
-    { "unit": "unit-05", "verse": 25, "text": "thrown",            "root": "throw", "why": "blēthēsē 5:25 'you be thrown into prison'" },
-    { "unit": "unit-05", "verse": 29, "text": "throw",             "root": "throw", "why": "bale 5:29 'tear it out and throw it from you'" },
-    { "unit": "unit-05", "verse": 29, "text": "thrown",            "root": "throw", "why": "blēthē 5:29 'than that your whole body be thrown into gehenna'" },
-    { "unit": "unit-05", "verse": 30, "text": "throw",             "root": "throw", "why": "bale 5:30 'cut it off and throw it from you'" },
-    { "unit": "unit-06", "verse": 29, "text": "wrapped",           "root": "throw", "why": "periebaleto 6:29 'not even Solomon was wrapped like one of these' — peri-ballō" },
-    { "unit": "unit-06", "verse": 30, "text": "thrown",            "root": "throw", "why": "ballomenon 6:30 'today, and tomorrow thrown into an oven'" },
-    { "unit": "unit-06", "verse": 31, "text": "wrap ourselves in", "root": "throw", "why": "peribalōmetha 6:31 'what will we wrap ourselves in?' — peri-ballō" },
-
-    { "_c": "--- torment (basanizō) pre-opening. Thread opens 8:6." },
-    { "unit": "unit-04", "verse": 24, "text": "torments",          "root": "torment", "why": "basanois 4:24 'various diseases and torments'" },
-
-    { "_c": "--- hand-over (paradidōmi) pre-opening. Thread opens 10:4 (Judas). Recoloured off the shared #8a3c70 to #0e8aa0 so it can coexist with apo-tote in unit-04." },
-    { "unit": "unit-04", "verse": 12, "text": "handed over",       "root": "hand-over", "why": "paredothē 4:12 'having heard that John was handed over'" },
-    { "unit": "unit-05", "verse": 25, "text": "hand you over",     "root": "hand-over", "why": "paradō 5:25 'lest the adversary hand you over to the judge'" },
-
-    { "_c": "--- skandalon (skandalizō) pre-opening. Thread opens 5:29, per Lane's decision at the Unit 11 port (2026-09-10)." },
-    { "unit": "unit-05", "verse": 29, "text": "trips you up",      "root": "skandalon", "why": "skandalizei 5:29 'if your right eye trips you up'" },
-    { "unit": "unit-05", "verse": 30, "text": "trips you up",      "root": "skandalon", "why": "skandalizei 5:30 'if your right hand trips you up'" },
-
-    { "_c": "--- metanoia (metanoeō/metanoia) pre-opening. Thread opens 3:2, per Lane's decision at the Unit 11 port (2026-09-10). unit-03's local `repent` root is retagged to this global thread below." },
-    { "unit": "unit-04", "verse": 17, "text": "Repent",            "root": "metanoia",  "why": "metanoeite 4:17 — verbatim repetition of John's 3:2 proclamation" },
-
-    { "_c": "--- come-here (deute) pre-opening. Thread opens 4:19, per Lane's decision at the Unit 11 port (2026-09-10)." },
-    { "unit": "unit-04", "verse": 19, "text": "Come",              "root": "come-here", "why": "deute 4:19 'Come — after me — and I will make y'all fishers of men'" },
-
-    { "_c": "--- gentle (praus) pre-opening. Thread opens 5:5, per Lane's decision at the Unit 11 port (2026-09-10)." },
-    { "unit": "unit-05", "verse": 5,  "text": "meek",              "root": "gentle",    "why": "praeis 5:5 'blessed are the meek' — same word rendered 'gentle' at 11:29" },
-
-    { "_c": "--- well-pleased (eudokeō) pre-opening. Thread opens 3:17, per Lane's decision at the Unit 11 port (2026-09-10)." },
-    { "unit": "unit-03", "verse": 17, "text": "delighted",         "root": "well-pleased", "why": "eudokēsa 3:17 'in whom I delighted' — the Father's voice at the baptism" }
+    {
+      "unit": "unit-04",
+      "verse": 15,
+      "text": "nations",
+      "root": "nations",
+      "why": "Galilee of the nations 4:15"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 17,
+      "text": "From then",
+      "root": "apo-tote",
+      "why": "first apo tote hinge"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 17,
+      "text": "the Law or the Prophets",
+      "root": "law-prophets",
+      "why": "opens the inclusio"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 12,
+      "text": "the Law and the Prophets",
+      "root": "law-prophets",
+      "why": "closes the inclusio"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 30,
+      "text": "little-faiths",
+      "root": "little-faith",
+      "why": "oligopistoi first appears"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 24,
+      "text": "shrewd",
+      "root": "wise",
+      "why": "phronimos builder (split from the old wise-foolish bundle)"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 26,
+      "text": "stupid",
+      "root": "foolish",
+      "why": "moros builder (split from the old wise-foolish bundle)"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 14,
+      "text": "light",
+      "root": "light",
+      "why": "light of the world"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 23,
+      "text": "light",
+      "root": "light",
+      "why": "the light in you is darkness"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 20,
+      "text": "the Son of Man",
+      "root": "son-of-man",
+      "why": "opens the Son of Man thread (8:20)"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 17,
+      "text": "generations",
+      "root": "generation",
+      "why": "genea 1:17 — same lexical root as 11:16's 'this generation', literal genealogical sense; flagged for completeness, not the same thread-sense"
+    },
+    {
+      "_c": "--- retroactive cross-unit-thread coverage (2026-09-09 audit) --- policy: a tracked root is tagged (class=r) at EVERY morphological occurrence in a unit, even before the thread's editorial `opens`. See pipeline/out/thread-retrofit-audit.md."
+    },
+    {
+      "unit": "unit-05",
+      "verse": 16,
+      "text": "light",
+      "root": "light",
+      "why": "phos 5:16 'let your light shine' — thematic, was untagged"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 22,
+      "text": "light",
+      "root": "light",
+      "why": "phos/photeinon 6:22 'full of light' — pairs with tagged 6:23"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 27,
+      "text": "light",
+      "root": "light",
+      "why": "phos 10:27 'speak in the light'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 47,
+      "text": "Gentiles",
+      "root": "nations",
+      "why": "ethnikoi 5:47 — the nations as foil; pre-opening for this nuance"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 7,
+      "text": "nations",
+      "root": "nations",
+      "why": "ethnikoi 6:7 'the way the nations pray'"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 32,
+      "text": "nations",
+      "root": "nations",
+      "why": "ethne 6:32 'all these things the nations seek after'"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 24,
+      "text": "sea",
+      "root": "sea",
+      "why": "thalassa 8:24 — the storm; thread names 8:24-32 as a payoff, all 4 were untagged"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 26,
+      "text": "sea",
+      "root": "sea",
+      "why": "thalassa 8:26 'rebuked the winds and the sea'"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 27,
+      "text": "sea",
+      "root": "sea",
+      "why": "thalassa 8:27 'the winds and the sea listen under him'"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 32,
+      "text": "sea",
+      "root": "sea",
+      "why": "thalassa 8:32 'rushed down the cliff into the sea'"
+    },
+    {
+      "unit": "unit-03",
+      "verse": 15,
+      "text": "Permit",
+      "root": "release",
+      "why": "aphes 3:15 'Permit it now' — pre-opening aphiemi"
+    },
+    {
+      "unit": "unit-03",
+      "verse": 15,
+      "text": "permits",
+      "root": "release",
+      "why": "aphiesin 3:15 'then he permits him'"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 20,
+      "text": "leaving",
+      "root": "release",
+      "why": "aphentes 4:20 'leaving the nets' — pre-opening"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 22,
+      "text": "leaving",
+      "root": "release",
+      "why": "aphentes 4:22 'leaving the boat and their father'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 24,
+      "text": "leave",
+      "root": "release",
+      "why": "aphes 5:24 'leave there your gift'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 40,
+      "text": "let him have",
+      "root": "release",
+      "why": "aphes 5:40 'let him have also your cloak'"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 4,
+      "text": "Let me",
+      "root": "release",
+      "why": "aphes 7:4 'Let me take out the speck' — post-opening"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 22,
+      "text": "trust",
+      "root": "faith",
+      "why": "pistis 9:22 'your trust has saved you' — untagged"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 28,
+      "text": "trust",
+      "root": "faith",
+      "why": "pisteuete 9:28 'Do y'all trust that I am able'"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 29,
+      "text": "trust",
+      "root": "faith",
+      "why": "pistin 9:29 'according to y'all's trust'"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 20,
+      "text": "fear",
+      "root": "fear",
+      "why": "phobethes 1:20 'do not fear to take Mary' — first phobeo in Matthew"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 22,
+      "text": "afraid",
+      "root": "fear",
+      "why": "ephobethe 2:22 'he was afraid to go'"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 8,
+      "text": "afraid",
+      "root": "fear",
+      "why": "ephobethesan 9:8 'the crowds were afraid'"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 13,
+      "text": "destroy",
+      "root": "lose",
+      "why": "apolesai 2:13 'Herod is about to... destroy it'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 29,
+      "text": "perish",
+      "root": "lose",
+      "why": "apoletai 5:29 'one of your members perish'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 30,
+      "text": "perish",
+      "root": "lose",
+      "why": "apoletai 5:30 'one of your members perish'"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 13,
+      "text": "ruin",
+      "root": "lose",
+      "why": "apoleian 7:13 'the road that leads off into ruin'"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 25,
+      "text": "destroyed",
+      "root": "lose",
+      "why": "apollymetha 8:25 'we are being destroyed' — the wordplay the prose flags"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 17,
+      "text": "destroyed",
+      "root": "lose",
+      "why": "apollyntai 9:17 'the skins are destroyed'"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 25,
+      "text": "save",
+      "root": "save",
+      "why": "soson 8:25 'Lord, save' — post-opening (save opens 1:21), paired with 'destroyed'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 7,
+      "text": "merciful",
+      "root": "mercy",
+      "why": "eleemones 5:7 'blessed are the merciful' — pre-opening"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 7,
+      "text": "mercy",
+      "root": "mercy",
+      "why": "eleethesontai 5:7 'they shall be shown mercy'"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 2,
+      "text": "mercy-deed",
+      "root": "mercy",
+      "why": "eleemosyne 6:2 'when you do a mercy-deed'"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 3,
+      "text": "mercy-deed",
+      "root": "mercy",
+      "why": "eleemosyne 6:3"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 4,
+      "text": "mercy-deed",
+      "root": "mercy",
+      "why": "eleemosyne 6:4"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 13,
+      "text": "made foolish",
+      "root": "foolish",
+      "why": "moranthe 5:13 'if the salt is made foolish' — the prose links it to v22"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 22,
+      "text": "Fool",
+      "root": "foolish",
+      "why": "More 5:22 'whoever says, Fool' — pre-opening moros"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 18,
+      "text": "comforted",
+      "root": "urge",
+      "why": "paraklethenai 2:18 'she would not be comforted' — pre-opening parakaleo"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 4,
+      "text": "comforted",
+      "root": "urge",
+      "why": "paraklethesontai 5:4 'they shall be comforted'"
+    },
+    {
+      "_c": "--- sin thread (hamartia/hamartōlos), new tracked thread 2026-09-10. opens 1:21, payoff 9:2-13. Every ἁμαρτ- occurrence in Matthew's running text in the built units (found by pipeline/audit_thread_coverage.py — hamartōlos 'sinner' shares the root)."
+    },
+    {
+      "unit": "unit-01",
+      "verse": 21,
+      "text": "sins",
+      "root": "sin",
+      "why": "hamartiōn 1:21 'save his people from their sins' — the thread opens"
+    },
+    {
+      "unit": "unit-03",
+      "verse": 6,
+      "text": "sins",
+      "root": "sin",
+      "why": "hamartias 3:6 'confessing-out their sins'"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 2,
+      "text": "sins",
+      "root": "sin",
+      "why": "hamartiai 9:2 'your sins are released'"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 5,
+      "text": "sins",
+      "root": "sin",
+      "why": "hamartiai 9:5 'Your sins are released'"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 6,
+      "text": "sins",
+      "root": "sin",
+      "why": "hamartias 9:6 'authority on earth to release sins'"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 10,
+      "text": "sinners",
+      "root": "sin",
+      "why": "hamartōloi 9:10 'many tax collectors and sinners came'"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 11,
+      "text": "sinners",
+      "root": "sin",
+      "why": "hamartōlōn 9:11 'why does your teacher eat with tax collectors and sinners'"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 13,
+      "text": "sinners",
+      "root": "sin",
+      "why": "hamartōlous 9:13 'I did not come to call the upright, but sinners' — Hosea 6:6 verse, pairs with mercy"
+    },
+    {
+      "_c": "--- throw (ballō) pre-opening occurrences, found by audit_thread_coverage.py 2026-09-10. Thread opens 8:6. ballō has a broad range — throw / cast out / put / pour / place / clothe (peri-ballō) — the tag follows the Greek stem, not the English word. unit-07 5 more are retagged from the local `do` root below."
+    },
+    {
+      "unit": "unit-03",
+      "verse": 10,
+      "text": "thrown",
+      "root": "throw",
+      "why": "balletai 3:10 'every tree not producing good fruit is thrown into fire'"
+    },
+    {
+      "unit": "unit-03",
+      "verse": 6,
+      "nth": 2,
+      "text": "throw",
+      "root": "throw",
+      "why": "bale 4:6 'throw yourself down' (2nd v.6 block — 4:6, not 3:6)"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 18,
+      "text": "casting",
+      "root": "throw",
+      "why": "ballontas 4:18 'casting a cast-net into the sea'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 13,
+      "text": "thrown out",
+      "root": "throw",
+      "why": "blēthen 5:13 'good for nothing except, being thrown out, to be trampled'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 25,
+      "text": "thrown",
+      "root": "throw",
+      "why": "blēthēsē 5:25 'you be thrown into prison'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 29,
+      "text": "throw",
+      "root": "throw",
+      "why": "bale 5:29 'tear it out and throw it from you'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 29,
+      "text": "thrown",
+      "root": "throw",
+      "why": "blēthē 5:29 'than that your whole body be thrown into gehenna'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 30,
+      "text": "throw",
+      "root": "throw",
+      "why": "bale 5:30 'cut it off and throw it from you'"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 29,
+      "text": "wrapped",
+      "root": "throw",
+      "why": "periebaleto 6:29 'not even Solomon was wrapped like one of these' — peri-ballō"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 30,
+      "text": "thrown",
+      "root": "throw",
+      "why": "ballomenon 6:30 'today, and tomorrow thrown into an oven'"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 31,
+      "text": "wrap ourselves in",
+      "root": "throw",
+      "why": "peribalōmetha 6:31 'what will we wrap ourselves in?' — peri-ballō"
+    },
+    {
+      "_c": "--- torment (basanizō) pre-opening. Thread opens 8:6."
+    },
+    {
+      "unit": "unit-04",
+      "verse": 24,
+      "text": "torments",
+      "root": "torment",
+      "why": "basanois 4:24 'various diseases and torments'"
+    },
+    {
+      "_c": "--- hand-over (paradidōmi) pre-opening. Thread opens 10:4 (Judas). Recoloured off the shared #8a3c70 to #0e8aa0 so it can coexist with apo-tote in unit-04."
+    },
+    {
+      "unit": "unit-04",
+      "verse": 12,
+      "text": "handed over",
+      "root": "hand-over",
+      "why": "paredothē 4:12 'having heard that John was handed over'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 25,
+      "text": "hand you over",
+      "root": "hand-over",
+      "why": "paradō 5:25 'lest the adversary hand you over to the judge'"
+    },
+    {
+      "_c": "--- skandalon (skandalizō) pre-opening. Thread opens 5:29, per Lane's decision at the Unit 11 port (2026-09-10)."
+    },
+    {
+      "unit": "unit-05",
+      "verse": 29,
+      "text": "trips you up",
+      "root": "skandalon",
+      "why": "skandalizei 5:29 'if your right eye trips you up'"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 30,
+      "text": "trips you up",
+      "root": "skandalon",
+      "why": "skandalizei 5:30 'if your right hand trips you up'"
+    },
+    {
+      "_c": "--- metanoia (metanoeō/metanoia) pre-opening. Thread opens 3:2, per Lane's decision at the Unit 11 port (2026-09-10). unit-03's local `repent` root is retagged to this global thread below."
+    },
+    {
+      "unit": "unit-04",
+      "verse": 17,
+      "text": "Repent",
+      "root": "metanoia",
+      "why": "metanoeite 4:17 — verbatim repetition of John's 3:2 proclamation"
+    },
+    {
+      "_c": "--- come-here (deute) pre-opening. Thread opens 4:19, per Lane's decision at the Unit 11 port (2026-09-10)."
+    },
+    {
+      "unit": "unit-04",
+      "verse": 19,
+      "text": "Come",
+      "root": "come-here",
+      "why": "deute 4:19 'Come — after me — and I will make y'all fishers of men'"
+    },
+    {
+      "_c": "--- gentle (praus) pre-opening. Thread opens 5:5, per Lane's decision at the Unit 11 port (2026-09-10)."
+    },
+    {
+      "unit": "unit-05",
+      "verse": 5,
+      "text": "meek",
+      "root": "gentle",
+      "why": "praeis 5:5 'blessed are the meek' — same word rendered 'gentle' at 11:29"
+    },
+    {
+      "_c": "--- well-pleased (eudokeō) pre-opening. Thread opens 3:17, per Lane's decision at the Unit 11 port (2026-09-10)."
+    },
+    {
+      "unit": "unit-03",
+      "verse": 17,
+      "text": "delighted",
+      "root": "well-pleased",
+      "why": "eudokēsa 3:17 'in whom I delighted' — the Father's voice at the baptism"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 24,
+      "text": "raised",
+      "root": "raise",
+      "why": "egertheis 1:24"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 19,
+      "text": "righteous",
+      "root": "righteous",
+      "why": "dikaios 1:19"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 13,
+      "text": "seek",
+      "root": "seek",
+      "why": "zētein 2:13"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 14,
+      "text": "rising",
+      "root": "raise",
+      "why": "egertheis 2:14"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 20,
+      "text": "Rising",
+      "root": "raise",
+      "why": "Egertheis 2:20"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 20,
+      "text": "seeking",
+      "root": "seek",
+      "why": "zētountes 2:20"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 21,
+      "text": "rising",
+      "root": "raise",
+      "why": "egertheis 2:21"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 22,
+      "text": "father",
+      "root": "father",
+      "why": "patros 2:22"
+    },
+    {
+      "unit": "unit-03",
+      "verse": 9,
+      "text": "father",
+      "root": "father",
+      "why": "Patera 3:9",
+      "nth": 1
+    },
+    {
+      "unit": "unit-03",
+      "verse": 9,
+      "text": "raise",
+      "root": "raise",
+      "why": "egeirai 3:9",
+      "nth": 1
+    },
+    {
+      "unit": "unit-03",
+      "verse": 8,
+      "text": "worthy",
+      "root": "worthy",
+      "why": "axion 3:8"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 23,
+      "text": "good-news",
+      "root": "good-news",
+      "why": "euangelion 4:23"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 21,
+      "text": "father",
+      "root": "father",
+      "why": "patros 4:21"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 21,
+      "text": "called",
+      "root": "call",
+      "why": "ekalesen 4:21"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 22,
+      "text": "father",
+      "root": "father",
+      "why": "patera 4:22"
+    },
+    {
+      "unit": "unit-04",
+      "verse": 14,
+      "text": "fulfilled",
+      "root": "fulfill",
+      "why": "plērōthē 4:14"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 9,
+      "text": "called",
+      "root": "call",
+      "why": "klēthēsontai 5:9"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 12,
+      "text": "reward",
+      "root": "wage",
+      "why": "misthos 5:12"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 46,
+      "text": "reward",
+      "root": "wage",
+      "why": "misthon 5:46"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 45,
+      "text": "just",
+      "root": "righteous",
+      "why": "dikaious 5:45"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 3,
+      "text": "spirit",
+      "root": "spirit",
+      "why": "pneumati 5:3"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 17,
+      "text": "fulfill",
+      "root": "fulfill",
+      "why": "plērōsai 5:17"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 2,
+      "text": "wage",
+      "root": "wage",
+      "why": "misthon 6:2"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 5,
+      "text": "wage",
+      "root": "wage",
+      "why": "misthon 6:5"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 16,
+      "text": "wage",
+      "root": "wage",
+      "why": "misthon 6:16"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 23,
+      "text": "evil",
+      "root": "evil",
+      "why": "ponēros 6:23"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 11,
+      "text": "Father",
+      "root": "father",
+      "why": "patēr 7:11"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 11,
+      "text": "evil",
+      "root": "evil",
+      "why": "ponēroi 7:11"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 21,
+      "text": "Father",
+      "root": "father",
+      "why": "patros 7:21"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 21,
+      "text": "kingdom",
+      "root": "kingdom",
+      "why": "basileian 7:21"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 7,
+      "text": "Seek",
+      "root": "seek",
+      "why": "zēteite 7:7"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 8,
+      "text": "seeking",
+      "root": "seek",
+      "why": "zētōn 7:8"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 17,
+      "text": "evil",
+      "root": "evil",
+      "why": "ponērous 7:17"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 18,
+      "text": "evil",
+      "root": "evil",
+      "why": "ponērous 7:18"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 21,
+      "text": "father",
+      "root": "father",
+      "why": "patera 8:21"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 16,
+      "text": "spirits",
+      "root": "spirit",
+      "why": "pneumata 8:16"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 11,
+      "text": "kingdom",
+      "root": "kingdom",
+      "why": "basileia 8:11"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 12,
+      "text": "kingdom",
+      "root": "kingdom",
+      "why": "basileias 8:12"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 17,
+      "text": "filled full",
+      "root": "fulfill",
+      "why": "plērōthē 8:17"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 5,
+      "text": "Get up",
+      "root": "raise",
+      "why": "Egeire 9:5"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 6,
+      "text": "Get up",
+      "root": "raise",
+      "why": "Egertheis 9:6"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 7,
+      "text": "getting up",
+      "root": "raise",
+      "why": "egertheis 9:7"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 19,
+      "text": "got up",
+      "root": "raise",
+      "why": "egertheis 9:19"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 25,
+      "text": "raised",
+      "root": "raise",
+      "why": "ēgerthē 9:25"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 13,
+      "text": "upright",
+      "root": "righteous",
+      "why": "dikaious 9:13"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 13,
+      "text": "call",
+      "root": "call",
+      "why": "kalesai 9:13"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 4,
+      "text": "evil",
+      "root": "evil",
+      "why": "ponēra 9:4"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 24,
+      "text": "clear out",
+      "root": "withdraw",
+      "why": "Anachōreite 9:24"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 8,
+      "text": "raise",
+      "root": "raise",
+      "why": "egeirete 10:8"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 42,
+      "text": "wage",
+      "root": "wage",
+      "why": "misthon 10:42"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 20,
+      "text": "Spirit",
+      "root": "spirit",
+      "why": "pneuma 10:20"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 20,
+      "text": "Father",
+      "root": "father",
+      "why": "patros 10:20"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 21,
+      "text": "father",
+      "root": "father",
+      "why": "patēr 10:21"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 29,
+      "text": "Father",
+      "root": "father",
+      "why": "patros 10:29"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 32,
+      "text": "Father",
+      "root": "father",
+      "why": "patros 10:32"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 33,
+      "text": "Father",
+      "root": "father",
+      "why": "patros 10:33"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 35,
+      "text": "good news",
+      "root": "good-news",
+      "why": "euangelion 9:35",
+      "nth": 1
+    },
+    {
+      "unit": "unit-10",
+      "verse": 35,
+      "text": "kingdom",
+      "root": "kingdom",
+      "why": "basileias 9:35",
+      "nth": 1
+    },
+    {
+      "unit": "unit-10",
+      "verse": 35,
+      "text": "father",
+      "root": "father",
+      "why": "patros 10:35",
+      "nth": 2
+    },
+    {
+      "unit": "unit-10",
+      "verse": 37,
+      "text": "father",
+      "root": "father",
+      "why": "patera 10:37",
+      "nth": 2
+    },
+    {
+      "unit": "unit-10",
+      "verse": 1,
+      "text": "spirits",
+      "root": "spirit",
+      "why": "pneumatōn 10:1"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 7,
+      "text": "kingdom",
+      "root": "kingdom",
+      "why": "basileia 10:7"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 28,
+      "text": "Gehenna",
+      "root": "gehenna",
+      "why": "geennē 10:28"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 5,
+      "text": "raised",
+      "root": "raise",
+      "why": "egeirontai 11:5"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 5,
+      "text": "good news",
+      "root": "good-news",
+      "why": "euangelizontai 11:5"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 11,
+      "text": "arisen",
+      "root": "raise",
+      "why": "egēgertai 11:11"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 11,
+      "text": "kingdom",
+      "root": "kingdom",
+      "why": "basileia 11:11"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 25,
+      "text": "Father",
+      "root": "father",
+      "why": "pater 11:25"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 26,
+      "text": "Father",
+      "root": "father",
+      "why": "patēr 11:26"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 19,
+      "text": "in the right",
+      "root": "righteous",
+      "why": "edikaiōthē 11:19"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 12,
+      "text": "kingdom",
+      "root": "kingdom",
+      "why": "basileia 11:12"
+    }
   ],
-
   "retag": [
-    { "unit": "unit-08", "verse": 26, "from": "faith", "to": "little-faith", "text": "little-faiths",
-      "why": "8:26 is the disciples' oligopistoi, not the centurion's pistis" }
+    {
+      "unit": "unit-08",
+      "verse": 26,
+      "from": "faith",
+      "to": "little-faith",
+      "text": "little-faiths",
+      "why": "8:26 is the disciples' oligopistoi, not the centurion's pistis"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 22,
+      "from": "beget",
+      "to": "fulfill",
+      "text": "filled full"
+    }
   ],
-
   "retag_word": [
-    { "unit": "unit-01", "from": "name",  "to": "call", "match": "^call(ed|s)?$",
-      "why": "split naming: kaleō -> call, onoma -> name (U2 already keeps these apart)" },
-    { "unit": "unit-03", "from": "test",  "to": "slanderer", "match": "slander",
-      "why": "peirazō (test) and diabolos (the slanderer) are different words" },
-    { "unit": "unit-04", "from": "dark",  "to": "shadow", "match": "shadow",
-      "why": "skotia (darkness) and skia (shadow) — two words in the Isaiah 9 line" },
-    { "unit": "unit-07", "from": "way",   "to": "gate", "match": "gate",
-      "why": "hodos (road/way) and pylē (gate)" },
-    { "unit": "unit-07", "from": "build", "to": "rock", "match": "^rock$",
-      "why": "split the old build-rock bundle: oikodomeō -> build, petra -> rock" },
-    { "unit": "unit-07", "from": "do",    "to": "throw", "match": "throw",
-      "why": "the local `do` root (poieō) was wrongly applied to ekballō/ballō at 7:4,5,6,19,22 — 'throw out the beam', 'thrown into fire', 'cast out demons'. Move those to the throw thread; poieō spans (make/do/does/doing) stay `do`." },
-    { "unit": "unit-03", "from": "repent", "to": "metanoia", "match": ".*",
-      "why": "unit-03's local `repent` root (metanoeō/metanoia) is promoted to the global metanoia thread at the Unit 11 port (2026-09-10) — same word, John's proclamation is the thread's true open" }
+    {
+      "unit": "unit-01",
+      "from": "name",
+      "to": "call",
+      "match": "^call(ed|s)?$",
+      "why": "split naming: kaleō -> call, onoma -> name (U2 already keeps these apart)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "test",
+      "to": "slanderer",
+      "match": "slander",
+      "why": "peirazō (test) and diabolos (the slanderer) are different words"
+    },
+    {
+      "unit": "unit-04",
+      "from": "dark",
+      "to": "shadow",
+      "match": "shadow",
+      "why": "skotia (darkness) and skia (shadow) — two words in the Isaiah 9 line"
+    },
+    {
+      "unit": "unit-07",
+      "from": "way",
+      "to": "gate",
+      "match": "gate",
+      "why": "hodos (road/way) and pylē (gate)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "build",
+      "to": "rock",
+      "match": "^rock$",
+      "why": "split the old build-rock bundle: oikodomeō -> build, petra -> rock"
+    },
+    {
+      "unit": "unit-07",
+      "from": "do",
+      "to": "throw",
+      "match": "throw",
+      "why": "the local `do` root (poieō) was wrongly applied to ekballō/ballō at 7:4,5,6,19,22 — 'throw out the beam', 'thrown into fire', 'cast out demons'. Move those to the throw thread; poieō spans (make/do/does/doing) stay `do`."
+    },
+    {
+      "unit": "unit-03",
+      "from": "repent",
+      "to": "metanoia",
+      "match": ".*",
+      "why": "unit-03's local `repent` root (metanoeō/metanoia) is promoted to the global metanoia thread at the Unit 11 port (2026-09-10) — same word, John's proclamation is the thread's true open"
+    }
   ],
-
   "untag_word": [
-    { "unit": "unit-01", "root": "save",  "match": "jesus",
-      "why": "save = sōzō; 'Jesus' is a proper noun, not an occurrence of the verb" },
-    { "unit": "unit-01", "root": "david", "match": "anointed",
-      "why": "'Anointed' is christos, not David" },
-    { "unit": "unit-01", "root": "dream", "match": "angel",
-      "why": "dream = onar; 'angel of the Lord' is tracked separately if at all" },
-    { "unit": "unit-02", "root": "dream", "match": "angel",
-      "why": "same — onar only" },
-    { "unit": "unit-06", "root": "release", "match": "false step",
-      "why": "release = aphiēmi (the verb); paraptōma ('false steps') is its object" },
-    { "unit": "unit-07", "root": "eye",   "nomatch": "eye",
-      "why": "eye = ophthalmos only; drop the blepō renderings ('stare at', 'take it in', 'see clear through')" },
-    { "unit": "unit-07", "root": "build", "match": "found",
-      "why": "one Greek root per colour: 'founded' is themelioō, not oikodomeō" },
-    { "unit": "unit-06", "root": "wage",  "match": "in full",
-      "why": "one root per colour: 'have their wage in full' is apechō, not misthos" },
-    { "unit": "unit-06", "root": "wage",  "match": "pay .*back",
-      "why": "one root per colour: 'pay back' is apodidōmi, not misthos" },
-    { "unit": "unit-06", "root": "seen",  "nomatch": "gazed",
-      "why": "one root per colour: keep theaomai ('gazed at'); drop phainō / aphanizō / blepō" },
-    { "unit": "unit-05", "root": "said",  "match": ".",
-      "why": "drop — 'y'all heard that it was said' is a formula (akouō + legō), not a root" },
-    { "unit": "unit-05", "root": "isay",  "match": ".",
-      "why": "drop — 'but I say to y'all' is a phrase, not a root" },
-    { "unit": "unit-05", "root": "yall",  "match": ".",
-      "why": "drop — emphatic 'y'all' is a pronoun, not a lexical root" }
+    {
+      "unit": "unit-01",
+      "root": "save",
+      "match": "jesus",
+      "why": "save = sōzō; 'Jesus' is a proper noun, not an occurrence of the verb"
+    },
+    {
+      "unit": "unit-01",
+      "root": "david",
+      "match": "anointed",
+      "why": "'Anointed' is christos, not David"
+    },
+    {
+      "unit": "unit-01",
+      "root": "dream",
+      "match": "angel",
+      "why": "dream = onar; 'angel of the Lord' is tracked separately if at all"
+    },
+    {
+      "unit": "unit-02",
+      "root": "dream",
+      "match": "angel",
+      "why": "same — onar only"
+    },
+    {
+      "unit": "unit-06",
+      "root": "release",
+      "match": "false step",
+      "why": "release = aphiēmi (the verb); paraptōma ('false steps') is its object"
+    },
+    {
+      "unit": "unit-07",
+      "root": "eye",
+      "nomatch": "eye",
+      "why": "eye = ophthalmos only; drop the blepō renderings ('stare at', 'take it in', 'see clear through')"
+    },
+    {
+      "unit": "unit-07",
+      "root": "build",
+      "match": "found",
+      "why": "one Greek root per colour: 'founded' is themelioō, not oikodomeō"
+    },
+    {
+      "unit": "unit-06",
+      "root": "wage",
+      "match": "in full",
+      "why": "one root per colour: 'have their wage in full' is apechō, not misthos"
+    },
+    {
+      "unit": "unit-06",
+      "root": "wage",
+      "match": "pay .*back",
+      "why": "one root per colour: 'pay back' is apodidōmi, not misthos"
+    },
+    {
+      "unit": "unit-06",
+      "root": "seen",
+      "nomatch": "gazed",
+      "why": "one root per colour: keep theaomai ('gazed at'); drop phainō / aphanizō / blepō"
+    },
+    {
+      "unit": "unit-05",
+      "root": "said",
+      "match": ".",
+      "why": "drop — 'y'all heard that it was said' is a formula (akouō + legō), not a root"
+    },
+    {
+      "unit": "unit-05",
+      "root": "isay",
+      "match": ".",
+      "why": "drop — 'but I say to y'all' is a phrase, not a root"
+    },
+    {
+      "unit": "unit-05",
+      "root": "yall",
+      "match": ".",
+      "why": "drop — emphatic 'y'all' is a pronoun, not a lexical root"
+    }
   ],
-
   "unwrap": [
-    { "unit": "unit-01", "text": "deportation", "root": "beget",
-      "why": "author slip — metoikesia is not the begetting verb" }
+    {
+      "unit": "unit-01",
+      "text": "deportation",
+      "root": "beget",
+      "why": "author slip — metoikesia is not the begetting verb"
+    }
   ],
-
   "text": [
-    { "unit": "unit-08", "from": "demonized", "to": "demon-possessed",
-      "why": "'demonized' now reads as modern jargon" },
-    { "unit": "unit-08", "from": "data-root=\"faith\">faith</span>", "to": "data-root=\"faith\">trust</span>",
-      "why": "8:10 — default pistis to 'trust'; keeps the tag" },
-
-    { "unit": "unit-07", "from": "having authority — and not like their",
+    {
+      "unit": "unit-08",
+      "from": "demonized",
+      "to": "demon-possessed",
+      "why": "'demonized' now reads as modern jargon"
+    },
+    {
+      "unit": "unit-08",
+      "from": "data-root=\"faith\">faith</span>",
+      "to": "data-root=\"faith\">trust</span>",
+      "why": "8:10 — default pistis to 'trust'; keeps the tag"
+    },
+    {
+      "unit": "unit-07",
+      "from": "having authority — and not like their",
       "to": "having <span class=\"r\" data-root=\"authority\">authority</span> — and not like their",
-      "why": "7:29 exousia — the authority thread's opening verse (the old .star gold-italic motif mark was removed here)" },
-    { "unit": "unit-03", "from": "slanderer</span> leaves him",
+      "why": "7:29 exousia — the authority thread's opening verse (the old .star gold-italic motif mark was removed here)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "slanderer</span> leaves him",
       "to": "slanderer</span> <span class=\"r\" data-root=\"release\">leaves</span> him",
-      "why": "4:11 aphiesin 'then the slanderer leaves him' — pre-opening release; verse has no .n marker so add can't reach it" }
+      "why": "4:11 aphiesin 'then the slanderer leaves him' — pre-opening release; verse has no .n marker so add can't reach it"
+    }
   ]
 }

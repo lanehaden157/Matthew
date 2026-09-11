@@ -259,11 +259,6 @@
           "translit": "huios",
           "gloss": "Son"
         },
-        "right": {
-          "color": "#b07a1e",
-          "translit": "dikaiosynē",
-          "gloss": "righteousness"
-        },
         "slanderer": {
           "color": "#4a1c2a",
           "translit": "diabolos",
@@ -418,11 +413,6 @@
           "color": "#3f7d3a",
           "translit": "merimnaō",
           "gloss": "be pulled apart with care"
-        },
-        "right": {
-          "color": "#9c2f8f",
-          "translit": "dikaiosynē",
-          "gloss": "right-doing"
         },
         "seek": {
           "color": "#9c4f1c",

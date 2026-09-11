@@ -2,9 +2,9 @@
    Plain ES module, no build step. Paths are relative so it works from a GitHub
    Pages subpath. */
 
-import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=33";
-import { enhanceSpotlights } from "./spotlight.js?v=33";
-import { renderSearch } from "./search.js?v=33";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=35";
+import { enhanceSpotlights } from "./spotlight.js?v=35";
+import { renderSearch } from "./search.js?v=35";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 

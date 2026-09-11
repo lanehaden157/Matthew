@@ -988,6 +988,468 @@
         }
       ],
       "note": "eudokēsa — the Father's voice at the baptism (3:17) is the thread's true open; the same word recurs in Jesus' prayer at 11:26."
+    },
+    {
+      "id": "raise",
+      "root": "raise",
+      "translit": "egerō",
+      "gloss": "raise up, rouse from lying down",
+      "color": "#9e392d",
+      "opens": {
+        "unit": 1,
+        "ref": "1:24"
+      },
+      "payoffs": [
+        {
+          "unit": 8,
+          "ref": "8:15",
+          "note": "the first healing-as-raising"
+        },
+        {
+          "unit": 9,
+          "ref": "9:25",
+          "note": "the ruler's daughter raised"
+        },
+        {
+          "unit": 17,
+          "ref": "16:21",
+          "note": "must be raised on the third day — the verb turns toward the resurrection"
+        },
+        {
+          "unit": 28,
+          "ref": "28:6-7",
+          "note": "he is raised, just as he said"
+        }
+      ],
+      "note": "egerō spans the mundane (get up, rouse from sleep, 1:24) and the resurrection sense it grows into. Every occurrence tagged; the trajectory is 1:24 -> the healings -> 16:21 -> the empty tomb.",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "peace",
+      "root": "peace",
+      "translit": "eirēnē",
+      "gloss": "peace",
+      "color": "#603a2e",
+      "opens": {
+        "unit": 5,
+        "ref": "5:9"
+      },
+      "payoffs": [
+        {
+          "unit": 10,
+          "ref": "10:13, 34",
+          "note": "peace given or withheld at the threshold, then 'I didn't come to bring peace but a sword'"
+        }
+      ],
+      "note": "'Blessed are the peacemakers' (5:9) sets up the mission discourse's harder word: the peace a household may not deserve, and the sword Jesus says he brings instead (10:34).",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "good-news",
+      "root": "good-news",
+      "translit": "euangelion",
+      "gloss": "good news / gospel",
+      "color": "#7e4424",
+      "opens": {
+        "unit": 4,
+        "ref": "4:23"
+      },
+      "payoffs": [
+        {
+          "unit": 11,
+          "ref": "11:5",
+          "note": "'good news is proclaimed to the poor' — the answer to John's question"
+        },
+        {
+          "unit": 24,
+          "ref": "24:14"
+        },
+        {
+          "unit": 26,
+          "ref": "26:13"
+        }
+      ],
+      "note": "euangelion — the summary refrain of 4:23/9:35 becomes John's own answer at 11:5, then a global horizon (24:14) and the woman's memorial (26:13).",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "wage",
+      "root": "wage",
+      "translit": "misthos",
+      "gloss": "wage / reward",
+      "color": "#968d35",
+      "opens": {
+        "unit": 5,
+        "ref": "5:12"
+      },
+      "payoffs": [
+        {
+          "unit": 6,
+          "ref": "6:1-16",
+          "note": "the reward already paid in full — showy piety's wage is the applause it got"
+        },
+        {
+          "unit": 10,
+          "ref": "10:41-42",
+          "note": "a prophet's wage, a righteous person's wage, a cup of water's wage"
+        }
+      ],
+      "note": "misthos — 'great is your wage in the skies' (5:12) sets the terms the Sermon keeps returning to: a wage that can be spent early (6:1-16) or never lost (10:42).",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "father",
+      "root": "father",
+      "translit": "patēr",
+      "gloss": "Father",
+      "color": "#5b6925",
+      "opens": {
+        "unit": 5,
+        "ref": "5:16"
+      },
+      "payoffs": [
+        {
+          "unit": 6,
+          "ref": "6:9",
+          "note": "'Our Father' — the prayer itself"
+        },
+        {
+          "unit": 11,
+          "ref": "11:25-27",
+          "note": "the mutual knowing of Father and Son"
+        }
+      ],
+      "note": "patēr — tagged at every occurrence including the ordinary human sense (2:22, Herod's father); the tracked thread proper opens at 5:16, 'your Father who is in the skies,' Matthew's characteristic address for God.",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "righteous",
+      "root": "righteous",
+      "translit": "dikaios · dikaiosynē",
+      "gloss": "righteous(ness)",
+      "color": "#829e2d",
+      "opens": {
+        "unit": 1,
+        "ref": "1:19"
+      },
+      "payoffs": [
+        {
+          "unit": 3,
+          "ref": "3:15",
+          "note": "'fulfill all righteousness' — at the baptism"
+        },
+        {
+          "unit": 5,
+          "ref": "5:6, 10, 20; 6:33"
+        }
+      ],
+      "note": "dikaios / dikaiosynē — Joseph 'a righteous man' (1:19) opens it; the Sermon makes righteousness the thing hungered for, persecuted for, and exceeded (5:6-20), then sought first (6:33).",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "seek",
+      "root": "seek",
+      "translit": "zēteō",
+      "gloss": "seek",
+      "color": "#4f9e2d",
+      "opens": {
+        "unit": 2,
+        "ref": "2:13"
+      },
+      "payoffs": [
+        {
+          "unit": 6,
+          "ref": "6:33",
+          "note": "'seek first the kingdom' — reversing Herod's seeking"
+        },
+        {
+          "unit": 7,
+          "ref": "7:7",
+          "note": "'seek, and you will find'"
+        }
+      ],
+      "note": "zēteō — Herod seeks the child to destroy him (2:13); the Sermon turns the same verb toward the kingdom (6:33) and toward prayer itself (7:7).",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "spirit",
+      "root": "spirit",
+      "translit": "pneuma",
+      "gloss": "spirit",
+      "color": "#2d9e4f",
+      "opens": {
+        "unit": 1,
+        "ref": "1:18"
+      },
+      "payoffs": [
+        {
+          "unit": 3,
+          "ref": "3:16",
+          "note": "the Spirit descending at the baptism"
+        },
+        {
+          "unit": 5,
+          "ref": "5:3",
+          "note": "'poor in spirit'"
+        },
+        {
+          "unit": 12,
+          "ref": "12:28, 31-32"
+        }
+      ],
+      "note": "pneuma — conceived of the Holy Spirit (1:18) to the Spirit descending like a dove (3:16) to the Sermon's first beatitude (5:3) to the unforgivable sin against the Spirit (12:31-32).",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "kingdom",
+      "root": "kingdom",
+      "translit": "basileia",
+      "gloss": "kingdom",
+      "color": "#2e605d",
+      "opens": {
+        "unit": 3,
+        "ref": "3:2"
+      },
+      "payoffs": [
+        {
+          "unit": 4,
+          "ref": "4:17",
+          "note": "Jesus repeats John's proclamation verbatim at the apo-tote hinge"
+        },
+        {
+          "unit": 5,
+          "ref": "5:3, 10, 19-20"
+        },
+        {
+          "unit": 13,
+          "ref": "13:1-52",
+          "note": "the kingdom parables"
+        }
+      ],
+      "note": "basileia — 'the kingdom of the skies has drawn near' (3:2, 4:17) governs the Sermon's beatitudes and the parables to come. Distinct from basileus 'king' (10:18, 17:25, 18:23, 22:2), a different word not tracked here.",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "evil",
+      "root": "evil",
+      "translit": "ponēros",
+      "gloss": "evil / the evil one",
+      "color": "#2e3d60",
+      "opens": {
+        "unit": 6,
+        "ref": "6:13"
+      },
+      "payoffs": [
+        {
+          "unit": 7,
+          "ref": "7:11, 17-18",
+          "note": "evil people who still know how to give good gifts; the tree known by its fruit"
+        },
+        {
+          "unit": 13,
+          "ref": "13:19, 38",
+          "note": "the evil one snatches the seed; the sons of the evil one"
+        }
+      ],
+      "note": "ponēros — tagged from its first occurrence (5:11) but the tracked thread proper opens at the Lord's Prayer's 'deliver us from the evil one' (6:13), which the Sermon and the parables keep answering.",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "gehenna",
+      "root": "gehenna",
+      "translit": "geenna",
+      "gloss": "Gehenna (hell)",
+      "color": "#252869",
+      "opens": {
+        "unit": 5,
+        "ref": "5:22"
+      },
+      "payoffs": [
+        {
+          "unit": 10,
+          "ref": "10:28",
+          "note": "fear the one who can destroy both soul and body in Gehenna"
+        },
+        {
+          "unit": 23,
+          "ref": "23:15, 33"
+        }
+      ],
+      "note": "geenna — the Hinnom Valley's name for judgment, first at 5:22 (the Sermon's escalating anger-warnings), returning at 10:28 and the woes of 23.",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "test",
+      "root": "test",
+      "translit": "peirazō",
+      "gloss": "test / tempt",
+      "color": "#602e51",
+      "opens": {
+        "unit": 3,
+        "ref": "4:3"
+      },
+      "payoffs": [
+        {
+          "unit": 16,
+          "ref": "16:1"
+        },
+        {
+          "unit": 19,
+          "ref": "19:3"
+        },
+        {
+          "unit": 22,
+          "ref": "22:18, 35"
+        }
+      ],
+      "note": "peirazō — 'the tester' approaches in the wilderness (4:3); the same verb returns whenever the Pharisees try to trap Jesus.",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "fulfill",
+      "root": "fulfill",
+      "translit": "plēroō",
+      "gloss": "fill full / fulfill",
+      "color": "#64872f",
+      "opens": {
+        "unit": 1,
+        "ref": "1:22"
+      },
+      "payoffs": [
+        {
+          "unit": 3,
+          "ref": "3:15",
+          "note": "'fulfill all righteousness'"
+        },
+        {
+          "unit": 5,
+          "ref": "5:17",
+          "note": "'not to abolish but to fulfill'"
+        }
+      ],
+      "note": "plēroō — the formula-quotation verb (1:22 and on) becomes Jesus' own stated relationship to the Law and the Prophets (5:17).",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "worship",
+      "root": "worship",
+      "translit": "proskyneō",
+      "gloss": "worship, bow down",
+      "color": "#3a602e",
+      "opens": {
+        "unit": 2,
+        "ref": "2:2"
+      },
+      "payoffs": [
+        {
+          "unit": 3,
+          "ref": "4:9-10",
+          "note": "the same verb the devil demands and the Deuteronomy reply refuses him"
+        },
+        {
+          "unit": 28,
+          "ref": "28:9, 17"
+        }
+      ],
+      "note": "proskyneō — the magi's worship (2:2, 2:11) is what the devil demands for himself (4:9) and Jesus refuses him with Deut 6:13; the risen Jesus receives it again at 28:9, 17.",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "call",
+      "root": "call",
+      "translit": "kaleō",
+      "gloss": "call, name",
+      "color": "#2d9e82",
+      "opens": {
+        "unit": 1,
+        "ref": "1:21"
+      },
+      "payoffs": [
+        {
+          "unit": 9,
+          "ref": "9:13",
+          "note": "'I didn't come to call the righteous but sinners'"
+        },
+        {
+          "unit": 22,
+          "ref": "22:3-9",
+          "note": "the wedding banquet's invited guests"
+        },
+        {
+          "unit": 23,
+          "ref": "23:8-10",
+          "note": "'do not be called rabbi'"
+        }
+      ],
+      "note": "kaleō — the naming at 1:21 ('you shall call his name Jesus') becomes the calling of the unworthy (9:13) and the vocabulary of the kingdom's invitations. Distinct from prefixed compounds (parakaleō 'urge', proskaleomai 'summon', ekklēsia 'assembly'), each its own word.",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "withdraw",
+      "root": "withdraw",
+      "translit": "anachōreō",
+      "gloss": "withdraw",
+      "color": "#2d9e9e",
+      "opens": {
+        "unit": 2,
+        "ref": "2:12"
+      },
+      "payoffs": [
+        {
+          "unit": 2,
+          "ref": "2:13-14, 22"
+        },
+        {
+          "unit": 4,
+          "ref": "4:12"
+        },
+        {
+          "unit": 9,
+          "ref": "9:24"
+        }
+      ],
+      "note": "anachōreō — the magi withdraw by another road (2:12); Joseph withdraws to Egypt then Nazareth (2:13-22); Jesus withdraws at news of John's arrest (4:12) and before the ruler's daughter is raised (9:24).",
+      "status": "open",
+      "tagged": true
+    },
+    {
+      "id": "worthy",
+      "root": "worthy",
+      "translit": "axios",
+      "gloss": "worthy, of matching weight",
+      "color": "#2d449e",
+      "opens": {
+        "unit": 3,
+        "ref": "3:8"
+      },
+      "payoffs": [
+        {
+          "unit": 10,
+          "ref": "10:10-11, 37-38"
+        },
+        {
+          "unit": 22,
+          "ref": "22:8"
+        }
+      ],
+      "note": "axios — fruit worthy of repentance (3:8) becomes the mission discourse's repeated test of who and what is worthy (10:10-38).",
+      "status": "open",
+      "tagged": true
     }
   ]
 }

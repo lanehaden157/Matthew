@@ -1,7 +1,7 @@
 {
   "unit-01": {
     "beget": {
-      "count": 48,
+      "count": 47,
       "verses": [
         1,
         2,
@@ -21,8 +21,7 @@
         16,
         17,
         18,
-        20,
-        22
+        20
       ],
       "hits": [
         {
@@ -306,31 +305,18 @@
           "pre": "…fear to take alongside Mary your wife, for the [thing] ",
           "hit": "begotten",
           "post": " in her is from [the] Holy Spirit;…"
-        },
-        {
-          "v": 22,
-          "pre": "…was spoken by [the] Lord through the prophet might be ",
-          "hit": "filled full",
-          "post": ", saying:…"
         }
       ],
-      "total": 48
+      "total": 47
     },
     "call": {
-      "count": 4,
+      "count": 3,
       "verses": [
-        16,
         21,
         23,
         25
       ],
       "hits": [
-        {
-          "v": 16,
-          "pre": "…husband of Mary, from whom was begotten Jesus, the one ",
-          "hit": "called",
-          "post": " Anointed.…"
-        },
         {
           "v": 21,
           "pre": "…and she will bear a son, and you shall ",
@@ -350,7 +336,7 @@
           "post": " his name Jesus.…"
         }
       ],
-      "total": 4
+      "total": 3
     },
     "david": {
       "count": 6,
@@ -393,7 +379,7 @@
         },
         {
           "v": 20,
-          "pre": "…ord appeared to him in a dream, saying: Joseph, son of ",
+          "pre": "…weh appeared to him in a dream, saying: Joseph, son of ",
           "hit": "David",
           "post": ", do not fear to take alongside Mary your wife, for the…"
         }
@@ -408,7 +394,7 @@
       "hits": [
         {
           "v": 20,
-          "pre": "…hings — behold, an angel of [the] Lord appeared to him ",
+          "pre": "…se things — behold, an angel of Yahweh appeared to him ",
           "hit": "in a dream",
           "post": ", saying: Joseph, son of David, do not fear to take alo…"
         }
@@ -426,6 +412,21 @@
           "pre": "…o him in a dream, saying: Joseph, son of David, do not ",
           "hit": "fear",
           "post": " to take alongside Mary your wife, for the [thing] bego…"
+        }
+      ],
+      "total": 1
+    },
+    "fulfill": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…what was spoken by Yahweh through the prophet might be ",
+          "hit": "filled full",
+          "post": ", saying:…"
         }
       ],
       "total": 1
@@ -466,6 +467,36 @@
         }
       ],
       "total": 3
+    },
+    "raise": {
+      "count": 1,
+      "verses": [
+        24
+      ],
+      "hits": [
+        {
+          "v": 24,
+          "pre": "…And Joseph, having been ",
+          "hit": "raised",
+          "post": " from sleep, did as the angel of Yahweh ordered him, an…"
+        }
+      ],
+      "total": 1
+    },
+    "righteous": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…And Joseph her husband, being ",
+          "hit": "righteous",
+          "post": " and not willing to expose her, resolved to release her…"
+        }
+      ],
+      "total": 1
     },
     "save": {
       "count": 1,
@@ -580,7 +611,7 @@
         },
         {
           "v": 15,
-          "pre": "…the Lord through the prophet, saying, \"Out of Egypt I ",
+          "pre": "…by Yahweh through the prophet, saying, \"Out of Egypt I ",
           "hit": "called",
           "post": " my son.\" (Hos 11:1)…"
         },
@@ -684,6 +715,21 @@
       ],
       "total": 2
     },
+    "father": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…aring that Archelaus reigns over Judea in place of his ",
+          "hit": "father",
+          "post": " Herod, he was afraid to go off there; and being warned…"
+        }
+      ],
+      "total": 1
+    },
     "fear": {
       "count": 1,
       "verses": [
@@ -711,7 +757,7 @@
           "v": 15,
           "pre": "…and was there until the end of Herod; so that might be ",
           "hit": "filled-full",
-          "post": " what was spoken by the Lord through the prophet, sayin…"
+          "post": " what was spoken by Yahweh through the prophet, saying,…"
         },
         {
           "v": 17,
@@ -772,6 +818,64 @@
       ],
       "total": 1
     },
+    "raise": {
+      "count": 4,
+      "verses": [
+        13,
+        14,
+        20,
+        21
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…angel of Yahweh appears in a dream to Joseph, saying, \"",
+          "hit": "Rising",
+          "post": ", take the child and his mother and flee into Egypt, an…"
+        },
+        {
+          "v": 14,
+          "pre": "…And ",
+          "hit": "rising",
+          "post": " he took the child and his mother by night and withdrew…"
+        },
+        {
+          "v": 20,
+          "pre": "…saying, \"",
+          "hit": "Rising",
+          "post": ", take the child and his mother and go into the land of…"
+        },
+        {
+          "v": 21,
+          "pre": "…And ",
+          "hit": "rising",
+          "post": " he took the child and his mother and entered into the…"
+        }
+      ],
+      "total": 4
+    },
+    "seek": {
+      "count": 2,
+      "verses": [
+        13,
+        20
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…, and be there until I tell you; for Herod is about to ",
+          "hit": "seek",
+          "post": " the child, to destroy it.\"…"
+        },
+        {
+          "v": 20,
+          "pre": "…d his mother and go into the land of Israel; for those ",
+          "hit": "seeking",
+          "post": " the child's life have died.\" (Exod 4:19)…"
+        }
+      ],
+      "total": 2
+    },
     "urge": {
       "count": 1,
       "verses": [
@@ -806,7 +910,7 @@
           "v": 13,
           "pre": "…And when they had ",
           "hit": "withdrawn",
-          "post": ", behold, an angel of the Lord appears in a dream to Jo…"
+          "post": ", behold, an angel of Yahweh appears in a dream to Jose…"
         },
         {
           "v": 14,
@@ -854,6 +958,21 @@
     }
   },
   "unit-03": {
+    "father": {
+      "count": 1,
+      "verses": [
+        9
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…t presume to say among yourselves, 'We have Abraham as ",
+          "hit": "father",
+          "post": ".' For I tell y'all that God is able from these stones…"
+        }
+      ],
+      "total": 1
+    },
     "fulfill": {
       "count": 1,
       "verses": [
@@ -983,6 +1102,21 @@
       ],
       "total": 3
     },
+    "raise": {
+      "count": 1,
+      "verses": [
+        9
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…For I tell y'all that God is able from these stones to ",
+          "hit": "raise",
+          "post": " up children for Abraham.…"
+        }
+      ],
+      "total": 1
+    },
     "release": {
       "count": 3,
       "verses": [
@@ -1011,7 +1145,7 @@
       ],
       "total": 3
     },
-    "right": {
+    "righteous": {
       "count": 1,
       "verses": [
         15
@@ -1159,7 +1293,7 @@
           "v": 7,
           "pre": "…said to him, \"Again it stands written: 'You shall not ",
           "hit": "test-out",
-          "post": " the Lord your God.'\" (Deut 6:16)…"
+          "post": " Yahweh your God.'\" (Deut 6:16)…"
         }
       ],
       "total": 3
@@ -1218,7 +1352,7 @@
           "v": 3,
           "pre": "…the prophet, saying: \"A voice of one crying-out in the ",
           "hit": "wilderness",
-          "post": " — prepare the way of the Lord, make straight his paths…"
+          "post": " — prepare the way of Yahweh, make straight his paths.\"…"
         },
         {
           "v": 1,
@@ -1244,12 +1378,27 @@
         },
         {
           "v": 10,
-          "pre": "…y! For it stands written: 'The Lord your God you shall ",
+          "pre": "…ary! For it stands written: 'Yahweh your God you shall ",
           "hit": "worship",
           "post": ", and him only shall you serve.'\" (Deut 6:13)…"
         }
       ],
       "total": 4
+    },
+    "worthy": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…So then, produce fruit ",
+          "hit": "worthy",
+          "post": " of the turning.…"
+        }
+      ],
+      "total": 1
     }
   },
   "unit-04": {
@@ -1264,6 +1413,21 @@
           "pre": "",
           "hit": "From then",
           "post": " Jesus began to proclaim and to say: “Repent, for the k…"
+        }
+      ],
+      "total": 1
+    },
+    "call": {
+      "count": 1,
+      "verses": [
+        21
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…ith Zebedaios their father, mending their nets; and he ",
+          "hit": "called",
+          "post": " them.…"
         }
       ],
       "total": 1
@@ -1297,6 +1461,28 @@
         }
       ],
       "total": 3
+    },
+    "father": {
+      "count": 2,
+      "verses": [
+        21,
+        22
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…Iōannēs his brother — in the boat with Zebedaios their ",
+          "hit": "father",
+          "post": ", mending their nets; and he called them.…"
+        },
+        {
+          "v": 22,
+          "pre": "…And they, immediately leaving the boat and their ",
+          "hit": "father",
+          "post": ", followed him.…"
+        }
+      ],
+      "total": 2
     },
     "fish": {
       "count": 2,
@@ -1348,6 +1534,36 @@
         }
       ],
       "total": 4
+    },
+    "fulfill": {
+      "count": 1,
+      "verses": [
+        14
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…at what was spoken through Ēsaias the prophet might be ",
+          "hit": "fulfilled",
+          "post": ", saying:…"
+        }
+      ],
+      "total": 1
+    },
+    "good-news": {
+      "count": 1,
+      "verses": [
+        23
+      ],
+      "hits": [
+        {
+          "v": 23,
+          "pre": "…ilee, teaching in their synagogues and proclaiming the ",
+          "hit": "good-news",
+          "post": " of the kingdom, and healing every disease and every si…"
+        }
+      ],
+      "total": 1
     },
     "hand-over": {
       "count": 1,
@@ -1578,6 +1794,34 @@
     }
   },
   "unit-05": {
+    "call": {
+      "count": 3,
+      "verses": [
+        9,
+        19
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…Blessed are the peacemakers, for they shall be ",
+          "hit": "called",
+          "post": " sons of God.…"
+        },
+        {
+          "v": 19,
+          "pre": "…east of these commandments and so teaches men shall be ",
+          "hit": "called",
+          "post": " least in the kingdom of the skies; but whoever does an…"
+        },
+        {
+          "v": 19,
+          "pre": "…east of these commandments and so teaches men shall be ",
+          "hit": "called",
+          "post": " least in the kingdom of the skies; but whoever does an…"
+        }
+      ],
+      "total": 3
+    },
     "evil": {
       "count": 4,
       "verses": [
@@ -1664,6 +1908,21 @@
         }
       ],
       "total": 2
+    },
+    "fulfill": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…he Law or the Prophets; I came not to tear down but to ",
+          "hit": "fulfill",
+          "post": ".…"
+        }
+      ],
+      "total": 1
     },
     "gehenna": {
       "count": 3,
@@ -1861,6 +2120,21 @@
       ],
       "total": 1
     },
+    "peace": {
+      "count": 1,
+      "verses": [
+        9
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…Blessed are the ",
+          "hit": "peacemakers",
+          "post": ", for they shall be called sons of God.…"
+        }
+      ],
+      "total": 1
+    },
     "release": {
       "count": 2,
       "verses": [
@@ -1884,11 +2158,12 @@
       "total": 2
     },
     "righteous": {
-      "count": 3,
+      "count": 4,
       "verses": [
         6,
         10,
-        20
+        20,
+        45
       ],
       "hits": [
         {
@@ -1908,9 +2183,15 @@
           "pre": "…For I say to y'all that unless y'all's ",
           "hit": "righteousness",
           "post": " abounds beyond that of the scribes and Pharisees, y'al…"
+        },
+        {
+          "v": 45,
+          "pre": "…his sun rise on the evil and the good and rains on the ",
+          "hit": "just",
+          "post": " and the unjust.…"
         }
       ],
-      "total": 3
+      "total": 4
     },
     "skandalon": {
       "count": 2,
@@ -1933,6 +2214,21 @@
         }
       ],
       "total": 2
+    },
+    "spirit": {
+      "count": 1,
+      "verses": [
+        3
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…Blessed are the poor in the ",
+          "hit": "spirit",
+          "post": ", for theirs is the kingdom of the skies.…"
+        }
+      ],
+      "total": 1
     },
     "throw": {
       "count": 5,
@@ -1990,6 +2286,28 @@
         }
       ],
       "total": 1
+    },
+    "wage": {
+      "count": 2,
+      "verses": [
+        12,
+        46
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…Rejoice and exult, for y'all's ",
+          "hit": "reward",
+          "post": " is much in the skies; for so they persecuted the proph…"
+        },
+        {
+          "v": 46,
+          "pre": "…For if y'all love those loving y'all, what ",
+          "hit": "reward",
+          "post": " have y'all? Do not even the tax collectors do the same…"
+        }
+      ],
+      "total": 2
     },
     "whole": {
       "count": 4,
@@ -2076,6 +2394,21 @@
         }
       ],
       "total": 6
+    },
+    "evil": {
+      "count": 1,
+      "verses": [
+        23
+      ],
+      "hits": [
+        {
+          "v": 23,
+          "pre": "…but if your eye is ",
+          "hit": "evil",
+          "post": ", your whole body will be full of darkness. If, then, t…"
+        }
+      ],
+      "total": 2
     },
     "father": {
       "count": 11,
@@ -2207,6 +2540,21 @@
       ],
       "total": 6
     },
+    "kingdom": {
+      "count": 1,
+      "verses": [
+        33
+      ],
+      "hits": [
+        {
+          "v": 33,
+          "pre": "…But seek first the ",
+          "hit": "kingdom",
+          "post": " and his right-doing, and all these things will be adde…"
+        }
+      ],
+      "total": 2
+    },
     "light": {
       "count": 2,
       "verses": [
@@ -2329,7 +2677,7 @@
       ],
       "total": 8
     },
-    "right": {
+    "righteous": {
       "count": 2,
       "verses": [
         1,
@@ -2386,6 +2734,12 @@
           "post": " by them; otherwise y’all have no wage alongside y’all’…"
         }
       ],
+      "total": 1
+    },
+    "test": {
+      "count": 0,
+      "verses": [],
+      "hits": [],
       "total": 1
     },
     "throw": {
@@ -2459,9 +2813,12 @@
       "total": 5
     },
     "wage": {
-      "count": 1,
+      "count": 4,
       "verses": [
-        1
+        1,
+        2,
+        5,
+        16
       ],
       "hits": [
         {
@@ -2469,9 +2826,27 @@
           "pre": "…end of being gazed at by them; otherwise y’all have no ",
           "hit": "wage",
           "post": " alongside y’all’s Father, the one in the skies.…"
+        },
+        {
+          "v": 2,
+          "pre": "…rified by people. Amen I say to y’all: they have their ",
+          "hit": "wage",
+          "post": " in full.…"
+        },
+        {
+          "v": 5,
+          "pre": "…appear to people. Amen I say to y’all: they have their ",
+          "hit": "wage",
+          "post": " in full.…"
+        },
+        {
+          "v": 16,
+          "pre": "…eople as fasting. Amen I say to y’all: they have their ",
+          "hit": "wage",
+          "post": " in full.…"
         }
       ],
-      "total": 1
+      "total": 4
     }
   },
   "unit-07": {
@@ -2665,6 +3040,35 @@
       ],
       "total": 3
     },
+    "evil": {
+      "count": 3,
+      "verses": [
+        11,
+        17,
+        18
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…So if y'all, being ",
+          "hit": "evil",
+          "post": ", know how to give good gifts to y'all's children, how…"
+        },
+        {
+          "v": 17,
+          "pre": "…good tree makes fine fruit, but the rotten tree makes ",
+          "hit": "evil",
+          "post": " fruit.…"
+        },
+        {
+          "v": 18,
+          "pre": "…A good tree cannot make ",
+          "hit": "evil",
+          "post": " fruits, and a rotten tree cannot make fine fruits.…"
+        }
+      ],
+      "total": 3
+    },
     "eye": {
       "count": 6,
       "verses": [
@@ -2711,6 +3115,28 @@
         }
       ],
       "total": 6
+    },
+    "father": {
+      "count": 2,
+      "verses": [
+        11,
+        21
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…gifts to y'all's children, how much more will y'all's ",
+          "hit": "Father",
+          "post": " — the one in the skies — give good things to those ask…"
+        },
+        {
+          "v": 21,
+          "pre": "…ingdom of the skies — but the one doing the will of my ",
+          "hit": "Father",
+          "post": ", the one in the skies.…"
+        }
+      ],
+      "total": 2
     },
     "foolish": {
       "count": 1,
@@ -2850,6 +3276,21 @@
       ],
       "total": 5
     },
+    "kingdom": {
+      "count": 1,
+      "verses": [
+        21
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…yone saying to me \"Master! Master!\" will come into the ",
+          "hit": "kingdom",
+          "post": " of the skies — but the one doing the will of my Father…"
+        }
+      ],
+      "total": 1
+    },
     "law-prophets": {
       "count": 1,
       "verses": [
@@ -2940,6 +3381,28 @@
           "pre": "…— and it did not fall, for it had been founded on the ",
           "hit": "rock",
           "post": ".…"
+        }
+      ],
+      "total": 2
+    },
+    "seek": {
+      "count": 2,
+      "verses": [
+        7,
+        8
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "…Ask — and it will be given to y'all. ",
+          "hit": "Seek",
+          "post": " — and y'all will find. Knock — and it will be opened t…"
+        },
+        {
+          "v": 8,
+          "pre": "…For everyone asking receives, and the one ",
+          "hit": "seeking",
+          "post": " finds, and to the one knocking it will be opened.…"
         }
       ],
       "total": 2
@@ -3056,7 +3519,7 @@
       "hits": [
         {
           "v": 2,
-          "pre": "…ying, \"Lord, if you are willing, you have the power to ",
+          "pre": "…ng, \"Master, if you are willing, you have the power to ",
           "hit": "cleanse",
           "post": " me.\"…"
         },
@@ -3096,6 +3559,21 @@
         }
       ],
       "total": 3
+    },
+    "father": {
+      "count": 1,
+      "verses": [
+        21
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…said to him, \"Master, let me first go off and bury my ",
+          "hit": "father",
+          "post": ".\"…"
+        }
+      ],
+      "total": 1
     },
     "follow": {
       "count": 5,
@@ -3140,6 +3618,43 @@
       ],
       "total": 7
     },
+    "fulfill": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…at what was spoken through Isaiah the prophet might be ",
+          "hit": "filled full",
+          "post": ": \"He himself took our weaknesses and carried off our d…"
+        }
+      ],
+      "total": 1
+    },
+    "kingdom": {
+      "count": 2,
+      "verses": [
+        11,
+        12
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…cline at table with Abraham and Isaac and Jacob in the ",
+          "hit": "kingdom",
+          "post": " of the skies,…"
+        },
+        {
+          "v": 12,
+          "pre": "…but the sons of the ",
+          "hit": "kingdom",
+          "post": " will be thrown out into the darkness outside; there wi…"
+        }
+      ],
+      "total": 2
+    },
     "little-faith": {
       "count": 1,
       "verses": [
@@ -3163,7 +3678,7 @@
       "hits": [
         {
           "v": 25,
-          "pre": "…up they roused him, saying, \"Lord, save — we are being ",
+          "pre": "…they roused him, saying, \"Master, save — we are being ",
           "hit": "destroyed",
           "post": "!\"…"
         }
@@ -3188,7 +3703,7 @@
           "v": 25,
           "pre": "…And coming up they ",
           "hit": "roused",
-          "post": " him, saying, \"Lord, save — we are being destroyed!\"…"
+          "post": " him, saying, \"Master, save — we are being destroyed!\"…"
         },
         {
           "v": 26,
@@ -3229,7 +3744,7 @@
       "hits": [
         {
           "v": 25,
-          "pre": "…And coming up they roused him, saying, \"Lord, ",
+          "pre": "…And coming up they roused him, saying, \"Master, ",
           "hit": "save",
           "post": " — we are being destroyed!\"…"
         }
@@ -3302,6 +3817,21 @@
       ],
       "total": 1
     },
+    "spirit": {
+      "count": 1,
+      "verses": [
+        16
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…ht him many who were demon-possessed; and he threw the ",
+          "hit": "spirits",
+          "post": " out with a word, and healed all who were in a bad way…"
+        }
+      ],
+      "total": 1
+    },
     "throw": {
       "count": 5,
       "verses": [
@@ -3314,7 +3844,7 @@
       "hits": [
         {
           "v": 6,
-          "pre": "…and saying, \"Lord, my boy has been ",
+          "pre": "…and saying, \"Master, my boy has been ",
           "hit": "thrown down",
           "post": " in the house, paralyzed, dreadfully tormented.\"…"
         },
@@ -3417,6 +3947,21 @@
         }
       ],
       "total": 5
+    },
+    "worship": {
+      "count": 1,
+      "verses": [
+        2
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…And look — a leprous man, coming up, kept ",
+          "hit": "bowing low",
+          "post": " before him, saying, \"Master, if you are willing, you h…"
+        }
+      ],
+      "total": 1
     }
   },
   "unit-09": {
@@ -3441,6 +3986,36 @@
         }
       ],
       "total": 3
+    },
+    "call": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…ove and not sacrifice.' (Hos 6:6) For I didn't come to ",
+          "hit": "call",
+          "post": " the upright, but sinners.\"…"
+        }
+      ],
+      "total": 1
+    },
+    "evil": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…knowing their thoughts, said: \"Why are y'all thinking ",
+          "hit": "evil",
+          "post": " in y'all's hearts?…"
+        }
+      ],
+      "total": 1
     },
     "faith": {
       "count": 4,
@@ -3467,7 +4042,7 @@
           "v": 28,
           "pre": "…men came up to him, and Jesus says to them: \"Do y'all ",
           "hit": "trust",
-          "post": " that I'm able to do this?\" They say to him: \"Yes, Lord…"
+          "post": " that I'm able to do this?\" They say to him: \"Yes, Mast…"
         },
         {
           "v": 29,
@@ -3580,6 +4155,49 @@
       ],
       "total": 3
     },
+    "raise": {
+      "count": 5,
+      "verses": [
+        5,
+        6,
+        7,
+        19,
+        25
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…s easier — to say 'Your sins are released,' or to say '",
+          "hit": "Get up",
+          "post": " and walk'?…"
+        },
+        {
+          "v": 6,
+          "pre": "…to release sins\" — then he says to the paralyzed man: \"",
+          "hit": "Get up",
+          "post": ", pick up your mat, and go away to your house.\"…"
+        },
+        {
+          "v": 7,
+          "pre": "…And ",
+          "hit": "getting up",
+          "post": ", he went away to his house.…"
+        },
+        {
+          "v": 19,
+          "pre": "…And Jesus ",
+          "hit": "got up",
+          "post": " and began following him, and his disciples too.…"
+        },
+        {
+          "v": 25,
+          "pre": "…in and took hold of her hand, and the little girl was ",
+          "hit": "raised",
+          "post": ".…"
+        }
+      ],
+      "total": 5
+    },
     "release": {
       "count": 3,
       "verses": [
@@ -3608,6 +4226,21 @@
         }
       ],
       "total": 4
+    },
+    "righteous": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…ot sacrifice.' (Hos 6:6) For I didn't come to call the ",
+          "hit": "upright",
+          "post": ", but sinners.\"…"
+        }
+      ],
+      "total": 1
     },
     "save": {
       "count": 3,
@@ -3772,6 +4405,36 @@
         }
       ],
       "total": 8
+    },
+    "withdraw": {
+      "count": 1,
+      "verses": [
+        24
+      ],
+      "hits": [
+        {
+          "v": 24,
+          "pre": "…was saying: \"Y'all ",
+          "hit": "clear out",
+          "post": " — the little girl hasn't died, she's sleeping.\" And th…"
+        }
+      ],
+      "total": 1
+    },
+    "worship": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…these things to them, look — a certain ruler came and ",
+          "hit": "knelt low",
+          "post": " before him, saying: \"My daughter has just died — but c…"
+        }
+      ],
+      "total": 1
     }
   },
   "unit-10": {
@@ -3804,6 +4467,63 @@
         }
       ],
       "total": 1
+    },
+    "father": {
+      "count": 7,
+      "verses": [
+        20,
+        21,
+        29,
+        32,
+        33,
+        35,
+        37
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…l who are the ones speaking, but the Spirit of y'all's ",
+          "hit": "Father",
+          "post": ", the one speaking in y'all.…"
+        },
+        {
+          "v": 21,
+          "pre": "…And brother will hand over brother to death, and a ",
+          "hit": "father",
+          "post": " a child; and children will rise up against parents and…"
+        },
+        {
+          "v": 29,
+          "pre": "…e of them will fall onto the ground apart from y'all's ",
+          "hit": "Father",
+          "post": ".…"
+        },
+        {
+          "v": 32,
+          "pre": "…efore the people, I too will acknowledge him before my ",
+          "hit": "Father",
+          "post": " in the skies;…"
+        },
+        {
+          "v": 33,
+          "pre": "…me before the people, I too will disown him before my ",
+          "hit": "Father",
+          "post": " in the skies.…"
+        },
+        {
+          "v": 35,
+          "pre": "…For I came to divide a man against his ",
+          "hit": "father",
+          "post": ", and a daughter against her mother, and a bride agains…"
+        },
+        {
+          "v": 37,
+          "pre": "…The one loving ",
+          "hit": "father",
+          "post": " or mother above me is not worthy of me; and the one lo…"
+        }
+      ],
+      "total": 7
     },
     "fear": {
       "count": 4,
@@ -3851,6 +4571,36 @@
           "pre": "…and whoever does not take up his cross and ",
           "hit": "follow",
           "post": " behind me is not worthy of me.…"
+        }
+      ],
+      "total": 1
+    },
+    "gehenna": {
+      "count": 1,
+      "verses": [
+        28
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "…r rather the one able to destroy both life and body in ",
+          "hit": "Gehenna",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
+    "good-news": {
+      "count": 1,
+      "verses": [
+        35
+      ],
+      "hits": [
+        {
+          "v": 35,
+          "pre": "…, teaching in their gathering-places and heralding the ",
+          "hit": "good news",
+          "post": " of the kingdom and tending every disease and every wea…"
         }
       ],
       "total": 1
@@ -3918,18 +4668,40 @@
         },
         {
           "v": 38,
-          "pre": "…So beg the Lord of the ",
+          "pre": "…So beg the Master of the ",
           "hit": "harvest",
           "post": " that he may thrust out workers into his harvest.\"…"
         },
         {
           "v": 38,
-          "pre": "…So beg the Lord of the ",
+          "pre": "…So beg the Master of the ",
           "hit": "harvest",
           "post": " that he may thrust out workers into his harvest.\"…"
         }
       ],
       "total": 3
+    },
+    "kingdom": {
+      "count": 2,
+      "verses": [
+        7,
+        35
+      ],
+      "hits": [
+        {
+          "v": 35,
+          "pre": "…ir gathering-places and heralding the good news of the ",
+          "hit": "kingdom",
+          "post": " and tending every disease and every weakness.…"
+        },
+        {
+          "v": 7,
+          "pre": "…And going, herald, saying that 'The ",
+          "hit": "kingdom",
+          "post": " of the skies has drawn near.'…"
+        }
+      ],
+      "total": 2
     },
     "light": {
       "count": 1,
@@ -4010,6 +4782,55 @@
       ],
       "total": 2
     },
+    "peace": {
+      "count": 4,
+      "verses": [
+        13,
+        34
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…and if indeed the house is worthy, let y'all's ",
+          "hit": "peace",
+          "post": " come upon it; but if it is not worthy, let y'all's pea…"
+        },
+        {
+          "v": 13,
+          "pre": "…and if indeed the house is worthy, let y'all's ",
+          "hit": "peace",
+          "post": " come upon it; but if it is not worthy, let y'all's pea…"
+        },
+        {
+          "v": 34,
+          "pre": "…\"Do not suppose that I came to throw ",
+          "hit": "peace",
+          "post": " onto the earth; I did not come to throw peace, but a s…"
+        },
+        {
+          "v": 34,
+          "pre": "…\"Do not suppose that I came to throw ",
+          "hit": "peace",
+          "post": " onto the earth; I did not come to throw peace, but a s…"
+        }
+      ],
+      "total": 4
+    },
+    "raise": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…Tend the weak, ",
+          "hit": "raise",
+          "post": " the dead, cleanse the skin-diseased, throw out demons.…"
+        }
+      ],
+      "total": 1
+    },
     "receive": {
       "count": 7,
       "verses": [
@@ -4063,6 +4884,33 @@
       ],
       "total": 7
     },
+    "righteous": {
+      "count": 3,
+      "verses": [
+        41
+      ],
+      "hits": [
+        {
+          "v": 41,
+          "pre": "…et will take a prophet's wage; and the one receiving a ",
+          "hit": "just",
+          "post": " person in the name of a just person will take a just p…"
+        },
+        {
+          "v": 41,
+          "pre": "…et will take a prophet's wage; and the one receiving a ",
+          "hit": "just",
+          "post": " person in the name of a just person will take a just p…"
+        },
+        {
+          "v": 41,
+          "pre": "…et will take a prophet's wage; and the one receiving a ",
+          "hit": "just",
+          "post": " person in the name of a just person will take a just p…"
+        }
+      ],
+      "total": 3
+    },
     "save": {
       "count": 1,
       "verses": [
@@ -4115,6 +4963,28 @@
       ],
       "total": 1
     },
+    "spirit": {
+      "count": 2,
+      "verses": [
+        1,
+        20
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…s twelve learners, he gave them authority over unclean ",
+          "hit": "spirits",
+          "post": ", so as to throw them out and to tend every disease and…"
+        },
+        {
+          "v": 20,
+          "pre": "…for it is not y'all who are the ones speaking, but the ",
+          "hit": "Spirit",
+          "post": " of y'all's Father, the one speaking in y'all.…"
+        }
+      ],
+      "total": 2
+    },
     "throw": {
       "count": 5,
       "verses": [
@@ -4126,7 +4996,7 @@
       "hits": [
         {
           "v": 38,
-          "pre": "…So beg the Lord of the harvest that he may ",
+          "pre": "…So beg the Master of the harvest that he may ",
           "hit": "thrust out",
           "post": " workers into his harvest.\"…"
         },
@@ -4156,6 +5026,34 @@
         }
       ],
       "total": 5
+    },
+    "wage": {
+      "count": 3,
+      "verses": [
+        41,
+        42
+      ],
+      "hits": [
+        {
+          "v": 41,
+          "pre": "…prophet in the name of a prophet will take a prophet's ",
+          "hit": "wage",
+          "post": "; and the one receiving a just person in the name of a…"
+        },
+        {
+          "v": 41,
+          "pre": "…prophet in the name of a prophet will take a prophet's ",
+          "hit": "wage",
+          "post": "; and the one receiving a just person in the name of a…"
+        },
+        {
+          "v": 42,
+          "pre": "…— amen I say to y'all, he will certainly not lose his ",
+          "hit": "wage",
+          "post": ".\"…"
+        }
+      ],
+      "total": 3
     },
     "wise": {
       "count": 1,
@@ -4272,6 +5170,47 @@
       "hits": [],
       "total": 2
     },
+    "father": {
+      "count": 5,
+      "verses": [
+        25,
+        26,
+        27
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…son, answering, Jesus said, \"I openly acknowledge you, ",
+          "hit": "Father",
+          "post": ", Yahweh of the sky and the earth, because you hid thes…"
+        },
+        {
+          "v": 26,
+          "pre": "…Yes, ",
+          "hit": "Father",
+          "post": ", because thus it was well-pleasing before you.…"
+        },
+        {
+          "v": 27,
+          "pre": "…All things were handed over to me by my ",
+          "hit": "Father",
+          "post": ", and no one fully knows the Son except the Father, nor…"
+        },
+        {
+          "v": 27,
+          "pre": "…All things were handed over to me by my ",
+          "hit": "Father",
+          "post": ", and no one fully knows the Son except the Father, nor…"
+        },
+        {
+          "v": 27,
+          "pre": "…All things were handed over to me by my ",
+          "hit": "Father",
+          "post": ", and no one fully knows the Son except the Father, nor…"
+        }
+      ],
+      "total": 5
+    },
     "generation": {
       "count": 1,
       "verses": [
@@ -4302,6 +5241,21 @@
       ],
       "total": 1
     },
+    "good-news": {
+      "count": 1,
+      "verses": [
+        5
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…, and dead people are raised, and poor people are told ",
+          "hit": "good news",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
     "hand-over": {
       "count": 1,
       "verses": [
@@ -4325,7 +5279,7 @@
       "hits": [
         {
           "v": 25,
-          "pre": "…ou, Father, Lord of the sky and the earth, because you ",
+          "pre": "…, Father, Yahweh of the sky and the earth, because you ",
           "hit": "hid",
           "post": " these things from wise and perceptive people, and reve…"
         },
@@ -4334,6 +5288,28 @@
           "pre": "…hid these things from wise and perceptive people, and ",
           "hit": "revealed",
           "post": " them to infants.…"
+        }
+      ],
+      "total": 2
+    },
+    "kingdom": {
+      "count": 2,
+      "verses": [
+        11,
+        12
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…ter than John the Baptizer; but the smaller-one in the ",
+          "hit": "kingdom",
+          "post": " of the skies is greater than he.…"
+        },
+        {
+          "v": 12,
+          "pre": "…And from the days of John the Baptizer until now, the ",
+          "hit": "kingdom",
+          "post": " of the skies is under assault, and forceful people sei…"
         }
       ],
       "total": 2
@@ -4368,6 +5344,28 @@
       ],
       "total": 1
     },
+    "raise": {
+      "count": 2,
+      "verses": [
+        5,
+        11
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…are made clean and the deaf hear, and dead people are ",
+          "hit": "raised",
+          "post": ", and poor people are told good news.…"
+        },
+        {
+          "v": 11,
+          "pre": "…I tell y'all, among those born of women there has not ",
+          "hit": "arisen",
+          "post": " anyone greater than John the Baptizer; but the smaller…"
+        }
+      ],
+      "total": 2
+    },
     "reed": {
       "count": 1,
       "verses": [
@@ -4394,6 +5392,21 @@
           "pre": "…Then he began to ",
           "hit": "reproach",
           "post": " the towns in which most of his miracles had happened,…"
+        }
+      ],
+      "total": 1
+    },
+    "righteous": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…ax collectors and sinners!' And Wisdom was shown to be ",
+          "hit": "in the right",
+          "post": " by her deeds.\"…"
         }
       ],
       "total": 1

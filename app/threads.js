@@ -105,9 +105,8 @@ export function rebuildLegend(contentEl, resolved) {
       `${m.gloss ? " — " + esc(m.gloss) : ""}${st}${n}</li>`;
   };
 
-  const shown = [threads, roots].filter((g) => g.length).length;
   const group = (label, items) => items.length
-    ? `<div class="legend-group">${shown > 1 ? `<h3>${label}</h3>` : ""}` +
+    ? `<div class="legend-group"><h3>${label}</h3>` +
       `<ul>${items.map(row).join("")}</ul></div>`
     : "";
 

@@ -551,3 +551,48 @@
   flags this as advisory only, not blocking. build.py green.
 - .gitignore: root-level source-artifact ignore pattern was `matthew_0*_*`
   (single-digit only) — widened to `matthew_[0-9][0-9]_*` for unit 11+.
+
+## 2026-09-10 (cont. 6) — 17 new global threads + Lord→Master/Yahweh + legend fix
+- Settings tab added to index.html/app/main.js/css: a topbar "Settings" popover
+  with a "Center-align reading text" checkbox (localStorage `matthew:centerText`,
+  applied pre-render to avoid flash). Bumped asset version to v=35.
+- Fixed threads.js `rebuildLegend()`: the "✦ Cross-unit threads" header was
+  hidden whenever a unit had only one legend group populated — exactly wrong for
+  a unit like 9 that has threads but zero local roots, so it rendered as an
+  unlabeled list. Headers now always show when their group is non-empty.
+- Promoted 17 roots to global threads.json (most were already locally tagged,
+  inconsistently, per unit): raise (egeirō), peace (eirēnē), good-news
+  (euangelion), wage (misthos), father (patēr), righteous (dikaios/-osynē),
+  seek (zēteō), spirit (pneuma), kingdom (basileia, excl. basileus "king"),
+  evil (ponēros), gehenna (geenna), test (peirazō), fulfill (plēroō), worship
+  (proskyneō), call (kaleō, excl. parakaleō/proskaleomai/ekklēsia/epikaleō
+  compounds and legomenos), withdraw (anachōreō), worthy (axios). apostolos
+  ("apostles") NOT tracked — occurs exactly once in the whole book, no
+  cross-unit trajectory (Lane's call).
+- Colours picked programmatically (CIE76 dE, muted-palette candidate sweep) to
+  avoid collision with all 36 existing threads AND each other, book-wide (not
+  just current same-unit overlaps, since several of these will co-occur with
+  nearly everything eventually). Unified a pre-existing split: "right"
+  (unit-03/06 local id) and "righteous" (unit-01/05/etc local id) were the same
+  Greek word (dikaiosynē) under two different data-root ids — merged to
+  "righteous" everywhere, "right" removed from units.json.
+- Added all 17 to pipeline/thread-stems.json with hand-verified stems/excludes
+  (several needed augmented-tense variants the naive stem missed, e.g.
+  worship's aorist προσεκυν-/imperfect, test's aorist πειρασ-, withdraw's
+  ανεχωρ-; call needed heavy excludes to keep out parakaleō/proskaleomai/
+  ekklēsia/didaskale/klēronomeō homographs). Ran audit_thread_coverage.py,
+  retro-tagged ~90 real gaps across units 1-11 (mix of retrofit-tags.json `add`
+  entries and direct edits for same-verse duplicate-word cases the `add` op
+  can't disambiguate). build green — 53 threads, 553 occurrences.
+- Known deferred gaps (like the pre-existing hand-over ones): father@6:9 is
+  actually tagged (inside the Lord's-Prayer `.prayer` block) but the audit's
+  verse-hole-filling can't see it — false positive, not a real gap. fulfill@9:16
+  (plērōma, rendered "patch") left untagged — no visible English lexical cue,
+  tagging it as "fulfill"-coloured would mislead readers.
+- Lord → Master (when addressing/describing Jesus, or "master" of a household/
+  harvest) or → Yahweh (when standing for the divine name in OT quotations or
+  direct address to God) across all 11 built units — ~30 occurrences reclassified
+  by context and reworded. Left three categories untouched: NASB-labeled
+  comparison quotes (unit-03, unit-07 — quoting what NASB actually says), a
+  Rev 11:15-labeled quote (unit-03), and "the Lord's Prayer" as the passage's
+  conventional English title (an idiom, not a translation of kyrios).

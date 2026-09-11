@@ -121,3 +121,14 @@ Read this first. 3 lines max per session.
   Fixed 4 same-unit colour collisions the porter's hue-assigner missed. `seize`
   left as a local candidate (Lane to decide on promotion). build green — 11
   units, 464 occurrences, 36 threads. Verified in-browser. Next: Unit 12.
+
+## 2026-09-10 (cont. 6) — Settings tab + 17 new global threads + Lord to Master/Yahweh
+- Added a Settings topbar popover (center/left text-align toggle, localStorage). Fixed
+  threads.js legend header bug (Unit 9's all-threads-no-local-roots case rendered unlabeled).
+- Promoted 17 roots to global threads (raise/peace/good-news/wage/father/righteous/seek/
+  spirit/kingdom/evil/gehenna/test/fulfill/worship/call/withdraw/worthy); retro-tagged ~90
+  gaps across units 1-11 via thread-stems.json + retrofit-tags.json; build green, 53 threads.
+- Reworded ~30 "Lord" occurrences to Master (addressing Jesus/a human master) or Yahweh
+  (divine-name/OT-quote sense) across units 1-11, leaving NASB/Rev quotes and the "Lord's
+  Prayer" title alone. Next: Unit 12, plus stems for come-here/generation/gentle/metanoia/
+  skandalon/well-pleased (currently undefined, audit-flagged advisory only).
