@@ -22,6 +22,7 @@ const navToggleCtx = document.getElementById("nav-toggle-ctx");
 
 let manifest = null;
 
+applySettings();
 init();
 
 async function init() {
@@ -36,19 +37,65 @@ async function init() {
   }
   buildUnitNav();
   wireNavToggle();
+  wireSettingsToggle();
   window.addEventListener("hashchange", route);
   route();
 }
 
+/* --------------------------------------------------------------- settings */
+
+const CENTER_TEXT_KEY = "matthew:centerText";
+
+function applySettings() {
+  const centered = localStorage.getItem(CENTER_TEXT_KEY) === "1";
+  document.body.classList.toggle("text-center", centered);
+  const checkbox = document.getElementById("setting-center-text");
+  if (checkbox) checkbox.checked = centered;
+}
+
+function wireSettingsToggle() {
+  const toggle = document.getElementById("settings-toggle");
+  const panel = document.getElementById("settings-panel");
+  const backdrop = document.getElementById("nav-backdrop");
+  const checkbox = document.getElementById("setting-center-text");
+  if (!toggle || !panel) return;
+
+  const set = (open) => {
+    panel.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+    if (open) {
+      unitNav.hidden = true;
+      navToggle.setAttribute("aria-expanded", "false");
+      backdrop.hidden = false;
+    } else if (unitNav.hidden) {
+      backdrop.hidden = true;
+    }
+  };
+  toggle.addEventListener("click", () => set(panel.hidden));
+  backdrop.addEventListener("click", () => set(false));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") set(false); });
+
+  checkbox?.addEventListener("change", () => {
+    localStorage.setItem(CENTER_TEXT_KEY, checkbox.checked ? "1" : "0");
+    document.body.classList.toggle("text-center", checkbox.checked);
+  });
+}
+
 function wireNavToggle() {
   const backdrop = document.getElementById("nav-backdrop");
+  const settingsPanel = document.getElementById("settings-panel");
+  const settingsToggle = document.getElementById("settings-toggle");
   const set = (open) => {
     unitNav.hidden = !open;
     backdrop.hidden = !open;
     navToggle.setAttribute("aria-expanded", String(open));
     fabPrev.classList.toggle("nav-open", open);
     fabNext.classList.toggle("nav-open", open);
-    if (open) unitNav.scrollTop = 0;
+    if (open) {
+      unitNav.scrollTop = 0;
+      settingsPanel.hidden = true;
+      settingsToggle.setAttribute("aria-expanded", "false");
+    }
   };
   navToggle.addEventListener("click", () => set(unitNav.hidden));
   backdrop.addEventListener("click", () => set(false));

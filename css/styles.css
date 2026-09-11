@@ -84,6 +84,23 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
 .nav-toggle[aria-expanded="true"] { color: var(--ink); border-color: var(--accent-gold); }
 .nav-toggle #nav-toggle-ctx { color: var(--ink-soft); font-style: italic; }
 
+/* settings panel — small popover under the Settings button */
+.settings-panel {
+  position: absolute; top: calc(100% + 6px); right: 26px;
+  z-index: 30;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: 0 14px 30px rgba(30, 22, 12, 0.16);
+  padding: 14px 18px;
+  min-width: 220px;
+}
+.settings-row {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 14px; color: var(--ink); cursor: pointer;
+}
+.settings-row input { cursor: pointer; }
+
 /* unit picker — drops down from the sticky bar, over the content */
 .unit-nav {
   position: absolute; top: 100%; left: 0; right: 0;
@@ -392,6 +409,9 @@ sup.en a { border: none; }
 .unit .verses { margin-top: 40px; }
 .unit .v { margin: 0 0 14px; padding-left: 42px; text-indent: -42px; line-height: 1.7; }
 .unit .v .n { display: inline-block; width: 30px; text-indent: 0; font-family: var(--display); font-size: 15px; color: var(--accent-crimson); font-weight: 600; vertical-align: top; }
+
+body.text-center .unit .v { text-align: center; padding-left: 0; text-indent: 0; }
+body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; }
 .unit .gloss { display: block; text-indent: 0; margin: 3px 0 14px 0; padding: 6px 14px; border-left: 2px solid var(--rule); color: var(--ink-soft); font-style: italic; font-size: 15px; line-height: 1.5; }
 .unit sup.en { font-size: .62em; font-style: normal; color: var(--accent-crimson); font-weight: 700; vertical-align: super; line-height: 0; }
 
