@@ -3,7 +3,7 @@ pipeline/out/
 
 # loose source-artifact copies in the repo root — canonical copies live in
 # source-artifacts/. Kept on disk for convenience, not tracked.
-/matthew_0*_translation.html
+/matthew_[0-9][0-9]_translation.html
 
 # editor / OS
 .DS_Store

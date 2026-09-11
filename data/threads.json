@@ -151,7 +151,7 @@
       "translit": "ho nomos kai hoi prophētai",
       "gloss": "the Law & the Prophets",
       "color": "#7d6b3f",
-      "status": "closed",
+      "status": "open",
       "tagged": true,
       "opens": {
         "unit": 5,
@@ -162,6 +162,11 @@
           "unit": 7,
           "ref": "7:12",
           "note": "'this is the Law and the Prophets' — inclusio closed"
+        },
+        {
+          "unit": 11,
+          "ref": "11:13",
+          "note": "'all the prophets and the law' — the inclusio's own vocabulary returns, order reversed, prophets now first; reopened after being marked closed at 7:12"
         }
       ],
       "note": "Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed."
@@ -393,6 +398,10 @@
           "note": "\"until the Son of Man comes\" — the coming-with-the-clouds sense, interpretively unsettled"
         },
         {
+          "unit": 11,
+          "ref": "11:19"
+        },
+        {
           "unit": 17,
           "ref": "16:13, 16:27"
         },
@@ -536,6 +545,11 @@
           "unit": 9,
           "ref": "9:2-6, 10-13",
           "note": "'your sins are released' (9:2-6), then the table of tax-collectors and sinners he says he came to call (9:10-13, closing on Hosea 6:6)"
+        },
+        {
+          "unit": 11,
+          "ref": "11:19",
+          "note": "'a friend of tax collectors and sinners' — the same charge and the same word as the meal at 9:10-13"
         },
         {
           "unit": 26,
@@ -718,6 +732,11 @@
           "note": "the disciples handed over — to councils, in floggings, by their own families"
         },
         {
+          "unit": 11,
+          "ref": "11:27",
+          "note": "'all things were handed over to me by my Father' — the one bright, non-betraying use of paradidōmi in the whole gospel"
+        },
+        {
           "unit": 17,
           "ref": "17:22",
           "note": "'the Son of Man is about to be handed over' — the verb turns toward the passion"
@@ -839,6 +858,136 @@
         }
       ],
       "note": "phobeō — the mē phobeisthe imperative saturates 10:26-31 and then recurs verbatim at the two most loaded moments, the sea (14:27) and the empty tomb (28:5, 10)."
+    },
+    {
+      "id": "skandalon",
+      "root": "skandalon",
+      "translit": "skandalon · skandalizō",
+      "gloss": "trip up / trap-trigger, cause to stumble",
+      "color": "#6a1f6a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 5,
+        "ref": "5:29"
+      },
+      "payoffs": [
+        {
+          "unit": 11,
+          "ref": "11:6",
+          "note": "'blessed is whoever isn't tripped up by me' — the little beatitude"
+        },
+        {
+          "unit": 26,
+          "ref": "26:31-33",
+          "note": "every disciple is tripped up over Jesus in one night"
+        }
+      ],
+      "note": "skandalizō — the eye/hand that trips you up (5:29-30) is the thread's true open; the little beatitude of 11:6 warns John gently, then 26:31-33 pays it off catastrophically."
+    },
+    {
+      "id": "metanoia",
+      "root": "metanoia",
+      "translit": "metanoia · metanoeō",
+      "gloss": "repent, change one's mind",
+      "color": "#2e8f5c",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 3,
+        "ref": "3:2"
+      },
+      "payoffs": [
+        {
+          "unit": 4,
+          "ref": "4:17",
+          "note": "Jesus repeats John's proclamation verbatim at the apo-tote hinge"
+        },
+        {
+          "unit": 11,
+          "ref": "11:20",
+          "note": "the towns that saw the most and turned the least — the summons comes back as a verdict"
+        }
+      ],
+      "note": "metanoeite — John's proclamation (3:2), repeated on Jesus' own lips (4:17), returns as an indictment on the unrepentant towns (11:20)."
+    },
+    {
+      "id": "generation",
+      "root": "generation",
+      "translit": "genea",
+      "gloss": "generation; a class of people",
+      "color": "#6b4a8a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 11,
+        "ref": "11:16"
+      },
+      "payoffs": [],
+      "note": "genea shifts from the literal genealogical generations of 1:17 to a moral class of people, opening its tracked sense at 11:16 ('this generation'). The 1:17 occurrence is tagged for lexical completeness, not claimed as the same sense."
+    },
+    {
+      "id": "come-here",
+      "root": "come-here",
+      "translit": "deute",
+      "gloss": "come here! (a summons)",
+      "color": "#1c6b8a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 4,
+        "ref": "4:19"
+      },
+      "payoffs": [
+        {
+          "unit": 11,
+          "ref": "11:28",
+          "note": "the same call that gathered the four at the sea now gathers the weary"
+        }
+      ],
+      "note": "deute — 'come here, and I will make you fishers of men' (4:19) is the thread's true open; the invitation returns at 11:28 to all who labor."
+    },
+    {
+      "id": "gentle",
+      "root": "gentle",
+      "translit": "praus",
+      "gloss": "gentle, humble",
+      "color": "#a02e6b",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 5,
+        "ref": "5:5"
+      },
+      "payoffs": [
+        {
+          "unit": 11,
+          "ref": "11:29",
+          "note": "the beatitude's promise becomes Jesus' own self-description"
+        }
+      ],
+      "note": "praeis — 'blessed are the gentle' (5:5) is the thread's true open; Jesus claims the word of himself at 11:29."
+    },
+    {
+      "id": "well-pleased",
+      "root": "well-pleased",
+      "translit": "eudokeō",
+      "gloss": "be well pleased, take delight in",
+      "color": "#4a2e8a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 3,
+        "ref": "3:17"
+      },
+      "payoffs": [
+        {
+          "unit": 11,
+          "ref": "11:26",
+          "note": "the Father's spoken delight at the baptism recurs in Jesus' own prayer"
+        }
+      ],
+      "note": "eudokēsa — the Father's voice at the baptism (3:17) is the thread's true open; the same word recurs in Jesus' prayer at 11:26."
     }
   ]
 }

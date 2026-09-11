@@ -18,6 +18,7 @@
     { "unit": "unit-05", "verse": 14, "text": "light",                 "root": "light",        "why": "light of the world" },
     { "unit": "unit-06", "verse": 23, "text": "light",                 "root": "light",        "why": "the light in you is darkness" },
     { "unit": "unit-08", "verse": 20, "text": "the Son of Man",        "root": "son-of-man",   "why": "opens the Son of Man thread (8:20)" },
+    { "unit": "unit-01", "verse": 17, "text": "generations",           "root": "generation",   "why": "genea 1:17 — same lexical root as 11:16's 'this generation', literal genealogical sense; flagged for completeness, not the same thread-sense" },
 
     { "_c": "--- retroactive cross-unit-thread coverage (2026-09-09 audit) --- policy: a tracked root is tagged (class=r) at EVERY morphological occurrence in a unit, even before the thread's editorial `opens`. See pipeline/out/thread-retrofit-audit.md." },
 
@@ -99,7 +100,23 @@
 
     { "_c": "--- hand-over (paradidōmi) pre-opening. Thread opens 10:4 (Judas). Recoloured off the shared #8a3c70 to #0e8aa0 so it can coexist with apo-tote in unit-04." },
     { "unit": "unit-04", "verse": 12, "text": "handed over",       "root": "hand-over", "why": "paredothē 4:12 'having heard that John was handed over'" },
-    { "unit": "unit-05", "verse": 25, "text": "hand you over",     "root": "hand-over", "why": "paradō 5:25 'lest the adversary hand you over to the judge'" }
+    { "unit": "unit-05", "verse": 25, "text": "hand you over",     "root": "hand-over", "why": "paradō 5:25 'lest the adversary hand you over to the judge'" },
+
+    { "_c": "--- skandalon (skandalizō) pre-opening. Thread opens 5:29, per Lane's decision at the Unit 11 port (2026-09-10)." },
+    { "unit": "unit-05", "verse": 29, "text": "trips you up",      "root": "skandalon", "why": "skandalizei 5:29 'if your right eye trips you up'" },
+    { "unit": "unit-05", "verse": 30, "text": "trips you up",      "root": "skandalon", "why": "skandalizei 5:30 'if your right hand trips you up'" },
+
+    { "_c": "--- metanoia (metanoeō/metanoia) pre-opening. Thread opens 3:2, per Lane's decision at the Unit 11 port (2026-09-10). unit-03's local `repent` root is retagged to this global thread below." },
+    { "unit": "unit-04", "verse": 17, "text": "Repent",            "root": "metanoia",  "why": "metanoeite 4:17 — verbatim repetition of John's 3:2 proclamation" },
+
+    { "_c": "--- come-here (deute) pre-opening. Thread opens 4:19, per Lane's decision at the Unit 11 port (2026-09-10)." },
+    { "unit": "unit-04", "verse": 19, "text": "Come",              "root": "come-here", "why": "deute 4:19 'Come — after me — and I will make y'all fishers of men'" },
+
+    { "_c": "--- gentle (praus) pre-opening. Thread opens 5:5, per Lane's decision at the Unit 11 port (2026-09-10)." },
+    { "unit": "unit-05", "verse": 5,  "text": "meek",              "root": "gentle",    "why": "praeis 5:5 'blessed are the meek' — same word rendered 'gentle' at 11:29" },
+
+    { "_c": "--- well-pleased (eudokeō) pre-opening. Thread opens 3:17, per Lane's decision at the Unit 11 port (2026-09-10)." },
+    { "unit": "unit-03", "verse": 17, "text": "delighted",         "root": "well-pleased", "why": "eudokēsa 3:17 'in whom I delighted' — the Father's voice at the baptism" }
   ],
 
   "retag": [
@@ -119,7 +136,9 @@
     { "unit": "unit-07", "from": "build", "to": "rock", "match": "^rock$",
       "why": "split the old build-rock bundle: oikodomeō -> build, petra -> rock" },
     { "unit": "unit-07", "from": "do",    "to": "throw", "match": "throw",
-      "why": "the local `do` root (poieō) was wrongly applied to ekballō/ballō at 7:4,5,6,19,22 — 'throw out the beam', 'thrown into fire', 'cast out demons'. Move those to the throw thread; poieō spans (make/do/does/doing) stay `do`." }
+      "why": "the local `do` root (poieō) was wrongly applied to ekballō/ballō at 7:4,5,6,19,22 — 'throw out the beam', 'thrown into fire', 'cast out demons'. Move those to the throw thread; poieō spans (make/do/does/doing) stay `do`." },
+    { "unit": "unit-03", "from": "repent", "to": "metanoia", "match": ".*",
+      "why": "unit-03's local `repent` root (metanoeō/metanoia) is promoted to the global metanoia thread at the Unit 11 port (2026-09-10) — same word, John's proclamation is the thread's true open" }
   ],
 
   "untag_word": [

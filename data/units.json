@@ -593,10 +593,47 @@
     {
       "n": 11,
       "slug": "unit-11",
-      "passage": "Matthew 11:2-30",
+      "passage": "Matthew 11:2–30",
       "title": "Are You the Coming One?",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "deeds": {
+          "color": "#a8324a",
+          "translit": "ergon",
+          "gloss": "deed, work — frames the John-block, 11:2 to 11:19"
+        },
+        "reed": {
+          "color": "#1c7d70",
+          "translit": "kalamos",
+          "gloss": "reed, cane-stalk"
+        },
+        "reproach": {
+          "color": "#c0641a",
+          "translit": "oneidizō",
+          "gloss": "reproach, denounce with indignation"
+        },
+        "seize": {
+          "color": "#5a8a3e",
+          "translit": "harpazō · biazomai",
+          "gloss": "seize, plunder, snatch by force"
+        },
+        "hide-reveal": {
+          "color": "#2f6db3",
+          "translit": "kryptō · apokalyptō",
+          "gloss": "hide / uncover, reveal"
+        },
+        "yoke": {
+          "color": "#8a3c70",
+          "translit": "zygos",
+          "gloss": "yoke — the crossbar binding a pair to their load"
+        },
+        "burden": {
+          "color": "#8a6a2a",
+          "translit": "phortion · phortizō",
+          "gloss": "load, burden; to load down"
+        }
+      }
     },
     {
       "n": 12,

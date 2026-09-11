@@ -526,3 +526,28 @@
   across all 10 units.
 - port_artifact.py `_append_structure`: added a check that flags a synoptic aside
   nested inside an unclosed .gloss span or a .compare box.
+
+## 2026-09-10 (cont. 5) — Unit 11 ported (Are You the Coming One?)
+- `port_artifact.py 11` clean; local hues deeds/reed/reproach/seize/hide-reveal/
+  yoke/burden. 464 occurrences, 36 threads.
+- Promoted 6 new global threads from the artifact's retro notes (explicitly
+  "Lane's decision this session" in the meta): skandalon (opens 5:29), metanoia
+  (opens 3:2, subsumes unit-03's old local `repent` root via retag_word),
+  generation (opens 11:16 itself — 1:17 tagged only for lexical completeness,
+  different sense), come-here (opens 4:19), gentle (opens 5:5, unit-05's "meek"
+  now tagged to it), well-pleased (opens 3:17). Added their retro-tag entries
+  (corrected wording to match each unit's actual published English, which
+  differed from the artifact's paraphrase) to pipeline/retrofit-tags.json.
+- law-prophets reopened (11:13) — status closed -> open. Added unit-11 payoffs
+  to hand-over (11:27), son-of-man (11:19), sin (11:19).
+- Fixed 3 same-unit colour collisions the porter's local-hue assigner missed
+  (it doesn't see tracked-thread colours absent from a unit's declared local
+  `roots` list): seize/son-of-man, well-pleased/burden, gentle/righteous,
+  skandalon/throw — new hexes picked by CIE76 dE>=12 against both unit-05 and
+  unit-11's palettes.
+- `seize` (harpazō, 11:12) left local/untracked — a candidate per the delta
+  report, Lane's call to promote.
+- New threads have no stems yet (thread-stems.json) — audit_thread_coverage.py
+  flags this as advisory only, not blocking. build.py green.
+- .gitignore: root-level source-artifact ignore pattern was `matthew_0*_*`
+  (single-digit only) — widened to `matthew_[0-9][0-9]_*` for unit 11+.

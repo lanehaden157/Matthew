@@ -113,3 +113,11 @@ Read this first. 3 lines max per session.
 - 8 synoptic asides (U1/4/5/8/9/10) were spliced inside an unclosed .gloss span
   or .compare box → rendered with a bare `*`/`✦` chip instead of `✧`. Pulled out
   to sibling position, split glosses rejoined. Porter now flags this. build green.
+
+## 2026-09-10 (cont. 5) — Unit 11 ported
+- `port_artifact.py 11` clean. Promoted 6 new global threads (skandalon,
+  metanoia, generation, come-here, gentle, well-pleased) per the artifact's own
+  "Lane's decision this session" retro notes; reopened law-prophets (11:13).
+  Fixed 4 same-unit colour collisions the porter's hue-assigner missed. `seize`
+  left as a local candidate (Lane to decide on promotion). build green — 11
+  units, 464 occurrences, 36 threads. Verified in-browser. Next: Unit 12.

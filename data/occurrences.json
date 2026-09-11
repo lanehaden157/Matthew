@@ -430,6 +430,14 @@
       ],
       "total": 1
     },
+    "generation": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [],
+      "total": 1
+    },
     "name": {
       "count": 3,
       "verses": [
@@ -946,35 +954,7 @@
       ],
       "total": 2
     },
-    "release": {
-      "count": 3,
-      "verses": [
-        11,
-        15
-      ],
-      "hits": [
-        {
-          "v": 15,
-          "pre": "…But answering, Jesus said to him, \"",
-          "hit": "Permit",
-          "post": " it now, for thus it is fitting for us to fulfill all r…"
-        },
-        {
-          "v": 15,
-          "pre": "…fitting for us to fulfill all righteousness.\" Then he ",
-          "hit": "permits",
-          "post": " him.…"
-        },
-        {
-          "v": 11,
-          "pre": "…Then the slanderer ",
-          "hit": "leaves",
-          "post": " him, and look, angels came and were ministering to him…"
-        }
-      ],
-      "total": 3
-    },
-    "repent": {
+    "metanoia": {
       "count": 3,
       "verses": [
         2,
@@ -999,6 +979,34 @@
           "pre": "…I myself immerse y'all in water unto ",
           "hit": "turning",
           "post": ", but the one coming after me is mightier than I — whos…"
+        }
+      ],
+      "total": 3
+    },
+    "release": {
+      "count": 3,
+      "verses": [
+        11,
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…But answering, Jesus said to him, \"",
+          "hit": "Permit",
+          "post": " it now, for thus it is fitting for us to fulfill all r…"
+        },
+        {
+          "v": 15,
+          "pre": "…fitting for us to fulfill all righteousness.\" Then he ",
+          "hit": "permits",
+          "post": " him.…"
+        },
+        {
+          "v": 11,
+          "pre": "…Then the slanderer ",
+          "hit": "leaves",
+          "post": " him, and look, angels came and were ministering to him…"
         }
       ],
       "total": 3
@@ -1178,6 +1186,21 @@
       ],
       "total": 2
     },
+    "well-pleased": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…skies, saying, \"This is my Son, the beloved, in whom I ",
+          "hit": "delighted",
+          "post": ".\"…"
+        }
+      ],
+      "total": 1
+    },
     "wilderness": {
       "count": 3,
       "verses": [
@@ -1241,6 +1264,21 @@
           "pre": "",
           "hit": "From then",
           "post": " Jesus began to proclaim and to say: “Repent, for the k…"
+        }
+      ],
+      "total": 1
+    },
+    "come-here": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…And he says to them: “",
+          "hit": "Come",
+          "post": " — after me — and I will make y’all fishers of men.”…"
         }
       ],
       "total": 1
@@ -1368,6 +1406,21 @@
         }
       ],
       "total": 6
+    },
+    "metanoia": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…From then Jesus began to proclaim and to say: “",
+          "hit": "Repent",
+          "post": ", for the kingdom of the skies has drawn near.”…"
+        }
+      ],
+      "total": 1
     },
     "nations": {
       "count": 1,
@@ -1641,6 +1694,21 @@
       ],
       "total": 3
     },
+    "gentle": {
+      "count": 1,
+      "verses": [
+        5
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…Blessed are the ",
+          "hit": "meek",
+          "post": ", for they shall inherit the earth.…"
+        }
+      ],
+      "total": 1
+    },
     "hand-over": {
       "count": 1,
       "verses": [
@@ -1843,6 +1911,28 @@
         }
       ],
       "total": 3
+    },
+    "skandalon": {
+      "count": 2,
+      "verses": [
+        29,
+        30
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…And if your right eye ",
+          "hit": "trips you up",
+          "post": ", tear it out and throw it from you; for it is better f…"
+        },
+        {
+          "v": 30,
+          "pre": "…And if your right hand ",
+          "hit": "trips you up",
+          "post": ", cut it off and throw it from you; for it is better fo…"
+        }
+      ],
+      "total": 2
     },
     "throw": {
       "count": 5,
@@ -4136,6 +4226,280 @@
         }
       ],
       "total": 7
+    }
+  },
+  "unit-11": {
+    "burden": {
+      "count": 2,
+      "verses": [
+        28,
+        30
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "…Come here to me, all who are laboring and having been ",
+          "hit": "burdened",
+          "post": ", and I will give y'all rest.…"
+        },
+        {
+          "v": 30,
+          "pre": "…For my yoke does you good, and my ",
+          "hit": "burden",
+          "post": " is light.\"…"
+        }
+      ],
+      "total": 2
+    },
+    "come-here": {
+      "count": 1,
+      "verses": [
+        28
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "",
+          "hit": "Come here",
+          "post": " to me, all who are laboring and having been burdened,…"
+        }
+      ],
+      "total": 1
+    },
+    "deeds": {
+      "count": 0,
+      "verses": [],
+      "hits": [],
+      "total": 2
+    },
+    "generation": {
+      "count": 1,
+      "verses": [
+        16
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…\"But to what shall I compare this ",
+          "hit": "generation",
+          "post": "? It is like children sitting in the marketplaces, who…"
+        }
+      ],
+      "total": 1
+    },
+    "gentle": {
+      "count": 1,
+      "verses": [
+        29
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…ake my yoke upon y'all and learn from me, because I am ",
+          "hit": "gentle",
+          "post": " and lowly in heart, and y'all will find rest for your…"
+        }
+      ],
+      "total": 1
+    },
+    "hand-over": {
+      "count": 1,
+      "verses": [
+        27
+      ],
+      "hits": [
+        {
+          "v": 27,
+          "pre": "…All things ",
+          "hit": "were handed over",
+          "post": " to me by my Father, and no one fully knows the Son exc…"
+        }
+      ],
+      "total": 1
+    },
+    "hide-reveal": {
+      "count": 2,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…ou, Father, Lord of the sky and the earth, because you ",
+          "hit": "hid",
+          "post": " these things from wise and perceptive people, and reve…"
+        },
+        {
+          "v": 25,
+          "pre": "…hid these things from wise and perceptive people, and ",
+          "hit": "revealed",
+          "post": " them to infants.…"
+        }
+      ],
+      "total": 2
+    },
+    "law-prophets": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…For all ",
+          "hit": "the prophets and the law",
+          "post": " prophesied until John;…"
+        }
+      ],
+      "total": 1
+    },
+    "metanoia": {
+      "count": 1,
+      "verses": [
+        20
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…ost of his miracles had happened, because they did not ",
+          "hit": "change their minds",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
+    "reed": {
+      "count": 1,
+      "verses": [
+        7
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "…hat did y'all go out into the wilderness to gaze at? A ",
+          "hit": "reed",
+          "post": " shaken by wind?…"
+        }
+      ],
+      "total": 2
+    },
+    "reproach": {
+      "count": 1,
+      "verses": [
+        20
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…Then he began to ",
+          "hit": "reproach",
+          "post": " the towns in which most of his miracles had happened,…"
+        }
+      ],
+      "total": 1
+    },
+    "seize": {
+      "count": 2,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…John the Baptizer until now, the kingdom of the skies ",
+          "hit": "is under assault",
+          "post": ", and forceful people seize it.…"
+        },
+        {
+          "v": 12,
+          "pre": "…il now, the kingdom of the skies is under assault, and ",
+          "hit": "forceful people seize",
+          "post": " it.…"
+        }
+      ],
+      "total": 2
+    },
+    "sin": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…man and a wine-drinker, a friend of tax collectors and ",
+          "hit": "sinners",
+          "post": "!' And Wisdom was shown to be in the right by her deeds…"
+        }
+      ],
+      "total": 1
+    },
+    "skandalon": {
+      "count": 1,
+      "verses": [
+        6
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…And blessed is whoever is not ",
+          "hit": "tripped up",
+          "post": " by me.\"…"
+        }
+      ],
+      "total": 1
+    },
+    "son-of-man": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…The ",
+          "hit": "Son of Man",
+          "post": " came eating and drinking, and they say, 'Look — a glut…"
+        }
+      ],
+      "total": 1
+    },
+    "well-pleased": {
+      "count": 1,
+      "verses": [
+        26
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…Yes, Father, because thus it was ",
+          "hit": "well-pleasing",
+          "post": " before you.…"
+        }
+      ],
+      "total": 1
+    },
+    "yoke": {
+      "count": 2,
+      "verses": [
+        29,
+        30
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…Take my ",
+          "hit": "yoke",
+          "post": " upon y'all and learn from me, because I am gentle and…"
+        },
+        {
+          "v": 30,
+          "pre": "…For my ",
+          "hit": "yoke",
+          "post": " does you good, and my burden is light.\"…"
+        }
+      ],
+      "total": 2
     }
   }
 }
