@@ -596,3 +596,54 @@
   comparison quotes (unit-03, unit-07 — quoting what NASB actually says), a
   Rev 11:15-labeled quote (unit-03), and "the Lord's Prayer" as the passage's
   conventional English title (an idiom, not a translation of kyrios).
+
+## 2026-09-12 — translation-choices.md audited against unit text
+- Scripted a per-data-root dump of the actual English inside every span in
+  verse text (p.v + .prayer) across units 1-11, plus greps for style terms.
+  Rewrote translation-choices.md rows to match the text (apo-tote "from then",
+  fringe, test/no "tempt", good-news/no "gospel", real Master/Yahweh split,
+  secondary renderings for lose/raise/release/throw/urge/withdraw/worship),
+  removed the stale local `repent` row, added 9 observed conventions
+  (Adversary, stage-actors, sham-prophets, demon, messenger, slave, life, look,
+  amen). ~12 real inconsistencies marked ⚑ + listed under "Open calls". No unit
+  text changed.
+
+## 2026-09-12 (cont.) — translation-choices.md open calls resolved
+- Lane ruled on all 12 open calls; wording fixed in units 1-11: metanoia -> turn
+  (3:2/3:8/3:11 already were, 4:17/11:20/11:21 changed from Repent/change(d)
+  their minds); mercy 5:7 -> loyal-love; wage 5:12/5:46 -> wage (was reward);
+  gentle 5:5 -> gentle (was meek); "Father in the skies" (5:48, 6:14, 6:26, 6:32,
+  was "heavenly Father"); Immerser (11:11-12, was Baptizer); lepros 10:8 ->
+  "cleanse the leprous" (was skin-diseased); fulfill formula unified to "filled
+  full" (1:22, 2:15, 2:17, 2:23, 4:14, 8:17 — was split fulfilled/filled-full);
+  "look" replaces "behold" in units 1-2 (1:20, 1:23, 2:1, 2:9, 2:13, 2:19); amen
+  11:11 (was Truly); "pulled apart with care" 10:19 (was anxious); good-news
+  hyphenated everywhere (10:35, 11:5); y'all's for plural possessive (11:17
+  chests, 11:29 "y'all's beings" replacing "your souls"); unit-11 ring diagram
+  "the Anointed" (was "the Christ"). Kept as deliberate context-drift per Lane:
+  dikaios family (5 renderings), 7:26 "stupid", both synagōgē renderings,
+  mercy-deed as a separate rendering from loyal-love.
+- New global thread **acts-of-power** (dynamis, #9e6b1c): tagged at 7:22 and
+  11:20/21/23, replacing untagged "miracles."
+- Promoted three local roots to global threads (each had spread to a 2nd unit):
+  **immerse** (unit-03 -> unit-11, John's title), **anxious** (unit-06 ->
+  unit-10), **clean** (unit-08 -> unit-10). Colours picked via a script using
+  verify_occurrences.py's own CIE76 Lab formula against every colour active in
+  each unit (two rounds of manual guesses collided before switching to this).
+- Tagging fixes: untagged 6:12 "debts"/"debtors" (wrongly under `release`, a
+  different Greek root, opheilēma); consolidated 1:17's four "generations" onto
+  `generation` alone (was double-tagged beget+generation on the first, `beget`
+  alone on the rest); tagged the `learn` verb (manthanō) at 9:13 and 11:29 (was
+  untagged, only the noun "learner" was); tagged `deeds` in 11:2's and 11:19's
+  running verse text (was tagged only in the ring/structure diagram, not the
+  translation itself); fixed three stale threads.json glosses (release "release
+  / let go / leave" not "forgive"; gehenna "Gehenna" not "(hell)"; learn
+  "learner" not "(disciple)").
+- pipeline/retrofit-tags.json: updated the recorded literal text on 6 entries
+  (mercy 5:7 x2, metanoia 4:17, fulfill 4:14, gentle 5:5, wage 5:12/5:46,
+  good-news 10:35/11:5) so the retrofit replay stays idempotent against the
+  new wording — apply_retrofit.py was failing to match the old strings.
+- `pipeline/build.py` green throughout: 11 units, 575 in-verse occurrences, 0
+  colour collisions, 0 coverage gaps across 41 audited threads (the 3 newly
+  promoted + acts-of-power + 7 pre-existing threads have no Greek stems yet in
+  thread-stems.json — flagged advisory-only, same as past sessions' practice).

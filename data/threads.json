@@ -204,7 +204,7 @@
       "id": "release",
       "root": "release",
       "translit": "aphiēmi",
-      "gloss": "release / forgive / leave",
+      "gloss": "release / let go / leave",
       "color": "#0e6a3f",
       "status": "open",
       "tagged": true,
@@ -1268,7 +1268,7 @@
       "id": "gehenna",
       "root": "gehenna",
       "translit": "geenna",
-      "gloss": "Gehenna (hell)",
+      "gloss": "Gehenna",
       "color": "#252869",
       "opens": {
         "unit": 5,
@@ -1455,7 +1455,7 @@
       "id": "learn",
       "root": "learn",
       "translit": "mathētēs",
-      "gloss": "learner (disciple)",
+      "gloss": "learner",
       "color": "#6e355a",
       "status": "open",
       "tagged": true,
@@ -1481,6 +1481,90 @@
         }
       ],
       "note": "mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible."
+    },
+    {
+      "id": "acts-of-power",
+      "root": "acts-of-power",
+      "translit": "dynamis",
+      "gloss": "acts of power",
+      "color": "#9e6b1c",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 7,
+        "ref": "7:22"
+      },
+      "payoffs": [
+        {
+          "unit": 11,
+          "ref": "11:20-23",
+          "note": "the very acts of power just paraded as 7:22's empty boast are now Galilee's own unrepented evidence"
+        }
+      ],
+      "note": "dynamis — 'act of power, mighty work.' Kept literal rather than 'miracle' (which implies a modern category of the supernatural Matthew doesn't use) or 'power' alone (which loses the countable, event-shaped sense — these are things done, plural)."
+    },
+    {
+      "id": "immerse",
+      "root": "immerse",
+      "translit": "baptizō · baptisma · baptistēs",
+      "gloss": "immerse (bapt-)",
+      "color": "#134f7a",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 3,
+        "ref": "3:1"
+      },
+      "payoffs": [
+        {
+          "unit": 11,
+          "ref": "11:11-12",
+          "note": "John's own title, Immerser, recurs as the mission he began is assessed"
+        }
+      ],
+      "note": "Promoted from unit-03's local palette when the noun baptistēs ('Immerser') recurred as John's title at 11:11-12. Rendered 'immerse / Immerser' throughout — never 'baptize / Baptist' — to keep the ordinary washing-verb sense audible."
+    },
+    {
+      "id": "anxious",
+      "root": "anxious",
+      "translit": "merimnaō",
+      "gloss": "be pulled apart with care",
+      "color": "#9755aa",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 6,
+        "ref": "6:25"
+      },
+      "payoffs": [
+        {
+          "unit": 10,
+          "ref": "10:19",
+          "note": "the same verb Jesus used of food and clothing now covers what to say under arrest"
+        }
+      ],
+      "note": "Promoted from unit-06's local palette when merimnaō recurred at 10:19. Related to merizō, 'to divide' — kept as the clumsier 'pulled apart with care' rather than smoother 'worry' or 'anxious,' to keep the division-sense visible."
+    },
+    {
+      "id": "clean",
+      "root": "clean",
+      "translit": "katharizō",
+      "gloss": "cleanse, make ritually pure",
+      "color": "#2d24b7",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 8,
+        "ref": "8:2-3"
+      },
+      "payoffs": [
+        {
+          "unit": 10,
+          "ref": "10:8",
+          "note": "cleansing the leprous becomes one of the four powers handed to the Twelve"
+        }
+      ],
+      "note": "Promoted from unit-08's local palette when katharizō recurred in the mission charge at 10:8."
     }
   ]
 }

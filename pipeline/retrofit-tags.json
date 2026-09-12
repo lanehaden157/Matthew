@@ -311,16 +311,16 @@
     {
       "unit": "unit-05",
       "verse": 7,
-      "text": "merciful",
+      "text": "loyal-in-love",
       "root": "mercy",
-      "why": "eleemones 5:7 'blessed are the merciful' — pre-opening"
+      "why": "eleemones 5:7 'blessed are the loyal-in-love' — pre-opening"
     },
     {
       "unit": "unit-05",
       "verse": 7,
-      "text": "mercy",
+      "text": "loyal-love",
       "root": "mercy",
-      "why": "eleethesontai 5:7 'they shall be shown mercy'"
+      "why": "eleethesontai 5:7 'they shall be shown loyal-love'"
     },
     {
       "unit": "unit-06",
@@ -561,7 +561,7 @@
     {
       "unit": "unit-04",
       "verse": 17,
-      "text": "Repent",
+      "text": "Turn",
       "root": "metanoia",
       "why": "metanoeite 4:17 — verbatim repetition of John's 3:2 proclamation"
     },
@@ -581,9 +581,9 @@
     {
       "unit": "unit-05",
       "verse": 5,
-      "text": "meek",
+      "text": "gentle",
       "root": "gentle",
-      "why": "praeis 5:5 'blessed are the meek' — same word rendered 'gentle' at 11:29"
+      "why": "praeis 5:5 'blessed are the gentle' — same word rendered 'gentle' at 11:29"
     },
     {
       "_c": "--- well-pleased (eudokeō) pre-opening. Thread opens 3:17, per Lane's decision at the Unit 11 port (2026-09-10)."
@@ -705,7 +705,7 @@
     {
       "unit": "unit-04",
       "verse": 14,
-      "text": "fulfilled",
+      "text": "filled full",
       "root": "fulfill",
       "why": "plērōthē 4:14"
     },
@@ -719,14 +719,14 @@
     {
       "unit": "unit-05",
       "verse": 12,
-      "text": "reward",
+      "text": "wage",
       "root": "wage",
       "why": "misthos 5:12"
     },
     {
       "unit": "unit-05",
       "verse": 46,
-      "text": "reward",
+      "text": "wage",
       "root": "wage",
       "why": "misthon 5:46"
     },
@@ -992,7 +992,7 @@
     {
       "unit": "unit-10",
       "verse": 35,
-      "text": "good news",
+      "text": "good-news",
       "root": "good-news",
       "why": "euangelion 9:35",
       "nth": 1
@@ -1052,7 +1052,7 @@
     {
       "unit": "unit-11",
       "verse": 5,
-      "text": "good news",
+      "text": "good-news",
       "root": "good-news",
       "why": "euangelizontai 11:5"
     },

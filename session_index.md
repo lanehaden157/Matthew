@@ -132,3 +132,12 @@ Read this first. 3 lines max per session.
   (divine-name/OT-quote sense) across units 1-11, leaving NASB/Rev quotes and the "Lord's
   Prayer" title alone. Next: Unit 12, plus stems for come-here/generation/gentle/metanoia/
   skandalon/well-pleased (currently undefined, audit-flagged advisory only).
+
+## 2026-09-12 — translation-choices.md audit + rulings applied
+- Audited the glossary against unit 1–11 verse text; surfaced ~12 drifts as open calls.
+- Lane ruled on all 12: reworded units 1-11 (turn/loyal-love/wage/gentle/Father-in-the-skies/
+  Immerser/leprous/filled-full/look/amen/pulled-apart-with-care/good-news hyphen/y'all's);
+  kept dikaios-family + "stupid" + synagōgē-split as deliberate context-drift.
+- New global thread acts-of-power (dynamis); promoted immerse/anxious/clean from local to
+  global (each spread to a 2nd unit); fixed 5 tagging bugs (debts/generations/learn/deeds/
+  glosses). build.py green — 575 occurrences, 0 collisions, 0 coverage gaps.

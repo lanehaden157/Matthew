@@ -1,6 +1,6 @@
 # Cross-unit threads — canonical digest
 
-Generated from `data/threads.json` (version 1). 54 threads, 54 open.
+Generated from `data/threads.json` (version 1). 58 threads, 58 open.
 
 **This is the source of truth for thread tagging.** In a unit's artifact, a root that appears in the `id` column below is a *tracked thread*: tag it `<span class="r" data-root="<id>">…</span>` and list it under `threads.opens` / `threads.payoffs` in the unit-meta block. A root that is recurring but *not* here is unit-local — tag it with its own name and just list it in `roots`. To propose promoting a local root to a tracked thread, add it to `threads.candidates` with a one-line reason; Lane decides.
 
@@ -17,6 +17,7 @@ Generated from `data/threads.json` (version 1). 54 threads, 54 open.
 | `seek` | `seek` | zēteō | seek | 2 (2:13) | 6 (6:33) · 7 (7:7) | open |
 | `withdraw` | `withdraw` | anachōreō | withdraw | 2 (2:12) | 2 (2:13-14, 22) · 4 (4:12) · 9 (9:24) | open |
 | `worship` | `worship` | proskyneō | worship, bow down | 2 (2:2) | 3 (4:9-10) · 28 (28:9, 17) | open |
+| `immerse` | `immerse` | baptizō · baptisma · baptistēs | immerse (bapt-) | 3 (3:1) | 11 (11:11-12) | open |
 | `kingdom` | `kingdom` | basileia | kingdom | 3 (3:2) | 4 (4:17) · 5 (5:3, 10, 19-20) · 13 (13:1-52) | open |
 | `metanoia` | `metanoia` | metanoia · metanoeō | repent, change one's mind | 3 (3:2) | 4 (4:17) · 11 (11:20) | open |
 | `test` | `test` | peirazō | test / tempt | 3 (4:3) | 16 (16:1) · 19 (19:3) · 22 (22:18, 35) | open |
@@ -31,21 +32,24 @@ Generated from `data/threads.json` (version 1). 54 threads, 54 open.
 | `nations` | `nations` | ethnē | nations / Gentiles | 4 (4:15) | 10 (10:5, 18) · 28 (28:19) | open |
 | `sea` | `sea` | thalassa | sea | 4 (4:15) | 8 (8:24-32) | open |
 | `father` | `father` | patēr | Father | 5 (5:16) | 6 (6:9) · 11 (11:25-27) | open |
-| `gehenna` | `gehenna` | geenna | Gehenna (hell) | 5 (5:22) | 10 (10:28) · 23 (23:15, 33) | open |
+| `gehenna` | `gehenna` | geenna | Gehenna | 5 (5:22) | 10 (10:28) · 23 (23:15, 33) | open |
 | `gentle` | `gentle` | praus | gentle, humble | 5 (5:5) | 11 (11:29) | open |
 | `law-prophets` | `law-prophets` | ho nomos kai hoi prophētai | the Law & the Prophets | 5 (5:17) | 7 (7:12) · 11 (11:13) | open |
-| `learn` | `learn` | mathētēs | learner (disciple) | 5 (5:1) | 8 (8:23) · 9 (9:14) · 11 (11:2) | open |
+| `learn` | `learn` | mathētēs | learner | 5 (5:1) | 8 (8:23) · 9 (9:14) · 11 (11:2) | open |
 | `peace` | `peace` | eirēnē | peace | 5 (5:9) | 10 (10:13, 34) | open |
 | `skandalon` | `skandalon` | skandalon · skandalizō | trip up / trap-trigger, cause to stumble | 5 (5:29) | 11 (11:6) · 26 (26:31-33) | open |
 | `wage` | `wage` | misthos | wage / reward | 5 (5:12) | 6 (6:1-16) · 10 (10:41-42) | open |
+| `anxious` | `anxious` | merimnaō | be pulled apart with care | 6 (6:25) | 10 (10:19) | open |
 | `evil` | `evil` | ponēros | evil / the evil one | 6 (6:13) | 7 (7:11, 17-18) · 13 (13:19, 38) | open |
 | `little-faith` | `little-faith` | oligopistoi | "little-faiths" | 6 (6:30) | 8 (8:26) · 14 (14:31) · 16 (16:8) | open |
-| `release` | `release` | aphiēmi | release / forgive / leave | 6 (6:12) | 8 (8:15) · 9 (9:2) | open |
+| `release` | `release` | aphiēmi | release / let go / leave | 6 (6:12) | 8 (8:15) · 9 (9:2) | open |
+| `acts-of-power` | `acts-of-power` | dynamis | acts of power | 7 (7:22) | 11 (11:20-23) | open |
 | `authority` | `authority` | exousia | authority | 7 (7:29) | 8 (8:9) · 9 (9:6, 8) · 10 (10:1) · 28 (28:18) | open |
 | `build` | `build` | oikodomeō | build | 7 (7:24) | 16 (16:18) | open |
 | `foolish` | `foolish` | mōros | foolish / dull | 7 (7:26) | 23 (23:17) · 25 (25:2, 3, 8) | open |
 | `rock` | `rock` | petra | rock (bedrock) | 7 (7:24-25) | 16 (16:18) | open |
 | `wise` | `wise` | phronimos | shrewd / prudent | 7 (7:24) | 10 (10:16) · 24 (24:45) · 25 (25:2, 4, 8-9) | open |
+| `clean` | `clean` | katharizō | cleanse, make ritually pure | 8 (8:2-3) | 10 (10:8) | open |
 | `faith` | `faith` | pistis · pisteuō | trust, faith | 8 (8:10) | 9 (9:2, 22, 29) · 15 (15:28) · 17 (17:20) · 21 (21:21) | open |
 | `shake` | `shake` | seismos | shaking / earthquake / storm | 8 (8:24) | 27 (27:51-54) · 28 (28:2) | open |
 | `son-of-man` | `son-of-man` | ho huios tou anthrōpou | the Son of Man | 8 (8:20) | 9 (9:6) · 10 (10:23) · 11 (11:19) · 17 (16:13, 16:27) · 17 (17:9, 17:22) · 19 (19:28) · 20 (20:18, 20:28) · 24 (24:27-44) · 25 (25:31) · 26 (26:24, 26:64) | open |
@@ -63,10 +67,13 @@ Generated from `data/threads.json` (version 1). 54 threads, 54 open.
 
 ## Notes per thread
 
+- **`acts-of-power`**: dynamis — 'act of power, mighty work.' Kept literal rather than 'miracle' (which implies a modern category of the supernatural Matthew doesn't use) or 'power' alone (which loses the countable, event-shaped sense — these are things done, plural).
+- **`anxious`**: Promoted from unit-06's local palette when merimnaō recurred at 10:19. Related to merizō, 'to divide' — kept as the clumsier 'pulled apart with care' rather than smoother 'worry' or 'anxious,' to keep the division-sense visible.
 - **`apo-tote`**: Two 'from that time' hinges: 4:17 ('began to proclaim') <-> 16:21 ('began to show he must suffer'). Read the two together at Unit 17.
 - **`authority`**: The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18).
 - **`build`**: The wise builder builds on rock (7:24) -> 'I will build my assembly' (16:18).
 - **`call`**: kaleō — the naming at 1:21 ('you shall call his name Jesus') becomes the calling of the unworthy (9:13) and the vocabulary of the kingdom's invitations. Distinct from prefixed compounds (parakaleō 'urge', proskaleomai 'summon', ekklēsia 'assembly'), each its own word.
+- **`clean`**: Promoted from unit-08's local palette when katharizō recurred in the mission charge at 10:8.
 - **`come-here`**: deute — 'come here, and I will make you fishers of men' (4:19) is the thread's true open; the invitation returns at 11:28 to all who labor.
 - **`cross`**: stauros — first at 10:38 as a general condition of following, well before any passion prediction; recurs at 16:24 and then the crucifixion itself.
 - **`emmanuel`**: The Emmanuel inclusio: "God with us" (1:23) <-> "I am with y'all always" (28:20).
@@ -84,6 +91,7 @@ Generated from `data/threads.json` (version 1). 54 threads, 54 open.
 - **`gentle`**: praeis — 'blessed are the gentle' (5:5) is the thread's true open; Jesus claims the word of himself at 11:29.
 - **`good-news`**: euangelion — the summary refrain of 4:23/9:35 becomes John's own answer at 11:5, then a global horizon (24:14) and the woman's memorial (26:13).
 - **`hand-over`**: paradidōmi — Judas is introduced by it at 10:4, then it fires three times for the disciples (10:17, 19, 21); from 17:22 on it becomes the governing verb of the passion.
+- **`immerse`**: Promoted from unit-03's local palette when the noun baptistēs ('Immerser') recurred as John's title at 11:11-12. Rendered 'immerse / Immerser' throughout — never 'baptize / Baptist' — to keep the ordinary washing-verb sense audible.
 - **`kingdom`**: basileia — 'the kingdom of the skies has drawn near' (3:2, 4:17) governs the Sermon's beatitudes and the parables to come. Distinct from basileus 'king' (10:18, 17:25, 18:23, 22:2), a different word not tracked here.
 - **`law-prophets`**: Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed.
 - **`learn`**: mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible.

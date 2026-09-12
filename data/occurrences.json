@@ -1,7 +1,7 @@
 {
   "unit-01": {
     "beget": {
-      "count": 47,
+      "count": 43,
       "verses": [
         1,
         2,
@@ -19,7 +19,6 @@
         14,
         15,
         16,
-        17,
         18,
         20
       ],
@@ -271,30 +270,6 @@
           "post": " Jesus, the one called Anointed.…"
         },
         {
-          "v": 17,
-          "pre": "…So all the ",
-          "hit": "generations",
-          "post": " from Abraham until David [are] fourteen generations, a…"
-        },
-        {
-          "v": 17,
-          "pre": "…So all the ",
-          "hit": "generations",
-          "post": " from Abraham until David [are] fourteen generations, a…"
-        },
-        {
-          "v": 17,
-          "pre": "…So all the ",
-          "hit": "generations",
-          "post": " from Abraham until David [are] fourteen generations, a…"
-        },
-        {
-          "v": 17,
-          "pre": "…So all the ",
-          "hit": "generations",
-          "post": " from Abraham until David [are] fourteen generations, a…"
-        },
-        {
           "v": 18,
           "pre": "…Now of Jesus Anointed the ",
           "hit": "genesis",
@@ -307,7 +282,7 @@
           "post": " in her is from [the] Holy Spirit;…"
         }
       ],
-      "total": 47
+      "total": 43
     },
     "call": {
       "count": 3,
@@ -394,7 +369,7 @@
       "hits": [
         {
           "v": 20,
-          "pre": "…se things — behold, an angel of Yahweh appeared to him ",
+          "pre": "…hese things — look, an angel of Yahweh appeared to him ",
           "hit": "in a dream",
           "post": ", saying: Joseph, son of David, do not fear to take alo…"
         }
@@ -432,12 +407,37 @@
       "total": 1
     },
     "generation": {
-      "count": 1,
+      "count": 4,
       "verses": [
         17
       ],
-      "hits": [],
-      "total": 1
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…So all the ",
+          "hit": "generations",
+          "post": " from Abraham until David [are] fourteen generations, a…"
+        },
+        {
+          "v": 17,
+          "pre": "…So all the ",
+          "hit": "generations",
+          "post": " from Abraham until David [are] fourteen generations, a…"
+        },
+        {
+          "v": 17,
+          "pre": "…So all the ",
+          "hit": "generations",
+          "post": " from Abraham until David [are] fourteen generations, a…"
+        },
+        {
+          "v": 17,
+          "pre": "…So all the ",
+          "hit": "generations",
+          "post": " from Abraham until David [are] fourteen generations, a…"
+        }
+      ],
+      "total": 4
     },
     "name": {
       "count": 3,
@@ -619,7 +619,7 @@
           "v": 23,
           "pre": "…and coming he settled in a city ",
           "hit": "called",
-          "post": " Nazareth; so that might be filled-full what was spoken…"
+          "post": " Nazareth; so that might be filled full what was spoken…"
         }
       ],
       "total": 3
@@ -756,19 +756,19 @@
         {
           "v": 15,
           "pre": "…and was there until the end of Herod; so that might be ",
-          "hit": "filled-full",
+          "hit": "filled full",
           "post": " what was spoken by Yahweh through the prophet, saying,…"
         },
         {
           "v": 17,
           "pre": "…Then was ",
-          "hit": "filled-full",
+          "hit": "filled full",
           "post": " what was spoken through Jeremiah the prophet, saying,…"
         },
         {
           "v": 23,
           "pre": "…he settled in a city called Nazareth; so that might be ",
-          "hit": "filled-full",
+          "hit": "filled full",
           "post": " what was spoken through the prophets, that he shall be…"
         }
       ],
@@ -786,7 +786,7 @@
           "v": 1,
           "pre": "…ng been begotten in Bethlehem of Judea, in the days of ",
           "hit": "Herod the king",
-          "post": ", behold, magi from the risings arrived in Jerusalem,…"
+          "post": ", look, magi from the risings arrived in Jerusalem,…"
         },
         {
           "v": 2,
@@ -910,7 +910,7 @@
           "v": 13,
           "pre": "…And when they had ",
           "hit": "withdrawn",
-          "post": ", behold, an angel of Yahweh appears in a dream to Jose…"
+          "post": ", look, an angel of Yahweh appears in a dream to Joseph…"
         },
         {
           "v": 14,
@@ -1412,7 +1412,7 @@
           "v": 17,
           "pre": "",
           "hit": "From then",
-          "post": " Jesus began to proclaim and to say: “Repent, for the k…"
+          "post": " Jesus began to proclaim and to say: “Turn, for the kin…"
         }
       ],
       "total": 1
@@ -1544,7 +1544,7 @@
         {
           "v": 14,
           "pre": "…at what was spoken through Ēsaias the prophet might be ",
-          "hit": "fulfilled",
+          "hit": "filled full",
           "post": ", saying:…"
         }
       ],
@@ -1589,7 +1589,7 @@
       "hits": [
         {
           "v": 17,
-          "pre": "…n Jesus began to proclaim and to say: “Repent, for the ",
+          "pre": "…hen Jesus began to proclaim and to say: “Turn, for the ",
           "hit": "kingdom",
           "post": " of the skies has drawn near.”…"
         },
@@ -1632,7 +1632,7 @@
         {
           "v": 17,
           "pre": "…From then Jesus began to proclaim and to say: “",
-          "hit": "Repent",
+          "hit": "Turn",
           "post": ", for the kingdom of the skies has drawn near.”…"
         }
       ],
@@ -1664,7 +1664,7 @@
           "v": 17,
           "pre": "…From then Jesus began to ",
           "hit": "proclaim",
-          "post": " and to say: “Repent, for the kingdom of the skies has…"
+          "post": " and to say: “Turn, for the kingdom of the skies has dr…"
         },
         {
           "v": 23,
@@ -1880,9 +1880,9 @@
         },
         {
           "v": 48,
-          "pre": "…Y'all therefore shall be whole as y'all's heavenly ",
+          "pre": "…Y'all therefore shall be whole as y'all's ",
           "hit": "Father",
-          "post": " is whole.…"
+          "post": " in the skies is whole.…"
         }
       ],
       "total": 3
@@ -1962,7 +1962,7 @@
         {
           "v": 5,
           "pre": "…Blessed are the ",
-          "hit": "meek",
+          "hit": "gentle",
           "post": ", for they shall inherit the earth.…"
         }
       ],
@@ -2108,13 +2108,13 @@
         {
           "v": 7,
           "pre": "…Blessed are the ",
-          "hit": "merciful",
-          "post": ", for they shall be shown mercy.…"
+          "hit": "loyal-in-love",
+          "post": ", for they shall be shown loyal-love.…"
         },
         {
           "v": 7,
-          "pre": "…Blessed are the merciful, for they shall be shown ",
-          "hit": "mercy",
+          "pre": "…Blessed are the loyal-in-love, for they shall be shown ",
+          "hit": "loyal-love",
           "post": ".…"
         }
       ],
@@ -2312,13 +2312,13 @@
         {
           "v": 12,
           "pre": "…Rejoice and exult, for y'all's ",
-          "hit": "reward",
+          "hit": "wage",
           "post": " is much in the skies; for so they persecuted the proph…"
         },
         {
           "v": 46,
           "pre": "…For if y'all love those loving y'all, what ",
-          "hit": "reward",
+          "hit": "wage",
           "post": " have y'all? Do not even the tax collectors do the same…"
         }
       ],
@@ -2348,13 +2348,13 @@
           "v": 48,
           "pre": "…Y'all therefore shall be ",
           "hit": "whole",
-          "post": " as y'all's heavenly Father is whole.…"
+          "post": " as y'all's Father in the skies is whole.…"
         },
         {
           "v": 48,
           "pre": "…Y'all therefore shall be ",
           "hit": "whole",
-          "post": " as y'all's heavenly Father is whole.…"
+          "post": " as y'all's Father in the skies is whole.…"
         }
       ],
       "total": 7
@@ -2471,9 +2471,9 @@
         },
         {
           "v": 14,
-          "pre": "…release for people their false steps, y’all’s heavenly ",
+          "pre": "…if y’all release for people their false steps, y’all’s ",
           "hit": "Father",
-          "post": " will also release for y’all;…"
+          "post": " in the skies will also release for y’all;…"
         },
         {
           "v": 15,
@@ -2495,15 +2495,15 @@
         },
         {
           "v": 26,
-          "pre": "…w nor reap nor gather into barns, and y’all’s heavenly ",
+          "pre": "…either sow nor reap nor gather into barns, and y’all’s ",
           "hit": "Father",
-          "post": " feeds them. Aren’t y’all worth more than they?…"
+          "post": " in the skies feeds them. Aren’t y’all worth more than…"
         },
         {
           "v": 32,
-          "pre": "…se things the nations seek after; for y’all’s heavenly ",
+          "pre": "…r all these things the nations seek after; for y’all’s ",
           "hit": "Father",
-          "post": " has known that y’all need all of these.…"
+          "post": " in the skies has known that y’all need all of these.…"
         }
       ],
       "total": 13
@@ -2653,7 +2653,7 @@
           "v": 32,
           "pre": "…For all these things the ",
           "hit": "nations",
-          "post": " seek after; for y’all’s heavenly Father has known that…"
+          "post": " seek after; for y’all’s Father in the skies has known…"
         }
       ],
       "total": 2
@@ -2669,13 +2669,13 @@
           "v": 14,
           "pre": "…“For if y’all ",
           "hit": "release",
-          "post": " for people their false steps, y’all’s heavenly Father…"
+          "post": " for people their false steps, y’all’s Father in the sk…"
         },
         {
           "v": 14,
           "pre": "…“For if y’all ",
           "hit": "release",
-          "post": " for people their false steps, y’all’s heavenly Father…"
+          "post": " for people their false steps, y’all’s Father in the sk…"
         },
         {
           "v": 15,
@@ -2690,7 +2690,7 @@
           "post": " for people, neither will y’all’s Father release y’all’…"
         }
       ],
-      "total": 8
+      "total": 6
     },
     "righteous": {
       "count": 2,
@@ -2725,7 +2725,7 @@
           "v": 32,
           "pre": "…For all these things the nations ",
           "hit": "seek after",
-          "post": "; for y’all’s heavenly Father has known that y’all need…"
+          "post": "; for y’all’s Father in the skies has known that y’all…"
         },
         {
           "v": 33,
@@ -2865,6 +2865,21 @@
     }
   },
   "unit-07": {
+    "acts-of-power": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…our name throw out demons — and by your name make many ",
+          "hit": "acts of power",
+          "post": "?\"…"
+        }
+      ],
+      "total": 1
+    },
     "ask": {
       "count": 5,
       "verses": [
@@ -4171,10 +4186,11 @@
       "total": 1
     },
     "learn": {
-      "count": 5,
+      "count": 6,
       "verses": [
         10,
         11,
+        13,
         14,
         19
       ],
@@ -4190,6 +4206,12 @@
           "pre": "…And the Pharisees, seeing it, were saying to his ",
           "hit": "learners",
           "post": ": \"Why does y'all's teacher eat with tax collectors and…"
+        },
+        {
+          "v": 13,
+          "pre": "…But go and ",
+          "hit": "learn",
+          "post": " what this is: 'I want loyal-love and not sacrifice.' (…"
         },
         {
           "v": 14,
@@ -4210,7 +4232,7 @@
           "post": " too.…"
         }
       ],
-      "total": 5
+      "total": 6
     },
     "lose": {
       "count": 1,
@@ -4532,6 +4554,21 @@
     }
   },
   "unit-10": {
+    "anxious": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…And whenever they hand y'all over, do not be ",
+          "hit": "pulled apart with care",
+          "post": " how or what y'all should speak; for it will be given t…"
+        }
+      ],
+      "total": 1
+    },
     "authority": {
       "count": 1,
       "verses": [
@@ -4543,6 +4580,21 @@
           "pre": "…And summoning his twelve learners, he gave them ",
           "hit": "authority",
           "post": " over unclean spirits, so as to throw them out and to t…"
+        }
+      ],
+      "total": 1
+    },
+    "clean": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…Tend the weak, raise the dead, ",
+          "hit": "cleanse",
+          "post": " the leprous, throw out demons. As a gift y'all receive…"
         }
       ],
       "total": 1
@@ -4693,7 +4745,7 @@
         {
           "v": 35,
           "pre": "…teaching in their gathering-places and proclaiming the ",
-          "hit": "good news",
+          "hit": "good-news",
           "post": " of the kingdom and tending every disease and every wea…"
         }
       ],
@@ -4730,13 +4782,13 @@
           "v": 19,
           "pre": "…And whenever they ",
           "hit": "hand",
-          "post": " y'all over, do not be anxious how or what y'all should…"
+          "post": " y'all over, do not be pulled apart with care how or wh…"
         },
         {
           "v": 19,
           "pre": "…And whenever they hand y'all ",
           "hit": "over",
-          "post": ", do not be anxious how or what y'all should speak; for…"
+          "post": ", do not be pulled apart with care how or what y'all sh…"
         },
         {
           "v": 21,
@@ -4784,7 +4836,7 @@
       "hits": [
         {
           "v": 35,
-          "pre": "…gathering-places and proclaiming the good news of the ",
+          "pre": "…gathering-places and proclaiming the good-news of the ",
           "hit": "kingdom",
           "post": " and tending every disease and every weakness.…"
         },
@@ -4920,7 +4972,7 @@
           "v": 8,
           "pre": "…Tend the weak, ",
           "hit": "raise",
-          "post": " the dead, cleanse the skin-diseased, throw out demons.…"
+          "post": " the dead, cleanse the leprous, throw out demons. As a…"
         }
       ],
       "total": 1
@@ -5102,7 +5154,7 @@
         },
         {
           "v": 8,
-          "pre": "…d the weak, raise the dead, cleanse the skin-diseased, ",
+          "pre": "…Tend the weak, raise the dead, cleanse the leprous, ",
           "hit": "throw out",
           "post": " demons. As a gift y'all received; as a gift give.…"
         },
@@ -5221,6 +5273,35 @@
     }
   },
   "unit-11": {
+    "acts-of-power": {
+      "count": 3,
+      "verses": [
+        20,
+        21,
+        23
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…en he began to reproach the towns in which most of his ",
+          "hit": "acts of power",
+          "post": " had happened, because they did not turn.…"
+        },
+        {
+          "v": 21,
+          "pre": "…o you, Chorazin! Woe to you, Bethsaida! Because if the ",
+          "hit": "acts of power",
+          "post": " that happened in y'all had happened in Tyre and Sidon,…"
+        },
+        {
+          "v": 23,
+          "pre": "…to the sky? You will go down to Hades. Because if the ",
+          "hit": "acts of power",
+          "post": " that happened in you had happened in Sodom, it would h…"
+        }
+      ],
+      "total": 3
+    },
     "burden": {
       "count": 2,
       "verses": [
@@ -5259,10 +5340,26 @@
       "total": 1
     },
     "deeds": {
-      "count": 0,
-      "verses": [],
-      "hits": [],
-      "total": 2
+      "count": 2,
+      "verses": [
+        2,
+        19
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…Now John, having heard in the jailhouse of the ",
+          "hit": "deeds",
+          "post": " of the Anointed One, having sent through his learners,…"
+        },
+        {
+          "v": 19,
+          "pre": "…nners!' And Wisdom was shown to be in the right by her ",
+          "hit": "deeds",
+          "post": ".\"…"
+        }
+      ],
+      "total": 4
     },
     "father": {
       "count": 5,
@@ -5330,7 +5427,7 @@
           "v": 29,
           "pre": "…ake my yoke upon y'all and learn from me, because I am ",
           "hit": "gentle",
-          "post": " and lowly in heart, and y'all will find rest for your…"
+          "post": " and lowly in heart, and y'all will find rest for y'all…"
         }
       ],
       "total": 1
@@ -5344,7 +5441,7 @@
         {
           "v": 5,
           "pre": "…, and dead people are raised, and poor people are told ",
-          "hit": "good news",
+          "hit": "good-news",
           "post": ".…"
         }
       ],
@@ -5386,6 +5483,28 @@
       ],
       "total": 2
     },
+    "immerse": {
+      "count": 2,
+      "verses": [
+        11,
+        12
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…omen there has not arisen anyone greater than John the ",
+          "hit": "Immerser",
+          "post": "; but the smaller-one in the kingdom of the skies is gr…"
+        },
+        {
+          "v": 12,
+          "pre": "…And from the days of John the ",
+          "hit": "Immerser",
+          "post": " until now, the kingdom of the skies is under assault,…"
+        }
+      ],
+      "total": 2
+    },
     "kingdom": {
       "count": 2,
       "verses": [
@@ -5395,13 +5514,13 @@
       "hits": [
         {
           "v": 11,
-          "pre": "…ter than John the Baptizer; but the smaller-one in the ",
+          "pre": "…ter than John the Immerser; but the smaller-one in the ",
           "hit": "kingdom",
           "post": " of the skies is greater than he.…"
         },
         {
           "v": 12,
-          "pre": "…And from the days of John the Baptizer until now, the ",
+          "pre": "…And from the days of John the Immerser until now, the ",
           "hit": "kingdom",
           "post": " of the skies is under assault, and forceful people sei…"
         }
@@ -5424,9 +5543,10 @@
       "total": 1
     },
     "learn": {
-      "count": 1,
+      "count": 2,
       "verses": [
-        2
+        2,
+        29
       ],
       "hits": [
         {
@@ -5434,24 +5554,37 @@
           "pre": "…the deeds of the Anointed One, having sent through his ",
           "hit": "learners",
           "post": ",…"
+        },
+        {
+          "v": 29,
+          "pre": "…Take my yoke upon y'all and ",
+          "hit": "learn",
+          "post": " from me, because I am gentle and lowly in heart, and y…"
         }
       ],
-      "total": 1
+      "total": 2
     },
     "metanoia": {
-      "count": 1,
+      "count": 2,
       "verses": [
-        20
+        20,
+        21
       ],
       "hits": [
         {
           "v": 20,
-          "pre": "…ost of his miracles had happened, because they did not ",
-          "hit": "change their minds",
+          "pre": "…f his acts of power had happened, because they did not ",
+          "hit": "turn",
           "post": ".…"
+        },
+        {
+          "v": 21,
+          "pre": "…y'all had happened in Tyre and Sidon, they would have ",
+          "hit": "turned",
+          "post": " long ago, in sackcloth and ashes.…"
         }
       ],
-      "total": 1
+      "total": 2
     },
     "raise": {
       "count": 2,
@@ -5464,13 +5597,13 @@
           "v": 5,
           "pre": "…are made clean and the deaf hear, and dead people are ",
           "hit": "raised",
-          "post": ", and poor people are told good news.…"
+          "post": ", and poor people are told good-news.…"
         },
         {
           "v": 11,
           "pre": "…I tell y'all, among those born of women there has not ",
           "hit": "arisen",
-          "post": " anyone greater than John the Baptizer; but the smaller…"
+          "post": " anyone greater than John the Immerser; but the smaller…"
         }
       ],
       "total": 2
@@ -5500,7 +5633,7 @@
           "v": 20,
           "pre": "…Then he began to ",
           "hit": "reproach",
-          "post": " the towns in which most of his miracles had happened,…"
+          "post": " the towns in which most of his acts of power had happe…"
         }
       ],
       "total": 1
@@ -5528,7 +5661,7 @@
       "hits": [
         {
           "v": 12,
-          "pre": "…John the Baptizer until now, the kingdom of the skies ",
+          "pre": "…John the Immerser until now, the kingdom of the skies ",
           "hit": "is under assault",
           "post": ", and forceful people seize it.…"
         },
