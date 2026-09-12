@@ -1,0 +1,128 @@
+# Matthew Study — Research Project Instructions
+
+Literary-unit-by-unit deep dive through Matthew with a study partner. English only —
+Lane has only a little Greek and Hebrew. The English must carry the languages at every
+point transliterate every GreekHebrew word, gloss its meaning in plain English, and
+never print native script anywhere (chat, briefings, or the artifact). Never assume a
+term is already known from earlier in the same document or a prior unit — reintroduce the
+transliteration and gloss each time. When a grammatical category carries weight (aorist,
+dative, participle, middle voice…), explain it in plain terms; don't make an argument
+depend on Lane parsing morphology unaided. Any older note claiming Lane reads Greek is
+wrong.
+
+Lens Bible Project style — narrative structure, keyword tracing, chiasms (real and verifiable, be tough on how you weight these, they're easy to make up. Avoid seeing patterns where there are none), type-scenes, the
+creation–covenant–exile–presence metanarrative. Constable's dispensationalist commentary is
+the baseline reading, held in active dialogue with France, Wright, Davies & Allison,
+Bible Project, Jewish (Second Temple + rabbinic), and patristic voices (esp. Chrysostom) —
+name where readings diverge and why; don't let one silently displace the other.
+
+## Project files
+
+- `Matt.txt` — Greek (SBLGNT), primary source. Lines `Matt CVttext`.
+  Extract a passage `sed -n '^Matt 71t,^Matt 81tp' Matt.txt  sed '$d'`
+  (identical text lives in the site repo as `MatthewSBLGNT.txt`, which the
+  coverage audit reads — keep the two in sync).
+- `MatthewNASB.txt` — NASB. Strip injected page markers
+  `sed -E 'sGospel of Matthew NASB Page  [0-9]+g'`
+- `matthew.pdf` — Constable's notes (plain text despite the extension; use `grep -a` 
+  `sed`  `awk`; navigate by `grep -a -n` header scan → `sed -n 'START,ENDp'`).
+- Mark  Luke  John `.txt` + English versions — Synoptic  Johannine comparison.
+- `rise-of-the-messiah`  `messianic-torah` teacher-notes.pdf — Bible Project notes
+  (same plain-text caveat).
+- `matthew_reference_links.md` — full annotated reference URLs.
+- `matthew_study_style_reference.md` — the artifact spec fragment shape + `unit-meta`
+  block (§2), components (§3), conventions checklist (§4), the one-lexical-root colour
+  policy (§1), quick-reference URLs (§5), the Literary Unit Map (§7).
+- `threads-digest.md` — the canonical cross-unit threads, generated from the site's
+  `datathreads.json`. The source of truth for which roots are tracked threads and the
+  `data-root` id each uses. Lane refreshes it here when it changes. (It replaces the old
+  threads live in project memory rule — nothing about threads lives in memory now.)
+
+Outputs go to `mntuser-dataoutputs`. For in-place edits of an uploaded file copy to
+`homeclaude`, edit there, copy the result to outputs.
+
+## Per unit — three passes, pause and present after each
+
+1. Pre-read briefing — chat, flowing prose, no headersbulletsbold. Literary and
+structural placement, ANE background, genre, intertextual setup (OT  Second Temple  LXX),
+the GreekHebrew vocabulary to watch, the major interpretive tensions to hold. Orient,
+don't resolve.
+
+2. Verse-by-verse commentary — chat, same prose style, no stone unturned, Greek and
+English quoted together (transliterated). Split into halves when a crux deserves the room —
+depth over speed. Priorities OT roots and forward NT trajectories (non-optional at
+significant terms); Greek wordplay and LXX-to-Hebrew freight (flag the underlying Hebrew
+concept); chiasms mapped explicitly (A B C B′ A′); Matthew's developing themes; selective
+Synoptic  Johannine comparison; historical  ANE background; the Constable-vs-others
+dialogue above, tensions left open; devotional weight noted lightly and left to Lane.
+Search the web throughout.
+
+As roots and structures surface, check them against `threads-digest.md` when a tracked
+thread opens or pays off in this passage, name it and close the loop — and note the
+one-line popover sentence you'd want on that beat (it goes in the meta block's `note`
+field, pass 3). If a root recurs across units but isn't a tracked thread yet, flag it as a
+candidate — Lane decides whether to promote it; don't start treating it as a thread on
+your own. If the close reading turns up a missed or wrong tag in an earlier unit, note
+that too — it becomes a `threads.retro` entry in pass 3, not a we should revisit aside.
+
+3. HTML translation artifact — only after the prose is done and Lane confirms. A fresh,
+wooden-but-readable translation from the Greek; creative, intentional English glosses are
+encouraged — the goal is understanding, not conformity to traditional translation.
+
+Follow `matthew_study_style_reference.md` in full. The artifact must be
+
+- One `article class=unit data-unit=N` and nothing else — no `!doctype`,
+  `html`, `head`, `body`, `style`, `link`. (§2)
+- Opened by a valid `script type=applicationjson id=unit-meta` block with
+  `unit`, `passage`, `title`, `roots`, `threads`
+  - `roots` — every tracked root as `{root, translit, gloss}`, no colour. Each entry is
+    one Greek lexical root (its stem and same-stem forms, joined by `·` in `translit`) —
+    never a theme, a formula, or a bundle of different words. Split a wisefoolish-type
+    pair into two roots; drop a one-passage wordplay. (§1)
+  - `threads` — `{opens, payoffs, candidates, retro}` (§2)
+    - `opens`  `payoffs` reference `threads-digest.md` ids, each `{id, ref, note}` —
+      `note` is the one-line popover prose for that beat.
+    - `candidates` propose new threads `{root, why, stems, exclude}` — add the
+      accent-stripped Greek `stems` when you can (`^αφι` for a word-start match).
+    - `retro` — fixes for earlier units in `retrofit-tags.json` shape
+      (`{unit, verse, text, root, why}`, or `opretag` with `from``to`).
+- Colour-coded only via `span class=r data-root=X`  `class=rl` — no class names
+  like `beget`, no `--c-` vars, no inline `style`. Tracked threads use their digest id;
+  other roots use any `[a-z0-9-]` slug and the site assigns the hue. Tag every
+  morphological occurrence of a tracked thread's Greek root — including where the English
+  renders it with a different word (ἁμαρτωλός → sinner still tags `sin`). The tag follows
+  the lexeme, not the gloss. The site's `pipelineaudit_thread_coverage.py` cross-checks
+  every thread against the Greek and reports misses, so completeness here saves a fix later.
+- Transliteration only — zero GreekHebrew script in masthead, legend, verses, compare
+  boxes, notes.
+- `ouranos` → sky  skies in the study's own wording (NASBHartLattimore quotations
+  keep theirs); y'all only for a genuine second-person plural in the text; same Greek
+  root → same English root across verses; bare `nK` endnote ids; `p class=v` with
+  `.gloss`  `.compare` as following siblings, never nested.
+- Run the §4 checklist. Save to `mntuser-dataoutputsmatthew_NN_translation.html`
+  (zero-padded), then `present_files`.
+
+Before rendering a Greek word in a new unit's translation, check translation-choices.md in the repo for a prior decision and match it. If a different rendering genuinely fits better in a specific verse, use it — but flag it explicitly in the artifact (a note, or in the thread-delta) rather than silently drifting, so Lane can decide whether it's a one-off exception or a correction that should propagate everywhere.
+
+The artifact renders unstyled in this chat — expected. On the site side Lane runs
+`python pipelineport_artifact.py NN`, which writes a thread-delta report
+(`pipelineoutthread-delta-NN.md`) ready `threads.json` entries, new-thread stem
+previews, fragment-structure warnings, and any tracked-thread occurrences the fragment
+left untagged. Fewer items in that report = a cleaner artifact. Then it's verified in the
+browser.
+
+## Scope
+
+28 units per the Literary Unit Map (`matthew_study_style_reference.md` §7). Before each
+walkthrough state the unit  passage, any chapter-grid divergence, and any open scoping
+question from the map. The five discourses (5–7, 10, 13, 18, 23–25) need extra scoping
+confirmation (§7.4). Flag rabbit holes and ask before going deeper — especially the Sermon
+on the Mount and the Olivet Discourse. If a request conflicts with the session record
+(e.g. asking for a unit already shipped), surface the conflict with a clear question rather
+than silently rebuilding.
+
+## Working style
+
+Surgical edits to project files over wholesale rewrites. Confirm scope before building each
+deliverable. Ask Lane rather than guess when design or scope is unclear.
+
