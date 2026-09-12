@@ -568,3 +568,224 @@ transfer and aren't meant to. The single sharpest latent risk worth fixing
 *before* first use rather than after discovery is the Hebrew final-letter-form
 fold in stem matching (§1.4, §3.3) — a bug this project already paid to find
 and fix once for Greek.
+
+---
+
+## 6. Gap (a): three artifacts sampled and diffed against the validator
+
+Sampled `source-artifacts/matthew_{01,05,08,09,10,11}_translation.html` — early
+(01), middle (05, 08), and the three v2-contract artifacts (09, 10, 11) — parsed
+each with `pipeline/unit_meta.py`, diffed their class inventories, and ran
+`validate()` against `data/threads.json`.
+
+**All three v2 artifacts validate CLEAN.** Every disagreement below is something
+the validator does not look at.
+
+### 6.1 The contract has three generations, not one
+
+| | 01 | 05 | 08 | 09 | 10 | 11 |
+|---|---|---|---|---|---|---|
+| `<!DOCTYPE>` + `<head>` | ✓ | ✓ | ✓ | — | — | — |
+| `unit-meta` block | — | — | — | ✓ | ✓ | ✓ |
+| `data-root` attrs | 0 | 0 | 0 | 36 | 47 | 23 |
+| bespoke root classes (`span.beget`, `span.kingdom`, `span.follow`…) | 8 | 12 | 11 | 0 | 0 | 0 |
+| inline `style="…"` | 10 | 10 | 13 | 0 | 0 | 0 |
+| `--c-*` colour vars | 7 | 9 | 15 | 0 | 0 | 0 |
+| native Greek script (body) | 559 | 892 | 9 | 0 | 0 | 0 |
+| verse markup | `div.v` | `p.v` | `p.v` | `p.v` | `p.v` | `p.v` |
+| gloss markup | `div.gloss` | `span.gloss` | `span.gloss` | `span.gloss` | `span.gloss` | `span.gloss` |
+
+The Phase-9 rewrite is a clean break, not a drift — 01–08 are one shape, 09–11
+are another, and `to_fragment()` handles both by running the 01–08 cleaners over
+everything ([port_artifact.py:97-121](pipeline/port_artifact.py#L97-L121)). That
+defensive double-pass is why an already-clean fragment survives the porter
+unchanged, and it is worth copying.
+
+### 6.2 Disagreements found
+
+**(1) `descriptor` and `discourse` are authored, validated, and thrown away.**
+All three v2 artifacts carry both. The style reference documents both
+([matthew_study_style_reference.md:127-128](matthew_study_style_reference.md#L127-L128)),
+`unit_meta.py`'s docstring documents both ([unit_meta.py:15-16](pipeline/unit_meta.py#L15-L16)),
+and `validate()` accepts them (it has no unknown-key check). But
+`merge_units_json()` never writes either into `data/units.json`
+([port_artifact.py:160-163](pipeline/port_artifact.py#L160-L163)), and
+`generate()` never emits either ([unit_meta.py:235-243](pipeline/unit_meta.py#L235-L243)),
+so `refresh_meta.py` strips them from the built fragment on the next `build.py`.
+Verified: `units/unit-{09,10,11}.html` meta blocks contain
+`['movement','passage','roots','slug','threads','title','unit']` — no
+`descriptor`, no `discourse`. Grep confirms **no consumer anywhere**:
+`app/main.js`'s `discourseOf()` reads the *top-level* `manifest.discourses`
+array, not the per-unit flag ([main.js:110-112](app/main.js#L110-L112)), and
+`descriptor` appears in no JS at all.
+
+The research project is writing two fields per unit that vanish without a word.
+Either wire them through or delete them from the spec — but a fresh project
+should not ship a documented field with no consumer and no warning.
+
+**(2) A missing legend is a live, silent regression.** §3 of the style reference
+says the legend is "optional — the site rebuilds it from data." It does not.
+`rebuildLegend()` *fills* a legend the fragment already contains and returns
+immediately if there is none ([threads.js:89-90](app/threads.js#L89-L90):
+`const legend = contentEl.querySelector(...); if (!legend) return;`). Units 01–10
+all ship `<section class="block legend">`; **unit 11 does not**, so the live site
+renders Unit 11 with no colour key while every other unit has one. Nothing
+reported it: `validate()` doesn't look at the body, `_append_structure()` checks
+pericope headings and synoptic asides but not the legend
+([port_artifact.py:247-291](pipeline/port_artifact.py#L247-L291)), and
+`verify_occurrences.py` checks colours resolve, not that they are displayed.
+This is §3.1's silent-colour-failure class recurring in a new place — the exact
+bug the two-tier engine was built to make impossible, arriving through a
+component the engine doesn't own.
+
+**(3) `roots` means two different things.** §1 of the style reference says every
+tagged slug must appear "either in `threads-digest.md` **or** in the `roots`
+array"; the §2 table says `roots` is "every tracked root." Units 09 and 10 read
+it the second way and declare tracked threads redundantly (0 undeclared slugs).
+Unit 11 reads it the first way and leaves 10 tracked threads undeclared
+(`come-here`, `generation`, `gentle`, `hand-over`, `law-prophets`, `metanoia`,
+`sin`, `skandalon`, `son-of-man`, `well-pleased`). Both validate; both work,
+because `merge_units_json()` skips thread roots anyway
+([port_artifact.py:150-151](pipeline/port_artifact.py#L150-L151)). Harmless
+today, but it means the `roots` array is not a reliable answer to "what does
+this unit track," and any future feature that treats it as one will be wrong for
+a third of the corpus.
+
+**(4) `threads.retro` is documented as required and is absent from two of three.**
+`unit_meta.py`'s docstring and the audit's own §2.2 present `threads` as
+`{opens, payoffs, candidates, retro}`. `validate()` requires only the `threads`
+key; each of the four sub-keys is checked *if present*
+([unit_meta.py:128-132](pipeline/unit_meta.py#L128-L132)). Units 09 and 10 omit
+`retro` entirely; unit 09 also omits `slug`. Fine in practice
+(`port_one` calls `setdefault`), but "required" in the docs and "optional" in the
+code is how a research project learns to guess.
+
+**(5) `threads.opens` is dead.** Empty in all three v2 artifacts (0, 0, 0). Every
+thread's `opens` is authored directly in `threads.json` by hand instead. The
+field is documented, validated, rendered into the thread-delta
+([port_artifact.py:204-205](pipeline/port_artifact.py#L204-L205)) — and never
+used. A fresh project should either drop it or decide deliberately that the
+artifact, not the human, declares where a thread opens.
+
+**(6) The endnote contract is stated but unchecked.** "Every `href` must resolve
+to an `id` in the same fragment" (style reference §2). `prefix_endnotes()` just
+rewrites both patterns blindly ([extract_units.py:328-332](pipeline/extract_units.py#L328-L332));
+nothing verifies they pair up. They happen to pair in 09/10/11 (checked: zero
+dangling hrefs, zero orphan ids). A broken pair would ship as a dead link with no
+signal.
+
+**(7) "Transliteration only" has an enforcement hole in attribute values.**
+`strip_gk_spans()` handles element content. `units/unit-08.html` still carries
+native Greek in a shipped href — `logeion.uchicago.edu/προσκυνέω` — 9 Greek
+codepoints in a committed fragment, invisible to the reader and to every check.
+Not user-visible, but it means the policy is enforced by convention over text
+nodes only. A Hebrew project should decide up front whether the rule covers
+attributes (it should — and one grep over the built fragments enforces it).
+
+**(8) A legitimate exception nobody wrote down.** Unit 11's meta block contains
+Greek (`"stems": ["αρπαζ", "ηρπα"]`), which is correct: `candidates.stems` are
+*supposed* to be accent-stripped source-language script, and the porter consumes
+and drops them. But "no native script anywhere" plus a field that requires native
+script is a contradiction a reader has to resolve from context. Say it once in
+the spec.
+
+### 6.3 One-off components nobody registered
+
+`div.itin`, `span.arr`, `span.stop` (unit 09 only), `p.take` (unit 11 only),
+`table.exod` / `td.eg` / `td.mt` (08, 10, 11). Each was invented in an artifact
+and either got CSS after the fact or renders unstyled. No mechanism reports a
+class the stylesheet doesn't know. A one-line "classes used in fragments that
+`css/styles.css` never mentions" check would have surfaced all of them for free.
+
+---
+
+## 7. Gap (b): what should exist from unit 1 in Joshua, ranked by impact
+
+Ranked by cost-of-absence, not by ease. Items 1–3 are cheap *and* high-impact,
+which is why their absence in Matthew was expensive.
+
+**1. The final-form fold in stem matching — before the first stem is written.**
+This is not a theoretical port hazard; it is worse in Hebrew than it was in
+Greek. Demonstrated against the live `strip_accents`:
+
+```
+stem מלכ  vs  מֶלֶךְ (melek, "king")   -> NO MATCH
+stem מלכ  vs  מְלָכִים (melakim, plural) -> match
+```
+
+In Greek, final sigma broke the *inflected* forms while the citation form
+matched. In Hebrew it is the reverse: **the lexical citation form is the one that
+fails**, because Hebrew lemmas are cited in the absolute singular, which is
+exactly where a final-form letter lands. A `melek` thread in Joshua would report
+the plurals and silently miss every singular. Five letters affected
+(ך/כ ם/מ ן/נ ף/פ ץ/צ). Fix: one `.translate()` in `strip_accents`.
+Good news, verified: niqqud and cantillation need **no** new code —
+`unicodedata.combining()` already returns non-zero for the full pointing range
+(qamats 18, sheva 10, dagesh 21, cantillation 220), so the existing accent strip
+handles pointed text correctly as written.
+
+**2. Prefix stripping as a first-class concept, not an accommodation.**
+Greek's augment/reduplication problem was solved by *not* anchoring stems
+(`thread-stems.json`'s `_note`). Hebrew's is structurally larger: ו/ה/ל/ב/כ/מ/ש
+stack on the head of a word, and the definite article triggers gemination, so
+`הַמֶּלֶךְ` (*ha-melek*) is not `ה` + the citation form. Substring matching absorbs
+this, but it also means Hebrew stems will over-match far more than Greek ones did,
+making `exclude` load-bearing from day one rather than an occasional tuning knob.
+Design the stem spec expecting `exclude` lists an order of magnitude longer, and
+run `--forms` on **every** stem before committing it, not just suspicious ones.
+
+**3. The verify step written before the first generator.** §3.1's bug shipped
+silently across seven files. `verify_occurrences.py` exists only because someone
+went looking. Writing the verifier first costs an hour and converts the entire
+category from "found by inspection, eventually" to "cannot be committed."
+
+**4. A component whitelist check.** §6.3: seven undocumented classes accumulated
+across eleven artifacts with no signal. `grep` the fragments for `class="…"`,
+diff against the classes `css/styles.css` defines, report the difference. Ten
+lines. It also catches the unit-11 missing-legend class of bug from the other
+direction (a *required* component absent rather than an unknown one present).
+
+**5. Kill the unconsumed fields before unit 1.** `descriptor`, `discourse`, and
+`threads.opens` (§6.2 items 1 and 5) each cost the research project attention
+every unit and buy nothing. Decide their fate at design time. Corollary rule:
+**a field the pipeline drops must produce a warning** — add an unknown-key check
+to `validate()` so the next dead field announces itself on its first use rather
+than eleven units later.
+
+**6. Book prefix and source filename as parameters.** `audit_thread_coverage.py`
+hardcodes `re.match(r"Matt (\d+):(\d+)\t(.*)")` and `MatthewSBLGNT.txt`
+([audit_thread_coverage.py:45,75](pipeline/audit_thread_coverage.py#L75)). Both
+fail loudly, so this is low-risk — but Joshua and Judges are two books in
+sequence, and the second port is where a hardcoded literal turns into a
+copy-pasted fork. Read the prefix from `units.json`'s `book` field, which
+already exists and is already unused by the Python side.
+
+**7. Endnote link integrity in `verify_*`.** §6.2 item 6. Five lines: collect
+`id="n…"` and `href="#n…"` per fragment, assert the sets match. It is the only
+stated fragment-contract rule with no check at all.
+
+**8. Decide the attribute-script policy explicitly.** §6.2 items 7 and 8. State
+that "no native script" covers attribute values and text nodes, that
+`candidates.stems` is the one exception, and add the grep to `verify_*`.
+
+**9. Genre-shaped components, decided up front.** `aside.synoptic` encodes
+Gospel-parallel comparison. Joshua and Judges have real analogues that are *not*
+the same shape: the Joshua↔Judges 1 conquest-summary tension, the
+Deuteronomistic framing refrain, Judges' cycle formula. Either define the
+narrative equivalent before unit 1 or ship without a compare box — do not
+inherit `synoptic` and quietly repurpose it, because `_append_structure`'s
+nesting-depth check ([port_artifact.py:276-287](pipeline/port_artifact.py#L276-L287))
+is tuned to its exact markup and §3.6's bug is what happens when that assumption
+slips.
+
+**10. `translation-choices.md` from unit 1, not unit 10.** Matthew's glossary
+arrived at unit 10 (commit `b0f73cc`) and immediately produced a wording-audit
+session and a retroactive pass (`0138548`). Hebrew's version of this problem is
+larger: *ḥerem*, *ḥesed*, *nachalah*, *goel*, the divine name. Starting the file
+empty at unit 1 costs nothing; starting it at unit 10 costs a reconciliation pass
+over everything already shipped.
+
+**11. Session-context files seeded on day one.** `session_index.md`,
+`improvements_log.md`, and a `PLAN.md` with the phase list. Matthew's exist and
+demonstrably work; a new repo that skips them re-derives the same conventions by
+accident.
