@@ -83,3 +83,52 @@ hand-audited — both retire with B3.
 
 **Not verified in a browser.** The colour changes and the unit-11 legend need an
 eyeball on the live page.
+
+---
+
+# Part 2 — chrome desaturation and a palette that scales
+
+Asked for after part 1: fix the chrome overlap, and make the palette survive a
+growing thread count.
+
+## Correction to part 1
+
+Part 1 said "58 threads is near the ceiling", from ranking thread colours
+book-wide. That was the wrong measurement. 95 roots carry a colour, but only
+37% of pairs ever appear in the same unit and the densest page holds 27. The
+constraint that matters is per-unit, and after this pass every built unit's
+tightest pair is dE00 >= 6.05 against a just-noticeable difference of ~2.3.
+There is room to keep adding threads; what there is not room for is picking
+their colours by eye.
+
+## What changed
+
+- **Chrome is now low-chroma.** Sixteen roots sat on a chrome accent, eleven
+  byte-identical — `beget`, `deeds` and `judge` were all exactly the verse-number
+  crimson. The stylesheet already claimed chrome was "independent of any unit's
+  root palette"; now it is. Saturated colour belongs to the thread system alone.
+- **`pipeline/palette.py`** holds the whole colour policy: both metrics, the
+  thresholds, the chrome accents parsed from the stylesheet, the co-occurrence
+  graph, the candidate search.
+- **`pipeline/assign_color.py`** picks colours. A local root only has to clear
+  its own unit, which is a far weaker constraint than a thread's, so it gets
+  better colours — the tool knows the difference.
+- **The verifier enforces the right rule**: per-unit separation on both metrics
+  (hard), no thread sharing a hex and no root on chrome (hard, book-wide),
+  everything else advisory with per-unit headroom reported.
+- Five roots moved to clear the new bar.
+
+## Takeaway
+
+The rule that failed here was not "too close" but "scoped wrong". A book-wide
+uniqueness rule is unsatisfiable at 95 roots and would have forced the
+thresholds down until they meant nothing; a per-unit rule is both satisfiable
+and the one a reader actually experiences. Scope the check to the invariant,
+then the threshold can stay honest.
+
+## Still open
+
+- The five new chrome neutrals are unreviewed on a real page. They change the
+  look of every unit — verse numbers, headings, ring labels, the Greek title.
+- `test`/`learn` at dE00 3.34 never co-occur, so the check is quiet. If a future
+  unit puts them together the build will fail and one of them moves.

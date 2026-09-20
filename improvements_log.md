@@ -697,3 +697,40 @@
   A10/H9 — commit noise), and `build.py` runs the sync `--copy-only` so the
   mirror lands in the same commit as the change that caused it rather than
   committing and pushing on its own.
+
+## 2026-09-19 (cont.) — chrome desaturation + a palette that scales
+
+- **The ceiling was measured wrong the first time.** Ranking thread colours
+  book-wide said the palette was nearly full at 58 threads. It isn't: 95 roots
+  carry a colour but only 37% of pairs ever share a unit, and the densest page
+  holds 27. The binding constraint is per-unit, not book-wide, and every built
+  unit's tightest pair now sits at dE00 >= 6.05 against a ~2.3 JND. Room to grow.
+- `css/styles.css`: the five chrome accents are now low-chroma neutrals —
+  `--accent-crimson` #a8324a→#4c3d40, `--accent-gold` #8a6a2a→#6d6d54,
+  `--accent-warm` #c0641a→#7f6357, `--accent-rust` #9c4f1c→#706766,
+  `--accent-slate` #455a6b→#585a74. Sixteen roots sat on chrome, eleven
+  byte-identical, and the stylesheet's own comment already claimed chrome was
+  "independent of any unit's root palette". Saturated colour now means one
+  thing only: this word is that word again. (Lane's call between desaturating
+  chrome, moving chrome, or moving the 16 roots.)
+- `pipeline/palette.py`: NEW. The colour policy in one place — CIE76 + CIEDE2000,
+  the thresholds, the chrome accents parsed out of styles.css, the
+  root-co-occurrence graph, and the candidate search. Its docstring is the
+  rationale for per-unit-not-book-wide.
+- `pipeline/assign_color.py`: NEW. Picks a colour for a new root instead of
+  guessing. `assign_color.py <root>` (thread scope), `--unit N` (local root —
+  a much weaker constraint, so better colours), `--recolour`, `--audit`.
+- `pipeline/verify_occurrences.py`: rewritten around palette.py. Per-unit
+  collisions now checked on BOTH metrics (dE76 >= 11, dE00 >= 6); new hard
+  failure if any root sits within dE00 6 of a chrome accent or an ink value;
+  the advisory now reports per-unit headroom and close pairs that never
+  co-occur, which is the honest framing.
+- Five roots recoloured to clear the new dE00 bar, which the old CIE76-only
+  check had let through: `build` #6b5f4f→#284834 (was 4.84 from --ink-soft),
+  `law-prophets` #7d6b3f→#74261a, `nations` #b06a3a→#c82d3a,
+  `worthy` #2d449e→#2d47c8, `yoke` (local, unit 11) #8a3c70→#b52bbf.
+- `instructions.md` + CLAUDE.md's paste-ready block: both now tell the research
+  project that four files are authoritative in `project-side/synced/`, how to
+  find them through the connector, that `project-side/README.md` is the index,
+  and that a synced file beats an uploaded copy — say so rather than quietly
+  picking one.

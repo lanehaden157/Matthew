@@ -16,12 +16,37 @@ the baseline reading, held in **active dialogue** with France, Wright, Davies & 
 Bible Project, Jewish (Second Temple + rabbinic), and patristic voices (esp. Chrysostom) —
 name where readings diverge and why; don't let one silently displace the other.
 
+## Where the live files come from
+
+Four of the files below are **mirrored from the site repo** and are the
+authoritative copies. They live in `github.com/lanehaden157/Matthew` under
+`project-side/synced/`, which this project's GitHub connector syncs. Read them
+from there, not from an older upload or from memory:
+
+| file in `project-side/synced/` | what it settles |
+|---|---|
+| `matthew_study_style_reference.md` | the artifact contract — fragment shape, `unit-meta` schema, components, transliteration, the 28-unit map |
+| `threads-digest.md` | which roots are tracked threads, and the `data-root` id each uses |
+| `translation-choices.md` | the agreed English rendering for a given Greek lexeme |
+| `MatthewSBLGNT.txt` | the Greek text, byte-identical to the repo's copy |
+
+**Finding one:** browse `project-side/synced/` in the repo through the
+connector, or search the repo for the filename. `project-side/README.md` is the
+index — it says what each file is, which repo path is canonical, and how often
+it changes. Everything under `synced/` is generated from those canonical paths,
+so it is the current state of the repo rather than a snapshot; nothing there is
+hand-edited.
+
+**If a synced file and an uploaded copy disagree, the synced one wins** — and
+say so in the reply rather than quietly picking one. An upload can be months
+old; `synced/` cannot.
+
 ## Project files
 
 - **`Matt.txt`** — Greek (SBLGNT), primary source. Lines: `Matt C:V\t<text>`.
   Extract a passage: `sed -n '/^Matt 7:1\t/,/^Matt 8:1\t/p' Matt.txt | sed '$d'`
-  (identical text lives in the site repo as `MatthewSBLGNT.txt`, which the
-  coverage audit reads — keep the two in sync).
+  The same text is synced as `project-side/synced/MatthewSBLGNT.txt`, which the
+  repo's coverage audit reads — keep the two in sync).
 - **`MatthewNASB.txt`** — NASB. Strip injected page markers:
   `sed -E 's/Gospel of Matthew NASB Page \| [0-9]+//g'`
 - **`matthew.pdf`** — Constable's notes (plain text despite the extension; use `grep -a` /
@@ -30,13 +55,20 @@ name where readings diverge and why; don't let one silently displace the other.
 - **`rise-of-the-messiah` / `messianic-torah` teacher-notes.pdf** — Bible Project notes
   (same plain-text caveat).
 - **`matthew_reference_links.md`** — full annotated reference URLs.
-- **`matthew_study_style_reference.md`** — the artifact spec: fragment shape + `unit-meta`
+- **`matthew_study_style_reference.md`** — **synced** (see above). The artifact spec: fragment shape + `unit-meta`
   block (§2), components (§3), conventions checklist (§4), the one-lexical-root colour
   policy (§1), quick-reference URLs (§5), the Literary Unit Map (§7).
 - **`threads-digest.md`** — the canonical cross-unit threads, generated from the site's
   `data/threads.json`. **The source of truth** for which roots are tracked threads and the
-  `data-root` id each uses. Lane refreshes it here when it changes. (It replaces the old
+  `data-root` id each uses. **Synced** (see above) — it refreshes itself through the
+  connector now; Lane no longer pastes it. (It replaces the old
   "threads live in project memory" rule — nothing about threads lives in memory now.)
+- **`translation-choices.md`** — **synced** (see above). The agreed English rendering
+  for every Greek lexeme the study has already ruled on. Check it before rendering a Greek
+  word in a new unit and match it. If a different rendering genuinely fits better in a
+  specific verse, use it — but flag it explicitly in the artifact (a note, or in the
+  thread-delta) rather than drifting silently, so Lane can decide whether it is a one-off
+  exception or a correction that should propagate everywhere.
 
 Outputs go to `/mnt/user-data/outputs/`. For in-place edits of an uploaded file: copy to
 `/home/claude/`, edit there, copy the result to outputs.

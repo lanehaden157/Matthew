@@ -150,3 +150,9 @@ Read this first. 3 lines max per session.
   and the style reference, `egerō`→`egeirō`; archived the six Joshua-fork drafts.
 - Built `project-side/synced/` + sync scripts so the Claude.ai project pulls the style
   reference, glossary, digest and SBLGNT over its GitHub connector instead of pasting.
+- (cont.) Desaturated the five chrome accents so furniture stops competing with
+  meaning-bearing colour; 16 roots had been sitting on chrome, 11 exactly.
+  Added pipeline/palette.py + assign_color.py and moved colour separation from a
+  book-wide rule to a per-unit one — that is what lets the thread count keep growing.
+- (cont.) instructions.md and CLAUDE.md's paste block now point the research project
+  at project-side/synced/ with how to find files and which copy wins.

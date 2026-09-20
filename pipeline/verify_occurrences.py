@@ -1,31 +1,37 @@
 """Independently re-derive occurrence counts and check colour resolution.
 Does NOT import scan_occurrences — re-counts with a line-oriented tokeniser so a
-bug in one approach doesn't hide in both.
+bug in one approach doesn't hide in both. (It does import pipeline/palette.py,
+which is policy and metrics, not a generator.)
 
 Checks:
   1. per-unit, per-root counts match data/occurrences.json
   2. every data-root in every fragment resolves to a colour
      (threads.json global OR units.json local)
-  3. no two distinct roots in one unit render within a small perceptual distance
+  3. HARD, per-unit: no two roots ON THE SAME PAGE render too close, by BOTH
+     CIE76 and CIEDE2000. This is the reader-facing rule and the one that
+     scales — see pipeline/palette.py for why it is per-unit and not book-wide.
   4. threads.json roots marked tagged:true actually appear in some fragment;
      tagged:false roots do NOT appear yet
-  5. book-wide: no two threads share a hex. The global tier promises "that
-     thread's fixed colour in every unit", so two threads on one hex is a
-     broken promise even when they never co-occur and check 3 stays quiet.
-  6. book-wide, ADVISORY: the closest thread pairs by CIEDE2000, and any
-     thread that sits on a chrome accent from css/styles.css. Never fails —
-     at 58 threads a strict palette threshold is unreachable and a red build
-     you've decided to live with is worse than no check. It prints the
-     ceiling so you can see it coming.
+  5. HARD, book-wide: no two threads share a hex. The global tier promises
+     "that thread's fixed colour in every unit", and the legend, concordance
+     and any future canon view identify a thread BY its colour — so two threads
+     on one hex is a broken promise even when check 3 stays quiet.
+  6. HARD, book-wide: no root sits within dE00 6 of a chrome accent or an ink
+     value from css/styles.css. Chrome renders inline beside coloured words;
+     sixteen roots used to sit on chrome, eleven byte-identical.
+  7. ADVISORY: close pairs that never co-occur, and per-unit headroom. Never
+     fails — two roots that share no page are not a reader problem, they are
+     something to know before a future unit puts them together.
 Exit non-zero on any failure.
 """
 
 import glob
 import json
-import math
 import os
-import re
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import palette as P  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UNITS = os.path.join(ROOT, "units")
@@ -48,81 +54,8 @@ def recount(html):
     return counts
 
 
-def hex_to_lab(h):
-    h = h.lstrip("#")
-    r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
-    def lin(c): return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
-    r, g, b = lin(r), lin(g), lin(b)
-    x = r * 0.4124 + g * 0.3576 + b * 0.1805
-    y = r * 0.2126 + g * 0.7152 + b * 0.0722
-    z = r * 0.0193 + g * 0.1192 + b * 0.9505
-    x, y, z = x / 0.95047, y, z / 1.08883
-    def f(t): return t ** (1 / 3) if t > 0.008856 else 7.787 * t + 16 / 116
-    fx, fy, fz = f(x), f(y), f(z)
-    return (116 * fy - 16, 500 * (fx - fy), 200 * (fy - fz))
-
-
-def de(c1, c2):
-    a, b = hex_to_lab(c1), hex_to_lab(c2)
-    return sum((x - y) ** 2 for x, y in zip(a, b)) ** 0.5
-
-
-def de2000(c1, c2):
-    """CIEDE2000. Used only by the book-wide palette checks below; the per-unit
-    check above keeps its plain CIE76 distance and its own threshold. Raw Lab
-    distance badly overstates how different two blues look, which is how
-    'shake' and 'cross' sat 1.7 apart for eleven units without anyone noticing.
-    """
-    L1, a1, b1 = hex_to_lab(c1)
-    L2, a2, b2 = hex_to_lab(c2)
-    C1, C2 = math.hypot(a1, b1), math.hypot(a2, b2)
-    Cb = (C1 + C2) / 2
-    G = 0.5 * (1 - math.sqrt(Cb ** 7 / (Cb ** 7 + 25 ** 7))) if Cb else 0.5
-    a1p, a2p = (1 + G) * a1, (1 + G) * a2
-    C1p, C2p = math.hypot(a1p, b1), math.hypot(a2p, b2)
-    h1p = math.degrees(math.atan2(b1, a1p)) % 360 if (a1p or b1) else 0.0
-    h2p = math.degrees(math.atan2(b2, a2p)) % 360 if (a2p or b2) else 0.0
-    dLp, dCp = L2 - L1, C2p - C1p
-    if C1p * C2p == 0:
-        dhp = 0.0
-    elif abs(h2p - h1p) <= 180:
-        dhp = h2p - h1p
-    else:
-        dhp = h2p - h1p - 360 if h2p > h1p else h2p - h1p + 360
-    dHp = 2 * math.sqrt(C1p * C2p) * math.sin(math.radians(dhp) / 2)
-    Lbp, Cbp = (L1 + L2) / 2, (C1p + C2p) / 2
-    if C1p * C2p == 0:
-        hbp = h1p + h2p
-    elif abs(h1p - h2p) <= 180:
-        hbp = (h1p + h2p) / 2
-    elif h1p + h2p < 360:
-        hbp = (h1p + h2p + 360) / 2
-    else:
-        hbp = (h1p + h2p - 360) / 2
-    T = (1 - 0.17 * math.cos(math.radians(hbp - 30))
-         + 0.24 * math.cos(math.radians(2 * hbp))
-         + 0.32 * math.cos(math.radians(3 * hbp + 6))
-         - 0.20 * math.cos(math.radians(4 * hbp - 63)))
-    Rc = 2 * math.sqrt(Cbp ** 7 / (Cbp ** 7 + 25 ** 7)) if Cbp else 0.0
-    Sl = 1 + (0.015 * (Lbp - 50) ** 2) / math.sqrt(20 + (Lbp - 50) ** 2)
-    Sc = 1 + 0.045 * Cbp
-    Sh = 1 + 0.015 * Cbp * T
-    Rt = -math.sin(math.radians(2 * (30 * math.exp(-(((hbp - 275) / 25) ** 2))))) * Rc
-    return math.sqrt((dLp / Sl) ** 2 + (dCp / Sc) ** 2 + (dHp / Sh) ** 2
-                     + Rt * (dCp / Sc) * (dHp / Sh))
-
-
-def chrome_accents():
-    """--accent-* / --ink / --ink-soft from the stylesheet, for the advisory."""
-    css = os.path.join(ROOT, "css", "styles.css")
-    if not os.path.exists(css):
-        return {}
-    text = open(css, encoding="utf-8").read()
-    return dict(re.findall(r"--((?:accent-|ink)[\w-]*)\s*:\s*(#[0-9a-fA-F]{6})", text))
-
-
-def check_palette(threads):
-    """5 (hard) + 6 (advisory). Book-wide, independent of what's tagged."""
+def check_thread_hexes(threads):
+    """5. Two threads may not share a hex, co-occurring or not."""
     by_hex = {}
     for t in threads:
         by_hex.setdefault(t["color"].lower(), []).append(t["id"])
@@ -131,24 +64,63 @@ def check_palette(threads):
             fail.append(f"threads {', '.join(sorted(ids))} all share {hexv} — "
                         f"the global tier promises one fixed colour per thread")
 
-    pairs = []
-    for i in range(len(threads)):
-        for j in range(i + 1, len(threads)):
-            pairs.append((de2000(threads[i]["color"], threads[j]["color"]),
-                          threads[i]["id"], threads[j]["id"]))
-    pairs.sort()
-    print(f"palette: {len(threads)} threads, closest pairs by CIEDE2000 "
-          f"(advisory; ~2.3 is the just-noticeable difference)")
-    for d, a, b in pairs[:5]:
-        print(f"  dE00 {d:5.2f}  {a} / {b}")
 
-    for name, hexv in sorted(chrome_accents().items()):
-        near = [(de2000(t["color"], hexv), t["id"]) for t in threads]
-        d, tid = min(near)
-        if d < 6:
-            print(f"  advisory: thread '{tid}' sits dE00 {d:.2f} from "
-                  f"--{name} ({hexv}) — a coloured word and a piece of chrome "
-                  f"reading as the same colour")
+def check_chrome():
+    """6. No root may sit on the furniture."""
+    reserved = P.reserved()
+    for root, m in sorted(P.all_colors().items()):
+        for name, hexv in reserved.items():
+            d = P.de2000(m["color"], hexv)
+            if d < P.CHROME_DE00:
+                fail.append(
+                    f"root '{root}' {m['color']} ({m['tier']}) sits dE00 {d:.2f} "
+                    f"from --{name} {hexv} — a coloured word and a piece of "
+                    f"chrome reading as the same colour. Move one, or run "
+                    f"`python pipeline/assign_color.py {root} --recolour`")
+
+
+def report_headroom(occ):
+    """7. Advisory. What is close but harmless, and how much room is left."""
+    colors = P.all_colors()
+    co = P.cooccurring_pairs(occ)
+
+    near_safe = []
+    keys = sorted(colors)
+    for i in range(len(keys)):
+        for j in range(i + 1, len(keys)):
+            a, b = keys[i], keys[j]
+            if (a, b) in co:
+                continue
+            d = P.de2000(colors[a]["color"], colors[b]["color"])
+            if d < P.ADVISORY_DE00:
+                near_safe.append((d, a, b))
+    near_safe.sort()
+
+    tight = []
+    for slug in sorted(occ):
+        rs = [r for r in occ[slug] if r in colors]
+        worst = None
+        for i in range(len(rs)):
+            for j in range(i + 1, len(rs)):
+                d = P.de2000(colors[rs[i]]["color"], colors[rs[j]]["color"])
+                if worst is None or d < worst[0]:
+                    worst = (d, rs[i], rs[j])
+        if worst:
+            tight.append((worst[0], slug, len(rs), worst[1], worst[2]))
+
+    print(f"palette: {len(colors)} roots carry a colour; "
+          f"{len(co)} pairs share a unit")
+    if tight:
+        d, slug, n, a, b = min(tight)
+        print(f"  tightest page: {slug} ({n} roots) — {a} / {b} at dE00 {d:.2f} "
+              f"(JND is ~2.3)")
+    if near_safe:
+        print(f"  {len(near_safe)} close pair(s) that never co-occur "
+              f"(harmless today, worth knowing):")
+        for d, a, b in near_safe[:5]:
+            print(f"    dE00 {d:5.2f}  {a} / {b}")
+    print("  `python pipeline/assign_color.py --audit` for the full picture; "
+          "`assign_color.py <root>` to pick one.")
 
 
 def main():
@@ -164,7 +136,7 @@ def main():
         if mine != theirs:
             fail.append(f"{slug}: count mismatch\n   verify={mine}\n   json  ={theirs}")
 
-        # colour resolution + collision
+        # colour resolution + per-unit collision (check 3)
         local = (units.get(slug, {}) or {}).get("roots", {})
         resolved = {}
         for r in mine:
@@ -178,10 +150,11 @@ def main():
         items = list(resolved.items())
         for i in range(len(items)):
             for j in range(i + 1, len(items)):
-                d = de(items[i][1], items[j][1])
-                if d < 11:
-                    fail.append(f"{slug}: '{items[i][0]}' {items[i][1]} and "
-                                f"'{items[j][0]}' {items[j][1]} too close (dE={d:.1f})")
+                (ra, ca), (rb, cb) = items[i], items[j]
+                d76, d00 = P.de76(ca, cb), P.de2000(ca, cb)
+                if d76 < P.CO_OCCUR_DE76 or d00 < P.CO_OCCUR_DE00:
+                    fail.append(f"{slug}: '{ra}' {ca} and '{rb}' {cb} too close "
+                                f"on one page (dE76={d76:.1f}, dE00={d00:.2f})")
 
     # thread tagged-flag sanity
     all_roots = set()
@@ -194,14 +167,17 @@ def main():
         if not t.get("tagged") and present:
             fail.append(f"thread '{t['id']}' tagged:false but root '{t['root']}' IS in a fragment — flip the flag")
 
-    check_palette(load("threads.json")["threads"])
+    check_thread_hexes(load("threads.json")["threads"])
+    check_chrome()
+    report_headroom(occ)
 
     if fail:
         print("FAIL")
         for f in fail:
             print(" -", f)
         sys.exit(1)
-    print("occurrences verified — counts match, every root resolves, no collisions")
+    print("occurrences verified — counts match, every root resolves, "
+          "no collisions, chrome clear")
 
 
 if __name__ == "__main__":

@@ -32,7 +32,7 @@
       "root": "nations",
       "translit": "ethnē",
       "gloss": "nations / Gentiles",
-      "color": "#b06a3a",
+      "color": "#c82d3a",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -150,7 +150,7 @@
       "root": "law-prophets",
       "translit": "ho nomos kai hoi prophētai",
       "gloss": "the Law & the Prophets",
-      "color": "#7d6b3f",
+      "color": "#74261a",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -643,7 +643,7 @@
       "root": "build",
       "translit": "oikodomeō",
       "gloss": "build",
-      "color": "#6b5f4f",
+      "color": "#284834",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1432,7 +1432,7 @@
       "root": "worthy",
       "translit": "axios",
       "gloss": "worthy, of matching weight",
-      "color": "#2d449e",
+      "color": "#2d47c8",
       "opens": {
         "unit": 3,
         "ref": "3:8"

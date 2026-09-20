@@ -72,6 +72,16 @@ translation-choices.md  hand-maintained glossary of deliberate English
                                  there, not in the fragment, or the next build
                                  reverts you.
                threads_digest.py threads.json → threads-digest.md.
+               palette.py        the colour policy in one place: both distance
+                                 metrics, the thresholds, the chrome accents
+                                 read out of styles.css, the co-occurrence
+                                 graph, and the candidate search. Read its
+                                 docstring before touching any colour rule.
+               assign_color.py   pick a colour for a new root instead of
+                                 guessing one: `assign_color.py <root>` for a
+                                 thread, `--unit N` for a local root (a much
+                                 weaker constraint), `--audit` for how much
+                                 room is left.
                check_project_sync.py  TRACKED_FILES (the files that have to
                                  round-trip into the Claude.ai project) + the
                                  upload-only fallback: hash-diff what needs
@@ -117,6 +127,18 @@ colour, identical in every unit. Otherwise → this unit's local palette in
 `units.json`. Promoting a root to global = one line in `threads.json`. Recolouring
 a thread book-wide = one hex edit. A `data-root` that resolves to no colour is a
 hard verify failure.
+
+**Colour separation is a per-unit rule, not a book-wide one.** Two roots must
+look different when they appear on the same page; two roots that never share a
+unit may sit close. That is what scales — 95 roots carry a colour, only 37% of
+pairs ever share a unit, and the densest page holds 27. Twenty-seven
+distinguishable colours is comfortable; ninety-five is not. Three things are
+still hard failures book-wide: two threads sharing a hex (the legend and the
+concordance identify a thread by its colour), any root within dE00 6 of a chrome
+accent, and a root that resolves to nothing. **Chrome is deliberately
+low-chroma** — saturated colour means "this word is that word again", so the
+furniture doesn't get to borrow it. Don't pick a new colour by eye; run
+`python pipeline/assign_color.py <root>`.
 
 **Content vs. engine stay separate.** `/app` never hardcodes unit content;
 `/units` never carries styling or app logic. Adding a unit touches no app code;
@@ -164,12 +186,31 @@ Copy everything between the lines below into the research project's own
 instructions field, verbatim:
 
 ---START PASTE---
+The authoritative copies of four files live in the site repo
+`github.com/lanehaden157/Matthew` under `project-side/synced/`, which this
+project's GitHub connector syncs. Read them from there rather than from an
+uploaded copy or from memory:
+
+- `matthew_study_style_reference.md` — the artifact contract (fragment shape,
+  unit-meta schema, components, transliteration, the 28-unit map)
+- `threads-digest.md` — which roots are tracked threads and the `data-root`
+  id each uses
+- `translation-choices.md` — the agreed English rendering per Greek lexeme
+- `MatthewSBLGNT.txt` — the Greek text, byte-identical to the repo's copy
+
+To find one: browse `project-side/synced/` in the repo through the connector,
+or search the repo for the filename. `project-side/README.md` is the index —
+it names the canonical repo path behind each mirrored file. Everything under
+`synced/` is generated, never hand-edited, so it is the repo's current state
+rather than a snapshot. If a synced file and an uploaded copy disagree, the
+synced one wins, and say so in the reply instead of quietly picking one.
+
 Before rendering a Greek word in a new unit's translation, check
-`translation-choices.md` in the repo for a prior decision and match it. If a
-different rendering genuinely fits better in a specific verse, use it — but
-flag it explicitly in the artifact (a note, or in the thread-delta) rather
-than silently drifting, so Lane can decide whether it's a one-off exception
-or a correction that should propagate everywhere.
+`translation-choices.md` for a prior decision and match it. If a different
+rendering genuinely fits better in a specific verse, use it — but flag it
+explicitly in the artifact (a note, or in the thread-delta) rather than
+silently drifting, so Lane can decide whether it's a one-off exception or a
+correction that should propagate everywhere.
 ---END PASTE---
 
 ## Working notes

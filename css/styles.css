@@ -14,12 +14,19 @@
   --rule: #d8cdb6;
   --rule-soft: #e7dec9;
 
-  /* stable chrome accents — independent of any unit's root palette */
-  --accent-crimson: #a8324a;   /* verse numbers, endnote markers */
-  --accent-gold: #8a6a2a;      /* greek-title, ring labels, section pivots */
-  --accent-warm: #c0641a;
-  --accent-rust: #9c4f1c;
-  --accent-slate: #455a6b;
+  /* Stable chrome accents — independent of any unit's root palette, and
+     deliberately LOW-CHROMA. Saturated colour in this study means "this word
+     is that word again"; furniture that borrows a saturated hue competes with
+     that. These five used to be drawn from the root palette and sixteen roots
+     sat on them, eleven byte-identical — a coloured word rendering as the same
+     colour as the verse number in front of it. pipeline/verify_occurrences.py
+     now fails the build if any root comes within dE00 6 of one of these, so
+     keep new values in the neutral band (saturation under ~20%). */
+  --accent-crimson: #4c3d40;   /* verse numbers, endnote markers */
+  --accent-gold: #6d6d54;      /* greek-title, ring labels, section pivots */
+  --accent-warm: #7f6357;
+  --accent-rust: #706766;
+  --accent-slate: #585a74;
 
   --serif: "EB Garamond", Georgia, "Times New Roman", serif;
   --display: "Cormorant Garamond", Georgia, serif;
