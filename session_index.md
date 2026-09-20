@@ -141,3 +141,12 @@ Read this first. 3 lines max per session.
 - New global thread acts-of-power (dynamis); promoted immerse/anxious/clean from local to
   global (each spread to a 2nd unit); fixed 5 tagging bugs (debts/generations/learn/deeds/
   glosses). build.py green — 575 occurrences, 0 collisions, 0 coverage gaps.
+
+## 2026-09-19 — G5 Matthew hygiene (platform review B2/B5/B6/B7/B4 + the unit-11 legend)
+- Fixed the live bug first: unit 11 shipped with no colour key. Recoloured 5 threads
+  (3 exact hex duplicates + shake/cross at dE00 1.68) and added book-wide palette
+  checks — hard fail on a shared hex, advisory report of the closest pairs.
+- Corrected unit 2's legend data (name/save/david), the stale status text in CLAUDE.md
+  and the style reference, `egerō`→`egeirō`; archived the six Joshua-fork drafts.
+- Built `project-side/synced/` + sync scripts so the Claude.ai project pulls the style
+  reference, glossary, digest and SBLGNT over its GitHub connector instead of pasting.

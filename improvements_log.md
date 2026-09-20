@@ -647,3 +647,53 @@
   colour collisions, 0 coverage gaps across 41 audited threads (the 3 newly
   promoted + acts-of-power + 7 pre-existing threads have no Greek stems yet in
   thread-stems.json — flagged advisory-only, same as past sessions' practice).
+
+## 2026-09-19 — G5 Matthew hygiene (platform-design-review.md B2, B5, B6, B7, B4)
+
+- `units/unit-11.html`: added the missing `section.block.legend`. Unit 11 had
+  shipped with no colour key since it was built — `rebuildLegend()` fails closed,
+  so the page rendered its coloured words with nothing explaining them.
+- `data/threads.json`: recoloured 5 threads. Three sets shared a hex outright
+  (`sea`/`mercy` #2f6db3, `apo-tote`/`emmanuel`/`son-of-david` #8a3c70,
+  `fringe`/`cross` #455a6b) and `shake` sat dE00 1.68 from `cross` — below the
+  just-noticeable difference, so a fourth duplicate in practice. The more-used
+  or more load-bearing member of each set kept its colour; the others moved:
+  `sea` #183439, `apo-tote` #412e56, `emmanuel` #5b411f, `fringe` #9b5d4b,
+  `shake` #56522e. Every pick clears BOTH the existing per-unit CIE76 threshold
+  (>=12.5, the check uses 11) and CIEDE2000 >=9.4 against all 57 others and
+  against `--ink`, at >=4.5:1 contrast on the cream background.
+- `pipeline/verify_occurrences.py`: two new book-wide checks. (5) hard failure
+  if two threads share a hex — the per-unit check only fires when they co-occur,
+  which is why these sat unnoticed. (6) advisory CIEDE2000 report of the five
+  closest pairs plus any thread sitting on a `--accent-*`/`--ink` value from
+  styles.css. Advisory, not failing: at 58 threads a strict threshold is
+  unreachable and a permanently red build is worse than no check.
+  Left standing, reported by that advisory: `test`/`learn` at dE00 3.34, and
+  `lose`/`cross`/`save` sharing hexes exactly with `--accent-gold`,
+  `--accent-slate` and `--accent-warm`.
+- `data/units.json`: unit 2's legend rows carried wrong data from the legacy
+  backfill — `name` translit "kaleō"/"call", `save` "Iēsous"/'Jesus / "saves'
+  (with a broken quote), `david` "basileus"/"king". Now onoma/name, sōzō/save,
+  Dauid/David, matching unit 1. The 44 thread-shadowed local roots were KEPT
+  (Lane's call): the local entry is the fallback if a thread is ever demoted.
+  `_note` rewritten to say that, and to stop crediting retired extract_legends.py.
+- `CLAUDE.md`: status 1–10 built / unit 11 next → 1–11 built / unit 12 next;
+  documented `/project-side/`, `/docs/audit/`, the two sync scripts, and the
+  fact that `refresh_meta.py` regenerates fragment meta FROM units.json (so a
+  legend edit made in the fragment gets reverted by the next build — this bit
+  us this session).
+- `matthew_study_style_reference.md` §7.2: units 10 and 11 marked ✅.
+- `data/threads.json`: `egerō` → `egeirō` (2x), matching translation-choices.md.
+- `docs/audit/`: the six Joshua-fork drafts moved to
+  `archive/joshua-fork-plan/` with a superseded banner on each and an
+  `archive/README.md` saying what in them is still wanted by the shared core
+  (BOOTSTRAP's irreversibility tiers, ARCHITECTURE's fork-before-generalize).
+- `project-side/`: new. `synced/` is a flat generated mirror of TRACKED_FILES
+  (style reference, translation-choices, threads-digest, MatthewSBLGNT.txt)
+  for the Claude.ai project's GitHub connector, replacing hand-pasting.
+  `pipeline/check_project_sync.py` holds TRACKED_FILES + the upload-only
+  fallback; `pipeline/sync_to_github.py` refreshes the mirror.
+  Diverges from Joshua deliberately: no 15-minute scheduled task (review
+  A10/H9 — commit noise), and `build.py` runs the sync `--copy-only` so the
+  mirror lands in the same commit as the change that caused it rather than
+  committing and pushing on its own.

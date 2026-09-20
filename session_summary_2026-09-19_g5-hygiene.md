@@ -1,0 +1,85 @@
+# Session summary — 2026-09-19 — G5: Matthew hygiene
+
+Implements group **G5** of `platform-design-review.md`: B2, B5, B6, B7, B4, plus
+the live bug behind B8. B1 and B3 were deliberately left out — both belong to the
+core extraction (G6/G7) and doing them now means doing them twice.
+
+## What was done
+
+Ordered as worked: the live defect first, then correctness, then hygiene, then
+the new sync folder.
+
+1. **Unit 11's missing legend.** Units 1–10 each carry a
+   `section.block.legend`; unit 11 had none, so the page rendered coloured words
+   with no key. Added it in the same position the other ten use.
+2. **B2 — the palette.** Five threads recoloured, plus two new book-wide checks
+   in `verify_occurrences.py`. Details in `improvements_log.md`.
+3. **B6 — stale text.** CLAUDE.md status, style reference §7.2, `units.json`
+   `_note`, `egerō`→`egeirō`.
+4. **B5 — unit 2's legend data.** Three wrong rows fixed; the 44 shadowed local
+   roots kept, per Lane.
+5. **B7 — the fork drafts.** Archived under `docs/audit/archive/joshua-fork-plan/`
+   with a banner on each.
+6. **B4 — `project-side/`.** Joshua's pattern, Matthew's file list, two
+   deliberate divergences (below).
+
+## Takeaways
+
+- **The per-unit collision check could not have caught B2.** It only compares
+  roots that appear in the *same* unit, and none of the colliding sets co-occur
+  yet. The promise the global tier makes ("this thread's fixed colour in every
+  unit") is book-wide, so the check has to be book-wide too. Generalises: a
+  check scoped more narrowly than the invariant it defends will pass forever
+  and still be wrong.
+- **Raw Lab distance overstates how different two blues look.** `shake` and
+  `cross` sat 1.68 apart in CIEDE2000 — below the just-noticeable difference,
+  i.e. literally the same colour to a reader — while passing a CIE76 threshold
+  of 11. Both metrics are now in the file, each with its own threshold, and the
+  new picks satisfy both.
+- **58 threads is close to the ceiling.** After this pass the closest surviving
+  pair is dE00 3.34 (`test`/`learn`), and finding five replacement colours that
+  cleared both metrics needed a search, not an eye. This is review item H11
+  arriving on the colour axis before the reading axis. The fix when it arrives
+  is display-side (a per-unit "quiet" set, or the isolate-thread toggle in
+  `ideas.md`), not more palette.
+- **`refresh_meta.py` regenerates fragment meta from `units.json`.** Editing
+  unit 2's meta block directly looked right and was silently reverted by the
+  next build. "Fragments are the source of truth" holds for prose and tagging,
+  not for legend metadata. Now stated in CLAUDE.md.
+- **Chrome accents duplicate thread colours.** `--accent-gold`, `--accent-slate`
+  and `--accent-warm` are byte-identical to `lose`, `cross` and `save`. Reported
+  as advisory, not fixed — see open questions.
+
+## Open questions
+
+- **The chrome-accent overlap.** Verse numbers, endnote markers and ring labels
+  use hexes that three threads also own, and verse numbers sit inline next to
+  coloured words. Fixing it means either moving three threads or giving the
+  chrome its own reserved hues; the second is better but is a design change, not
+  hygiene, so it was left for a decision.
+- **`test` / `learn` at dE00 3.34.** Above the JND, below comfortable. Worth a
+  nudge next time either is touched; not worth a recolour on its own.
+- **Should `instructions.md` be synced?** Currently out of TRACKED_FILES,
+  matching the Joshua call. If the research project's instructions field is meant
+  to point at the repo copy rather than restate it (review D6/H12), it should go in.
+- **B8's other half** — making the legend a validated requirement — is still
+  open, and belongs with B1's validator work in the core extraction.
+
+## Divergences from Joshua, on purpose
+
+- **No scheduled task.** Joshua syncs every 15 minutes from Task Scheduler;
+  review A10/H9 flags the commit noise. `build.py` already runs after every
+  change that matters.
+- **`--copy-only` in the build.** The build refreshes the mirror in the working
+  tree but never commits or pushes it, so the mirror lands in the same commit as
+  the change that caused it, and no script pushes on its own.
+
+## State
+
+`pipeline/build.py` green: 11 units, every root resolves, no collisions, 0
+coverage gaps across 41 audited threads. Unchanged from before this session:
+11 threads still have no Greek stems (advisory), and the 6 phrase threads remain
+hand-audited — both retire with B3.
+
+**Not verified in a browser.** The colour changes and the unit-11 legend need an
+eyeball on the live page.

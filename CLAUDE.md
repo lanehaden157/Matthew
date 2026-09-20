@@ -8,10 +8,10 @@ The `/units` fragments are hand-authored prose (reviewed like prose); `/app` and
 the start of each session. This file is the standing architecture; PLAN.md is the
 phase plan and the record of decisions.
 
-## Status (2026-09-08)
+## Status (2026-09-19)
 
-- Live at https://lanehaden157.github.io/Matthew/ . Units 1–10 built. **Phases 1–9
-  done.** Next content unit: **Unit 11 (Matt 11:2–30)**.
+- Live at https://lanehaden157.github.io/Matthew/ . Units 1–11 built. **Phases 1–9
+  done.** Next content unit: **Unit 12 (Matt 12:1–50)**.
 - Colour policy: one Greek lexical root per `data-root` (stem + same-stem forms
   only) — no themes/formulae/bundles. Exception: fixed titles Matthew repeats
   verbatim (son-of-man, son-of-david, law-prophets, apo-tote) live in threads.json.
@@ -65,17 +65,40 @@ translation-choices.md  hand-maintained glossary of deliberate English
                                  port_artifact.py merges them here (dry-checked
                                  first). Hand-authored edits go in retrofit-tags.
                refresh_meta.py   resync built fragments' meta blocks with the data.
+                                 NOTE: units.json wins here. Fragments are the
+                                 source of truth for prose and tagging, but the
+                                 meta `roots[]` translit/gloss is regenerated
+                                 FROM data/units.json — edit a legend entry
+                                 there, not in the fragment, or the next build
+                                 reverts you.
                threads_digest.py threads.json → threads-digest.md.
+               check_project_sync.py  TRACKED_FILES (the files that have to
+                                 round-trip into the Claude.ai project) + the
+                                 upload-only fallback: hash-diff what needs
+                                 re-pasting.
+               sync_to_github.py refresh project-side/synced/ from TRACKED_FILES.
+                                 build.py runs it `--copy-only`, so the mirror
+                                 never commits or pushes by itself.
                thread-stems.json + audit_thread_coverage.py  Greek-root coverage
                                  audit: scans MatthewSBLGNT.txt, flags tracked
                                  roots present in a built unit but untagged.
                build.py          replay retrofit → refresh_meta → scan → verify →
-                                 digest → coverage audit. Fragments are the
-                                 source of truth; it never rebuilds them.
+                                 digest → project-side mirror → coverage audit.
+                                 Fragments are the source of truth; it never
+                                 rebuilds them.
                scan_*.py         regenerate /data from the fragments.
                verify_*.py       independently re-derive the same result (no
                                  importing the generator) — run both before trusting.
                out/              generated seed + reports (git-ignored).
+/project-side/ README.md   index of the files that have to round-trip into the
+                           Claude.ai research project, and which is canonical.
+               synced/     generated flat mirror of those files, pushed to
+                           GitHub so the project's connector pulls them itself.
+                           Never hand-edit. No scheduled task on purpose.
+               sync-state.json  hashes for the upload-only fallback path.
+/docs/audit/   port-analysis.md  the 2026-09-12 audit behind the Joshua fork.
+               archive/    superseded planning docs, banner-marked. History,
+                           never instructions.
 /app/          main.js     tab router — loads a unit fragment into the content pane.
                threads.js  colour resolution + thread popover/concordance.
                store.js    localStorage — reading progress, personal notes.

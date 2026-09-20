@@ -109,7 +109,7 @@
       "root": "sea",
       "translit": "thalassa",
       "gloss": "sea",
-      "color": "#2f6db3",
+      "color": "#183439",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -130,7 +130,7 @@
       "root": "apo-tote",
       "translit": "apo tote",
       "gloss": "\"from that time\"",
-      "color": "#8a3c70",
+      "color": "#412e56",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -292,7 +292,7 @@
       "root": "shake",
       "translit": "seismos",
       "gloss": "shaking / earthquake / storm",
-      "color": "#4a5a68",
+      "color": "#56522e",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -358,7 +358,7 @@
       "root": "with",
       "translit": "meta",
       "gloss": "with — God-with-us (meta / Emmanouēl at 1:23)",
-      "color": "#8a3c70",
+      "color": "#5b411f",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -564,7 +564,7 @@
       "root": "fringe",
       "translit": "kraspedon",
       "gloss": "tassel / hem",
-      "color": "#455a6b",
+      "color": "#9b5d4b",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -992,7 +992,7 @@
     {
       "id": "raise",
       "root": "raise",
-      "translit": "egerō",
+      "translit": "egeirō",
       "gloss": "raise up, rouse from lying down",
       "color": "#9e392d",
       "opens": {
@@ -1021,7 +1021,7 @@
           "note": "he is raised, just as he said"
         }
       ],
-      "note": "egerō spans the mundane (get up, rouse from sleep, 1:24) and the resurrection sense it grows into. Every occurrence tagged; the trajectory is 1:24 -> the healings -> 16:21 -> the empty tomb.",
+      "note": "egeirō spans the mundane (get up, rouse from sleep, 1:24) and the resurrection sense it grows into. Every occurrence tagged; the trajectory is 1:24 -> the healings -> 16:21 -> the empty tomb.",
       "status": "open",
       "tagged": true
     },

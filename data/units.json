@@ -1,5 +1,5 @@
 {
-  "_note": "Unit manifest for the whole gospel. built units carry a roots map name -> {color, translit, gloss}. A root also listed in threads.json takes that thread's colour instead (global tier); the local color here is the fallback. Hand-maintained; pipeline/extract_legends.py backfills translit/gloss from the fragments' legends. Some units list a few roots not (yet) tagged in the fragment — harmless superset.",
+  "_note": "Unit manifest for the whole gospel. built units carry a roots map name -> {color, translit, gloss}. A root also listed in threads.json takes that thread's colour instead (global tier); the local color here is the fallback. Hand-maintained. (pipeline/extract_legends.py was a one-time backfill of translit/gloss out of the fragments' hand legends; it is retired and no longer part of build.py — do not re-run it.) Roots here that a thread also covers, and roots not (yet) tagged in the fragment, are both kept on purpose: the local entry is the fallback if a thread is ever demoted back to local.",
   "book": "Matthew",
   "unit_count": 28,
   "movements": [
@@ -121,8 +121,8 @@
         },
         "name": {
           "color": "#1c7d70",
-          "translit": "kaleō",
-          "gloss": "call"
+          "translit": "onoma",
+          "gloss": "name"
         },
         "call": {
           "color": "#5a3a2a",
@@ -131,8 +131,8 @@
         },
         "save": {
           "color": "#c0641a",
-          "translit": "Iēsous",
-          "gloss": "Jesus / \"saves"
+          "translit": "sōzō",
+          "gloss": "save"
         },
         "dream": {
           "color": "#2f6db3",
@@ -141,8 +141,8 @@
         },
         "david": {
           "color": "#8a6a2a",
-          "translit": "basileus",
-          "gloss": "king"
+          "translit": "Dauid",
+          "gloss": "David"
         },
         "king": {
           "color": "#7a5a8c",
