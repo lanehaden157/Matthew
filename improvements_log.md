@@ -753,3 +753,11 @@
 - CLAUDE.md status → units 1–12, next Unit 13; style-reference map title for Unit 12.
 - build.py green: 727 occurrences, 0 gaps across 50 audited threads, tightest
   co-occurring pair dE00 6.05.
+
+## 2026-09-20 — speak removed, with demoted (Lane)
+
+- `speak` (laleō) untagged in unit 12 and dropped from its legend; no glossary row.
+- `with` demoted from the global `emmanuel` thread to a unit-01-only local root
+  (colour kept, #5b411f). Thread + `emmanuel` stems removed; unit-12 `with` spans
+  unwrapped (retrofit `unwrap` ops); unit-01 meta and the style reference's
+  Emmanuel note updated. 28:20 will not be tagged. build green, 713 occurrences.

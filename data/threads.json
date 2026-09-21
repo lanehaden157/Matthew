@@ -369,27 +369,6 @@
       "note": "The centurion entreats (8:5), the demons entreat (8:31), the town entreats him to go (8:34) — the same verb bends from faith to rejection."
     },
     {
-      "id": "emmanuel",
-      "root": "with",
-      "translit": "meta",
-      "gloss": "with — God-with-us (meta / Emmanouēl at 1:23)",
-      "color": "#5b411f",
-      "status": "open",
-      "tagged": true,
-      "opens": {
-        "unit": 1,
-        "ref": "1:23"
-      },
-      "payoffs": [
-        {
-          "unit": 28,
-          "ref": "28:20",
-          "note": "\"I am with y'all always\" — the inclusio closes"
-        }
-      ],
-      "note": "The Emmanuel inclusio: \"God with us\" (1:23) <-> \"I am with y'all always\" (28:20)."
-    },
-    {
       "id": "son-of-man",
       "root": "son-of-man",
       "translit": "ho huios tou anthrōpou",

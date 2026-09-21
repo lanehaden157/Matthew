@@ -1,13 +1,12 @@
 # Cross-unit threads — canonical digest
 
-Generated from `data/threads.json` (version 1). 67 threads, 67 open.
+Generated from `data/threads.json` (version 1). 66 threads, 66 open.
 
 **This is the source of truth for thread tagging.** In a unit's artifact, a root that appears in the `id` column below is a *tracked thread*: tag it `<span class="r" data-root="<id>">…</span>` and list it under `threads.opens` / `threads.payoffs` in the unit-meta block. A root that is recurring but *not* here is unit-local — tag it with its own name and just list it in `roots`. To propose promoting a local root to a tracked thread, add it to `threads.candidates` with a one-line reason; Lane decides.
 
 | id | root (data-root) | translit | gloss | opens | payoffs | status |
 |---|---|---|---|---|---|---|
 | `call` | `call` | kaleō | call, name | 1 (1:21) | 9 (9:13) · 22 (22:3-9) · 23 (23:8-10) | open |
-| `emmanuel` | `with` | meta | with — God-with-us (meta / Emmanouēl at 1:23) | 1 (1:23) | 28 (28:20) | open |
 | `fulfill` | `fulfill` | plēroō | fill full / fulfill | 1 (1:22) | 3 (3:15) · 5 (5:17) · 12 (12:17) | open |
 | `raise` | `raise` | egeirō | raise up, rouse from lying down | 1 (1:24) | 8 (8:15) · 9 (9:25) · 17 (16:21) · 28 (28:6-7) | open |
 | `righteous` | `righteous` | dikaios · dikaiosynē | righteous(ness) | 1 (1:19) | 3 (3:15) · 5 (5:6, 10, 20; 6:33) · 12 (12:37) | open |
@@ -87,7 +86,6 @@ Generated from `data/threads.json` (version 1). 67 threads, 67 open.
 - **`counsel`**: Promoted at the unit-12 port (2026-09-20). The leaders 'take counsel' — 12:14, 22:15, 27:1, 27:7, 28:12: the plot from the Sabbath healing to the bribed guards.
 - **`cross`**: stauros — first at 10:38 as a general condition of following, well before any passion prediction; recurs at 16:24 and then the crucifixion itself.
 - **`defame`**: Promoted at the unit-12 port (2026-09-20). Rendered 'defame' (not the loan-word 'blaspheme'; not 'slander', which is kept for diabolos). 9:3 changed from 'blasphemes' to match. Ahead: 15:19, 26:65, 27:39.
-- **`emmanuel`**: The Emmanuel inclusio: "God with us" (1:23) <-> "I am with y'all always" (28:20).
 - **`evil`**: ponēros — tagged from its first occurrence (5:11) but the tracked thread proper opens at the Lord's Prayer's 'deliver us from the evil one' (6:13), which the Sermon and the parables keep answering.
 - **`faith`**: The centurion's pistis (8:10, 'not even in Israel') vs. the disciples' oligopistoi (see little-faith). Runs through the healings to 15:28 and the mountain-moving sayings.
 - **`father`**: patēr — tagged at every occurrence including the ordinary human sense (2:22, Herod's father); the tracked thread proper opens at 5:16, 'your Father who is in the skies,' Matthew's characteristic address for God.

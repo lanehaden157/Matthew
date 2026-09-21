@@ -6914,61 +6914,6 @@
       ],
       "total": 3
     },
-    "speak": {
-      "count": 7,
-      "verses": [
-        22,
-        34,
-        36,
-        46,
-        47
-      ],
-      "hits": [
-        {
-          "v": 22,
-          "pre": "…rought to him; and he healed him, so that the mute man ",
-          "hit": "spoke",
-          "post": " and saw.…"
-        },
-        {
-          "v": 34,
-          "pre": "…Offspring of vipers! How can y'all ",
-          "hit": "speak",
-          "post": " good things, being evil? For out of the overflow of th…"
-        },
-        {
-          "v": 34,
-          "pre": "…g evil? For out of the overflow of the heart the mouth ",
-          "hit": "speaks",
-          "post": ".…"
-        },
-        {
-          "v": 36,
-          "pre": "…I say to y'all that every idle word that people will ",
-          "hit": "speak",
-          "post": ", they will give back an account of it in the day of ju…"
-        },
-        {
-          "v": 46,
-          "pre": "…While he was still ",
-          "hit": "speaking",
-          "post": " to the crowds, look — his mother and his brothers stoo…"
-        },
-        {
-          "v": 46,
-          "pre": "…While he was still ",
-          "hit": "speak",
-          "post": "ing to the crowds, look — his mother and his brothers s…"
-        },
-        {
-          "v": 47,
-          "pre": "…her and your brothers are standing outside, seeking to ",
-          "hit": "speak",
-          "post": " to you.\"]…"
-        }
-      ],
-      "total": 7
-    },
     "spirit": {
       "count": 6,
       "verses": [
@@ -7144,62 +7089,6 @@
         }
       ],
       "total": 1
-    },
-    "with": {
-      "count": 7,
-      "verses": [
-        3,
-        4,
-        30,
-        41,
-        42,
-        45
-      ],
-      "hits": [
-        {
-          "v": 3,
-          "pre": "…not read what David did when he was hungry, and those ",
-          "hit": "with",
-          "post": " him —…"
-        },
-        {
-          "v": 4,
-          "pre": "…which was not permitted for him to eat, nor for those ",
-          "hit": "with",
-          "post": " him, but only for the priests?…"
-        },
-        {
-          "v": 30,
-          "pre": "…The one who is not ",
-          "hit": "with",
-          "post": " me is against me, and the one who does not gather with…"
-        },
-        {
-          "v": 30,
-          "pre": "…The one who is not ",
-          "hit": "with",
-          "post": " me is against me, and the one who does not gather with…"
-        },
-        {
-          "v": 41,
-          "pre": "…Men of Nineveh will stand up in the judgment ",
-          "hit": "with",
-          "post": " this generation and will judge against it, because the…"
-        },
-        {
-          "v": 42,
-          "pre": "…The queen of the south will be raised in the judgment ",
-          "hit": "with",
-          "post": " this generation and will judge against it, because she…"
-        },
-        {
-          "v": 45,
-          "pre": "…Then it goes and takes along ",
-          "hit": "with",
-          "post": " itself seven other spirits more evil than itself, and…"
-        }
-      ],
-      "total": 7
     },
     "withdraw": {
       "count": 1,

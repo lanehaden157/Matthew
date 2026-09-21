@@ -1492,6 +1492,36 @@
       "text": "deportation",
       "root": "beget",
       "why": "author slip — metoikesia is not the begetting verb"
+    },
+    {
+      "unit": "unit-12",
+      "text": "speak",
+      "root": "speak",
+      "why": "speak removed entirely (Lane, 2026-09-20)"
+    },
+    {
+      "unit": "unit-12",
+      "text": "speaking",
+      "root": "speak",
+      "why": "speak removed entirely (Lane, 2026-09-20)"
+    },
+    {
+      "unit": "unit-12",
+      "text": "speaks",
+      "root": "speak",
+      "why": "speak removed entirely (Lane, 2026-09-20)"
+    },
+    {
+      "unit": "unit-12",
+      "text": "spoke",
+      "root": "speak",
+      "why": "speak removed entirely (Lane, 2026-09-20)"
+    },
+    {
+      "unit": "unit-12",
+      "text": "with",
+      "root": "with",
+      "why": "with demoted to unit-01-only local root (Lane, 2026-09-20)"
     }
   ],
   "text": [

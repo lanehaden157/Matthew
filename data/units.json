@@ -103,6 +103,11 @@
           "color": "#9c2f8f",
           "translit": "kaleō",
           "gloss": "call"
+        },
+        "with": {
+          "color": "#5b411f",
+          "translit": "meta · meth'",
+          "gloss": "with — \"God with us\" (1:23)"
         }
       }
     },
@@ -672,11 +677,6 @@
           "color": "#0e8aa0",
           "translit": "thēsauros",
           "gloss": "treasure, storehouse"
-        },
-        "speak": {
-          "color": "#8a7a4a",
-          "translit": "laleō",
-          "gloss": "speak, talk"
         },
         "sign": {
           "color": "#7a2230",

@@ -44,7 +44,6 @@ of these words genuinely **drift with context** by Lane's standing call
 | counsel | symboulion | "took counsel" | New thread 2026-09-20. 12:14 → 22:15, 27:1, 27:7, 28:12 — the leaders' plot, Sabbath healing to bribed guards. |
 | cross | stauros | cross | First at 10:38, well before any passion prediction. |
 | defame | blasphēmeō · blasphēmia | **defame / defaming** (not "blaspheme", not "slander") | New thread 2026-09-20. 9:3 changed "blasphemes" → "defames" to match 12:31. "Slander" stays reserved for diabolos ("the slanderer"). |
-| emmanuel | meta (`data-root="with"`) | "with" — God-with-us | 1:23 "Emmanuel … with us [is] God" ↔ 28:20 "I am with y'all always." |
 | evil | ponēros | evil; the evil one; evildoer | "evil one" 5:37, 6:13; "evildoer" 5:39; "evil" elsewhere. |
 | faith | pistis · pisteuō | **trust** (not "faith" or "believe") | Noun and verb both. "Faith"/"believe" appear nowhere in the verse text — only in compare-table citations of other translations. |
 | father | patēr | Father / father | Tagged at every occurrence, including the ordinary human sense (2:22, 4:21–22). "Father in the skies," not "heavenly Father" (5:48, 6:14, 6:26, 6:32 — fixed 2026-09-12; see sky/skies below). |
@@ -145,13 +144,13 @@ where they've appeared.
 | shadow | skia | shadow | unit-04 |
 | slanderer | diabolos | the slanderer | unit-03 (4:1–11) |
 | son | huios | Son (of God) | unit-03 |
-| speak | laleō | speak | unit-12 |
 | stretch-out | ekteinō | stretch out | unit-12 (12:10–13, 12:49) — same verb at 8:3 "stretching out the hand", untagged |
 | touch | haptomai | take hold of; touch | unit-08 ("took hold of" 8:3, 8:15; "touched" 9:29) |
 | treasure → **promoted to a global thread 2026-09-20** | — | — | see table above |
 | way | hodos | road | unit-07 ("the road that leads off" 7:13–14; "clear your road" 11:10) |
 | whole | holos · teleios | whole | unit-05 ("whole body" 5:29–30; "be whole as … Father is whole" 5:48) |
 | wilderness | erēmos | wilderness | unit-03 |
+| with | meta · meth' | with | unit-01 only (1:23 "God with us") — demoted from the `emmanuel` thread 2026-09-20; not tagged elsewhere, incl. 12:3–4, 12:30 and 28:20 |
 | yoke | zygos | yoke | unit-11 |
 
 > **proclaim, not herald:** `data-root="proclaim"` had been introduced with
@@ -284,3 +283,5 @@ regardless of which Greek word is in play.
   "charged … sharply" (+ the 8:26 note label and Mark 4:39 row); 10:15
   "judgement" → "judgment". New unit-local rows: condemn, hunger, sabbath,
   speak, stretch-out.
+- 2026-09-20 (Lane) — `speak` removed entirely (untagged in unit 12; no root, no glossary row).
+  `with` demoted from the global `emmanuel` thread to a unit-01-only local root; its unit-12 tags removed.
