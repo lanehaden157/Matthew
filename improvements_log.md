@@ -734,3 +734,22 @@
   find them through the connector, that `project-side/README.md` is the index,
   and that a synced file beats an uploaded copy — say so rather than quietly
   picking one.
+
+## 2026-09-20 — Unit 12 port
+
+- `units/unit-12.html` ported from `source-artifacts/matthew_12_translation.html`;
+  added tags the artifact left out: counsel 12:14, defame ×2 12:31, rest 12:43.
+  Unit-10 retro fix from the artifact's meta: `unclean` 10:1 → `clean`.
+- `data/threads.json`: 9 new threads, colours from `assign_color.py` —
+  judge #105060, fruit #695b11, treasure #3d125e, sign #5c6aa3, defame #3b747d,
+  house #766142, permitted #683b41, counsel #72133f, rest #1f3d51. 13 thread-delta
+  payoffs applied (none closed).
+- `pipeline/thread-stems.json`: stems for the 9; `raise` gained `εγερει`
+  (ἐγερεῖ 12:11 was reported as over-tagged).
+- `pipeline/retrofit-tags.json`: 32 `add` + text ops retro-tagging the new threads
+  in units 2–11. Wording: 9:3 "blasphemes" → "defames"; 8:26 "rebuked" → "charged
+  … sharply" (+ note label, Mark 4:39 row); 10:15 "judgement" → "judgment".
+- `translation-choices.md`: 9 global rows, 5 new unit-local rows, epitimaō bullet, Log.
+- CLAUDE.md status → units 1–12, next Unit 13; style-reference map title for Unit 12.
+- build.py green: 727 occurrences, 0 gaps across 50 audited threads, tightest
+  co-occurring pair dE00 6.05.

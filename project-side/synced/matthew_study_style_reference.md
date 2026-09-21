@@ -489,7 +489,7 @@ Format: **Unit — passage — title.** ✅ = built.
 
 - **Unit 11 — 11:2–30 — Are You the Coming One?** ✅ John's question, Jesus on John, woes on the
   towns, the great invitation. 11:2–30 (11:1 belongs to the prior formula).
-- **Unit 12 — 12:1–50 — Lord of the Sabbath, Servant of the Lord.** Two Sabbath conflicts,
+- **Unit 12 — 12:1–50 — Master of the Sabbath, the Chosen Servant.** ✅ Two Sabbath conflicts,
   Isaiah 42, Beelzebul, the sign of Jonah, the return of the unclean spirit, the true family.
 - **Unit 13 — 13:1–53 — The Parables of the Kingdom (Discourse 3).** Sower through the
   householder's treasure; the pivot from crowds to disciples; closed at 13:53.

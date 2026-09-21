@@ -774,6 +774,21 @@
       ],
       "total": 3
     },
+    "house": {
+      "count": 1,
+      "verses": [
+        11
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…And coming into the ",
+          "hit": "house",
+          "post": " they saw the child with Mary his mother, and falling d…"
+        }
+      ],
+      "total": 1
+    },
     "king": {
       "count": 3,
       "verses": [
@@ -876,6 +891,21 @@
       ],
       "total": 2
     },
+    "treasure": {
+      "count": 1,
+      "verses": [
+        11
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…and falling down they worshiped him; and opening their ",
+          "hit": "treasures",
+          "post": " they offered him gifts — gold and frankincense and myr…"
+        }
+      ],
+      "total": 1
+    },
     "urge": {
       "count": 1,
       "verses": [
@@ -972,6 +1002,28 @@
         }
       ],
       "total": 1
+    },
+    "fruit": {
+      "count": 2,
+      "verses": [
+        8,
+        10
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…So then, produce ",
+          "hit": "fruit",
+          "post": " worthy of the turning.…"
+        },
+        {
+          "v": 10,
+          "pre": "…he root of the trees; so every tree not producing good ",
+          "hit": "fruit",
+          "post": " is cut down and thrown into fire.…"
+        }
+      ],
+      "total": 2
     },
     "fulfill": {
       "count": 1,
@@ -1982,6 +2034,63 @@
         }
       ],
       "total": 1
+    },
+    "house": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…upon the lampstand, and it shines for all those in the ",
+          "hit": "house",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
+    "judge": {
+      "count": 5,
+      "verses": [
+        21,
+        22,
+        25,
+        40
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…not murder; and whoever murders shall be liable to the ",
+          "hit": "judgment",
+          "post": ".”…"
+        },
+        {
+          "v": 22,
+          "pre": "…e who is angry with his brother shall be liable to the ",
+          "hit": "judgment",
+          "post": "; and whoever says to his brother, “Raca,” shall be lia…"
+        },
+        {
+          "v": 25,
+          "pre": "…im on the way, lest the adversary hand you over to the ",
+          "hit": "judge",
+          "post": ", and the judge to the officer, and you be thrown into…"
+        },
+        {
+          "v": 25,
+          "pre": "…im on the way, lest the adversary hand you over to the ",
+          "hit": "judge",
+          "post": ", and the judge to the officer, and you be thrown into…"
+        },
+        {
+          "v": 40,
+          "pre": "…and to the one wanting to ",
+          "hit": "sue",
+          "post": " you and take your tunic, let him have also your cloak;…"
+        }
+      ],
+      "total": 5
     },
     "kingdom": {
       "count": 5,
@@ -3266,6 +3375,42 @@
       ],
       "total": 3
     },
+    "house": {
+      "count": 4,
+      "verses": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "hits": [
+        {
+          "v": 24,
+          "pre": "…them — will be likened to a shrewd man, who built his ",
+          "hit": "house",
+          "post": " on the rock.…"
+        },
+        {
+          "v": 25,
+          "pre": "…came, and the winds blew and hurled themselves at that ",
+          "hit": "house",
+          "post": " — and it did not fall, for it had been founded on the…"
+        },
+        {
+          "v": 26,
+          "pre": "…ng them will be likened to a stupid man, who built his ",
+          "hit": "house",
+          "post": " on the sand.…"
+        },
+        {
+          "v": 27,
+          "pre": "…rivers came, and the winds blew and slammed into that ",
+          "hit": "house",
+          "post": " — and it fell. And its fall was enormous.…"
+        }
+      ],
+      "total": 4
+    },
     "judge": {
       "count": 5,
       "verses": [
@@ -3663,6 +3808,28 @@
       ],
       "total": 1
     },
+    "house": {
+      "count": 2,
+      "verses": [
+        6,
+        14
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…nd saying, \"Master, my boy has been thrown down in the ",
+          "hit": "house",
+          "post": ", paralyzed, dreadfully tormented.\"…"
+        },
+        {
+          "v": 14,
+          "pre": "…And coming into Peter's ",
+          "hit": "house",
+          "post": ", Jesus saw his mother-in-law thrown down and burning w…"
+        }
+      ],
+      "total": 2
+    },
     "kingdom": {
       "count": 2,
       "verses": [
@@ -3717,7 +3884,7 @@
           "v": 26,
           "pre": "…And he says to them, \"Why are y'all cowards, y'all ",
           "hit": "little-faiths",
-          "post": "?\" Then, having been raised, he rebuked the winds and t…"
+          "post": "?\" Then, having been raised, he charged the winds and t…"
         }
       ],
       "total": 1
@@ -3761,7 +3928,7 @@
           "v": 26,
           "pre": "…y'all cowards, y'all little-faiths?\" Then, having been ",
           "hit": "raised",
-          "post": ", he rebuked the winds and the sea, and there was a gre…"
+          "post": ", he charged the winds and the sea sharply, and there w…"
         }
       ],
       "total": 4
@@ -3820,9 +3987,9 @@
         },
         {
           "v": 26,
-          "pre": "…Then, having been raised, he rebuked the winds and the ",
+          "pre": "…Then, having been raised, he charged the winds and the ",
           "hit": "sea",
-          "post": ", and there was a great stillness.…"
+          "post": " sharply, and there was a great stillness.…"
         },
         {
           "v": 27,
@@ -4054,6 +4221,21 @@
       ],
       "total": 1
     },
+    "defame": {
+      "count": 1,
+      "verses": [
+        3
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…— some of the scribes said among themselves: \"This man ",
+          "hit": "defames",
+          "post": ".\"…"
+        }
+      ],
+      "total": 1
+    },
     "evil": {
       "count": 1,
       "verses": [
@@ -4184,6 +4366,49 @@
         }
       ],
       "total": 1
+    },
+    "house": {
+      "count": 5,
+      "verses": [
+        6,
+        7,
+        10,
+        23,
+        28
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…ed man: \"Get up, pick up your mat, and go away to your ",
+          "hit": "house",
+          "post": ".\"…"
+        },
+        {
+          "v": 7,
+          "pre": "…And getting up, he went away to his ",
+          "hit": "house",
+          "post": ".…"
+        },
+        {
+          "v": 10,
+          "pre": "…And it happened, as he reclined at table in the ",
+          "hit": "house",
+          "post": ", look — many tax collectors and sinners came and recli…"
+        },
+        {
+          "v": 23,
+          "pre": "…And Jesus, coming into the ruler's ",
+          "hit": "house",
+          "post": ", and seeing the flute-players and the crowd in commoti…"
+        },
+        {
+          "v": 28,
+          "pre": "…And when he had come into the ",
+          "hit": "house",
+          "post": ", the blind men came up to him, and Jesus says to them:…"
+        }
+      ],
+      "total": 5
     },
     "learn": {
       "count": 6,
@@ -4585,11 +4810,18 @@
       "total": 1
     },
     "clean": {
-      "count": 1,
+      "count": 2,
       "verses": [
+        1,
         8
       ],
       "hits": [
+        {
+          "v": 1,
+          "pre": "…oning his twelve learners, he gave them authority over ",
+          "hit": "unclean",
+          "post": " spirits, so as to throw them out and to tend every dis…"
+        },
         {
           "v": 8,
           "pre": "…Tend the weak, raise the dead, ",
@@ -4597,7 +4829,7 @@
           "post": " the leprous, throw out demons. As a gift y'all receive…"
         }
       ],
-      "total": 1
+      "total": 2
     },
     "cross": {
       "count": 1,
@@ -4826,6 +5058,71 @@
         }
       ],
       "total": 3
+    },
+    "house": {
+      "count": 6,
+      "verses": [
+        6,
+        12,
+        13,
+        14,
+        25,
+        36
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…go rather to the lost sheep of the ",
+          "hit": "house",
+          "post": " of Israel.…"
+        },
+        {
+          "v": 12,
+          "pre": "…And entering into the ",
+          "hit": "house",
+          "post": ", greet it;…"
+        },
+        {
+          "v": 13,
+          "pre": "…and if indeed the ",
+          "hit": "house",
+          "post": " is worthy, let y'all's peace come upon it; but if it i…"
+        },
+        {
+          "v": 14,
+          "pre": "…ceive y'all nor hear y'all's words — going out of that ",
+          "hit": "house",
+          "post": " or that town, shake off the dust of y'all's feet.…"
+        },
+        {
+          "v": 25,
+          "pre": "…the master of the house Beelzeboul, how much more his ",
+          "hit": "household",
+          "post": "!…"
+        },
+        {
+          "v": 36,
+          "pre": "…and a man's enemies will be the members of his own ",
+          "hit": "household",
+          "post": ".\" (Mic 7:6)…"
+        }
+      ],
+      "total": 6
+    },
+    "judge": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…rable for the land of Sodom and Gomorrah on the day of ",
+          "hit": "judgment",
+          "post": " than for that town.…"
+        }
+      ],
+      "total": 1
     },
     "kingdom": {
       "count": 2,
@@ -5483,6 +5780,21 @@
       ],
       "total": 2
     },
+    "house": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…hings? Look — those who wear soft things are in kings' ",
+          "hit": "houses",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
     "immerse": {
       "count": 2,
       "verses": [
@@ -5501,6 +5813,28 @@
           "pre": "…And from the days of John the ",
           "hit": "Immerser",
           "post": " until now, the kingdom of the skies is under assault,…"
+        }
+      ],
+      "total": 2
+    },
+    "judge": {
+      "count": 2,
+      "verses": [
+        22,
+        24
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…will be more bearable for Tyre and Sidon on the day of ",
+          "hit": "judgment",
+          "post": " than for y'all.…"
+        },
+        {
+          "v": 24,
+          "pre": "…l be more bearable for the land of Sodom on the day of ",
+          "hit": "judgment",
+          "post": ", than for you.\"…"
         }
       ],
       "total": 2
@@ -5638,6 +5972,28 @@
       ],
       "total": 1
     },
+    "rest": {
+      "count": 2,
+      "verses": [
+        28,
+        29
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "…boring and having been burdened, and I will give y'all ",
+          "hit": "rest",
+          "post": ".…"
+        },
+        {
+          "v": 29,
+          "pre": "…se I am gentle and lowly in heart, and y'all will find ",
+          "hit": "rest",
+          "post": " for y'all's beings.…"
+        }
+      ],
+      "total": 2
+    },
     "righteous": {
       "count": 1,
       "verses": [
@@ -5755,6 +6111,1110 @@
         }
       ],
       "total": 2
+    }
+  },
+  "unit-12": {
+    "clean": {
+      "count": 1,
+      "verses": [
+        43
+      ],
+      "hits": [
+        {
+          "v": 43,
+          "pre": "…Whenever the ",
+          "hit": "unclean",
+          "post": " spirit goes out from the person, it goes through water…"
+        }
+      ],
+      "total": 1
+    },
+    "condemn": {
+      "count": 2,
+      "verses": [
+        7,
+        37
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "…t, and not sacrifice' (Hos 6:6) — y'all would not have ",
+          "hit": "condemned",
+          "post": " the guiltless.…"
+        },
+        {
+          "v": 37,
+          "pre": "…hown to be in the right, and by your words you will be ",
+          "hit": "condemned",
+          "post": ".\"…"
+        }
+      ],
+      "total": 2
+    },
+    "counsel": {
+      "count": 1,
+      "verses": [
+        14
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…But the Pharisees went out and took ",
+          "hit": "counsel",
+          "post": " against him, how they might destroy him.…"
+        }
+      ],
+      "total": 1
+    },
+    "defame": {
+      "count": 2,
+      "verses": [
+        31
+      ],
+      "hits": [
+        {
+          "v": 31,
+          "pre": "…For this reason I say to y'all: every sin and ",
+          "hit": "defaming",
+          "post": " will be released to people, but the defaming of the Sp…"
+        },
+        {
+          "v": 31,
+          "pre": "…For this reason I say to y'all: every sin and ",
+          "hit": "defaming",
+          "post": " will be released to people, but the defaming of the Sp…"
+        }
+      ],
+      "total": 2
+    },
+    "evil": {
+      "count": 7,
+      "verses": [
+        34,
+        35,
+        39,
+        45
+      ],
+      "hits": [
+        {
+          "v": 34,
+          "pre": "…ring of vipers! How can y'all speak good things, being ",
+          "hit": "evil",
+          "post": "? For out of the overflow of the heart the mouth speaks…"
+        },
+        {
+          "v": 35,
+          "pre": "…t of the good treasure throws out good things, and the ",
+          "hit": "evil",
+          "post": " person out of the evil treasure throws out evil things…"
+        },
+        {
+          "v": 35,
+          "pre": "…t of the good treasure throws out good things, and the ",
+          "hit": "evil",
+          "post": " person out of the evil treasure throws out evil things…"
+        },
+        {
+          "v": 35,
+          "pre": "…t of the good treasure throws out good things, and the ",
+          "hit": "evil",
+          "post": " person out of the evil treasure throws out evil things…"
+        },
+        {
+          "v": 39,
+          "pre": "…He answered and said to them, \"An ",
+          "hit": "evil",
+          "post": " and adulterous generation seeks after a sign, and no s…"
+        },
+        {
+          "v": 45,
+          "pre": "…s and takes along with itself seven other spirits more ",
+          "hit": "evil",
+          "post": " than itself, and going in they settle there; and the l…"
+        },
+        {
+          "v": 45,
+          "pre": "…s and takes along with itself seven other spirits more ",
+          "hit": "evil",
+          "post": " than itself, and going in they settle there; and the l…"
+        }
+      ],
+      "total": 7
+    },
+    "father": {
+      "count": 1,
+      "verses": [
+        50
+      ],
+      "hits": [
+        {
+          "v": 50,
+          "pre": "…For whoever does the will of my ",
+          "hit": "Father",
+          "post": " in the skies, that one is my brother and sister and mo…"
+        }
+      ],
+      "total": 1
+    },
+    "follow": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…But Jesus, knowing it, withdrew from there. And many ",
+          "hit": "followed",
+          "post": " him, and he healed them all,…"
+        }
+      ],
+      "total": 1
+    },
+    "fruit": {
+      "count": 3,
+      "verses": [
+        33
+      ],
+      "hits": [
+        {
+          "v": 33,
+          "pre": "…Either make the tree good and its ",
+          "hit": "fruit",
+          "post": " good, or make the tree rotten and its fruit rotten; fo…"
+        },
+        {
+          "v": 33,
+          "pre": "…Either make the tree good and its ",
+          "hit": "fruit",
+          "post": " good, or make the tree rotten and its fruit rotten; fo…"
+        },
+        {
+          "v": 33,
+          "pre": "…Either make the tree good and its ",
+          "hit": "fruit",
+          "post": " good, or make the tree rotten and its fruit rotten; fo…"
+        }
+      ],
+      "total": 3
+    },
+    "fulfill": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…at what was spoken through Isaiah the prophet might be ",
+          "hit": "filled full",
+          "post": ", saying:…"
+        }
+      ],
+      "total": 1
+    },
+    "generation": {
+      "count": 4,
+      "verses": [
+        39,
+        41,
+        42,
+        45
+      ],
+      "hits": [
+        {
+          "v": 39,
+          "pre": "…He answered and said to them, \"An evil and adulterous ",
+          "hit": "generation",
+          "post": " seeks after a sign, and no sign will be given to it ex…"
+        },
+        {
+          "v": 41,
+          "pre": "…Men of Nineveh will stand up in the judgment with this ",
+          "hit": "generation",
+          "post": " and will judge against it, because they turned at the…"
+        },
+        {
+          "v": 42,
+          "pre": "…of the south will be raised in the judgment with this ",
+          "hit": "generation",
+          "post": " and will judge against it, because she came from the e…"
+        },
+        {
+          "v": 45,
+          "pre": "…worse than the first. So it will be also for this evil ",
+          "hit": "generation",
+          "post": ".\"…"
+        }
+      ],
+      "total": 4
+    },
+    "house": {
+      "count": 5,
+      "verses": [
+        4,
+        25,
+        29,
+        44
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…how he went into the ",
+          "hit": "house",
+          "post": " of God and they ate the loaves of the presentation, wh…"
+        },
+        {
+          "v": 25,
+          "pre": "…ivided against itself is laid waste, and every city or ",
+          "hit": "house",
+          "post": " divided against itself will not stand.…"
+        },
+        {
+          "v": 29,
+          "pre": "…Or how can anyone go into the ",
+          "hit": "house",
+          "post": " of the strong man and seize his goods, unless he first…"
+        },
+        {
+          "v": 29,
+          "pre": "…Or how can anyone go into the ",
+          "hit": "house",
+          "post": " of the strong man and seize his goods, unless he first…"
+        },
+        {
+          "v": 44,
+          "pre": "…Then it says, 'Into my ",
+          "hit": "house",
+          "post": " I will go back, from where I came out.' And coming, it…"
+        }
+      ],
+      "total": 5
+    },
+    "hunger": {
+      "count": 2,
+      "verses": [
+        1,
+        3
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…he Sabbaths through the grainfields. His learners were ",
+          "hit": "hungry",
+          "post": ", and they began to pluck heads of grain and to eat.…"
+        },
+        {
+          "v": 3,
+          "pre": "…o them, \"Did y'all not read what David did when he was ",
+          "hit": "hungry",
+          "post": ", and those with him —…"
+        }
+      ],
+      "total": 2
+    },
+    "judge": {
+      "count": 8,
+      "verses": [
+        18,
+        20,
+        27,
+        36,
+        41,
+        42
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…d. I will put my Spirit upon him, and he will announce ",
+          "hit": "judgment",
+          "post": " to the nations. (Isa 42:1)…"
+        },
+        {
+          "v": 20,
+          "pre": "…ouldering wick he will not quench, until he throws out ",
+          "hit": "judgment",
+          "post": " to victory. (Isa 42:3)…"
+        },
+        {
+          "v": 27,
+          "pre": "…s throw them out? For this reason they will be y'all's ",
+          "hit": "judges",
+          "post": ".…"
+        },
+        {
+          "v": 36,
+          "pre": "…ak, they will give back an account of it in the day of ",
+          "hit": "judgment",
+          "post": ".…"
+        },
+        {
+          "v": 41,
+          "pre": "…Men of Nineveh will stand up in the ",
+          "hit": "judgment",
+          "post": " with this generation and will judge against it, becaus…"
+        },
+        {
+          "v": 41,
+          "pre": "…stand up in the judgment with this generation and will ",
+          "hit": "judge against",
+          "post": " it, because they turned at the proclamation of Jonah —…"
+        },
+        {
+          "v": 42,
+          "pre": "…The queen of the south will be raised in the ",
+          "hit": "judgment",
+          "post": " with this generation and will judge against it, becaus…"
+        },
+        {
+          "v": 42,
+          "pre": "…e raised in the judgment with this generation and will ",
+          "hit": "judge against",
+          "post": " it, because she came from the ends of the earth to hea…"
+        }
+      ],
+      "total": 8
+    },
+    "kingdom": {
+      "count": 3,
+      "verses": [
+        25,
+        26,
+        28
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…Knowing their thoughts, he said to them, \"Every ",
+          "hit": "kingdom",
+          "post": " divided against itself is laid waste, and every city o…"
+        },
+        {
+          "v": 26,
+          "pre": "…tan, he was divided against himself; how then will his ",
+          "hit": "kingdom",
+          "post": " stand?…"
+        },
+        {
+          "v": 28,
+          "pre": "…by the Spirit of God I throw out the demons, then the ",
+          "hit": "kingdom",
+          "post": " of God has arrived upon y'all.…"
+        }
+      ],
+      "total": 3
+    },
+    "learn": {
+      "count": 3,
+      "verses": [
+        1,
+        2,
+        49
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…esus went on the Sabbaths through the grainfields. His ",
+          "hit": "learners",
+          "post": " were hungry, and they began to pluck heads of grain an…"
+        },
+        {
+          "v": 2,
+          "pre": "…But the Pharisees, seeing it, said to him, \"Look, your ",
+          "hit": "learners",
+          "post": " are doing what is not permitted to do on a Sabbath.\"…"
+        },
+        {
+          "v": 49,
+          "pre": "…And stretching out his hand over his ",
+          "hit": "learners",
+          "post": ", he said, \"Look — my mother and my brothers.…"
+        }
+      ],
+      "total": 3
+    },
+    "lose": {
+      "count": 1,
+      "verses": [
+        14
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…went out and took counsel against him, how they might ",
+          "hit": "destroy",
+          "post": " him.…"
+        }
+      ],
+      "total": 1
+    },
+    "mercy": {
+      "count": 1,
+      "verses": [
+        7
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "…And if y'all had known what this is — '",
+          "hit": "Loyal-love",
+          "post": " I want, and not sacrifice' (Hos 6:6) — y'all would not…"
+        }
+      ],
+      "total": 1
+    },
+    "metanoia": {
+      "count": 1,
+      "verses": [
+        41
+      ],
+      "hits": [
+        {
+          "v": 41,
+          "pre": "…his generation and will judge against it, because they ",
+          "hit": "turned",
+          "post": " at the proclamation of Jonah — and look, something mor…"
+        }
+      ],
+      "total": 1
+    },
+    "nations": {
+      "count": 2,
+      "verses": [
+        18,
+        21
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…Spirit upon him, and he will announce judgment to the ",
+          "hit": "nations",
+          "post": ". (Isa 42:1)…"
+        },
+        {
+          "v": 21,
+          "pre": "…And in his name ",
+          "hit": "nations",
+          "post": " will hope.\" (Isa 42:4)…"
+        }
+      ],
+      "total": 2
+    },
+    "permitted": {
+      "count": 4,
+      "verses": [
+        2,
+        4,
+        10,
+        12
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…aid to him, \"Look, your learners are doing what is not ",
+          "hit": "permitted",
+          "post": " to do on a Sabbath.\"…"
+        },
+        {
+          "v": 4,
+          "pre": "…they ate the loaves of the presentation, which was not ",
+          "hit": "permitted",
+          "post": " for him to eat, nor for those with him, but only for t…"
+        },
+        {
+          "v": 10,
+          "pre": "…withered hand. And they questioned him, saying, \"Is it ",
+          "hit": "permitted",
+          "post": " on the Sabbaths to heal?\" — so that they might accuse…"
+        },
+        {
+          "v": 12,
+          "pre": "…ow much, then, a person differs from a sheep! So it is ",
+          "hit": "permitted",
+          "post": " on the Sabbaths to do well.\"…"
+        }
+      ],
+      "total": 4
+    },
+    "raise": {
+      "count": 2,
+      "verses": [
+        11,
+        42
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…e Sabbaths into a pit, will he not take hold of it and ",
+          "hit": "raise",
+          "post": " it?…"
+        },
+        {
+          "v": 42,
+          "pre": "…The queen of the south will be ",
+          "hit": "raised",
+          "post": " in the judgment with this generation and will judge ag…"
+        }
+      ],
+      "total": 2
+    },
+    "release": {
+      "count": 4,
+      "verses": [
+        31,
+        32
+      ],
+      "hits": [
+        {
+          "v": 31,
+          "pre": "…reason I say to y'all: every sin and defaming will be ",
+          "hit": "released",
+          "post": " to people, but the defaming of the Spirit will not be…"
+        },
+        {
+          "v": 31,
+          "pre": "…reason I say to y'all: every sin and defaming will be ",
+          "hit": "released",
+          "post": " to people, but the defaming of the Spirit will not be…"
+        },
+        {
+          "v": 32,
+          "pre": "…whoever says a word against the Son of Man, it will be ",
+          "hit": "released",
+          "post": " to him; but whoever says a word against the Holy Spiri…"
+        },
+        {
+          "v": 32,
+          "pre": "…whoever says a word against the Son of Man, it will be ",
+          "hit": "released",
+          "post": " to him; but whoever says a word against the Holy Spiri…"
+        }
+      ],
+      "total": 4
+    },
+    "rest": {
+      "count": 1,
+      "verses": [
+        43
+      ],
+      "hits": [
+        {
+          "v": 43,
+          "pre": "…m the person, it goes through waterless places seeking ",
+          "hit": "rest",
+          "post": ", and does not find it.…"
+        }
+      ],
+      "total": 1
+    },
+    "righteous": {
+      "count": 1,
+      "verses": [
+        37
+      ],
+      "hits": [
+        {
+          "v": 37,
+          "pre": "…For by your words you will be ",
+          "hit": "shown to be in the right",
+          "post": ", and by your words you will be condemned.\"…"
+        }
+      ],
+      "total": 1
+    },
+    "sabbath": {
+      "count": 8,
+      "verses": [
+        1,
+        2,
+        5,
+        8,
+        10,
+        11,
+        12
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…In that season Jesus went on the ",
+          "hit": "Sabbaths",
+          "post": " through the grainfields. His learners were hungry, and…"
+        },
+        {
+          "v": 2,
+          "pre": "…ur learners are doing what is not permitted to do on a ",
+          "hit": "Sabbath",
+          "post": ".\"…"
+        },
+        {
+          "v": 5,
+          "pre": "…Or did y'all not read in the Law that on the ",
+          "hit": "Sabbaths",
+          "post": " the priests in the temple profane the Sabbath and are…"
+        },
+        {
+          "v": 5,
+          "pre": "…Or did y'all not read in the Law that on the ",
+          "hit": "Sabbath",
+          "post": "s the priests in the temple profane the Sabbath and are…"
+        },
+        {
+          "v": 8,
+          "pre": "…For master of the ",
+          "hit": "Sabbath",
+          "post": " is the Son of Man.\"…"
+        },
+        {
+          "v": 10,
+          "pre": "…d they questioned him, saying, \"Is it permitted on the ",
+          "hit": "Sabbaths",
+          "post": " to heal?\" — so that they might accuse him.…"
+        },
+        {
+          "v": 11,
+          "pre": "…y'all who will have one sheep, and if it falls on the ",
+          "hit": "Sabbaths",
+          "post": " into a pit, will he not take hold of it and raise it?…"
+        },
+        {
+          "v": 12,
+          "pre": "…person differs from a sheep! So it is permitted on the ",
+          "hit": "Sabbaths",
+          "post": " to do well.\"…"
+        }
+      ],
+      "total": 8
+    },
+    "seek": {
+      "count": 4,
+      "verses": [
+        39,
+        43,
+        46,
+        47
+      ],
+      "hits": [
+        {
+          "v": 39,
+          "pre": "…d and said to them, \"An evil and adulterous generation ",
+          "hit": "seeks after",
+          "post": " a sign, and no sign will be given to it except the sig…"
+        },
+        {
+          "v": 43,
+          "pre": "…out from the person, it goes through waterless places ",
+          "hit": "seeking",
+          "post": " rest, and does not find it.…"
+        },
+        {
+          "v": 46,
+          "pre": "…wds, look — his mother and his brothers stood outside, ",
+          "hit": "seeking",
+          "post": " to speak to him.…"
+        },
+        {
+          "v": 47,
+          "pre": "…k, your mother and your brothers are standing outside, ",
+          "hit": "seeking",
+          "post": " to speak to you.\"]…"
+        }
+      ],
+      "total": 4
+    },
+    "sign": {
+      "count": 4,
+      "verses": [
+        38,
+        39
+      ],
+      "hits": [
+        {
+          "v": 38,
+          "pre": "…isees answered him, saying, \"Teacher, we want to see a ",
+          "hit": "sign",
+          "post": " from you.\"…"
+        },
+        {
+          "v": 39,
+          "pre": "…them, \"An evil and adulterous generation seeks after a ",
+          "hit": "sign",
+          "post": ", and no sign will be given to it except the sign of Jo…"
+        },
+        {
+          "v": 39,
+          "pre": "…them, \"An evil and adulterous generation seeks after a ",
+          "hit": "sign",
+          "post": ", and no sign will be given to it except the sign of Jo…"
+        },
+        {
+          "v": 39,
+          "pre": "…them, \"An evil and adulterous generation seeks after a ",
+          "hit": "sign",
+          "post": ", and no sign will be given to it except the sign of Jo…"
+        }
+      ],
+      "total": 4
+    },
+    "sin": {
+      "count": 1,
+      "verses": [
+        31
+      ],
+      "hits": [
+        {
+          "v": 31,
+          "pre": "…For this reason I say to y'all: every ",
+          "hit": "sin",
+          "post": " and defaming will be released to people, but the defam…"
+        }
+      ],
+      "total": 1
+    },
+    "son-of-david": {
+      "count": 1,
+      "verses": [
+        23
+      ],
+      "hits": [
+        {
+          "v": 23,
+          "pre": "…ere beside themselves and were saying, \"This one isn't ",
+          "hit": "the Son of David",
+          "post": ", is he?\"…"
+        }
+      ],
+      "total": 1
+    },
+    "son-of-man": {
+      "count": 3,
+      "verses": [
+        8,
+        32,
+        40
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…For master of the Sabbath is ",
+          "hit": "the Son of Man",
+          "post": ".\"…"
+        },
+        {
+          "v": 32,
+          "pre": "…And whoever says a word against ",
+          "hit": "the Son of Man",
+          "post": ", it will be released to him; but whoever says a word a…"
+        },
+        {
+          "v": 40,
+          "pre": "…a-monster three days and three nights (Jonah 1:17), so ",
+          "hit": "the Son of Man",
+          "post": " will be in the heart of the earth three days and three…"
+        }
+      ],
+      "total": 3
+    },
+    "speak": {
+      "count": 7,
+      "verses": [
+        22,
+        34,
+        36,
+        46,
+        47
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…rought to him; and he healed him, so that the mute man ",
+          "hit": "spoke",
+          "post": " and saw.…"
+        },
+        {
+          "v": 34,
+          "pre": "…Offspring of vipers! How can y'all ",
+          "hit": "speak",
+          "post": " good things, being evil? For out of the overflow of th…"
+        },
+        {
+          "v": 34,
+          "pre": "…g evil? For out of the overflow of the heart the mouth ",
+          "hit": "speaks",
+          "post": ".…"
+        },
+        {
+          "v": 36,
+          "pre": "…I say to y'all that every idle word that people will ",
+          "hit": "speak",
+          "post": ", they will give back an account of it in the day of ju…"
+        },
+        {
+          "v": 46,
+          "pre": "…While he was still ",
+          "hit": "speaking",
+          "post": " to the crowds, look — his mother and his brothers stoo…"
+        },
+        {
+          "v": 46,
+          "pre": "…While he was still ",
+          "hit": "speak",
+          "post": "ing to the crowds, look — his mother and his brothers s…"
+        },
+        {
+          "v": 47,
+          "pre": "…her and your brothers are standing outside, seeking to ",
+          "hit": "speak",
+          "post": " to you.\"]…"
+        }
+      ],
+      "total": 7
+    },
+    "spirit": {
+      "count": 6,
+      "verses": [
+        18,
+        28,
+        31,
+        32,
+        43,
+        45
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…my beloved, in whom my being delighted. I will put my ",
+          "hit": "Spirit",
+          "post": " upon him, and he will announce judgment to the nations…"
+        },
+        {
+          "v": 28,
+          "pre": "…But if by the ",
+          "hit": "Spirit",
+          "post": " of God I throw out the demons, then the kingdom of God…"
+        },
+        {
+          "v": 31,
+          "pre": "…ng will be released to people, but the defaming of the ",
+          "hit": "Spirit",
+          "post": " will not be released.…"
+        },
+        {
+          "v": 32,
+          "pre": "…eased to him; but whoever says a word against the Holy ",
+          "hit": "Spirit",
+          "post": ", it will not be released to him, neither in this age n…"
+        },
+        {
+          "v": 43,
+          "pre": "…Whenever the unclean ",
+          "hit": "spirit",
+          "post": " goes out from the person, it goes through waterless pl…"
+        },
+        {
+          "v": 45,
+          "pre": "…Then it goes and takes along with itself seven other ",
+          "hit": "spirits",
+          "post": " more evil than itself, and going in they settle there;…"
+        }
+      ],
+      "total": 6
+    },
+    "stretch-out": {
+      "count": 3,
+      "verses": [
+        13,
+        49
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…Then he says to the person, \"",
+          "hit": "Stretch out",
+          "post": " your hand.\" And he stretched it out, and it was restor…"
+        },
+        {
+          "v": 13,
+          "pre": "…he says to the person, \"Stretch out your hand.\" And he ",
+          "hit": "stretched it out",
+          "post": ", and it was restored, healthy as the other.…"
+        },
+        {
+          "v": 49,
+          "pre": "…And ",
+          "hit": "stretching out",
+          "post": " his hand over his learners, he said, \"Look — my mother…"
+        }
+      ],
+      "total": 3
+    },
+    "throw": {
+      "count": 8,
+      "verses": [
+        20,
+        24,
+        26,
+        27,
+        28,
+        35
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…k, and a smouldering wick he will not quench, until he ",
+          "hit": "throws out",
+          "post": " judgment to victory. (Isa 42:3)…"
+        },
+        {
+          "v": 24,
+          "pre": "…ut the Pharisees, hearing it, said, \"This one does not ",
+          "hit": "throw out",
+          "post": " the demons except by Beelzeboul, ruler of the demons.\"…"
+        },
+        {
+          "v": 26,
+          "pre": "…And if Satan ",
+          "hit": "throws out",
+          "post": " Satan, he was divided against himself; how then will h…"
+        },
+        {
+          "v": 27,
+          "pre": "…And if I ",
+          "hit": "throw out",
+          "post": " the demons by Beelzeboul, by whom do y'all's sons thro…"
+        },
+        {
+          "v": 27,
+          "pre": "…out the demons by Beelzeboul, by whom do y'all's sons ",
+          "hit": "throw them out",
+          "post": "? For this reason they will be y'all's judges.…"
+        },
+        {
+          "v": 28,
+          "pre": "…But if by the Spirit of God I ",
+          "hit": "throw out",
+          "post": " the demons, then the kingdom of God has arrived upon y…"
+        },
+        {
+          "v": 35,
+          "pre": "…The good person out of the good treasure ",
+          "hit": "throws out",
+          "post": " good things, and the evil person out of the evil treas…"
+        },
+        {
+          "v": 35,
+          "pre": "…The good person out of the good treasure ",
+          "hit": "throws out",
+          "post": " good things, and the evil person out of the evil treas…"
+        }
+      ],
+      "total": 8
+    },
+    "treasure": {
+      "count": 2,
+      "verses": [
+        35
+      ],
+      "hits": [
+        {
+          "v": 35,
+          "pre": "…The good person out of the good ",
+          "hit": "treasure",
+          "post": " throws out good things, and the evil person out of the…"
+        },
+        {
+          "v": 35,
+          "pre": "…The good person out of the good ",
+          "hit": "treasure",
+          "post": " throws out good things, and the evil person out of the…"
+        }
+      ],
+      "total": 2
+    },
+    "well-pleased": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…my servant whom I chose, my beloved, in whom my being ",
+          "hit": "delighted",
+          "post": ". I will put my Spirit upon him, and he will announce j…"
+        }
+      ],
+      "total": 1
+    },
+    "with": {
+      "count": 7,
+      "verses": [
+        3,
+        4,
+        30,
+        41,
+        42,
+        45
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…not read what David did when he was hungry, and those ",
+          "hit": "with",
+          "post": " him —…"
+        },
+        {
+          "v": 4,
+          "pre": "…which was not permitted for him to eat, nor for those ",
+          "hit": "with",
+          "post": " him, but only for the priests?…"
+        },
+        {
+          "v": 30,
+          "pre": "…The one who is not ",
+          "hit": "with",
+          "post": " me is against me, and the one who does not gather with…"
+        },
+        {
+          "v": 30,
+          "pre": "…The one who is not ",
+          "hit": "with",
+          "post": " me is against me, and the one who does not gather with…"
+        },
+        {
+          "v": 41,
+          "pre": "…Men of Nineveh will stand up in the judgment ",
+          "hit": "with",
+          "post": " this generation and will judge against it, because the…"
+        },
+        {
+          "v": 42,
+          "pre": "…The queen of the south will be raised in the judgment ",
+          "hit": "with",
+          "post": " this generation and will judge against it, because she…"
+        },
+        {
+          "v": 45,
+          "pre": "…Then it goes and takes along ",
+          "hit": "with",
+          "post": " itself seven other spirits more evil than itself, and…"
+        }
+      ],
+      "total": 7
+    },
+    "withdraw": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…But Jesus, knowing it, ",
+          "hit": "withdrew",
+          "post": " from there. And many followed him, and he healed them…"
+        }
+      ],
+      "total": 1
     }
   }
 }

@@ -1097,6 +1097,245 @@
       "text": "kingdom",
       "root": "kingdom",
       "why": "basileia 11:12"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 14,
+      "text": "counsel",
+      "root": "counsel",
+      "why": "symboulion 12:14 — new counsel thread"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 43,
+      "text": "rest",
+      "root": "rest",
+      "why": "anapausis 12:43 — new rest thread (← 11:28–29)"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 21,
+      "text": "judgment",
+      "root": "judge",
+      "why": "krisei — v21 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 22,
+      "text": "judgment",
+      "root": "judge",
+      "why": "krisei — v22 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 25,
+      "text": "judge",
+      "root": "judge",
+      "why": "kritē/kritēs, 1st — v25 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 40,
+      "text": "sue",
+      "root": "judge",
+      "why": "krithēnai ('be judged' = go to law) — v40 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 15,
+      "text": "judgment",
+      "root": "judge",
+      "why": "kriseōs — v15 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 22,
+      "text": "judgment",
+      "root": "judge",
+      "why": "kriseōs — v22 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 24,
+      "text": "judgment",
+      "root": "judge",
+      "why": "kriseōs — v24 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-03",
+      "verse": 8,
+      "text": "fruit",
+      "root": "fruit",
+      "why": "karpon — v8 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-03",
+      "verse": 10,
+      "text": "fruit",
+      "root": "fruit",
+      "why": "karpon — v10 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 11,
+      "text": "treasures",
+      "root": "treasure",
+      "why": "thēsaurous — v11 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 11,
+      "text": "house",
+      "root": "house",
+      "why": "oikian — v11 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 15,
+      "text": "house",
+      "root": "house",
+      "why": "oikia — v15 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 24,
+      "text": "house",
+      "root": "house",
+      "why": "oikian — v24 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 25,
+      "text": "house",
+      "root": "house",
+      "why": "oikia — v25 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 26,
+      "text": "house",
+      "root": "house",
+      "why": "oikian — v26 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 27,
+      "text": "house",
+      "root": "house",
+      "why": "oikia — v27 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 6,
+      "text": "house",
+      "root": "house",
+      "why": "oikia — v6 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 14,
+      "text": "house",
+      "root": "house",
+      "why": "oikian — v14 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 6,
+      "text": "house",
+      "root": "house",
+      "why": "oikon — v6 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 7,
+      "text": "house",
+      "root": "house",
+      "why": "oikon — v7 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 10,
+      "text": "house",
+      "root": "house",
+      "why": "oikia — v10 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 23,
+      "text": "house",
+      "root": "house",
+      "why": "oikian — v23 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 28,
+      "text": "house",
+      "root": "house",
+      "why": "oikian — v28 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 6,
+      "text": "house",
+      "root": "house",
+      "why": "oikou — v6 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 12,
+      "text": "house",
+      "root": "house",
+      "why": "oikian — v12 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 13,
+      "text": "house",
+      "root": "house",
+      "why": "oikia — v13 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 14,
+      "text": "house",
+      "root": "house",
+      "why": "oikias — v14 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 25,
+      "text": "household",
+      "root": "house",
+      "why": "oikiakous (not 'master of the house' = oikodespotēs) — v25 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 36,
+      "text": "household",
+      "root": "house",
+      "why": "oikiakoi — v36 — promoted to a thread at the unit-12 port (2026-09-20)",
+      "nth": 2
+    },
+    {
+      "unit": "unit-11",
+      "verse": 8,
+      "text": "houses",
+      "root": "house",
+      "why": "oikois — v8 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 28,
+      "text": "rest",
+      "root": "rest",
+      "why": "anapausō — v28 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 29,
+      "text": "rest",
+      "root": "rest",
+      "why": "anapausin — v29 — promoted to a thread at the unit-12 port (2026-09-20)"
     }
   ],
   "retag": [
@@ -1257,6 +1496,12 @@
   ],
   "text": [
     {
+      "unit": "unit-10",
+      "from": "day of judgement",
+      "to": "day of <span class=\"r\" data-root=\"judge\">judgment</span>",
+      "why": "10:15 spelling — 'judgment' everywhere else (2026-09-20); also tags it (judge thread) — the add op below then reports already-tagged"
+    },
+    {
       "unit": "unit-08",
       "from": "demonized",
       "to": "demon-possessed",
@@ -1279,6 +1524,48 @@
       "from": "slanderer</span> leaves him",
       "to": "slanderer</span> <span class=\"r\" data-root=\"release\">leaves</span> him",
       "why": "4:11 aphiesin 'then the slanderer leaves him' — pre-opening release; verse has no .n marker so add can't reach it"
+    },
+    {
+      "unit": "unit-08",
+      "from": ", he rebuked the winds and the <span class=\"r\" data-root=\"sea\">sea</span>, and",
+      "to": ", he charged the winds and the <span class=\"r\" data-root=\"sea\">sea</span> sharply, and",
+      "why": "8:26 epitimaō → 'charged … sharply', unified with 12:16 (Lane, 2026-09-20 unit-12 port)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"src\">\"Rebuked\"</span>",
+      "to": "<span class=\"src\">\"Charged sharply\"</span>",
+      "why": "8:26 note label follows the verse"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<em>rebuked the wind</em>",
+      "to": "<em>charged the wind sharply</em>",
+      "why": "Mark 4:39 parallel, same verb, same rendering"
+    },
+    {
+      "unit": "unit-09",
+      "from": "\"This man blasphemes.\"",
+      "to": "\"This man <span class=\"r\" data-root=\"defame\">defames</span>.\"",
+      "why": "9:3 blasphēmeō → 'defames', unified with 12:31 as the new defame thread (Lane, 2026-09-20 unit-12 port)"
+    },
+    {
+      "unit": "unit-12",
+      "from": " defaming will be",
+      "to": " <span class=\"r\" data-root=\"defame\">defaming</span> will be",
+      "why": "12:31 blasphēmia, 1st of 2 (add op only tags the first free match)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "the defaming of the",
+      "to": "the <span class=\"r\" data-root=\"defame\">defaming</span> of the",
+      "why": "12:31 blasphēmia, 2nd of 2"
+    },
+    {
+      "unit": "unit-05",
+      "from": "the <span class=\"r\" data-root=\"judge\">judge</span>, and the judge to",
+      "to": "the <span class=\"r\" data-root=\"judge\">judge</span>, and the <span class=\"r\" data-root=\"judge\">judge</span> to",
+      "why": "5:25 kritēs, 2nd occurrence (add op only tags the first) — promoted to a thread at the unit-12 port (2026-09-20)"
     }
   ]
 }

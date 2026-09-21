@@ -156,3 +156,8 @@ Read this first. 3 lines max per session.
   book-wide rule to a per-unit one — that is what lets the thread count keep growing.
 - (cont.) instructions.md and CLAUDE.md's paste block now point the research project
   at project-side/synced/ with how to find files and which copy wins.
+
+## 2026-09-20 — Unit 12 port (Matt 12:1–50)
+- Ported unit 12; new threads sign/defame/house/permitted/counsel/rest, judge/fruit/treasure
+  promoted from local; earlier occurrences retro-tagged in units 2–11 (0 coverage gaps).
+- Lane's rulings: blasphēm- → "defame" everywhere (9:3 changed); epitimaō → "charge sharply" (8:26 changed).

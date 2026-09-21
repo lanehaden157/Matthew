@@ -8,10 +8,10 @@ The `/units` fragments are hand-authored prose (reviewed like prose); `/app` and
 the start of each session. This file is the standing architecture; PLAN.md is the
 phase plan and the record of decisions.
 
-## Status (2026-09-19)
+## Status (2026-09-20)
 
-- Live at https://lanehaden157.github.io/Matthew/ . Units 1–11 built. **Phases 1–9
-  done.** Next content unit: **Unit 12 (Matt 12:1–50)**.
+- Live at https://lanehaden157.github.io/Matthew/ . Units 1–12 built. **Phases 1–9
+  done.** Next content unit: **Unit 13 (Matt 13:1–53, Discourse 3)**.
 - Colour policy: one Greek lexical root per `data-root` (stem + same-stem forms
   only) — no themes/formulae/bundles. Exception: fixed titles Matthew repeats
   verbatim (son-of-man, son-of-david, law-prophets, apo-tote) live in threads.json.

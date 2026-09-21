@@ -1,0 +1,12 @@
+{
+  "add": [
+    {
+      "unit": "unit-10",
+      "verse": 1,
+      "text": "unclean",
+      "root": "clean",
+      "why": "akathartos 10:1 shares the kathar- stem with katharizō (tagged `clean` at 10:8); unit 12 tags akathartos at 12:43 — apply only if 10:1 is not already tagged",
+      "_from": "from Unit 12 port (2026-09-20)"
+    }
+  ]
+}

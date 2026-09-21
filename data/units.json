@@ -628,10 +628,67 @@
     {
       "n": 12,
       "slug": "unit-12",
-      "passage": "Matthew 12:1-50",
-      "title": "Lord of the Sabbath, Servant of the Lord",
+      "passage": "Matthew 12:1–50",
+      "title": "Master of the Sabbath, the Chosen Servant",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "sabbath": {
+          "color": "#a8324a",
+          "translit": "sabbaton",
+          "gloss": "Sabbath, the seventh-day rest"
+        },
+        "permitted": {
+          "color": "#1c7d70",
+          "translit": "exestin · exon",
+          "gloss": "it is permitted, it is allowed (the legal verb)"
+        },
+        "hunger": {
+          "color": "#c0641a",
+          "translit": "peinaō",
+          "gloss": "be hungry"
+        },
+        "house": {
+          "color": "#6b2fb3",
+          "translit": "oikos · oikia",
+          "gloss": "house, household, dwelling"
+        },
+        "judge": {
+          "color": "#455a6b",
+          "translit": "krisis · kritēs · katakrinō",
+          "gloss": "judgment; judge; judge against (condemn)"
+        },
+        "condemn": {
+          "color": "#9c4f1c",
+          "translit": "katadikazō",
+          "gloss": "pass sentence against, condemn"
+        },
+        "fruit": {
+          "color": "#9c2f8f",
+          "translit": "karpos",
+          "gloss": "fruit"
+        },
+        "treasure": {
+          "color": "#0e8aa0",
+          "translit": "thēsauros",
+          "gloss": "treasure, storehouse"
+        },
+        "speak": {
+          "color": "#8a7a4a",
+          "translit": "laleō",
+          "gloss": "speak, talk"
+        },
+        "sign": {
+          "color": "#7a2230",
+          "translit": "sēmeion",
+          "gloss": "sign, token"
+        },
+        "stretch-out": {
+          "color": "#c0285f",
+          "translit": "ekteinō",
+          "gloss": "stretch out (a hand)"
+        }
+      }
     },
     {
       "n": 13,

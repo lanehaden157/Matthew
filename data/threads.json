@@ -48,6 +48,11 @@
         {
           "unit": 28,
           "ref": "28:19"
+        },
+        {
+          "unit": 12,
+          "ref": "12:18, 12:21",
+          "note": "the servant announces judgment to the nations, and in his name nations will hope — a Gentile horizon inside the Sabbath conflicts."
         }
       ],
       "note": "'Galilee of the nations' (4:15) -> 'make disciples of all the nations' (28:19). One leg of the Emmanuel/nations frame around the whole book."
@@ -221,6 +226,11 @@
           "unit": 9,
           "ref": "9:2",
           "note": "the fever's release points forward to the paralytic's forgiveness"
+        },
+        {
+          "unit": 12,
+          "ref": "12:31–32",
+          "note": "every sin and defaming will be released — except one; the verb of 6:12 and 9:2 meets its limit."
         }
       ],
       "note": "Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness."
@@ -283,6 +293,11 @@
           "unit": 10,
           "ref": "9:38; 10:1, 8, 34",
           "note": "God thrusts out workers, the Twelve throw out demons, then Jesus comes to throw not peace but a sword"
+        },
+        {
+          "unit": 12,
+          "ref": "12:20, 12:24–28, 12:35",
+          "note": "one verb for the servant who 'throws out' judgment to victory, the demons thrown out, and the good thrown out of a good treasure."
         }
       ],
       "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later."
@@ -428,6 +443,11 @@
         {
           "unit": 26,
           "ref": "26:24, 26:64"
+        },
+        {
+          "unit": 12,
+          "ref": "12:8",
+          "note": "the Son of Man claims mastery of the Sabbath (12:8), is spoken against (12:32), and will lie three days in the heart of the earth (12:40)."
         }
       ],
       "note": "Daniel 7:13-14 — one like a son of man given everlasting dominion. Runs from 8:20 to the trial and the parousia."
@@ -809,6 +829,11 @@
           "unit": 18,
           "ref": "18:11-14",
           "note": "the one lost sheep left for — the shepherd goes after it"
+        },
+        {
+          "unit": 12,
+          "ref": "12:14",
+          "note": "the Pharisees plot 'how they might destroy him' — the verb of Herod's plot against the child (2:13)."
         }
       ],
       "note": "apollymi — the lost sheep (10:6), then the losing that is done on purpose (10:39) and a reward never lost (10:42); the lost sheep returns at 15:24 and 18:12-14."
@@ -907,6 +932,11 @@
           "unit": 11,
           "ref": "11:20",
           "note": "the towns that saw the most and turned the least — the summons comes back as a verdict"
+        },
+        {
+          "unit": 12,
+          "ref": "12:41",
+          "note": "Nineveh turned at Jonah's proclamation; the Galilean towns did not (11:20–21)."
         }
       ],
       "note": "metanoeite — John's proclamation (3:2), repeated on Jesus' own lips (4:17), returns as an indictment on the unrepentant towns (11:20)."
@@ -923,7 +953,13 @@
         "unit": 11,
         "ref": "11:16"
       },
-      "payoffs": [],
+      "payoffs": [
+        {
+          "unit": 12,
+          "ref": "12:39–45",
+          "note": "the generation of 11:16 now named 'evil and adulterous,' judged by Ninevites and a southern queen."
+        }
+      ],
       "note": "genea shifts from the literal genealogical generations of 1:17 to a moral class of people, opening its tracked sense at 11:16 ('this generation'). The 1:17 occurrence is tagged for lexical completeness, not claimed as the same sense."
     },
     {
@@ -985,6 +1021,11 @@
           "unit": 11,
           "ref": "11:26",
           "note": "the Father's spoken delight at the baptism recurs in Jesus' own prayer"
+        },
+        {
+          "unit": 12,
+          "ref": "12:18",
+          "note": "Isaiah 42 in the words of the baptism voice (3:17) — 'my beloved, in whom I delighted' — and again at 17:5."
         }
       ],
       "note": "eudokēsa — the Father's voice at the baptism (3:17) is the thread's true open; the same word recurs in Jesus' prayer at 11:26."
@@ -1146,6 +1187,11 @@
         {
           "unit": 5,
           "ref": "5:6, 10, 20; 6:33"
+        },
+        {
+          "unit": 12,
+          "ref": "12:37",
+          "note": "by your words you will be shown to be in the right — the verdict turned onto the accusers' own speech."
         }
       ],
       "note": "dikaios / dikaiosynē — Joseph 'a righteous man' (1:19) opens it; the Sermon makes righteousness the thing hungered for, persecuted for, and exceeded (5:6-20), then sought first (6:33).",
@@ -1232,6 +1278,11 @@
           "unit": 13,
           "ref": "13:1-52",
           "note": "the kingdom parables"
+        },
+        {
+          "unit": 12,
+          "ref": "12:28",
+          "note": "'the kingdom of God has arrived upon y'all' — no longer only drawn near (3:2, 4:17), but arrived."
         }
       ],
       "note": "basileia — 'the kingdom of the skies has drawn near' (3:2, 4:17) governs the Sermon's beatitudes and the parables to come. Distinct from basileus 'king' (10:18, 17:25, 18:23, 22:2), a different word not tracked here.",
@@ -1337,6 +1388,11 @@
           "unit": 5,
           "ref": "5:17",
           "note": "'not to abolish but to fulfill'"
+        },
+        {
+          "unit": 12,
+          "ref": "12:17",
+          "note": "the longest formula quotation in Matthew: Isaiah's servant who will not quarrel."
         }
       ],
       "note": "plēroō — the formula-quotation verb (1:22 and on) becomes Jesus' own stated relationship to the Law and the Prophets (5:17).",
@@ -1421,6 +1477,11 @@
         {
           "unit": 9,
           "ref": "9:24"
+        },
+        {
+          "unit": 12,
+          "ref": "12:15",
+          "note": "a plot to destroy him, then withdrawal — the pattern of 2:13–14, repeated in the adult ministry."
         }
       ],
       "note": "anachōreō — the magi withdraw by another road (2:12); Joseph withdraws to Egypt then Nazareth (2:13-22); Jesus withdraws at news of John's arrest (4:12) and before the ruler's daughter is raised (9:24).",
@@ -1478,6 +1539,11 @@
           "unit": 11,
           "ref": "11:2",
           "note": "John, in prison, sends through his own learners to ask"
+        },
+        {
+          "unit": 12,
+          "ref": "12:49",
+          "note": "Jesus stretches out his hand over his learners: 'look — my mother and my brothers.'"
         }
       ],
       "note": "mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible."
@@ -1565,6 +1631,212 @@
         }
       ],
       "note": "Promoted from unit-08's local palette when katharizō recurred in the mission charge at 10:8."
+    },
+    {
+      "id": "judge",
+      "root": "judge",
+      "translit": "krinō · krisis · kritēs · katakrinō",
+      "gloss": "judge; judgment; judge against",
+      "color": "#105060",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 5,
+        "ref": "5:21–25"
+      },
+      "payoffs": [
+        {
+          "unit": 7,
+          "ref": "7:1–2",
+          "note": "'do not judge' — the verdict you give is the one you get"
+        },
+        {
+          "unit": 10,
+          "ref": "10:15",
+          "note": "the day of judgment enters the mission charge"
+        },
+        {
+          "unit": 11,
+          "ref": "11:22–24",
+          "note": "the day of judgment weighed against the Galilean towns"
+        },
+        {
+          "unit": 12,
+          "ref": "12:18–42",
+          "note": "the servant announces judgment to the nations; Ninevites and the southern queen will rise in the judgment and judge against this generation"
+        }
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20): a unit-07 local root that recurred through 10:15, 11:22–24 and all of 12. krinō · krisis · kritēs · katakrinō; 5:40 krithēnai is rendered 'sue' (go to law)."
+    },
+    {
+      "id": "fruit",
+      "root": "fruit",
+      "translit": "karpos",
+      "gloss": "fruit",
+      "color": "#695b11",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 3,
+        "ref": "3:8–10"
+      },
+      "payoffs": [
+        {
+          "unit": 7,
+          "ref": "7:16–20",
+          "note": "'by their fruits y'all will know them'"
+        },
+        {
+          "unit": 12,
+          "ref": "12:33",
+          "note": "the tree known by its fruit, turned on the accusers"
+        }
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20): unit-07 local root recurring at 12:33."
+    },
+    {
+      "id": "treasure",
+      "root": "treasure",
+      "translit": "thēsauros · thēsaurizō",
+      "gloss": "treasure, storehouse; store up",
+      "color": "#3d125e",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 2,
+        "ref": "2:11"
+      },
+      "payoffs": [
+        {
+          "unit": 6,
+          "ref": "6:19–21",
+          "note": "treasure on earth vs. in the skies"
+        },
+        {
+          "unit": 12,
+          "ref": "12:35",
+          "note": "the good person brings good out of a good treasure"
+        }
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20): unit-06 local root recurring at 12:35."
+    },
+    {
+      "id": "sign",
+      "root": "sign",
+      "translit": "sēmeion",
+      "gloss": "sign, token",
+      "color": "#5c6aa3",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 12,
+        "ref": "12:38–39"
+      },
+      "payoffs": [],
+      "note": "Promoted at the unit-12 port (2026-09-20). The sign of Jonah; returns at 16:1–4, 24:3, 24:24, 24:30 and Judas's sign (26:48)."
+    },
+    {
+      "id": "defame",
+      "root": "defame",
+      "translit": "blasphēmeō · blasphēmia",
+      "gloss": "defame, speak injury against (blasphēm-)",
+      "color": "#3b747d",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 9,
+        "ref": "9:3"
+      },
+      "payoffs": [
+        {
+          "unit": 12,
+          "ref": "12:31",
+          "note": "the charge laid against Jesus (9:3) turned back on his accusers: the defaming of the Spirit"
+        }
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). Rendered 'defame' (not the loan-word 'blaspheme'; not 'slander', which is kept for diabolos). 9:3 changed from 'blasphemes' to match. Ahead: 15:19, 26:65, 27:39."
+    },
+    {
+      "id": "house",
+      "root": "house",
+      "translit": "oikia · oikos",
+      "gloss": "house, household",
+      "color": "#766142",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 2,
+        "ref": "2:11"
+      },
+      "payoffs": [
+        {
+          "unit": 7,
+          "ref": "7:24–27",
+          "note": "the house on rock and the house on sand"
+        },
+        {
+          "unit": 10,
+          "ref": "10:6",
+          "note": "'the lost sheep of the house of Israel'"
+        },
+        {
+          "unit": 12,
+          "ref": "12:25–29, 12:44",
+          "note": "the divided house, the strong man's house, the swept house the spirit returns to"
+        }
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). oikia · oikos and oikiakos ('household'); oikodespotēs ('master of the house') is not tagged. Ahead: 'y'all's house is left desolate' (23:38)."
+    },
+    {
+      "id": "permitted",
+      "root": "permitted",
+      "translit": "exestin · exon",
+      "gloss": "it is permitted (the legal question)",
+      "color": "#683b41",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 12,
+        "ref": "12:2–12"
+      },
+      "payoffs": [],
+      "note": "Promoted at the unit-12 port (2026-09-20). The legal-question verb; every Matthean use is a dispute over what Torah allows (14:4, 19:3, 20:15, 22:17, 27:6)."
+    },
+    {
+      "id": "counsel",
+      "root": "counsel",
+      "translit": "symboulion",
+      "gloss": "council, plot — 'take counsel'",
+      "color": "#72133f",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 12,
+        "ref": "12:14"
+      },
+      "payoffs": [],
+      "note": "Promoted at the unit-12 port (2026-09-20). The leaders 'take counsel' — 12:14, 22:15, 27:1, 27:7, 28:12: the plot from the Sabbath healing to the bribed guards."
+    },
+    {
+      "id": "rest",
+      "root": "rest",
+      "translit": "anapausis · anapauō",
+      "gloss": "rest, give rest",
+      "color": "#1f3d51",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 11,
+        "ref": "11:28–29"
+      },
+      "payoffs": [
+        {
+          "unit": 12,
+          "ref": "12:43",
+          "note": "the rest the unclean spirit seeks and cannot find"
+        }
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). Ahead: 'sleep on and take rest' (26:45)."
     }
   ]
 }
