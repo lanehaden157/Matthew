@@ -130,7 +130,17 @@ Follow `matthew_study_style_reference.md` in full. The artifact must be:
 - **`ouranos` → "sky / skies"** in the study's own wording (NASB/Hart/Lattimore quotations
   keep theirs); **"y'all" only for a genuine second-person plural** in the text; same Greek
   root → same English root across verses; bare `nK` endnote ids; `<p class="v">` with
-  `.gloss` / `.compare` as following siblings, never nested.
+  `.gloss` / `.compare` as following siblings, never nested (a `.gloss`'s own endnote
+  marker sits after its closing tag, not inside it).
+- **No named commentators in the artifact's prose** (notes, glosses, compare boxes) —
+  starting **unit 13**. Dissolve the attribution into the point: "A dispensational
+  reading argues…" not "Constable argues…"; state a shared conclusion plain rather than
+  "(so France, Wright)". This is Joshua's rule, adopted for the core contract
+  (platform-design-review.md C3/B9); it does **not** touch the research passes above —
+  pass 2's dialogue between named traditions is still the method, this only says the
+  *artifact* doesn't cite the names. Units 1–12 still name commentators (64 instances)
+  and are a separate, tracked retrofit — don't fix them opportunistically inside an
+  unrelated unit's port; do it as its own pass.
 - Run the §4 checklist. Save to `/mnt/user-data/outputs/matthew_NN_translation.html`
   (zero-padded), then `present_files`.
 

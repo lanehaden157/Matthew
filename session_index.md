@@ -161,3 +161,12 @@ Read this first. 3 lines max per session.
 - Ported unit 12; new threads sign/defame/house/permitted/counsel/rest, judge/fruit/treasure
   promoted from local; earlier occurrences retro-tagged in units 2–11 (0 coverage gaps).
 - Lane's rulings: blasphēm- → "defame" everywhere (9:3 changed); epitimaō → "charge sharply" (8:26 changed).
+
+## 2026-09-21 — C1–C9 cross-project decisions (prep for G6)
+- Resolved all nine platform-design-review.md C-items (translit form, promotion authority,
+  named commentators, note requirement, threads sub-keys, legend text, notes markup, .gloss
+  definition, endnote-marker placement). Fixed two real bugs found along the way: note
+  dropped on every regen (Joshua's A2, one level up), and 24 endnote markers nested inside
+  .gloss spans across 5 units. Also touched Joshua's repo for C7 (one unit's notes markup).
+- C3 (forbid named commentators) is forward-only from unit 13 — existing 64 instances across
+  units 1-12 (18 in unit 12 alone, 10x the review's estimate) are a tracked backlog, not done.

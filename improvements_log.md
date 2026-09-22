@@ -761,3 +761,41 @@
   (colour kept, #5b411f). Thread + `emmanuel` stems removed; unit-12 `with` spans
   unwrapped (retrofit `unwrap` ops); unit-01 meta and the style reference's
   Emmanuel note updated. 28:20 will not be tagged. build green, 713 occurrences.
+
+## 2026-09-21 — C1–C9 cross-project decisions (prep for G6, parallel with G4)
+
+- `pipeline/unit_meta.py`: `_threads_touching()` was dropping `note` on every
+  `opens`/`payoffs` entry unconditionally, even though 114/228 entries in
+  `threads.json` carry one — same bug class as Joshua's A2. Fixed to round-trip
+  it when present. `note` stays optional (C4) rather than required: 114 entries
+  don't have one written yet, and making it required now would fail the build
+  over unwritten content, not a bug.
+- `pipeline/unit_meta.py`: C5 — `threads.{opens,payoffs,candidates,retro}` are
+  now all required (empty list if nothing to report), matching Joshua's
+  stricter rule. `generate()` didn't emit `retro` at all before this.
+- 24 instances across units 1 (14), 3, 4, 6, 9 (7) had their endnote
+  `<sup class="en">` nested inside the preceding `.gloss` span instead of
+  after it — surfaced while resolving C8 (Joshua's rule: markers never sit
+  inside a `.gloss`). Fixed mechanically; no visible text changed.
+- `units/unit-01.html`: `<section class="endnotes">` → `<div class="notes">`,
+  matching the other 11 units (C7 — Matthew's shape won core).
+- `matthew_study_style_reference.md`: fixed the legend text that said "may be
+  a stub — the site rebuilds it from data" (C6). The site fills an *existing*
+  `<ul>`; it doesn't create the section. This exact confusion is why unit 11
+  shipped with no legend (B8, 2026-09-19).
+- `instructions.md`: added the forward-only no-named-commentators rule for
+  the artifact's prose, effective unit 13 (C3/B9). Units 1–12 keep their 64
+  existing instances (18 in unit 12 alone) as a tracked backlog, not retrofit
+  in this pass — Lane's call, given the real scope was 10x the review's
+  estimate. Research-pass dialogue with named traditions (pass 2) is
+  unaffected; this is an artifact-output rule only.
+- `platform-design-review.md`: added a "C-resolved" section recording all
+  nine C-item decisions with rationale, ahead of section D. C2 (who promotes
+  a thread) was resolved as a per-project default rather than one forced
+  policy — Joshua's autonomous-biased rule is a dated 2026-09-16 call, left
+  untouched rather than overwritten by Matthew's "always ask" answer.
+- Joshua repo (`../Joshua/`): converted its one built unit's
+  `<section class="block notes">` to `<div class="notes">` (C7) and gave
+  `css/styles.css` a plain top-divider `.notes` rule to replace the one it
+  borrowed from the generic `.block` panel style — the code comment there
+  already flagged this exact divergence. `pipeline/build.py` green after.

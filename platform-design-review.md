@@ -348,6 +348,66 @@ Matthew has a `greek-title` line (translit anchor phrase + gloss) and a descript
 
 ---
 
+## C-resolved — decisions made 2026-09-21 (ahead of G6, in parallel with G4)
+
+G6 depends on "G4, C1–C9 decisions." G4 (Joshua ships units 2–4) is content work with
+its own pace; the C1–C9 decisions are not, so they were made now rather than waiting.
+Recorded here as the answer key for whoever writes the core contract (D1).
+
+- **C1 — what `translit` holds.** Kept as a per-language difference, not unified: Matthew
+  lists same-stem forms (noun/verb pairs look different on the page); Joshua doesn't
+  (Hebrew forms share consonants, the list was noise). The core states this as an
+  explicit per-language rule, not silence.
+- **C2 — who promotes a candidate.** A profile default, not one forced policy. Matthew:
+  the chat side always asks, Lane decides — instructions.md already says so. Joshua:
+  "Claude decides, biased toward book-wide, asks only when unsure" — a **dated,
+  deliberate call Lane made 2026-09-16** for that project specifically, left untouched
+  rather than silently overwritten by today's Matthew-scoped answer.
+- **C3 / B9 — named commentators.** Matthew adopts Joshua's rule: no named commentators
+  in the artifact's prose. **Forward-only, from unit 13** (`instructions.md`). The
+  existing 64 instances across units 1–12 (unit 12 alone has 18 — the review's estimate
+  of "a few in unit 11" undercounted this badly) are a **tracked backlog item**, not
+  done in this pass: each is a live scholarly attribution woven into a sentence
+  ("so France, Wright"), and rewriting 64 of them is an editorial pass on hand-authored
+  prose, not a mechanical retrofit. Pass 2's research dialogue with named traditions is
+  unaffected — this is an artifact-output rule only.
+- **C4 — `note` on `opens`/`payoffs`.** Stays **optional** in Matthew, unlike Joshua's
+  required version — 114 of 228 entries don't have one yet, and requiring it now would
+  fail the build over unwritten content, not a bug. What WAS a bug, fixed regardless of
+  this call: `pipeline/unit_meta.py`'s `_threads_touching()` dropped `note` unconditionally
+  on every regen, so a note in `threads.json` never reached the fragment's own meta block.
+  Same class of bug as Joshua's A2.
+- **C5 — `threads` sub-keys.** Adopted Joshua's stricter rule: `opens`, `payoffs`,
+  `candidates`, `retro` are all required (empty list, not absent). Matthew's `generate()`
+  didn't even emit `retro` before this; it does now.
+- **C6 — legend optional vs. required.** Joshua was right, Matthew's own spec text was
+  wrong: `matthew_study_style_reference.md` said the legend "may be a stub — the site
+  rebuilds it from data"; the site fills in an *existing* `<ul>`, it doesn't create the
+  section. This exact confusion is why unit 11 shipped live with no legend (B8). Fixed.
+- **C7 — notes container markup.** Matthew's `<div class="notes">` won core: zero
+  retrofit there (all 12 units already matched, once unit 1's stray
+  `<section class="endnotes">` was fixed to match its own siblings). Joshua's one built
+  unit converted from `<section class="block notes">` to `<div class="notes">`, and its
+  stylesheet gained a plain top-divider `.notes` rule (previously it only had one via
+  the generic `.block` panel style, per the code comment already flagging this exact
+  divergence).
+- **C8 — what a `.gloss` is.** Kept as one shared, inline definition — an italic note
+  rendered as a following sibling of the verse `<p>`, not collapsed behind a toggle;
+  Matthew's shorter contextual gloss and Joshua's longer word-by-word one differ in
+  *length*, not in structure, so no rename was needed. The real, separate bug this
+  surfaced: **24 instances across 5 Matthew units** (14 in unit 1 alone) had their
+  endnote `<sup class="en">` nested *inside* the `.gloss` span rather than after it —
+  exactly the placement Joshua's rule forbids. Fixed mechanically (moved, no text
+  changed) in all five.
+- **C9 — endnote-marker placement.** Adopted in spirit: the marker now sits at the end
+  of the verse's material (after its `.gloss`, if any), never inside another span. Not
+  literally "last child of the verse `<p>`" the way Joshua's single-paragraph verses
+  allow — Matthew's `.gloss` is a following sibling of `<p class="v">`, not inside it,
+  so applying that literal rule would mean restructuring the DOM shape, which nobody
+  asked for. Left as a difference in shape, not in intent.
+
+---
+
 ## D. Shared core architecture
 
 The two repos are already about 85% the same code by line count (Port analysis §5), and the differences that matter are concentrated: transliteration, corpus loader, root-identity strategy, component set, palette, and the book map. That is a small, nameable surface, which is the precondition for a core. The Matthew `ARCHITECTURE.md` argued against extracting a framework with only two books; that advice was right at the time and is addressed in G4 and H1 (extract after Joshua has several units, not before).

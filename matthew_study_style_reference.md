@@ -17,7 +17,10 @@ coloured word is `<span class="r" data-root="X">…</span>` (counted) or `class=
 resolves colour **two-tier**: a root that is a tracked cross-unit thread
 (`threads-digest.md`) gets that thread's fixed colour in every unit; any other root gets a
 hue the pipeline assigns into `data/units.json`. **The artifact never picks a hex.** The
-colour legend may be a stub — the site rebuilds it from data (§3). Output is still
+colour legend **is required** — include an empty `<ul></ul>`; the site fills in the
+`<li>`s and swatches from data, it does not build the section itself (§3;
+C6/B8, platform-design-review.md — unit 11 shipped with no legend precisely
+because this line said optional). Output is still
 `/mnt/user-data/outputs/matthew_NN_translation.html`; its content is just the `<article>`.
 
 ---
@@ -160,7 +163,8 @@ to an `id` in the same fragment.
 All blocks live directly inside `<article>`. No colour vars — the classes below are styled
 by the site's one stylesheet (`css/styles.css`).
 
-### Colour legend (optional — the site rebuilds it from data)
+### Colour legend (REQUIRED — include the empty `<ul></ul>`; the site fills it in,
+it does not create the section)
 
 ```html
 <section class="block legend" aria-label="color key">

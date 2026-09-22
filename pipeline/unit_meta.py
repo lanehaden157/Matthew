@@ -125,9 +125,16 @@ def validate(meta, threads_json=None):
             errs.append(f"{where}: 'kind'/'members' are gone — every tracked "
                         "item is a plain root now")
 
+    # C5 (platform-design-review.md): all four threads sub-keys are required,
+    # matching Joshua's stricter rule -- any subset silently accepted meant a
+    # missing key and an empty key looked identical, which is one more shape
+    # `generate()` had to guess right. Empty list is how "nothing here" is said.
     th = meta.get("threads", {}) or {}
     for key in ("opens", "payoffs", "candidates", "retro"):
-        if key in th and not isinstance(th[key], list):
+        if key not in th:
+            errs.append(f"threads.{key} is required (use [] if there's nothing "
+                        "to report)")
+        elif not isinstance(th[key], list):
             errs.append(f"threads.{key} must be a list")
 
     for key in ("opens", "payoffs"):
@@ -199,13 +206,31 @@ def validate(meta, threads_json=None):
 #  used to backfill units 1-8 and to keep blocks fresh in build.py)
 
 def _threads_touching(threads_json, n):
+    """opens/payoffs entries for unit n, carrying `note` through when present.
+
+    C4 (platform-design-review.md): `note` stays OPTIONAL here, unlike
+    Joshua's required version -- Matthew has 12 units of history and only
+    114 of 228 opens/payoffs entries carry one yet, so requiring it now would
+    fail the build over content that hasn't been written, not a bug. But it
+    must round-trip: this used to drop `note` unconditionally, so every
+    refresh_meta.py regen silently erased it from the fragment's own
+    unit-meta block even though threads.json still had it (the same class of
+    bug as Joshua's A2).
+    """
     opens, payoffs = [], []
     for t in threads_json["threads"]:
-        if t.get("opens", {}).get("unit") == n:
-            opens.append({"id": t["id"], "ref": t["opens"].get("ref", "")})
+        o = t.get("opens", {})
+        if o.get("unit") == n:
+            entry = {"id": t["id"], "ref": o.get("ref", "")}
+            if o.get("note"):
+                entry["note"] = o["note"]
+            opens.append(entry)
         for p in t.get("payoffs", []):
             if p.get("unit") == n:
-                payoffs.append({"id": t["id"], "ref": p.get("ref", "")})
+                entry = {"id": t["id"], "ref": p.get("ref", "")}
+                if p.get("note"):
+                    entry["note"] = p["note"]
+                payoffs.append(entry)
     return opens, payoffs
 
 
@@ -239,7 +264,10 @@ def generate(n, units_json=None, threads_json=None, occurrences_json=None):
         "title": row["title"],
         "movement": row.get("movement"),
         "roots": roots,
-        "threads": {"opens": opens, "payoffs": payoffs, "candidates": []},
+        # candidates/retro are hand-authored during porting and never derived
+        # from the committed data files; generate() only knows to say "none
+        # yet", same as it always has -- C5 just means it must say so, not omit.
+        "threads": {"opens": opens, "payoffs": payoffs, "candidates": [], "retro": []},
     }
     if meta["movement"] is None:
         del meta["movement"]
