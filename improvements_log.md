@@ -848,3 +848,13 @@
   backlog. LXX + rest-of-NT (not LXX-only) for the leads corpus. Own
   low-chroma chip design considered and declined in favor of the shared
   gloss toggle.
+
+## 2026-09-23 — unit-12 wording pass (Lane)
+
+- 12:25 "laid waste" → "made a wilderness"; 12:26 and Mark 1:13 (unit 3) "Satan" →
+  "the Adversary", with a 12:26 gloss making the title explicit; 12:36 "idle" →
+  "workless"; 12:5 "profane" → "treat … as common" (notes follow). All recorded as
+  `text` ops in retrofit-tags.json. "Offspring of vipers" left unchanged: echidna is
+  the viper (ophis is the general snake), decision pending.
+- Fixed a bug from the unit-12 port: the two defame retro-ops matched text inside the
+  unit meta's payoff notes and broke its JSON quoting; re-anchored them to the verse.

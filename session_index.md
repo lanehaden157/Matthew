@@ -182,3 +182,7 @@ Read this first. 3 lines max per session.
   port_artifact.py (anchor match, nesting, no data-root inside). CSS: --accent-slate border.
 - instructions.md: 3 passes → 4, new pass 3 (intertext ledger) before the HTML artifact.
 - Units 1-12 are a tracked backlog (shipped before this pass existed), not retrofitted.
+
+## 2026-09-23 — unit-12 wording pass
+- 12:25 made a wilderness; the Adversary (12:26, Mark 1:13); workless word; treat as common.
+- Offspring of vipers (echidna = viper, not snake) awaiting Lane's call.

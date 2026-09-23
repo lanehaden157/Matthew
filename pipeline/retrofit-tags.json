@@ -1581,14 +1581,14 @@
     },
     {
       "unit": "unit-12",
-      "from": " defaming will be",
-      "to": " <span class=\"r\" data-root=\"defame\">defaming</span> will be",
+      "from": "</span> and defaming will be",
+      "to": "</span> and <span class=\"r\" data-root=\"defame\">defaming</span> will be",
       "why": "12:31 blasphēmia, 1st of 2 (add op only tags the first free match)"
     },
     {
       "unit": "unit-12",
-      "from": "the defaming of the",
-      "to": "the <span class=\"r\" data-root=\"defame\">defaming</span> of the",
+      "from": "but the defaming of the",
+      "to": "but the <span class=\"r\" data-root=\"defame\">defaming</span> of the",
       "why": "12:31 blasphēmia, 2nd of 2"
     },
     {
@@ -1596,6 +1596,66 @@
       "from": "the <span class=\"r\" data-root=\"judge\">judge</span>, and the judge to",
       "to": "the <span class=\"r\" data-root=\"judge\">judge</span>, and the <span class=\"r\" data-root=\"judge\">judge</span> to",
       "why": "5:25 kritēs, 2nd occurrence (add op only tags the first) — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "itself is laid waste,",
+      "to": "itself is made a wilderness,",
+      "why": "12:25 erēmoóō literal: 'made a wilderness' (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "Laid waste — <span class=\"translit\">erēmoutai</span>, literally \"is made a wilderness.\"",
+      "to": "Made a wilderness — <span class=\"translit\">erēmoutai</span>, from <span class=\"translit\">erēmos</span>, \"wilderness\" (3:1, 4:1).",
+      "why": "12:25 gloss follows the verse (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "And if Satan <span class=\"r\" data-root=\"throw\">throws out</span> Satan,",
+      "to": "And if the Adversary <span class=\"r\" data-root=\"throw\">throws out</span> the Adversary,",
+      "why": "12:26 satanas rendered as the title 'the Adversary' (as at 4:10) (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "every idle word that people",
+      "to": "every workless word that people",
+      "why": "12:36 argos = a-ergos, 'workless' (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "put every idle word on trial",
+      "to": "put every workless word on trial",
+      "why": "12:36 gloss on 12:22 (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "\"Idle\" is <span class=\"translit\">argos</span>",
+      "to": "\"Workless\" is <span class=\"translit\">argos</span>",
+      "why": "12:36 note follows the verse (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "in the temple profane the <span class=\"r\" data-root=\"sabbath\">Sabbath</span> and are",
+      "to": "in the temple treat the <span class=\"r\" data-root=\"sabbath\">Sabbath</span> as common and are",
+      "why": "12:5 bebēloō = make bebēlos (trodden, common): 'treat as common' (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "\"Profane\" speaks from the accusers",
+      "to": "\"Treat as common\" (<span class=\"translit\">bebēloō</span>, from <span class=\"translit\">bebēlos</span>, \"trodden, open to all\" — the opposite of set apart) speaks from the accusers",
+      "why": "12:5 note follows the verse (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "being tested by the Satan,",
+      "to": "being tested by the Adversary,",
+      "why": "Mark 1:13 satanas rendered as the title (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "kingdom</span> stand?</p>",
+      "to": "kingdom</span> stand?</p>\n<span class=\"gloss\">The Adversary — <span class=\"translit\">ho Satanas</span>, a Hebrew title (<span class=\"translit\">śāṭān</span>, \"the one who stands against\") carried over into Greek, not a personal name; the same title as 4:10. Distinct from <span class=\"translit\">diabolos</span>, \"the slanderer\" (4:1–11).</span>",
+      "why": "12:26 gloss making the title explicit (Lane, 2026-09-23)"
     }
   ]
 }

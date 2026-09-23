@@ -211,8 +211,11 @@ regardless of which Greek word is in play.
   not be anxious"), matching 6:25–34.
 - **Immerser, not Baptist/Baptizer** — baptistēs, John's title (3:1, and now
   11:11–12, fixed 2026-09-12 — see the `immerse` thread above).
-- **Adversary** — satanas, as a common noun-title ("Go away, Adversary!"
-  4:10). Keep distinct from diabolos, "the slanderer."
+- **Adversary** — satanas, always rendered as the title, never the name "Satan":
+  "Go away, Adversary!" (4:10), "if the Adversary throws out the Adversary"
+  (12:26), and Mark 1:13 in the unit-03 comparison ("tested by the Adversary").
+  Fixed 2026-09-23 (12:26 and Mark 1:13 were "Satan"). Keep distinct from
+  diabolos, "the slanderer." Commentary prose may still say "Satan".
 - **wrenched in the gut, not "moved with compassion"** — splanchnizomai; a
   deliberately bodily, blunt phrase (9:36), not a tender one.
 - **harassed, not harried** — eskylmenoi (9:36) — plainer diction, matches
@@ -229,6 +232,16 @@ regardless of which Greek word is in play.
   "charged the winds and the sea sharply" (was "rebuked"; the Mark 4:39
   parallel in the unit-08 notes follows). "Rebuke" survives only as
   descriptive commentary prose.
+- **made a wilderness, not "laid waste"** — erēmoō (12:25), from erēmos
+  "wilderness" (the `wilderness` root, 3:1, 4:1). Fixed 2026-09-23.
+- **workless word, not "idle word"** — argos = a-ergos (12:36), keeping the
+  ergon / `deeds` link audible. Fixed 2026-09-23.
+- **treat as common, not "profane"** — bebēloō (12:5), from bebēlos
+  "trodden, open to all," the opposite of set apart. Fixed 2026-09-23.
+- **viper, not "snake"** — echidna is the viper; ophis is the general
+  "snake" (7:10, 10:16), so "offspring of vipers" (3:7, 12:34, 23:33) keeps them
+  apart. Open: whether gennēmata stays "offspring" (Lane looking again 2026-09-23).
+
 - **trust, not faith/believe** — see `faith` in the global table above;
   called out again here because it's easy to slip back into "faith" from
   habit.
@@ -285,3 +298,7 @@ regardless of which Greek word is in play.
   speak, stretch-out.
 - 2026-09-20 (Lane) — `speak` removed entirely (untagged in unit 12; no root, no glossary row).
   `with` demoted from the global `emmanuel` thread to a unit-01-only local root; its unit-12 tags removed.
+
+- 2026-09-23 (Lane) — 12:25 "laid waste" → "made a wilderness"; 12:26 and Mark 1:13
+  "Satan" → "the Adversary" (+ a 12:26 gloss); 12:36 "idle" → "workless"; 12:5
+  "profane" → "treat … as common". Offspring of vipers left as is, pending Lane's call.
