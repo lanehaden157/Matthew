@@ -13,6 +13,10 @@
   advisory:
   7. audit_thread_coverage.py  Greek vs. fragments — thread tag-coverage gaps
                                in built units (never fails the build)
+  8. canon_leads.py            canon-leads/canon-leads-unit-NN.md for built
+                               units from 13 on + the next one: the intertext
+                               pass's reading list (requires pipeline/corpus/,
+                               see fetch_corpus.py; never fails the build)
 
 units/*.html are the source of truth here — this script never regenerates them
 from source-artifacts/. extract_units.py did that once (Phase 1) and now lives
@@ -34,7 +38,8 @@ STEPS = ["apply_retrofit.py", "refresh_meta.py", "scan_occurrences.py",
          "verify_occurrences.py", "threads_digest.py"]
 STEP_ARGS = {"sync_to_github.py": ["--copy-only"]}
 STEPS.append("sync_to_github.py")
-ADVISORY = ["audit_thread_coverage.py"]  # run, show output, never fail the build
+ADVISORY = ["audit_thread_coverage.py", "canon_leads.py"]  # run, show output, never fail the build
+ADVISORY_ARGS = {"audit_thread_coverage.py": ["--check"]}  # canon_leads.py takes none
 
 
 def main():
@@ -48,7 +53,8 @@ def main():
             sys.exit(r.returncode)
     for s in ADVISORY:
         print(f"\n=== {s} (advisory) ===")
-        subprocess.run([sys.executable, os.path.join(HERE, s), "--check"], env=env)
+        subprocess.run([sys.executable, os.path.join(HERE, s)]
+                       + ADVISORY_ARGS.get(s, []), env=env)
     print("\nbuild ok")
 
 

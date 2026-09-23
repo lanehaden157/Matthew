@@ -1,6 +1,9 @@
 # generated pipeline scratch (regenerate with pipeline/*.py)
 pipeline/out/
 
+# downloaded corpora for canon_leads.py -- re-fetch with pipeline/fetch_corpus.py
+pipeline/corpus/
+
 # loose source-artifact copies in the repo root — canonical copies live in
 # source-artifacts/. Kept on disk for convenience, not tracked.
 /matthew_[0-9][0-9]_translation.html

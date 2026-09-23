@@ -170,3 +170,15 @@ Read this first. 3 lines max per session.
   .gloss spans across 5 units. Also touched Joshua's repo for C7 (one unit's notes markup).
 - C3 (forbid named commentators) is forward-only from unit 13 — existing 64 instances across
   units 1-12 (18 in unit 12 alone, 10x the review's estimate) are a tracked backlog, not done.
+
+## 2026-09-22 — Intertext pass adopted from Joshua (forward from unit 13)
+- New `pipeline/canon_leads.py` (+ `fetch_corpus.py`, `greek_corpus.py`): MorphGNT SBLGNT
+  (NT) + CenterBLC Text-Fabric Rahlfs-1935 LXX, pinned commits, git-ignored under
+  pipeline/corpus/. Generates canon-leads/canon-leads-unit-NN.md — rare-word + shared-phrase
+  hits vs. the LXX and rest of NT, matched by transliterated lemma. Wired into build.py
+  (advisory) and the project-side sync.
+- New `echo` field on roots[] (word-level, popover "cf." line) and `aside.echo` (verse-level,
+  shares .gloss's `*` toggle — Lane's call, no separate chip). Validated in unit_meta.py /
+  port_artifact.py (anchor match, nesting, no data-root inside). CSS: --accent-slate border.
+- instructions.md: 3 passes → 4, new pass 3 (intertext ledger) before the HTML artifact.
+- Units 1-12 are a tracked backlog (shipped before this pass existed), not retrofitted.

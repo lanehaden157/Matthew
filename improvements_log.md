@@ -799,3 +799,52 @@
   `css/styles.css` a plain top-divider `.notes` rule to replace the one it
   borrowed from the generic `.block` panel style — the code comment there
   already flagged this exact divergence. `pipeline/build.py` green after.
+
+## 2026-09-22 — Intertext pass (ported from Joshua)
+- `pipeline/fetch_corpus.py`: downloads MorphGNT's lemmatized SBLGNT (27 NT
+  books, pinned `aaed91e5`) and 4 of CenterBLC's Text-Fabric Rahlfs-1935 LXX
+  feature files (pinned `4829f374`) into `pipeline/corpus/` (git-ignored).
+  Hand-parses the TF plain-text format (bare value / "start-end\tvalue" range
+  lines) rather than pulling in the `text-fabric` package.
+- `pipeline/greek_corpus.py`: loaders for both, keyed by
+  `pipeline/greek.py`-transliterated lemma (the two corpora share no numeric
+  id, so the deterministic transliterator's accent-stripped output is the
+  join key — verified against the LXX's own `oslots.tf` book-boundary numbers).
+- `pipeline/canon_leads.py`: ported from Joshua's Hebrew-Bible version.
+  Rare-word cutoff (≤20 verses across LXX+NT) and shared-phrase cutoffs
+  (word ≤300, pair ≤15 LXX verses) carried over unchanged. Synoptic hits
+  (Mark/Luke) excluded from "later NT" — that material has its own
+  `aside.synoptic` component already. First bug found in testing: frequency
+  counter deduped per BOOK instead of per VERSE (a leftover from porting a
+  set-comprehension too literally), flooding unit 13's draft with ~1300
+  lines of noise; fixed, output dropped to 110 lines matching Joshua's
+  quality bar. `--rare`/`--all` CLI mirrors Joshua's.
+- `roots[].echo` (word-level) and `aside.echo` (verse-level) — the artifact's
+  two intertext components, mirroring Joshua's. `aside.echo` shares `.gloss`'s
+  note (`*`) toggle rather than getting its own chip (Lane's call, unlike
+  Joshua's separate treatment) — `app/spotlight.js` buckets it with `.gloss`;
+  `css/styles.css` gives it a `--accent-slate` border + CSS-prepended "cf.".
+  `app/threads.js` renders a root's `echo` in the popover the same way.
+- Validation ported from `bible-core`'s `check_echo()` into
+  `pipeline/port_artifact.py`'s `_append_structure` (Matthew hasn't migrated
+  onto the shared core, so this is a direct port, not an import): anchor
+  present and `C:V`-shaped, anchor matches the verse it actually follows
+  (tracks bare `<span class="n">` verse numbers same as `data_w`'s
+  convention), not nested inside an unclosed `.gloss`/`.compare`, no
+  `data-root`/`class="r"` inside. `unit_meta.py` validates the field itself
+  (non-empty string) and now rejects any unknown `roots[]` key, not just
+  `color`/`kind`/`members`.
+- `build.py` runs `canon_leads.py` as a new advisory step (never fails the
+  build, matching `audit_thread_coverage.py`); `check_project_sync.py`
+  globs `canon-leads/canon-leads-unit-*.md` into `TRACKED_FILES` the same
+  way Joshua's does.
+- `instructions.md`: 3 passes → 4. New pass 3 (intertext ledger), the same
+  shape as Joshua's chat-side instructions (a table: verse, target, kind,
+  evidence, source, strength, verdict); pass 2's "check against
+  threads-digest.md" bullet now also flags intertext candidates for pass 3
+  instead of resolving them inline. `matthew_study_style_reference.md`:
+  new §1a (`echo`), a `aside.echo` component snippet, checklist lines.
+- Scope, per Lane: forward from unit 13 only; units 1-12 are a tracked
+  backlog. LXX + rest-of-NT (not LXX-only) for the leads corpus. Own
+  low-chroma chip design considered and declined in favor of the shared
+  gloss toggle.

@@ -65,6 +65,28 @@ lists its same-stem forms joined by `·` (`baptizō · baptisma`, `pistis · pis
 `eleos · eleeō`); tag every form with the one slug. Different words are different roots
 (or not tracked) — see §1.
 
+### 1a. `echo` — the canon behind and after a word (intertext pass, pass 3)
+
+**`echo`** — optional field on any `roots[]` entry: one line saying where the word has
+already appeared in the LXX (Matthew's own Old Testament, in Greek), or where it
+reappears distinctively later in the canon, shown in the root's popover with a "cf."
+prefix (Lane, 2026-09-22, adopting Joshua's convention — see its style reference §1 for
+the worked examples: *sole of the foot*, Gen 8:9; *scarlet*, Gen 38). Lead with the
+reference, then say in one short clause what it adds. A word with a canon history
+should at least get a local root with an `echo`, even when it is tagged nowhere else in
+the unit. Read for these the way you read for notable translation choices. Tracked
+threads can carry an `echo` in `threads.json` too.
+
+This is different from the **OT citation pointer** (§ below): a pointer marks Matthew
+*quoting* or directly citing an OT text at that verse (formula quotations, "it stands
+written"). `echo` is for the quieter case — a word or image with a canon history that
+the verse doesn't cite outright: an allusion, a type-scene, a later reuse (including
+elsewhere in the NT). A verse can carry both. Echoes should come from the kept rows of
+the intertext pass's ledger (chat-side `instructions.md`, pass 3), not from memory at
+drafting time — `canon-leads/canon-leads-unit-NN.md` (`pipeline/canon_leads.py`) is the
+mechanical half of that pass: where the unit's rare Greek words and shared two-word
+phrases occur in the LXX and the rest of the NT. It's a word search, not a judgment.
+
 ---
 
 ## 2. Fragment shape
@@ -123,7 +145,7 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
 | `unit` | ✓ | unit number (int) |
 | `passage` | ✓ | e.g. `"Matthew 9:1–34"` |
 | `title` | ✓ | working title from the Unit Map (§7), refined if needed |
-| `roots` | ✓ | every tracked root: `{root, translit, gloss}`. **No colour.** One Greek lexical root each — same-stem forms joined by `·` in `translit`; never a bundle of different words (§1). |
+| `roots` | ✓ | every tracked root: `{root, translit, gloss, echo?}`. **No colour.** One Greek lexical root each — same-stem forms joined by `·` in `translit`; never a bundle of different words (§1). `echo` (§1a) is optional. |
 | `threads` | ✓ | `{opens, payoffs, candidates, retro}` — see below |
 | `slug` | — | `"unit-09"`; derived if omitted |
 | `movement` | — | 1 / 2 / 3; looked up from the Unit Map if omitted |
@@ -265,9 +287,29 @@ Short SBL-style abbreviations (`Isa`, `Deut`, `Ps`, `Mic`, `Hos`, `Jer`, `Exod`)
 Range refs link to the first verse, label the range: `(Isa 9:1–2)`. If the quote
 sits mid-verse, the pointer goes right after it, not at the verse end. Do **not**
 wrap the quoted words themselves in the link, and do not pointer-tag loose
-allusions the verse only echoes — those stay in the gloss/compare box. The
+allusions the verse only echoes — those get an `aside.echo` or a root `echo`
+(§1a) instead, below. The
 Sermon's "y'all heard that it was said" antitheses (5:21–48) are left unpointered
 by decision: Matthew doesn't frame them as citations and several are conflations.
+
+### Cross-canon echo (`aside.echo` — a verse-level `echo`, intertext pass)
+
+```html
+<p class="v"><span class="n">15</span>…and their eyes they have closed.</p>
+<aside class="echo" data-anchor="13:15">Isaiah's own words, quoted here almost verbatim — the
+prophet's warning to a hardened people becomes the reason Jesus gives for speaking in parables.</aside>
+```
+
+`<aside class="echo" data-anchor="C:V">` as a **following sibling** of the verse it
+comments on — same placement rule as `.gloss`/`.compare`, and it shares `.gloss`'s note
+(`*`) toggle rather than getting its own chip (Lane, 2026-09-22: reads as one more thing
+worth a second look, not a separate research thread the way a Synoptic parallel is). The
+CSS prepends "cf." — don't write it into the echo's own text, or it renders "cf. cf.
+Isa 6:10…". `data-anchor` must match the `C:V` of the verse it's actually a sibling of.
+Translit only, no `data-root`/`class="r"`/`class="rl"` inside it. Use this for a
+verse-level connection (an allusion, a type-scene, a later reuse); use a root's `echo`
+(§1a) for a word-level one. Not for formula quotations — those get the OT citation
+pointer below.
 
 ### Compare box (contested verses only)
 
@@ -331,8 +373,9 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] No `roots` entry carries a colour. No `--c-*` vars anywhere. No inline `style="color:…"` / `style="background:…"`.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
-- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic` as siblings, not nested.
-- [ ] No `aside.synoptic` block contains `data-root`, `class="r"`, or `class="rl"` — translit only.
+- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo` as siblings, not nested.
+- [ ] No `aside.synoptic` or `aside.echo` block contains `data-root`, `class="r"`, or `class="rl"` — translit only.
+- [ ] Every `aside.echo` has a `data-anchor="C:V"` matching the verse it follows.
 - [ ] The translation is divided into passage groups by `<h3 class="pericope">Title <span>· C:V–V</span></h3>` — no other heading form.
 - [ ] Structural blocks (`.ring`, `table.exod`, `.itin`) come first, before the verses. The site also hoists them, but author them up top.
 
@@ -346,6 +389,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Compare box only at genuinely contested verses; include NASB, bring in Hart / Lattimore where their rendering is provocative.
 - [ ] Hyperlinks for significant LXX/OT citations and key terms (biblehub, Logeion, NETS, earlyjewishwritings).
 - [ ] Every `<p class="v">` that quotes/cites an OT text ends with a linked `(Book C:V)` Bible Hub pointer (§ OT citation pointer) — after the quote, before any `<sup>`; quoted words not themselves wrapped in the link.
+- [ ] Every word with a Torah/LXX or later-canon history gets an `echo` (§1a) — a local `roots[]` entry if nowhere else, or an `aside.echo` for a verse-level connection. Checked against `canon-leads/canon-leads-unit-NN.md` and the intertext pass's ledger (`instructions.md` pass 3), not from memory.
 - [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described. These should e real and verifiable only, not loose made up connections forcing a pattern.
 - [ ] Repeated-word counts noted only where the frequency is theologically significant (3, 7, 10, 12, 40, 70…).
 - [ ] Transliteration only — zero native Greek or Hebrew script anywhere.

@@ -420,6 +420,11 @@ sup.en a { border: none; }
 body.text-center .unit .v { text-align: center; padding-left: 0; text-indent: 0; }
 body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; }
 .unit .gloss { display: block; text-indent: 0; margin: 3px 0 14px 0; padding: 6px 14px; border-left: 2px solid var(--rule); color: var(--ink-soft); font-style: italic; font-size: 15px; line-height: 1.5; }
+/* aside.echo raw fallback (no-JS / spotlight.js didn't run) -- reset once
+   mounted into .verse-note, same pattern as .gloss above. The CSS-prepended
+   "cf." applies either way -- don't write it into the echo's own text. */
+.unit .echo { display: block; text-indent: 0; margin: 3px 0 14px 0; padding: 6px 14px; border-left: 2px solid var(--accent-slate); color: var(--ink-soft); font-style: italic; font-size: 15px; line-height: 1.5; }
+.unit .echo::before { content: "cf. "; color: var(--accent-slate); font-style: normal; }
 .unit sup.en { font-size: .62em; font-style: normal; color: var(--accent-crimson); font-weight: 700; vertical-align: super; line-height: 0; }
 
 /* prayer block (Unit 6) */
@@ -499,7 +504,13 @@ body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; 
   color: var(--ink-soft); font-style: italic; font-size: 15px; line-height: 1.5;
 }
 .unit .verse-note .gloss { display: block; margin: 0; padding: 0; border: none; }
-.unit .verse-note .gloss + .gloss { margin-top: 8px; }
+.unit .verse-note :is(.gloss, .echo) + :is(.gloss, .echo) { margin-top: 8px; }
+
+/* aside.echo, mounted — a cross-canon cf. note, sharing the note (*) toggle
+   with .gloss rather than its own chip (Lane, 2026-09-22: the intertext
+   pass). Its slate border stays (unlike .gloss, which drops its border once
+   nested) so it still reads as a distinct kind of aside inside the box. */
+.unit .verse-note .echo { display: block; margin: 0; padding: 0 0 0 8px; border: none; border-left: 2px solid var(--accent-slate); }
 
 .unit .spotlight .compare {
   display: block; margin: 0; padding: 0; border: none; background: none; border-radius: 0;
@@ -595,6 +606,8 @@ body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; 
 }
 .root-pop p { margin: 7px 0 0; }
 .root-pop .rp-gloss { color: var(--ink); }
+.root-pop .rp-echo { font-size: 13px; font-style: italic; color: var(--ink-soft); border-left: 2px solid var(--accent-slate); padding-left: 8px; }
+.root-pop .rp-echo::before { content: "cf. "; font-style: normal; color: var(--accent-slate); }
 .root-pop .rp-count { font-size: 13px; color: var(--ink-soft); }
 .root-pop .rp-traj { font-size: 13.5px; }
 .root-pop .rp-traj a, .root-pop .rp-also a { color: var(--accent-gold); border-bottom: 1px dotted currentColor; }

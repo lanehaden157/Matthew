@@ -8,10 +8,18 @@ The `/units` fragments are hand-authored prose (reviewed like prose); `/app` and
 the start of each session. This file is the standing architecture; PLAN.md is the
 phase plan and the record of decisions.
 
-## Status (2026-09-20)
+## Status (2026-09-22)
 
 - Live at https://lanehaden157.github.io/Matthew/ . Units 1–12 built. **Phases 1–9
   done.** Next content unit: **Unit 13 (Matt 13:1–53, Discourse 3)**.
+- **Intertext pass adopted from Joshua, forward from unit 13.** The research project's
+  workflow (`instructions.md`) is now four passes, with a dedicated intertext ledger pass
+  (pass 3) before the artifact. `pipeline/canon_leads.py` generates its reading list —
+  where a unit's rare Greek words and shared two-word phrases occur in the LXX and the rest
+  of the NT — from a downloaded MorphGNT + LXX Text-Fabric corpus (`pipeline/fetch_corpus.py`,
+  git-ignored). Kept links land as a root `echo` (word-level, `<span data-root>`'s popover)
+  or `aside.echo` (verse-level, shares `.gloss`'s `*` toggle). Units 1–12 are a tracked
+  backlog, not retrofitted automatically.
 - Colour policy: one Greek lexical root per `data-root` (stem + same-stem forms
   only) — no themes/formulae/bundles. Exception: fixed titles Matthew repeats
   verbatim (son-of-man, son-of-david, law-prophets, apo-tote) live in threads.json.
@@ -92,14 +100,31 @@ translation-choices.md  hand-maintained glossary of deliberate English
                thread-stems.json + audit_thread_coverage.py  Greek-root coverage
                                  audit: scans MatthewSBLGNT.txt, flags tracked
                                  roots present in a built unit but untagged.
+               fetch_corpus.py   downloads the two corpora canon_leads.py reads
+                                 (MorphGNT's lemmatized SBLGNT, CenterBLC's
+                                 Text-Fabric Rahlfs-1935 LXX), pinned to a commit.
+                                 Into pipeline/corpus/ (git-ignored) — run once
+                                 after a fresh clone.
+               greek_corpus.py   loaders for those two corpora, keyed by
+                                 transliterated lemma (pipeline/greek.py) since
+                                 they don't share a numbering scheme.
+               canon_leads.py    the intertext pass's (pass 3) reading list —
+                                 canon-leads/canon-leads-unit-NN.md: where a
+                                 unit's rare Greek words and shared two-word
+                                 phrases occur in the LXX and the rest of the
+                                 NT. Ported from Joshua (2026-09-22). Forward
+                                 from unit 13 only; 1–12 are a tracked backlog.
                build.py          replay retrofit → refresh_meta → scan → verify →
-                                 digest → project-side mirror → coverage audit.
-                                 Fragments are the source of truth; it never
-                                 rebuilds them.
+                                 digest → project-side mirror → coverage audit
+                                 → canon leads. Fragments are the source of
+                                 truth; it never rebuilds them.
                scan_*.py         regenerate /data from the fragments.
                verify_*.py       independently re-derive the same result (no
                                  importing the generator) — run both before trusting.
                out/              generated seed + reports (git-ignored).
+/canon-leads/  canon-leads-unit-NN.md — generated intertext reading lists, one
+               per unit (pipeline/canon_leads.py), synced to the research
+               project. Never hand-edit.
 /project-side/ README.md   index of the files that have to round-trip into the
                            Claude.ai research project, and which is canonical.
                synced/     generated flat mirror of those files, pushed to
@@ -197,6 +222,11 @@ uploaded copy or from memory:
   id each uses
 - `translation-choices.md` — the agreed English rendering per Greek lexeme
 - `MatthewSBLGNT.txt` — the Greek text, byte-identical to the repo's copy
+
+Also under `synced/`, one per unit rather than a fixed path: `canon-leads-unit-NN.md` —
+the intertext pass's (pass 3) starting reading list for that unit, where its rare Greek
+words and shared two-word phrases occur in the LXX and the rest of the NT. It's a leads
+sheet, not a conclusion.
 
 To find one: browse `project-side/synced/` in the repo through the connector,
 or search the repo for the filename. `project-side/README.md` is the index —

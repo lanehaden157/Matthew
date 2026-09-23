@@ -19,7 +19,7 @@ Pipeline for a new unit N:
        payoffs entry (incl. any `note` from the meta block)
      - new-thread candidates, each with a stem preview and a ready
        thread-stems.json entry
-     - fragment-structure warnings (pericope headings, aside.synoptic)
+     - fragment-structure warnings (pericope headings, aside.synoptic, aside.echo)
      - the retro fixes that were merged
      - tracked-thread COVERAGE: every occurrence the Greek has in this
        passage that the fragment left untagged, as ready retrofit-tags lines
@@ -156,6 +156,8 @@ def merge_units_json(meta, dry):
             "translit": r["translit"],
             "gloss": r["gloss"],
         }
+        if r.get("echo"):
+            roots[name]["echo"] = r["echo"]
 
     row.update({"slug": meta.get("slug", row["slug"]), "passage": meta["passage"],
                 "title": meta["title"], "built": True, "roots": roots})
@@ -231,7 +233,7 @@ def thread_delta(meta, fragment_html=None, retrofit_applied=True):
             lines.append(f"    `{json.dumps(body, ensure_ascii=False)}`")
 
     if fragment_html is not None:
-        _append_structure(lines, fragment_html)
+        _append_structure(lines, fragment_html, meta.get("passage", ""))
         _append_coverage(lines, slug, fragment_html, meta.get("passage", ""),
                          retrofit_applied)
 
@@ -244,7 +246,36 @@ def thread_delta(meta, fragment_html=None, retrofit_applied=True):
     return path
 
 
-def _append_structure(lines, html):
+ECHO_OPEN_RE = re.compile(r'<aside\s+class="echo"([^>]*)>')
+ECHO_ANCHOR_RE = re.compile(r'data-anchor="([^"]*)"')
+GLOSS_OPEN_RE = re.compile(r'<span\s+class="gloss">')
+SPAN_CLOSE_RE = re.compile(r'</span>')
+COMPARE_OPEN_RE = re.compile(r'<div\s+class="compare">')
+DIV_CLOSE_RE = re.compile(r'</div>')
+VERSE_NUM_RE = re.compile(r'<span class="n">\s*(?:(\d+):)?(\d+)\s*</span>')
+PASSAGE_FIRST_CH_RE = re.compile(r"(\d+):")
+REF_RE = re.compile(r"^\d+:\d+$")
+
+
+def _verse_at(html, pos, default_ch):
+    """The (ch, v) of the verse a position in `html` falls after — bare verse
+    numbers (`<span class="n">3</span>`) inherit the chapter from the nearest
+    preceding explicit `C:V` and roll forward on a number that goes
+    backwards. Ported from bible-core's `check_echo` (Joshua's `aside.echo`),
+    since Matthew hasn't migrated onto the shared core."""
+    ch, v, prev_v = default_ch, None, None
+    for m in VERSE_NUM_RE.finditer(html, 0, pos):
+        this_v = int(m.group(2))
+        if m.group(1):
+            ch, prev_v = int(m.group(1)), None
+        elif prev_v is not None and this_v < prev_v:
+            ch += 1
+        prev_v = this_v
+        v = this_v
+    return ch, v
+
+
+def _append_structure(lines, html, passage=""):
     """Fragment-shape checks the style reference asks for (matthew_study_style
     _reference.md §3-4). Warnings only — the port still writes the fragment."""
     issues = []
@@ -285,6 +316,58 @@ def _append_structure(lines, html):
             issues.append("`<aside class=\"synoptic\">` is nested inside a "
                           "`<div class=\"compare\">` — move it out below the "
                           "compare box (style ref §3)")
+
+    # aside.echo — style reference §3/§4: a verse sibling like .gloss, sharing
+    # its note (`*`) toggle. Three checks: data-anchor present and well-formed,
+    # the anchor matches the verse it actually follows, and it isn't spliced
+    # inside an unclosed .gloss span or .compare box.
+    default_ch = None
+    m0 = PASSAGE_FIRST_CH_RE.search(passage or "")
+    if m0:
+        default_ch = int(m0.group(1))
+
+    span_closes = [m.start() for m in SPAN_CLOSE_RE.finditer(html)]
+    gloss_ranges = []
+    for m in GLOSS_OPEN_RE.finditer(html):
+        end = next((p for p in span_closes if p >= m.end()), len(html))
+        gloss_ranges.append((m.start(), end))
+    div_closes = [m.start() for m in DIV_CLOSE_RE.finditer(html)]
+    compare_ranges = []
+    for m in COMPARE_OPEN_RE.finditer(html):
+        end = next((p for p in div_closes if p >= m.end()), len(html))
+        compare_ranges.append((m.start(), end))
+
+    for m in ECHO_OPEN_RE.finditer(html):
+        am = ECHO_ANCHOR_RE.search(m.group(1))
+        if not am:
+            issues.append("`<aside class=\"echo\">` missing `data-anchor=\"C:V\"`")
+            continue
+        anchor = am.group(1)
+        close = html.find("</aside>", m.end())
+        inner = html[m.end():close] if close != -1 else html[m.end():]
+        if re.search(r'data-root=|class="rl?"', inner):
+            issues.append(f"`aside.echo` at data-anchor=\"{anchor}\" contains a "
+                          "tagged span — echoes are translit only, no `data-root` "
+                          "(style ref §4)")
+        if not REF_RE.match(anchor):
+            issues.append(f"`<aside class=\"echo\" data-anchor=\"{anchor}\">` — "
+                          "anchor is not 'C:V' (e.g. '13:15')")
+            continue
+        if default_ch is not None:
+            ch, v = _verse_at(html, m.start(), default_ch)
+            if v is not None and anchor != f"{ch}:{v}":
+                issues.append(f"`aside.echo` data-anchor=\"{anchor}\" doesn't "
+                              f"match the verse it follows ({ch}:{v}) — an echo "
+                              "anchors the verse it's a sibling of")
+        if any(gs < m.start() < ge for gs, ge in gloss_ranges):
+            issues.append(f"`aside.echo` at data-anchor=\"{anchor}\" starts "
+                          "inside an unclosed `.gloss` span — close the "
+                          "gloss's `</span>` first so the aside is a sibling "
+                          "(style ref §3)")
+        if any(cs < m.start() < ce for cs, ce in compare_ranges):
+            issues.append(f"`aside.echo` at data-anchor=\"{anchor}\" starts "
+                          "inside a `<div class=\"compare\">` — move it out "
+                          "below the compare box (style ref §3)")
 
     if issues:
         lines += ["", "## Fragment structure — fix in the artifact", ""]

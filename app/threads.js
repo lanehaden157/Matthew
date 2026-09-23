@@ -24,7 +24,7 @@ export async function loadThreadData() {
 export function getOccurrences() { return _occ || {}; }
 export function getThreadFor(root) { return _threads?.byRoot.get(root) || null; }
 
-/** root -> { color, translit, gloss, threadId, status, count } */
+/** root -> { color, translit, gloss, echo, threadId, status, count } */
 export function resolveUnit(unit) {
   const out = new Map();
   const local = unit.roots || {};
@@ -38,6 +38,7 @@ export function resolveUnit(unit) {
       color: th ? th.color : lm.color || null,
       translit: (th && th.translit) || lm.translit || root,
       gloss: (th && th.gloss) || lm.gloss || "",
+      echo: (th && th.echo) || lm.echo || "",
       threadId: th ? th.id : null,
       status: th ? th.status : null,
       count: (counts[root] && counts[root].count) || 0,
@@ -195,6 +196,7 @@ function openPop(el, resolved, unit, builtByN) {
     <span class="rp-tag">root${th ? " · thread" : ""}${th && th.status === "closed" ? " · closed" : ""}</span>
   </div>`);
   if (m.gloss) rows.push(`<p class="rp-gloss">${esc(m.gloss)}</p>`);
+  if (m.echo) rows.push(`<p class="rp-echo">${esc(m.echo)}</p>`);
 
   if (occ.count) {
     const vv = (occ.verses || []).length

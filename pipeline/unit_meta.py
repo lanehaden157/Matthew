@@ -14,10 +14,15 @@ Shape:
   movement   int      1 | 2 | 3            (optional; looked up from units.json)
   descriptor str      masthead tail line   (optional)
   discourse  bool     (optional)
-  roots      [ {root, translit, gloss} ]
+  roots      [ {root, translit, gloss, echo?} ]
              every coloured root the unit tracks — translit + gloss ONLY, NO
              colour. A root whose translit bundles a small word-family
              ("misthos / apechō / apodidōmi") is still one root, one slug.
+             `echo`: optional, one line naming where the word already
+             appeared in the LXX, or where it reappears distinctively later in
+             the canon, shown in the root's popover with a "cf." prefix
+             (intertext pass, pass 3, Lane 2026-09-22; canon-leads/ is the
+             mechanical half of that pass).
   threads    { opens:[{id,ref,note?}], payoffs:[{id,ref,note?}],
                candidates:[{root,why,stems?,exclude?}],
                retro:[{unit,verse,text,root,why,nth?,op?}] }
@@ -124,6 +129,12 @@ def validate(meta, threads_json=None):
         if "kind" in r or "members" in r:
             errs.append(f"{where}: 'kind'/'members' are gone — every tracked "
                         "item is a plain root now")
+        if "echo" in r and not (isinstance(r["echo"], str) and r["echo"].strip()):
+            errs.append(f"{where}: 'echo' must be a non-empty string")
+        extra = set(r) - {"root", "translit", "gloss", "echo"}
+        if extra:
+            errs.append(f"{where}: unknown key(s) {sorted(extra)} — roots[] is "
+                        "{root, translit, gloss, echo?}")
 
     # C5 (platform-design-review.md): all four threads sub-keys are required,
     # matching Joshua's stricter rule -- any subset silently accepted meant a
@@ -251,9 +262,12 @@ def generate(n, units_json=None, threads_json=None, occurrences_json=None):
         # either a tracked thread or actually carry translit/gloss
         if name not in thread_roots and not (e.get("translit") or e.get("gloss")):
             continue
-        roots.append({"root": name,
-                      "translit": e.get("translit", ""),
-                      "gloss": e.get("gloss", "")})
+        entry = {"root": name,
+                 "translit": e.get("translit", ""),
+                 "gloss": e.get("gloss", "")}
+        if e.get("echo"):
+            entry["echo"] = e["echo"]
+        roots.append(entry)
     roots.sort(key=lambda r: r["root"])
 
     opens, payoffs = _threads_touching(threads_json, n)

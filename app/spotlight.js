@@ -1,5 +1,10 @@
-/* Per-verse asides, collapsed by default. Three kinds:
+/* Per-verse asides, collapsed by default. Four kinds:
      .gloss              -> a light "note" (bare * marker, plain italic aside, no box)
+     aside.echo           -> a cross-canon "cf." note (intertext pass, Lane
+                             2026-09-22) -- shares the .gloss note (*) toggle
+                             rather than getting its own chip, distinguished
+                             inside the box by its slate border and the
+                             CSS-prepended "cf." (css/styles.css)
      .compare            -> a "spotlight" (✦ chip, tinted panel with a header)
      aside.synoptic       -> a synoptic parallel: author-authored, already a
                              complete <aside class="synoptic"><h4>…</h4>…</aside>
@@ -21,7 +26,7 @@ export function enhanceSpotlights(root) {
     let n = verse.nextElementSibling;
     while (n && !n.matches(STOP_SEL)) {
       const next = n.nextElementSibling;
-      if (n.matches(".gloss")) glosses.push(n);
+      if (n.matches(".gloss, aside.echo")) glosses.push(n);
       else if (n.matches(".compare")) compares.push(n);
       else if (n.matches("aside.synoptic")) synoptics.push(n);
       else if (glosses.length || compares.length || synoptics.length) break;
