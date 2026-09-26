@@ -394,11 +394,6 @@
           "translit": "patēr",
           "gloss": "Father"
         },
-        "hidden": {
-          "color": "#455a6b",
-          "translit": "kryptos · kryphaios",
-          "gloss": "hidden (krypt-)"
-        },
         "seen": {
           "color": "#1596b8",
           "translit": "theaomai",
@@ -473,11 +468,6 @@
           "color": "#8a6a2a",
           "translit": "oikodomeō",
           "gloss": "build"
-        },
-        "eye": {
-          "color": "#2f6db3",
-          "translit": "ophthalmos",
-          "gloss": "eye"
         },
         "gate": {
           "color": "#8a5a9c",
@@ -573,11 +563,6 @@
           "translit": "dechomai",
           "gloss": "receive, welcome"
         },
-        "harvest": {
-          "color": "#9c2f8f",
-          "translit": "therismos",
-          "gloss": "harvest, reaping"
-        },
         "send-out": {
           "color": "#1f8f5f",
           "translit": "apostellō · apostolos",
@@ -610,13 +595,13 @@
         },
         "seize": {
           "color": "#5a8a3e",
-          "translit": "harpazō · biazomai",
-          "gloss": "seize, plunder, snatch by force"
+          "translit": "biazomai · biastēs",
+          "gloss": "assault, use force"
         },
-        "hide-reveal": {
+        "reveal": {
           "color": "#2f6db3",
-          "translit": "kryptō · apokalyptō",
-          "gloss": "hide / uncover, reveal"
+          "translit": "apokalyptō",
+          "gloss": "uncover, reveal"
         },
         "yoke": {
           "color": "#b52bbf",
@@ -693,10 +678,66 @@
     {
       "n": 13,
       "slug": "unit-13",
-      "passage": "Matthew 13:1-53",
+      "passage": "Matthew 13:1–53",
       "title": "The Parables of the Kingdom",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "parable": {
+          "color": "#a8324a",
+          "translit": "parabolē",
+          "gloss": "a throwing-beside, a comparison; Hebrew mashal"
+        },
+        "sow": {
+          "color": "#364828",
+          "translit": "speirō · sperma · epispeirō",
+          "gloss": "sow; seed; sow over",
+          "echo": "Jer 31:27 (38:27 Greek) and Hos 2:23 — 'I will sow Israel … I will sow her for myself': God sows his people."
+        },
+        "hear": {
+          "color": "#5a3116",
+          "translit": "akouō · akoē",
+          "gloss": "hear, listen (Hebrew shama', hear-and-obey)"
+        },
+        "have": {
+          "color": "#8a6a2a",
+          "translit": "echō",
+          "gloss": "have, hold"
+        },
+        "rise": {
+          "color": "#6b2fb3",
+          "translit": "anatellō · exanatellō",
+          "gloss": "rise, spring up, dawn",
+          "echo": "Gen 2:9 — God 'made spring up' every tree in Eden; Gen 3:18 — thorns 'spring up' from the cursed ground."
+        },
+        "mystery": {
+          "color": "#9c4f1c",
+          "translit": "mystērion",
+          "gloss": "secret — a hidden plan of God, disclosed to the chosen (Aramaic raz)",
+          "echo": "Dan 2:28 (Greek) — 'a God in the sky who reveals mysteries' about the last days."
+        },
+        "heal": {
+          "color": "#1f8f5f",
+          "translit": "iaomai",
+          "gloss": "heal",
+          "echo": "Exod 15:26 — 'if with hearing you hear … I am the LORD your healer.'"
+        },
+        "collect": {
+          "color": "#c0285f",
+          "translit": "syllegō",
+          "gloss": "collect, gather up (the sorting verb)"
+        },
+        "beach": {
+          "color": "#147a63",
+          "translit": "aigialos",
+          "gloss": "beach, shoreline"
+        },
+        "completion": {
+          "color": "#5e1822",
+          "translit": "teleō",
+          "gloss": "complete, finish"
+        }
+      }
     },
     {
       "n": 14,

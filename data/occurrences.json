@@ -774,6 +774,21 @@
       ],
       "total": 3
     },
+    "gather": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…and ",
+          "hit": "gathering",
+          "post": " all the chief priests and scribes of the people, he in…"
+        }
+      ],
+      "total": 1
+    },
     "house": {
       "count": 1,
       "verses": [
@@ -788,6 +803,27 @@
         }
       ],
       "total": 1
+    },
+    "joy": {
+      "count": 2,
+      "verses": [
+        10
+      ],
+      "hits": [
+        {
+          "v": 10,
+          "pre": "…And seeing the star they ",
+          "hit": "rejoiced",
+          "post": " an exceedingly great joy.…"
+        },
+        {
+          "v": 10,
+          "pre": "…And seeing the star they rejoiced an exceedingly great ",
+          "hit": "joy",
+          "post": ".…"
+        }
+      ],
+      "total": 2
     },
     "king": {
       "count": 3,
@@ -1036,6 +1072,21 @@
           "pre": "…him, \"Permit it now, for thus it is fitting for us to ",
           "hit": "fulfill",
           "post": " all righteousness.\" Then he permits him.…"
+        }
+      ],
+      "total": 1
+    },
+    "gather": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…he will thoroughly-clean his threshing-floor and will ",
+          "hit": "gather",
+          "post": " his wheat into the storehouse, but the chaff he will b…"
         }
       ],
       "total": 1
@@ -1874,6 +1925,28 @@
       ],
       "total": 3
     },
+    "enemy": {
+      "count": 2,
+      "verses": [
+        43,
+        44
+      ],
+      "hits": [
+        {
+          "v": 43,
+          "pre": "…was said: “You shall love your neighbor and hate your ",
+          "hit": "enemy",
+          "post": ".”…"
+        },
+        {
+          "v": 44,
+          "pre": "…But I say to y'all, love y'all's ",
+          "hit": "enemies",
+          "post": " and pray for those persecuting y'all,…"
+        }
+      ],
+      "total": 2
+    },
     "evil": {
       "count": 4,
       "verses": [
@@ -1909,6 +1982,34 @@
         }
       ],
       "total": 4
+    },
+    "eye": {
+      "count": 3,
+      "verses": [
+        29,
+        38
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…And if your right ",
+          "hit": "eye",
+          "post": " trips you up, tear it out and throw it from you; for i…"
+        },
+        {
+          "v": 38,
+          "pre": "…Y'all heard that it was said: “An ",
+          "hit": "eye",
+          "post": " for an eye and a tooth for a tooth.”…"
+        },
+        {
+          "v": 38,
+          "pre": "…Y'all heard that it was said: “An ",
+          "hit": "eye",
+          "post": " for an eye and a tooth for a tooth.”…"
+        }
+      ],
+      "total": 5
     },
     "father": {
       "count": 3,
@@ -2035,6 +2136,43 @@
       ],
       "total": 1
     },
+    "heart": {
+      "count": 2,
+      "verses": [
+        8,
+        28
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…Blessed are the pure in ",
+          "hit": "heart",
+          "post": ", for they shall see God.…"
+        },
+        {
+          "v": 28,
+          "pre": "…vet her has already committed adultery with her in his ",
+          "hit": "heart",
+          "post": ".…"
+        }
+      ],
+      "total": 2
+    },
+    "hide": {
+      "count": 1,
+      "verses": [
+        14
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…ght of the world. A city set upon a mountain cannot be ",
+          "hit": "hidden",
+          "post": ";…"
+        }
+      ],
+      "total": 1
+    },
     "house": {
       "count": 1,
       "verses": [
@@ -2046,6 +2184,21 @@
           "pre": "…upon the lampstand, and it shines for all those in the ",
           "hit": "house",
           "post": ".…"
+        }
+      ],
+      "total": 1
+    },
+    "joy": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "",
+          "hit": "Rejoice",
+          "post": " and exult, for y'all's wage is much in the skies; for…"
         }
       ],
       "total": 1
@@ -2534,6 +2687,34 @@
       ],
       "total": 2
     },
+    "eye": {
+      "count": 3,
+      "verses": [
+        22,
+        23
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…“The lamp of the body is the ",
+          "hit": "eye",
+          "post": ". So if your eye is single, your whole body will be ful…"
+        },
+        {
+          "v": 22,
+          "pre": "…“The lamp of the body is the ",
+          "hit": "eye",
+          "post": ". So if your eye is single, your whole body will be ful…"
+        },
+        {
+          "v": 23,
+          "pre": "…but if your ",
+          "hit": "eye",
+          "post": " is evil, your whole body will be full of darkness. If,…"
+        }
+      ],
+      "total": 3
+    },
     "father": {
       "count": 11,
       "verses": [
@@ -2617,7 +2798,52 @@
       ],
       "total": 13
     },
-    "hidden": {
+    "gather": {
+      "count": 1,
+      "verses": [
+        26
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…at the birds of the sky: they neither sow nor reap nor ",
+          "hit": "gather",
+          "post": " into barns, and y’all’s Father in the skies feeds them…"
+        }
+      ],
+      "total": 1
+    },
+    "harvest": {
+      "count": 1,
+      "verses": [
+        26
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…Look at the birds of the sky: they neither sow nor ",
+          "hit": "reap",
+          "post": " nor gather into barns, and y’all’s Father in the skies…"
+        }
+      ],
+      "total": 1
+    },
+    "heart": {
+      "count": 1,
+      "verses": [
+        21
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…For where your treasure is, there your ",
+          "hit": "heart",
+          "post": " will be also.”…"
+        }
+      ],
+      "total": 1
+    },
+    "hide": {
       "count": 6,
       "verses": [
         4,
@@ -3481,6 +3707,21 @@
       ],
       "total": 1
     },
+    "lawlessness": {
+      "count": 1,
+      "verses": [
+        23
+      ],
+      "hits": [
+        {
+          "v": 23,
+          "pre": "…I never knew y'all. Get away from me, y'all workers of ",
+          "hit": "lawlessness",
+          "post": ".\" (Ps 6:8)…"
+        }
+      ],
+      "total": 1
+    },
     "lose": {
       "count": 1,
       "verses": [
@@ -3560,6 +3801,28 @@
       ],
       "total": 2
     },
+    "rotten": {
+      "count": 2,
+      "verses": [
+        17,
+        18
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…So every good tree makes fine fruit, but the ",
+          "hit": "rotten",
+          "post": " tree makes evil fruit.…"
+        },
+        {
+          "v": 18,
+          "pre": "…A good tree cannot make evil fruits, and a ",
+          "hit": "rotten",
+          "post": " tree cannot make fine fruits.…"
+        }
+      ],
+      "total": 2
+    },
     "seek": {
       "count": 2,
       "verses": [
@@ -3581,6 +3844,21 @@
         }
       ],
       "total": 2
+    },
+    "thorn": {
+      "count": 1,
+      "verses": [
+        16
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…'all will recognize them. They don't gather grapes off ",
+          "hit": "thornbushes",
+          "post": ", or figs off thistles, do they?…"
+        }
+      ],
+      "total": 1
     },
     "throw": {
       "count": 6,
@@ -4167,6 +4445,21 @@
       ],
       "total": 5
     },
+    "weeping-grinding": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…be thrown out into the darkness outside; there will be ",
+          "hit": "the weeping and the grinding of the teeth",
+          "post": ".\"…"
+        }
+      ],
+      "total": 1
+    },
     "worship": {
       "count": 1,
       "verses": [
@@ -4250,6 +4543,28 @@
         }
       ],
       "total": 1
+    },
+    "eye": {
+      "count": 2,
+      "verses": [
+        29,
+        30
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…Then he touched their ",
+          "hit": "eyes",
+          "post": ", saying: \"According to y'all's trust, let it be to y'a…"
+        },
+        {
+          "v": 30,
+          "pre": "…And their ",
+          "hit": "eyes",
+          "post": " were opened. And Jesus snorted at them with strong fee…"
+        }
+      ],
+      "total": 2
     },
     "faith": {
       "count": 4,
@@ -4363,6 +4678,21 @@
           "pre": "…And no one puts a ",
           "hit": "patch",
           "post": " of unshrunk cloth on a worn-out cloak — for its patch…"
+        }
+      ],
+      "total": 1
+    },
+    "heart": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…houghts, said: \"Why are y'all thinking evil in y'all's ",
+          "hit": "hearts",
+          "post": "?…"
         }
       ],
       "total": 1
@@ -4846,6 +5176,21 @@
       ],
       "total": 1
     },
+    "enemy": {
+      "count": 1,
+      "verses": [
+        36
+      ],
+      "hits": [
+        {
+          "v": 36,
+          "pre": "…and a man's ",
+          "hit": "enemies",
+          "post": " will be the members of his own household.\" (Mic 7:6)…"
+        }
+      ],
+      "total": 1
+    },
     "father": {
       "count": 7,
       "verses": [
@@ -5059,6 +5404,21 @@
       ],
       "total": 3
     },
+    "hide": {
+      "count": 1,
+      "verses": [
+        26
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…for nothing is covered that will not be uncovered, and ",
+          "hit": "hidden",
+          "post": " that will not be known.…"
+        }
+      ],
+      "total": 1
+    },
     "house": {
       "count": 6,
       "verses": [
@@ -5108,6 +5468,21 @@
         }
       ],
       "total": 6
+    },
+    "householder": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…acher, and the slave as his master. If they called the ",
+          "hit": "master of the house",
+          "post": " Beelzeboul, how much more his household!…"
+        }
+      ],
+      "total": 1
     },
     "judge": {
       "count": 1,
@@ -5759,8 +6134,23 @@
       ],
       "total": 1
     },
-    "hide-reveal": {
-      "count": 2,
+    "heart": {
+      "count": 1,
+      "verses": [
+        29
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…ll and learn from me, because I am gentle and lowly in ",
+          "hit": "heart",
+          "post": ", and y'all will find rest for y'all's beings.…"
+        }
+      ],
+      "total": 1
+    },
+    "hide": {
+      "count": 1,
       "verses": [
         25
       ],
@@ -5770,15 +6160,9 @@
           "pre": "…, Father, Yahweh of the sky and the earth, because you ",
           "hit": "hid",
           "post": " these things from wise and perceptive people, and reve…"
-        },
-        {
-          "v": 25,
-          "pre": "…hid these things from wise and perceptive people, and ",
-          "hit": "revealed",
-          "post": " them to infants.…"
         }
       ],
-      "total": 2
+      "total": 1
     },
     "house": {
       "count": 1,
@@ -5994,6 +6378,21 @@
       ],
       "total": 2
     },
+    "reveal": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…hid these things from wise and perceptive people, and ",
+          "hit": "revealed",
+          "post": " them to infants.…"
+        }
+      ],
+      "total": 1
+    },
     "righteous": {
       "count": 1,
       "verses": [
@@ -6024,8 +6423,8 @@
         {
           "v": 12,
           "pre": "…il now, the kingdom of the skies is under assault, and ",
-          "hit": "forceful people seize",
-          "post": " it.…"
+          "hit": "forceful people",
+          "post": " seize it.…"
         }
       ],
       "total": 2
@@ -6060,6 +6459,21 @@
       ],
       "total": 1
     },
+    "snatch": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…dom of the skies is under assault, and forceful people ",
+          "hit": "seize",
+          "post": " it.…"
+        }
+      ],
+      "total": 1
+    },
     "son-of-man": {
       "count": 1,
       "verses": [
@@ -6071,6 +6485,21 @@
           "pre": "…The ",
           "hit": "Son of Man",
           "post": " came eating and drinking, and they say, 'Look — a glut…"
+        }
+      ],
+      "total": 1
+    },
+    "understand": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…the earth, because you hid these things from wise and ",
+          "hit": "perceptive",
+          "post": " people, and revealed them to infants.…"
         }
       ],
       "total": 1
@@ -6313,6 +6742,21 @@
       ],
       "total": 1
     },
+    "gather": {
+      "count": 1,
+      "verses": [
+        30
+      ],
+      "hits": [
+        {
+          "v": 30,
+          "pre": "…is not with me is against me, and the one who does not ",
+          "hit": "gather",
+          "post": " with me scatters.…"
+        }
+      ],
+      "total": 1
+    },
     "generation": {
       "count": 4,
       "verses": [
@@ -6348,6 +6792,28 @@
         }
       ],
       "total": 4
+    },
+    "heart": {
+      "count": 2,
+      "verses": [
+        34,
+        40
+      ],
+      "hits": [
+        {
+          "v": 34,
+          "pre": "…ood things, being evil? For out of the overflow of the ",
+          "hit": "heart",
+          "post": " the mouth speaks.…"
+        },
+        {
+          "v": 40,
+          "pre": "…nights (Jonah 1:17), so the Son of Man will be in the ",
+          "hit": "heart",
+          "post": " of the earth three days and three nights.…"
+        }
+      ],
+      "total": 2
     },
     "house": {
       "count": 5,
@@ -6722,6 +7188,27 @@
       ],
       "total": 1
     },
+    "rotten": {
+      "count": 2,
+      "verses": [
+        33
+      ],
+      "hits": [
+        {
+          "v": 33,
+          "pre": "…ake the tree good and its fruit good, or make the tree ",
+          "hit": "rotten",
+          "post": " and its fruit rotten; for by the fruit the tree is kno…"
+        },
+        {
+          "v": 33,
+          "pre": "…ake the tree good and its fruit good, or make the tree ",
+          "hit": "rotten",
+          "post": " and its fruit rotten; for by the fruit the tree is kno…"
+        }
+      ],
+      "total": 2
+    },
     "sabbath": {
       "count": 8,
       "verses": [
@@ -6869,6 +7356,27 @@
         }
       ],
       "total": 1
+    },
+    "snatch": {
+      "count": 2,
+      "verses": [
+        29
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…how can anyone go into the house of the strong man and ",
+          "hit": "seize",
+          "post": " his goods, unless he first binds the strong man? And t…"
+        },
+        {
+          "v": 29,
+          "pre": "…unless he first binds the strong man? And then he will ",
+          "hit": "plunder",
+          "post": " his house.…"
+        }
+      ],
+      "total": 2
     },
     "son-of-david": {
       "count": 1,
@@ -7104,6 +7612,1491 @@
         }
       ],
       "total": 1
+    }
+  },
+  "unit-13": {
+    "anxious": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…the thorns — this is the one hearing the word, and the ",
+          "hit": "care that pulls apart",
+          "post": ", of the age, and the deceit of wealth choke the word,…"
+        }
+      ],
+      "total": 2
+    },
+    "beach": {
+      "count": 2,
+      "verses": [
+        2,
+        48
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…a boat to sit, and the whole crowd was standing on the ",
+          "hit": "beach",
+          "post": ".…"
+        },
+        {
+          "v": 48,
+          "pre": "…hich, when it was filled full, they hauled up onto the ",
+          "hit": "beach",
+          "post": ", and sitting down they collected the good into contain…"
+        }
+      ],
+      "total": 3
+    },
+    "collect": {
+      "count": 6,
+      "verses": [
+        28,
+        29,
+        30,
+        40,
+        41,
+        48
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "…laves say to him, 'Do you want us, then, to go off and ",
+          "hit": "collect",
+          "post": " them?'…"
+        },
+        {
+          "v": 29,
+          "pre": "…But he says, 'No — lest while ",
+          "hit": "collecting",
+          "post": " the darnel y'all uproot the wheat along with them.…"
+        },
+        {
+          "v": 30,
+          "pre": "…n the season of the harvest I will say to the reapers: ",
+          "hit": "Collect",
+          "post": " first the darnel and bind them into bundles for burnin…"
+        },
+        {
+          "v": 40,
+          "pre": "…So just as the darnel is ",
+          "hit": "collected",
+          "post": " and burned up with fire, so it will be at the completi…"
+        },
+        {
+          "v": 41,
+          "pre": "…The Son of Man will send his angels, and they will ",
+          "hit": "collect",
+          "post": " out of his kingdom all the trip-traps and those doing…"
+        },
+        {
+          "v": 48,
+          "pre": "…, they hauled up onto the beach, and sitting down they ",
+          "hit": "collected",
+          "post": " the good into containers, but the rotten they threw ou…"
+        }
+      ],
+      "total": 7
+    },
+    "completion": {
+      "count": 1,
+      "verses": [
+        53
+      ],
+      "hits": [
+        {
+          "v": 53,
+          "pre": "…And it happened, when Jesus ",
+          "hit": "completed",
+          "post": " these parables, he moved on from there.…"
+        }
+      ],
+      "total": 2
+    },
+    "completion-of-age": {
+      "count": 3,
+      "verses": [
+        39,
+        40,
+        49
+      ],
+      "hits": [
+        {
+          "v": 39,
+          "pre": "…ho sowed them is the slanderer; and the harvest is the ",
+          "hit": "completion of an age",
+          "post": "; and the reapers are angels.…"
+        },
+        {
+          "v": 40,
+          "pre": "…ollected and burned up with fire, so it will be at the ",
+          "hit": "completion of the age",
+          "post": ".…"
+        },
+        {
+          "v": 49,
+          "pre": "…So it will be at the ",
+          "hit": "completion of the age",
+          "post": ": the angels will go out and separate the evil from the…"
+        }
+      ],
+      "total": 3
+    },
+    "enemy": {
+      "count": 3,
+      "verses": [
+        25,
+        28,
+        39
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…But while the people were sleeping, his ",
+          "hit": "enemy",
+          "post": " came and sowed darnel over, in the midst of the wheat,…"
+        },
+        {
+          "v": 28,
+          "pre": "…And he said to them, 'An ",
+          "hit": "enemy",
+          "post": " person did this.' And the slaves say to him, 'Do you w…"
+        },
+        {
+          "v": 39,
+          "pre": "…and the ",
+          "hit": "enemy",
+          "post": " who sowed them is the slanderer; and the harvest is th…"
+        }
+      ],
+      "total": 4
+    },
+    "evil": {
+      "count": 3,
+      "verses": [
+        19,
+        38,
+        49
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…ng the word of the kingdom and not understanding — the ",
+          "hit": "evil one",
+          "post": " comes and snatches what was sown in his heart. This is…"
+        },
+        {
+          "v": 38,
+          "pre": "…ons of the kingdom; and the darnel are the sons of the ",
+          "hit": "evil one",
+          "post": ";…"
+        },
+        {
+          "v": 49,
+          "pre": "…on of the age: the angels will go out and separate the ",
+          "hit": "evil",
+          "post": " from the midst of the righteous,…"
+        }
+      ],
+      "total": 4
+    },
+    "eye": {
+      "count": 3,
+      "verses": [
+        15,
+        16
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…ick, and with their ears they heard heavily, and their ",
+          "hit": "eyes",
+          "post": " they have shut — lest they perceive with their eyes an…"
+        },
+        {
+          "v": 15,
+          "pre": "…ick, and with their ears they heard heavily, and their ",
+          "hit": "eyes",
+          "post": " they have shut — lest they perceive with their eyes an…"
+        },
+        {
+          "v": 16,
+          "pre": "…But y'all's ",
+          "hit": "eyes",
+          "post": " are blessed, because they see, and y'all's ears, becau…"
+        }
+      ],
+      "total": 4
+    },
+    "father": {
+      "count": 1,
+      "verses": [
+        43
+      ],
+      "hits": [
+        {
+          "v": 43,
+          "pre": "…us will blaze out like the sun in the kingdom of their ",
+          "hit": "Father",
+          "post": ". The one having ears — let him hear.…"
+        }
+      ],
+      "total": 2
+    },
+    "fish": {
+      "count": 0,
+      "verses": [],
+      "hits": [],
+      "total": 1
+    },
+    "fruit": {
+      "count": 4,
+      "verses": [
+        8,
+        22,
+        23,
+        26
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…Others fell on the good earth and kept giving ",
+          "hit": "fruit",
+          "post": " — one a hundred, one sixty, one thirty.…"
+        },
+        {
+          "v": 22,
+          "pre": "…nd the deceit of wealth choke the word, and it becomes ",
+          "hit": "fruitless",
+          "post": ".…"
+        },
+        {
+          "v": 23,
+          "pre": "…the one hearing the word and understanding, who indeed ",
+          "hit": "bears fruit",
+          "post": " and makes — one a hundred, one sixty, one thirty.\"…"
+        },
+        {
+          "v": 26,
+          "pre": "…And when the blade sprouted and made ",
+          "hit": "fruit",
+          "post": ", then the darnel also showed itself.…"
+        }
+      ],
+      "total": 5
+    },
+    "fulfill": {
+      "count": 3,
+      "verses": [
+        14,
+        35,
+        48
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…And in them the prophecy of Isaiah is being ",
+          "hit": "filled up",
+          "post": ", which says: 'With hearing y'all will hear and by no m…"
+        },
+        {
+          "v": 35,
+          "pre": "…so that what was spoken through the prophet might be ",
+          "hit": "filled full",
+          "post": ", saying: 'I will open my mouth in parables; I will pou…"
+        },
+        {
+          "v": 48,
+          "pre": "…which, when it was ",
+          "hit": "filled full",
+          "post": ", they hauled up onto the beach, and sitting down they…"
+        }
+      ],
+      "total": 5
+    },
+    "gather": {
+      "count": 3,
+      "verses": [
+        2,
+        30,
+        47
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…And many crowds were ",
+          "hit": "gathered",
+          "post": " to him, so that he stepped into a boat to sit, and the…"
+        },
+        {
+          "v": 30,
+          "pre": "…d them into bundles for burning them up, but the wheat ",
+          "hit": "gather",
+          "post": " into my barn.'\"…"
+        },
+        {
+          "v": 47,
+          "pre": "…of the skies is like a dragnet thrown into the sea and ",
+          "hit": "gathering",
+          "post": " from every kind;…"
+        }
+      ],
+      "total": 4
+    },
+    "harvest": {
+      "count": 5,
+      "verses": [
+        30,
+        39
+      ],
+      "hits": [
+        {
+          "v": 30,
+          "pre": "…Let both grow together until the ",
+          "hit": "harvest",
+          "post": "; and in the season of the harvest I will say to the re…"
+        },
+        {
+          "v": 30,
+          "pre": "…Let both grow together until the ",
+          "hit": "harvest",
+          "post": "; and in the season of the harvest I will say to the re…"
+        },
+        {
+          "v": 30,
+          "pre": "…st; and in the season of the harvest I will say to the ",
+          "hit": "reapers",
+          "post": ": Collect first the darnel and bind them into bundles f…"
+        },
+        {
+          "v": 39,
+          "pre": "…and the enemy who sowed them is the slanderer; and the ",
+          "hit": "harvest",
+          "post": " is the completion of an age; and the reapers are angel…"
+        },
+        {
+          "v": 39,
+          "pre": "…; and the harvest is the completion of an age; and the ",
+          "hit": "reapers",
+          "post": " are angels.…"
+        }
+      ],
+      "total": 6
+    },
+    "have": {
+      "count": 12,
+      "verses": [
+        5,
+        6,
+        9,
+        12,
+        21,
+        27,
+        43,
+        44,
+        46
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…Others fell on the rock-like ground, where it did not ",
+          "hit": "have",
+          "post": " much earth, and immediately it sprang up, because of n…"
+        },
+        {
+          "v": 5,
+          "pre": "…ch earth, and immediately it sprang up, because of not ",
+          "hit": "having",
+          "post": " depth of earth.…"
+        },
+        {
+          "v": 6,
+          "pre": "…the sun had risen it was scorched, and because of not ",
+          "hit": "having",
+          "post": " root it withered.…"
+        },
+        {
+          "v": 9,
+          "pre": "…The one ",
+          "hit": "having",
+          "post": " ears — let him hear.\"…"
+        },
+        {
+          "v": 12,
+          "pre": "…For whoever ",
+          "hit": "has",
+          "post": ", it will be given to him and he will overflow; but who…"
+        },
+        {
+          "v": 12,
+          "pre": "…iven to him and he will overflow; but whoever does not ",
+          "hit": "have",
+          "post": ", even what he has will be taken from him.…"
+        },
+        {
+          "v": 12,
+          "pre": "…For whoever ",
+          "hit": "has",
+          "post": ", it will be given to him and he will overflow; but who…"
+        },
+        {
+          "v": 21,
+          "pre": "…but he does not ",
+          "hit": "have",
+          "post": " root in himself; rather, he is for-a-season, and when…"
+        },
+        {
+          "v": 27,
+          "pre": "…sow good seed in your field? From where, then, does it ",
+          "hit": "have",
+          "post": " darnel?'…"
+        },
+        {
+          "v": 43,
+          "pre": "…t like the sun in the kingdom of their Father. The one ",
+          "hit": "having",
+          "post": " ears — let him hear.…"
+        },
+        {
+          "v": 44,
+          "pre": "…nd hid; and from his joy he goes and sells all that he ",
+          "hit": "has",
+          "post": " and buys that field.…"
+        },
+        {
+          "v": 46,
+          "pre": "…y precious pearl, he went off and has sold all that he ",
+          "hit": "had",
+          "post": ", and bought it.…"
+        }
+      ],
+      "total": 13
+    },
+    "heal": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…d understand with the heart and turn back — and I will ",
+          "hit": "heal",
+          "post": " them.' (Isa 6:9–10)…"
+        }
+      ],
+      "total": 2
+    },
+    "hear": {
+      "count": 17,
+      "verses": [
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        43
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…The one having ears — let him ",
+          "hit": "hear",
+          "post": ".\"…"
+        },
+        {
+          "v": 13,
+          "pre": "…them in parables: because seeing they do not see, and ",
+          "hit": "hearing",
+          "post": " they do not hear, nor do they understand.…"
+        },
+        {
+          "v": 13,
+          "pre": "…them in parables: because seeing they do not see, and ",
+          "hit": "hear",
+          "post": "ing they do not hear, nor do they understand.…"
+        },
+        {
+          "v": 14,
+          "pre": "…ophecy of Isaiah is being filled up, which says: 'With ",
+          "hit": "hearing",
+          "post": " y'all will hear and by no means understand; and seeing…"
+        },
+        {
+          "v": 14,
+          "pre": "…ophecy of Isaiah is being filled up, which says: 'With ",
+          "hit": "hear",
+          "post": "ing y'all will hear and by no means understand; and see…"
+        },
+        {
+          "v": 15,
+          "pre": "…s people has been made thick, and with their ears they ",
+          "hit": "heard",
+          "post": " heavily, and their eyes they have shut — lest they per…"
+        },
+        {
+          "v": 15,
+          "pre": "…For the ",
+          "hit": "hear",
+          "post": "t of this people has been made thick, and with their ea…"
+        },
+        {
+          "v": 16,
+          "pre": "…ssed, because they see, and y'all's ears, because they ",
+          "hit": "hear",
+          "post": ".…"
+        },
+        {
+          "v": 17,
+          "pre": "…o perceive what y'all see and did not perceive, and to ",
+          "hit": "hear",
+          "post": " what y'all hear and did not hear.…"
+        },
+        {
+          "v": 17,
+          "pre": "…o perceive what y'all see and did not perceive, and to ",
+          "hit": "hear",
+          "post": " what y'all hear and did not hear.…"
+        },
+        {
+          "v": 17,
+          "pre": "…o perceive what y'all see and did not perceive, and to ",
+          "hit": "hear",
+          "post": " what y'all hear and did not hear.…"
+        },
+        {
+          "v": 18,
+          "pre": "…Y'all, then, ",
+          "hit": "hear",
+          "post": " the parable of the sower.…"
+        },
+        {
+          "v": 19,
+          "pre": "…Anyone ",
+          "hit": "hearing",
+          "post": " the word of the kingdom and not understanding — the ev…"
+        },
+        {
+          "v": 20,
+          "pre": "…the one sown on the rock-like ground — this is the one ",
+          "hit": "hearing",
+          "post": " the word and immediately receiving it with joy;…"
+        },
+        {
+          "v": 22,
+          "pre": "…And the one sown into the thorns — this is the one ",
+          "hit": "hearing",
+          "post": " the word, and the care that pulls apart, of the age, a…"
+        },
+        {
+          "v": 23,
+          "pre": "…And the one sown on the good earth — this is the one ",
+          "hit": "hearing",
+          "post": " the word and understanding, who indeed bears fruit and…"
+        },
+        {
+          "v": 43,
+          "pre": "…kingdom of their Father. The one having ears — let him ",
+          "hit": "hear",
+          "post": ".…"
+        }
+      ],
+      "total": 18
+    },
+    "heart": {
+      "count": 3,
+      "verses": [
+        15,
+        19
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…For the ",
+          "hit": "heart",
+          "post": " of this people has been made thick, and with their ear…"
+        },
+        {
+          "v": 15,
+          "pre": "…For the ",
+          "hit": "heart",
+          "post": " of this people has been made thick, and with their ear…"
+        },
+        {
+          "v": 19,
+          "pre": "…— the evil one comes and snatches what was sown in his ",
+          "hit": "heart",
+          "post": ". This is the one sown beside the road.…"
+        }
+      ],
+      "total": 4
+    },
+    "hide": {
+      "count": 4,
+      "verses": [
+        33,
+        35,
+        44
+      ],
+      "hits": [
+        {
+          "v": 33,
+          "pre": "…om of the skies is like leaven, which a woman took and ",
+          "hit": "hid",
+          "post": " in three seahs of flour, until the whole was leavened.…"
+        },
+        {
+          "v": 35,
+          "pre": "…will open my mouth in parables; I will pour out things ",
+          "hit": "hidden",
+          "post": " since the foundation.' (Ps 78:2)…"
+        },
+        {
+          "v": 44,
+          "pre": "…The kingdom of the skies is like treasure ",
+          "hit": "hidden",
+          "post": " in the field, which a man found and hid; and from his…"
+        },
+        {
+          "v": 44,
+          "pre": "…The kingdom of the skies is like treasure ",
+          "hit": "hid",
+          "post": "den in the field, which a man found and hid; and from h…"
+        }
+      ],
+      "total": 5
+    },
+    "house": {
+      "count": 2,
+      "verses": [
+        1,
+        36
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…On that day Jesus, going out of the ",
+          "hit": "house",
+          "post": ", was sitting beside the sea.…"
+        },
+        {
+          "v": 36,
+          "pre": "…Then, leaving the crowds, he went into the ",
+          "hit": "house",
+          "post": ". And his learners came near to him, saying, \"Make clea…"
+        }
+      ],
+      "total": 3
+    },
+    "householder": {
+      "count": 2,
+      "verses": [
+        27,
+        52
+      ],
+      "hits": [
+        {
+          "v": 27,
+          "pre": "…And the slaves of the ",
+          "hit": "master of the house",
+          "post": " came near and said to him, 'Master, did you not sow go…"
+        },
+        {
+          "v": 52,
+          "pre": "…learner for the kingdom of the skies is like a man, a ",
+          "hit": "master of the house",
+          "post": ", who throws out of his treasure-store new things and o…"
+        }
+      ],
+      "total": 3
+    },
+    "joy": {
+      "count": 2,
+      "verses": [
+        20,
+        44
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…one hearing the word and immediately receiving it with ",
+          "hit": "joy",
+          "post": ";…"
+        },
+        {
+          "v": 44,
+          "pre": "…in the field, which a man found and hid; and from his ",
+          "hit": "joy",
+          "post": " he goes and sells all that he has and buys that field.…"
+        }
+      ],
+      "total": 3
+    },
+    "kingdom": {
+      "count": 12,
+      "verses": [
+        11,
+        19,
+        24,
+        31,
+        33,
+        38,
+        41,
+        43,
+        44,
+        45,
+        47,
+        52
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…to y'all it has been given to know the secrets of the ",
+          "hit": "kingdom",
+          "post": " of the skies, but to those it has not been given.…"
+        },
+        {
+          "v": 19,
+          "pre": "…Anyone hearing the word of the ",
+          "hit": "kingdom",
+          "post": " and not understanding — the evil one comes and snatche…"
+        },
+        {
+          "v": 24,
+          "pre": "…Another parable he set before them, saying: \"The ",
+          "hit": "kingdom",
+          "post": " of the skies was likened to a man sowing good seed in…"
+        },
+        {
+          "v": 31,
+          "pre": "…Another parable he set before them, saying: \"The ",
+          "hit": "kingdom",
+          "post": " of the skies is like a grain of mustard, which a man t…"
+        },
+        {
+          "v": 33,
+          "pre": "…Another parable he spoke to them: \"The ",
+          "hit": "kingdom",
+          "post": " of the skies is like leaven, which a woman took and hi…"
+        },
+        {
+          "v": 38,
+          "pre": "…e world; and the good seed — these are the sons of the ",
+          "hit": "kingdom",
+          "post": "; and the darnel are the sons of the evil one;…"
+        },
+        {
+          "v": 41,
+          "pre": "…will send his angels, and they will collect out of his ",
+          "hit": "kingdom",
+          "post": " all the trip-traps and those doing lawlessness,…"
+        },
+        {
+          "v": 43,
+          "pre": "…Then the righteous will blaze out like the sun in the ",
+          "hit": "kingdom",
+          "post": " of their Father. The one having ears — let him hear.…"
+        },
+        {
+          "v": 44,
+          "pre": "…The ",
+          "hit": "kingdom",
+          "post": " of the skies is like treasure hidden in the field, whi…"
+        },
+        {
+          "v": 45,
+          "pre": "…Again, the ",
+          "hit": "kingdom",
+          "post": " of the skies is like a merchant man seeking fine pearl…"
+        },
+        {
+          "v": 47,
+          "pre": "…Again, the ",
+          "hit": "kingdom",
+          "post": " of the skies is like a dragnet thrown into the sea and…"
+        },
+        {
+          "v": 52,
+          "pre": "…, \"For this reason every scribe made a learner for the ",
+          "hit": "kingdom",
+          "post": " of the skies is like a man, a master of the house, who…"
+        }
+      ],
+      "total": 13
+    },
+    "lawlessness": {
+      "count": 1,
+      "verses": [
+        41
+      ],
+      "hits": [
+        {
+          "v": 41,
+          "pre": "…out of his kingdom all the trip-traps and those doing ",
+          "hit": "lawlessness",
+          "post": ",…"
+        }
+      ],
+      "total": 1
+    },
+    "learn": {
+      "count": 3,
+      "verses": [
+        10,
+        36,
+        52
+      ],
+      "hits": [
+        {
+          "v": 10,
+          "pre": "…And the ",
+          "hit": "learners",
+          "post": " came near and said to him, \"Why do you speak to them i…"
+        },
+        {
+          "v": 36,
+          "pre": "…n, leaving the crowds, he went into the house. And his ",
+          "hit": "learners",
+          "post": " came near to him, saying, \"Make clear to us the parabl…"
+        },
+        {
+          "v": 52,
+          "pre": "…And he said to them, \"For this reason every scribe ",
+          "hit": "made a learner",
+          "post": " for the kingdom of the skies is like a man, a master o…"
+        }
+      ],
+      "total": 4
+    },
+    "mystery": {
+      "count": 1,
+      "verses": [
+        11
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…them, \"Because to y'all it has been given to know the ",
+          "hit": "secrets",
+          "post": " of the kingdom of the skies, but to those it has not b…"
+        }
+      ],
+      "total": 2
+    },
+    "parable": {
+      "count": 12,
+      "verses": [
+        3,
+        10,
+        13,
+        18,
+        24,
+        31,
+        33,
+        34,
+        35,
+        36,
+        53
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…And he spoke to them many things in ",
+          "hit": "parables",
+          "post": ", saying: \"Look — the sower went out to sow.…"
+        },
+        {
+          "v": 10,
+          "pre": "…ame near and said to him, \"Why do you speak to them in ",
+          "hit": "parables",
+          "post": "?\"…"
+        },
+        {
+          "v": 13,
+          "pre": "…For this reason I speak to them in ",
+          "hit": "parables",
+          "post": ": because seeing they do not see, and hearing they do n…"
+        },
+        {
+          "v": 18,
+          "pre": "…Y'all, then, hear the ",
+          "hit": "parable",
+          "post": " of the sower.…"
+        },
+        {
+          "v": 24,
+          "pre": "…Another ",
+          "hit": "parable",
+          "post": " he set before them, saying: \"The kingdom of the skies…"
+        },
+        {
+          "v": 31,
+          "pre": "…Another ",
+          "hit": "parable",
+          "post": " he set before them, saying: \"The kingdom of the skies…"
+        },
+        {
+          "v": 33,
+          "pre": "…Another ",
+          "hit": "parable",
+          "post": " he spoke to them: \"The kingdom of the skies is like le…"
+        },
+        {
+          "v": 34,
+          "pre": "…All these things Jesus spoke in ",
+          "hit": "parables",
+          "post": " to the crowds, and without a parable he was speaking n…"
+        },
+        {
+          "v": 34,
+          "pre": "…All these things Jesus spoke in ",
+          "hit": "parable",
+          "post": "s to the crowds, and without a parable he was speaking…"
+        },
+        {
+          "v": 35,
+          "pre": "…might be filled full, saying: 'I will open my mouth in ",
+          "hit": "parables",
+          "post": "; I will pour out things hidden since the foundation.'…"
+        },
+        {
+          "v": 36,
+          "pre": "…arners came near to him, saying, \"Make clear to us the ",
+          "hit": "parable",
+          "post": " of the darnel of the field.\"…"
+        },
+        {
+          "v": 53,
+          "pre": "…And it happened, when Jesus completed these ",
+          "hit": "parables",
+          "post": ", he moved on from there.…"
+        }
+      ],
+      "total": 13
+    },
+    "release": {
+      "count": 2,
+      "verses": [
+        30,
+        36
+      ],
+      "hits": [
+        {
+          "v": 30,
+          "pre": "",
+          "hit": "Let",
+          "post": " both grow together until the harvest; and in the seaso…"
+        },
+        {
+          "v": 36,
+          "pre": "…Then, ",
+          "hit": "leaving",
+          "post": " the crowds, he went into the house. And his learners c…"
+        }
+      ],
+      "total": 3
+    },
+    "righteous": {
+      "count": 3,
+      "verses": [
+        17,
+        43,
+        49
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…For amen I say to y'all: many prophets and ",
+          "hit": "righteous",
+          "post": " ones longed to perceive what y'all see and did not per…"
+        },
+        {
+          "v": 43,
+          "pre": "…Then the ",
+          "hit": "righteous",
+          "post": " will blaze out like the sun in the kingdom of their Fa…"
+        },
+        {
+          "v": 49,
+          "pre": "…ill go out and separate the evil from the midst of the ",
+          "hit": "righteous",
+          "post": ",…"
+        }
+      ],
+      "total": 4
+    },
+    "rise": {
+      "count": 2,
+      "verses": [
+        5,
+        6
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…, where it did not have much earth, and immediately it ",
+          "hit": "sprang up",
+          "post": ", because of not having depth of earth.…"
+        },
+        {
+          "v": 6,
+          "pre": "…But when the sun had ",
+          "hit": "risen",
+          "post": " it was scorched, and because of not having root it wit…"
+        }
+      ],
+      "total": 3
+    },
+    "rock": {
+      "count": 2,
+      "verses": [
+        5,
+        20
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…Others fell on the ",
+          "hit": "rock-like",
+          "post": " ground, where it did not have much earth, and immediat…"
+        },
+        {
+          "v": 20,
+          "pre": "…And the one sown on the ",
+          "hit": "rock-like",
+          "post": " ground — this is the one hearing the word and immediat…"
+        }
+      ],
+      "total": 2
+    },
+    "rotten": {
+      "count": 1,
+      "verses": [
+        48
+      ],
+      "hits": [
+        {
+          "v": 48,
+          "pre": "…down they collected the good into containers, but the ",
+          "hit": "rotten",
+          "post": " they threw outside.…"
+        }
+      ],
+      "total": 1
+    },
+    "sea": {
+      "count": 2,
+      "verses": [
+        1,
+        47
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…Jesus, going out of the house, was sitting beside the ",
+          "hit": "sea",
+          "post": ".…"
+        },
+        {
+          "v": 47,
+          "pre": "…kingdom of the skies is like a dragnet thrown into the ",
+          "hit": "sea",
+          "post": " and gathering from every kind;…"
+        }
+      ],
+      "total": 3
+    },
+    "seek": {
+      "count": 1,
+      "verses": [
+        45
+      ],
+      "hits": [
+        {
+          "v": 45,
+          "pre": "…Again, the kingdom of the skies is like a merchant man ",
+          "hit": "seeking",
+          "post": " fine pearls;…"
+        }
+      ],
+      "total": 2
+    },
+    "skandalon": {
+      "count": 2,
+      "verses": [
+        21,
+        41
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…rsecution comes because of the word, immediately he is ",
+          "hit": "tripped up",
+          "post": ".…"
+        },
+        {
+          "v": 41,
+          "pre": "…gels, and they will collect out of his kingdom all the ",
+          "hit": "trip-traps",
+          "post": " and those doing lawlessness,…"
+        }
+      ],
+      "total": 3
+    },
+    "snatch": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…kingdom and not understanding — the evil one comes and ",
+          "hit": "snatches",
+          "post": " what was sown in his heart. This is the one sown besid…"
+        }
+      ],
+      "total": 1
+    },
+    "son-of-man": {
+      "count": 2,
+      "verses": [
+        37,
+        41
+      ],
+      "hits": [
+        {
+          "v": 37,
+          "pre": "…He answered and said, \"The one sowing the good seed is ",
+          "hit": "the Son of Man",
+          "post": ";…"
+        },
+        {
+          "v": 41,
+          "pre": "",
+          "hit": "The Son of Man",
+          "post": " will send his angels, and they will collect out of his…"
+        }
+      ],
+      "total": 3
+    },
+    "sow": {
+      "count": 20,
+      "verses": [
+        3,
+        4,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        25,
+        27,
+        31,
+        32,
+        37,
+        38,
+        39
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…e to them many things in parables, saying: \"Look — the ",
+          "hit": "sower",
+          "post": " went out to sow.…"
+        },
+        {
+          "v": 3,
+          "pre": "…e to them many things in parables, saying: \"Look — the ",
+          "hit": "sow",
+          "post": "er went out to sow.…"
+        },
+        {
+          "v": 4,
+          "pre": "…And as he ",
+          "hit": "sowed",
+          "post": ", some fell beside the road, and the birds came and dev…"
+        },
+        {
+          "v": 18,
+          "pre": "…Y'all, then, hear the parable of the ",
+          "hit": "sower",
+          "post": ".…"
+        },
+        {
+          "v": 19,
+          "pre": "…derstanding — the evil one comes and snatches what was ",
+          "hit": "sown",
+          "post": " in his heart. This is the one sown beside the road.…"
+        },
+        {
+          "v": 19,
+          "pre": "…derstanding — the evil one comes and snatches what was ",
+          "hit": "sown",
+          "post": " in his heart. This is the one sown beside the road.…"
+        },
+        {
+          "v": 20,
+          "pre": "…And the one ",
+          "hit": "sown",
+          "post": " on the rock-like ground — this is the one hearing the…"
+        },
+        {
+          "v": 22,
+          "pre": "…And the one ",
+          "hit": "sown",
+          "post": " into the thorns — this is the one hearing the word, an…"
+        },
+        {
+          "v": 23,
+          "pre": "…And the one ",
+          "hit": "sown",
+          "post": " on the good earth — this is the one hearing the word a…"
+        },
+        {
+          "v": 24,
+          "pre": "…saying: \"The kingdom of the skies was likened to a man ",
+          "hit": "sowing",
+          "post": " good seed in his field.…"
+        },
+        {
+          "v": 24,
+          "pre": "…kingdom of the skies was likened to a man sowing good ",
+          "hit": "seed",
+          "post": " in his field.…"
+        },
+        {
+          "v": 25,
+          "pre": "…But while the people were sleeping, his enemy came and ",
+          "hit": "sowed",
+          "post": " darnel over, in the midst of the wheat, and went away.…"
+        },
+        {
+          "v": 27,
+          "pre": "…house came near and said to him, 'Master, did you not ",
+          "hit": "sow",
+          "post": " good seed in your field? From where, then, does it hav…"
+        },
+        {
+          "v": 27,
+          "pre": "…me near and said to him, 'Master, did you not sow good ",
+          "hit": "seed",
+          "post": " in your field? From where, then, does it have darnel?'…"
+        },
+        {
+          "v": 31,
+          "pre": "…skies is like a grain of mustard, which a man took and ",
+          "hit": "sowed",
+          "post": " in his field —…"
+        },
+        {
+          "v": 32,
+          "pre": "…which is smaller than all the ",
+          "hit": "seeds",
+          "post": ", but when it has grown it is greater than the garden-p…"
+        },
+        {
+          "v": 37,
+          "pre": "…He answered and said, \"The one ",
+          "hit": "sowing",
+          "post": " the good seed is the Son of Man;…"
+        },
+        {
+          "v": 37,
+          "pre": "…He answered and said, \"The one sowing the good ",
+          "hit": "seed",
+          "post": " is the Son of Man;…"
+        },
+        {
+          "v": 38,
+          "pre": "…and the field is the world; and the good ",
+          "hit": "seed",
+          "post": " — these are the sons of the kingdom; and the darnel ar…"
+        },
+        {
+          "v": 39,
+          "pre": "…and the enemy who ",
+          "hit": "sowed",
+          "post": " them is the slanderer; and the harvest is the completi…"
+        }
+      ],
+      "total": 21
+    },
+    "thorn": {
+      "count": 3,
+      "verses": [
+        7,
+        22
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "…Others fell on the ",
+          "hit": "thorns",
+          "post": ", and the thorns came up and choked them.…"
+        },
+        {
+          "v": 7,
+          "pre": "…Others fell on the ",
+          "hit": "thorns",
+          "post": ", and the thorns came up and choked them.…"
+        },
+        {
+          "v": 22,
+          "pre": "…And the one sown into the ",
+          "hit": "thorns",
+          "post": " — this is the one hearing the word, and the care that…"
+        }
+      ],
+      "total": 4
+    },
+    "throw": {
+      "count": 5,
+      "verses": [
+        42,
+        47,
+        48,
+        50,
+        52
+      ],
+      "hits": [
+        {
+          "v": 42,
+          "pre": "…and they will ",
+          "hit": "throw",
+          "post": " them into the furnace of fire; there will be the weepi…"
+        },
+        {
+          "v": 47,
+          "pre": "…Again, the kingdom of the skies is like a dragnet ",
+          "hit": "thrown",
+          "post": " into the sea and gathering from every kind;…"
+        },
+        {
+          "v": 48,
+          "pre": "…ollected the good into containers, but the rotten they ",
+          "hit": "threw",
+          "post": " outside.…"
+        },
+        {
+          "v": 50,
+          "pre": "…and they will ",
+          "hit": "throw",
+          "post": " them into the furnace of fire; there will be the weepi…"
+        },
+        {
+          "v": 52,
+          "pre": "…of the skies is like a man, a master of the house, who ",
+          "hit": "throws out",
+          "post": " of his treasure-store new things and old.\"…"
+        }
+      ],
+      "total": 6
+    },
+    "treasure": {
+      "count": 2,
+      "verses": [
+        44,
+        52
+      ],
+      "hits": [
+        {
+          "v": 44,
+          "pre": "…The kingdom of the skies is like ",
+          "hit": "treasure",
+          "post": " hidden in the field, which a man found and hid; and fr…"
+        },
+        {
+          "v": 52,
+          "pre": "…ke a man, a master of the house, who throws out of his ",
+          "hit": "treasure-store",
+          "post": " new things and old.\"…"
+        }
+      ],
+      "total": 3
+    },
+    "understand": {
+      "count": 6,
+      "verses": [
+        13,
+        14,
+        15,
+        19,
+        23,
+        51
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…do not see, and hearing they do not hear, nor do they ",
+          "hit": "understand",
+          "post": ".…"
+        },
+        {
+          "v": 14,
+          "pre": "…ch says: 'With hearing y'all will hear and by no means ",
+          "hit": "understand",
+          "post": "; and seeing y'all will see and by no means perceive.…"
+        },
+        {
+          "v": 15,
+          "pre": "…perceive with their eyes and hear with their ears and ",
+          "hit": "understand",
+          "post": " with the heart and turn back — and I will heal them.'…"
+        },
+        {
+          "v": 19,
+          "pre": "…Anyone hearing the word of the kingdom and not ",
+          "hit": "understanding",
+          "post": " — the evil one comes and snatches what was sown in his…"
+        },
+        {
+          "v": 23,
+          "pre": "…the good earth — this is the one hearing the word and ",
+          "hit": "understanding",
+          "post": ", who indeed bears fruit and makes — one a hundred, one…"
+        },
+        {
+          "v": 51,
+          "pre": "…\"Have y'all ",
+          "hit": "understood",
+          "post": " all these things?\" They say to him, \"Yes.\"…"
+        }
+      ],
+      "total": 7
+    },
+    "weeping-grinding": {
+      "count": 2,
+      "verses": [
+        42,
+        50
+      ],
+      "hits": [
+        {
+          "v": 42,
+          "pre": "…ill throw them into the furnace of fire; there will be ",
+          "hit": "the weeping and the grinding of the teeth",
+          "post": ".…"
+        },
+        {
+          "v": 50,
+          "pre": "…ill throw them into the furnace of fire; there will be ",
+          "hit": "the weeping and the grinding of the teeth",
+          "post": ".…"
+        }
+      ],
+      "total": 2
     }
   }
 }

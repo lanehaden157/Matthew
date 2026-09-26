@@ -870,3 +870,9 @@
   "units.json wins" → `refresh_meta.py` docstring. Style ref's chat-side block → pointer.
 - Bug: `apply_retrofit.apply_text` re-applied insertions whose `from` is inside `to`, so
   every build duplicated the 12:26 Adversary gloss. Fixed the already-applied guard.
+
+## 2026-09-26 — Unit 13
+- Ported unit 13; recoloured local hear/sow/hide/gather and global `fish` (#c52690) after palette FAIL.
+- 14 unit-13 payoffs added to threads.json; 15 new global threads with stems (thread-stems.json); `test` stem excludes espeiras/speiras.
+- retrofit-tags.json: ~40 adds/text ops across units 2–13; local hidden→hide (U6), hide-reveal split into hide + local `reveal` (U11), `seize` narrowed to biazō with harpazō as `snatch` (U11/12), fill-up→fulfill and phrase spans (completion-of-age, weeping-grinding) in U13; dragnet untagged from fish. Local `completion` kept as teleō (13:53). Build green, 0 coverage gaps.
+- Follow-up (Lane): `joy` widened to chairō (2:10 "rejoiced", 5:12; stems ^χαιρ/^εχαρ); 7:15 harpax untagged and excluded from `snatch`; `gather` still excludes synagōgē. Build green, 0 gaps.

@@ -190,3 +190,7 @@ Read this first. 3 lines max per session.
 ## 2026-09-25 — instruction files trimmed to pointers
 - instructions.md and CLAUDE.md made light, pointing to the style ref, README, docstrings and PLAN.
 - Stranded rules rehomed first. Fixed apply_text re-inserting the 12:26 gloss on every build.
+
+## 2026-09-26 — Unit 13 ported (Matt 13:1–53)
+- `port_artifact.py 13`; fixed palette collisions (4 local recolours, `fish` global recolour).
+- Lane's rulings: 14 payoffs applied; 15 roots promoted (harvest, eye, hide, heart, thorn, enemy, joy, understand, gather, snatch, rotten, completion-of-age, weeping-grinding, lawlessness, householder), retro-tagged U2–12; dragnet untagged from `fish`.

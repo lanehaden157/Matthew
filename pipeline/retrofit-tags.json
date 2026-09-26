@@ -1336,6 +1336,266 @@
       "text": "rest",
       "root": "rest",
       "why": "anapausin — v29 — promoted to a thread at the unit-12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 10,
+      "text": "joy",
+      "root": "joy",
+      "why": "unit-13 port (2026-09-26): joy coverage"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 4,
+      "text": "gathering",
+      "root": "gather",
+      "why": "unit-13 port (2026-09-26): gather coverage"
+    },
+    {
+      "unit": "unit-03",
+      "verse": 12,
+      "text": "gather",
+      "root": "gather",
+      "why": "unit-13 port (2026-09-26): gather coverage"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 8,
+      "text": "heart",
+      "root": "heart",
+      "why": "unit-13 port (2026-09-26): heart coverage"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 14,
+      "text": "hidden",
+      "root": "hide",
+      "why": "unit-13 port (2026-09-26): hide coverage"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 28,
+      "text": "heart",
+      "root": "heart",
+      "why": "unit-13 port (2026-09-26): heart coverage"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 29,
+      "text": "eye",
+      "root": "eye",
+      "why": "unit-13 port (2026-09-26): eye coverage"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 43,
+      "text": "enemy",
+      "root": "enemy",
+      "why": "unit-13 port (2026-09-26): enemy coverage"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 44,
+      "text": "enemies",
+      "root": "enemy",
+      "why": "unit-13 port (2026-09-26): enemy coverage"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 21,
+      "text": "heart",
+      "root": "heart",
+      "why": "unit-13 port (2026-09-26): heart coverage"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 23,
+      "text": "eye",
+      "root": "eye",
+      "why": "unit-13 port (2026-09-26): eye coverage"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 26,
+      "text": "reap",
+      "root": "harvest",
+      "why": "unit-13 port (2026-09-26): harvest coverage"
+    },
+    {
+      "unit": "unit-06",
+      "verse": 26,
+      "text": "gather",
+      "root": "gather",
+      "why": "unit-13 port (2026-09-26): gather coverage"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 16,
+      "text": "thornbushes",
+      "root": "thorn",
+      "why": "unit-13 port (2026-09-26): thorn coverage"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 17,
+      "text": "rotten",
+      "root": "rotten",
+      "why": "unit-13 port (2026-09-26): rotten coverage"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 18,
+      "text": "rotten",
+      "root": "rotten",
+      "why": "unit-13 port (2026-09-26): rotten coverage"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 23,
+      "text": "lawlessness",
+      "root": "lawlessness",
+      "why": "unit-13 port (2026-09-26): lawlessness coverage"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 29,
+      "text": "eyes",
+      "root": "eye",
+      "why": "unit-13 port (2026-09-26): eye coverage"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 30,
+      "text": "eyes",
+      "root": "eye",
+      "why": "unit-13 port (2026-09-26): eye coverage"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 4,
+      "text": "hearts",
+      "root": "heart",
+      "why": "unit-13 port (2026-09-26): heart coverage"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 25,
+      "text": "master of the house",
+      "root": "householder",
+      "why": "unit-13 port (2026-09-26): householder coverage"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 26,
+      "text": "hidden",
+      "root": "hide",
+      "why": "unit-13 port (2026-09-26): hide coverage"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 25,
+      "text": "perceptive",
+      "root": "understand",
+      "why": "unit-13 port (2026-09-26): understand coverage"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 29,
+      "text": "heart",
+      "root": "heart",
+      "why": "unit-13 port (2026-09-26): heart coverage"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 29,
+      "text": "seize",
+      "root": "snatch",
+      "why": "unit-13 port (2026-09-26): snatch coverage"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 29,
+      "text": "plunder",
+      "root": "snatch",
+      "why": "unit-13 port (2026-09-26): snatch coverage"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 30,
+      "text": "gather",
+      "root": "gather",
+      "why": "unit-13 port (2026-09-26): gather coverage"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 34,
+      "text": "heart",
+      "root": "heart",
+      "why": "unit-13 port (2026-09-26): heart coverage"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 40,
+      "text": "heart",
+      "root": "heart",
+      "why": "unit-13 port (2026-09-26): heart coverage"
+    },
+    {
+      "unit": "unit-13",
+      "verse": 41,
+      "text": "lawlessness",
+      "root": "lawlessness",
+      "why": "unit-13 port (2026-09-26): lawlessness coverage"
+    },
+    {
+      "unit": "unit-13",
+      "verse": 48,
+      "text": "rotten",
+      "root": "rotten",
+      "why": "unit-13 port (2026-09-26): rotten coverage"
+    },
+    {
+      "unit": "unit-13",
+      "verse": 19,
+      "text": "snatches",
+      "root": "snatch",
+      "why": "unit-13 port (2026-09-26): snatch coverage"
+    },
+    {
+      "unit": "unit-13",
+      "verse": 5,
+      "text": "rock-like",
+      "root": "rock",
+      "why": "unit-13 port (2026-09-26): rock coverage"
+    },
+    {
+      "unit": "unit-13",
+      "verse": 20,
+      "text": "rock-like",
+      "root": "rock",
+      "why": "unit-13 port (2026-09-26): rock coverage"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 36,
+      "text": "enemies",
+      "root": "enemy",
+      "why": "unit-13 port (2026-09-26): enemy coverage",
+      "nth": 2
+    },
+    {
+      "unit": "unit-02",
+      "verse": 10,
+      "text": "rejoiced",
+      "root": "joy",
+      "why": "unit-13 port (2026-09-26): joy now covers chairō (Lane)"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 12,
+      "text": "Rejoice",
+      "root": "joy",
+      "why": "unit-13 port (2026-09-26): joy now covers chairō (Lane)"
     }
   ],
   "retag": [
@@ -1353,6 +1613,22 @@
       "from": "beget",
       "to": "fulfill",
       "text": "filled full"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 25,
+      "from": "hide-reveal",
+      "to": "hide",
+      "text": "hid",
+      "why": "unit-13 port (2026-09-26): kryptō joins the hide thread; apokalyptō splits off as local `reveal`"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 25,
+      "from": "hide-reveal",
+      "to": "reveal",
+      "text": "revealed",
+      "why": "unit-13 port (2026-09-26): hide-reveal held two Greek lexemes; apokalyptō stays local as `reveal`"
     }
   ],
   "retag_word": [
@@ -1404,6 +1680,20 @@
       "to": "metanoia",
       "match": ".*",
       "why": "unit-03's local `repent` root (metanoeō/metanoia) is promoted to the global metanoia thread at the Unit 11 port (2026-09-10) — same word, John's proclamation is the thread's true open"
+    },
+    {
+      "unit": "unit-06",
+      "from": "hidden",
+      "to": "hide",
+      "match": ".*",
+      "why": "unit-13 port (2026-09-26): local `hidden` (kryptos/kryphaios) promoted into the hide thread"
+    },
+    {
+      "unit": "unit-13",
+      "from": "fill-up",
+      "to": "fulfill",
+      "match": ".*",
+      "why": "unit-13 port (2026-09-26): 13:14 anaplēroō is the fulfill lexeme; local fill-up dropped"
     }
   ],
   "untag_word": [
@@ -1484,6 +1774,12 @@
       "root": "yall",
       "match": ".",
       "why": "drop — emphatic 'y'all' is a pronoun, not a lexical root"
+    },
+    {
+      "unit": "unit-13",
+      "root": "fish",
+      "match": "dragnet",
+      "why": "unit-13 port (2026-09-26): sagēnē (dragnet) is not halieus; fish thread stays fisher-only (Lane)"
     }
   ],
   "unwrap": [
@@ -1522,6 +1818,12 @@
       "text": "with",
       "root": "with",
       "why": "with demoted to unit-01-only local root (Lane, 2026-09-20)"
+    },
+    {
+      "unit": "unit-07",
+      "text": "out to prey",
+      "root": "snatch",
+      "why": "unit-13 port (2026-09-26): harpages 'out to prey' left untagged (Lane)"
     }
   ],
   "text": [
@@ -1656,6 +1958,60 @@
       "from": "kingdom</span> stand?</p>",
       "to": "kingdom</span> stand?</p>\n<span class=\"gloss\">The Adversary — <span class=\"translit\">ho Satanas</span>, a Hebrew title (<span class=\"translit\">śāṭān</span>, \"the one who stands against\") carried over into Greek, not a personal name; the same title as 4:10. Distinct from <span class=\"translit\">diabolos</span>, \"the slanderer\" (4:1–11).</span>",
       "why": "12:26 gloss making the title explicit (Lane, 2026-09-23)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "An eye for an eye",
+      "to": "An <span class=\"r\" data-root=\"eye\">eye</span> for an <span class=\"r\" data-root=\"eye\">eye</span>",
+      "why": "unit-13 port (2026-09-26): eye coverage (5:38)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "is the eye. So if your eye is",
+      "to": "is the <span class=\"r\" data-root=\"eye\">eye</span>. So if your <span class=\"r\" data-root=\"eye\">eye</span> is",
+      "why": "unit-13 port (2026-09-26): eye coverage (6:22)"
+    },
+    {
+      "unit": "unit-11",
+      "from": "forceful people seize</span> it",
+      "to": "forceful people</span> <span class=\"r\" data-root=\"snatch\">seize</span> it",
+      "why": "unit-13 port (2026-09-26): split biazō (local seize) from harpazō (snatch) at 11:12"
+    },
+    {
+      "unit": "unit-12",
+      "from": "make the tree rotten and its",
+      "to": "make the tree <span class=\"r\" data-root=\"rotten\">rotten</span> and its",
+      "why": "unit-13 port (2026-09-26): rotten coverage (12:33)"
+    },
+    {
+      "unit": "unit-12",
+      "from": "</span> rotten; for",
+      "to": "</span> <span class=\"r\" data-root=\"rotten\">rotten</span>; for",
+      "why": "unit-13 port (2026-09-26): rotten coverage (12:33)"
+    },
+    {
+      "unit": "unit-13",
+      "from": "data-root=\"completion\">completion</span> of an age",
+      "to": "data-root=\"completion-of-age\">completion of an age</span>",
+      "why": "unit-13 port (2026-09-26): phrase thread completion-of-age (13:39)"
+    },
+    {
+      "unit": "unit-13",
+      "from": "data-root=\"completion\">completion</span> of the age",
+      "to": "data-root=\"completion-of-age\">completion of the age</span>",
+      "why": "unit-13 port (2026-09-26): phrase thread completion-of-age (13:40, 49)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "there will be the weeping and the grinding of the teeth",
+      "to": "there will be <span class=\"r\" data-root=\"weeping-grinding\">the weeping and the grinding of the teeth</span>",
+      "why": "unit-13 port (2026-09-26): phrase thread weeping-grinding"
+    },
+    {
+      "unit": "unit-13",
+      "from": "there will be the weeping and the grinding of the teeth",
+      "to": "there will be <span class=\"r\" data-root=\"weeping-grinding\">the weeping and the grinding of the teeth</span>",
+      "why": "unit-13 port (2026-09-26): phrase thread weeping-grinding"
     }
   ]
 }
