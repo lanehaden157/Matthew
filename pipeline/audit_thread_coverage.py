@@ -20,8 +20,8 @@ verse / over-tag).
 Informational: exits 0 even with gaps (units 11-28 don't exist yet, so most
 threads legitimately show gaps past unit 10).
 
-Greek source: MatthewSBLGNT.txt at the repo root (tracked — see CLAUDE.md
-'Source texts'). Tab-separated 'Matt C:V<TAB>text' lines. If it's missing the
+Greek source: MatthewSBLGNT.txt at the repo root (tracked — see project-side/README.md).
+Tab-separated 'Matt C:V<TAB>text' lines. If it's missing the
 script says so and exits 2.
 """
 
@@ -69,7 +69,7 @@ def detag(s):
 def load_greek():
     if not os.path.exists(GREEK):
         sys.exit(f"[audit] {GREEK} not found — put the SBLGNT Matthew text there "
-                 f"(tab-separated 'Matt C:V<TAB>text' lines). See CLAUDE.md.")
+                 f"(tab-separated 'Matt C:V<TAB>text' lines). See project-side/README.md.")
     verses = []
     for line in open(GREEK, encoding="utf-8"):
         m = re.match(r"Matt (\d+):(\d+)\t(.*)", line.rstrip("\n"))

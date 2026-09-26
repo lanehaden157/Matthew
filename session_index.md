@@ -186,3 +186,7 @@ Read this first. 3 lines max per session.
 ## 2026-09-23 — unit-12 wording pass
 - 12:25 made a wilderness; the Adversary (12:26, Mark 1:13); workless word; treat as common.
 - Offspring of vipers (echidna = viper, not snake) awaiting Lane's call.
+
+## 2026-09-25 — instruction files trimmed to pointers
+- instructions.md and CLAUDE.md made light, pointing to the style ref, README, docstrings and PLAN.
+- Stranded rules rehomed first. Fixed apply_text re-inserting the 12:26 gloss on every build.

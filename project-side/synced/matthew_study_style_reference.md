@@ -373,7 +373,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] No `roots` entry carries a colour. No `--c-*` vars anywhere. No inline `style="color:…"` / `style="background:…"`.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
-- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo` as siblings, not nested.
+- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo` as siblings, not nested. A `.gloss`'s own endnote marker sits after its closing tag, not inside it.
 - [ ] No `aside.synoptic` or `aside.echo` block contains `data-root`, `class="r"`, or `class="rl"` — translit only.
 - [ ] Every `aside.echo` has a `data-anchor="C:V"` matching the verse it follows.
 - [ ] The translation is divided into passage groups by `<h3 class="pericope">Title <span>· C:V–V</span></h3>` — no other heading form.
@@ -390,9 +390,10 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Hyperlinks for significant LXX/OT citations and key terms (biblehub, Logeion, NETS, earlyjewishwritings).
 - [ ] Every `<p class="v">` that quotes/cites an OT text ends with a linked `(Book C:V)` Bible Hub pointer (§ OT citation pointer) — after the quote, before any `<sup>`; quoted words not themselves wrapped in the link.
 - [ ] Every word with a Torah/LXX or later-canon history gets an `echo` (§1a) — a local `roots[]` entry if nowhere else, or an `aside.echo` for a verse-level connection. Checked against `canon-leads/canon-leads-unit-NN.md` and the intertext pass's ledger (`instructions.md` pass 3), not from memory.
-- [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described. These should e real and verifiable only, not loose made up connections forcing a pattern.
+- [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described. These should be real and verifiable only, not loose made up connections forcing a pattern.
 - [ ] Repeated-word counts noted only where the frequency is theologically significant (3, 7, 10, 12, 40, 70…).
 - [ ] Transliteration only — zero native Greek or Hebrew script anywhere.
+- [ ] No named commentators in the artifact's prose (notes, glosses, compare boxes), from unit 13 on. Dissolve the attribution into the point: "a dispensational reading argues…", not "Constable argues…"; state a shared conclusion plainly rather than "(so France, Wright)". The research passes still name traditions; only the artifact drops the names. Units 1–12 are a separate tracked retrofit (`PLAN.md`).
 
 **Threads**
 - [ ] Checked `threads-digest.md`: **every** morphological occurrence of a tracked thread's Greek root in this passage is tagged with its thread `id` — even where the English renders it with a different word (ἁμαρτωλός → "sinner" still tags `sin`; περιβάλλω → "clothe" still tags `throw`). The tag follows the Greek lexeme, not the gloss. Threads that open or land here are also listed under `threads.opens` / `threads.payoffs`. The porter's coverage audit will list any you missed.
@@ -403,11 +404,8 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Saved to `/mnt/user-data/outputs/matthew_NN_translation.html` (zero-padded), then `present_files`.
 - [ ] (Site side, Lane / Claude Code) `python pipeline/port_artifact.py NN`, review the thread delta, eyeball in the browser, commit.
 
-### Chat-side conventions (commentary, not artifact)
-- Pre-read briefing and verse-by-verse: **flowing prose only** — no bullets, headers, bold, markdown.
-- Confirm scope before each walkthrough; flag chapter-grid divergences and the five discourses (5–7, 10, 13, 18, 23–25) as multi-chapter units.
-- Hold Constable in active dialogue with France, Wright, Bible Project notes, Jewish / Second Temple / rabbinic voices, and Chrysostom — don't let the dispensationalist frame stand unchallenged.
-- Flag rabbit holes and ask whether to go deeper or keep moving.
+### Chat-side conventions
+The research passes (briefing, commentary, intertext ledger) are governed by the project instructions (`instructions.md` in the site repo), not by this file.
 
 ---
 
@@ -450,7 +448,7 @@ the site's job, and `data/units.json` records what each built unit tracks.
 
 The canonical list of tracked threads (id, root slug, translit, gloss, origin → payoff,
 open/closed, per-thread note) is **`threads-digest.md`** in the site repo, generated from
-`data/threads.json`. Lane refreshes it in the research project whenever it changes.
+`data/threads.json`, and synced to the research project automatically (`project-side/synced/`).
 
 When you build a unit: tag **every occurrence** of a tracked thread's Greek root with its
 `id` (follow the lexeme, not the English gloss); list threads that open or land under

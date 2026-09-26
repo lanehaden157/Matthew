@@ -245,6 +245,20 @@ The research artifact is now a **drop-in site fragment**. Contract:
 
 ---
 
+## Tracked backlogs (units 1–12)
+
+Both came in with the forward-from-13 rules of 2026-09-22 and are deliberately not
+fixed opportunistically inside another unit's port. Each is its own pass when Lane
+calls it.
+
+- **Intertext pass.** Units 1–12 shipped before pass 3 existed. Their echoes, where
+  any exist, were drafted in Claude Code, not researched. Re-running one means
+  generating its sheet first (`python pipeline/canon_leads.py NN`).
+- **Named commentators in artifact prose.** 64 instances across units 1–12
+  (style reference §4, "No named commentators").
+
+---
+
 ## Shelved (saved, not cancelled)
 
 Ring/chiasm JS interactivity · isolate-thread toggle · chiastic reading-order

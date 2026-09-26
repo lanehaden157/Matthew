@@ -858,3 +858,15 @@
   the viper (ophis is the general snake), decision pending.
 - Fixed a bug from the unit-12 port: the two defame retro-ops matched text inside the
   unit meta's payoff notes and broke its JSON quoting; re-anchored them to the verse.
+
+## 2026-09-25 — instruction files trimmed to pointers
+
+- `instructions.md` 15.8 KB → 7.5 KB: dropped the re-described synced-file table, the
+  pass-4 bullet list (now "follow the style reference, run §4"), and history asides.
+- `CLAUDE.md` 16 KB → 4 KB: a "where things live" table plus workflow and guardrails.
+  The layout tree defers to script docstrings, and the paste block defers to `instructions.md`.
+- Rehomed first: no-named-commentators rule → style ref §4; `.gloss` marker placement
+  → §4; units 1–12 backlogs (intertext, commentators) → PLAN.md "Tracked backlogs";
+  "units.json wins" → `refresh_meta.py` docstring. Style ref's chat-side block → pointer.
+- Bug: `apply_retrofit.apply_text` re-applied insertions whose `from` is inside `to`, so
+  every build duplicated the 12:26 Adversary gloss. Fixed the already-applied guard.

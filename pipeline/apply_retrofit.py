@@ -133,7 +133,9 @@ def apply_untag_word(html, it):
 
 
 def apply_text(html, it):
-    if it["to"] in html and it["from"] not in html:
+    # An insertion keeps its anchor (`from` inside `to`), so `from` never
+    # disappears; `to` being present is the only signal there.
+    if it["to"] in html and (it["from"] not in html or it["from"] in it["to"]):
         return html, f"ok   {it['unit']} text '{it['from']}': already applied"
     new, n = re.subn(re.escape(it["from"]), it["to"].replace("\\", "\\\\"), html)
     return new, (f"TEXT {it['unit']}: {n}x '{it['from']}' -> '{it['to']}'"

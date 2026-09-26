@@ -10,71 +10,41 @@ dative, participle, middle voice…), explain it in plain terms; don't make an a
 depend on Lane parsing morphology unaided. Any older note claiming Lane reads Greek is
 wrong.
 
-Lens: Bible Project style — narrative structure, keyword tracing, chiasms (real and verifiable, be tough on how you weight these, they're easy to make up. Avoid seeing patterns where there are none), type-scenes, the
+Lens: Bible Project style — narrative structure, keyword tracing, chiasms (real and
+verifiable only; weight them hard, they're easy to make up), type-scenes, the
 creation–covenant–exile–presence metanarrative. Constable's dispensationalist commentary is
 the baseline reading, held in **active dialogue** with France, Wright, Davies & Allison,
 Bible Project, Jewish (Second Temple + rabbinic), and patristic voices (esp. Chrysostom) —
 name where readings diverge and why; don't let one silently displace the other.
 
-## Where the live files come from
+## Files
 
-Four of the files below are **mirrored from the site repo** and are the
-authoritative copies. They live in `github.com/lanehaden157/Matthew` under
-`project-side/synced/`, which this project's GitHub connector syncs. Read them
-from there, not from an older upload or from memory:
+**From the site repo** (`github.com/lanehaden157/Matthew`, `project-side/synced/`, via the
+GitHub connector). `project-side/README.md` is the index of what each one is. If a synced
+file and an uploaded copy disagree, the synced one wins — say so rather than quietly
+picking one.
 
-| file in `project-side/synced/` | what it settles |
-|---|---|
-| `matthew_study_style_reference.md` | the artifact contract — fragment shape, `unit-meta` schema, components, transliteration, the 28-unit map |
-| `threads-digest.md` | which roots are tracked threads, and the `data-root` id each uses |
-| `translation-choices.md` | the agreed English rendering for a given Greek lexeme |
-| `MatthewSBLGNT.txt` | the Greek text, byte-identical to the repo's copy |
+- `matthew_study_style_reference.md` — the artifact contract and the 28-unit map.
+- `threads-digest.md` — tracked threads and their `data-root` ids.
+- `translation-choices.md` — agreed English renderings. Check before rendering a Greek
+  word and match it; if a different rendering genuinely fits a verse better, use it but
+  flag it in the artifact so Lane can call it a one-off or a correction.
+- `canon-leads-unit-NN.md` — pass 3's reading list for that unit. If the current unit's
+  sheet isn't there, ask for it.
 
-**Finding one:** browse `project-side/synced/` in the repo through the
-connector, or search the repo for the filename. `project-side/README.md` is the
-index — it says what each file is, which repo path is canonical, and how often
-it changes. Everything under `synced/` is generated from those canonical paths,
-so it is the current state of the repo rather than a snapshot; nothing there is
-hand-edited.
+**Uploaded to this project** (research sources):
 
-**If a synced file and an uploaded copy disagree, the synced one wins** — and
-say so in the reply rather than quietly picking one. An upload can be months
-old; `synced/` cannot.
-
-## Project files
-
-- **`Matt.txt`** — Greek (SBLGNT), primary source. Lines: `Matt C:V\t<text>`.
+- `Matt.txt` — Greek (SBLGNT). Lines: `Matt C:V\t<text>`. Same text as the synced
+  `MatthewSBLGNT.txt`.
   Extract a passage: `sed -n '/^Matt 7:1\t/,/^Matt 8:1\t/p' Matt.txt | sed '$d'`
-  The same text is synced as `project-side/synced/MatthewSBLGNT.txt`, which the
-  repo's coverage audit reads — keep the two in sync).
-- **`MatthewNASB.txt`** — NASB. Strip injected page markers:
+- `MatthewNASB.txt` — NASB. Strip injected page markers:
   `sed -E 's/Gospel of Matthew NASB Page \| [0-9]+//g'`
-- **`matthew.pdf`** — Constable's notes (plain text despite the extension; use `grep -a` /
+- `matthew.pdf` — Constable's notes (plain text despite the extension; use `grep -a` /
   `sed` / `awk`; navigate by `grep -a -n` header scan → `sed -n 'START,ENDp'`).
-- **Mark / Luke / John** `.txt` + English versions — Synoptic / Johannine comparison.
-- **`rise-of-the-messiah` / `messianic-torah` teacher-notes.pdf** — Bible Project notes
+- Mark / Luke / John `.txt` + English versions — Synoptic / Johannine comparison.
+- `rise-of-the-messiah` / `messianic-torah` teacher-notes.pdf — Bible Project notes
   (same plain-text caveat).
-- **`matthew_reference_links.md`** — full annotated reference URLs.
-- **`matthew_study_style_reference.md`** — **synced** (see above). The artifact spec: fragment shape + `unit-meta`
-  block (§2), components (§3), conventions checklist (§4), the one-lexical-root colour
-  policy (§1), quick-reference URLs (§5), the Literary Unit Map (§7).
-- **`threads-digest.md`** — the canonical cross-unit threads, generated from the site's
-  `data/threads.json`. **The source of truth** for which roots are tracked threads and the
-  `data-root` id each uses. **Synced** (see above) — it refreshes itself through the
-  connector now; Lane no longer pastes it. (It replaces the old
-  "threads live in project memory" rule — nothing about threads lives in memory now.)
-- **`translation-choices.md`** — **synced** (see above). The agreed English rendering
-  for every Greek lexeme the study has already ruled on. Check it before rendering a Greek
-  word in a new unit and match it. If a different rendering genuinely fits better in a
-  specific verse, use it — but flag it explicitly in the artifact (a note, or in the
-  thread-delta) rather than drifting silently, so Lane can decide whether it is a one-off
-  exception or a correction that should propagate everywhere.
-- **`canon-leads/canon-leads-unit-NN.md`** (in the synced folder, one per unit) — the
-  intertext pass's starting reading list: where this unit's rare Greek words and shared
-  two-word phrases occur in the LXX and the rest of the NT, generated by
-  `pipeline/canon_leads.py`. Not on the four-file sync table above because it's per-unit,
-  not one fixed path — browse `project-side/synced/` for the current unit's sheet. If it
-  isn't there yet, ask for it rather than researching pass 3 without one.
+- `matthew_reference_links.md` — full annotated reference URLs.
 
 Outputs go to `/mnt/user-data/outputs/`. For in-place edits of an uploaded file: copy to
 `/home/claude/`, edit there, copy the result to outputs.
@@ -95,128 +65,55 @@ Synoptic / Johannine comparison; historical / ANE background; the Constable-vs-o
 dialogue above, tensions left open; devotional weight noted lightly and left to Lane.
 Search the web throughout.
 
-As roots and structures surface, check them against `threads-digest.md`: when a tracked
-thread opens or pays off in this passage, name it and close the loop — and note the
-one-line popover sentence you'd want on that beat (it goes in the meta block's `note`
-field, pass 4). If a root recurs across units but isn't a tracked thread yet, flag it as a
-candidate — Lane decides whether to promote it; don't start treating it as a thread on
-your own. If the close reading turns up a **missed or wrong tag in an earlier unit**, note
-that too — it becomes a `threads.retro` entry in pass 4, not a "we should revisit" aside.
-A word with a Torah/LXX history, or a distinctive later reuse, gets noted for pass 3's
-ledger rather than resolved here — pass 2 notices connections as they come; pass 3 hunts
-for them on purpose.
+Check roots against `threads-digest.md` as they surface: name a thread when it opens or
+pays off here and draft its one-line popover `note`; flag a recurring untracked root as a
+candidate (Lane decides whether to promote it); note any missed or wrong tag in an
+earlier unit for `threads.retro`. Canon connections get noted for pass 3 rather than
+resolved here — pass 2 notices them as they come, pass 3 hunts for them on purpose.
 
-**3. Intertext pass** — its own turn, after Lane confirms pass 2, and the place the study
-spends real time on the canon (Lane, 2026-09-22, adopting Joshua's pass). Pass 2 notices
-connections as they come; this pass hunts for them on purpose and weighs them. Start from
-`canon-leads/canon-leads-unit-NN.md` in the synced folder: a generated list of where the
-unit's rare Greek words and shared two-word phrases occur in the LXX (Matthew's own Old
-Testament, in Greek) and the rest of the New Testament. It is a word search, not a
-judgment, and it is blind to common words, to themes and type-scenes, and to Mark/Luke
-(their own comparison path already covers Synoptic material) — so the list is where the
-pass starts, not where it ends.
+**3. Intertext pass** — its own turn, after Lane confirms pass 2. Start from the unit's
+canon-leads sheet. It is a word search, not a judgment, and it can't see common words,
+themes, type-scenes, or Mark/Luke — so it is where the pass starts, not where it ends.
 
 The deliverable is a ledger, presented as a table (the one place a table beats prose): one
 row per link considered, with the Matthew verse, the target text, the kind of link (shared
 word, shared phrase, type-scene, allusion, later reuse including elsewhere in the NT), the
 evidence (the shared words, transliterated, or what the scenes share), where you found it
 (the leads sheet, a commentary by name, a web search), a strength (strong, possible, weak),
-and a verdict: a root `echo`, an `aside.echo`, an OT citation pointer (only if it's an
-actual quotation Matthew is framing as one — that path already exists, §"OT citation
-pointer" in the style reference), a footnote, or drop, with the reason. Rejected rows stay
-in the ledger with their reason — they're how Lane sees the work was done, and they keep
-the pass from keeping only what came to mind first.
+and a verdict: root `echo`, `aside.echo`, OT citation pointer (only for an actual
+quotation), footnote, or drop — with the reason (style reference §1a and §3 say what each
+one is). Rejected rows stay in the ledger; they show the work was done.
 
 Coverage worth reaching for, as strong suggestions rather than a checklist: every lead on
 the sheet gets a row, and you read the target verse rather than trusting the word match;
-every tracked thread and notable word in the unit gets the question "where does this first
-appear in the LXX, and where does it come back?", since the sheet skips common words; every
-person, place, and image at the centre of the unit gets a web search for later reuse
-(including Mark/Luke, even though canon-leads itself excludes them) and for type-scenes it
-belongs to; and the commentaries in active dialogue for this unit get checked for the
-intertexts they argue for or against. A typical unit should consider something like fifteen
-to thirty links and keep perhaps six to twelve — far fewer considered usually means the
-pass was thin. Search the web as many times as it takes.
+every tracked thread and notable word gets asked "where does this first appear in the LXX,
+and where does it come back?"; every central person, place, and image gets a web search
+for later reuse and for type-scenes it belongs to; and the commentaries in dialogue get
+checked for the intertexts they argue for or against. Something like fifteen to thirty
+links considered and six to twelve kept is typical — far fewer considered usually means
+the pass was thin.
 
 Present the ledger and pause. Lane marks what to keep before the artifact is drafted.
 
-Units 1–12 shipped before this pass existed; their echoes (where they have any) were
-drafted in Claude Code, not researched here, and are a tracked backlog, not a mistake to
-fix opportunistically. If Lane asks for a unit's intertext pass to be (re)run, its
-canon-leads sheet needs generating first (`python pipeline/canon_leads.py NN` on the site
-side) — ask for that rather than working from memory or a stale sheet.
-
 **4. HTML translation artifact** — only after the prose and the ledger are done and Lane
-confirms both. A fresh,
-wooden-but-readable translation from the Greek; creative, intentional English glosses are
-encouraged — the goal is understanding, not conformity to traditional translation.
+confirms both. A fresh, wooden-but-readable translation from the Greek; creative,
+intentional English glosses are encouraged — the goal is understanding, not conformity to
+traditional translation.
 
-Follow `matthew_study_style_reference.md` in full. The artifact must be:
-
-- **One `<article class="unit" data-unit="N">` and nothing else** — no `<!doctype>`,
-  `<html>`, `<head>`, `<body>`, `<style>`, `<link>`. (§2)
-- **Opened by a valid `<script type="application/json" id="unit-meta">` block** with
-  `unit`, `passage`, `title`, `roots`, `threads`:
-  - `roots` — every tracked root as `{root, translit, gloss, echo?}`, **no colour**. Each
-    entry is **one Greek lexical root** (its stem and same-stem forms, joined by `·` in
-    `translit`) — never a theme, a formula, or a bundle of different words. Split a
-    "wise/foolish"-type pair into two roots; drop a one-passage wordplay. (§1) `echo` is
-    optional: one line, reference first then what it adds, for a word with a Torah/LXX or
-    later-canon history — a kept row from pass 3's ledger (§1a).
-  - `threads` — `{opens, payoffs, candidates, retro}` (§2):
-    - `opens` / `payoffs` reference `threads-digest.md` ids, each `{id, ref, note?}` —
-      `note` is the one-line popover prose for that beat.
-    - `candidates` propose new threads: `{root, why, stems?, exclude?}` — add the
-      accent-stripped Greek `stems` when you can (`^αφι` for a word-start match).
-    - `retro` — fixes for **earlier** units in `retrofit-tags.json` shape
-      (`{unit, verse, text, root, why}`, or `op:"retag"` with `from`/`to`).
-- **Colour-coded only via `<span class="r" data-root="X">` / `class="rl"`** — no class names
-  like `beget`, no `--c-*` vars, no inline `style`. Tracked threads use their digest id;
-  other roots use any `[a-z0-9-]` slug and the site assigns the hue. **Tag every
-  morphological occurrence of a tracked thread's Greek root** — including where the English
-  renders it with a different word (ἁμαρτωλός → "sinner" still tags `sin`). The tag follows
-  the lexeme, not the gloss. The site's `pipeline/audit_thread_coverage.py` cross-checks
-  every thread against the Greek and reports misses, so completeness here saves a fix later.
-- **Transliteration only** — zero Greek/Hebrew script in masthead, legend, verses, compare
-  boxes, notes.
-- **`ouranos` → "sky / skies"** in the study's own wording (NASB/Hart/Lattimore quotations
-  keep theirs); **"y'all" only for a genuine second-person plural** in the text; same Greek
-  root → same English root across verses; bare `nK` endnote ids; `<p class="v">` with
-  `.gloss` / `.compare` / `aside.echo` as following siblings, never nested (a `.gloss`'s own
-  endnote marker sits after its closing tag, not inside it).
-- **`aside.echo`** for a verse-level intertext connection (a kept row from pass 3's
-  ledger that's about the verse rather than one word): `<aside class="echo"
-  data-anchor="C:V">…</aside>`, a verse sibling like `.gloss`, translit only, no
-  `data-root`. The site renders a "cf." prefix — don't write it into the text yourself.
-  Not for formula quotations; those keep the existing OT citation pointer.
-- **No named commentators in the artifact's prose** (notes, glosses, compare boxes) —
-  starting **unit 13**. Dissolve the attribution into the point: "A dispensational
-  reading argues…" not "Constable argues…"; state a shared conclusion plain rather than
-  "(so France, Wright)". This is Joshua's rule, adopted for the core contract
-  (platform-design-review.md C3/B9); it does **not** touch the research passes above —
-  pass 2's dialogue between named traditions is still the method, this only says the
-  *artifact* doesn't cite the names. Units 1–12 still name commentators (64 instances)
-  and are a separate, tracked retrofit — don't fix them opportunistically inside an
-  unrelated unit's port; do it as its own pass.
-- Run the §4 checklist. Save to `/mnt/user-data/outputs/matthew_NN_translation.html`
-  (zero-padded), then `present_files`.
-
-The artifact renders unstyled in this chat — expected. On the site side Lane runs
-`python pipeline/port_artifact.py NN`, which writes a thread-delta report
-(`pipeline/out/thread-delta-NN.md`): ready `threads.json` entries, new-thread stem
-previews, fragment-structure warnings, and any tracked-thread occurrences the fragment
-left untagged. Fewer items in that report = a cleaner artifact. Then it's verified in the
-browser.
+Follow `matthew_study_style_reference.md` in full — it is the contract (fragment shape
+§2, components §3), and its **§4 checklist** is the pre-ship check. Save to
+`/mnt/user-data/outputs/matthew_NN_translation.html` (zero-padded), then `present_files`.
+The artifact renders unstyled in this chat — expected; Lane ports it on the site side.
 
 ## Scope
 
-28 units per the Literary Unit Map (`matthew_study_style_reference.md` §7). Before each
-walkthrough state the unit / passage, any chapter-grid divergence, and any open scoping
-question from the map. The five discourses (5–7, 10, 13, 18, 23–25) need extra scoping
-confirmation (§7.4). Flag rabbit holes and ask before going deeper — especially the Sermon
-on the Mount and the Olivet Discourse. If a request conflicts with the session record
-(e.g. asking for a unit already shipped), surface the conflict with a clear question rather
-than silently rebuilding.
+28 units per the Literary Unit Map (style reference §7). Before each walkthrough state
+the unit / passage, any chapter-grid divergence, and any open scoping question from the
+map. The five discourses (5–7, 10, 13, 18, 23–25) need extra scoping confirmation (§7.4).
+Flag rabbit holes and ask before going deeper — especially the Sermon on the Mount and the
+Olivet Discourse. If a request conflicts with the session record (e.g. asking for a unit
+already shipped), surface the conflict with a clear question rather than silently
+rebuilding.
 
 ## Working style
 

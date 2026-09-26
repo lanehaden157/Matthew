@@ -4,6 +4,10 @@ data/units.json + data/threads.json. Idempotent. Part of build.py.
 New units get their meta block authored in the incoming artifact and merged by
 port_artifact.py; this keeps the already-built ones in sync when the data files
 change (a thread flips status, a gloss is edited, etc.).
+
+units.json wins here: fragments are the source of truth for prose and tagging,
+but a built fragment's roots[] translit/gloss is regenerated FROM units.json.
+Edit a legend entry there, not in the fragment, or the next build reverts it.
 """
 
 import glob
