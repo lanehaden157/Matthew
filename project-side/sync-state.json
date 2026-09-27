@@ -1,1 +1,30 @@
-{}
+{
+  "MatthewSBLGNT.txt": {
+    "hash": "d19efbdff018c2bde83ba0fc01e0d8cb399b496b",
+    "synced_at": "2026-09-27T04:14:48+00:00"
+  },
+  "canon-leads/canon-leads-unit-13.md": {
+    "hash": "33dcc035244f8e5ada1a512a8b18653f5ab5a1eb",
+    "synced_at": "2026-09-27T04:14:48+00:00"
+  },
+  "canon-leads/canon-leads-unit-14.md": {
+    "hash": "bda0f04384f36da307edf6be43b0d51c8f7ae941",
+    "synced_at": "2026-09-27T04:14:48+00:00"
+  },
+  "matthew_reference_links.md": {
+    "hash": "a15253594fd244cf749cbd2111be816cf7014e86",
+    "synced_at": "2026-09-27T04:14:48+00:00"
+  },
+  "matthew_study_style_reference.md": {
+    "hash": "9077b70f888f98299f5b55c550b34cd6f70b4f19",
+    "synced_at": "2026-09-27T04:14:48+00:00"
+  },
+  "threads-digest.md": {
+    "hash": "5b2ffbfd23cbbf34d8689355afbb2679ba3f7e5a",
+    "synced_at": "2026-09-27T04:14:48+00:00"
+  },
+  "translation-choices.md": {
+    "hash": "88ccfe369835d81471d3cded9f8679e7ad8e0292",
+    "synced_at": "2026-09-27T04:14:48+00:00"
+  }
+}
