@@ -194,3 +194,6 @@ Read this first. 3 lines max per session.
 ## 2026-09-26 — Unit 13 ported (Matt 13:1–53)
 - `port_artifact.py 13`; fixed palette collisions (4 local recolours, `fish` global recolour).
 - Lane's rulings: 14 payoffs applied; 15 roots promoted (harvest, eye, hide, heart, thorn, enemy, joy, understand, gather, snatch, rotten, completion-of-age, weeping-grinding, lawlessness, householder), retro-tagged U2–12; dragnet untagged from `fish`.
+
+## 2026-09-26 — Reference links synced
+- Converted Lane's reference-links file to `matthew_reference_links.md`, now mirrored to `project-side/synced/`; pointers updated.

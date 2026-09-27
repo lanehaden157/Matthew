@@ -876,3 +876,7 @@
 - 14 unit-13 payoffs added to threads.json; 15 new global threads with stems (thread-stems.json); `test` stem excludes espeiras/speiras.
 - retrofit-tags.json: ~40 adds/text ops across units 2–13; local hidden→hide (U6), hide-reveal split into hide + local `reveal` (U11), `seize` narrowed to biazō with harpazō as `snatch` (U11/12), fill-up→fulfill and phrase spans (completion-of-age, weeping-grinding) in U13; dragnet untagged from fish. Local `completion` kept as teleō (13:53). Build green, 0 coverage gaps.
 - Follow-up (Lane): `joy` widened to chairō (2:10 "rejoiced", 5:12; stems ^χαιρ/^εχαρ); 7:15 harpax untagged and excluded from `snatch`; `gather` still excludes synagōgē. Build green, 0 gaps.
+
+## 2026-09-26 — Reference links synced
+- `reference links.txt` → `matthew_reference_links.md` (markdown, file inventory dropped in favour of `instructions.md`); added to TRACKED_FILES, README table, instructions.md synced list; style ref §5 points to it.
+- instructions.md: Bible Project teacher notes cover Matt 1–8 only; from ch. 9 name the literary-canonical source used.

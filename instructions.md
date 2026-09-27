@@ -29,6 +29,8 @@ picking one.
 - `translation-choices.md` — agreed English renderings. Check before rendering a Greek
   word and match it; if a different rendering genuinely fits a verse better, use it but
   flag it in the artifact so Lane can call it a one-off or a correction.
+- `matthew_reference_links.md` — the annotated list of outside sources, by kind. Go here
+  when a pass needs a Second Temple text, the LXX in English, or a patristic reading.
 - `canon-leads-unit-NN.md` — pass 3's reading list for that unit. If the current unit's
   sheet isn't there, ask for it.
 
@@ -43,8 +45,9 @@ picking one.
   `sed` / `awk`; navigate by `grep -a -n` header scan → `sed -n 'START,ENDp'`).
 - Mark / Luke / John `.txt` + English versions — Synoptic / Johannine comparison.
 - `rise-of-the-messiah` / `messianic-torah` teacher-notes.pdf — Bible Project notes
-  (same plain-text caveat).
-- `matthew_reference_links.md` — full annotated reference URLs.
+  (same plain-text caveat). They cover Matthew 1–8 only; from chapter 9 on, draw the
+  literary-canonical side from the Bible Project podcast series, France and Wright
+  (links in `matthew_reference_links.md`), and say which you leaned on.
 
 Outputs go to `/mnt/user-data/outputs/`. For in-place edits of an uploaded file: copy to
 `/home/claude/`, edit there, copy the result to outputs.

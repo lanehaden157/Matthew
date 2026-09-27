@@ -30,6 +30,7 @@ TRACKED_FILES = [
     "translation-choices.md",
     "threads-digest.md",
     "MatthewSBLGNT.txt",
+    "matthew_reference_links.md",
 ] + sorted(  # the intertext pass's reading lists, one per unit (pipeline/canon_leads.py)
     p.relative_to(ROOT).as_posix() for p in (ROOT / "canon-leads").glob("canon-leads-unit-*.md"))
 

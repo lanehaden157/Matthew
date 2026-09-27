@@ -426,6 +426,8 @@ The research passes (briefing, commentary, intertext ledger) are governed by the
 | Synoptic parallels | `https://www.gospelparallels.com/` |
 | Bible Project Matthew overview | `https://bibleproject.com/explore/video/matthew/` |
 
+The full annotated list (Dead Sea Scrolls, Didache, NETS, Allison's *New Moses*, and the rest) is `matthew_reference_links.md`.
+
 ### Scholars to weigh per crux
 Davies & Allison (ICC, technical), France (NICNT, literary-canonical), Keener (background/
 social-historical), Luz (reception history), Wright (Jewish context/new creation), Meier
