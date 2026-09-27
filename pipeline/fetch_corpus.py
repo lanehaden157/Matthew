@@ -1,10 +1,12 @@
-"""Download the two corpora canon_leads.py reads: MorphGNT's lemmatized SBLGNT
-(the New Testament, Matthew included) and the CenterBLC Text-Fabric build of
-Rahlfs' 1935 LXX (Old Testament in Greek, Matthew's own background text).
+"""Download the corpora canon_leads.py and bible-core's Greek interlinear
+read: MorphGNT's lemmatized SBLGNT (the New Testament, Matthew included),
+the CenterBLC Text-Fabric build of Rahlfs' 1935 LXX (Old Testament in Greek,
+Matthew's own background text), and MorphGNT's morphological lexicon (the
+interlinear's glosses, since core 0.9.2 -- ARCHITECTURE.md plan D1).
 
-Both are pinned to a commit so a re-run is reproducible; neither is committed
-to this repo (pipeline/corpus/ is git-ignored) -- re-run this after a fresh
-clone, same idea as Joshua's `npm ci` for morphhb.
+All three are pinned to a commit so a re-run is reproducible; none are
+committed to this repo (pipeline/corpus/ is git-ignored) -- re-run this
+after a fresh clone, same idea as Joshua's `npm ci` for morphhb.
 
     python pipeline/fetch_corpus.py            # fetch anything missing
     python pipeline/fetch_corpus.py --force    # re-fetch everything
@@ -20,6 +22,10 @@ Sources and licences:
     and not the text-fabric package: these are plain one-value-per-line (or
     "start-end<TAB>value" range) files, simple enough to parse by hand
     (see greek_corpus.py), no new dependency. ~15.5 MB.
+  * github.com/morphgnt/morphological-lexicon @
+    0dca2af89f413cbb24f617ddbdc347e9d798ddf3 -- CC BY-SA 3.0 (the site
+    credits it, main.js SOURCES). lexemes.yaml, ~1.7 MB. Read by bible-core's
+    lang/greek_lexicon.py, not by anything in this pipeline.
 """
 import argparse
 import os
@@ -46,6 +52,9 @@ MORPHGNT_FILES = [
 LXX_SHA = "4829f3746c84d75576702498e75a68856358f289"
 LXX_BASE = f"https://raw.githubusercontent.com/CenterBLC/LXX/{LXX_SHA}/tf/1935"
 LXX_FILES = ["book.tf", "chapter.tf", "verse.tf", "lex_utf8.tf"]
+
+MORPHLEX_SHA = "0dca2af89f413cbb24f617ddbdc347e9d798ddf3"
+MORPHLEX_URL = f"https://raw.githubusercontent.com/morphgnt/morphological-lexicon/{MORPHLEX_SHA}/lexemes.yaml"
 
 
 def fetch(url, dest, force):
@@ -78,6 +87,12 @@ def main():
             print("fetched", dest)
         else:
             skipped += 1
+    lex_dest = os.path.join(CORPUS, "lexicon", "lexemes.yaml")
+    if fetch(MORPHLEX_URL, lex_dest, a.force):
+        got += 1
+        print("fetched", lex_dest)
+    else:
+        skipped += 1
     print(f"\n{got} fetched, {skipped} already present.")
     if got == 0 and skipped == 0:
         sys.exit("nothing fetched -- check the file lists above")

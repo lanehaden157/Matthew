@@ -58,6 +58,18 @@ forked `app/` are in git history.
 - `.compare` and `aside.synoptic` are core components with their own chips (✦, ✧).
 - Take shell updates from `../bible-core/template/app/`; update core with
   `python ../bible-core/tools/core_sync.py .`.
+- **Interlinear glosses (core 0.9.2, plan D1):** `pipeline/corpus/lexicon/lexemes.yaml`
+  (MorphGNT's morphological lexicon; `python pipeline/fetch_corpus.py` fetches it,
+  `book.json` `paths.greek_lexicon` points at it) -- `emit` reads it. 100% coverage
+  on Matthew's own words.
+- **Phrase threads (core 0.9.2, plan D2):** `data/roots.json` can give a thread with
+  no single lemma (son-of-man, apo-tote, ...) a `"seq"` instead of `"ids"` -- see
+  `bible-core/ARCHITECTURE.md`. Matthew doesn't have `data/roots.json` yet (still
+  `pipeline/thread-stems.json`'s stem matching) -- that conversion is plan B, still open.
+- **Canon leads (core 0.9.2, plan D4):** `python -m biblecore leads` now works here
+  too (the LXX + rest-of-NT path, ported from `pipeline/canon_leads.py`, proven
+  against it). `pipeline/canon_leads.py` is still the one `pipeline/build.py` calls;
+  switching over is part of retiring `pipeline/` (plan E), not done yet.
 
 ## Guardrails worth keeping in mind
 
