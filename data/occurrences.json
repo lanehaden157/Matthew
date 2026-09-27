@@ -314,20 +314,12 @@
       "total": 3
     },
     "david": {
-      "count": 6,
+      "count": 4,
       "verses": [
-        1,
         6,
-        17,
-        20
+        17
       ],
       "hits": [
-        {
-          "v": 1,
-          "pre": "…he genesis (biblos geneseōs) of Jesus Anointed, son of ",
-          "hit": "David",
-          "post": ", son of Abraham.…"
-        },
         {
           "v": 6,
           "pre": "…and Jesse begot ",
@@ -351,15 +343,9 @@
           "pre": "…So all the generations from Abraham until ",
           "hit": "David",
           "post": " [are] fourteen generations, and from David until the d…"
-        },
-        {
-          "v": 20,
-          "pre": "…weh appeared to him in a dream, saying: Joseph, son of ",
-          "hit": "David",
-          "post": ", do not fear to take alongside Mary your wife, for the…"
         }
       ],
-      "total": 6
+      "total": 4
     },
     "dream": {
       "count": 1,
@@ -527,6 +513,28 @@
         }
       ],
       "total": 1
+    },
+    "son-of-david": {
+      "count": 2,
+      "verses": [
+        1,
+        20
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…ok of the genesis (biblos geneseōs) of Jesus Anointed, ",
+          "hit": "son of David",
+          "post": ", son of Abraham.…"
+        },
+        {
+          "v": 20,
+          "pre": "…of Yahweh appeared to him in a dream, saying: Joseph, ",
+          "hit": "son of David",
+          "post": ", do not fear to take alongside Mary your wife, for the…"
+        }
+      ],
+      "total": 2
     },
     "spirit": {
       "count": 2,
@@ -1024,6 +1032,21 @@
     }
   },
   "unit-03": {
+    "clean": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…whose winnowing-fork is in his hand, and he will ",
+          "hit": "thoroughly-clean",
+          "post": " his threshing-floor and will gather his wheat into the…"
+        }
+      ],
+      "total": 1
+    },
     "father": {
       "count": 1,
       "verses": [
@@ -1924,6 +1947,21 @@
         }
       ],
       "total": 3
+    },
+    "clean": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…Blessed are the ",
+          "hit": "pure",
+          "post": " in heart, for they shall see God.…"
+        }
+      ],
+      "total": 1
     },
     "enemy": {
       "count": 2,

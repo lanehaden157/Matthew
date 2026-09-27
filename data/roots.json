@@ -46,9 +46,11 @@
     "clean": {
       "ids": [
         "akathartos",
-        "katharizō"
+        "diakatharizō",
+        "katharizō",
+        "katharos"
       ],
-      "note": "Promoted from unit-08's local palette when katharizō recurred in the mission charge at 10:8. akathartos ('unclean', 10:1, 12:43) is in the set: the fragments tag it under this root. katharos ('pure', 5:8) and diakatharizō (3:12) share the kathar- root but are untagged, so left out."
+      "note": "Promoted from unit-08's local palette when katharizō recurred in the mission charge at 10:8. The whole kathar- family is tracked: katharizō (cleanse), katharos (clean, pure), akathartos (unclean), diakatharizō (clear out thoroughly)."
     },
     "come-here": {
       "ids": [

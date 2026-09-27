@@ -173,6 +173,19 @@
       "unit": "unit-06",
       "from": "<div class=\"prayer\">",
       "to": "<div class=\"prayer\" data-verses=\"6:9–13\">"
+    },
+    {
+      "_c": "1:1 and 1:20 are the title 'son of David', not just the name: the thread's phrase span replaces the local `david` span there (lineage mentions elsewhere, e.g. 1:6, stay local)."
+    },
+    {
+      "unit": "unit-01",
+      "from": "</sup> son of <span class=\"r\" data-root=\"david\">David</span>, son of Abraham",
+      "to": "</sup> <span class=\"r\" data-root=\"son-of-david\" data-w=\"01010106\">son of David</span>, son of Abraham"
+    },
+    {
+      "unit": "unit-01",
+      "from": "Joseph, son of <span class=\"r\" data-root=\"david\">David</span>",
+      "to": "Joseph, <span class=\"r\" data-root=\"son-of-david\" data-w=\"01012015\">son of David</span>"
     }
   ],
   "add": [
@@ -228,6 +241,23 @@
       "root": "clean",
       "text": "made clean",
       "w": "01110507"
+    },
+    {
+      "_c": "The whole kathar- family is the `clean` thread: diakatharizō (3:12) and katharos (5:8) were the two untagged occurrences."
+    },
+    {
+      "unit": "unit-03",
+      "verse": 12,
+      "root": "clean",
+      "text": "thoroughly-clean",
+      "w": "01031209"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 8,
+      "root": "clean",
+      "text": "pure",
+      "w": "01050803"
     }
   ]
 }
