@@ -28,7 +28,7 @@
   "checks": {
     "opens_note_required": false
   },
-  "core": "0.9.3",
+  "core": "0.9.4",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse"
 }

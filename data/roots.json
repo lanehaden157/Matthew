@@ -45,9 +45,10 @@
     },
     "clean": {
       "ids": [
+        "akathartos",
         "katharizō"
       ],
-      "note": "Promoted from unit-08's local palette when katharizō recurred in the mission charge at 10:8."
+      "note": "Promoted from unit-08's local palette when katharizō recurred in the mission charge at 10:8. akathartos ('unclean', 10:1, 12:43) is in the set: the fragments tag it under this root. katharos ('pure', 5:8) and diakatharizō (3:12) share the kathar- root but are untagged, so left out."
     },
     "come-here": {
       "ids": [
@@ -280,7 +281,13 @@
         "nomos",
         "prophētēs"
       ],
-      "note": "Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed. Matched in this order (5:17, 7:12, 22:40); 11:13 reverses the pair ('all the prophets and the law') and is NOT caught by this seq -- a single ordered seq can't cover both orders. Tagged by hand there; a known audit gap, not a missing occurrence."
+      "note": "Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed. seq matches 'the Law and the Prophets' (5:17, 7:12, 22:40); alt matches the reversed 'the prophets and the law' (11:13).",
+      "alt": [
+        [
+          "prophētēs",
+          "nomos"
+        ]
+      ]
     },
     "lawlessness": {
       "ids": [
@@ -290,10 +297,11 @@
     },
     "learn": {
       "ids": [
+        "manthanō",
         "mathētēs",
         "mathēteuō"
       ],
-      "note": "mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible."
+      "note": "mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible. manthanō (the verb 'learn', 9:13, 11:29) is in the set: the fragments tag it under this root."
     },
     "light": {
       "ids": [
@@ -486,14 +494,12 @@
     },
     "throw": {
       "ids": [
-        "amphiblēstron",
         "ballō",
         "ekballō",
         "epiballō",
-        "epiblēma",
         "periballō"
       ],
-      "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later."
+      "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later. amphiblēstron ('cast-net', 4:18) and epiblēma ('patch', 9:16) are NOT in this set: nouns the old stem match only caught by substring, and the fragments leave them untagged."
     },
     "torment": {
       "ids": [

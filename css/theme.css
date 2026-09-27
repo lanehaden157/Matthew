@@ -109,3 +109,5 @@
   .unit .triad .cnt { white-space: normal; }
 }
 .unit .ringrow.center { background: var(--panel-2); }
+/* class="rl" (root-linked, uncounted) in legend rows keeps the italic the counted .r had there */
+.unit .legend .rl { font-style: italic; }

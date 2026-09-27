@@ -5521,6 +5521,55 @@
       ],
       "total": 2
     },
+    "learn": {
+      "count": 6,
+      "verses": [
+        1,
+        24,
+        25,
+        37,
+        42
+      ],
+      "hits": [
+        {
+          "v": 37,
+          "pre": "…Then he says to his ",
+          "hit": "learners",
+          "post": ": \"The harvest indeed is much, but the workers are few.…"
+        },
+        {
+          "v": 1,
+          "pre": "…And summoning his twelve ",
+          "hit": "learners",
+          "post": ", he gave them authority over unclean spirits, so as to…"
+        },
+        {
+          "v": 24,
+          "pre": "…A ",
+          "hit": "learner",
+          "post": " is not above the teacher, nor a slave above his master…"
+        },
+        {
+          "v": 25,
+          "pre": "…Enough for the ",
+          "hit": "learner",
+          "post": " that he become as his teacher, and the slave as his ma…"
+        },
+        {
+          "v": 42,
+          "pre": "…es only a cup of cold water to drink, in the name of a ",
+          "hit": "learner",
+          "post": " — amen I say to y'all, he will certainly not lose his…"
+        },
+        {
+          "v": null,
+          "pre": "…, when Jesus finished laying out orders for his twelve ",
+          "hit": "learners",
+          "post": ", he moved on from there to teach and to proclaim in th…"
+        }
+      ],
+      "total": 6
+    },
     "light": {
       "count": 1,
       "verses": [
@@ -5995,6 +6044,21 @@
         }
       ],
       "total": 2
+    },
+    "clean": {
+      "count": 1,
+      "verses": [
+        5
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…ople see again and lame people walk around, lepers are ",
+          "hit": "made clean",
+          "post": " and the deaf hear, and dead people are raised, and poo…"
+        }
+      ],
+      "total": 1
     },
     "come-here": {
       "count": 1,
