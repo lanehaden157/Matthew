@@ -1,0 +1,573 @@
+{
+  "_note": "Tracked-thread id sets (ARCHITECTURE.md plan B, 2026-09-27). Derived from pipeline/thread-stems.json's stem policy via bible-core's tools/stems_to_roots.py -- every id here is a lemma id in Matthew-words.tsv, checked against exactly one other root's claim (biblecore.roots.validate). Six of thread-stems.json's seven 'phrase: true' threads really are fixed multi-word titles and use `seq` instead of `ids` (plan D2): son-of-man, son-of-david, law-prophets, apo-tote, completion-of-age, weeping-grinding. The seventh, little-faith (oligopistoi), turned out on inspection to be one compound Greek word, not a phrase -- an ordinary `ids` entry below.",
+  "version": 1,
+  "roots": {
+    "acts-of-power": {
+      "ids": [
+        "dynamis"
+      ],
+      "note": "dynamis — 'act of power, mighty work.' Kept literal rather than 'miracle' (which implies a modern category of the supernatural Matthew doesn't use) or 'power' alone (which loses the countable, event-shaped sense — these are things done, plural)."
+    },
+    "anxious": {
+      "ids": [
+        "merimnaō",
+        "merimna"
+      ],
+      "note": "Promoted from unit-06's local palette when merimnaō recurred at 10:19. Related to merizō, 'to divide' — kept as the clumsier 'pulled apart with care' rather than smoother 'worry' or 'anxious,' to keep the division-sense visible."
+    },
+    "apo-tote": {
+      "seq": [
+        "apo",
+        "tote"
+      ],
+      "note": "Two 'from that time' hinges: 4:17 ('began to proclaim') <-> 16:21 ('began to show he must suffer'). Read the two together at Unit 17. gap set to 1 (adjacent only) -- 'apo' and 'tote' are both far too common separately to risk the default gap of 4. Book-wide this is exactly 3 occurrences: 4:17, 16:21, and 26:16 (Judas) -- the third isn't in threads.json's payoffs list but is the same idiom.",
+      "gap": 1
+    },
+    "authority": {
+      "ids": [
+        "exousia"
+      ],
+      "note": "The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18)."
+    },
+    "build": {
+      "ids": [
+        "oikodomeō",
+        "oikodomē"
+      ],
+      "note": "The wise builder builds on rock (7:24) -> 'I will build my assembly' (16:18)."
+    },
+    "call": {
+      "ids": [
+        "kaleō",
+        "klētos"
+      ],
+      "note": "kaleō — the naming at 1:21 ('you shall call his name Jesus') becomes the calling of the unworthy (9:13) and the vocabulary of the kingdom's invitations. Distinct from prefixed compounds (parakaleō 'urge', proskaleomai 'summon', ekklēsia 'assembly'), each its own word."
+    },
+    "clean": {
+      "ids": [
+        "katharizō"
+      ],
+      "note": "Promoted from unit-08's local palette when katharizō recurred in the mission charge at 10:8."
+    },
+    "come-here": {
+      "ids": [
+        "deute"
+      ],
+      "note": "deute — 'come here, and I will make you fishers of men' (4:19) is the thread's true open; the invitation returns at 11:28 to all who labor."
+    },
+    "completion-of-age": {
+      "seq": [
+        "synteleia",
+        "aiōn"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): fixed phrase synteleia tou aiōnos. Opens in a harvest parable, closes as the horizon of the Emmanuel promise. Ahead: 24:3; 28:20."
+    },
+    "counsel": {
+      "ids": [
+        "symboulion"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). The leaders 'take counsel' — 12:14, 22:15, 27:1, 27:7, 28:12: the plot from the Sabbath healing to the bribed guards."
+    },
+    "cross": {
+      "ids": [
+        "stauros",
+        "stauroō",
+        "systauroomai"
+      ],
+      "note": "stauros — first at 10:38 as a general condition of following, well before any passion prediction; recurs at 16:24 and then the crucifixion itself."
+    },
+    "defame": {
+      "ids": [
+        "blasphēmeō",
+        "blasphēmia"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). Rendered 'defame' (not the loan-word 'blaspheme'; not 'slander', which is kept for diabolos). 9:3 changed from 'blasphemes' to match. Ahead: 15:19, 26:65, 27:39."
+    },
+    "enemy": {
+      "ids": [
+        "echthros"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): echthros / echthra. Ahead: 22:44."
+    },
+    "evil": {
+      "ids": [
+        "ponēria",
+        "ponēros"
+      ],
+      "note": "ponēros — tagged from its first occurrence (5:11) but the tracked thread proper opens at the Lord's Prayer's 'deliver us from the evil one' (6:13), which the Sermon and the parables keep answering."
+    },
+    "eye": {
+      "ids": [
+        "monophthalmos",
+        "ophthalmos"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): a unit-07 local root recurring at 13:15–16. ophthalmos, every form."
+    },
+    "faith": {
+      "ids": [
+        "apistia",
+        "apistos",
+        "pisteuō",
+        "pistis",
+        "pistos"
+      ],
+      "note": "The centurion's pistis (8:10, 'not even in Israel') vs. the disciples' oligopistoi (see little-faith). Runs through the healings to 15:28 and the mountain-moving sayings."
+    },
+    "father": {
+      "ids": [
+        "patēr"
+      ],
+      "note": "patēr — tagged at every occurrence including the ordinary human sense (2:22, Herod's father); the tracked thread proper opens at 5:16, 'your Father who is in the skies,' Matthew's characteristic address for God."
+    },
+    "fear": {
+      "ids": [
+        "phobeomai",
+        "phobos"
+      ],
+      "note": "phobeō — the mē phobeisthe imperative saturates 10:26-31 and then recurs verbatim at the two most loaded moments, the sea (14:27) and the empty tomb (28:5, 10)."
+    },
+    "fish": {
+      "ids": [
+        "halieus"
+      ],
+      "note": "'Fishers of men' (4:19) carries OT judgement freight (Jer 16:16; Hab 1; Amos 4; Ezek 29) in tension with gathering-for-restoration."
+    },
+    "follow": {
+      "ids": [
+        "akoloutheō"
+      ],
+      "note": "Used of the four (4:20, 22) AND of the crowds (4:25); the ambiguity is what 5:1 opens on. A discipleship keyword from Unit 4 on."
+    },
+    "foolish": {
+      "ids": [
+        "mōrainō",
+        "mōros"
+      ],
+      "note": "The foolish builder on sand (7:26); 'fools and blind' (23:17); the five foolish virgins (25:2)."
+    },
+    "fringe": {
+      "ids": [
+        "kraspedon"
+      ],
+      "note": "kraspedon — the tzitzit of Numbers 15:38. Touched in faith and healing at 9:20 and 14:36; worn for display at 23:5."
+    },
+    "fruit": {
+      "ids": [
+        "akarpos",
+        "karpophoreō",
+        "karpos"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20): unit-07 local root recurring at 12:33."
+    },
+    "fulfill": {
+      "ids": [
+        "anaplēroō",
+        "plēroō",
+        "plērēs",
+        "plērōma"
+      ],
+      "note": "plēroō — the formula-quotation verb (1:22 and on) becomes Jesus' own stated relationship to the Law and the Prophets (5:17)."
+    },
+    "gather": {
+      "ids": [
+        "episynagō",
+        "synagō"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): synagō · episynagō; synagōgē (synagogue) is a separate word and not tagged. John's harvest (3:12) is reframed as delayed at 13:30. Ahead: 22:10–34; 24:28, 31; 25:24–26."
+    },
+    "gehenna": {
+      "ids": [
+        "geenna"
+      ],
+      "note": "geenna — the Hinnom Valley's name for judgment, first at 5:22 (the Sermon's escalating anger-warnings), returning at 10:28 and the woes of 23."
+    },
+    "generation": {
+      "ids": [
+        "genea"
+      ],
+      "note": "genea shifts from the literal genealogical generations of 1:17 to a moral class of people, opening its tracked sense at 11:16 ('this generation'). The 1:17 occurrence is tagged for lexical completeness, not claimed as the same sense."
+    },
+    "gentle": {
+      "ids": [
+        "praus"
+      ],
+      "note": "praeis — 'blessed are the gentle' (5:5) is the thread's true open; Jesus claims the word of himself at 11:29."
+    },
+    "good-news": {
+      "ids": [
+        "euangelion",
+        "euangelizō"
+      ],
+      "note": "euangelion — the summary refrain of 4:23/9:35 becomes John's own answer at 11:5, then a global horizon (24:14) and the woman's memorial (26:13)."
+    },
+    "hand-over": {
+      "ids": [
+        "paradidōmi"
+      ],
+      "note": "paradidōmi — Judas is introduced by it at 10:4, then it fires three times for the disciples (10:17, 19, 21); from 17:22 on it becomes the governing verb of the passion."
+    },
+    "harvest": {
+      "ids": [
+        "therismos",
+        "theristēs",
+        "therizō"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): a unit-10 local root that recurred at 13:30, 39. therismos · theristēs · therizō. Ahead: reaping where you did not sow (25:24, 26)."
+    },
+    "heart": {
+      "ids": [
+        "kardia",
+        "sklērokardia"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): kardia, every form. Ahead: 15:8–19 (heart vs lips; what defiles) and 22:37 (the Shema)."
+    },
+    "hide": {
+      "ids": [
+        "enkryptō",
+        "kryphaios",
+        "kryptos",
+        "kryptō"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): kryptō and compounds; a unit-11 local root that recurred at 13:33, 35, 44. Ahead: the talent hidden in the ground (25:18, 25)."
+    },
+    "house": {
+      "ids": [
+        "oikia",
+        "oikiakos",
+        "oikos"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). oikia · oikos and oikiakos ('household'); oikodespotēs ('master of the house') is not tagged. Ahead: 'y'all's house is left desolate' (23:38)."
+    },
+    "householder": {
+      "ids": [
+        "oikodespotēs"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): oikodespotēs. The learner becomes like his master (10:25 → 13:52). The `house` thread deliberately excludes it. Ahead: 20:1, 11; 21:33; 24:43."
+    },
+    "immerse": {
+      "ids": [
+        "baptizō",
+        "baptisma",
+        "baptistēs"
+      ],
+      "note": "Promoted from unit-03's local palette when the noun baptistēs ('Immerser') recurred as John's title at 11:11-12. Rendered 'immerse / Immerser' throughout — never 'baptize / Baptist' — to keep the ordinary washing-verb sense audible."
+    },
+    "joy": {
+      "ids": [
+        "chairō",
+        "chara"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): chara and chairō ('rejoice'; also the 'Hail!' greetings at 26:49, 27:29). Rootless joy (13:20) against joy that sells everything (13:44). Ahead: 25:21, 23 and 28:8."
+    },
+    "judge": {
+      "ids": [
+        "katakrinō",
+        "krima",
+        "krinō",
+        "krisis",
+        "kritēs"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20): a unit-07 local root that recurred through 10:15, 11:22–24 and all of 12. krinō · krisis · kritēs · katakrinō; 5:40 krithēnai is rendered 'sue' (go to law)."
+    },
+    "kingdom": {
+      "ids": [
+        "basileia"
+      ],
+      "note": "basileia — 'the kingdom of the skies has drawn near' (3:2, 4:17) governs the Sermon's beatitudes and the parables to come. Distinct from basileus 'king' (10:18, 17:25, 18:23, 22:2), a different word not tracked here."
+    },
+    "law-prophets": {
+      "seq": [
+        "nomos",
+        "prophētēs"
+      ],
+      "note": "Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed. Matched in this order (5:17, 7:12, 22:40); 11:13 reverses the pair ('all the prophets and the law') and is NOT caught by this seq -- a single ordered seq can't cover both orders. Tagged by hand there; a known audit gap, not a missing occurrence."
+    },
+    "lawlessness": {
+      "ids": [
+        "anomia"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): anomia. Four occurrences, all at moments of judgment. Ahead: 23:28; 24:12."
+    },
+    "learn": {
+      "ids": [
+        "mathētēs",
+        "mathēteuō"
+      ],
+      "note": "mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible."
+    },
+    "light": {
+      "ids": [
+        "epiphōskō",
+        "phōs",
+        "phōteinos"
+      ],
+      "note": "Isa 9 light dawns on the people (4:16) -> 'y'all are the light of the world' (5:14). Watch the light/dark pair across the 4/5 seam."
+    },
+    "little-faith": {
+      "ids": [
+        "oligopistos",
+        "oligopistia"
+      ],
+      "note": "Matthew's near-nickname for the disciples (oligopistoi). Distinct from the `faith` thread (pistis, the centurion's) — different word, own colour."
+    },
+    "lose": {
+      "ids": [
+        "apollymi",
+        "apōleia"
+      ],
+      "note": "apollymi — the lost sheep (10:6), then the losing that is done on purpose (10:39) and a reward never lost (10:42); the lost sheep returns at 15:24 and 18:12-14."
+    },
+    "mercy": {
+      "ids": [
+        "eleaō",
+        "eleos",
+        "eleēmosynē",
+        "eleēmōn"
+      ],
+      "note": "Hosea 6:6 (eleos = LXX for hesed, covenant loyalty, not mere pity): 'I want loyal-love and not sacrifice.' Cited at 9:13, repeated at 12:7, cried out at 9:27."
+    },
+    "metanoia": {
+      "ids": [
+        "metanoia",
+        "metanoeō"
+      ],
+      "note": "metanoeite — John's proclamation (3:2), repeated on Jesus' own lips (4:17), returns as an indictment on the unrepentant towns (11:20)."
+    },
+    "nations": {
+      "ids": [
+        "ethnikos",
+        "ethnos"
+      ],
+      "note": "'Galilee of the nations' (4:15) -> 'make disciples of all the nations' (28:19). One leg of the Emmanuel/nations frame around the whole book."
+    },
+    "peace": {
+      "ids": [
+        "eirēnopoios",
+        "eirēnē"
+      ],
+      "note": "'Blessed are the peacemakers' (5:9) sets up the mission discourse's harder word: the peace a household may not deserve, and the sword Jesus says he brings instead (10:34)."
+    },
+    "permitted": {
+      "ids": [
+        "exesti"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). The legal-question verb; every Matthean use is a dispute over what Torah allows (14:4, 19:3, 20:15, 22:17, 27:6)."
+    },
+    "raise": {
+      "ids": [
+        "egeirō"
+      ],
+      "note": "egeirō spans the mundane (get up, rouse from sleep, 1:24) and the resurrection sense it grows into. Every occurrence tagged; the trajectory is 1:24 -> the healings -> 16:21 -> the empty tomb."
+    },
+    "release": {
+      "ids": [
+        "aphesis",
+        "aphiēmi"
+      ],
+      "note": "Same verb for letting go a debt, a fever, a boat, the dead. Unit 6 prayer -> Unit 8 healings -> Unit 9 forgiveness."
+    },
+    "rest": {
+      "ids": [
+        "anapausis",
+        "anapauō"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). Ahead: 'sleep on and take rest' (26:45)."
+    },
+    "righteous": {
+      "ids": [
+        "dikaios",
+        "dikaiosynē",
+        "dikaioō"
+      ],
+      "note": "dikaios / dikaiosynē — Joseph 'a righteous man' (1:19) opens it; the Sermon makes righteousness the thing hungered for, persecuted for, and exceeded (5:6-20), then sought first (6:33)."
+    },
+    "rock": {
+      "ids": [
+        "petra",
+        "petrōdes"
+      ],
+      "note": "The house founded on petra (7:24-25) -> Peter the rock (16:18). Distinct from Petros, the name."
+    },
+    "rotten": {
+      "ids": [
+        "sapros"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): sapros. Rotten tree and worthless catch share one verdict word."
+    },
+    "save": {
+      "ids": [
+        "diasōzō",
+        "sōzō"
+      ],
+      "note": "sōzō — 'he will save his people from their sins' (1:21) carries a heal/rescue double sense Matthew never forces apart, running to the irony at the cross."
+    },
+    "sea": {
+      "ids": [
+        "parathalassios",
+        "thalassa"
+      ],
+      "note": "Sea/Galilee geography in Unit 4; in Unit 8 the sea becomes a chaos-and-authority stage."
+    },
+    "seek": {
+      "ids": [
+        "epizēteō",
+        "zēteō"
+      ],
+      "note": "zēteō — Herod seeks the child to destroy him (2:13); the Sermon turns the same verb toward the kingdom (6:33) and toward prayer itself (7:7)."
+    },
+    "shake": {
+      "ids": [
+        "seismos"
+      ],
+      "note": "The 'great seismos' on the sea (8:24) is the same word as the earthquakes at the cross and the tomb."
+    },
+    "sign": {
+      "ids": [
+        "sēmeion"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20). The sign of Jonah; returns at 16:1–4, 24:3, 24:24, 24:30 and Judas's sign (26:48)."
+    },
+    "sin": {
+      "ids": [
+        "hamartanō",
+        "hamartia",
+        "hamartōlos"
+      ],
+      "note": "hamartia / hamartōlos — named at 1:21 as the thing the whole rescue is aimed at ('he will save his people from their sins'), not political liberation. Runs through John's baptism of confession (3:6) to Unit 9, where releasing sins and healing a body are made one act (9:2-6) and the sinners themselves are who Jesus says he came to call (9:10-13), and lands at the cup (26:28). Pairs with save (1:21) and release (aphiēmi, 9:2)."
+    },
+    "skandalon": {
+      "ids": [
+        "skandalon",
+        "skandalizō"
+      ],
+      "note": "skandalizō — the eye/hand that trips you up (5:29-30) is the thread's true open; the little beatitude of 11:6 warns John gently, then 26:31-33 pays it off catastrophically."
+    },
+    "snatch": {
+      "ids": [
+        "diarpazō",
+        "harpagē",
+        "harpazō"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): harpazō and compounds (diarpazō); harpax ('ravenous', 7:15) deliberately left untagged. A tight three-unit arc: the kingdom snatched, the strong man plundered, the seed snatched back."
+    },
+    "son-of-david": {
+      "seq": [
+        "huios",
+        "dauid"
+      ],
+      "note": "First direct address at 9:27, always a cry from the desperate and always tied to healing — the 'therapeutic Son of David' pattern. Runs to the entry and the temple (21:9, 15)."
+    },
+    "son-of-man": {
+      "seq": [
+        "huios",
+        "anthrōpos"
+      ],
+      "note": "Daniel 7:13-14 — one like a son of man given everlasting dominion. Runs from 8:20 to the trial and the parousia."
+    },
+    "spirit": {
+      "ids": [
+        "pneuma"
+      ],
+      "note": "pneuma — conceived of the Holy Spirit (1:18) to the Spirit descending like a dove (3:16) to the Sermon's first beatitude (5:3) to the unforgivable sin against the Spirit (12:31-32)."
+    },
+    "test": {
+      "ids": [
+        "ekpeirazō",
+        "peirasmos",
+        "peirazō"
+      ],
+      "note": "peirazō — 'the tester' approaches in the wilderness (4:3); the same verb returns whenever the Pharisees try to trap Jesus."
+    },
+    "thorn": {
+      "ids": [
+        "akantha"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): akantha; few occurrences, all placed. Gen 3:18 echo. Ahead: the crown of thorns (27:29)."
+    },
+    "throw": {
+      "ids": [
+        "amphiblēstron",
+        "ballō",
+        "ekballō",
+        "epiballō",
+        "epiblēma",
+        "periballō"
+      ],
+      "note": "Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later."
+    },
+    "torment": {
+      "ids": [
+        "basanistēs",
+        "basanizō",
+        "basanos"
+      ],
+      "note": "Inclusio inside Unit 8 — the servant tormented by illness (8:6) and the demons fearing torment (8:29). Watch for eschatological torment later."
+    },
+    "treasure": {
+      "ids": [
+        "thēsaurizō",
+        "thēsauros"
+      ],
+      "note": "Promoted at the unit-12 port (2026-09-20): unit-06 local root recurring at 12:35."
+    },
+    "understand": {
+      "ids": [
+        "synetos",
+        "syniēmi"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): syniēmi. Matthew credits the learners with it where Mark stresses their confusion. Ahead: 15:10; 16:12; 17:13."
+    },
+    "urge": {
+      "ids": [
+        "parakaleō"
+      ],
+      "note": "The centurion entreats (8:5), the demons entreat (8:31), the town entreats him to go (8:34) — the same verb bends from faith to rejection."
+    },
+    "wage": {
+      "ids": [
+        "misthoomai",
+        "misthos"
+      ],
+      "note": "misthos — 'great is your wage in the skies' (5:12) sets the terms the Sermon keeps returning to: a wage that can be spent early (6:1-16) or never lost (10:42)."
+    },
+    "weeping-grinding": {
+      "seq": [
+        "klauthmos",
+        "brygmos",
+        "odous"
+      ],
+      "note": "Promoted at the unit-13 port (2026-09-26): fixed phrase, Matthew's signature refrain. Ahead: 22:13; 24:51; 25:30."
+    },
+    "well-pleased": {
+      "ids": [
+        "eudokeō",
+        "eudokia"
+      ],
+      "note": "eudokēsa — the Father's voice at the baptism (3:17) is the thread's true open; the same word recurs in Jesus' prayer at 11:26."
+    },
+    "wise": {
+      "ids": [
+        "phronimos"
+      ],
+      "note": "The shrewd builder on rock (7:24); shrewd as snakes for the road (10:16); the faithful and shrewd slave (24:45); the five shrewd virgins (25:2)."
+    },
+    "withdraw": {
+      "ids": [
+        "anachōreō"
+      ],
+      "note": "anachōreō — the magi withdraw by another road (2:12); Joseph withdraws to Egypt then Nazareth (2:13-22); Jesus withdraws at news of John's arrest (4:12) and before the ruler's daughter is raised (9:24)."
+    },
+    "worship": {
+      "ids": [
+        "proskyneō"
+      ],
+      "note": "proskyneō — the magi's worship (2:2, 2:11) is what the devil demands for himself (4:9) and Jesus refuses him with Deut 6:13; the risen Jesus receives it again at 28:9, 17."
+    },
+    "worthy": {
+      "ids": [
+        "axios"
+      ],
+      "note": "axios — fruit worthy of repentance (3:8) becomes the mission discourse's repeated test of who and what is worthy (10:10-38)."
+    }
+  }
+}

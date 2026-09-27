@@ -280,7 +280,7 @@ word_id	ref	surface	lemma	morph
 01011804	Matt.1.18	χριστοῦ	christos	N-:----GSM-
 01011805	Matt.1.18	ἡ	ho	RA:----NSF-
 01011806	Matt.1.18	γένεσις	genesis	N-:----NSF-
-01011807	Matt.1.18	οὕτως	houtō(s)	D-:--------
+01011807	Matt.1.18	οὕτως	houtō	D-:--------
 01011808	Matt.1.18	ἦν	eimi	V-:3IAI-S--
 01011809	Matt.1.18	μνηστευθείσης	mnēsteuomai	V-:-APPGSF-
 01011810	Matt.1.18	τῆς	ho	RA:----GSF-
@@ -510,7 +510,7 @@ word_id	ref	surface	lemma	morph
 01020506	Matt.2.5	Βηθλέεμ	bēthleem	N-:----DSF-
 01020507	Matt.2.5	τῆς	ho	RA:----GSF-
 01020508	Matt.2.5	Ἰουδαίας	ioudaia	N-:----GSF-
-01020509	Matt.2.5	οὕτως	houtō(s)	D-:--------
+01020509	Matt.2.5	οὕτως	houtō	D-:--------
 01020510	Matt.2.5	γὰρ	gar	C-:--------
 01020511	Matt.2.5	γέγραπται	graphō	V-:3XPI-S--
 01020512	Matt.2.5	διὰ	dia	P-:--------
@@ -1171,7 +1171,7 @@ word_id	ref	surface	lemma	morph
 01031507	Matt.3.15	αὐτόν	autos	RP:----ASM-
 01031508	Matt.3.15	Ἄφες	aphiēmi	V-:2AAD-S--
 01031509	Matt.3.15	ἄρτι	arti	D-:--------
-01031510	Matt.3.15	οὕτως	houtō(s)	D-:--------
+01031510	Matt.3.15	οὕτως	houtō	D-:--------
 01031511	Matt.3.15	γὰρ	gar	C-:--------
 01031512	Matt.3.15	πρέπον	prepō	V-:-PAPNSN-
 01031513	Matt.3.15	ἐστὶν	eimi	V-:3PAI-S--
@@ -1774,7 +1774,7 @@ word_id	ref	surface	lemma	morph
 01051209	Matt.5.12	ἐν	en	P-:--------
 01051210	Matt.5.12	τοῖς	ho	RA:----DPM-
 01051211	Matt.5.12	οὐρανοῖς	ouranos	N-:----DPM-
-01051212	Matt.5.12	οὕτως	houtō(s)	D-:--------
+01051212	Matt.5.12	οὕτως	houtō	D-:--------
 01051213	Matt.5.12	γὰρ	gar	C-:--------
 01051214	Matt.5.12	ἐδίωξαν	diōkō	V-:3AAI-P--
 01051215	Matt.5.12	τοὺς	ho	RA:----APM-
@@ -1841,7 +1841,7 @@ word_id	ref	surface	lemma	morph
 01051518	Matt.5.15	ἐν	en	P-:--------
 01051519	Matt.5.15	τῇ	ho	RA:----DSF-
 01051520	Matt.5.15	οἰκίᾳ	oikia	N-:----DSF-
-01051601	Matt.5.16	οὕτως	houtō(s)	D-:--------
+01051601	Matt.5.16	οὕτως	houtō	D-:--------
 01051602	Matt.5.16	λαμψάτω	lampō	V-:3AAD-S--
 01051603	Matt.5.16	τὸ	ho	RA:----NSN-
 01051604	Matt.5.16	φῶς	phōs	N-:----NSN-
@@ -1918,7 +1918,7 @@ word_id	ref	surface	lemma	morph
 01051910	Matt.5.19	ἐλαχίστων	elachistos	A-:----GPFS
 01051911	Matt.5.19	καὶ	kai	C-:--------
 01051912	Matt.5.19	διδάξῃ	didaskō	V-:3AAS-S--
-01051913	Matt.5.19	οὕτως	houtō(s)	D-:--------
+01051913	Matt.5.19	οὕτως	houtō	D-:--------
 01051914	Matt.5.19	τοὺς	ho	RA:----APM-
 01051915	Matt.5.19	ἀνθρώπους	anthrōpos	N-:----APM-
 01051916	Matt.5.19	ἐλάχιστος	elachistos	A-:----NSMS
@@ -2662,7 +2662,7 @@ word_id	ref	surface	lemma	morph
 01060815	Matt.6.8	ὑμᾶς	sy	RP:----AP--
 01060816	Matt.6.8	αἰτῆσαι	aiteō	V-:-AAN----
 01060817	Matt.6.8	αὐτόν	autos	RP:----ASM-
-01060901	Matt.6.9	Οὕτως	houtō(s)	D-:--------
+01060901	Matt.6.9	Οὕτως	houtō	D-:--------
 01060902	Matt.6.9	οὖν	oun	C-:--------
 01060903	Matt.6.9	προσεύχεσθε	proseuchomai	V-:2PMD-P--
 01060904	Matt.6.9	ὑμεῖς	sy	RP:----NP--
@@ -3053,7 +3053,7 @@ word_id	ref	surface	lemma	morph
 01063013	Matt.6.30	βαλλόμενον	ballō	V-:-PPPASM-
 01063014	Matt.6.30	ὁ	ho	RA:----NSM-
 01063015	Matt.6.30	θεὸς	theos	N-:----NSM-
-01063016	Matt.6.30	οὕτως	houtō(s)	D-:--------
+01063016	Matt.6.30	οὕτως	houtō	D-:--------
 01063017	Matt.6.30	ἀμφιέννυσιν	amphiennymi	V-:3PAI-S--
 01063018	Matt.6.30	οὐ	ou	X-:--------
 01063019	Matt.6.30	πολλῷ	polys	A-:----DSN-
@@ -3311,7 +3311,7 @@ word_id	ref	surface	lemma	morph
 01071208	Matt.7.12	ὑμῖν	sy	RP:----DP--
 01071209	Matt.7.12	οἱ	ho	RA:----NPM-
 01071210	Matt.7.12	ἄνθρωποι	anthrōpos	N-:----NPM-
-01071211	Matt.7.12	οὕτως	houtō(s)	D-:--------
+01071211	Matt.7.12	οὕτως	houtō	D-:--------
 01071212	Matt.7.12	καὶ	kai	D-:--------
 01071213	Matt.7.12	ὑμεῖς	sy	RP:----NP--
 01071214	Matt.7.12	ποιεῖτε	poieō	V-:2PAD-P--
@@ -3399,7 +3399,7 @@ word_id	ref	surface	lemma	morph
 01071613	Matt.7.16	ἀπὸ	apo	P-:--------
 01071614	Matt.7.16	τριβόλων	tribolos	N-:----GPM-
 01071615	Matt.7.16	σῦκα	sykon	N-:----APN-
-01071701	Matt.7.17	οὕτως	houtō(s)	D-:--------
+01071701	Matt.7.17	οὕτως	houtō	D-:--------
 01071702	Matt.7.17	πᾶν	pas	A-:----NSN-
 01071703	Matt.7.17	δένδρον	dendron	N-:----NSN-
 01071704	Matt.7.17	ἀγαθὸν	agathos	A-:----NSN-
@@ -4779,7 +4779,7 @@ word_id	ref	surface	lemma	morph
 01093312	Matt.9.33	λέγοντες	legō	V-:-PAPNPM-
 01093313	Matt.9.33	Οὐδέποτε	oudepote	D-:--------
 01093314	Matt.9.33	ἐφάνη	phainō	V-:3API-S--
-01093315	Matt.9.33	οὕτως	houtō(s)	D-:--------
+01093315	Matt.9.33	οὕτως	houtō	D-:--------
 01093316	Matt.9.33	ἐν	en	P-:--------
 01093317	Matt.9.33	τῷ	ho	RA:----DSM-
 01093318	Matt.9.33	Ἰσραήλ	israēl	N-:----DSM-
@@ -5949,7 +5949,7 @@ word_id	ref	surface	lemma	morph
 01112321	Matt.11.23	σοί	sy	RP:----DS--
 01112322	Matt.11.23	ἔμεινεν	menō	V-:3AAI-S--
 01112323	Matt.11.23	ἂν	an	X-:--------
-01112324	Matt.11.23	μέχρι	mechri(s)	P-:--------
+01112324	Matt.11.23	μέχρι	mechri	P-:--------
 01112325	Matt.11.23	τῆς	ho	RA:----GSF-
 01112326	Matt.11.23	σήμερον	sēmeron	D-:--------
 01112401	Matt.11.24	πλὴν	plēn	C-:--------
@@ -5997,7 +5997,7 @@ word_id	ref	surface	lemma	morph
 01112602	Matt.11.26	ὁ	ho	RA:----NSM-
 01112603	Matt.11.26	πατήρ	patēr	N-:----NSM-
 01112604	Matt.11.26	ὅτι	hoti	C-:--------
-01112605	Matt.11.26	οὕτως	houtō(s)	D-:--------
+01112605	Matt.11.26	οὕτως	houtō	D-:--------
 01112606	Matt.11.26	εὐδοκία	eudokia	N-:----NSF-
 01112607	Matt.11.26	ἐγένετο	ginomai	V-:3AMI-S--
 01112608	Matt.11.26	ἔμπροσθέν	emprosthen	P-:--------
@@ -6115,7 +6115,7 @@ word_id	ref	surface	lemma	morph
 01120211	Matt.12.2	ποιοῦσιν	poieō	V-:3PAI-P--
 01120212	Matt.12.2	ὃ	hos	RR:----ASN-
 01120213	Matt.12.2	οὐκ	ou	D-:--------
-01120214	Matt.12.2	ἔξεστιν	exesti(n)	V-:3PAI-S--
+01120214	Matt.12.2	ἔξεστιν	exesti	V-:3PAI-S--
 01120215	Matt.12.2	ποιεῖν	poieō	V-:-PAN----
 01120216	Matt.12.2	ἐν	en	P-:--------
 01120217	Matt.12.2	σαββάτῳ	sabbaton	N-:----DSN-
@@ -6149,7 +6149,7 @@ word_id	ref	surface	lemma	morph
 01120413	Matt.12.4	ἔφαγον	esthiō	V-:3AAI-P--
 01120414	Matt.12.4	ὃ	hos	RR:----ASN-
 01120415	Matt.12.4	οὐκ	ou	D-:--------
-01120416	Matt.12.4	ἐξὸν	exesti(n)	V-:-PAPNSN-
+01120416	Matt.12.4	ἐξὸν	exesti	V-:-PAPNSN-
 01120417	Matt.12.4	ἦν	eimi	V-:3IAI-S--
 01120418	Matt.12.4	αὐτῷ	autos	RP:----DSM-
 01120419	Matt.12.4	φαγεῖν	esthiō	V-:-AAN----
@@ -6234,7 +6234,7 @@ word_id	ref	surface	lemma	morph
 01121009	Matt.12.10	αὐτὸν	autos	RP:----ASM-
 01121010	Matt.12.10	λέγοντες	legō	V-:-PAPNPM-
 01121011	Matt.12.10	Εἰ	ei	X-:--------
-01121012	Matt.12.10	ἔξεστι	exesti(n)	V-:3PAI-S--
+01121012	Matt.12.10	ἔξεστι	exesti	V-:3PAI-S--
 01121013	Matt.12.10	τοῖς	ho	RA:----DPN-
 01121014	Matt.12.10	σάββασιν	sabbaton	N-:----DPN-
 01121015	Matt.12.10	θεραπεύειν	therapeuō	V-:-PAN----
@@ -6273,7 +6273,7 @@ word_id	ref	surface	lemma	morph
 01121204	Matt.12.12	ἄνθρωπος	anthrōpos	N-:----NSM-
 01121205	Matt.12.12	προβάτου	probaton	N-:----GSN-
 01121206	Matt.12.12	ὥστε	hōste	C-:--------
-01121207	Matt.12.12	ἔξεστιν	exesti(n)	V-:3PAI-S--
+01121207	Matt.12.12	ἔξεστιν	exesti	V-:3PAI-S--
 01121208	Matt.12.12	τοῖς	ho	RA:----DPN-
 01121209	Matt.12.12	σάββασιν	sabbaton	N-:----DPN-
 01121210	Matt.12.12	καλῶς	kalōs	D-:--------
@@ -6758,7 +6758,7 @@ word_id	ref	surface	lemma	morph
 01124012	Matt.12.40	καὶ	kai	C-:--------
 01124013	Matt.12.40	τρεῖς	treis	A-:----APF-
 01124014	Matt.12.40	νύκτας	nyx	N-:----APF-
-01124015	Matt.12.40	οὕτως	houtō(s)	D-:--------
+01124015	Matt.12.40	οὕτως	houtō	D-:--------
 01124016	Matt.12.40	ἔσται	eimi	V-:3FMI-S--
 01124017	Matt.12.40	ὁ	ho	RA:----NSM-
 01124018	Matt.12.40	υἱὸς	huios	N-:----NSM-
@@ -6886,7 +6886,7 @@ word_id	ref	surface	lemma	morph
 01124523	Matt.12.45	χείρονα	cheirōn	A-:----NPNC
 01124524	Matt.12.45	τῶν	ho	RA:----GPN-
 01124525	Matt.12.45	πρώτων	prōtos	A-:----GPN-
-01124526	Matt.12.45	οὕτως	houtō(s)	D-:--------
+01124526	Matt.12.45	οὕτως	houtō	D-:--------
 01124527	Matt.12.45	ἔσται	eimi	V-:3FMI-S--
 01124528	Matt.12.45	καὶ	kai	D-:--------
 01124529	Matt.12.45	τῇ	ho	RA:----DSF-
@@ -7505,7 +7505,7 @@ word_id	ref	surface	lemma	morph
 01133001	Matt.13.30	ἄφετε	aphiēmi	V-:2AAD-P--
 01133002	Matt.13.30	συναυξάνεσθαι	synauxanomai	V-:-PPN----
 01133003	Matt.13.30	ἀμφότερα	amphoteroi	A-:----APN-
-01133004	Matt.13.30	μέχρι	mechri(s)	P-:--------
+01133004	Matt.13.30	μέχρι	mechri	P-:--------
 01133005	Matt.13.30	τοῦ	ho	RA:----GSM-
 01133006	Matt.13.30	θερισμοῦ	therismos	N-:----GSM-
 01133007	Matt.13.30	καὶ	kai	C-:--------
@@ -7732,7 +7732,7 @@ word_id	ref	surface	lemma	morph
 01134006	Matt.13.40	καὶ	kai	C-:--------
 01134007	Matt.13.40	πυρὶ	pyr	N-:----DSN-
 01134008	Matt.13.40	καίεται	kaiō	V-:3PPI-S--
-01134009	Matt.13.40	οὕτως	houtō(s)	D-:--------
+01134009	Matt.13.40	οὕτως	houtō	D-:--------
 01134010	Matt.13.40	ἔσται	eimi	V-:3FMI-S--
 01134011	Matt.13.40	ἐν	en	P-:--------
 01134012	Matt.13.40	τῇ	ho	RA:----DSF-
@@ -7887,7 +7887,7 @@ word_id	ref	surface	lemma	morph
 01134817	Matt.13.48	σαπρὰ	sapros	A-:----APN-
 01134818	Matt.13.48	ἔξω	exō	D-:--------
 01134819	Matt.13.48	ἔβαλον	ballō	V-:3AAI-P--
-01134901	Matt.13.49	οὕτως	houtō(s)	D-:--------
+01134901	Matt.13.49	οὕτως	houtō	D-:--------
 01134902	Matt.13.49	ἔσται	eimi	V-:3FMI-S--
 01134903	Matt.13.49	ἐν	en	P-:--------
 01134904	Matt.13.49	τῇ	ho	RA:----DSF-
@@ -8121,7 +8121,7 @@ word_id	ref	surface	lemma	morph
 01140404	Matt.14.4	ὁ	ho	RA:----NSM-
 01140405	Matt.14.4	Ἰωάννης	iōannēs	N-:----NSM-
 01140406	Matt.14.4	Οὐκ	ou	D-:--------
-01140407	Matt.14.4	ἔξεστίν	exesti(n)	V-:3PAI-S--
+01140407	Matt.14.4	ἔξεστίν	exesti	V-:3PAI-S--
 01140408	Matt.14.4	σοι	sy	RP:----DS--
 01140409	Matt.14.4	ἔχειν	echō	V-:-PAN----
 01140410	Matt.14.4	αὐτήν	autos	RP:----ASF-
@@ -9966,7 +9966,7 @@ word_id	ref	surface	lemma	morph
 01171215	Matt.17.12	αὐτῷ	autos	RP:----DSM-
 01171216	Matt.17.12	ὅσα	hosos	RR:----APN-
 01171217	Matt.17.12	ἠθέλησαν	thelō	V-:3AAI-P--
-01171218	Matt.17.12	οὕτως	houtō(s)	D-:--------
+01171218	Matt.17.12	οὕτως	houtō	D-:--------
 01171219	Matt.17.12	καὶ	kai	D-:--------
 01171220	Matt.17.12	ὁ	ho	RA:----NSM-
 01171221	Matt.17.12	υἱὸς	huios	N-:----NSM-
@@ -10524,7 +10524,7 @@ word_id	ref	surface	lemma	morph
 01181319	Matt.18.13	τοῖς	ho	RA:----DPN-
 01181320	Matt.18.13	μὴ	mē	D-:--------
 01181321	Matt.18.13	πεπλανημένοις	planaō	V-:-XPPDPN-
-01181401	Matt.18.14	οὕτως	houtō(s)	D-:--------
+01181401	Matt.18.14	οὕτως	houtō	D-:--------
 01181402	Matt.18.14	οὐκ	ou	D-:--------
 01181403	Matt.18.14	ἔστιν	eimi	V-:3PAI-S--
 01181404	Matt.18.14	θέλημα	thelēma	N-:----NSN-
@@ -10900,7 +10900,7 @@ word_id	ref	surface	lemma	morph
 01183413	Matt.18.34	πᾶν	pas	A-:----ASN-
 01183414	Matt.18.34	τὸ	ho	RA:----ASN-
 01183415	Matt.18.34	ὀφειλόμενον	opheilō	V-:-PPPASN-
-01183501	Matt.18.35	Οὕτως	houtō(s)	D-:--------
+01183501	Matt.18.35	Οὕτως	houtō	D-:--------
 01183502	Matt.18.35	καὶ	kai	D-:--------
 01183503	Matt.18.35	ὁ	ho	RA:----NSM-
 01183504	Matt.18.35	πατήρ	patēr	N-:----NSM-
@@ -10961,7 +10961,7 @@ word_id	ref	surface	lemma	morph
 01190307	Matt.19.3	καὶ	kai	C-:--------
 01190308	Matt.19.3	λέγοντες	legō	V-:-PAPNPM-
 01190309	Matt.19.3	Εἰ	ei	X-:--------
-01190310	Matt.19.3	ἔξεστιν	exesti(n)	V-:3PAI-S--
+01190310	Matt.19.3	ἔξεστιν	exesti	V-:3PAI-S--
 01190311	Matt.19.3	ἀνθρώπῳ	anthrōpos	N-:----DSM-
 01190312	Matt.19.3	ἀπολῦσαι	apolyō	V-:-AAN----
 01190313	Matt.19.3	τὴν	ho	RA:----ASF-
@@ -11055,7 +11055,7 @@ word_id	ref	surface	lemma	morph
 01190817	Matt.19.8	δὲ	de	C-:--------
 01190818	Matt.19.8	οὐ	ou	D-:--------
 01190819	Matt.19.8	γέγονεν	ginomai	V-:3XAI-S--
-01190820	Matt.19.8	οὕτως	houtō(s)	D-:--------
+01190820	Matt.19.8	οὕτως	houtō	D-:--------
 01190901	Matt.19.9	λέγω	legō	V-:1PAI-S--
 01190902	Matt.19.9	δὲ	de	C-:--------
 01190903	Matt.19.9	ὑμῖν	sy	RP:----DP--
@@ -11083,7 +11083,7 @@ word_id	ref	surface	lemma	morph
 01191003	Matt.19.10	οἱ	ho	RA:----NPM-
 01191004	Matt.19.10	μαθηταί	mathētēs	N-:----NPM-
 01191005	Matt.19.10	Εἰ	ei	C-:--------
-01191006	Matt.19.10	οὕτως	houtō(s)	D-:--------
+01191006	Matt.19.10	οὕτως	houtō	D-:--------
 01191007	Matt.19.10	ἐστὶν	eimi	V-:3PAI-S--
 01191008	Matt.19.10	ἡ	ho	RA:----NSF-
 01191009	Matt.19.10	αἰτία	aitia	N-:----NSF-
@@ -11116,7 +11116,7 @@ word_id	ref	surface	lemma	morph
 01191206	Matt.19.12	κοιλίας	koilia	N-:----GSF-
 01191207	Matt.19.12	μητρὸς	mētēr	N-:----GSF-
 01191208	Matt.19.12	ἐγεννήθησαν	gennaō	V-:3API-P--
-01191209	Matt.19.12	οὕτως	houtō(s)	D-:--------
+01191209	Matt.19.12	οὕτως	houtō	D-:--------
 01191210	Matt.19.12	καὶ	kai	C-:--------
 01191211	Matt.19.12	εἰσὶν	eimi	V-:3PAI-P--
 01191212	Matt.19.12	εὐνοῦχοι	eunouchos	N-:----NPM-
@@ -11669,7 +11669,7 @@ word_id	ref	surface	lemma	morph
 01201413	Matt.20.14	καὶ	kai	D-:--------
 01201414	Matt.20.14	σοί	sy	RP:----DS--
 01201501	Matt.20.15	οὐκ	ou	X-:--------
-01201502	Matt.20.15	ἔξεστίν	exesti(n)	V-:3PAI-S--
+01201502	Matt.20.15	ἔξεστίν	exesti	V-:3PAI-S--
 01201503	Matt.20.15	μοι	egō	RP:----DS--
 01201504	Matt.20.15	ὃ	hos	RR:----ASN-
 01201505	Matt.20.15	θέλω	thelō	V-:1PAI-S--
@@ -11687,7 +11687,7 @@ word_id	ref	surface	lemma	morph
 01201517	Matt.20.15	ἐγὼ	egō	RP:----NS--
 01201518	Matt.20.15	ἀγαθός	agathos	A-:----NSM-
 01201519	Matt.20.15	εἰμι	eimi	V-:1PAI-S--
-01201601	Matt.20.16	οὕτως	houtō(s)	D-:--------
+01201601	Matt.20.16	οὕτως	houtō	D-:--------
 01201602	Matt.20.16	ἔσονται	eimi	V-:3FMI-P--
 01201603	Matt.20.16	οἱ	ho	RA:----NPM-
 01201604	Matt.20.16	ἔσχατοι	eschatos	A-:----NPM-
@@ -11872,7 +11872,7 @@ word_id	ref	surface	lemma	morph
 01202518	Matt.20.25	κατεξουσιάζουσιν	katexousiazō	V-:3PAI-P--
 01202519	Matt.20.25	αὐτῶν	autos	RP:----GPN-
 01202601	Matt.20.26	οὐχ	ou	D-:--------
-01202602	Matt.20.26	οὕτως	houtō(s)	D-:--------
+01202602	Matt.20.26	οὕτως	houtō	D-:--------
 01202603	Matt.20.26	ἔσται	eimi	V-:3FMI-S--
 01202604	Matt.20.26	ἐν	en	P-:--------
 01202605	Matt.20.26	ὑμῖν	sy	RP:----DP--
@@ -13134,7 +13134,7 @@ word_id	ref	surface	lemma	morph
 01221704	Matt.22.17	τί	tis	RI:----NSN-
 01221705	Matt.22.17	σοι	sy	RP:----DS--
 01221706	Matt.22.17	δοκεῖ	dokeō	V-:3PAI-S--
-01221707	Matt.22.17	ἔξεστιν	exesti(n)	V-:3PAI-S--
+01221707	Matt.22.17	ἔξεστιν	exesti	V-:3PAI-S--
 01221708	Matt.22.17	δοῦναι	didōmi	V-:-AAN----
 01221709	Matt.22.17	κῆνσον	kēnsos	N-:----ASM-
 01221710	Matt.22.17	Καίσαρι	kaisar	N-:----DSM-
@@ -13966,7 +13966,7 @@ word_id	ref	surface	lemma	morph
 01232721	Matt.23.27	καὶ	kai	C-:--------
 01232722	Matt.23.27	πάσης	pas	A-:----GSF-
 01232723	Matt.23.27	ἀκαθαρσίας	akatharsia	N-:----GSF-
-01232801	Matt.23.28	οὕτως	houtō(s)	D-:--------
+01232801	Matt.23.28	οὕτως	houtō	D-:--------
 01232802	Matt.23.28	καὶ	kai	D-:--------
 01232803	Matt.23.28	ὑμεῖς	sy	RP:----NP--
 01232804	Matt.23.28	ἔξωθεν	exōthen	D-:--------
@@ -14565,7 +14565,7 @@ word_id	ref	surface	lemma	morph
 01242709	Matt.24.27	φαίνεται	phainō	V-:3PMI-S--
 01242710	Matt.24.27	ἕως	heōs	P-:--------
 01242711	Matt.24.27	δυσμῶν	dysmē	N-:----GPF-
-01242712	Matt.24.27	οὕτως	houtō(s)	D-:--------
+01242712	Matt.24.27	οὕτως	houtō	D-:--------
 01242713	Matt.24.27	ἔσται	eimi	V-:3FMI-S--
 01242714	Matt.24.27	ἡ	ho	RA:----NSF-
 01242715	Matt.24.27	παρουσία	parousia	N-:----NSF-
@@ -14698,7 +14698,7 @@ word_id	ref	surface	lemma	morph
 01243221	Matt.24.32	ἐγγὺς	engys	D-:--------
 01243222	Matt.24.32	τὸ	ho	RA:----NSN-
 01243223	Matt.24.32	θέρος	theros	N-:----NSN-
-01243301	Matt.24.33	οὕτως	houtō(s)	D-:--------
+01243301	Matt.24.33	οὕτως	houtō	D-:--------
 01243302	Matt.24.33	καὶ	kai	D-:--------
 01243303	Matt.24.33	ὑμεῖς	sy	RP:----NP--
 01243304	Matt.24.33	ὅταν	hotan	C-:--------
@@ -14767,7 +14767,7 @@ word_id	ref	surface	lemma	morph
 01243704	Matt.24.37	ἡμέραι	hēmera	N-:----NPF-
 01243705	Matt.24.37	τοῦ	ho	RA:----GSM-
 01243706	Matt.24.37	Νῶε	nōe	N-:----GSM-
-01243707	Matt.24.37	οὕτως	houtō(s)	D-:--------
+01243707	Matt.24.37	οὕτως	houtō	D-:--------
 01243708	Matt.24.37	ἔσται	eimi	V-:3FMI-S--
 01243709	Matt.24.37	ἡ	ho	RA:----NSF-
 01243710	Matt.24.37	παρουσία	parousia	N-:----NSF-
@@ -14809,7 +14809,7 @@ word_id	ref	surface	lemma	morph
 01243908	Matt.24.39	καὶ	kai	C-:--------
 01243909	Matt.24.39	ἦρεν	airō	V-:3AAI-S--
 01243910	Matt.24.39	ἅπαντας	hapas	A-:----APM-
-01243911	Matt.24.39	οὕτως	houtō(s)	D-:--------
+01243911	Matt.24.39	οὕτως	houtō	D-:--------
 01243912	Matt.24.39	ἔσται	eimi	V-:3FMI-S--
 01243913	Matt.24.39	καὶ	kai	D-:--------
 01243914	Matt.24.39	ἡ	ho	RA:----NSF-
@@ -14922,7 +14922,7 @@ word_id	ref	surface	lemma	morph
 01244608	Matt.24.46	κύριος	kyrios	N-:----NSM-
 01244609	Matt.24.46	αὐτοῦ	autos	RP:----GSM-
 01244610	Matt.24.46	εὑρήσει	heuriskō	V-:3FAI-S--
-01244611	Matt.24.46	οὕτως	houtō(s)	D-:--------
+01244611	Matt.24.46	οὕτως	houtō	D-:--------
 01244612	Matt.24.46	ποιοῦντα	poieō	V-:-PAPASM-
 01244701	Matt.24.47	ἀμὴν	amēn	X-:--------
 01244702	Matt.24.47	λέγω	legō	V-:1PAI-S--
@@ -16389,7 +16389,7 @@ word_id	ref	surface	lemma	morph
 01264011	Matt.26.40	λέγει	legō	V-:3PAI-S--
 01264012	Matt.26.40	τῷ	ho	RA:----DSM-
 01264013	Matt.26.40	Πέτρῳ	petros	N-:----DSM-
-01264014	Matt.26.40	Οὕτως	houtō(s)	D-:--------
+01264014	Matt.26.40	Οὕτως	houtō	D-:--------
 01264015	Matt.26.40	οὐκ	ou	D-:--------
 01264016	Matt.26.40	ἰσχύσατε	ischyō	V-:2AAI-P--
 01264017	Matt.26.40	μίαν	heis	A-:----ASF-
@@ -16631,7 +16631,7 @@ word_id	ref	surface	lemma	morph
 01265404	Matt.26.54	αἱ	ho	RA:----NPF-
 01265405	Matt.26.54	γραφαὶ	graphē	N-:----NPF-
 01265406	Matt.26.54	ὅτι	hoti	D-:--------
-01265407	Matt.26.54	οὕτως	houtō(s)	D-:--------
+01265407	Matt.26.54	οὕτως	houtō	D-:--------
 01265408	Matt.26.54	δεῖ	deō	V-:3PAI-S--
 01265409	Matt.26.54	γενέσθαι	ginomai	V-:-AMN----
 01265501	Matt.26.55	ἐν	en	P-:--------
@@ -17070,7 +17070,7 @@ word_id	ref	surface	lemma	morph
 01270606	Matt.27.6	ἀργύρια	argyrion	N-:----APN-
 01270607	Matt.27.6	εἶπαν	legō	V-:3AAI-P--
 01270608	Matt.27.6	Οὐκ	ou	D-:--------
-01270609	Matt.27.6	ἔξεστιν	exesti(n)	V-:3PAI-S--
+01270609	Matt.27.6	ἔξεστιν	exesti	V-:3PAI-S--
 01270610	Matt.27.6	βαλεῖν	ballō	V-:-AAN----
 01270611	Matt.27.6	αὐτὰ	autos	RP:----APN-
 01270612	Matt.27.6	εἰς	eis	P-:--------
@@ -18243,7 +18243,7 @@ word_id	ref	surface	lemma	morph
 01281513	Matt.28.15	οὗτος	houtos	RD:----NSM-
 01281514	Matt.28.15	παρὰ	para	P-:--------
 01281515	Matt.28.15	Ἰουδαίοις	ioudaios	A-:----DPM-
-01281516	Matt.28.15	μέχρι	mechri(s)	P-:--------
+01281516	Matt.28.15	μέχρι	mechri	P-:--------
 01281517	Matt.28.15	τῆς	ho	RA:----GSF-
 01281518	Matt.28.15	σήμερον	sēmeron	D-:--------
 01281519	Matt.28.15	ἡμέρας	hēmera	N-:----GSF-
