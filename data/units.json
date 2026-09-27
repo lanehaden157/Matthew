@@ -2,27 +2,63 @@
   "_note": "Unit manifest for the whole gospel. built units carry a roots map name -> {color, translit, gloss}. A root also listed in threads.json takes that thread's colour instead (global tier); the local color here is the fallback. Hand-maintained. (pipeline/extract_legends.py was a one-time backfill of translit/gloss out of the fragments' hand legends; it is retired and no longer part of build.py — do not re-run it.) Roots here that a thread also covers, and roots not (yet) tagged in the fragment, are both kept on purpose: the local entry is the fallback if a thread is ever demoted back to local.",
   "book": "Matthew",
   "unit_count": 28,
-  "movements": [
+  "groupings": [
     {
-      "id": 1,
-      "label": "The Person of the Messiah",
-      "range": "1:1-4:16/17"
-    },
-    {
-      "id": 2,
-      "label": "The Kingdom Proclaimed in Galilee",
-      "range": "4:17-16:20"
-    },
-    {
-      "id": 3,
-      "label": "The Road to the Cross",
-      "range": "16:21-28:20"
-    }
-  ],
-  "discourses": [
-    {
+      "kind": "movement",
       "n": 1,
-      "label": "Sermon on the Mount",
+      "name": "The Person of the Messiah",
+      "span": "1:1-4:16/17",
+      "units": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "movement",
+      "n": 2,
+      "name": "The Kingdom Proclaimed in Galilee",
+      "span": "4:17-16:20",
+      "units": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "kind": "movement",
+      "n": 3,
+      "name": "The Road to the Cross",
+      "span": "16:21-28:20",
+      "units": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "kind": "discourse",
+      "n": 1,
+      "name": "Sermon on the Mount",
       "units": [
         5,
         6,
@@ -30,29 +66,33 @@
       ]
     },
     {
+      "kind": "discourse",
       "n": 2,
-      "label": "The Mission",
+      "name": "The Mission",
       "units": [
         10
       ]
     },
     {
+      "kind": "discourse",
       "n": 3,
-      "label": "Parables of the Kingdom",
+      "name": "Parables of the Kingdom",
       "units": [
         13
       ]
     },
     {
+      "kind": "discourse",
       "n": 4,
-      "label": "Life in the Community",
+      "name": "Life in the Community",
       "units": [
         18
       ]
     },
     {
+      "kind": "discourse",
       "n": 5,
-      "label": "Woes & the Olivet Discourse",
+      "name": "Woes & the Olivet Discourse",
       "units": [
         23,
         24,
@@ -374,7 +414,8 @@
           "translit": "ponēros",
           "gloss": "evil / the evil one"
         }
-      }
+      },
+      "discourse": 1
     },
     {
       "n": 6,
@@ -419,7 +460,8 @@
           "translit": "zēteō · epizēteō",
           "gloss": "seek (zēt-)"
         }
-      }
+      },
+      "discourse": 1
     },
     {
       "n": 7,
@@ -474,7 +516,8 @@
           "translit": "pylē",
           "gloss": "gate"
         }
-      }
+      },
+      "discourse": 1
     },
     {
       "n": 8,
@@ -568,7 +611,8 @@
           "translit": "apostellō · apostolos",
           "gloss": "send out; one sent out, emissary"
         }
-      }
+      },
+      "discourse": 2
     },
     {
       "n": 11,
@@ -737,7 +781,8 @@
           "translit": "teleō",
           "gloss": "complete, finish"
         }
-      }
+      },
+      "discourse": 3
     },
     {
       "n": 14,
@@ -777,7 +822,8 @@
       "passage": "Matthew 18:1-35",
       "title": "Life in the Community",
       "movement": 3,
-      "built": false
+      "built": false,
+      "discourse": 4
     },
     {
       "n": 19,
@@ -817,7 +863,8 @@
       "passage": "Matthew 23:1-39",
       "title": "Seven Woes and a Lament",
       "movement": 3,
-      "built": false
+      "built": false,
+      "discourse": 5
     },
     {
       "n": 24,
@@ -825,7 +872,8 @@
       "passage": "Matthew 24:1-51",
       "title": "The Olivet Discourse (I): Temple and Son of Man",
       "movement": 3,
-      "built": false
+      "built": false,
+      "discourse": 5
     },
     {
       "n": 25,
@@ -833,7 +881,8 @@
       "passage": "Matthew 25:1-46",
       "title": "The Olivet Discourse (II): Three Parables of the End",
       "movement": 3,
-      "built": false
+      "built": false,
+      "discourse": 5
     },
     {
       "n": 26,

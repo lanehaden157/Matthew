@@ -37,6 +37,28 @@ something that might already have been done.
   fragment. The build regenerates it from there (see `refresh_meta.py`).
 - **Fresh clone:** `python pipeline/fetch_corpus.py` once, for `canon_leads.py`.
 
+## The site shell and bible-core (since 2026-09-26)
+
+The site runs bible-core's template shell, the one Numbers and Joshua run:
+`index.html`, `app/*.js`, and `css/core.css` + `components.css` +
+`division.css` (all generated) + `css/theme.css` (Matthew's own rings,
+triads, exodus tables, prayer block, Greek title). `css/styles.css` and the
+forked `app/` are in git history.
+
+- `book.json` + a vendored `biblecore/` drive the shell and its reader data:
+  `python -m biblecore corpus` (MorphGNT word table), `emit` (interlinear,
+  search text), `assets` (css, `data/components.json`), `manifest`. Run
+  `emit` + `manifest` after porting a unit.
+- Units are still ported and built with `pipeline/` (above). Don't run
+  `python -m biblecore build`, `port`, `migrate` or `test` here yet: the
+  fragments predate core's unit contract (no `data-w`, older meta blocks), so
+  those fail or would rewrite them. Moving the pipeline onto core is its own job.
+- Discourses are the shell's "overlay" grouping (`book.json` `overlay`);
+  `data/units.json` holds movements and discourses as `groupings`.
+- `.compare` and `aside.synoptic` are core components with their own chips (✦, ✧).
+- Take shell updates from `../bible-core/template/app/`; update core with
+  `python ../bible-core/tools/core_sync.py .`.
+
 ## Guardrails worth keeping in mind
 
 Rationale for each is in `PLAN.md`. These are strong defaults, not laws. Raise it with

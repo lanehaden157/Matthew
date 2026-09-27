@@ -1,0 +1,29 @@
+{
+  "book": "Matthew",
+  "osis": "Matt",
+  "abbrev": "Matt",
+  "slug": "matthew",
+  "language": "greek",
+  "versification": "source",
+  "corpus": {
+    "kind": "morphgnt",
+    "pin": "morphgnt/sblgnt",
+    "word_ids": true
+  },
+  "groupings": [
+    "movement",
+    "discourse"
+  ],
+  "components": [
+    "echo",
+    "itin",
+    "compare",
+    "synoptic"
+  ],
+  "paths": {
+    "morphgnt": "pipeline/corpus/morphgnt"
+  },
+  "core": "0.9.0",
+  "hub": "https://lanehaden157.github.io/bible/",
+  "overlay": "discourse"
+}
