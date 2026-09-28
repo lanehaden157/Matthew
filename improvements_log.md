@@ -880,3 +880,33 @@
 ## 2026-09-26 — Reference links synced
 - `reference links.txt` → `matthew_reference_links.md` (markdown, file inventory dropped in favour of `instructions.md`); added to TRACKED_FILES, README table, instructions.md synced list; style ref §5 points to it.
 - instructions.md: Bible Project teacher notes cover Matt 1–8 only; from ch. 9 name the literary-canonical source used.
+
+## 2026-09-28 — Phase E: pipeline/ onto bible-core (in progress, branch core-phase-e)
+- Swapped onto core, verified by diffing old script vs. `python -m biblecore <cmd>` on the
+  same committed tree in scratch copies: `refresh` (adds `discourse` + `note:""`, additive),
+  `scan`/`verify-occurrences` (byte-identical `occurrences.json`), `digest` (identical except
+  an intentionally updated header), `audit` (same 0-gap result), `leads` (trusted prior proof;
+  couldn't re-run here, no LXX corpus data in this container). Retired refresh_meta.py,
+  threads_digest.py, canon_leads.py, and the unreferenced one-shots (splice_synoptic.py,
+  extract_legends.py, wording_skies.py). book.json now declares `"sync"` file list so
+  `sync-check` works (matches check_project_sync.py's output exactly).
+- Found `pipeline/build.py` was NOT idempotent on HEAD even before this work:
+  `apply_retrofit.py` re-applies already-satisfied ops (double-wraps spans that already carry
+  `data-w`) and hard-fails on unit-12/13 `MISS` errors. Pre-existing, not caused by phase E;
+  reverted an accidental real-tree run before committing anything.
+- Still blocked (documented in the phase E PR, left on the old script): `port_artifact.py`
+  → `port` (core rejects unit-13's `descriptor` meta key, an undeclared legit field);
+  `apply_retrofit.py` → `retrofit` (core's `retrofit/retrofit-tags.json` is missing most of
+  `pipeline/retrofit-tags.json`'s entries — strip_span, untag_word, retag_word, unwrap, and
+  219 of 230 `add` entries — a hand-authored data merge for Lane, not a code swap);
+  `sync_to_github.py` → `sync` (core's `sync` always commits+pushes, no copy-only mode).
+- `python -m biblecore test` fails on ~6 units for reasons unrelated to pipeline/: inline
+  `--c-*` colour vars, inline `style=`, leftover native Greek script, mismatched
+  `aside.synoptic` anchors. Fragment-content cleanup, out of scope for this phase (Lane's call:
+  proceed with phase E, track this separately).
+- Colour: found 18 tracked/local roots within dE00 8 of the division theme's chrome accents
+  (`--accent-clay/bronze/jordan/olive/wine`) — burden, david, have, lose, acts-of-power,
+  lawlessness, generation, immerse, cross, dark, faith, law-prophets, raise, come-here,
+  wilderness, torment, well-pleased, whole. No replacement clears the existing 21-colour WELL
+  at dE00 ≥ 10 from everything else taken — the palette's already full (per palette.py's own
+  docstring). Reported only; nothing recoloured.

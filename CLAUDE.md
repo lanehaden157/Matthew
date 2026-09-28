@@ -28,14 +28,20 @@ something that might already have been done.
 
 - **New unit:** `python pipeline/port_artifact.py NN`, review
   `pipeline/out/thread-delta-NN.md`, Lane eyeballs it in the browser, commit.
+  (Phase E: `biblecore port` can't take this over yet — see "Phase E" below.)
 - **Anything else that touches fragments or `/data`:** run `python pipeline/build.py`
   without being asked. It refreshes the generated files and the `project-side/synced/`
-  mirror; commit the mirror with the change that caused it.
+  mirror; commit the mirror with the change that caused it. Under the hood this now
+  runs `pipeline/apply_retrofit.py` then `python -m biblecore refresh`, `scan`,
+  `verify-occurrences`, `digest`, then `pipeline/sync_to_github.py --copy-only`,
+  then the advisory `python -m biblecore audit` and `leads`.
 - **Changing a rendering** (a word choice, or a convention like y'all or sky/skies):
   update `translation-choices.md`'s row and Log section in the same turn.
 - **Editing a built unit's legend (translit/gloss):** edit `data/units.json`, not the
-  fragment. The build regenerates it from there (see `refresh_meta.py`).
-- **Fresh clone:** `python pipeline/fetch_corpus.py` once, for `canon_leads.py`.
+  fragment. The build regenerates it from there (`python -m biblecore refresh`).
+- **Checking what needs re-pasting into the Claude.ai project:**
+  `python -m biblecore sync-check` (book.json now declares the file list).
+- **Fresh clone:** `python pipeline/fetch_corpus.py` once, for `leads`.
 
 ## The site shell and bible-core (since 2026-09-26)
 
@@ -49,10 +55,17 @@ forked `app/` are in git history.
   `python -m biblecore corpus` (MorphGNT word table), `emit` (interlinear,
   search text), `assets` (css, `data/components.json`), `manifest`. Run
   `emit` + `manifest` after porting a unit.
-- Units are still ported and built with `pipeline/` (above). Don't run
-  `python -m biblecore build`, `port`, `migrate` or `test` here yet: the
-  fragments predate core's unit contract (no `data-w`, older meta blocks), so
-  those fail or would rewrite them. Moving the pipeline onto core is its own job.
+- **Phase E (moving `pipeline/` onto bible-core) is underway.** `refresh`, `scan`,
+  `verify-occurrences`, `digest`, `audit` and `leads` are live in `build.py` —
+  see the "Everyday workflow" table above. Still blocked, with the reason in the
+  phase E PR: `port` (rejects unit-13's `descriptor` meta key — a legit,
+  undeclared field), `retrofit` (core's `retrofit/retrofit-tags.json` is missing
+  most of `pipeline/retrofit-tags.json`'s hand-authored entries — a data
+  migration, not a code swap), and `build`/`migrate`/`test` as a whole (`test`
+  fails on ~6 units for reasons unrelated to the pipeline: inline `--c-*` colour
+  vars, inline `style=`, leftover native Greek script, mismatched
+  `aside.synoptic` anchors — fragment-content cleanup, tracked separately, not
+  part of retiring `pipeline/`). Don't run those four here until that's cleared.
 - Discourses are the shell's "overlay" grouping (`book.json` `overlay`);
   `data/units.json` holds movements and discourses as `groupings`.
 - `.compare` and `aside.synoptic` are core components with their own chips (✦, ✧).
@@ -66,10 +79,9 @@ forked `app/` are in git history.
   no single lemma (son-of-man, apo-tote, ...) a `"seq"` instead of `"ids"` -- see
   `bible-core/ARCHITECTURE.md`. Matthew doesn't have `data/roots.json` yet (still
   `pipeline/thread-stems.json`'s stem matching) -- that conversion is plan B, still open.
-- **Canon leads (core 0.9.2, plan D4):** `python -m biblecore leads` now works here
-  too (the LXX + rest-of-NT path, ported from `pipeline/canon_leads.py`, proven
-  against it). `pipeline/canon_leads.py` is still the one `pipeline/build.py` calls;
-  switching over is part of retiring `pipeline/` (plan E), not done yet.
+- **Canon leads (core 0.9.2, plan D4):** `python -m biblecore leads` is what
+  `pipeline/build.py`'s advisory step calls now; `pipeline/canon_leads.py` is
+  retired (phase E).
 
 ## Guardrails worth keeping in mind
 
