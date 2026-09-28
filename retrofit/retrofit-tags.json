@@ -83,38 +83,13 @@
     },
     {
       "unit": "unit-08",
-      "from": "></span><span class=\"r\" data-root=\"follow\">akoloutheō</span>",
-      "to": "></span><span class=\"rl\" data-root=\"follow\">akoloutheō</span>"
-    },
-    {
-      "unit": "unit-08",
       "from": "<span class=\"r\" data-root=\"throw\">ballō</span>",
       "to": "<span class=\"rl\" data-root=\"throw\">ballō</span>"
     },
     {
       "unit": "unit-08",
-      "from": "></span><span class=\"r\" data-root=\"release\">aphiēmi</span>",
-      "to": "></span><span class=\"rl\" data-root=\"release\">aphiēmi</span>"
-    },
-    {
-      "unit": "unit-08",
-      "from": "></span><span class=\"r\" data-root=\"torment\">basanizō</span>",
-      "to": "></span><span class=\"rl\" data-root=\"torment\">basanizō</span>"
-    },
-    {
-      "unit": "unit-08",
-      "from": "></span><span class=\"r\" data-root=\"urge\">parakaleō</span>",
-      "to": "></span><span class=\"rl\" data-root=\"urge\">parakaleō</span>"
-    },
-    {
-      "unit": "unit-08",
       "from": "<span class=\"r\" data-root=\"faith\">pistis / pisteuō</span>",
       "to": "<span class=\"rl\" data-root=\"faith\">pistis / pisteuō</span>"
-    },
-    {
-      "unit": "unit-08",
-      "from": "></span><span class=\"r\" data-root=\"authority\">exousia</span>",
-      "to": "></span><span class=\"rl\" data-root=\"authority\">exousia</span>"
     },
     {
       "unit": "unit-08",
@@ -125,11 +100,6 @@
       "unit": "unit-08",
       "from": "<span class=\"r\" data-root=\"raise\">egeirō</span>",
       "to": "<span class=\"rl\" data-root=\"raise\">egeirō</span>"
-    },
-    {
-      "unit": "unit-08",
-      "from": "></span><span class=\"r\" data-root=\"shake\">seismos</span>",
-      "to": "></span><span class=\"rl\" data-root=\"shake\">seismos</span>"
     },
     {
       "unit": "unit-08",
@@ -186,6 +156,516 @@
       "unit": "unit-01",
       "from": "Joseph, son of <span class=\"r\" data-root=\"david\">David</span>",
       "to": "Joseph, <span class=\"r\" data-root=\"son-of-david\" data-w=\"01012015\">son of David</span>"
+    },
+    {
+      "unit": "unit-01",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-beget)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-01",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-name)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-01",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-save)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-01",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-spirit)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-01",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-dream)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-01",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-with)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-01",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-david)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-beget)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-save)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-name)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-dream)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-david)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-worship)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-child)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-fulfill)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-withdraw)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span class=\"swatch\" style=\"background:#9a7a12\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-kingdom)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-repent)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-immerse)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-wilderness)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-test)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-son)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-right)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-spirit)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-worship)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-03",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-fulfill)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-04",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-light)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-04",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-dark)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-04",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-withdraw)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-04",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-kingdom)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-04",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-proclaim)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-04",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-follow)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-04",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-fish)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-04",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-sea)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-righteous)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-kingdom)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-father)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-said)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-isay)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-whole)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-gehenna)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-evil)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-05",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-yall)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-wage)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-father)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-hidden)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-seen)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-treasure)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-release)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-anxious)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-right)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-seek)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-beget)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-worship)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-dream)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-name)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-with)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-spirit)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-child)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-save)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-fulfill)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-follow)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-throw)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-touch)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-release)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-torment)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-urge)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-faith)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-authority)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-clean)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-raise)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<span class=\"swatch\" style=\"background:var(--c-shake)\"></span>",
+      "to": "",
+      "why": "core phase D: hand-written legend swatch with a --c-* var / inline style; the shell rebuilds the colour key from data (app/threads.js rebuildLegend)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<small style=\"font-weight:400;color:var(--ink-soft)\">(East)</small>",
+      "to": "<small>(East)</small>",
+      "why": "core phase D: no inline style in a fragment; the look moved to theme.css (.itin .stop small)"
+    },
+    {
+      "unit": "unit-02",
+      "from": "<span style=\"font-variant:small-caps\">NASB</span>",
+      "to": "<span class=\"sc\">NASB</span>",
+      "why": "core phase D: no inline style in a fragment; small caps moved to theme.css (.sc)"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<p class=\"cap\" style=\"margin:16px 0 0\">",
+      "to": "<p class=\"cap tail\">",
+      "why": "core phase D: no inline style in a fragment; a caption closing a block is .cap.tail in theme.css"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<p class=\"cap\" style=\"margin:16px 0 0\">",
+      "to": "<p class=\"cap tail\">",
+      "why": "core phase D: no inline style in a fragment; a caption closing a block is .cap.tail in theme.css"
+    },
+    {
+      "unit": "unit-07",
+      "from": "<td class=\"eg\" colspan=\"2\" style=\"text-align:center;background:var(--panel-2)\">",
+      "to": "<td class=\"eg capstone\" colspan=\"2\">",
+      "why": "core phase D: no inline style in a fragment; the full-width capstone row is td.capstone in theme.css"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<p class=\"cap\" style=\"margin:14px 0 0\">",
+      "to": "<p class=\"cap tail\">",
+      "why": "core phase D: no inline style in a fragment; a caption closing a block is .cap.tail in theme.css (was 14px, now the shared 16px)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<li><span class=\"r\" data-root=\"follow\">akoloutheō</span>",
+      "to": "<li><span class=\"rl\" data-root=\"follow\">akoloutheō</span>",
+      "why": "(re-anchored on <li> in core phase D, when the legend swatch before it was removed; kept after the swatch-removal ops so a fresh port runs them in order)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<li><span class=\"r\" data-root=\"release\">aphiēmi</span>",
+      "to": "<li><span class=\"rl\" data-root=\"release\">aphiēmi</span>",
+      "why": "(re-anchored on <li> in core phase D, when the legend swatch before it was removed; kept after the swatch-removal ops so a fresh port runs them in order)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<li><span class=\"r\" data-root=\"torment\">basanizō</span>",
+      "to": "<li><span class=\"rl\" data-root=\"torment\">basanizō</span>",
+      "why": "(re-anchored on <li> in core phase D, when the legend swatch before it was removed; kept after the swatch-removal ops so a fresh port runs them in order)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<li><span class=\"r\" data-root=\"urge\">parakaleō</span>",
+      "to": "<li><span class=\"rl\" data-root=\"urge\">parakaleō</span>",
+      "why": "(re-anchored on <li> in core phase D, when the legend swatch before it was removed; kept after the swatch-removal ops so a fresh port runs them in order)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<li><span class=\"r\" data-root=\"authority\">exousia</span>",
+      "to": "<li><span class=\"rl\" data-root=\"authority\">exousia</span>",
+      "why": "(re-anchored on <li> in core phase D, when the legend swatch before it was removed; kept after the swatch-removal ops so a fresh port runs them in order)"
+    },
+    {
+      "unit": "unit-08",
+      "from": "<li><span class=\"r\" data-root=\"shake\">seismos</span>",
+      "to": "<li><span class=\"rl\" data-root=\"shake\">seismos</span>",
+      "why": "(re-anchored on <li> in core phase D, when the legend swatch before it was removed; kept after the swatch-removal ops so a fresh port runs them in order)"
     }
   ],
   "add": [

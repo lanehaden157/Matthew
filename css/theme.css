@@ -111,3 +111,8 @@
 .unit .ringrow.center { background: var(--panel-2); }
 /* class="rl" (root-linked, uncounted) in legend rows keeps the italic the counted .r had there */
 .unit .legend .rl { font-style: italic; }
+/* what used to be inline style="" in units 2, 6, 7, 8 (fragments carry no inline style) */
+.unit section.block .cap.tail { margin: 16px 0 0; }
+.unit table.exod td.capstone { text-align: center; background: var(--panel-2); }
+.unit .itin .stop small { font-weight: 400; color: var(--ink-soft); }
+.unit .sc { font-variant: small-caps; }
