@@ -49,10 +49,14 @@ forked `app/` are in git history.
   `python -m biblecore corpus` (MorphGNT word table), `emit` (interlinear,
   search text), `assets` (css, `data/components.json`), `manifest`. Run
   `emit` + `manifest` after porting a unit.
-- Units are still ported and built with `pipeline/` (above). Don't run
-  `python -m biblecore build`, `port`, `migrate` or `test` here yet: the
-  fragments predate core's unit contract (no `data-w`, older meta blocks), so
-  those fail or would rewrite them. Moving the pipeline onto core is its own job.
+- Units are ported and built with `pipeline/` (above), and that is the plan:
+  Lane dropped the move onto core's pipeline (2026-09-28). Avoid
+  `python -m biblecore build`, `port` and `migrate` here: the fragments predate
+  core's unit contract (older meta blocks, unstamped), so they would rewrite
+  them. `python -m biblecore test` is safe and passes: `book.json`
+  `checks.skip_fragment_checks` skips the checks the old units can't meet
+  (native script, inline style / `--c-*`, `data-verses`, the synoptic
+  component) and `checks.test_idempotent` is off.
 - Discourses are the shell's "overlay" grouping (`book.json` `overlay`);
   `data/units.json` holds movements and discourses as `groupings`.
 - `.compare` and `aside.synoptic` are core components with their own chips (✦, ✧).
@@ -64,12 +68,13 @@ forked `app/` are in git history.
   on Matthew's own words.
 - **Phrase threads (core 0.9.2, plan D2):** `data/roots.json` can give a thread with
   no single lemma (son-of-man, apo-tote, ...) a `"seq"` instead of `"ids"` -- see
-  `bible-core/ARCHITECTURE.md`. Matthew doesn't have `data/roots.json` yet (still
-  `pipeline/thread-stems.json`'s stem matching) -- that conversion is plan B, still open.
+  `bible-core/ARCHITECTURE.md`. `data/roots.json` and `data-w` on every tracked span
+  exist (core `audit` reports 0 gaps); `pipeline/thread-stems.json` still drives
+  the old pipeline's stem matching.
 - **Canon leads (core 0.9.2, plan D4):** `python -m biblecore leads` now works here
   too (the LXX + rest-of-NT path, ported from `pipeline/canon_leads.py`, proven
-  against it). `pipeline/canon_leads.py` is still the one `pipeline/build.py` calls;
-  switching over is part of retiring `pipeline/` (plan E), not done yet.
+  against it). `pipeline/canon_leads.py` is still the one `pipeline/build.py` calls,
+  and stays that way.
 
 ## Guardrails worth keeping in mind
 

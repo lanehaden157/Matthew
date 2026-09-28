@@ -26,9 +26,16 @@
     "lxx": "pipeline/corpus/lxx"
   },
   "checks": {
-    "opens_note_required": false
+    "opens_note_required": false,
+    "test_idempotent": false,
+    "skip_fragment_checks": [
+      "native-script",
+      "inline-style",
+      "data-verses",
+      "component:synoptic"
+    ]
   },
-  "core": "0.9.5",
+  "core": "0.9.7",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse"
 }

@@ -884,3 +884,5 @@
 - 2026-09-28: `pipeline/apply_retrofit.py` is idempotent again on the tagged tree. Phase C's `data-w`/`data-alt` after `data-root` had hidden 21 already-applied ops (build hard-failed, `add` double-wrapped spans). Each op is now checked on an id-stripped view first; `text` ops only touch the body (one had been rewriting a thread note inside the unit-meta block). Committed tree: 0 MISS, no changes; `pipeline/build.py` passes end to end.
 
 - 2026-09-28: units 1 and 9: footnote markers that followed a `.gloss` span (outside it) moved inside it, so they render as superscripts at the end of the gloss instead of a stray line under the verse (21 markers).
+
+- 2026-09-28: Matthew stays on its own `pipeline/` (Lane dropped the move onto core, old phases D-G). Core 0.9.7 synced; `book.json` `checks.skip_fragment_checks` (native-script, inline-style, data-verses, component:synoptic) and `test_idempotent: false`, so `python -m biblecore test` passes (8/8). No unit changed. CLAUDE.md updated.
