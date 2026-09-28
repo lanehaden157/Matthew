@@ -40,7 +40,7 @@
       "canon-leads/canon-leads-unit-*.md"
     ]
   },
-  "core": "0.9.4",
+  "core": "0.9.5",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse"
 }
