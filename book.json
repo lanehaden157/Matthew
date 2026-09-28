@@ -28,18 +28,6 @@
   "checks": {
     "opens_note_required": false
   },
-  "sync": {
-    "files": [
-      "matthew_study_style_reference.md",
-      "translation-choices.md",
-      "threads-digest.md",
-      "MatthewSBLGNT.txt",
-      "matthew_reference_links.md"
-    ],
-    "globs": [
-      "canon-leads/canon-leads-unit-*.md"
-    ]
-  },
   "core": "0.9.5",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse"

@@ -197,9 +197,3 @@ Read this first. 3 lines max per session.
 
 ## 2026-09-26 — Reference links synced
 - Converted Lane's reference-links file to `matthew_reference_links.md`, now mirrored to `project-side/synced/`; pointers updated.
-
-## 2026-09-28 — Phase E: pipeline/ onto bible-core (branch core-phase-e, PR open)
-- Swapped refresh/scan/verify-occurrences/digest/audit/leads onto core commands; retired the
-  matching pipeline scripts + 3 unreferenced one-shots. port, retrofit and sync stay pipeline
-  (blocked — see improvements_log.md and the PR for why). Colour-clash report done, no recolour.
-- Found + reverted a pre-existing build.py bug (apply_retrofit.py isn't idempotent on HEAD).
