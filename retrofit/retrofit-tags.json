@@ -666,6 +666,72 @@
       "from": "<li><span class=\"r\" data-root=\"shake\">seismos</span>",
       "to": "<li><span class=\"rl\" data-root=\"shake\">seismos</span>",
       "why": "(re-anchored on <li> in core phase D, when the legend swatch before it was removed; kept after the swatch-removal ops so a fresh port runs them in order)"
+    },
+    {
+      "unit": "unit-01",
+      "from": "href=\"https://logeion.uchicago.edu/γένεσις\"",
+      "to": "href=\"https://logeion.uchicago.edu/%CE%B3%CE%AD%CE%BD%CE%B5%CF%83%CE%B9%CF%82\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-02",
+      "from": "href=\"https://logeion.uchicago.edu/προσκυνέω\"",
+      "to": "href=\"https://logeion.uchicago.edu/%CF%80%CF%81%CE%BF%CF%83%CE%BA%CF%85%CE%BD%CE%AD%CF%89\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-03",
+      "from": "href=\"https://logeion.uchicago.edu/παραγίνομαι\"",
+      "to": "href=\"https://logeion.uchicago.edu/%CF%80%CE%B1%CF%81%CE%B1%CE%B3%CE%AF%CE%BD%CE%BF%CE%BC%CE%B1%CE%B9\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-04",
+      "from": "href=\"https://logeion.uchicago.edu/ἀναχωρέω\"",
+      "to": "href=\"https://logeion.uchicago.edu/%E1%BC%80%CE%BD%CE%B1%CF%87%CF%89%CF%81%CE%AD%CF%89\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-04",
+      "from": "href=\"https://logeion.uchicago.edu/μετανοέω\"",
+      "to": "href=\"https://logeion.uchicago.edu/%CE%BC%CE%B5%CF%84%CE%B1%CE%BD%CE%BF%CE%AD%CF%89\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-06",
+      "from": "href=\"https://logeion.uchicago.edu/δικαιοσύνη\"",
+      "to": "href=\"https://logeion.uchicago.edu/%CE%B4%CE%B9%CE%BA%CE%B1%CE%B9%CE%BF%CF%83%CF%8D%CE%BD%CE%B7\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-06",
+      "from": "href=\"https://logeion.uchicago.edu/ἀπέχω\"",
+      "to": "href=\"https://logeion.uchicago.edu/%E1%BC%80%CF%80%CE%AD%CF%87%CF%89\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-06",
+      "from": "href=\"https://logeion.uchicago.edu/ταμεῖον\"",
+      "to": "href=\"https://logeion.uchicago.edu/%CF%84%CE%B1%CE%BC%CE%B5%E1%BF%96%CE%BF%CE%BD\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-06",
+      "from": "href=\"https://logeion.uchicago.edu/ἀφανίζω\"",
+      "to": "href=\"https://logeion.uchicago.edu/%E1%BC%80%CF%86%CE%B1%CE%BD%CE%AF%CE%B6%CF%89\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-06",
+      "from": "href=\"https://logeion.uchicago.edu/μεριμνάω\"",
+      "to": "href=\"https://logeion.uchicago.edu/%CE%BC%CE%B5%CF%81%CE%B9%CE%BC%CE%BD%CE%AC%CF%89\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
+    },
+    {
+      "unit": "unit-08",
+      "from": "href=\"https://logeion.uchicago.edu/προσκυνέω\"",
+      "to": "href=\"https://logeion.uchicago.edu/%CF%80%CF%81%CE%BF%CF%83%CE%BA%CF%85%CE%BD%CE%AD%CF%89\"",
+      "why": "core phase D: no native script in a fragment, attributes included; the Logeion URL is percent-encoded (same link), as units 9-13 already write it"
     }
   ],
   "add": [
