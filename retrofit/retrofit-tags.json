@@ -745,6 +745,12 @@
       "from": "<aside class=\"synoptic\" data-anchor=\"11:12\">",
       "to": "<aside class=\"synoptic\" data-anchor=\"11:15\">",
       "why": "core phase D: an aside anchors the verse block it follows; the Luke 16:16 box closes the 11:7-15 pericope, after 11:15, and stays where it is"
+    },
+    {
+      "unit": "unit-06",
+      "from": "<span class=\"pn\">i</span>Our <span class=\"r\" data-root=\"father\">Father</span>",
+      "to": "<span class=\"pn\">i</span>Our <span class=\"r\" data-root=\"father\" data-w=\"01060905\">Father</span>",
+      "why": "core phase D: with the prayer block declaring 6:10-13, 6:9 counts as written out, so its Pater (01060905, in the block's first line) carries its word id like any tracked span"
     }
   ],
   "add": [
