@@ -49,10 +49,20 @@ forked `app/` are in git history.
   `python -m biblecore corpus` (MorphGNT word table), `emit` (interlinear,
   search text), `assets` (css, `data/components.json`), `manifest`. Run
   `emit` + `manifest` after porting a unit.
-- Units are still ported and built with `pipeline/` (above). Don't run
-  `python -m biblecore build`, `port`, `migrate` or `test` here yet: the
-  fragments predate core's unit contract (no `data-w`, older meta blocks), so
-  those fail or would rewrite them. Moving the pipeline onto core is its own job.
+- Units are still ported and built with `pipeline/` (above). Moving the pipeline
+  onto core is its own job (phase E).
+- `python -m biblecore test` is safe to run here (since phase D, 2026-09-28): it
+  puts back anything it touches. It passes 7 of 8. `idempotent` fails because
+  core's refresh writes a different meta block (adds `contract`, `discourse`,
+  blank `note`s) and digest paragraph than `pipeline/refresh_meta.py` and
+  `threads_digest.py` do, and each build reverts the other's. That goes away
+  when one generator matches the other.
+- Still don't run `python -m biblecore build`, `port` or `migrate` here.
+  `build` rewrites the meta blocks and digest into core's form, which the old
+  build then reverts. `migrate` would stamp the units, and a stamp at or past
+  0.3.0 switches on core's `itin` rule: a stop's `<sup>` must be a verse. Matthew
+  uses those sups as labels ("Micah", "Sermon", "God acts"), which is 25 errors
+  in units 2, 4, 6, 7, 9 and 12. Unstamped units count as 0.2.0, which passes.
 - Discourses are the shell's "overlay" grouping (`book.json` `overlay`);
   `data/units.json` holds movements and discourses as `groupings`.
 - `.compare` and `aside.synoptic` are core components with their own chips (✦, ✧).

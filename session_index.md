@@ -197,3 +197,7 @@ Read this first. 3 lines max per session.
 
 ## 2026-09-26 — Reference links synced
 - Converted Lane's reference-links file to `matthew_reference_links.md`, now mirrored to `project-side/synced/`; pointers updated.
+
+## 2026-09-28 — Core phase D (units onto core's contract)
+- Removed legend swatches, inline styles (to theme.css classes) and Greek in Logeion URLs (percent-encoded). Re-pointed the 6:9 and 11:15 anchors and narrowed the prayer to 6:10–13. All done as retrofit ops in both spec files; counts unchanged.
+- `biblecore test` 7/8. Blocked on Lane: idempotent needs old/core meta generators to agree, and `migrate` switches on core's itin rule (25 sup labels). Units left unstamped.
