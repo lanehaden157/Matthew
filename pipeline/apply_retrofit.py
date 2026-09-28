@@ -133,6 +133,14 @@ def apply_untag_word(html, it):
 
 
 def apply_text(html, it):
+    """Body only: the unit-meta JSON block at the top quotes fragment text
+    (thread notes), and a match there would rewrite a note, not the verse."""
+    k = html.find("</script>") + len("</script>") if 'id="unit-meta"' in html else 0
+    body, msg = _apply_text(html[k:], it)
+    return html[:k] + body, msg
+
+
+def _apply_text(html, it):
     # An insertion keeps its anchor (`from` inside `to`), so `from` never
     # disappears; `to` being present is the only signal there.
     if it["to"] in html and (it["from"] not in html or it["from"] in it["to"]):
@@ -173,6 +181,10 @@ FNS = {"add": apply_add, "retag": apply_retag, "unwrap": apply_unwrap,
 ORDER = ["strip_span", "text", "untag_word", "retag_word", "unwrap", "retag", "add"]
 
 
+def strip_ids(html):
+    return re.sub(r' data-(?:w|alt)="[^"]*"', "", html)
+
+
 def load_specs():
     spec = json.load(open(SPEC, encoding="utf-8"))
     if os.path.exists(RETRO_SPEC):
@@ -197,6 +209,15 @@ def main():
         path = os.path.join(UNITS, unit + ".html")
         html = open(path, encoding="utf-8").read()
         for op, it in items:
+            # Phase C put data-w/data-alt after data-root on tracked spans, so
+            # the literal strings these ops look for no longer match. If the op
+            # is already satisfied once those ids are ignored, leave the
+            # fragment alone; otherwise apply it as before (a fresh port has
+            # no ids, so it takes this second path).
+            _, seen = FNS[op](strip_ids(html), it)
+            if seen.startswith("ok"):
+                logs.append(seen)
+                continue
             html, msg = FNS[op](html, it)
             logs.append(msg)
         open(path, "w", encoding="utf-8").write(html)

@@ -910,3 +910,5 @@
   wilderness, torment, well-pleased, whole. No replacement clears the existing 21-colour WELL
   at dE00 ≥ 10 from everything else taken — the palette's already full (per palette.py's own
   docstring). Reported only; nothing recoloured.
+
+- 2026-09-28: `pipeline/apply_retrofit.py` is idempotent again on the tagged tree. Phase C's `data-w`/`data-alt` after `data-root` had hidden 21 already-applied ops (build hard-failed, `add` double-wrapped spans). Each op is now checked on an id-stripped view first; `text` ops only touch the body (one had been rewriting a thread note inside the unit-meta block). Committed tree: 0 MISS, no changes; `pipeline/build.py` passes end to end.
