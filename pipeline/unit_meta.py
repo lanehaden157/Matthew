@@ -13,7 +13,7 @@ Shape:
   title      str
   movement   int      1 | 2 | 3            (optional; looked up from units.json)
   descriptor str      masthead tail line   (optional)
-  discourse  bool     (optional)
+  discourse  int      discourse-grouping number (optional; looked up from units.json)
   roots      [ {root, translit, gloss, echo?} ]
              every coloured root the unit tracks — translit + gloss ONLY, NO
              colour. A root whose translit bundles a small word-family
@@ -217,31 +217,26 @@ def validate(meta, threads_json=None):
 #  used to backfill units 1-8 and to keep blocks fresh in build.py)
 
 def _threads_touching(threads_json, n):
-    """opens/payoffs entries for unit n, carrying `note` through when present.
+    """opens/payoffs entries for unit n, carrying `note` through.
 
-    C4 (platform-design-review.md): `note` stays OPTIONAL here, unlike
-    Joshua's required version -- Matthew has 12 units of history and only
-    114 of 228 opens/payoffs entries carry one yet, so requiring it now would
-    fail the build over content that hasn't been written, not a bug. But it
-    must round-trip: this used to drop `note` unconditionally, so every
-    refresh_meta.py regen silently erased it from the fragment's own
-    unit-meta block even though threads.json still had it (the same class of
-    bug as Joshua's A2).
+    `note` is written unconditionally (blank when absent from threads.json),
+    matching core's biblecore/meta.py generate() -- otherwise this and core's
+    refresh each revert the other's `note` key and the build is never a fixed
+    point (phase D, idempotent). validate() still only requires `note` be a
+    string when present, so a blank one is harmless; C4's concern (Matthew
+    has plenty of opens/payoffs with no note written yet) doesn't need the
+    key omitted, just tolerated blank.
     """
     opens, payoffs = [], []
     for t in threads_json["threads"]:
         o = t.get("opens", {})
         if o.get("unit") == n:
-            entry = {"id": t["id"], "ref": o.get("ref", "")}
-            if o.get("note"):
-                entry["note"] = o["note"]
-            opens.append(entry)
+            opens.append({"id": t["id"], "ref": o.get("ref", ""),
+                          "note": o.get("note", "")})
         for p in t.get("payoffs", []):
             if p.get("unit") == n:
-                entry = {"id": t["id"], "ref": p.get("ref", "")}
-                if p.get("note"):
-                    entry["note"] = p["note"]
-                payoffs.append(entry)
+                payoffs.append({"id": t["id"], "ref": p.get("ref", ""),
+                                "note": p.get("note", "")})
     return opens, payoffs
 
 
@@ -277,6 +272,7 @@ def generate(n, units_json=None, threads_json=None, occurrences_json=None):
         "passage": row["passage"],
         "title": row["title"],
         "movement": row.get("movement"),
+        "discourse": row.get("discourse"),
         "roots": roots,
         # candidates/retro are hand-authored during porting and never derived
         # from the committed data files; generate() only knows to say "none
@@ -285,4 +281,6 @@ def generate(n, units_json=None, threads_json=None, occurrences_json=None):
     }
     if meta["movement"] is None:
         del meta["movement"]
+    if meta["discourse"] is None:
+        del meta["discourse"]
     return meta

@@ -6,7 +6,7 @@
   "abbrev": "Matt",
   "language": "greek",
   "versification": "source",
-  "core": "0.9.3",
+  "core": "0.9.5",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse",
   "unit_count": 28,
@@ -18,7 +18,13 @@
     "threads.json": {
       "schema": 1
     },
+    "roots.json": {
+      "schema": 1
+    },
     "occurrences.json": {
+      "schema": 1
+    },
+    "canon.json": {
       "schema": 1
     },
     "components.json": {
