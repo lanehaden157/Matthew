@@ -882,3 +882,5 @@
 - instructions.md: Bible Project teacher notes cover Matt 1–8 only; from ch. 9 name the literary-canonical source used.
 
 - 2026-09-28: `pipeline/apply_retrofit.py` is idempotent again on the tagged tree. Phase C's `data-w`/`data-alt` after `data-root` had hidden 21 already-applied ops (build hard-failed, `add` double-wrapped spans). Each op is now checked on an id-stripped view first; `text` ops only touch the body (one had been rewriting a thread note inside the unit-meta block). Committed tree: 0 MISS, no changes; `pipeline/build.py` passes end to end.
+
+- 2026-09-28: units 1 and 9: footnote markers that followed a `.gloss` span (outside it) moved inside it, so they render as superscripts at the end of the gloss instead of a stray line under the verse (21 markers).

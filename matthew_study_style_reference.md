@@ -270,6 +270,13 @@ start is explicit (`· 3:13–4:11`).
 
 `<p class="v">` with the `.gloss` / `.compare` as **following siblings**, never nested.
 
+An endnote that belongs to the gloss (rather than the verse text) goes **inside**
+the gloss span, at its end: `<span class="gloss">…text.<sup class="en">…</sup></span>`.
+A `<sup>` left after the closing `</span>` is a bare inline element beside a block,
+so it renders on its own line under the verse, flush left, looking like a verse
+number. (Joshua's rule "markers never sit inside a gloss" does not carry over:
+its gloss is a different structure. Fixed in units 1 and 9 on 2026-09-28.)
+
 ### OT citation pointer
 
 When a `<p class="v">` verse quotes or directly cites an OT text (a formula
