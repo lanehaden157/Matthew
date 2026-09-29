@@ -1,4 +1,6 @@
-"""Splice the hand-authored synoptic-parallel boxes into units 1-10.
+"""ONE-SHOT, ALREADY RUN -- re-running would duplicate the boxes it spliced in.
+
+Splice the hand-authored synoptic-parallel boxes into units 1-10.
 
     python pipeline/splice_synoptic.py                 # apply
     python pipeline/splice_synoptic.py --dry            # report only, write nothing

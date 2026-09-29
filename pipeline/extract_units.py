@@ -1,4 +1,8 @@
-"""Phase 1 - Extract & normalize.
+"""LIBRARY ONLY -- the Phase 1 extraction is one-shot and already run. port_artifact.py
+imports its cleaners; running this file as a script again would drop every
+post-extract direct edit to units/ (pericope headings, synoptic boxes, chiasm cuts).
+
+Phase 1 - Extract & normalize.
 
 source-artifacts/matthew_NN_translation.html  ->  units/unit-NN.html
   - body content only (no <head>, <style>, font links)

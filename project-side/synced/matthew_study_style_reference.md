@@ -373,7 +373,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] No `roots` entry carries a colour. No `--c-*` vars anywhere. No inline `style="color:…"` / `style="background:…"`.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
-- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo` as siblings, not nested. A `.gloss`'s own endnote marker sits after its closing tag, not inside it.
+- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo` as siblings, not nested. Endnote markers sit at the end of the verse `<p>`, never inside a `.gloss`.
 - [ ] No `aside.synoptic` or `aside.echo` block contains `data-root`, `class="r"`, or `class="rl"` — translit only.
 - [ ] Every `aside.echo` has a `data-anchor="C:V"` matching the verse it follows.
 - [ ] The translation is divided into passage groups by `<h3 class="pericope">Title <span>· C:V–V</span></h3>` — no other heading form.
@@ -381,7 +381,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 
 **Translation & wording**
 - [ ] Plural "you" → **"y'all"** everywhere in the translation.
-- [ ] `ouranos` → **"sky / skies"**, never "heaven / heavens", in the study's own wording (verse text, glosses, diagrams). Verbatim NASB / Hart / Lattimore quotations keep their own wording.
+- [ ] `ouranos` → **"sky / skies"**, always, in the study's own wording (verse text, glosses, diagrams). Verbatim NASB / Hart / Lattimore quotations keep their own wording.
 - [ ] Same Greek root → same English root across verses, even when repetitive.
 - [ ] Every `roots` entry is **one** Greek lexical root (same-stem forms only) — no themes, no formulae, no bundles of different words (§1).
 - [ ] On first use of a tracked term *in this unit*, give transliteration + gloss; reintroduce the gloss even if a prior unit already had it — nothing carries over.
@@ -392,11 +392,11 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Every word with a Torah/LXX or later-canon history gets an `echo` (§1a) — a local `roots[]` entry if nowhere else, or an `aside.echo` for a verse-level connection. Checked against `canon-leads/canon-leads-unit-NN.md` and the intertext pass's ledger (`instructions.md` pass 3), not from memory.
 - [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described. These should be real and verifiable only, not loose made up connections forcing a pattern.
 - [ ] Repeated-word counts noted only where the frequency is theologically significant (3, 7, 10, 12, 40, 70…).
-- [ ] Transliteration only — zero native Greek or Hebrew script anywhere.
+- [ ] Transliteration only — zero native Greek or Hebrew script anywhere, except `threads.candidates[].stems`, which holds accent-stripped Greek for `pipeline/thread-stems.json` (§2).
 - [ ] No named commentators in the artifact's prose (notes, glosses, compare boxes), from unit 13 on. Dissolve the attribution into the point: "a dispensational reading argues…", not "Constable argues…"; state a shared conclusion plainly rather than "(so France, Wright)". The research passes still name traditions; only the artifact drops the names. Units 1–12 are a separate tracked retrofit (`PLAN.md`).
 
 **Threads**
-- [ ] Checked `threads-digest.md`: **every** morphological occurrence of a tracked thread's Greek root in this passage is tagged with its thread `id` — even where the English renders it with a different word (ἁμαρτωλός → "sinner" still tags `sin`; περιβάλλω → "clothe" still tags `throw`). The tag follows the Greek lexeme, not the gloss. Threads that open or land here are also listed under `threads.opens` / `threads.payoffs`. The porter's coverage audit will list any you missed.
+- [ ] Checked `threads-digest.md`: **every** morphological occurrence of a tracked thread's Greek root in this passage is tagged with its thread `id` — even where the English renders it with a different word (*hamartōlos* → "sinner" still tags `sin`; *periballō* → "clothe" still tags `throw`). The tag follows the Greek lexeme, not the gloss. Threads that open or land here are also listed under `threads.opens` / `threads.payoffs`. The porter's coverage audit will list any you missed.
 - [ ] Any root recurring across units that isn't yet a thread → `threads.candidates` with a reason (+ `stems` if you can). Not tagged until Lane promotes it.
 - [ ] Anything you noticed about an **earlier** unit (a missed tag, a mis-tag) → `threads.retro`, not a prose aside.
 
@@ -428,11 +428,8 @@ The research passes (briefing, commentary, intertext ledger) are governed by the
 
 The full annotated list (Dead Sea Scrolls, Didache, NETS, Allison's *New Moses*, and the rest) is `matthew_reference_links.md`.
 
-### Scholars to weigh per crux
-Davies & Allison (ICC, technical), France (NICNT, literary-canonical), Keener (background/
-social-historical), Luz (reception history), Wright (Jewish context/new creation), Meier
-(historical), Bauckham, Amy-Jill Levine (Jewish readings). Bible Project teacher notes for
-the literary-canonical frame; Constable for traditional/dispensationalist, to be balanced.
+The commentary set, and how to weigh it, is in `instructions.md` (Lens); the annotated
+shelf is `matthew_reference_links.md`.
 
 ---
 
@@ -497,16 +494,16 @@ across the whole gospel — worth tagging (thread id `emmanuel`) in any unit whe
 
 ### 7.2 The twenty-eight units
 
-Format: **Unit — passage — title.** ✅ = built.
+Format: **Unit — passage — title.**
 
 **MOVEMENT ONE — The Person of the Messiah (1:1–4:16/17).**
 
-- **Unit 1 — 1:1–25 — The Book of the Genesis.** ✅ Genealogy + birth.
-- **Unit 2 — 2:1–23 — Out of Egypt I Called My Son.** ✅ Magi, flight, Nazareth.
-- **Unit 3 — 3:1–4:11 — Wilderness, Water, Wilderness.** ✅ John, baptism, temptation.
+- **Unit 1 — 1:1–25 — The Book of the Genesis.** Genealogy + birth.
+- **Unit 2 — 2:1–23 — Out of Egypt I Called My Son.** Magi, flight, Nazareth.
+- **Unit 3 — 3:1–4:11 — Wilderness, Water, Wilderness.** John, baptism, temptation.
   **Diverges:** runs past 3:17 to 4:11 — John → baptism → testing is one wilderness movement;
   seam at 4:11, not the 3/4 line.
-- **Unit 4 — 4:12–25 — The Light Has Dawned.** ✅ Withdrawal to Capernaum, Isaiah 9, call of
+- **Unit 4 — 4:12–25 — The Light Has Dawned.** Withdrawal to Capernaum, Isaiah 9, call of
   the four, the 4:23 ministry summary. Short (14 vv), straddles the 4:17 hinge — built as a
   standalone overture.
 
@@ -514,30 +511,30 @@ Format: **Unit — passage — title.** ✅ = built.
 
 *Part A — Kingdom established in word and deed (4:17–11:1).*
 
-- **Unit 5 — 5:1–48 — The Greater Righteousness.** ✅ Beatitudes, salt & light, the six
+- **Unit 5 — 5:1–48 — The Greater Righteousness.** Beatitudes, salt & light, the six
   contrasts.
-- **Unit 6 — 6:1–34 — Before Your Father Who Sees.** ✅ The three acts of piety with the
+- **Unit 6 — 6:1–34 — Before Your Father Who Sees.** The three acts of piety with the
   Lord's Prayer at the concentric centre, then treasure, the eye, mammon, anxiety.
-- **Unit 7 — 7:1–29 — The Two Ways.** ✅ Judging, the pearls, ask/seek/knock, the Golden
+- **Unit 7 — 7:1–29 — The Two Ways.** Judging, the pearls, ask/seek/knock, the Golden
   Rule, the three eschatological pairs, the crowd's astonishment (7:28).
   - ⚑ **Discourse 1 = the Sermon on the Mount (5:1–7:29)**, split 5 / 6 / 7. **Watch across
     the seam:** the *Law and the Prophets* inclusio — opened **5:17**, closed **7:12**. Open
     scoping alternative: 5:1–48 / 6:1–7:12 / 7:13–29. Confirm at the Sermon.
-- **Unit 8 — 8:1–34 — The Deeds of the Messiah (I).** ✅ Leper, centurion, Peter's
+- **Unit 8 — 8:1–34 — The Deeds of the Messiah (I).** Leper, centurion, Peter's
   mother-in-law + summary, would-be followers, the storm, the Gadarene demoniacs.
-- **Unit 9 — 9:1–34 — The Deeds of the Messiah (II).** ✅ Paralytic, call of Matthew, the
+- **Unit 9 — 9:1–34 — The Deeds of the Messiah (II).** Paralytic, call of Matthew, the
   fasting question, Jairus's daughter + the haemorrhaging woman, two blind men, the mute
   demoniac. Ch. 9 *minus* the harvest summary. **Watch across the seam:** chs. 8–9 are one
   ten-miracle deed-block (three triads with interludes) answering chs. 5–7.
-- **Unit 10 — 9:35–11:1 — The Sending (Discourse 2).** ✅ The harvest/compassion summary
+- **Unit 10 — 9:35–11:1 — The Sending (Discourse 2).** The harvest/compassion summary
   (9:35–38) as on-ramp, then the Mission charge, closed by the 11:1 formula. **Diverges:**
   starts at 9:35.
 
 *Part B — Kingdom meets growing hostility (11:2–16:20).*
 
-- **Unit 11 — 11:2–30 — Are You the Coming One?** ✅ John's question, Jesus on John, woes on the
+- **Unit 11 — 11:2–30 — Are You the Coming One?** John's question, Jesus on John, woes on the
   towns, the great invitation. 11:2–30 (11:1 belongs to the prior formula).
-- **Unit 12 — 12:1–50 — Master of the Sabbath, the Chosen Servant.** ✅ Two Sabbath conflicts,
+- **Unit 12 — 12:1–50 — Master of the Sabbath, the Chosen Servant.** Two Sabbath conflicts,
   Isaiah 42, Beelzebul, the sign of Jonah, the return of the unclean spirit, the true family.
 - **Unit 13 — 13:1–53 — The Parables of the Kingdom (Discourse 3).** Sower through the
   householder's treasure; the pivot from crowds to disciples; closed at 13:53.

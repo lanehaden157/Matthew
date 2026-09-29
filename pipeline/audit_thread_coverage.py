@@ -17,8 +17,8 @@ verse / over-tag).
     python pipeline/audit_thread_coverage.py --unit unit-11
                         # just one unit (port_artifact.py uses coverage_for_unit)
 
-Informational: exits 0 even with gaps (units 11-28 don't exist yet, so most
-threads legitimately show gaps past unit 10).
+Informational: exits 0 even with gaps (unbuilt units aren't checked, and units 1-12
+shipped before some threads were tracked, so some gaps are a known backlog).
 
 Greek source: MatthewSBLGNT.txt at the repo root (tracked — see project-side/README.md).
 Tab-separated 'Matt C:V<TAB>text' lines. If it's missing the

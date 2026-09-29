@@ -7,8 +7,7 @@ point: transliterate every Greek/Hebrew word, gloss its meaning in plain English
 term is "already known" from earlier in the same document or a prior unit — reintroduce the
 transliteration and gloss each time. When a grammatical category carries weight (aorist,
 dative, participle, middle voice…), explain it in plain terms; don't make an argument
-depend on Lane parsing morphology unaided. Any older note claiming Lane reads Greek is
-wrong.
+depend on Lane parsing morphology unaided.
 
 Lens: Bible Project style — narrative structure, keyword tracing, chiasms (real and
 verifiable only; weight them hard, they're easy to make up), type-scenes, the
@@ -20,12 +19,10 @@ name where readings diverge and why; don't let one silently displace the other.
 ## Files
 
 **From the site repo** (`github.com/lanehaden157/Matthew`, `project-side/synced/`, via the
-GitHub connector). `project-side/README.md` is the index of what each one is. If a synced
-file and an uploaded copy disagree, the synced one wins — say so rather than quietly
-picking one.
+GitHub connector). `project-side/README.md` lists every synced file and what it is for. If
+a synced file and an uploaded copy disagree, the synced one wins — say so rather than
+quietly picking one. The ones with usage notes:
 
-- `matthew_study_style_reference.md` — the artifact contract and the 28-unit map.
-- `threads-digest.md` — tracked threads and their `data-root` ids.
 - `translation-choices.md` — agreed English renderings. Check before rendering a Greek
   word and match it; if a different rendering genuinely fits a verse better, use it but
   flag it in the artifact so Lane can call it a one-off or a correction.
@@ -33,12 +30,11 @@ picking one.
   when a pass needs a Second Temple text, the LXX in English, or a patristic reading.
 - `canon-leads-unit-NN.md` — pass 3's reading list for that unit. If the current unit's
   sheet isn't there, ask for it.
+- `MatthewSBLGNT.txt` — Greek (SBLGNT). Lines: `Matt C:V\t<text>`. Extract a passage:
+  `sed -n '/^Matt 7:1\t/,/^Matt 8:1\t/p' MatthewSBLGNT.txt | sed '$d'`
 
 **Uploaded to this project** (research sources):
 
-- `Matt.txt` — Greek (SBLGNT). Lines: `Matt C:V\t<text>`. Same text as the synced
-  `MatthewSBLGNT.txt`.
-  Extract a passage: `sed -n '/^Matt 7:1\t/,/^Matt 8:1\t/p' Matt.txt | sed '$d'`
 - `MatthewNASB.txt` — NASB. Strip injected page markers:
   `sed -E 's/Gospel of Matthew NASB Page \| [0-9]+//g'`
 - `matthew.pdf` — Constable's notes (plain text despite the extension; use `grep -a` /
@@ -103,8 +99,9 @@ confirms both. A fresh, wooden-but-readable translation from the Greek; creative
 intentional English glosses are encouraged — the goal is understanding, not conformity to
 traditional translation.
 
-Follow `matthew_study_style_reference.md` in full — it is the contract (fragment shape
-§2, components §3), and its **§4 checklist** is the pre-ship check. Save to
+Follow `matthew_study_style_reference.md`; it is the contract (fragment shape §2,
+components §3), and its **§4 checklist** is the pre-ship check. Where a rule clearly
+doesn't fit, flag it in the artifact rather than deviating silently. Save to
 `/mnt/user-data/outputs/matthew_NN_translation.html` (zero-padded), then `present_files`.
 The artifact renders unstyled in this chat — expected; Lane ports it on the site side.
 

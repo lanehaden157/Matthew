@@ -19,7 +19,7 @@ something that might already have been done.
 | The artifact contract: fragment shape, unit-meta schema, components, checklist, 28-unit map | `matthew_study_style_reference.md` |
 | The research workflow (four passes) — also the text Lane pastes into the Claude.ai project's instructions field | `instructions.md` |
 | What round-trips to the research project, and how | `project-side/README.md` |
-| Colour policy: metrics, thresholds, what's a hard failure | `pipeline/palette.py` docstring; pick colours with `assign_color.py`, not by eye |
+| Colour policy: metrics, thresholds, what's a hard failure | `pipeline/palette.py` docstring; pick colours with `assign_color.py` (eyeballed colours collided before; hand-pick only if Lane asks) |
 | Tracked threads | `data/threads.json` (hand-authored policy) → `threads-digest.md` (generated) |
 | English renderings per Greek lexeme | `translation-choices.md` |
 | Design decisions and their rationale | `PLAN.md` "Design decisions"; `docs/audit/` for the 2026-09-12 audit (`archive/` is history, not instructions) |
@@ -39,8 +39,9 @@ something that might already have been done.
 
 ## Guardrails worth keeping in mind
 
-Rationale for each is in `PLAN.md`. These are strong defaults, not laws. Raise it with
-Lane if one stops fitting.
+Rationale for the colour, data-file and verify guardrails is in `PLAN.md` "Design decisions";
+the rest are stated here. These are strong defaults, not laws. Raise it with Lane if one
+stops fitting.
 
 - Content and engine stay separate: `/app` never hardcodes unit content, and fragments
   carry no styling or app logic.

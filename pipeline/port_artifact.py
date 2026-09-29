@@ -3,7 +3,7 @@
     python pipeline/port_artifact.py 9              # port source-artifacts/matthew_09_translation.html
     python pipeline/port_artifact.py 9 --dry        # show what would change, write nothing
     python pipeline/port_artifact.py 11 --src X.html  # build the thread-delta report from X, write nothing
-    python pipeline/port_artifact.py --backfill     # units 1-8: inject a meta block, nothing else
+    python pipeline/port_artifact.py --backfill     # units 1-8: inject a meta block, nothing else (one-time; already run)
 
 Pipeline for a new unit N:
   1. read  source-artifacts/matthew_0N_translation.html

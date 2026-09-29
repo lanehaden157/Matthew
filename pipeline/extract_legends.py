@@ -1,4 +1,6 @@
-"""One-shot: pull translit + gloss for every tracked root out of each fragment's
+"""ONE-SHOT, ALREADY RUN -- re-running overwrites the hand-maintained units.json roots.
+
+One-shot: pull translit + gloss for every tracked root out of each fragment's
 existing hand-written legend, and rewrite data/units.json so each unit's `roots`
 map is  name -> { color, translit, gloss }  instead of  name -> hex.
 

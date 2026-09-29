@@ -2,7 +2,7 @@
 
 Phased plan for turning the 8 standalone HTML study-translation artifacts into a
 static site with a shared engine, a two-tier color system, and cross-unit thread
-tracking. Draft for Lane's sign-off; CLAUDE.md gets rewritten to match once approved.
+tracking. Built from 2026-09-07; current architecture and workflow are in `CLAUDE.md`.
 
 ---
 
@@ -50,7 +50,7 @@ tracking. Draft for Lane's sign-off; CLAUDE.md gets rewritten to match once appr
 
 ---
 
-## Design decisions (locked)
+## Design decisions
 
 ### Color: kill per-unit `<style>`, resolve at runtime
 
@@ -99,8 +99,8 @@ perceptual-distance threshold; occurrence counts match a second scan.
   interactivity this round (shelved, not deleted).
 - **Paths:** all relative (`new URL('../data/x.json', import.meta.url)`), never
   root-absolute — GitHub Pages serves from a subpath.
-- **Book-agnostic where cheap:** a Jonah project is planned on this structure;
-  scripts avoid hardcoding "Matthew" / 28 where it costs nothing.
+- **Book-agnostic where cheap:** scripts avoid hardcoding "Matthew" / 28 where it costs
+  nothing (this structure seeded Joshua's pipeline, and later bible-core).
 - **Desktop + mobile, both first-class.** Every phase ships responsive. Hover
   affordances (root tooltip) degrade to tap on touch; all other interaction —
   tabs, popovers, compare expand, footnote jump, search, dashboard — usable and
@@ -200,20 +200,20 @@ U3 (`wild`→`wilderness` rename), U7 (needs a full fresh 9-hue palette — its
 - Footnote jump + return: shipped in Phase 2 (+ polish).
 - "Threads active here" footer: **skipped** — redundant with the per-unit legend.
 
-### Phase 6 — Dashboard + concordance
+### Phase 6 — Dashboard + concordance *(concordance search done, 2026-09-07; dashboard not built)*
 
 - `dashboard.html` (or a tab) — one row per tracked thread, mini-timeline across
   the 28-unit map, open/closed, jump links. Canonical home of the global palette.
 - Global concordance search — type a translit root or English gloss, get every
   tagged occurrence across every built unit with context snippets.
 
-### Phase 7 — Compare boxes collapsed *(ideas.md "Now")*
+### Phase 7 — Compare boxes collapsed ✅ DONE *(ideas.md "Now"; the compare and synoptic chips in `app/spotlight.js`)*
 
 Flag icon on translation-sensitive verses; click to expand the wooden / NASB /
 Hart / Lattimore box inline, collapse when done. CSS/JS over existing `.compare`
 markup — no fragment edits.
 
-### Phase 8 — Persistence
+### Phase 8 — Persistence *(not built; only a text-align setting uses `localStorage`)*
 
 `app/store.js` — versioned `localStorage`: mark units read, per-verse personal
 notes. Schema version gate for future migration. No backend, no accounts.
@@ -268,13 +268,6 @@ Constable-tension flag.
 
 ---
 
-## Open question for Lane
+## Open questions for Lane
 
-**Phase 1 Greek-script strip — confirm the approach.** Units 1–7 have ~370 native
-Greek spans. Options:
-
-- **(a1) Strip to translit** — smallest, permanent, matches Unit 8. Recommended.
-- **(a2) Keep script in source, hide by default with a toggle** — reversible, but
-  adds a feature and a data attribute to carry; Greek stays available for later.
-
-Everything else above is considered locked unless you flag it.
+None open.

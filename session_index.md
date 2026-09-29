@@ -200,3 +200,5 @@ Read this first. 3 lines max per session.
 
 ## 2026-09-29 — Pipeline speed
 - Cached transliteration, indexed canon_leads, tokenize-once thread audit. Build steps 31s to ~10s, port 8.1s to 1.4s, output identical (uncommitted). See ../session_summary_2026-09-29_performance.md.
+- **2026-09-29 (instructions review)**: Lane-approved cleanups from the cross-repo instruction-file review (style reference §4/§7, instructions.md, PLAN.md, CLAUDE.md, project-side README, pipeline docstrings). Uncommitted; instruction field needs a re-paste.
+  Flags and decisions: `../instructions_review_2026-09-29.md`.

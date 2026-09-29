@@ -12,9 +12,11 @@ its own — no re-pasting, ever. Never hand-edit anything under `synced/`; it is
 overwritten on the next sync.
 
 **What keeps it current:** `pipeline/sync_to_github.py` copies every
-`TRACKED_FILES` entry into `synced/`, and if anything actually changed, commits
-and pushes. `pipeline/build.py` runs it as its last step, so the mirror
-refreshes exactly when the data it mirrors does. Run it by hand any time with:
+`TRACKED_FILES` entry into `synced/`. `pipeline/build.py` runs it as its last step
+with `--copy-only`, so the mirror refreshes exactly when the data it mirrors does and
+lands in the same commit as the change that caused it (build never commits or pushes).
+Run it by hand any time with (this form copies, commits **and pushes**, so use it
+only when Lane OKs the push):
 
 ```bash
 python pipeline/sync_to_github.py

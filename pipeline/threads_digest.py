@@ -1,8 +1,8 @@
 """data/threads.json  ->  threads-digest.md   (repo root)
 
-A human-readable snapshot of the canonical cross-unit threads, for pasting into
-the Claude.ai research project so the artifacts tag the right roots with the
-right thread ids. Regenerate whenever threads.json changes (build.py does).
+A human-readable snapshot of the canonical cross-unit threads, for the Claude.ai
+research project (mirrored to it through project-side/synced/) so the artifacts tag
+the right roots with the right thread ids. Regenerate whenever threads.json changes (build.py does).
 
 Never hand-edit threads-digest.md — it is derived.
 """

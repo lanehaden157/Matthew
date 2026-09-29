@@ -2,16 +2,16 @@
 the search that picks a colour for a new root.
 
 WHY THIS EXISTS. Colour is the study's primary way of saying "this word is that
-word again". That only works while a reader can tell two colours apart. With 58
-tracked threads plus local roots the hue circle is full, so "every root gets a
+word again". That only works while a reader can tell two colours apart. With 80+
+tracked threads (58 when this was written) plus local roots the hue circle is full, so "every root gets a
 visibly different colour" is not a constraint that can be met book-wide, and
 pretending otherwise produces either a permanently red build or a quietly
 meaningless palette.
 
 The constraint that CAN be met, and the one that actually matters to a reader,
 is per-unit: two roots need to look different when they appear on the same page.
-94 roots appear in built units; only 38% of pairs ever share a unit, and the
-densest unit carries 27. Twenty-seven distinguishable colours is comfortable.
+When this was written, 94 roots appeared in built units; only 38% of pairs ever
+shared a unit, and the densest unit carried 27. Twenty-seven distinguishable colours is comfortable.
 Ninety-four is not. So:
 
   HARD, book-wide     no two threads share a hex. Cheap, and the legend, the

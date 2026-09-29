@@ -1,4 +1,6 @@
-"""One-shot translation revision: 'heaven(s)' -> 'sky/skies' across the study's
+"""ONE-SHOT, ALREADY RUN -- do not re-run; it rewrites source-artifacts/.
+
+One-shot translation revision: 'heaven(s)' -> 'sky/skies' across the study's
 own wording, in source-artifacts/ (units 1-5 use the old wording; 6-8 already
 say sky/skies). Verbatim quotations from copyrighted translations are protected.
 
