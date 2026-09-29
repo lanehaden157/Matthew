@@ -25,6 +25,7 @@ Tab-separated 'Matt C:V<TAB>text' lines. If it's missing the
 script says so and exits 2.
 """
 
+import functools
 import glob
 import json
 import os
@@ -52,6 +53,7 @@ WS = re.compile(r"\s+")
 GREEKWORD = re.compile(r"[^\W\d_]+", re.UNICODE)
 
 
+@functools.lru_cache(maxsize=None)
 def strip_accents(s):
     d = unicodedata.normalize("NFD", s)
     # drop combining marks, lowercase, and fold final sigma ς -> σ so a stem
@@ -94,14 +96,21 @@ def _compile_stems(stem_list):
     return match
 
 
+@functools.lru_cache(maxsize=None)
+def _words(txt):
+    """(word, accent-stripped word) for a verse, tokenized once: every
+    thread's spec is matched against the same verses."""
+    return tuple((w, strip_accents(w)) for w in GREEKWORD.findall(txt))
+
+
 def greek_hits(verses, spec):
     """{ (ch,v): [surface words] } for one thread's stem spec."""
     match = _compile_stems(spec["stems"])
     exclude = {strip_accents(x) for x in spec.get("exclude", [])}
     out = {}
     for ch, v, txt in verses:
-        hits = [w for w in GREEKWORD.findall(txt)
-                if strip_accents(w) not in exclude and match(strip_accents(w))]
+        hits = [w for w, sw in _words(txt)
+                if sw not in exclude and match(sw)]
         if hits:
             out[(ch, v)] = hits
     return out

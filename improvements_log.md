@@ -880,3 +880,9 @@
 ## 2026-09-26 — Reference links synced
 - `reference links.txt` → `matthew_reference_links.md` (markdown, file inventory dropped in favour of `instructions.md`); added to TRACKED_FILES, README table, instructions.md synced list; style ref §5 points to it.
 - instructions.md: Bible Project teacher notes cover Matt 1–8 only; from ch. 9 name the literary-canonical source used.
+
+## 2026-09-29 — Pipeline speed (output unchanged)
+- `pipeline/greek.py`: `transliterate` cached (canon_leads called it 761k times on ~5k distinct lemmas).
+- `pipeline/canon_leads.py`: occurrence and LXX-pair indexes built once per corpus, not per rare lemma per unit.
+- `pipeline/audit_thread_coverage.py`: verses tokenized once, `strip_accents` cached (was 2.3M calls; every thread re-scanned all of Matthew).
+- Build steps 31s to ~10s; `port_artifact.py 13 --dry` 8.1s to 1.4s. canon-leads sheets and the audit output are byte-identical before and after.

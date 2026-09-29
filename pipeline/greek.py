@@ -3,6 +3,7 @@ across the artifacts (ē ō ch ph th ps rh, ou/ai/ei/oi/au/eu, gg->ng, rough bre
 Good enough for legend headwords and endnote lemmas; every span it touches is logged
 for review."""
 
+import functools
 import unicodedata
 
 _BASE = {
@@ -27,6 +28,7 @@ def _stripaccents(s: str) -> str:
     return unicodedata.normalize("NFC", "".join(out))
 
 
+@functools.lru_cache(maxsize=None)
 def transliterate(text: str) -> str:
     """Transliterate a Greek word/phrase. Non-Greek characters pass through."""
     result = []

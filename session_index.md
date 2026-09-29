@@ -197,3 +197,6 @@ Read this first. 3 lines max per session.
 
 ## 2026-09-26 — Reference links synced
 - Converted Lane's reference-links file to `matthew_reference_links.md`, now mirrored to `project-side/synced/`; pointers updated.
+
+## 2026-09-29 — Pipeline speed
+- Cached transliteration, indexed canon_leads, tokenize-once thread audit. Build steps 31s to ~10s, port 8.1s to 1.4s, output identical (uncommitted). See ../session_summary_2026-09-29_performance.md.

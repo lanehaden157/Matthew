@@ -117,6 +117,46 @@ def passage_words(nt, passage):
     return [(f"{ch}:{v}", words) for (ch, v), words in by_verse.items()]
 
 
+_derived = {}
+
+
+def _memo(name, corpus, build_fn):
+    """build_fn(corpus), kept for the last corpus passed under `name`: every
+    unit in a run asks the same index of the same loaded corpus."""
+    held = _derived.get(name)
+    if held is None or held[0] is not corpus:
+        held = _derived[name] = (corpus, build_fn(corpus))
+    return held[1]
+
+
+def _lxx_occurrences(lxx):
+    at = {}
+    for book, verses in lxx.items():
+        for ch, v, k in verses:
+            at.setdefault(k, []).append((book, ch, v))
+    return at
+
+
+def _nt_occurrences(nt):
+    at = {}
+    for book, verses in nt.items():
+        for ch, v, k, surface in verses:
+            at.setdefault(k, []).append((book, ch, v, surface))
+    return at
+
+
+def _lxx_pairs(lxx):
+    pairs = collections.defaultdict(list)
+    for book, verses in lxx.items():
+        by_verse = collections.OrderedDict()
+        for ch, v, key in verses:
+            by_verse.setdefault((ch, v), []).append(key)
+        for (ch, v), keys in by_verse.items():
+            for a, b in zip(keys, keys[1:]):
+                pairs[(a, b)].append((book, ch, v))
+    return pairs
+
+
 def rare_leads(nt, lxx, freq, unit_words, rare=RARE_DEFAULT):
     """Rare lemmas in the passage, with every occurrence outside Matthew
     (Mark/Luke excluded -- Synoptic material has its own component)."""
@@ -128,20 +168,13 @@ def rare_leads(nt, lxx, freq, unit_words, rare=RARE_DEFAULT):
                 if ref not in seen[key]["refs"]:
                     seen[key]["refs"].append(ref)
 
+    lxx_at = _memo("lxx_at", lxx, _lxx_occurrences)
+    nt_at = _memo("nt_at", nt, _nt_occurrences)
     leads = []
     for key, info in seen.items():
-        lxx_hits = []
-        for book in lxx:
-            for ch, v, k in lxx[book]:
-                if k == key:
-                    lxx_hits.append((book, ch, v))
-        nt_hits = []
-        for book, verses in nt.items():
-            if book == SELF_BOOK or book in SYNOPTIC_EXCLUDE:
-                continue
-            for ch, v, k, surface in verses:
-                if k == key:
-                    nt_hits.append((book, ch, v, surface))
+        lxx_hits = lxx_at.get(key, [])
+        nt_hits = [h for h in nt_at.get(key, ())
+                   if h[0] != SELF_BOOK and h[0] not in SYNOPTIC_EXCLUDE]
         if lxx_hits or nt_hits:
             leads.append({"key": key, "surface": info["surface"], "mt": info["refs"],
                           "freq": freq[key], "lxx": lxx_hits, "nt": nt_hits})
@@ -155,14 +188,7 @@ def phrase_leads(lxx, freq, unit_words):
     verse. Both words under PHRASE_WORD_MAX total occurrences; the pair in at
     most PHRASE_TOTAL_MAX LXX verses. Overlapping pairs in one verse merge
     into a single phrase lead, with every LXX verse behind any of its pairs."""
-    lxx_pairs = collections.defaultdict(list)
-    for book, verses in lxx.items():
-        by_verse = collections.OrderedDict()
-        for ch, v, key in verses:
-            by_verse.setdefault((ch, v), []).append(key)
-        for (ch, v), keys in by_verse.items():
-            for a, b in zip(keys, keys[1:]):
-                lxx_pairs[(a, b)].append((book, ch, v))
+    lxx_pairs = _memo("lxx_pairs", lxx, _lxx_pairs)
 
     def qualifies(a, b):
         pkey = (a[0], b[0])
