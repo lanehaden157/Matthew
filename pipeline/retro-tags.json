@@ -7,6 +7,14 @@
       "root": "clean",
       "why": "akathartos 10:1 shares the kathar- stem with katharizō (tagged `clean` at 10:8); unit 12 tags akathartos at 12:43 — apply only if 10:1 is not already tagged",
       "_from": "from Unit 12 port (2026-09-20)"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 25,
+      "text": "save",
+      "root": "save",
+      "why": "sōson 8:25 — digest lists no unit-8 beat for save; 14:30 repeats the cry almost word for word",
+      "_from": "from Unit 14 port (2026-09-29)"
     }
   ]
 }

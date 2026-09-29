@@ -787,10 +787,67 @@
     {
       "n": 14,
       "slug": "unit-14",
-      "passage": "Matthew 13:54-14:36",
+      "passage": "Matthew 13:54–14:36",
       "title": "Rejection, a Beheading, Bread, and the Sea",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "hear": {
+          "color": "#a8324a",
+          "translit": "akouō · akoē",
+          "gloss": "hear; a hearing, report"
+        },
+        "king": {
+          "color": "#4a4f93",
+          "translit": "basileus",
+          "gloss": "king"
+        },
+        "give": {
+          "color": "#2f6db3",
+          "translit": "didōmi",
+          "gloss": "give"
+        },
+        "command": {
+          "color": "#8a3c70",
+          "translit": "keleuō",
+          "gloss": "command, give an order"
+        },
+        "wilderness": {
+          "color": "#8a6a2a",
+          "translit": "erēmos",
+          "gloss": "wilderness, deserted place",
+          "echo": "Exod 16 — the wilderness where Israel was fed bread it did not grow"
+        },
+        "grass": {
+          "color": "#6b2fb3",
+          "translit": "chortos · chortazō",
+          "gloss": "grass, fodder; fed full as on pasture",
+          "echo": "Ps 132:15 (131:15 in the Greek) — God promises to fill Zion’s poor with bread"
+        },
+        "break": {
+          "color": "#455a6b",
+          "translit": "klaō · klasma",
+          "gloss": "break (bread); broken pieces",
+          "echo": "Matt 26:26; Acts 2:46; 1 Cor 11:24 — the same breaking, at the table of the new covenant"
+        },
+        "walk": {
+          "color": "#9c4f1c",
+          "translit": "peripateō",
+          "gloss": "walk about",
+          "echo": "Job 9:8 (Greek) — God alone walks on the sea as on firm ground"
+        },
+        "waver": {
+          "color": "#1f8f5f",
+          "translit": "distazō",
+          "gloss": "waver, hesitate between two",
+          "echo": "Matt 28:17 — the only other use in the New Testament: they worshiped, but some wavered"
+        },
+        "son": {
+          "color": "#0e8aa0",
+          "translit": "huios",
+          "gloss": "son"
+        }
+      }
     },
     {
       "n": 15,

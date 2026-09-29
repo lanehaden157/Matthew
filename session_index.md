@@ -197,3 +197,7 @@ Read this first. 3 lines max per session.
 
 ## 2026-09-26 — Reference links synced
 - Converted Lane's reference-links file to `matthew_reference_links.md`, now mirrored to `project-side/synced/`; pointers updated.
+
+## 2026-09-29 — Unit 14 ported (Matt 13:53–14:36)
+- `port_artifact.py 14`, faith recoloured, data-w assigned; thread-delta-14 awaits Lane's rulings.
+- Sped up `biblecore test` (audit lemma cache) and fixed its audit crash; core repo needs the same patch.

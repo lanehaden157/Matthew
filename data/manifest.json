@@ -10,7 +10,7 @@
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse",
   "unit_count": 28,
-  "units_built": 13,
+  "units_built": 14,
   "files": {
     "units.json": {
       "schema": 1

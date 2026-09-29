@@ -888,3 +888,5 @@
 - 2026-09-28: Matthew stays on its own `pipeline/` (Lane dropped the move onto core, old phases D-G). Core 0.9.7 synced; `book.json` `checks.skip_fragment_checks` (native-script, inline-style, data-verses, component:synoptic) and `test_idempotent: false`, so `python -m biblecore test` passes (8/8). No unit changed. CLAUDE.md updated.
 
 - 2026-09-28: css/theme.css: unit 1 genealogy frame nodes (Abraham/David/Jesus) used hardcoded #fff; now var(--panel-2) so they sit in the theme.
+- 2026-09-29: Ported unit 14 (Matt 13:53–14:36); recoloured global `faith` #b07a1e -> #427653 (clash with acts-of-power); `biblecore data-w 14`. Thread delta (pipeline/out/thread-delta-14.md) not yet applied to threads.json.
+- 2026-09-29: `biblecore test` took minutes: audit re-parsed every lemma field per root per unit. Added lru_cache to `_lemma_id_forms` (audit.py; now ~16s) and fixed selftest `check_audit` len(int) crash. Vendored copy only; same fixes belong in ../bible-core.
