@@ -35,7 +35,7 @@
       "component:synoptic"
     ]
   },
-  "core": "0.9.7",
+  "core": "0.9.8",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse"
 }

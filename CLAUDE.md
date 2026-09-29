@@ -60,8 +60,14 @@ forked `app/` are in git history.
 - Discourses are the shell's "overlay" grouping (`book.json` `overlay`);
   `data/units.json` holds movements and discourses as `groupings`.
 - `.compare` and `aside.synoptic` are core components with their own chips (✦, ✧).
-- Take shell updates from `../bible-core/template/app/`; update core with
-  `python ../bible-core/tools/core_sync.py .`.
+- Core is pinned (0.9.8 as of 2026-09-29). Take shell and core updates
+  deliberately, when a release fixes something Matthew needs, not on every
+  0.9.x bump: `python ../bible-core/tools/core_sync.py .` (it refuses if
+  `biblecore/` has local edits, so fix bugs in `../bible-core` first), and
+  shell files from `../bible-core/template/app/`.
+- Porting doesn't need `biblecore test`: after `port_artifact.py`, run
+  `python -m biblecore data-w NN`, `emit` and `manifest`, then `pipeline/build.py`.
+  Run `test` when core changes.
 - **Interlinear glosses (core 0.9.2, plan D1):** `pipeline/corpus/lexicon/lexemes.yaml`
   (MorphGNT's morphological lexicon; `python pipeline/fetch_corpus.py` fetches it,
   `book.json` `paths.greek_lexicon` points at it) -- `emit` reads it. 100% coverage
