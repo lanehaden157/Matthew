@@ -1,33 +1,12 @@
-/* Study site — tab router + footnote interactions (bible-core starter
-   template; the book owns this file once copied and may change it freely).
-   Plain ES module, no build step. Paths are relative so it works from a
-   GitHub Pages subpath.
+/* Matthew Study — tab router + footnote interactions.
+   Plain ES module, no build step. Paths are relative so it works from a GitHub
+   Pages subpath. */
 
-   Groupings: data/units.json carries `groupings: [{kind, n, name, label?,
-   span, units}]` and each unit row carries an integer per kind (e.g.
-   `"movement": 2`). The FIRST kind listed drives the book map, the contents
-   list and the masthead placement line; `label` (default: the kind,
-   capitalised) is what a reader sees ("Movement II · …"). A book with no
-   groupings gets one flat list.
-
-   The `?v=N` on every same-origin module import is manual cache-busting for
-   GitHub Pages. Bump every `?v=N` here AND in search.js's threads.js import,
-   together, whenever threads.js/spotlight.js/search.js changes -- a stale
-   cached module is invisible in the DOM and easy to mistake for a real bug. */
-
-import { loadThreadData, loadCanon, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=9";
-import { enhanceSpotlights, openAll } from "./spotlight.js?v=7";
-import { renderSearch } from "./search.js?v=7";
-import { MODES, applyMode, indexVerses, findVerse, mountInterlinear, unmountInterlinear,
-         parseRef, unitForRef, rememberPosition, lastPosition, renderPrint } from "./reader.js?v=7";
+import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=38";
+import { enhanceSpotlights } from "./spotlight.js?v=37";
+import { renderSearch } from "./search.js?v=37";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
-// written by the build from book.json "components" (biblecore/components):
-// which components are verse asides (collapsed with the glosses) and which
-// blocks stay in line instead of being hoisted
-const COMPONENTS_URL = new URL("../data/components.json", import.meta.url);
-// book identity (name, osis, abbrev) and data versions, from the build
-const MANIFEST_URL = new URL("../data/manifest.json", import.meta.url);
 
 // always revalidate — a no-build static site changes the moment files are pushed
 // no build step: always fetch the current file, never a cached copy
@@ -42,53 +21,25 @@ const navToggle = document.getElementById("nav-toggle");
 const navToggleCtx = document.getElementById("nav-toggle-ctx");
 
 let manifest = null;
-let comps = [];       // [{name, role, selector}] from data/components.json
-let bookInfo = {};    // data/manifest.json: {book, osis, abbrev, ...}
-let groups = [];      // the primary grouping kind's entries, in order
-let groupKind = null; // e.g. "movement"
-let overlays = [];    // the overlay grouping's entries (book.json "overlay")
-let overlayKind = null; // e.g. "discourse": marks, brackets, a placement line
 
-const storagePrefix = () => (manifest?.book || "study").toLowerCase().replace(/[^a-z0-9]+/g, "-");
-const CENTER_TEXT_KEY = () => `${storagePrefix()}:centerText`;
-const MODE_KEY = () => `${storagePrefix()}:mode`;
-const readMode = () => { try { return localStorage.getItem(MODE_KEY()) || "notes"; } catch (e) { return "notes"; } };
-const bookRef = () => ({ name: bookInfo.book || manifest?.book || "", osis: bookInfo.osis, abbrev: bookInfo.abbrev });
-const siteTitle = () => `${manifest?.book || ""} Study`.trim();
+const CENTER_TEXT_KEY = "matthew:centerText";
 
 applySettings();
 init();
 
 async function init() {
   try {
-    let c, bm;
-    [manifest, c, bm] = await Promise.all([
+    [manifest] = await Promise.all([
       fetch(bust(UNITS_URL)).then((r) => r.json()),
-      fetch(bust(COMPONENTS_URL)).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-      fetch(bust(MANIFEST_URL)).then((r) => (r.ok ? r.json() : null)).catch(() => null),
       loadThreadData(),
     ]);
-    comps = c?.components || [];
-    bookInfo = bm || {};
-    if (bookInfo.hub) {
-      loadCanon(bookInfo.hub, bookInfo.slug);
-      addHubLink(bookInfo.hub);
-    }
-    renderSources(bookInfo.language || manifest.language);
   } catch (e) {
     content.innerHTML = `<p class="missing">Could not load site data (<code>data/*.json</code>).</p>`;
     return;
   }
-  groupKind = manifest.groupings?.[0]?.kind || null;
-  groups = groupKind ? manifest.groupings.filter((g) => g.kind === groupKind) : [];
-  overlayKind = bookInfo.overlay || null;
-  overlays = overlayKind ? manifest.groupings.filter((g) => g.kind === overlayKind) : [];
-  applySettings();
   buildUnitNav();
   wireNavToggle();
   wireSettingsToggle();
-  wireModes();
-  wireAppearance();
   window.addEventListener("hashchange", route);
   route();
 }
@@ -96,45 +47,10 @@ async function init() {
 /* --------------------------------------------------------------- settings */
 
 function applySettings() {
-  const centered = localStorage.getItem(CENTER_TEXT_KEY()) === "1";
+  const centered = localStorage.getItem(CENTER_TEXT_KEY) === "1";
   document.body.classList.toggle("text-center", centered);
   const checkbox = document.getElementById("setting-center-text");
   if (checkbox) checkbox.checked = centered;
-  applyMode(readMode());
-}
-
-/* light / dark / follow the system. The choice is shared by every book site
-   (one origin), set on <html data-theme> by index.html's first script so the
-   page never flashes the wrong palette; division.css holds the palettes. */
-function wireAppearance() {
-  const box = document.getElementById("setting-appearance");
-  if (!box) return;
-  const cur = document.documentElement.dataset.theme || "auto";
-  const opts = [["auto", "Match the system"], ["light", "Light"], ["dark", "Dark"]];
-  box.innerHTML = opts.map(([v, label]) =>
-    `<label class="settings-row"><input type="radio" name="appearance" value="${v}"${v === cur ? " checked" : ""}> ${label}</label>`).join("");
-  box.addEventListener("change", (e) => {
-    document.documentElement.dataset.theme = e.target.value;
-    try { localStorage.setItem("bible:theme", e.target.value); } catch (err) { /* private mode */ }
-  });
-}
-
-/* reading-mode radios, built from reader.js MODES */
-function wireModes() {
-  const box = document.getElementById("setting-modes");
-  if (!box) return;
-  const cur = readMode();
-  box.innerHTML = MODES.map(([m, label]) =>
-    `<label class="settings-row"><input type="radio" name="mode" value="${m}"${m === cur ? " checked" : ""}> ${label}</label>`).join("");
-  box.addEventListener("change", (e) => {
-    const m = e.target.value;
-    try { localStorage.setItem(MODE_KEY(), m); } catch (err) { /* private mode */ }
-    applyMode(m);
-    if (!content.querySelector("article.unit")) return;
-    if (m === "interlinear") mountInterlinear(content);
-    else unmountInterlinear(content);
-    openAll(content, m === "open");
-  });
 }
 
 function wireSettingsToggle() {
@@ -160,7 +76,7 @@ function wireSettingsToggle() {
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") set(false); });
 
   checkbox?.addEventListener("change", () => {
-    localStorage.setItem(CENTER_TEXT_KEY(), checkbox.checked ? "1" : "0");
+    localStorage.setItem(CENTER_TEXT_KEY, checkbox.checked ? "1" : "0");
     document.body.classList.toggle("text-center", checkbox.checked);
   });
 }
@@ -191,13 +107,17 @@ function wireNavToggle() {
 
 /* ----------------------------------------------------------------- unit nav */
 
+function discourseOf(n) {
+  return (manifest.discourses || []).find((d) => d.units.includes(n)) || null;
+}
+
 function chip(u) {
-  const d = overlayOf(u.n);
+  const d = discourseOf(u.n);
   const a = document.createElement("a");
   a.className = "unit-chip" + (u.built ? "" : " unbuilt") + (d ? " in-disc" : "");
   a.dataset.slug = u.slug;
   if (u.built) a.href = `#/${u.slug}`;
-  if (d) a.title = `${groupLabel(d)} — ${groupName(d)}`;
+  if (d) a.title = `Discourse ${roman(d.n)} — ${d.label}`;
   a.innerHTML =
     (d ? `<span class="disc-mark" aria-hidden="true">◆&nbsp;${roman(d.n)}</span>` : "") +
     `<span class="n">${u.n}</span>${escapeHtml(u.title)}` +
@@ -205,37 +125,19 @@ function chip(u) {
   return a;
 }
 
-/* "Movement II": the kind and number. A grouping's display name is its
-   `label` when it has one (units.json keeps `name` as the short id), else
-   its `name`. */
-function groupLabel(g) {
-  const kind = g.kind ? g.kind[0].toUpperCase() + g.kind.slice(1) : "";
-  return `${kind} ${roman(g.n)}`.trim();
-}
-function groupName(g) { return g.label || g.name || ""; }
-function kindPlural(k) { return k ? k[0].toUpperCase() + k.slice(1) + "s" : ""; }
-
-function overlayOf(n) { return overlays.find((d) => d.units.includes(n)) || null; }
-
-/* Units bucketed by the primary grouping; one unnamed bucket when the book
-   has no groupings. */
-function unitsByGroup() {
+function unitsByMovement() {
   const m = new Map();
   for (const u of manifest.units) {
-    const k = groupKind ? u[groupKind] : 0;
-    if (!m.has(k)) m.set(k, []);
-    m.get(k).push(u);
+    if (!m.has(u.movement)) m.set(u.movement, []);
+    m.get(u.movement).push(u);
   }
   return m;
 }
 
-function groupList() {
-  return groups.length ? groups : [{ n: 0, name: "", kind: null }];
-}
-
-/* A map of the whole book: one tick per unit, grouped by the primary grouping. */
+/* A map of the whole book: 28 ticks grouped into the 3 movements, with the
+   5 discourses drawn as brackets spanning the units they cover. */
 function buildBookMap() {
-  const by = unitsByGroup();
+  const by = unitsByMovement();
   const wrap = document.createElement("div");
   wrap.className = "book-map";
 
@@ -244,8 +146,8 @@ function buildBookMap() {
   const row = document.createElement("div");
   row.className = "bm-row";
 
-  for (const m of groupList()) {
-    const us = by.get(m.n) || [];
+  for (const m of manifest.movements) {
+    const us = by.get(m.id) || [];
     if (!us.length) continue;
     const cols = `repeat(${us.length}, minmax(0, 1fr))`;
 
@@ -255,8 +157,8 @@ function buildBookMap() {
 
     const lab = document.createElement("div");
     lab.className = "bm-mv-label";
-    lab.innerHTML = m.kind ? `<i></i><b>${roman(m.n)}</b><i></i>` : "<i></i><i></i>";
-    lab.title = m.kind ? `${groupLabel(m)} — ${groupName(m)}` : "";
+    lab.innerHTML = `<i></i><b>${roman(m.id)}</b><i></i>`;
+    lab.title = `Movement ${roman(m.id)} — ${m.label}`;
     grp.appendChild(lab);
 
     const ticks = document.createElement("div");
@@ -264,7 +166,7 @@ function buildBookMap() {
     ticks.style.gridTemplateColumns = cols;
     for (const u of us) {
       const t = document.createElement(u.built ? "a" : "span");
-      t.className = "bm-tick" + (u.built ? "" : " unbuilt") + (overlayOf(u.n) ? " in-disc" : "");
+      t.className = "bm-tick" + (u.built ? "" : " unbuilt") + (discourseOf(u.n) ? " in-disc" : "");
       t.dataset.slug = u.slug;
       t.textContent = u.n;
       t.title = `Unit ${u.n} · ${u.title} · ${u.passage}${u.built ? "" : " (not yet built)"}`;
@@ -273,66 +175,59 @@ function buildBookMap() {
     }
     grp.appendChild(ticks);
 
-    // the overlay's groups as brackets under the units they span
-    if (overlays.length) {
-      const brs = document.createElement("div");
-      brs.className = "bm-brackets";
-      brs.style.gridTemplateColumns = cols;
-      const first = us[0].n;
-      for (const d of overlays) {
-        const inHere = d.units.filter((n) => us.some((u) => u.n === n));
-        if (!inHere.length) continue;
-        const el = document.createElement("div");
-        el.className = "bm-disc";
-        el.style.gridColumn = `${Math.min(...inHere) - first + 1} / ${Math.max(...inHere) - first + 2}`;
-        el.innerHTML = `<span class="bm-disc-bar"></span>` +
-          `<span class="bm-disc-label">◆&nbsp;${roman(d.n)}</span>`;
-        el.title = `${groupLabel(d)} — ${groupName(d)} (Units ${d.units.join(", ")})`;
-        brs.appendChild(el);
-      }
-      grp.appendChild(brs);
+    const brs = document.createElement("div");
+    brs.className = "bm-brackets";
+    brs.style.gridTemplateColumns = cols;
+    const first = us[0].n;
+    for (const d of manifest.discourses || []) {
+      const inHere = d.units.filter((n) => us.some((u) => u.n === n));
+      if (!inHere.length) continue;
+      const a = Math.min(...inHere) - first + 1;
+      const b = Math.max(...inHere) - first + 2;
+      const el = document.createElement("div");
+      el.className = "bm-disc";
+      el.style.gridColumn = `${a} / ${b}`;
+      el.innerHTML = `<span class="bm-disc-bar"></span>` +
+        `<span class="bm-disc-label">◆&nbsp;${roman(d.n)}</span>`;
+      el.title = `Discourse ${roman(d.n)} — ${d.label} (Units ${d.units.join(", ")})`;
+      brs.appendChild(el);
     }
+    grp.appendChild(brs);
     row.appendChild(grp);
   }
 
   scroller.appendChild(row);
   wrap.appendChild(scroller);
 
-  if (groups.length) {
-    const key = document.createElement("div");
-    key.className = "bm-key";
-    key.innerHTML =
-      `<div class="bm-key-row"><span class="bm-key-h">${escapeHtml(kindPlural(groupKind))}</span><span class="bm-key-items">` +
-        groups.map((m) =>
-          `<span class="bm-key-item"><b>${roman(m.n)}</b> ${escapeHtml(groupName(m))}</span>`).join("") +
-      `</span></div>` +
-      (overlays.length
-        ? `<div class="bm-key-row disc"><span class="bm-key-h">${escapeHtml(kindPlural(overlayKind))}</span><span class="bm-key-items">` +
-          overlays.map((d) =>
-            `<span class="bm-key-item"><b>◆&nbsp;${roman(d.n)}</b> ${escapeHtml(groupName(d))}</span>`).join("") +
-          `</span></div>`
-        : "");
-    wrap.appendChild(key);
-  }
+  const key = document.createElement("div");
+  key.className = "bm-key";
+  key.innerHTML =
+    `<div class="bm-key-row"><span class="bm-key-h">Movements</span><span class="bm-key-items">` +
+      manifest.movements.map((m) =>
+        `<span class="bm-key-item"><b>${roman(m.id)}</b> ${escapeHtml(m.label)}</span>`).join("") +
+    `</span></div>` +
+    `<div class="bm-key-row disc"><span class="bm-key-h">Discourses</span><span class="bm-key-items">` +
+      (manifest.discourses || []).map((d) =>
+        `<span class="bm-key-item"><b>◆&nbsp;${roman(d.n)}</b> ${escapeHtml(d.label)}</span>`).join("") +
+    `</span></div>`;
+  wrap.appendChild(key);
   return wrap;
 }
 
 function buildUnitNav() {
-  const by = unitsByGroup();
+  const by = unitsByMovement();
   const frag = document.createDocumentFragment();
   frag.appendChild(buildBookMap());
 
-  for (const m of groupList()) {
-    if (m.kind) {
-      const label = document.createElement("div");
-      label.className = "movement-label";
-      label.textContent = `${groupLabel(m)} · ${groupName(m)}`;
-      frag.appendChild(label);
-    }
+  for (const m of manifest.movements) {
+    const label = document.createElement("div");
+    label.className = "movement-label";
+    label.textContent = `Movement ${roman(m.id)} · ${m.label}`;
+    frag.appendChild(label);
 
     const grid = document.createElement("div");
     grid.className = "unit-grid";
-    for (const u of by.get(m.n) || []) grid.appendChild(chip(u));
+    for (const u of by.get(m.id) || []) grid.appendChild(chip(u));
     frag.appendChild(grid);
   }
   unitNav.innerHTML = "";
@@ -351,59 +246,20 @@ function route() {
     else searchLink.removeAttribute("aria-current");
   }
 
-  if (slug === "search" || slug === "lemma") {
+  if (slug === "search") {
     markCurrent(null);
     pager.innerHTML = "";
-    document.title = `Search — ${siteTitle()}`;
-    renderSearch(content, manifest.units, storagePrefix(), {
-      book: bookRef(),
-      initial: slug === "lemma" && anchor ? `=${decodeURIComponent(anchor)}` : null,
-    });
+    document.title = "Concordance — Matthew Study";
+    renderSearch(content, manifest.units);
     content.scrollIntoView({ block: "start" });
-    return;
-  }
-
-  if (slug === "print") {
-    markCurrent(null);
-    pager.innerHTML = "";
-    document.title = `Whole study — ${siteTitle()}`;
-    renderPrint(content, manifest.units, bookRef(), (wrap, u) => {
-      hoistStructureBlocks(wrap);
-      normalizeSectionHeadings(wrap);
-      indexVerses(wrap, u);
-      injectPalette(u, resolveUnit(u), `unit-palette-${u.n}`);
-      rebuildLegend(wrap, resolveUnit(u));
-      enhanceSpotlights(wrap, comps.filter((c) => c.role === "verse-aside"));
-      openAll(wrap, true);
-    });
-    return;
-  }
-
-  if (slug === "ref" && anchor) {
-    const q = decodeURIComponent(anchor);
-    const r = parseRef(q, bookRef()) || (/^\d+:\d+$/.test(q) ? q.split(":").map(Number) : null);
-    const u = r && unitForRef(r[0], r[1], manifest.units);
-    if (u?.built) { location.replace(`#/${u.slug}/${r[0]}:${r[1]}`); return; }
-    content.innerHTML = u
-      ? `<p class="missing">${escapeHtml(bookRef().name)} ${r[0]}:${r[1]} is in Unit ${u.n} (${escapeHtml(u.title)}), not built yet.</p>`
-      : `<p class="missing">No unit covers “${escapeHtml(q)}”.</p>`;
-    markCurrent(null);
     return;
   }
 
   const unit = manifest.units.find((u) => u.slug === slug && u.built);
   if (!unit) {
     const first = manifest.units.find((u) => u.built);
-    if (first && !slug) {
-      // continue where the reader left off, else the first built unit
-      const last = lastPosition(storagePrefix());
-      const again = last && manifest.units.find((u) => u.slug === last.slug && u.built);
-      location.replace(again ? `#/${again.slug}${last.ref ? "/" + last.ref : ""}` : `#/${first.slug}`);
-      return;
-    }
-    content.innerHTML = first
-      ? `<p class="missing">Unit not found. Pick one from Contents.</p>`
-      : `<p class="missing">No units built yet.</p>`;
+    if (first && !slug) { location.replace(`#/${first.slug}`); return; }
+    content.innerHTML = `<p class="missing">Unit not found. Pick one above.</p>`;
     markCurrent(null);
     pager.innerHTML = "";
     return;
@@ -428,22 +284,20 @@ async function loadUnit(unit, anchor) {
   renderPlacement(content, unit);
   hoistStructureBlocks(content);
   normalizeSectionHeadings(content);
-  indexVerses(content, unit);
   const resolved = resolveUnit(unit);
   injectPalette(unit, resolved);
   rebuildLegend(content, resolved);
-  enhanceSpotlights(content, comps.filter((c) => c.role === "verse-aside"));
-  const mode = readMode();
-  if (mode === "open") openAll(content, true);
-  if (mode === "interlinear") mountInterlinear(content);
+  enhanceSpotlights(content);
   wireRoots(content, unit, manifest.units);
   wireFootnotes();
   buildPager(unit);
-  document.title = `Unit ${unit.n} · ${unit.title} — ${siteTitle()}`;
+  document.title = `Unit ${unit.n} · ${unit.title} — Matthew Study`;
 
-  rememberPosition(storagePrefix(), unit.slug, anchor && /^\d+:\d+$/.test(anchor) ? anchor : null);
   if (anchor) {
-    const el = findVerse(content, anchor) || document.getElementById(anchor);
+    const vm = anchor.match(/^v(\d+)$/);
+    const el = vm
+      ? [...content.querySelectorAll(".v")].find((v) => v.querySelector(".n")?.textContent.trim() === vm[1])
+      : document.getElementById(anchor);
     if (el) requestAnimationFrame(() => jumpTo(el));
     else content.scrollIntoView({ block: "start" });
   } else {
@@ -451,10 +305,10 @@ async function loadUnit(unit, anchor) {
   }
 }
 
-/* Move every structural block (a ring, a table, a list) to the top of the
-   unit, just under the colour key, keeping their authored order. Never
-   hoists .legend or .notes (learned: endnotes carrying the "block" class
-   were hoisted above the translation). */
+/* Move every structural block (rings/chiasms, comparison tables, itineraries)
+   to the top of the unit, just under the colour key, keeping their authored
+   order. The research fragments drop these wherever they fall in the prose;
+   the site always shows them first, before the translation. */
 function hoistStructureBlocks(root) {
   const article = root.querySelector("article.unit") || root;
   const anchor =
@@ -463,18 +317,14 @@ function hoistStructureBlocks(root) {
   if (!anchor || !anchor.parentNode) return;
   let ref = anchor;
   for (const b of article.querySelectorAll("section.block")) {
-    if (b.classList.contains("legend") || b.classList.contains("notes")) continue;
-    // A count table or an itinerary is read in sequence with the text, so it
-    // stays where the text puts it rather than joining the hoisted blocks.
-    const inline = selectorsFor("inline-block");
-    if (inline && b.querySelector(inline)) continue;
+    if (b.classList.contains("legend")) continue;
     ref.after(b); // re-parents b to sit right after ref, in document order
     ref = b;
   }
 }
 
 /* One section-heading form site-wide: <h3 class="pericope">Title <span>· range</span></h3>
-   (Matthew's unit 8 shape). Older Matthew fragments used div.sectionhead / div.panelhead /
+   (Unit 8's shape). Older fragments used div.sectionhead / div.panelhead /
    h3.panel / h3.movement / h2.secthead — normalise them all here, and wrap a
    trailing verse range in the <span> if the author didn't. Catches any future
    drift too. */
@@ -499,49 +349,17 @@ function normalizeSectionHeadings(root) {
   }
 }
 
-/* the book switcher: every book site links back to the canon hub */
-function addHubLink(hub) {
-  const actions = document.querySelector(".topbar-actions");
-  if (!actions || actions.querySelector(".hub-link")) return;
-  const a = document.createElement("a");
-  a.className = "topbar-link hub-link";
-  a.href = hub;
-  a.textContent = "All books";
-  actions.prepend(a);
-}
-
-/* Required attribution for the source text/morphology/lexicon each language
-   reads (review, plan D1/sources): the underlying data is not the study's
-   own, and each licence (CC BY / CC BY-SA) asks for a credit line. Never
-   translations -- the study's English is its own throughout. */
-const SOURCES = {
-  hebrew: "Hebrew text and morphology: <a href=\"https://github.com/openscriptures/morphhb\">Open Scriptures Hebrew Bible</a> (CC BY 4.0). "
-    + "Lexicon glosses: <a href=\"https://github.com/openscriptures/HebrewLexicon\">Open Scriptures HebrewLexicon</a> (Strong's), shown as word identifiers, not translations.",
-  greek: "Greek text and morphology: <a href=\"https://github.com/morphgnt/sblgnt\">MorphGNT: SBLGNT Edition</a> (Tauber, ed.; parsing and lemmas CC BY-SA 3.0; SBLGNT text © 2010 <a href=\"https://sblgnt.com/license/\">Society of Biblical Literature and Logos Bible Software</a>). "
-    + "Lexicon glosses: <a href=\"https://github.com/morphgnt/morphological-lexicon\">MorphGNT morphological lexicon</a> (CC BY-SA 3.0).",
-};
-
-function renderSources(language) {
-  const foot = document.getElementById("site-foot");
-  if (!foot) return;
-  const src = SOURCES[language];
-  foot.innerHTML = (src ? `<p>${src}</p>` : "") + `<p>The translation is the study's own.</p>`;
-}
-
-/* "aside.echo, aside.textform" for a role, or "" if the book enables none */
-function selectorsFor(role) {
-  return comps.filter((c) => c.role === role).map((c) => c.selector).join(", ");
-}
-
 function renderPlacement(root, unit) {
   const mast = root.querySelector("header.mast");
   if (!mast) return;
-  const mv = groups.find((m) => m.n === unit[groupKind]);
-  const d = overlayOf(unit.n);
-  let txt = mv ? `${groupLabel(mv)} · ${groupName(mv)}` : "";
+  const mv = manifest.movements.find((m) => m.id === unit.movement);
+  const d = discourseOf(unit.n);
+  let txt = mv ? `Movement ${roman(mv.id)} · ${mv.label}` : "";
   if (d) {
-    const pos = d.units.length > 1 ? ` (${d.units.indexOf(unit.n) + 1} of ${d.units.length})` : "";
-    txt += `${txt ? " — " : ""}◆ ${groupLabel(d)}: ${groupName(d)}${pos}`;
+    const pos = d.units.length > 1
+      ? ` (${d.units.indexOf(unit.n) + 1} of ${d.units.length})`
+      : "";
+    txt += `${txt ? " — " : ""}◆ Discourse ${roman(d.n)}: ${d.label}${pos}`;
   }
   if (!txt) return;
   const el = document.createElement("div");
@@ -662,9 +480,5 @@ function buildPager(unit) {
 
 /* ------------------------------------------------------------------- utils */
 
-function roman(n) {
-  const r = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
-             "XI", "XII", "XIII", "XIV", "XV"][n];
-  return r ?? String(n);
-}
+function roman(n) { return ["", "I", "II", "III", "IV", "V"][n] || String(n); }
 function escapeHtml(s) { return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }

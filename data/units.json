@@ -2,63 +2,27 @@
   "_note": "Unit manifest for the whole gospel. built units carry a roots map name -> {color, translit, gloss}. A root also listed in threads.json takes that thread's colour instead (global tier); the local color here is the fallback. Hand-maintained. (pipeline/extract_legends.py was a one-time backfill of translit/gloss out of the fragments' hand legends; it is retired and no longer part of build.py — do not re-run it.) Roots here that a thread also covers, and roots not (yet) tagged in the fragment, are both kept on purpose: the local entry is the fallback if a thread is ever demoted back to local.",
   "book": "Matthew",
   "unit_count": 28,
-  "groupings": [
+  "movements": [
     {
-      "kind": "movement",
+      "id": 1,
+      "label": "The Person of the Messiah",
+      "range": "1:1-4:16/17"
+    },
+    {
+      "id": 2,
+      "label": "The Kingdom Proclaimed in Galilee",
+      "range": "4:17-16:20"
+    },
+    {
+      "id": 3,
+      "label": "The Road to the Cross",
+      "range": "16:21-28:20"
+    }
+  ],
+  "discourses": [
+    {
       "n": 1,
-      "name": "The Person of the Messiah",
-      "span": "1:1-4:16/17",
-      "units": [
-        1,
-        2,
-        3
-      ]
-    },
-    {
-      "kind": "movement",
-      "n": 2,
-      "name": "The Kingdom Proclaimed in Galilee",
-      "span": "4:17-16:20",
-      "units": [
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16
-      ]
-    },
-    {
-      "kind": "movement",
-      "n": 3,
-      "name": "The Road to the Cross",
-      "span": "16:21-28:20",
-      "units": [
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28
-      ]
-    },
-    {
-      "kind": "discourse",
-      "n": 1,
-      "name": "Sermon on the Mount",
+      "label": "Sermon on the Mount",
       "units": [
         5,
         6,
@@ -66,33 +30,29 @@
       ]
     },
     {
-      "kind": "discourse",
       "n": 2,
-      "name": "The Mission",
+      "label": "The Mission",
       "units": [
         10
       ]
     },
     {
-      "kind": "discourse",
       "n": 3,
-      "name": "Parables of the Kingdom",
+      "label": "Parables of the Kingdom",
       "units": [
         13
       ]
     },
     {
-      "kind": "discourse",
       "n": 4,
-      "name": "Life in the Community",
+      "label": "Life in the Community",
       "units": [
         18
       ]
     },
     {
-      "kind": "discourse",
       "n": 5,
-      "name": "Woes & the Olivet Discourse",
+      "label": "Woes & the Olivet Discourse",
       "units": [
         23,
         24,
@@ -414,8 +374,7 @@
           "translit": "ponēros",
           "gloss": "evil / the evil one"
         }
-      },
-      "discourse": 1
+      }
     },
     {
       "n": 6,
@@ -460,8 +419,7 @@
           "translit": "zēteō · epizēteō",
           "gloss": "seek (zēt-)"
         }
-      },
-      "discourse": 1
+      }
     },
     {
       "n": 7,
@@ -516,8 +474,7 @@
           "translit": "pylē",
           "gloss": "gate"
         }
-      },
-      "discourse": 1
+      }
     },
     {
       "n": 8,
@@ -611,8 +568,7 @@
           "translit": "apostellō · apostolos",
           "gloss": "send out; one sent out, emissary"
         }
-      },
-      "discourse": 2
+      }
     },
     {
       "n": 11,
@@ -781,73 +737,15 @@
           "translit": "teleō",
           "gloss": "complete, finish"
         }
-      },
-      "discourse": 3
+      }
     },
     {
       "n": 14,
       "slug": "unit-14",
-      "passage": "Matthew 13:54–14:36",
+      "passage": "Matthew 13:54-14:36",
       "title": "Rejection, a Beheading, Bread, and the Sea",
       "movement": 2,
-      "built": true,
-      "roots": {
-        "hear": {
-          "color": "#a8324a",
-          "translit": "akouō · akoē",
-          "gloss": "hear; a hearing, report"
-        },
-        "king": {
-          "color": "#4a4f93",
-          "translit": "basileus",
-          "gloss": "king"
-        },
-        "give": {
-          "color": "#2f6db3",
-          "translit": "didōmi",
-          "gloss": "give"
-        },
-        "command": {
-          "color": "#8a3c70",
-          "translit": "keleuō",
-          "gloss": "command, give an order"
-        },
-        "wilderness": {
-          "color": "#8a6a2a",
-          "translit": "erēmos",
-          "gloss": "wilderness, deserted place",
-          "echo": "Exod 16 — the wilderness where Israel was fed bread it did not grow"
-        },
-        "grass": {
-          "color": "#6b2fb3",
-          "translit": "chortos · chortazō",
-          "gloss": "grass, fodder; fed full as on pasture",
-          "echo": "Ps 132:15 (131:15 in the Greek) — God promises to fill Zion’s poor with bread"
-        },
-        "break": {
-          "color": "#455a6b",
-          "translit": "klaō · klasma",
-          "gloss": "break (bread); broken pieces",
-          "echo": "Matt 26:26; Acts 2:46; 1 Cor 11:24 — the same breaking, at the table of the new covenant"
-        },
-        "walk": {
-          "color": "#9c4f1c",
-          "translit": "peripateō",
-          "gloss": "walk about",
-          "echo": "Job 9:8 (Greek) — God alone walks on the sea as on firm ground"
-        },
-        "waver": {
-          "color": "#1f8f5f",
-          "translit": "distazō",
-          "gloss": "waver, hesitate between two",
-          "echo": "Matt 28:17 — the only other use in the New Testament: they worshiped, but some wavered"
-        },
-        "son": {
-          "color": "#0e8aa0",
-          "translit": "huios",
-          "gloss": "son"
-        }
-      }
+      "built": false
     },
     {
       "n": 15,
@@ -879,8 +777,7 @@
       "passage": "Matthew 18:1-35",
       "title": "Life in the Community",
       "movement": 3,
-      "built": false,
-      "discourse": 4
+      "built": false
     },
     {
       "n": 19,
@@ -920,8 +817,7 @@
       "passage": "Matthew 23:1-39",
       "title": "Seven Woes and a Lament",
       "movement": 3,
-      "built": false,
-      "discourse": 5
+      "built": false
     },
     {
       "n": 24,
@@ -929,8 +825,7 @@
       "passage": "Matthew 24:1-51",
       "title": "The Olivet Discourse (I): Temple and Son of Man",
       "movement": 3,
-      "built": false,
-      "discourse": 5
+      "built": false
     },
     {
       "n": 25,
@@ -938,8 +833,7 @@
       "passage": "Matthew 25:1-46",
       "title": "The Olivet Discourse (II): Three Parables of the End",
       "movement": 3,
-      "built": false,
-      "discourse": 5
+      "built": false
     },
     {
       "n": 26,

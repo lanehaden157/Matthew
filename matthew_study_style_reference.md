@@ -270,13 +270,6 @@ start is explicit (`· 3:13–4:11`).
 
 `<p class="v">` with the `.gloss` / `.compare` as **following siblings**, never nested.
 
-An endnote that belongs to the gloss (rather than the verse text) goes **inside**
-the gloss span, at its end: `<span class="gloss">…text.<sup class="en">…</sup></span>`.
-A `<sup>` left after the closing `</span>` is a bare inline element beside a block,
-so it renders on its own line under the verse, flush left, looking like a verse
-number. (Joshua's rule "markers never sit inside a gloss" does not carry over:
-its gloss is a different structure. Fixed in units 1 and 9 on 2026-09-28.)
-
 ### OT citation pointer
 
 When a `<p class="v">` verse quotes or directly cites an OT text (a formula
@@ -380,7 +373,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] No `roots` entry carries a colour. No `--c-*` vars anywhere. No inline `style="color:…"` / `style="background:…"`.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
-- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo` as siblings, not nested. A `.gloss`'s own endnote marker sits inside it, at the end (§3), not after its closing tag.
+- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo` as siblings, not nested. A `.gloss`'s own endnote marker sits after its closing tag, not inside it.
 - [ ] No `aside.synoptic` or `aside.echo` block contains `data-root`, `class="r"`, or `class="rl"` — translit only.
 - [ ] Every `aside.echo` has a `data-anchor="C:V"` matching the verse it follows.
 - [ ] The translation is divided into passage groups by `<h3 class="pericope">Title <span>· C:V–V</span></h3>` — no other heading form.

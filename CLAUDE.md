@@ -37,51 +37,6 @@ something that might already have been done.
   fragment. The build regenerates it from there (see `refresh_meta.py`).
 - **Fresh clone:** `python pipeline/fetch_corpus.py` once, for `canon_leads.py`.
 
-## The site shell and bible-core (since 2026-09-26)
-
-The site runs bible-core's template shell, the one Numbers and Joshua run:
-`index.html`, `app/*.js`, and `css/core.css` + `components.css` +
-`division.css` (all generated) + `css/theme.css` (Matthew's own rings,
-triads, exodus tables, prayer block, Greek title). `css/styles.css` and the
-forked `app/` are in git history.
-
-- `book.json` + a vendored `biblecore/` drive the shell and its reader data:
-  `python -m biblecore corpus` (MorphGNT word table), `emit` (interlinear,
-  search text), `assets` (css, `data/components.json`), `manifest`. Run
-  `emit` + `manifest` after porting a unit.
-- Units are ported and built with `pipeline/` (above), and that is the plan:
-  Lane dropped the move onto core's pipeline (2026-09-28). Avoid
-  `python -m biblecore build`, `port` and `migrate` here: the fragments predate
-  core's unit contract (older meta blocks, unstamped), so they would rewrite
-  them. `python -m biblecore test` is safe and passes: `book.json`
-  `checks.skip_fragment_checks` skips the checks the old units can't meet
-  (native script, inline style / `--c-*`, `data-verses`, the synoptic
-  component) and `checks.test_idempotent` is off.
-- Discourses are the shell's "overlay" grouping (`book.json` `overlay`);
-  `data/units.json` holds movements and discourses as `groupings`.
-- `.compare` and `aside.synoptic` are core components with their own chips (✦, ✧).
-- Core is pinned (0.9.8 as of 2026-09-29). Take shell and core updates
-  deliberately, when a release fixes something Matthew needs, not on every
-  0.9.x bump: `python ../bible-core/tools/core_sync.py .` (it refuses if
-  `biblecore/` has local edits, so fix bugs in `../bible-core` first), and
-  shell files from `../bible-core/template/app/`.
-- Porting doesn't need `biblecore test`: after `port_artifact.py`, run
-  `python -m biblecore data-w NN`, `emit` and `manifest`, then `pipeline/build.py`.
-  Run `test` when core changes.
-- **Interlinear glosses (core 0.9.2, plan D1):** `pipeline/corpus/lexicon/lexemes.yaml`
-  (MorphGNT's morphological lexicon; `python pipeline/fetch_corpus.py` fetches it,
-  `book.json` `paths.greek_lexicon` points at it) -- `emit` reads it. 100% coverage
-  on Matthew's own words.
-- **Phrase threads (core 0.9.2, plan D2):** `data/roots.json` can give a thread with
-  no single lemma (son-of-man, apo-tote, ...) a `"seq"` instead of `"ids"` -- see
-  `bible-core/ARCHITECTURE.md`. `data/roots.json` and `data-w` on every tracked span
-  exist (core `audit` reports 0 gaps); `pipeline/thread-stems.json` still drives
-  the old pipeline's stem matching.
-- **Canon leads (core 0.9.2, plan D4):** `python -m biblecore leads` now works here
-  too (the LXX + rest-of-NT path, ported from `pipeline/canon_leads.py`, proven
-  against it). `pipeline/canon_leads.py` is still the one `pipeline/build.py` calls,
-  and stays that way.
-
 ## Guardrails worth keeping in mind
 
 Rationale for each is in `PLAN.md`. These are strong defaults, not laws. Raise it with
