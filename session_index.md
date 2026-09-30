@@ -202,3 +202,7 @@ Read this first. 3 lines max per session.
 - Cached transliteration, indexed canon_leads, tokenize-once thread audit. Build steps 31s to ~10s, port 8.1s to 1.4s, output identical (uncommitted). See ../session_summary_2026-09-29_performance.md.
 - **2026-09-29 (instructions review)**: Lane-approved cleanups from the cross-repo instruction-file review (style reference §4/§7, instructions.md, PLAN.md, CLAUDE.md, project-side README, pipeline docstrings). Uncommitted; instruction field needs a re-paste.
   Flags and decisions: `../instructions_review_2026-09-29.md`.
+
+## 2026-09-30 — Reader features from Joshua/Numbers
+- Lane asked for the core shell's settings. Dark mode already existed. Added the "All books" hub link and reading modes (notes / all open / plain) to Matthew's own shell, which stays standalone.
+- Interlinear, print, verse jump + resume deferred to PLAN.md "Reader features" (Lane: interlinear its own session). Awaiting Lane's browser check.

@@ -107,6 +107,19 @@ a.lex:hover { border-bottom-color: var(--ink-soft); }
   font-size: 14px; color: var(--ink); cursor: pointer;
 }
 .settings-row input { cursor: pointer; }
+.settings-h { font-family: var(--display); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin: 10px 0 4px; }
+.settings-h:first-child { margin-top: 0; }
+.settings-modes .settings-row { display: flex; gap: 8px; align-items: baseline; }
+
+/* reading modes (app/main.js): body.mode-notes (default) / -open / -plain */
+body.mode-plain .unit .note-toggle,
+body.mode-plain .unit .verse-note,
+body.mode-plain .unit .spot-toggle,
+body.mode-plain .unit .spotlight,
+body.mode-plain .unit .synoptic,
+body.mode-plain .unit .spot-controls,
+body.mode-plain .unit sup.en,
+body.mode-plain .unit .notes { display: none !important; }
 
 /* unit picker — drops down from the sticky bar, over the content */
 .unit-nav {
@@ -687,6 +700,8 @@ body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; 
   .wrap { padding: 26px 16px 90px; }
   .topbar .inner { padding: 9px 16px; gap: 8px; }
   .topbar .brand { font-size: 17px; }
+  /* All books + Search + Contents · Unit n of 28 + Settings overflow 375px */
+  .topbar-actions { flex-wrap: wrap; row-gap: 6px; }
   .topbar nav { width: 100%; margin-left: 0; }
   .unit-nav { padding: 14px 16px 18px; }
   .book-map { padding: 13px 12px 10px; }

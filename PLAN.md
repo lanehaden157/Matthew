@@ -213,10 +213,22 @@ Flag icon on translation-sensitive verses; click to expand the wooden / NASB /
 Hart / Lattimore box inline, collapse when done. CSS/JS over existing `.compare`
 markup — no fragment edits.
 
-### Phase 8 — Persistence *(not built; only a text-align setting uses `localStorage`)*
+### Phase 8 — Persistence *(not built; only the Settings choices (text align, reading mode, appearance) use `localStorage`)*
 
 `app/store.js` — versioned `localStorage`: mark units read, per-verse personal
 notes. Schema version gate for future migration. No backend, no accounts.
+
+### Reader features from the core shell *(2026-09-30: All books link + reading modes done)*
+
+Joshua and Numbers run bible-core's app shell. Matthew stays standalone (reverted
+2026-09-29), so it adapts features one at a time into its own `app/` instead of
+vendoring core. Still open, each its own pass when Lane calls it:
+
+- **Interlinear** (Greek word by word). Needs per-chapter Greek word data from
+  MorphGNT with its own `verify_*.py`, a fourth reading mode, and the MorphGNT
+  source-credit footer (its licence asks for one).
+- **Print the whole study** (`#/print`, every unit in order, notes open).
+- **Go to a verse** ("5:3") and **resume where you left off**.
 
 ### Phase 9 — Author ergonomics ✅ DONE *(payoff for units 9–28)*
 

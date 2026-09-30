@@ -3,10 +3,12 @@
    Pages subpath. */
 
 import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=38";
-import { enhanceSpotlights } from "./spotlight.js?v=37";
+import { enhanceSpotlights, openAll } from "./spotlight.js?v=39";
 import { renderSearch } from "./search.js?v=37";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
+// the canon hub; every book site links back to it (Joshua/Numbers read it from manifest.json)
+const HUB_URL = "https://lanehaden157.github.io/bible/";
 
 // always revalidate — a no-build static site changes the moment files are pushed
 // no build step: always fetch the current file, never a cached copy
@@ -23,7 +25,17 @@ const navToggleCtx = document.getElementById("nav-toggle-ctx");
 let manifest = null;
 
 const CENTER_TEXT_KEY = "matthew:centerText";
+const MODE_KEY = "matthew:mode";
 
+/* reading modes, as body.mode-* classes (css/styles.css); labels match the
+   core app shell Joshua and Numbers use */
+const MODES = [
+  ["notes", "Translation with notes (tap * to open)"],
+  ["open", "Translation with every note open"],
+  ["plain", "Translation only"],
+];
+
+addHubLink();
 applySettings();
 init();
 
@@ -40,6 +52,8 @@ async function init() {
   buildUnitNav();
   wireNavToggle();
   wireSettingsToggle();
+  wireModes();
+  wireAppearance();
   window.addEventListener("hashchange", route);
   route();
 }
@@ -51,6 +65,58 @@ function applySettings() {
   document.body.classList.toggle("text-center", centered);
   const checkbox = document.getElementById("setting-center-text");
   if (checkbox) checkbox.checked = centered;
+  applyMode(readMode());
+}
+
+function readMode() {
+  let m = null;
+  try { m = localStorage.getItem(MODE_KEY); } catch (e) { /* private mode */ }
+  return MODES.some(([k]) => k === m) ? m : "notes";
+}
+
+function applyMode(mode) {
+  for (const [m] of MODES) document.body.classList.toggle(`mode-${m}`, m === mode);
+}
+
+function wireModes() {
+  const box = document.getElementById("setting-modes");
+  if (!box) return;
+  const cur = readMode();
+  box.innerHTML = MODES.map(([m, label]) =>
+    `<label class="settings-row"><input type="radio" name="mode" value="${m}"${m === cur ? " checked" : ""}> ${label}</label>`).join("");
+  box.addEventListener("change", (e) => {
+    const m = e.target.value;
+    try { localStorage.setItem(MODE_KEY, m); } catch (err) { /* private mode */ }
+    applyMode(m);
+    if (content.querySelector("article.unit")) openAll(content, m === "open");
+  });
+}
+
+/* light / dark / follow the system. The choice is shared by every book site
+   (one origin), set on <html data-theme> by index.html's first script so the
+   page never flashes the wrong palette; division.css holds the palettes. */
+function wireAppearance() {
+  const box = document.getElementById("setting-appearance");
+  if (!box) return;
+  const cur = document.documentElement.dataset.theme || "auto";
+  const opts = [["auto", "Match the system"], ["light", "Light"], ["dark", "Dark"]];
+  box.innerHTML = opts.map(([v, label]) =>
+    `<label class="settings-row"><input type="radio" name="appearance" value="${v}"${v === cur ? " checked" : ""}> ${label}</label>`).join("");
+  box.addEventListener("change", (e) => {
+    document.documentElement.dataset.theme = e.target.value;
+    try { localStorage.setItem("bible:theme", e.target.value); } catch (err) { /* private mode */ }
+  });
+}
+
+/* the book switcher: a link back to the canon hub, first in the top bar */
+function addHubLink() {
+  const actions = document.querySelector(".topbar-actions");
+  if (!actions || actions.querySelector(".hub-link")) return;
+  const a = document.createElement("a");
+  a.className = "topbar-link hub-link";
+  a.href = HUB_URL;
+  a.textContent = "All books";
+  actions.prepend(a);
 }
 
 function wireSettingsToggle() {
@@ -288,6 +354,7 @@ async function loadUnit(unit, anchor) {
   injectPalette(unit, resolved);
   rebuildLegend(content, resolved);
   enhanceSpotlights(content);
+  if (readMode() === "open") openAll(content, true);
   wireRoots(content, unit, manifest.units);
   wireFootnotes();
   buildPager(unit);
