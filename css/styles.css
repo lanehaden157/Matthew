@@ -716,6 +716,9 @@ body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; 
   .unit .mast .greek-title { font-size: 18px; }
   .unit section.block { padding: 16px 15px; margin: 22px 0; }
   .unit .structure { padding: 18px 15px; }
+  /* three columns in ~312px: tighter cells keep the longest words on one line */
+  .unit table.exod { font-size: 14px; }
+  .unit table.exod th, .unit table.exod td { padding: 7px 8px; }
   .unit .legend ul { grid-template-columns: 1fr; }
   .unit .v { padding-left: 26px; text-indent: -26px; }
   .unit .v .n { width: 22px; }

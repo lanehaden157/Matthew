@@ -349,6 +349,7 @@ async function loadUnit(unit, anchor) {
   content.innerHTML = html;
   renderPlacement(content, unit);
   hoistStructureBlocks(content);
+  wrapTables(content);
   normalizeSectionHeadings(content);
   const resolved = resolveUnit(unit);
   injectPalette(unit, resolved);
@@ -387,6 +388,19 @@ function hoistStructureBlocks(root) {
     if (b.classList.contains("legend")) continue;
     ref.after(b); // re-parents b to sit right after ref, in document order
     ref = b;
+  }
+}
+
+/* Give every correspondence table its own sideways scroller. Fragments author
+   a bare <table class="exod">; a table whose longest words won't fit a phone
+   column then scrolls inside its panel instead of widening the page. */
+function wrapTables(root) {
+  for (const t of root.querySelectorAll("table.exod")) {
+    if (t.parentElement.classList.contains("table-scroll")) continue;
+    const wrap = document.createElement("div");
+    wrap.className = "table-scroll";
+    t.before(wrap);
+    wrap.append(t);
   }
 }
 

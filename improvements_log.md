@@ -894,3 +894,8 @@
 - "All books" top-bar link to the canon hub (`HUB_URL` in `app/main.js`; Joshua/Numbers read it from manifest.json).
 - Settings regrouped like the core shell: Reading mode (with notes / every note open / translation only, `matthew:mode`), Appearance (now built in `main.js`, was an inline script in `index.html`; same `bible:theme` key), Layout. `openAll` exported from `app/spotlight.js`; `body.mode-plain` CSS hides toggles, asides, endnote markers and the notes section.
 - Mobile: `.topbar-actions` wraps under 720px (four buttons overflow 375px). Asset versions bumped to v=39. Interlinear, print, verse jump + resume are PLAN.md backlog.
+
+## 2026-09-30 — Table overflow at 375px (unit 8)
+- Unit 8's "Threads carried out" table was 348px at its narrowest in a 312px panel, so the page scrolled 4px sideways. `.table-scroll` existed in the CSS but nothing applied it: all 17 `table.exod` were bare (the other 16 fit).
+- `app/main.js` `wrapTables()`: every `table.exod` is wrapped in `div.table-scroll` at render, so a too-wide table scrolls inside its panel. Fragments unchanged.
+- `css/styles.css` under 720px: `table.exod` 15.5px → 14px, cells `7px 8px` (Lane's choice: wrap + tighten). The unit 8 table now fits at 312px with nothing scrolling. `styles.css` and `main.js` to v=40.

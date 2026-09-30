@@ -206,3 +206,7 @@ Read this first. 3 lines max per session.
 ## 2026-09-30 — Reader features from Joshua/Numbers
 - Lane asked for the core shell's settings. Dark mode already existed. Added the "All books" hub link and reading modes (notes / all open / plain) to Matthew's own shell, which stays standalone.
 - Interlinear, print, verse jump + resume deferred to PLAN.md "Reader features" (Lane: interlinear its own session). Pushed `38a96eb`. Interlinear session prompt in `docs/interlinear-prompt.md` (pilot for core Greek books).
+
+## 2026-09-30 — Table overflow at 375px
+- Unit 8's thread table pushed the page 4px wide on phones. `main.js` now wraps every `table.exod` in `.table-scroll`; tables get 14px text and tighter cells under 720px (Lane: wrap + tighten).
+- Units 1-13 measured at 375px: no page scroll, no table scrolling. Uncommitted, waiting on Lane's visual check.
