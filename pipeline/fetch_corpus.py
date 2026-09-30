@@ -1,8 +1,10 @@
-"""Download the two corpora canon_leads.py reads: MorphGNT's lemmatized SBLGNT
-(the New Testament, Matthew included) and the CenterBLC Text-Fabric build of
-Rahlfs' 1935 LXX (Old Testament in Greek, Matthew's own background text).
+"""Download the corpora the pipeline reads: MorphGNT's lemmatized SBLGNT
+(the New Testament, Matthew included; canon_leads.py and build_words.py), the
+CenterBLC Text-Fabric build of Rahlfs' 1935 LXX (Old Testament in Greek,
+Matthew's own background text; canon_leads.py), and the MorphGNT
+morphological lexicon (the interlinear's glosses; build_words.py).
 
-Both are pinned to a commit so a re-run is reproducible; neither is committed
+All are pinned to a commit so a re-run is reproducible; none is committed
 to this repo (pipeline/corpus/ is git-ignored) -- re-run this after a fresh
 clone, same idea as Joshua's `npm ci` for morphhb.
 
@@ -20,6 +22,11 @@ Sources and licences:
     and not the text-fabric package: these are plain one-value-per-line (or
     "start-end<TAB>value" range) files, simple enough to parse by hand
     (see greek_corpus.py), no new dependency. ~15.5 MB.
+  * github.com/morphgnt/morphological-lexicon @ 0dca2af89f413cbb24f617ddbdc347e9d798ddf3
+    -- CC BY-SA 3.0 (Tauber, ed.). lexemes.yaml only, the commit bible-core
+    pins (sha1 9db21bd70bc88510d6b4caefe436ea744b684a65). Its `gloss` feeds
+    data/lemmas.json's `g`, which stays under the same licence; the site
+    footer credits it. ~1.7 MB.
 """
 import argparse
 import os
@@ -46,6 +53,9 @@ MORPHGNT_FILES = [
 LXX_SHA = "4829f3746c84d75576702498e75a68856358f289"
 LXX_BASE = f"https://raw.githubusercontent.com/CenterBLC/LXX/{LXX_SHA}/tf/1935"
 LXX_FILES = ["book.tf", "chapter.tf", "verse.tf", "lex_utf8.tf"]
+
+LEXICON_SHA = "0dca2af89f413cbb24f617ddbdc347e9d798ddf3"
+LEXICON_URL = f"https://raw.githubusercontent.com/morphgnt/morphological-lexicon/{LEXICON_SHA}/lexemes.yaml"
 
 
 def fetch(url, dest, force):

@@ -685,6 +685,41 @@ body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; 
 .sr-unit li b { color: var(--ink); font-weight: 600; }
 .sr-v { font-family: var(--display); color: var(--accent-crimson); font-size: 13px; margin-right: 2px; }
 
+/* Greek words block: every lemma in the book (data/lemmas.json), after core's sr-lemma */
+.sr-block { margin: 30px 0; }
+.sr-block:first-child { margin-top: 0; }
+.sr-block > h3 { font-family: var(--display); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin: 0 0 10px; }
+.sr-lemma { margin: 0 0 8px; padding: 6px 10px; border: 1px solid var(--rule-soft); border-radius: 6px; background: var(--panel); }
+.sr-lemma summary { cursor: pointer; font-size: 16px; display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+.sr-lemma summary i { font-weight: 600; }
+.sr-refs { margin: 8px 0 2px; font-size: 14px; line-height: 1.9; word-spacing: 4px; overflow-wrap: anywhere; }
+.sr-refs a { color: var(--accent-gold); }
+.sr-unbuilt { color: var(--ink-soft); opacity: .6; }
+
+/* ---- interlinear mode (app/interlinear.js), after core's .il rules ----
+   Plain boxes: no thread colour and no root popover here (Lane, 2026-09-30). */
+.unit .il { display: flex; flex-wrap: wrap; gap: 4px 6px; margin: -6px 0 16px 42px; text-indent: 0; }
+.unit .il-w { display: inline-flex; flex-direction: column; min-width: 3.2em; max-width: 100%; padding: 3px 6px; border: 1px solid var(--rule-soft); border-radius: 5px; background: var(--panel); line-height: 1.25; }
+.unit .il-w:hover { border-color: var(--ink-soft); }
+.unit .il-w i { font-size: 15px; color: var(--ink); }
+.unit .il-w b { font-weight: 400; font-size: 12.5px; color: var(--accent-gold); max-width: 14em; }
+.unit .il-w small { font-size: 10.5px; color: var(--ink-soft); max-width: 14em; }
+/* a verse with no block of its own in the fragment (6:10–13, inside the prayer) */
+.unit .il-gap { margin-top: 0; }
+.unit .il-ref { flex: 0 0 100%; font-family: var(--display); font-size: 13px; font-weight: 600; color: var(--accent-crimson); }
+.unit .il-key { font-size: 13.5px; font-style: italic; color: var(--ink-soft); margin: 0 0 18px; }
+body.text-center .unit .il { justify-content: center; margin-left: 0; }
+body.text-center .unit .il-ref { text-align: center; }
+
+/* the source-text credit line (main.js renderSources) */
+.site-foot {
+  max-width: var(--maxw); margin: -50px auto 70px; padding: 18px 26px 0;
+  border-top: 1px solid var(--rule-soft);
+  color: var(--ink-soft); font-size: 12.5px; line-height: 1.6; text-align: center;
+  overflow-wrap: anywhere;
+}
+.site-foot p { margin: 0 0 4px; }
+
 /* endnotes */
 .unit .notes, .unit .endnotes { margin-top: 48px; border-top: 2px solid var(--ink); padding-top: 18px; }
 .unit .notes h2, .unit .endnotes h2 { font-family: var(--display); font-size: 17px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin: 0 0 16px; }
@@ -733,6 +768,11 @@ body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; 
   .unit .triad .cnt { white-space: normal; }
   .unit-pager { flex-direction: column; padding-bottom: 60px; }
   .unit-pager a { max-width: 100%; }
+  /* interlinear: word and gloss only on phones; the parsing stays in the title */
+  .unit .il { margin-left: 26px; }
+  .unit .il-w small { display: none; }
+  .unit .il-w b { max-width: 10em; }
+  .site-foot { padding: 16px 16px 0; margin: -30px auto 80px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -745,4 +785,6 @@ body.text-center .unit .v .n { display: inline; width: auto; margin-right: 4px; 
   .spot-toggle, .note-toggle, .spot-controls { display: none !important; }
   .spotlight { border-left-width: 2px; }
   .verse-note { break-inside: avoid; }
+  .unit .il { break-inside: avoid; }
+  .unit .il-w small { display: block; }
 }

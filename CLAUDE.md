@@ -22,6 +22,7 @@ something that might already have been done.
 | Colour policy: metrics, thresholds, what's a hard failure | `pipeline/palette.py` docstring; pick colours with `assign_color.py` (eyeballed colours collided before; hand-pick only if Lane asks) |
 | Tracked threads | `data/threads.json` (hand-authored policy) → `threads-digest.md` (generated) |
 | English renderings per Greek lexeme | `translation-choices.md` |
+| The interlinear: what came from bible-core, what changed, what core should take back | `docs/interlinear-pilot.md` |
 | Design decisions and their rationale | `PLAN.md` "Design decisions"; `docs/audit/` for the 2026-09-12 audit (`archive/` is history, not instructions) |
 
 ## Everyday workflow
@@ -35,7 +36,8 @@ something that might already have been done.
   update `translation-choices.md`'s row and Log section in the same turn.
 - **Editing a built unit's legend (translit/gloss):** edit `data/units.json`, not the
   fragment. The build regenerates it from there (see `refresh_meta.py`).
-- **Fresh clone:** `python pipeline/fetch_corpus.py` once, for `canon_leads.py`.
+- **Fresh clone:** `python pipeline/fetch_corpus.py` once. The build needs it for the
+  interlinear's word data (`build_words.py`), and `canon_leads.py` reads it too.
 
 ## Guardrails worth keeping in mind
 
@@ -53,8 +55,8 @@ stops fitting.
 - Persistence is `localStorage` only, with no backend.
 - Transliteration only, never native Greek or Hebrew script in the rendered site.
 - Desktop and mobile (~375px) are both first-class, with no horizontal page scroll.
-- Generated files are never hand-edited: `occurrences.json`, `threads-digest.md`,
-  `canon-leads/`, `project-side/synced/`.
+- Generated files are never hand-edited: `occurrences.json`, `data/words/`,
+  `data/lemmas.json`, `threads-digest.md`, `canon-leads/`, `project-side/synced/`.
 
 ## Working notes
 

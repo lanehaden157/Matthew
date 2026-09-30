@@ -10,9 +10,10 @@
 - Fix (Lane chose "wrap + tighten"):
   - `app/main.js` `wrapTables()` wraps every `table.exod` in `div.table-scroll` at render.
   - `css/styles.css`, under 720px: `table.exod` 14px text, `7px 8px` cell padding.
-  - `index.html`: `styles.css` and `main.js` to `?v=40`. The module imports inside
-    `main.js` were left alone: those files did not change, and `search.js` imports
-    `threads.js?v=38` too, so bumping one side would load the module twice.
+  - `index.html`: `styles.css` and `main.js` to `?v=41` (v=40 went out with the
+    interlinear commit, which landed on main mid-session and was merged in). The module
+    imports inside `main.js` were left alone: those files did not change, and `search.js`
+    imports `threads.js?v=38` too, so bumping one side would load the module twice.
 - Measured at 375x812 after the change, units 1-13: `scrollWidth` 375 everywhere, all 17
   tables wrapped and 312px wide, none scrolling inside its wrapper.
 - `python pipeline/build.py` ok. It rewrote units, occurrences, digest and canon-leads with
@@ -23,5 +24,5 @@
 - Three-column tables are tall on phones (the unit 8 one is about 1200px). Not touched.
 
 ## Open
-- Lane's visual check on a phone-width view of unit 8, then commit.
+- None for this fix. Lane OK'd the visual check.
 - `pipeline/corpus/` was copied into this worktree from the main checkout (git-ignored).

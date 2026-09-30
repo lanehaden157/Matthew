@@ -207,6 +207,10 @@ Read this first. 3 lines max per session.
 - Lane asked for the core shell's settings. Dark mode already existed. Added the "All books" hub link and reading modes (notes / all open / plain) to Matthew's own shell, which stays standalone.
 - Interlinear, print, verse jump + resume deferred to PLAN.md "Reader features" (Lane: interlinear its own session). Pushed `38a96eb`. Interlinear session prompt in `docs/interlinear-prompt.md` (pilot for core Greek books).
 
+## 2026-09-30 — Interlinear mode
+- Greek word by word under each verse: `build_words.py` + `verify_words.py` → `data/words/`, `data/lemmas.json`; `app/interlinear.js`; search takes `#/search/<query>` and lists every Greek lemma; site-wide MorphGNT credit footer.
+- Copied from bible-core and adapted; data is byte-identical to core's. Porting notes in `docs/interlinear-pilot.md`. Lane still to eyeball it in the browser.
+
 ## 2026-09-30 — Table overflow at 375px
 - Unit 8's thread table pushed the page 4px wide on phones. `main.js` now wraps every `table.exod` in `.table-scroll`; tables get 14px text and tighter cells under 720px (Lane: wrap + tighten).
-- Units 1-13 measured at 375px: no page scroll, no table scrolling. Uncommitted, waiting on Lane's visual check.
+- Units 1-13 measured at 375px: no page scroll, no table scrolling. Lane OK'd it; merged on top of the interlinear commit, assets v=41.
