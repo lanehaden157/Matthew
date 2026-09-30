@@ -18,9 +18,21 @@ it to move into core with little change.
   shell". The 2026-09-30 session added the other reading modes, which this one
   extends: `MODES`, `applyMode`, `wireModes` in `app/main.js`, `body.mode-*` CSS
   in `css/styles.css`.
-- **Core's existing Greek path (read-only reference; don't import it or vendor
-  it).** Core already emitted a Greek interlinear for Matthew while Matthew was
-  on core (0.7.0 Greek adapter, 0.9.2 glosses), so start from it:
+- **Core's existing Greek path: copy it, then adapt it.** Core already emitted
+  a Greek interlinear for Matthew while Matthew was on core (0.7.0 Greek
+  adapter, 0.9.2 glosses). Copy the relevant functions into Matthew's
+  `pipeline/` and `app/`, then adapt them. Don't rewrite from scratch, and don't
+  import or vendor the `biblecore` package (that dependency is what Matthew
+  reverted). The adapting that's known to be needed:
+  - `emit.py` reads core's `book`/`meta`/`roots` objects. Swap those for
+    Matthew's `data/units.json` and the MorphGNT reader.
+  - Transliterate with Matthew's `pipeline/greek.py`, not core's
+    `lang/greek.py`. They're separate implementations, so output can differ
+    from the pre-revert files; check any differences.
+  - Cell links go to `#/search/<lemma>`, not core's `#/lemma/`.
+  - Drop the Hebrew-only bits, such as the Aramaic `a` flag.
+
+  The files to copy from:
   - `../bible-core/biblecore/emit.py`: the `data/words/<ch>.json` and
     `lemmas.json` shapes
   - `../bible-core/biblecore/corpus/morphgnt.py`
@@ -114,8 +126,8 @@ Write `docs/interlinear-pilot.md`, short, for the future core port. Cover:
 
 - what's book-agnostic and could move to core as-is
 - what's Matthew-specific
-- how it differs from core's existing Greek emit/interlinear, and which version
-  is better where
+- what had to change from core's code, and why; which changes core should
+  take back
 - data sizes and load behaviour
 - anything that surprised you
 
