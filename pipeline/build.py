@@ -6,14 +6,18 @@
   3. scan_occurrences.py   -> data/occurrences.json
   4. verify_occurrences.py independent re-derivation + colour checks
   5. threads_digest.py     data/threads.json -> threads-digest.md
-  6. sync_to_github.py     refresh project-side/synced/ (--copy-only: it never
+  6. build_words.py        -> data/words/<ch>.json + data/lemmas.json, the
+                           interlinear and search's Greek words (requires
+                           pipeline/corpus/, see fetch_corpus.py)
+  7. verify_words.py       independent re-read of MorphGNT against them
+  8. sync_to_github.py     refresh project-side/synced/ (--copy-only: it never
                            commits or pushes from here; the refreshed mirror is
                            meant to go in the same commit as the change that
                            caused it)
   advisory:
-  7. audit_thread_coverage.py  Greek vs. fragments — thread tag-coverage gaps
+  9. audit_thread_coverage.py  Greek vs. fragments — thread tag-coverage gaps
                                in built units (never fails the build)
-  8. canon_leads.py            canon-leads/canon-leads-unit-NN.md for built
+  10. canon_leads.py           canon-leads/canon-leads-unit-NN.md for built
                                units from 13 on + the next one: the intertext
                                pass's reading list (requires pipeline/corpus/,
                                see fetch_corpus.py; never fails the build)
@@ -35,7 +39,8 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STEPS = ["apply_retrofit.py", "refresh_meta.py", "scan_occurrences.py",
-         "verify_occurrences.py", "threads_digest.py"]
+         "verify_occurrences.py", "threads_digest.py",
+         "build_words.py", "verify_words.py"]
 STEP_ARGS = {"sync_to_github.py": ["--copy-only"]}
 STEPS.append("sync_to_github.py")
 ADVISORY = ["audit_thread_coverage.py", "canon_leads.py"]  # run, show output, never fail the build

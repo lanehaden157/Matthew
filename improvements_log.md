@@ -894,3 +894,10 @@
 - "All books" top-bar link to the canon hub (`HUB_URL` in `app/main.js`; Joshua/Numbers read it from manifest.json).
 - Settings regrouped like the core shell: Reading mode (with notes / every note open / translation only, `matthew:mode`), Appearance (now built in `main.js`, was an inline script in `index.html`; same `bible:theme` key), Layout. `openAll` exported from `app/spotlight.js`; `body.mode-plain` CSS hides toggles, asides, endnote markers and the notes section.
 - Mobile: `.topbar-actions` wraps under 720px (four buttons overflow 375px). Asset versions bumped to v=39. Interlinear, print, verse jump + resume are PLAN.md backlog.
+
+## 2026-09-30 — Interlinear mode (pilot for core's Greek books)
+- Pipeline: `morphgnt.py`, `greek_morph.py`, `greek_lexicon.py` copied from bible-core @25efd85; `build_words.py` (from core's `emit.py`) writes `data/words/<ch>.json` for all 28 chapters and `data/lemmas.json` (18,329 words, 1,680 lemmas, all glossed), byte-identical to core's pre-revert output. New independent `verify_words.py`. Both are build steps, so the build now needs `pipeline/corpus/`. `fetch_corpus.py` also fetches `lexemes.yaml` at core's pinned commit.
+- App: `app/interlinear.js` (`indexVerses`, `findVerse`, mount/unmount); fourth reading mode in `main.js`; notes and ✦ asides stay; word boxes link to `#/search/<lemma>`; 6:10–13 (inside the prayer block) get labelled boxes after it. `#/unit-NN/C:V` anchors now resolve.
+- Search: `#/search/<query>` pre-fills and runs; "Greek words" block for every lemma (gloss, count, refs linked where built, dimmed where not); an exact lemma id shows that word first.
+- Site-wide MorphGNT/SBLGNT credit footer. CSS: `.il*`, `.sr-lemma`, `.site-foot`; parsing hidden at ≤720px, shown in print. Asset versions v=40.
+- `docs/interlinear-pilot.md`: changes from core and what core should take back. CLAUDE.md, PLAN.md updated.

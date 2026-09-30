@@ -218,15 +218,17 @@ markup — no fragment edits.
 `app/store.js` — versioned `localStorage`: mark units read, per-verse personal
 notes. Schema version gate for future migration. No backend, no accounts.
 
-### Reader features from the core shell *(2026-09-30: All books link + reading modes done)*
+### Reader features from the core shell *(2026-09-30: All books link, reading modes, interlinear done)*
 
 Joshua and Numbers run bible-core's app shell. Matthew stays standalone (reverted
 2026-09-29), so it adapts features one at a time into its own `app/` instead of
 vendoring core. Still open, each its own pass when Lane calls it:
 
-- **Interlinear** (Greek word by word). Needs per-chapter Greek word data from
-  MorphGNT with its own `verify_*.py`, a fourth reading mode, and the MorphGNT
-  source-credit footer (its licence asks for one).
+- ✅ **Interlinear** (Greek word by word), 2026-09-30. `pipeline/build_words.py` +
+  `verify_words.py` → `data/words/<ch>.json`, `data/lemmas.json` (all 28 chapters);
+  `app/interlinear.js`; fourth reading mode; search takes `#/search/<query>` and lists
+  every Greek lemma; site-wide MorphGNT/SBLGNT credit footer. Copied from bible-core
+  and adapted, as a pilot for core's Greek books: `docs/interlinear-pilot.md`.
 - **Print the whole study** (`#/print`, every unit in order, notes open).
 - **Go to a verse** ("5:3") and **resume where you left off**.
 

@@ -4,7 +4,8 @@
 
 import { loadThreadData, resolveUnit, injectPalette, rebuildLegend, wireRoots } from "./threads.js?v=38";
 import { enhanceSpotlights, openAll } from "./spotlight.js?v=39";
-import { renderSearch } from "./search.js?v=37";
+import { renderSearch } from "./search.js?v=40";
+import { indexVerses, findVerse, mountInterlinear, unmountInterlinear } from "./interlinear.js?v=40";
 
 const UNITS_URL = new URL("../data/units.json", import.meta.url);
 // the canon hub; every book site links back to it (Joshua/Numbers read it from manifest.json)
@@ -23,19 +24,29 @@ const navToggle = document.getElementById("nav-toggle");
 const navToggleCtx = document.getElementById("nav-toggle-ctx");
 
 let manifest = null;
+let currentUnit = null;
+const IL_OPTS = { book: "Matthew" };
 
 const CENTER_TEXT_KEY = "matthew:centerText";
 const MODE_KEY = "matthew:mode";
 
 /* reading modes, as body.mode-* classes (css/styles.css); labels match the
-   core app shell Joshua and Numbers use */
+   core app shell Joshua and Numbers use. Interlinear keeps the notes mode's
+   collapsed * and ✦ asides (Lane, 2026-09-30, as Joshua does). */
 const MODES = [
   ["notes", "Translation with notes (tap * to open)"],
   ["open", "Translation with every note open"],
   ["plain", "Translation only"],
+  ["interlinear", "Interlinear (word by word)"],
 ];
 
+/* the source-text credit, site-wide (Lane, 2026-09-30): the interlinear and
+   search's Greek words are built from these. Wording is core's Greek SOURCES. */
+const SOURCES = "Greek text and morphology: <a href=\"https://github.com/morphgnt/sblgnt\">MorphGNT: SBLGNT Edition</a> (Tauber, ed.; parsing and lemmas CC BY-SA 3.0; SBLGNT text © 2010 <a href=\"https://sblgnt.com/license/\">Society of Biblical Literature and Logos Bible Software</a>). "
+  + "Lexicon glosses: <a href=\"https://github.com/morphgnt/morphological-lexicon\">MorphGNT morphological lexicon</a> (CC BY-SA 3.0).";
+
 addHubLink();
+renderSources();
 applySettings();
 init();
 
@@ -88,8 +99,16 @@ function wireModes() {
     const m = e.target.value;
     try { localStorage.setItem(MODE_KEY, m); } catch (err) { /* private mode */ }
     applyMode(m);
-    if (content.querySelector("article.unit")) openAll(content, m === "open");
+    if (!content.querySelector("article.unit")) return;
+    openAll(content, m === "open");
+    if (m === "interlinear") mountInterlinear(content, currentUnit, IL_OPTS);
+    else unmountInterlinear(content);
   });
+}
+
+function renderSources() {
+  const foot = document.getElementById("site-foot");
+  if (foot) foot.innerHTML = `<p>${SOURCES}</p><p>The translation is the study's own.</p>`;
 }
 
 /* light / dark / follow the system. The choice is shared by every book site
@@ -304,7 +323,8 @@ function buildUnitNav() {
 
 function route() {
   const hash = location.hash.replace(/^#\/?/, "");
-  const [slug, anchor] = hash.split("/");
+  const [slug, ...rest] = hash.split("/");
+  const anchor = rest.join("/");
 
   const searchLink = document.querySelector('.topbar-link[href="#/search"]');
   if (searchLink) {
@@ -313,15 +333,19 @@ function route() {
   }
 
   if (slug === "search") {
+    currentUnit = null;
     markCurrent(null);
     pager.innerHTML = "";
     document.title = "Concordance — Matthew Study";
-    renderSearch(content, manifest.units);
+    let q = null;
+    try { q = anchor ? decodeURIComponent(anchor) : null; } catch (e) { q = anchor; }
+    renderSearch(content, manifest.units, q);
     content.scrollIntoView({ block: "start" });
     return;
   }
 
   const unit = manifest.units.find((u) => u.slug === slug && u.built);
+  currentUnit = unit || null;
   if (!unit) {
     const first = manifest.units.find((u) => u.built);
     if (first && !slug) { location.replace(`#/${first.slug}`); return; }
@@ -359,12 +383,15 @@ async function loadUnit(unit, anchor) {
   wireFootnotes();
   buildPager(unit);
   document.title = `Unit ${unit.n} · ${unit.title} — Matthew Study`;
+  indexVerses(content, unit);
+  if (readMode() === "interlinear") await mountInterlinear(content, unit, IL_OPTS);
+  if (currentUnit !== unit) return; // another unit was opened while this one loaded
 
   if (anchor) {
     const vm = anchor.match(/^v(\d+)$/);
     const el = vm
       ? [...content.querySelectorAll(".v")].find((v) => v.querySelector(".n")?.textContent.trim() === vm[1])
-      : document.getElementById(anchor);
+      : findVerse(content, anchor) || document.getElementById(anchor);
     if (el) requestAnimationFrame(() => jumpTo(el));
     else content.scrollIntoView({ block: "start" });
   } else {

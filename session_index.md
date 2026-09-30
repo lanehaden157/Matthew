@@ -206,3 +206,7 @@ Read this first. 3 lines max per session.
 ## 2026-09-30 — Reader features from Joshua/Numbers
 - Lane asked for the core shell's settings. Dark mode already existed. Added the "All books" hub link and reading modes (notes / all open / plain) to Matthew's own shell, which stays standalone.
 - Interlinear, print, verse jump + resume deferred to PLAN.md "Reader features" (Lane: interlinear its own session). Pushed `38a96eb`. Interlinear session prompt in `docs/interlinear-prompt.md` (pilot for core Greek books).
+
+## 2026-09-30 — Interlinear mode
+- Greek word by word under each verse: `build_words.py` + `verify_words.py` → `data/words/`, `data/lemmas.json`; `app/interlinear.js`; search takes `#/search/<query>` and lists every Greek lemma; site-wide MorphGNT credit footer.
+- Copied from bible-core and adapted; data is byte-identical to core's. Porting notes in `docs/interlinear-pilot.md`. Lane still to eyeball it in the browser.
