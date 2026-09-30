@@ -205,4 +205,4 @@ Read this first. 3 lines max per session.
 
 ## 2026-09-30 — Reader features from Joshua/Numbers
 - Lane asked for the core shell's settings. Dark mode already existed. Added the "All books" hub link and reading modes (notes / all open / plain) to Matthew's own shell, which stays standalone.
-- Interlinear, print, verse jump + resume deferred to PLAN.md "Reader features" (Lane: interlinear its own session). Awaiting Lane's browser check.
+- Interlinear, print, verse jump + resume deferred to PLAN.md "Reader features" (Lane: interlinear its own session). Pushed `38a96eb`. Interlinear session prompt in `docs/interlinear-prompt.md` (pilot for core Greek books).

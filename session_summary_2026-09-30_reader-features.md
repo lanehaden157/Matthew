@@ -20,3 +20,8 @@ Lane asked for the "All books" link and the settings Joshua and Numbers have.
 ## Open
 - Lane: browser check (desktop + 375px): All books link, three modes, dark mode still switching, top bar wrap.
 - Uncommitted until Lane OKs.
+
+## Follow-up: interlinear prompt
+- Committed and pushed `38a96eb` (Lane OK).
+- Lane's interlinear calls (popup): Matthew's own generator + verify, as a pilot for a future core Greek path (Luke, Revelation); cells like Joshua's (translit, MorphGNT-lexicon gloss, parsing); plain cells, no thread colour; tapping opens search; search gains a Greek-words block for every lemma.
+- Wrote `docs/interlinear-prompt.md` (self-contained session prompt; points at core's existing Greek emit/interlinear as read-only reference and asks for `docs/interlinear-pilot.md` porting notes).
