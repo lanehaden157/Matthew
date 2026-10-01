@@ -7,7 +7,7 @@
       "root": "light",
       "translit": "phōs",
       "gloss": "light",
-      "color": "#c99a2e",
+      "color": "#557f44",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -32,7 +32,7 @@
       "root": "nations",
       "translit": "ethnē",
       "gloss": "nations / Gentiles",
-      "color": "#c82d3a",
+      "color": "#aa5a88",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -62,7 +62,7 @@
       "root": "follow",
       "translit": "akoloutheō",
       "gloss": "follow (after)",
-      "color": "#3f7d3a",
+      "color": "#a66566",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -93,7 +93,7 @@
       "root": "fish",
       "translit": "halieus",
       "gloss": "fisher",
-      "color": "#c52690",
+      "color": "#827b4a",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -114,7 +114,7 @@
       "root": "sea",
       "translit": "thalassa",
       "gloss": "sea",
-      "color": "#183439",
+      "color": "#8b6cae",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -140,7 +140,7 @@
       "root": "apo-tote",
       "translit": "apo tote",
       "gloss": "\"from that time\"",
-      "color": "#412e56",
+      "color": "#9c744c",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -160,7 +160,7 @@
       "root": "law-prophets",
       "translit": "ho nomos kai hoi prophētai",
       "gloss": "the Law & the Prophets",
-      "color": "#74261a",
+      "color": "#0091a1",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -186,7 +186,7 @@
       "root": "little-faith",
       "translit": "oligopistoi",
       "gloss": "\"little-faiths\"",
-      "color": "#8f6f9a",
+      "color": "#901000",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -215,7 +215,7 @@
       "root": "release",
       "translit": "aphiēmi",
       "gloss": "release / let go / leave",
-      "color": "#0e6a3f",
+      "color": "#005800",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -250,7 +250,7 @@
       "root": "authority",
       "translit": "exousia",
       "gloss": "authority",
-      "color": "#7b2fb3",
+      "color": "#783800",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -286,7 +286,7 @@
       "root": "throw",
       "translit": "ballō",
       "gloss": "throw / cast / put / pour / clothe (broad range)",
-      "color": "#c2410c",
+      "color": "#e05840",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -322,7 +322,7 @@
       "root": "shake",
       "translit": "seismos",
       "gloss": "shaking / earthquake / storm",
-      "color": "#56522e",
+      "color": "#801868",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -346,7 +346,7 @@
       "root": "torment",
       "translit": "basanizō",
       "gloss": "torment",
-      "color": "#7a2230",
+      "color": "#d00050",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -367,7 +367,7 @@
       "root": "urge",
       "translit": "parakaleō",
       "gloss": "urge / entreat / call alongside",
-      "color": "#9c2f8f",
+      "color": "#987898",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -388,7 +388,7 @@
       "root": "son-of-man",
       "translit": "ho huios tou anthrōpou",
       "gloss": "the Son of Man",
-      "color": "#3a4f8a",
+      "color": "#d86070",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -456,7 +456,7 @@
       "root": "son-of-david",
       "translit": "huios Dauid",
       "gloss": "Son of David",
-      "color": "#8a3c70",
+      "color": "#689070",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -488,7 +488,7 @@
       "root": "mercy",
       "translit": "eleos · eleeō",
       "gloss": "loyal-love, covenant-kindness",
-      "color": "#2f6db3",
+      "color": "#682098",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -517,7 +517,7 @@
       "root": "save",
       "translit": "sōzō",
       "gloss": "save / heal / rescue",
-      "color": "#c0641a",
+      "color": "#b1481f",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -552,7 +552,7 @@
       "root": "sin",
       "translit": "hamartia · hamartanō",
       "gloss": "sin, failure to hit the mark",
-      "color": "#8a4a5a",
+      "color": "#8c6d1f",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -583,7 +583,7 @@
       "root": "fringe",
       "translit": "kraspedon",
       "gloss": "tassel / hem",
-      "color": "#9b5d4b",
+      "color": "#e000a0",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -609,7 +609,7 @@
       "root": "wise",
       "translit": "phronimos",
       "gloss": "shrewd / prudent",
-      "color": "#a83e6b",
+      "color": "#c87000",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -638,7 +638,7 @@
       "root": "foolish",
       "translit": "mōros",
       "gloss": "foolish / dull",
-      "color": "#5e1822",
+      "color": "#a048d8",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -662,7 +662,7 @@
       "root": "build",
       "translit": "oikodomeō",
       "gloss": "build",
-      "color": "#284834",
+      "color": "#585000",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -683,7 +683,7 @@
       "root": "rock",
       "translit": "petra",
       "gloss": "rock (bedrock)",
-      "color": "#6b7280",
+      "color": "#0050d8",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -704,7 +704,7 @@
       "root": "faith",
       "translit": "pistis · pisteuō",
       "gloss": "trust, faith",
-      "color": "#b07a1e",
+      "color": "#785000",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -737,7 +737,7 @@
       "root": "hand-over",
       "translit": "paradidōmi",
       "gloss": "hand over, deliver up, betray",
-      "color": "#0e8aa0",
+      "color": "#6850d0",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -780,7 +780,7 @@
       "root": "cross",
       "translit": "stauros",
       "gloss": "cross, execution-stake",
-      "color": "#455a6b",
+      "color": "#6880e0",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -806,7 +806,7 @@
       "root": "lose",
       "translit": "apollymi",
       "gloss": "lose, destroy, be lost",
-      "color": "#8a6a2a",
+      "color": "#706038",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -842,7 +842,7 @@
       "root": "fear",
       "translit": "phobeō",
       "gloss": "fear, be afraid",
-      "color": "#1c7d70",
+      "color": "#886048",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -888,7 +888,7 @@
       "root": "skandalon",
       "translit": "skandalon · skandalizō",
       "gloss": "trip up / trap-trigger, cause to stumble",
-      "color": "#6a1f6a",
+      "color": "#27947c",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -919,7 +919,7 @@
       "root": "metanoia",
       "translit": "metanoia · metanoeō",
       "gloss": "repent, change one's mind",
-      "color": "#2e8f5c",
+      "color": "#006494",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -950,7 +950,7 @@
       "root": "generation",
       "translit": "genea",
       "gloss": "generation; a class of people",
-      "color": "#6b4a8a",
+      "color": "#8048a0",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -971,7 +971,7 @@
       "root": "come-here",
       "translit": "deute",
       "gloss": "come here! (a summons)",
-      "color": "#1c6b8a",
+      "color": "#b06a51",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -992,7 +992,7 @@
       "root": "gentle",
       "translit": "praus",
       "gloss": "gentle, humble",
-      "color": "#a02e6b",
+      "color": "#f82048",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1013,7 +1013,7 @@
       "root": "well-pleased",
       "translit": "eudokeō",
       "gloss": "be well pleased, take delight in",
-      "color": "#4a2e8a",
+      "color": "#5a5a9c",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1039,7 +1039,7 @@
       "root": "raise",
       "translit": "egeirō",
       "gloss": "raise up, rouse from lying down",
-      "color": "#9e392d",
+      "color": "#55642f",
       "opens": {
         "unit": 1,
         "ref": "1:24"
@@ -1075,7 +1075,7 @@
       "root": "peace",
       "translit": "eirēnē",
       "gloss": "peace",
-      "color": "#603a2e",
+      "color": "#604828",
       "opens": {
         "unit": 5,
         "ref": "5:9"
@@ -1096,7 +1096,7 @@
       "root": "good-news",
       "translit": "euangelion",
       "gloss": "good news / gospel",
-      "color": "#7e4424",
+      "color": "#747da6",
       "opens": {
         "unit": 4,
         "ref": "4:23"
@@ -1125,7 +1125,7 @@
       "root": "wage",
       "translit": "misthos",
       "gloss": "wage / reward",
-      "color": "#968d35",
+      "color": "#a000a8",
       "opens": {
         "unit": 5,
         "ref": "5:12"
@@ -1151,7 +1151,7 @@
       "root": "father",
       "translit": "patēr",
       "gloss": "Father",
-      "color": "#5b6925",
+      "color": "#d848d0",
       "opens": {
         "unit": 5,
         "ref": "5:16"
@@ -1182,7 +1182,7 @@
       "root": "righteous",
       "translit": "dikaios · dikaiosynē",
       "gloss": "righteous(ness)",
-      "color": "#829e2d",
+      "color": "#3d6b4a",
       "opens": {
         "unit": 1,
         "ref": "1:19"
@@ -1217,7 +1217,7 @@
       "root": "seek",
       "translit": "zēteō",
       "gloss": "seek",
-      "color": "#4f9e2d",
+      "color": "#8a2f3a",
       "opens": {
         "unit": 2,
         "ref": "2:13"
@@ -1248,7 +1248,7 @@
       "root": "spirit",
       "translit": "pneuma",
       "gloss": "spirit",
-      "color": "#2d9e4f",
+      "color": "#7a3f5c",
       "opens": {
         "unit": 1,
         "ref": "1:18"
@@ -1278,7 +1278,7 @@
       "root": "kingdom",
       "translit": "basileia",
       "gloss": "kingdom",
-      "color": "#2e605d",
+      "color": "#7f5482",
       "opens": {
         "unit": 3,
         "ref": "3:2"
@@ -1313,7 +1313,7 @@
       "root": "evil",
       "translit": "ponēros",
       "gloss": "evil / the evil one",
-      "color": "#2e3d60",
+      "color": "#c80028",
       "opens": {
         "unit": 6,
         "ref": "6:13"
@@ -1339,7 +1339,7 @@
       "root": "gehenna",
       "translit": "geenna",
       "gloss": "Gehenna",
-      "color": "#252869",
+      "color": "#f80880",
       "opens": {
         "unit": 5,
         "ref": "5:22"
@@ -1364,7 +1364,7 @@
       "root": "test",
       "translit": "peirazō",
       "gloss": "test / tempt",
-      "color": "#602e51",
+      "color": "#945042",
       "opens": {
         "unit": 3,
         "ref": "4:3"
@@ -1392,7 +1392,7 @@
       "root": "fulfill",
       "translit": "plēroō",
       "gloss": "fill full / fulfill",
-      "color": "#64872f",
+      "color": "#1f6e7a",
       "opens": {
         "unit": 1,
         "ref": "1:22"
@@ -1428,7 +1428,7 @@
       "root": "worship",
       "translit": "proskyneō",
       "gloss": "worship, bow down",
-      "color": "#3a602e",
+      "color": "#2f4f7a",
       "opens": {
         "unit": 2,
         "ref": "2:2"
@@ -1453,7 +1453,7 @@
       "root": "call",
       "translit": "kaleō",
       "gloss": "call, name",
-      "color": "#2d9e82",
+      "color": "#9c5a1e",
       "opens": {
         "unit": 1,
         "ref": "1:21"
@@ -1484,7 +1484,7 @@
       "root": "withdraw",
       "translit": "anachōreō",
       "gloss": "withdraw",
-      "color": "#2d9e9e",
+      "color": "#a67c1e",
       "opens": {
         "unit": 2,
         "ref": "2:12"
@@ -1517,7 +1517,7 @@
       "root": "worthy",
       "translit": "axios",
       "gloss": "worthy, of matching weight",
-      "color": "#2d47c8",
+      "color": "#a24860",
       "opens": {
         "unit": 3,
         "ref": "3:8"
@@ -1541,7 +1541,7 @@
       "root": "learn",
       "translit": "mathētēs",
       "gloss": "learner",
-      "color": "#6e355a",
+      "color": "#789000",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1582,7 +1582,7 @@
       "root": "acts-of-power",
       "translit": "dynamis",
       "gloss": "acts of power",
-      "color": "#9e6b1c",
+      "color": "#189858",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1603,7 +1603,7 @@
       "root": "immerse",
       "translit": "baptizō · baptisma · baptistēs",
       "gloss": "immerse (bapt-)",
-      "color": "#134f7a",
+      "color": "#00807c",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1624,7 +1624,7 @@
       "root": "anxious",
       "translit": "merimnaō",
       "gloss": "be pulled apart with care",
-      "color": "#9755aa",
+      "color": "#0088f0",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1650,7 +1650,7 @@
       "root": "clean",
       "translit": "katharizō",
       "gloss": "cleanse, make ritually pure",
-      "color": "#2d24b7",
+      "color": "#005068",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1671,7 +1671,7 @@
       "root": "judge",
       "translit": "krinō · krisis · kritēs · katakrinō",
       "gloss": "judge; judgment; judge against",
-      "color": "#105060",
+      "color": "#3830b8",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1707,7 +1707,7 @@
       "root": "fruit",
       "translit": "karpos",
       "gloss": "fruit",
-      "color": "#695b11",
+      "color": "#007da2",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1738,7 +1738,7 @@
       "root": "treasure",
       "translit": "thēsauros · thēsaurizō",
       "gloss": "treasure, storehouse; store up",
-      "color": "#3d125e",
+      "color": "#1e7a5c",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1769,7 +1769,7 @@
       "root": "sign",
       "translit": "sēmeion",
       "gloss": "sign, token",
-      "color": "#5c6aa3",
+      "color": "#b070b0",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1784,7 +1784,7 @@
       "root": "defame",
       "translit": "blasphēmeō · blasphēmia",
       "gloss": "defame, speak injury against (blasphēm-)",
-      "color": "#3b747d",
+      "color": "#385030",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1805,7 +1805,7 @@
       "root": "house",
       "translit": "oikia · oikos",
       "gloss": "house, household",
-      "color": "#766142",
+      "color": "#5c3f7a",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1841,7 +1841,7 @@
       "root": "permitted",
       "translit": "exestin · exon",
       "gloss": "it is permitted (the legal question)",
-      "color": "#683b41",
+      "color": "#0090c8",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1856,7 +1856,7 @@
       "root": "counsel",
       "translit": "symboulion",
       "gloss": "council, plot — 'take counsel'",
-      "color": "#72133f",
+      "color": "#706890",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1871,7 +1871,7 @@
       "root": "rest",
       "translit": "anapausis · anapauō",
       "gloss": "rest, give rest",
-      "color": "#1f3d51",
+      "color": "#b87088",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1892,7 +1892,7 @@
       "root": "harvest",
       "translit": "therismos · theristēs · therizō",
       "gloss": "harvest; reaper; reap",
-      "color": "#804842",
+      "color": "#a850a8",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1918,7 +1918,7 @@
       "root": "eye",
       "translit": "ophthalmos",
       "gloss": "eye",
-      "color": "#483e28",
+      "color": "#7868f8",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1944,7 +1944,7 @@
       "root": "hide",
       "translit": "kryptō · apokryptō · kryptos",
       "gloss": "hide; hidden",
-      "color": "#145c49",
+      "color": "#b80078",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -1970,7 +1970,7 @@
       "root": "heart",
       "translit": "kardia",
       "gloss": "heart",
-      "color": "#a25356",
+      "color": "#e85800",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2001,7 +2001,7 @@
       "root": "thorn",
       "translit": "akantha",
       "gloss": "thorn",
-      "color": "#213997",
+      "color": "#007800",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2022,7 +2022,7 @@
       "root": "enemy",
       "translit": "echthros",
       "gloss": "enemy",
-      "color": "#201584",
+      "color": "#009800",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2048,7 +2048,7 @@
       "root": "joy",
       "translit": "chara · chairō",
       "gloss": "joy; rejoice",
-      "color": "#726f13",
+      "color": "#005847",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2069,7 +2069,7 @@
       "root": "understand",
       "translit": "syniēmi",
       "gloss": "understand — literally 'throw together'",
-      "color": "#116911",
+      "color": "#d858a0",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2090,7 +2090,7 @@
       "root": "gather",
       "translit": "synagō · episynagō",
       "gloss": "gather",
-      "color": "#69178c",
+      "color": "#496fb2",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2121,7 +2121,7 @@
       "root": "snatch",
       "translit": "harpazō",
       "gloss": "snatch, seize",
-      "color": "#95184a",
+      "color": "#587810",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2147,7 +2147,7 @@
       "root": "rotten",
       "translit": "sapros",
       "gloss": "rotten",
-      "color": "#295dd6",
+      "color": "#684030",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2173,7 +2173,7 @@
       "root": "completion-of-age",
       "translit": "synteleia tou aiōnos",
       "gloss": "\"the completion of the age\"",
-      "color": "#45531d",
+      "color": "#784848",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2194,7 +2194,7 @@
       "root": "weeping-grinding",
       "translit": "ho klauthmos kai ho brygmos tōn odontōn",
       "gloss": "\"the weeping and the grinding of the teeth\"",
-      "color": "#6a57a8",
+      "color": "#900048",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2215,7 +2215,7 @@
       "root": "lawlessness",
       "translit": "anomia",
       "gloss": "lawlessness",
-      "color": "#9a1d2e",
+      "color": "#707000",
       "status": "open",
       "tagged": true,
       "opens": {
@@ -2236,7 +2236,7 @@
       "root": "householder",
       "translit": "oikodespotēs",
       "gloss": "master of the house",
-      "color": "#96547a",
+      "color": "#908000",
       "status": "open",
       "tagged": true,
       "opens": {

@@ -1,0 +1,42 @@
+{
+  "book": "Matthew",
+  "osis": "Matt",
+  "abbrev": "Matt",
+  "slug": "matthew",
+  "language": "greek",
+  "versification": "source",
+  "corpus": {
+    "kind": "morphgnt",
+    "pin": "morphgnt/sblgnt@aaed91e",
+    "word_ids": true
+  },
+  "groupings": [
+    "movement",
+    "discourse"
+  ],
+  "components": [
+    "echo",
+    "itin",
+    "compare",
+    "synoptic"
+  ],
+  "checks": {
+    "opens_note_required": false,
+    "colour_de_min": 7
+  },
+  "core": "0.15.0",
+  "hub": "https://lanehaden157.github.io/bible/",
+  "overlay": "discourse",
+  "paths": {
+    "chat_side": "instructions.md"
+  },
+  "sync": {
+    "extra": [
+      "matthew_reference_links.md",
+      "MatthewSBLGNT.txt"
+    ],
+    "skip": [
+      "resources.md"
+    ]
+  }
+}

@@ -1,64 +1,29 @@
-# Project-side sync — index, not a copy of the canonical files
+# Project side
 
-Every file in the table below has **one canonical copy**, at the repo path
-linked. This file exists so you don't have to hunt for the canonical paths.
+How files move between this repo and the Matthew Claude.ai research project.
 
-**`project-side/synced/` is the one deliberate exception.** It holds a flat,
-auto-generated *copy* of every tracked file's current content (basenames only,
-e.g. `data/threads.json` → `synced/threads.json`), pushed to
-`github.com/lanehaden157/Matthew`. Point the Claude.ai research project's
-GitHub connector at that folder and its "sync" feature pulls fresh content on
-its own — no re-pasting, ever. Never hand-edit anything under `synced/`; it is
-overwritten on the next sync.
+**Repo → project: synced, never uploaded by hand.** Core supplies the
+default list (`biblecore/sync.py` `DEFAULT_SYNC`); `book.json` → `sync` holds
+only this book's additions (`extra`) and exclusions (`skip`).
+`python -m biblecore sync` mirrors the resolved files flat into
+`project-side/synced/`, removes any mirror file that has left the list, then
+commits and pushes it, and the project's GitHub connector reads that folder. It pushes on its own, so run it when Lane has OK'd
+the push (normally together with the commit that caused the change). Each sync also writes
+`synced/synced-index.md`, the complete list with each file's role. That's
+the only list, so don't restate it elsewhere. `python -m biblecore sync-check`
+reports which files changed since they were last synced (the build runs it too).
 
-**What keeps it current:** `pipeline/sync_to_github.py` copies every
-`TRACKED_FILES` entry into `synced/`. `pipeline/build.py` runs it as its last step
-with `--copy-only`, so the mirror refreshes exactly when the data it mirrors does and
-lands in the same commit as the change that caused it (build never commits or pushes).
-Run it by hand any time with (this form copies, commits **and pushes**, so use it
-only when Lane OKs the push):
+To sync another file, add it to `book.json` → `sync.extra` (a path or a glob
+pattern); to stop syncing a default, add it to `sync.skip`. A file every book
+should sync belongs in core's `DEFAULT_SYNC`, with a role in `ROLES`.
 
-```bash
-python pipeline/sync_to_github.py
-```
+**Not synced:**
 
-**Deliberately no scheduled task.** Joshua runs its sync every 15 minutes from
-Windows Task Scheduler; `platform-design-review.md` A10/H9 flags the resulting
-commit noise as a problem worth not inheriting. `build.py` already runs after
-every change that matters.
+| file | direction | why |
+|---|---|---|
+| `instructions.md` (`book.json` `paths.chat_side`) | pasted by hand into the instruction field | the connector can't write the field. `sync-check` says when it needs re-pasting; run `sync-check --mark-pasted` after pasting |
+| `source-artifacts/matthew_NN_translation.html` | project → repo | each unit's artifact, saved into the repo before `port` |
 
-**Fallback for a project that can't use a GitHub connector** (one that only
-takes uploaded files): `pipeline/check_project_sync.py` does the older
-hash-diff-and-tell-you-what-changed job —
-
-```bash
-python pipeline/check_project_sync.py               # what needs re-pasting
-python pipeline/check_project_sync.py --mark-synced  # after you've pasted everything
-```
-
-— tracked separately in `project-side/sync-state.json`.
-
-## Files
-
-| file | direction | what it is | update cadence |
-|---|---|---|---|
-| [`matthew_study_style_reference.md`](../matthew_study_style_reference.md) | repo → project | The artifact contract — fragment shape, unit-meta schema, component whitelist, transliteration scheme, the 28-unit map, checklist | Whenever it changes |
-| [`translation-choices.md`](../translation-choices.md) | repo → project | Hand-maintained glossary of deliberate English renderings | Edit **in the same turn** as any wording decision — `CLAUDE.md` makes this a standing workflow step, not a separate ask |
-| [`threads-digest.md`](../threads-digest.md) | repo → project | Generated snapshot of tracked cross-unit threads — the source of truth for what to tag | Regenerate (`python pipeline/threads_digest.py`, or just run `build.py`) any time `data/threads.json` changes; never hand-edit |
-| [`MatthewSBLGNT.txt`](../MatthewSBLGNT.txt) | repo → project | SBLGNT Greek of Matthew, `Matt C:V\t<text>` lines. The project's copy has to be **byte-identical** to this one, which until now was kept true by discipline alone | Static unless the corpus pin changes — but syncing it is the point: the mirror makes identity mechanical |
-| [`matthew_reference_links.md`](../matthew_reference_links.md) | repo → project | The annotated shelf of outside sources (lexicons, Second Temple texts, LXX/NETS, Synoptic tools, patristics, the Bible Project frame). Style reference §5 is the quick-lookup subset | Whenever a source is added or a link rots |
-| [`canon-leads/canon-leads-unit-NN.md`](../canon-leads/) | repo → project | Generated reading list for the intertext pass (pass 3): where a unit's rare Greek words and shared two-word phrases occur in the LXX and the rest of the NT (`pipeline/canon_leads.py`) | Regenerated by `build.py` for built units from 13 on + the next unbuilt one; never hand-edit |
-
-**Not synced, on purpose:** `instructions.md` (the chat-side contract — still
-authoritative at its repo path, but the project holds its own copy in its
-instructions field) and `synoptic_parallels_units_01_10.md` (research input,
-not a contract). Both match the call made on the Joshua side, 2026-09-16.
-Adding either is one line in `pipeline/check_project_sync.py`.
-
-## Also worth knowing about, not part of the sync loop
-
-- [`CLAUDE.md`](../CLAUDE.md) — how *this repo* behaves (pipeline, layout,
-  locked decisions). Repo-side only; the project doesn't need it.
-- [`PLAN.md`](../PLAN.md) — phase list and open questions. Repo-side only.
-- [`platform-design-review.md`](../platform-design-review.md) — the
-  cross-project audit this folder came out of (item B4). Reference.
+**Matthew-only synced files** (`book.json` `sync.extra`): `matthew_reference_links.md`
+(the annotated shelf of outside sources) and `MatthewSBLGNT.txt` (the Greek, which
+the project's copy has to match byte for byte).

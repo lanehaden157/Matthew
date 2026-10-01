@@ -2,27 +2,63 @@
   "_note": "Unit manifest for the whole gospel. built units carry a roots map name -> {color, translit, gloss}. A root also listed in threads.json takes that thread's colour instead (global tier); the local color here is the fallback. Hand-maintained. (pipeline/extract_legends.py was a one-time backfill of translit/gloss out of the fragments' hand legends; it is retired and no longer part of build.py — do not re-run it.) Roots here that a thread also covers, and roots not (yet) tagged in the fragment, are both kept on purpose: the local entry is the fallback if a thread is ever demoted back to local.",
   "book": "Matthew",
   "unit_count": 28,
-  "movements": [
+  "groupings": [
     {
-      "id": 1,
-      "label": "The Person of the Messiah",
-      "range": "1:1-4:16/17"
-    },
-    {
-      "id": 2,
-      "label": "The Kingdom Proclaimed in Galilee",
-      "range": "4:17-16:20"
-    },
-    {
-      "id": 3,
-      "label": "The Road to the Cross",
-      "range": "16:21-28:20"
-    }
-  ],
-  "discourses": [
-    {
+      "kind": "movement",
       "n": 1,
-      "label": "Sermon on the Mount",
+      "name": "The Person of the Messiah",
+      "span": "1:1-4:16/17",
+      "units": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "movement",
+      "n": 2,
+      "name": "The Kingdom Proclaimed in Galilee",
+      "span": "4:17-16:20",
+      "units": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "kind": "movement",
+      "n": 3,
+      "name": "The Road to the Cross",
+      "span": "16:21-28:20",
+      "units": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "kind": "discourse",
+      "n": 1,
+      "name": "Sermon on the Mount",
       "units": [
         5,
         6,
@@ -30,29 +66,33 @@
       ]
     },
     {
+      "kind": "discourse",
       "n": 2,
-      "label": "The Mission",
+      "name": "The Mission",
       "units": [
         10
       ]
     },
     {
+      "kind": "discourse",
       "n": 3,
-      "label": "Parables of the Kingdom",
+      "name": "Parables of the Kingdom",
       "units": [
         13
       ]
     },
     {
+      "kind": "discourse",
       "n": 4,
-      "label": "Life in the Community",
+      "name": "Life in the Community",
       "units": [
         18
       ]
     },
     {
+      "kind": "discourse",
       "n": 5,
-      "label": "Woes & the Olivet Discourse",
+      "name": "Woes & the Olivet Discourse",
       "units": [
         23,
         24,
@@ -70,46 +110,47 @@
       "built": true,
       "roots": {
         "beget": {
-          "color": "#a8324a",
+          "color": "#8a2f3a",
           "translit": "gennaō · genesis",
           "gloss": "beget (gen-)"
         },
         "name": {
-          "color": "#6b7280",
+          "color": "#2f4f7a",
           "translit": "onoma",
           "gloss": "name"
         },
         "save": {
-          "color": "#c0641a",
+          "color": "#b1481f",
           "translit": "sōzō",
           "gloss": "save"
         },
         "spirit": {
-          "color": "#4a4f93",
+          "color": "#7a3f5c",
           "translit": "pneuma hagion",
           "gloss": "Holy Spirit"
         },
         "dream": {
-          "color": "#2f6db3",
+          "color": "#a67c1e",
           "translit": "onar",
           "gloss": "dream"
         },
         "david": {
-          "color": "#8a6a2a",
+          "color": "#1e7a5c",
           "translit": "Dauid",
           "gloss": "David"
         },
         "call": {
-          "color": "#9c2f8f",
+          "color": "#9c5a1e",
           "translit": "kaleō",
           "gloss": "call"
         },
         "with": {
-          "color": "#5b411f",
+          "color": "#5c3f7a",
           "translit": "meta · meth'",
           "gloss": "with — \"God with us\" (1:23)"
         }
-      }
+      },
+      "contract": "legacy"
     },
     {
       "n": 2,
@@ -120,61 +161,62 @@
       "built": true,
       "roots": {
         "beget": {
-          "color": "#a8324a",
+          "color": "#8c6d1f",
           "translit": "gennaō · genesis",
           "gloss": "beget (gen-)"
         },
         "name": {
-          "color": "#1c7d70",
+          "color": "#3d6b4a",
           "translit": "onoma",
           "gloss": "name"
         },
         "call": {
-          "color": "#5a3a2a",
+          "color": "#9c5a1e",
           "translit": "kaleō",
           "gloss": "call"
         },
         "save": {
-          "color": "#c0641a",
+          "color": "#b1481f",
           "translit": "sōzō",
           "gloss": "save"
         },
         "dream": {
-          "color": "#2f6db3",
+          "color": "#7a3f5c",
           "translit": "onar",
           "gloss": "dream"
         },
         "david": {
-          "color": "#8a6a2a",
+          "color": "#006494",
           "translit": "Dauid",
           "gloss": "David"
         },
         "king": {
-          "color": "#7a5a8c",
+          "color": "#5a5a9c",
           "translit": "basileus",
           "gloss": "king"
         },
         "worship": {
-          "color": "#6b2fb3",
+          "color": "#2f4f7a",
           "translit": "proskyneō",
           "gloss": "worship / prostrate"
         },
         "child": {
-          "color": "#3f7d3a",
+          "color": "#7f5482",
           "translit": "paidion",
           "gloss": "the child"
         },
         "fulfill": {
-          "color": "#455a6b",
+          "color": "#1f6e7a",
           "translit": "plēroō",
           "gloss": "fill full"
         },
         "withdraw": {
-          "color": "#9c4f1c",
+          "color": "#a67c1e",
           "translit": "anachōreō",
           "gloss": "withdraw"
         }
-      }
+      },
+      "contract": "legacy"
     },
     {
       "n": 3,
@@ -185,96 +227,97 @@
       "built": true,
       "roots": {
         "beget": {
-          "color": "#a8324a",
+          "color": "#8a2f3a",
           "translit": "gennaō · genesis",
           "gloss": "beget (gen-)"
         },
         "name": {
-          "color": "#1c7d70",
+          "color": "#1e7a5c",
           "translit": "onoma",
           "gloss": "name"
         },
         "save": {
-          "color": "#c0641a",
+          "color": "#b1481f",
           "translit": "sōzō",
           "gloss": "save"
         },
         "spirit": {
-          "color": "#4a4f93",
+          "color": "#7a3f5c",
           "translit": "pneuma",
           "gloss": "Spirit"
         },
         "dream": {
-          "color": "#2f6db3",
+          "color": "#5c3f7a",
           "translit": "onar",
           "gloss": "dream"
         },
         "david": {
-          "color": "#8a6a2a",
+          "color": "#005847",
           "translit": "Dauid",
           "gloss": "David"
         },
         "worship": {
-          "color": "#6b2fb3",
+          "color": "#2f4f7a",
           "translit": "proskyneō",
           "gloss": "worship / prostrate"
         },
         "child": {
-          "color": "#3f7d3a",
+          "color": "#557f44",
           "translit": "paidion",
           "gloss": "the child"
         },
         "fulfill": {
-          "color": "#455a6b",
+          "color": "#1f6e7a",
           "translit": "plēroō",
           "gloss": "fill full / fulfill"
         },
         "withdraw": {
-          "color": "#9c4f1c",
+          "color": "#a67c1e",
           "translit": "anachōreō",
           "gloss": "withdraw"
         },
         "kingdom": {
-          "color": "#9c2f8f",
+          "color": "#7f5482",
           "translit": "basileia",
           "gloss": "kingdom of the skies"
         },
         "repent": {
-          "color": "#1f8f5f",
+          "color": "#aa5a88",
           "translit": "metanoeō · metanoia",
           "gloss": "repent (metano-)"
         },
         "immerse": {
-          "color": "#0e8aa0",
+          "color": "#00807c",
           "translit": "baptizō · baptisma",
           "gloss": "immerse (bapt-)"
         },
         "wilderness": {
-          "color": "#8a7a4a",
+          "color": "#a66566",
           "translit": "erēmos",
           "gloss": "wilderness"
         },
         "test": {
-          "color": "#7a2230",
+          "color": "#945042",
           "translit": "peirazō",
           "gloss": "test"
         },
         "son": {
-          "color": "#c0285f",
+          "color": "#827b4a",
           "translit": "huios",
           "gloss": "Son"
         },
         "slanderer": {
-          "color": "#4a1c2a",
+          "color": "#8b6cae",
           "translit": "diabolos",
           "gloss": "the slanderer"
         },
         "call": {
-          "color": "#9c2f8f",
+          "color": "#9c5a1e",
           "translit": "kaleō",
           "gloss": "call"
         }
-      }
+      },
+      "contract": "legacy"
     },
     {
       "n": 4,
@@ -285,56 +328,57 @@
       "built": true,
       "roots": {
         "light": {
-          "color": "#bd8b16",
+          "color": "#557f44",
           "translit": "phōs",
           "gloss": "light"
         },
         "dark": {
-          "color": "#455a6b",
+          "color": "#b1481f",
           "translit": "skotia",
           "gloss": "darkness"
         },
         "withdraw": {
-          "color": "#9c4f1c",
+          "color": "#a67c1e",
           "translit": "anachōreō",
           "gloss": "withdraw"
         },
         "kingdom": {
-          "color": "#9c2f8f",
+          "color": "#7f5482",
           "translit": "basileia",
           "gloss": "kingdom"
         },
         "proclaim": {
-          "color": "#1c7d70",
+          "color": "#8c6d1f",
           "translit": "kēryssō",
           "gloss": "proclaim, herald"
         },
         "follow": {
-          "color": "#3f7d3a",
+          "color": "#a66566",
           "translit": "akoloutheō",
           "gloss": "follow"
         },
         "fish": {
-          "color": "#4a4f93",
+          "color": "#827b4a",
           "translit": "halieus",
           "gloss": "fisher"
         },
         "sea": {
-          "color": "#0e8aa0",
+          "color": "#8b6cae",
           "translit": "thalassa",
           "gloss": "sea"
         },
         "beget": {
-          "color": "#a8324a",
+          "color": "#55642f",
           "translit": "gennaō · genesis",
           "gloss": "beget (gen-)"
         },
         "shadow": {
-          "color": "#6b7280",
+          "color": "#3d6b4a",
           "translit": "skia",
           "gloss": "shadow"
         }
-      }
+      },
+      "contract": "legacy"
     },
     {
       "n": 5,
@@ -345,36 +389,38 @@
       "built": true,
       "roots": {
         "righteous": {
-          "color": "#b07a1e",
+          "color": "#3d6b4a",
           "translit": "dikaiosynē",
           "gloss": "righteousness"
         },
         "kingdom": {
-          "color": "#5f7d2e",
+          "color": "#7f5482",
           "translit": "basileia",
           "gloss": "kingdom of the skies"
         },
         "father": {
-          "color": "#1c7d70",
+          "color": "#d848d0",
           "translit": "patēr",
           "gloss": "Father"
         },
         "whole": {
-          "color": "#5a3fa0",
+          "color": "#b1481f",
           "translit": "holos",
           "gloss": "whole"
         },
         "gehenna": {
-          "color": "#7a5a8c",
+          "color": "#f80880",
           "translit": "geenna",
           "gloss": "Gehenna"
         },
         "evil": {
-          "color": "#6b7280",
+          "color": "#c80028",
           "translit": "ponēros",
           "gloss": "evil / the evil one"
         }
-      }
+      },
+      "discourse": 1,
+      "contract": "legacy"
     },
     {
       "n": 6,
@@ -385,41 +431,43 @@
       "built": true,
       "roots": {
         "wage": {
-          "color": "#a8324a",
+          "color": "#a000a8",
           "translit": "misthos",
           "gloss": "wage / reward"
         },
         "father": {
-          "color": "#5a3a2a",
+          "color": "#d848d0",
           "translit": "patēr",
           "gloss": "Father"
         },
         "seen": {
-          "color": "#1596b8",
+          "color": "#b1481f",
           "translit": "theaomai",
           "gloss": "seen / gazed at (for show)"
         },
         "treasure": {
-          "color": "#8a6a2a",
+          "color": "#1e7a5c",
           "translit": "thēsauros · thēsaurizō",
           "gloss": "treasure (thēsaur-)"
         },
         "release": {
-          "color": "#6b2fb3",
+          "color": "#005800",
           "translit": "aphiēmi",
           "gloss": "release / let go"
         },
         "anxious": {
-          "color": "#3f7d3a",
+          "color": "#0088f0",
           "translit": "merimnaō",
           "gloss": "be pulled apart with care"
         },
         "seek": {
-          "color": "#9c4f1c",
+          "color": "#8a2f3a",
           "translit": "zēteō · epizēteō",
           "gloss": "seek (zēt-)"
         }
-      }
+      },
+      "discourse": 1,
+      "contract": "legacy"
     },
     {
       "n": 7,
@@ -430,51 +478,53 @@
       "built": true,
       "roots": {
         "judge": {
-          "color": "#a8324a",
+          "color": "#3830b8",
           "translit": "krinō · krima",
           "gloss": "judge (kri-)"
         },
         "measure": {
-          "color": "#4a4f93",
+          "color": "#b1481f",
           "translit": "metron · metreō",
           "gloss": "measure (metr-)"
         },
         "ask": {
-          "color": "#1c7d70",
+          "color": "#8c6d1f",
           "translit": "aiteō",
           "gloss": "ask"
         },
         "do": {
-          "color": "#3f7d3a",
+          "color": "#55642f",
           "translit": "poieō",
           "gloss": "do, make"
         },
         "fruit": {
-          "color": "#c0641a",
+          "color": "#007da2",
           "translit": "karpos",
           "gloss": "fruit"
         },
         "enter": {
-          "color": "#9c2f8f",
+          "color": "#3d6b4a",
           "translit": "eiserchomai",
           "gloss": "come in, enter"
         },
         "way": {
-          "color": "#6a4a3a",
+          "color": "#7a3f5c",
           "translit": "hodos",
           "gloss": "road / way"
         },
         "build": {
-          "color": "#8a6a2a",
+          "color": "#585000",
           "translit": "oikodomeō",
           "gloss": "build"
         },
         "gate": {
-          "color": "#8a5a9c",
+          "color": "#1f6e7a",
           "translit": "pylē",
           "gloss": "gate"
         }
-      }
+      },
+      "discourse": 1,
+      "contract": "legacy"
     },
     {
       "n": 8,
@@ -485,56 +535,57 @@
       "built": true,
       "roots": {
         "follow": {
-          "color": "#3b3f93",
+          "color": "#a66566",
           "translit": "akoloutheō",
           "gloss": "follow, come along behind"
         },
         "throw": {
-          "color": "#9c4f1c",
+          "color": "#e05840",
           "translit": "ballō",
           "gloss": "throw, cast, fling down"
         },
         "touch": {
-          "color": "#8a5a2a",
+          "color": "#8c6d1f",
           "translit": "haptomai",
           "gloss": "take hold of, touch"
         },
         "release": {
-          "color": "#147a63",
+          "color": "#005800",
           "translit": "aphiēmi",
           "gloss": "let go, release, forgive"
         },
         "torment": {
-          "color": "#7a2230",
+          "color": "#d00050",
           "translit": "basanizō",
           "gloss": "torment, put to the test"
         },
         "urge": {
-          "color": "#9c2f8f",
+          "color": "#987898",
           "translit": "parakaleō",
           "gloss": "urge, entreat, call alongside"
         },
         "authority": {
-          "color": "#7b2fb3",
+          "color": "#783800",
           "translit": "exousia",
           "gloss": "authority, delegated right to act"
         },
         "clean": {
-          "color": "#1596b8",
+          "color": "#005068",
           "translit": "katharizō",
           "gloss": "cleanse, make ritually pure"
         },
         "raise": {
-          "color": "#5a3a2a",
+          "color": "#55642f",
           "translit": "egeirō",
           "gloss": "raise up, rouse from lying down"
         },
         "shake": {
-          "color": "#4a5a68",
+          "color": "#801868",
           "translit": "seismos",
           "gloss": "shaking, quake"
         }
-      }
+      },
+      "contract": "legacy"
     },
     {
       "n": 9,
@@ -543,7 +594,8 @@
       "title": "The Deeds of the Messiah (II): Boundary-Crossing Loyal-Love",
       "movement": 2,
       "built": true,
-      "roots": {}
+      "roots": {},
+      "contract": "legacy"
     },
     {
       "n": 10,
@@ -554,21 +606,23 @@
       "built": true,
       "roots": {
         "worthy": {
-          "color": "#a8324a",
+          "color": "#a24860",
           "translit": "axios",
           "gloss": "worthy, of matching weight"
         },
         "receive": {
-          "color": "#2f6db3",
+          "color": "#8c6d1f",
           "translit": "dechomai",
           "gloss": "receive, welcome"
         },
         "send-out": {
-          "color": "#1f8f5f",
+          "color": "#1f6e7a",
           "translit": "apostellō · apostolos",
           "gloss": "send out; one sent out, emissary"
         }
-      }
+      },
+      "discourse": 2,
+      "contract": "legacy"
     },
     {
       "n": 11,
@@ -579,41 +633,42 @@
       "built": true,
       "roots": {
         "deeds": {
-          "color": "#a8324a",
+          "color": "#b1481f",
           "translit": "ergon",
           "gloss": "deed, work — frames the John-block, 11:2 to 11:19"
         },
         "reed": {
-          "color": "#1c7d70",
+          "color": "#7a3f5c",
           "translit": "kalamos",
           "gloss": "reed, cane-stalk"
         },
         "reproach": {
-          "color": "#c0641a",
+          "color": "#1f6e7a",
           "translit": "oneidizō",
           "gloss": "reproach, denounce with indignation"
         },
         "seize": {
-          "color": "#5a8a3e",
+          "color": "#9c5a1e",
           "translit": "biazomai · biastēs",
           "gloss": "assault, use force"
         },
         "reveal": {
-          "color": "#2f6db3",
+          "color": "#8a2f3a",
           "translit": "apokalyptō",
           "gloss": "uncover, reveal"
         },
         "yoke": {
-          "color": "#b52bbf",
+          "color": "#2f4f7a",
           "translit": "zygos",
           "gloss": "yoke — the crossbar binding a pair to their load"
         },
         "burden": {
-          "color": "#8a6a2a",
+          "color": "#a67c1e",
           "translit": "phortion · phortizō",
           "gloss": "load, burden; to load down"
         }
-      }
+      },
+      "contract": "legacy"
     },
     {
       "n": 12,
@@ -624,56 +679,57 @@
       "built": true,
       "roots": {
         "sabbath": {
-          "color": "#a8324a",
+          "color": "#b1481f",
           "translit": "sabbaton",
           "gloss": "Sabbath, the seventh-day rest"
         },
         "permitted": {
-          "color": "#1c7d70",
+          "color": "#0090c8",
           "translit": "exestin · exon",
           "gloss": "it is permitted, it is allowed (the legal verb)"
         },
         "hunger": {
-          "color": "#c0641a",
+          "color": "#9c5a1e",
           "translit": "peinaō",
           "gloss": "be hungry"
         },
         "house": {
-          "color": "#6b2fb3",
+          "color": "#5c3f7a",
           "translit": "oikos · oikia",
           "gloss": "house, household, dwelling"
         },
         "judge": {
-          "color": "#455a6b",
+          "color": "#3830b8",
           "translit": "krisis · kritēs · katakrinō",
           "gloss": "judgment; judge; judge against (condemn)"
         },
         "condemn": {
-          "color": "#9c4f1c",
+          "color": "#2f4f7a",
           "translit": "katadikazō",
           "gloss": "pass sentence against, condemn"
         },
         "fruit": {
-          "color": "#9c2f8f",
+          "color": "#007da2",
           "translit": "karpos",
           "gloss": "fruit"
         },
         "treasure": {
-          "color": "#0e8aa0",
+          "color": "#1e7a5c",
           "translit": "thēsauros",
           "gloss": "treasure, storehouse"
         },
         "sign": {
-          "color": "#7a2230",
+          "color": "#b070b0",
           "translit": "sēmeion",
           "gloss": "sign, token"
         },
         "stretch-out": {
-          "color": "#c0285f",
+          "color": "#005847",
           "translit": "ekteinō",
           "gloss": "stretch out (a hand)"
         }
-      }
+      },
+      "contract": "legacy"
     },
     {
       "n": 13,
@@ -684,65 +740,67 @@
       "built": true,
       "roots": {
         "parable": {
-          "color": "#a8324a",
+          "color": "#b1481f",
           "translit": "parabolē",
           "gloss": "a throwing-beside, a comparison; Hebrew mashal"
         },
         "sow": {
-          "color": "#364828",
+          "color": "#8c6d1f",
           "translit": "speirō · sperma · epispeirō",
           "gloss": "sow; seed; sow over",
           "echo": "Jer 31:27 (38:27 Greek) and Hos 2:23 — 'I will sow Israel … I will sow her for myself': God sows his people."
         },
         "hear": {
-          "color": "#5a3116",
+          "color": "#55642f",
           "translit": "akouō · akoē",
           "gloss": "hear, listen (Hebrew shama', hear-and-obey)"
         },
         "have": {
-          "color": "#8a6a2a",
+          "color": "#7a3f5c",
           "translit": "echō",
           "gloss": "have, hold"
         },
         "rise": {
-          "color": "#6b2fb3",
+          "color": "#9c5a1e",
           "translit": "anatellō · exanatellō",
           "gloss": "rise, spring up, dawn",
           "echo": "Gen 2:9 — God 'made spring up' every tree in Eden; Gen 3:18 — thorns 'spring up' from the cursed ground."
         },
         "mystery": {
-          "color": "#9c4f1c",
+          "color": "#2f4f7a",
           "translit": "mystērion",
           "gloss": "secret — a hidden plan of God, disclosed to the chosen (Aramaic raz)",
           "echo": "Dan 2:28 (Greek) — 'a God in the sky who reveals mysteries' about the last days."
         },
         "heal": {
-          "color": "#1f8f5f",
+          "color": "#a67c1e",
           "translit": "iaomai",
           "gloss": "heal",
           "echo": "Exod 15:26 — 'if with hearing you hear … I am the LORD your healer.'"
         },
         "collect": {
-          "color": "#c0285f",
+          "color": "#006494",
           "translit": "syllegō",
           "gloss": "collect, gather up (the sorting verb)"
         },
         "beach": {
-          "color": "#147a63",
+          "color": "#5a5a9c",
           "translit": "aigialos",
           "gloss": "beach, shoreline"
         },
         "completion": {
-          "color": "#5e1822",
+          "color": "#945042",
           "translit": "teleō",
           "gloss": "complete, finish"
         }
-      }
+      },
+      "discourse": 3,
+      "contract": "legacy"
     },
     {
       "n": 14,
       "slug": "unit-14",
-      "passage": "Matthew 13:54-14:36",
+      "passage": "Matthew 13:54–14:36",
       "title": "Rejection, a Beheading, Bread, and the Sea",
       "movement": 2,
       "built": false
@@ -777,7 +835,8 @@
       "passage": "Matthew 18:1-35",
       "title": "Life in the Community",
       "movement": 3,
-      "built": false
+      "built": false,
+      "discourse": 4
     },
     {
       "n": 19,
@@ -817,7 +876,8 @@
       "passage": "Matthew 23:1-39",
       "title": "Seven Woes and a Lament",
       "movement": 3,
-      "built": false
+      "built": false,
+      "discourse": 5
     },
     {
       "n": 24,
@@ -825,7 +885,8 @@
       "passage": "Matthew 24:1-51",
       "title": "The Olivet Discourse (I): Temple and Son of Man",
       "movement": 3,
-      "built": false
+      "built": false,
+      "discourse": 5
     },
     {
       "n": 25,
@@ -833,7 +894,8 @@
       "passage": "Matthew 25:1-46",
       "title": "The Olivet Discourse (II): Three Parables of the End",
       "movement": 3,
-      "built": false
+      "built": false,
+      "discourse": 5
     },
     {
       "n": 26,

@@ -1,8 +1,10 @@
-# generated pipeline scratch (regenerate with pipeline/*.py)
-pipeline/out/
+# downloaded corpora: `python -m biblecore fetch` puts them back (pinned, sha1-checked)
+corpus/morphgnt/
+corpus/lxx/
 
-# downloaded corpora for canon_leads.py -- re-fetch with pipeline/fetch_corpus.py
-pipeline/corpus/
+# build scratch
+out/
+project-side/sync-state.json
 
 # loose source-artifact copies in the repo root — canonical copies live in
 # source-artifacts/. Kept on disk for convenience, not tracked.
