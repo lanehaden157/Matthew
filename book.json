@@ -28,18 +28,13 @@
     "colour_de_min": 7
   },
   "core": "0.15.2",
+  "template": "d1fd3d6",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse",
-  "paths": {
-    "chat_side": "instructions.md"
-  },
   "sync": {
     "extra": [
       "matthew_reference_links.md",
       "MatthewSBLGNT.txt"
-    ],
-    "skip": [
-      "resources.md"
     ]
   }
 }

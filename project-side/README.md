@@ -21,7 +21,7 @@ should sync belongs in core's `DEFAULT_SYNC`, with a role in `ROLES`.
 
 | file | direction | why |
 |---|---|---|
-| `instructions.md` (`book.json` `paths.chat_side`) | pasted by hand into the instruction field | the connector can't write the field. `sync-check` says when it needs re-pasting; run `sync-check --mark-pasted` after pasting |
+| `CHAT_SIDE_INSTRUCTIONS.md` (`book.json` `paths.chat_side`) | pasted by hand into the instruction field | the connector can't write the field. `sync-check` says when it needs re-pasting; run `sync-check --mark-pasted` after pasting |
 | `source-artifacts/matthew_NN_translation.html` | project → repo | each unit's artifact, saved into the repo before `port` |
 
 **Matthew-only synced files** (`book.json` `sync.extra`): `matthew_reference_links.md`

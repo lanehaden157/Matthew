@@ -909,3 +909,7 @@
 
 ## 2026-10-01 — Onto bible-core (pass 1)
 - `5666f47`: `book.json`, `data/roots.json`, `retrofit/`, `data/units.json` (groupings, units 1-13 `legacy`, unit 14 unbuilt) from tag `pre-revert-2026-09-29`; units 1-13 with `data-w`; core 0.15.0 vendored (shell, css, `Matthew-words.tsv`, `data/words/`); `data/palette.json` (124 colours) + `checks.colour_de_min: 7`, all colours re-assigned (`tools/recolour.py`); `css/theme.css` restored plus unit 8's phone-width table rule; units 4 and 6 itinerary stops closed; `pipeline/` to `archive/pipeline/`; `.github/workflows/tests.yml`; CLAUDE.md and `project-side/README.md` rewritten. `c0a5e84`: core 0.15.1 vendor.
+
+## 2026-10-01 — Unit 14 and the chat side (pass 2)
+- `d82c32c`: `units/unit-14.html` (ported), `source-artifacts/matthew_14_translation.html` (itinerary sups as ranges), `book.json` `meta_keys: ["descriptor"]`, 7 promoted threads in `data/threads.json`/`roots.json` (88 total), 18 `add`s in `retrofit/retrofit-tags.json`, boxed units 3, 4, 7, 9-12 re-tagged (tags and `data-w` only). `9646e98`: core 0.15.2.
+- Chat side: `instructions.md` -> `CHAT_SIDE_INSTRUCTIONS.md` (~620 words), `resources.md` (new; `sync.skip` dropped), `matthew-literary-unit-map.md` (from style reference §7), style reference edits, CLAUDE.md (policy, retrofit recipe), `project-side/README.md`, `book.json` `paths` removed (default name), `template` base set.

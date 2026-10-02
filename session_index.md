@@ -218,3 +218,6 @@ Read this first. 3 lines max per session.
 ## 2026-10-01 — Onto bible-core, units 1-13 boxed (pass 1 of 2)
 - Matthew now runs core 0.15.1 (`book.json`, vendored `biblecore/`, core's shell, corpus via `biblecore fetch`). Units 1-13 are stamped `contract: legacy`: prose unchanged (visible text identical), tags from the core-era work, two itinerary `</span>` fixes (units 4, 6). New 124-colour well (ΔE 7) and every colour re-assigned. `pipeline/` is in `archive/pipeline/`.
 - Next: pass 2 (unit 14 through `port`, chat side rebased on the template). Don't `biblecore sync` before it. Details: `../session_summary_2026-10-01_matthew-box-pass1.md`.
+
+## 2026-10-01 — Unit 14 and the chat side (pass 2 of 2)
+- Unit 14 ported through core; seven threads promoted (grieve, waver, compassion, take-heart, bread, wilderness, astonish) and tagged into boxed units 3, 4, 7, 9-12 (tags only). Core 0.15.2 vendored. Chat side on the template: `CHAT_SIDE_INSTRUCTIONS.md` (needs re-paste), `resources.md`, `matthew-literary-unit-map.md`, style reference edited. Details: `../session_summary_2026-10-01_matthew-box-pass2.md`.
