@@ -200,6 +200,166 @@
       "unit": 13,
       "note": "",
       "source": "echo"
+    },
+    {
+      "from": "Matt 13:57",
+      "to": "Jer 11:21",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 13:57",
+      "to": "Jer 12:6",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 13:57",
+      "to": "Mic 7:6",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:4",
+      "to": "Lev 18:16",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:4",
+      "to": "Lev 20:21",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:12",
+      "to": "1 Kgs 19:1–2",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:16",
+      "to": "2 Kgs 4:42–44",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:19",
+      "to": "1 Cor 11:24",
+      "kind": "echo",
+      "unit": 14,
+      "note": "root break",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:19",
+      "to": "Acts 2:46",
+      "kind": "echo",
+      "unit": 14,
+      "note": "root break",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:19",
+      "to": "Matt 26:26",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:19",
+      "to": "Ps 132:15",
+      "kind": "echo",
+      "unit": 14,
+      "note": "root grass",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:25",
+      "to": "Isa 43:16",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:25",
+      "to": "Isa 51:10",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:25",
+      "to": "Job 9:8",
+      "kind": "echo",
+      "unit": 14,
+      "note": "root walk",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:25",
+      "to": "Ps 77:19",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:27",
+      "to": "Isa 43:1–16",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:27",
+      "to": "Isa 51:10–12",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:30",
+      "to": "Ps 69:1–2",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:33",
+      "to": "Matt 27:54",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 14:36",
+      "to": "Zech 8:23",
+      "kind": "echo",
+      "unit": 14,
+      "note": "",
+      "source": "echo"
     }
   ],
   "typescenes": []

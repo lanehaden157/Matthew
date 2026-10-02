@@ -14,6 +14,9 @@
     "movement",
     "discourse"
   ],
+  "meta_keys": [
+    "descriptor"
+  ],
   "components": [
     "echo",
     "itin",
@@ -24,7 +27,7 @@
     "opens_note_required": false,
     "colour_de_min": 7
   },
-  "core": "0.15.1",
+  "core": "0.15.2",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse",
   "paths": {

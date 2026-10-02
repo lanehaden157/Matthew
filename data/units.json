@@ -803,7 +803,55 @@
       "passage": "Matthew 13:54–14:36",
       "title": "Rejection, a Beheading, Bread, and the Sea",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "hear": {
+          "color": "#8c6d1f",
+          "translit": "akouō · akoē",
+          "gloss": "hear; a hearing, report"
+        },
+        "king": {
+          "color": "#3d6b4a",
+          "translit": "basileus",
+          "gloss": "king"
+        },
+        "give": {
+          "color": "#7a3f5c",
+          "translit": "didōmi",
+          "gloss": "give"
+        },
+        "command": {
+          "color": "#1f6e7a",
+          "translit": "keleuō",
+          "gloss": "command, give an order"
+        },
+        "grass": {
+          "color": "#9c5a1e",
+          "translit": "chortos · chortazō",
+          "gloss": "grass, fodder; fed full as on pasture",
+          "echo": "Ps 132:15 (131:15 in the Greek) — God promises to fill Zion’s poor with bread"
+        },
+        "break": {
+          "color": "#8a2f3a",
+          "translit": "klaō · klasma",
+          "gloss": "break (bread); broken pieces",
+          "echo": "Matt 26:26; Acts 2:46; 1 Cor 11:24 — the same breaking, at the table of the new covenant"
+        },
+        "walk": {
+          "color": "#1e7a5c",
+          "translit": "peripateō",
+          "gloss": "walk about",
+          "echo": "Job 9:8 (Greek) — God alone walks on the sea as on firm ground"
+        },
+        "son": {
+          "color": "#005847",
+          "translit": "huios",
+          "gloss": "son"
+        }
+      },
+      "contract": "0.15.1",
+      "discourse": false,
+      "descriptor": "Nazareth stumbles, Herod feasts, Jesus feeds, and the sea is walked"
     },
     {
       "n": 15,

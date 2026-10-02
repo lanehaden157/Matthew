@@ -576,6 +576,49 @@
         "axios"
       ],
       "note": "axios — fruit worthy of repentance (3:8) becomes the mission discourse's repeated test of who and what is worthy (10:10-38)."
+    },
+    "grieve": {
+      "ids": [
+        "lypeō"
+      ],
+      "note": "grieve, be sorrowful"
+    },
+    "waver": {
+      "ids": [
+        "distazō"
+      ],
+      "note": "waver, doubt"
+    },
+    "compassion": {
+      "ids": [
+        "splanchnizomai"
+      ],
+      "note": "compassion (gut-wrenched)"
+    },
+    "take-heart": {
+      "ids": [
+        "tharseō"
+      ],
+      "note": "take heart"
+    },
+    "bread": {
+      "ids": [
+        "artos"
+      ],
+      "note": "bread"
+    },
+    "wilderness": {
+      "ids": [
+        "erēmos",
+        "erēmia"
+      ],
+      "note": "wilderness, desert place"
+    },
+    "astonish": {
+      "ids": [
+        "ekplēssomai"
+      ],
+      "note": "be struck out of oneself, astonished"
     }
   }
 }

@@ -258,6 +258,135 @@
       "root": "clean",
       "text": "pure",
       "w": "01050803"
+    },
+    {
+      "_c": "Promoted at the unit-14 port (2026-10-01): grieve, waver, compassion, take-heart, bread, wilderness, astonish. Coverage policy: every occurrence in a built unit is tagged."
+    },
+    {
+      "unit": "unit-03",
+      "verse": "4:1",
+      "root": "wilderness",
+      "text": "wilderness",
+      "w": "01040107"
+    },
+    {
+      "unit": "unit-03",
+      "verse": "4:3",
+      "root": "bread",
+      "text": "loaves",
+      "w": "01040317"
+    },
+    {
+      "unit": "unit-03",
+      "verse": "4:4",
+      "root": "bread",
+      "text": "bread",
+      "w": "01040408"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 28,
+      "root": "astonish",
+      "text": "knocked clean out of themselves",
+      "w": "01072810"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 2,
+      "root": "take-heart",
+      "text": "Take heart",
+      "w": "01090219"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 22,
+      "root": "take-heart",
+      "text": "Take heart",
+      "w": "01092209"
+    },
+    {
+      "unit": "unit-10",
+      "verse": "9:36",
+      "root": "compassion",
+      "text": "wrenched in the gut",
+      "w": "01093605"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 7,
+      "root": "wilderness",
+      "text": "wilderness",
+      "w": "01110716"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 4,
+      "root": "bread",
+      "text": "loaves",
+      "w": "01120410"
+    },
+    {
+      "unit": "unit-14",
+      "verse": "13:54",
+      "root": "astonish",
+      "text": "struck out of themselves",
+      "w": "01135414"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 9,
+      "root": "grieve",
+      "text": "grieved",
+      "w": "01140902"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 14,
+      "root": "compassion",
+      "text": "wrenched in the gut",
+      "w": "01141407"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 17,
+      "root": "bread",
+      "text": "loaves",
+      "w": "01141711"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 19,
+      "root": "bread",
+      "text": "loaves",
+      "w": "01141912"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 19,
+      "root": "bread",
+      "text": "loaves",
+      "w": "01141928"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 20,
+      "root": "fulfill",
+      "text": "full",
+      "w": "01142014"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 27,
+      "root": "take-heart",
+      "text": "Take heart",
+      "w": "01142708"
+    },
+    {
+      "unit": "unit-07",
+      "verse": 9,
+      "root": "bread",
+      "text": "loaf",
+      "w": "01070912"
     }
   ]
 }
