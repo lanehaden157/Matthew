@@ -906,3 +906,6 @@
 - Unit 8's "Threads carried out" table was 348px at its narrowest in a 312px panel, so the page scrolled 4px sideways. `.table-scroll` existed in the CSS but nothing applied it: all 17 `table.exod` were bare (the other 16 fit).
 - `app/main.js` `wrapTables()`: every `table.exod` is wrapped in `div.table-scroll` at render, so a too-wide table scrolls inside its panel. Fragments unchanged.
 - `css/styles.css` under 720px: `table.exod` 15.5px → 14px, cells `7px 8px` (Lane's choice: wrap + tighten). The unit 8 table now fits at 312px with nothing scrolling. `styles.css` and `main.js` to v=41 (v=40 went out with the interlinear commit).
+
+## 2026-10-01 — Onto bible-core (pass 1)
+- `5666f47`: `book.json`, `data/roots.json`, `retrofit/`, `data/units.json` (groupings, units 1-13 `legacy`, unit 14 unbuilt) from tag `pre-revert-2026-09-29`; units 1-13 with `data-w`; core 0.15.0 vendored (shell, css, `Matthew-words.tsv`, `data/words/`); `data/palette.json` (124 colours) + `checks.colour_de_min: 7`, all colours re-assigned (`tools/recolour.py`); `css/theme.css` restored plus unit 8's phone-width table rule; units 4 and 6 itinerary stops closed; `pipeline/` to `archive/pipeline/`; `.github/workflows/tests.yml`; CLAUDE.md and `project-side/README.md` rewritten. `c0a5e84`: core 0.15.1 vendor.

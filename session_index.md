@@ -214,3 +214,7 @@ Read this first. 3 lines max per session.
 ## 2026-09-30 — Table overflow at 375px
 - Unit 8's thread table pushed the page 4px wide on phones. `main.js` now wraps every `table.exod` in `.table-scroll`; tables get 14px text and tighter cells under 720px (Lane: wrap + tighten).
 - Units 1-13 measured at 375px: no page scroll, no table scrolling. Lane OK'd it; merged on top of the interlinear commit, assets v=41.
+
+## 2026-10-01 — Onto bible-core, units 1-13 boxed (pass 1 of 2)
+- Matthew now runs core 0.15.1 (`book.json`, vendored `biblecore/`, core's shell, corpus via `biblecore fetch`). Units 1-13 are stamped `contract: legacy`: prose unchanged (visible text identical), tags from the core-era work, two itinerary `</span>` fixes (units 4, 6). New 124-colour well (ΔE 7) and every colour re-assigned. `pipeline/` is in `archive/pipeline/`.
+- Next: pass 2 (unit 14 through `port`, chat side rebased on the template). Don't `biblecore sync` before it. Details: `../session_summary_2026-10-01_matthew-box-pass1.md`.
