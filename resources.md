@@ -7,6 +7,7 @@ This file lives in the repo and syncs to the project, like everything in the syn
 ## In the project
 
 - **`MatthewSBLGNT.txt`** (synced). The Greek, one verse per line: `Matt C:V<TAB>text`. Extract a passage: `sed -n '/^Matt 7:1	/,/^Matt 8:1	/p' MatthewSBLGNT.txt | sed '$d'`.
+- **`MatthewWEB.txt`** (synced). The World English Bible (public domain), same line format as the Greek: `Matt C:V<TAB>text`. It's an English comparison text, not the study's own translation. It keeps the WEB's verse numbering, so it has three verses the SBLGNT omits (17:21, 18:11, 23:14, marked `[not in the SBLGNT]`). Converted 2026-10-02 from ebible.org's `eng-web_usfm.zip` (Strong's tags and footnotes stripped).
 - **`translation-choices.md`** (synced). The agreed English renderings. Check before rendering a Greek word and match it; if a different rendering genuinely fits a verse better, use it but flag it in the artifact so Lane can call it a one-off or a correction.
 - **`matthew_reference_links.md`** (synced). The annotated list of outside sources, by kind: Second Temple texts, the LXX in English, patristic readings.
 - **`canon-leads-unit-NN.md`** (synced). Pass 3's starting list for that unit. If the current unit's sheet isn't there, ask for it.

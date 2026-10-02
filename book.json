@@ -34,7 +34,8 @@
   "sync": {
     "extra": [
       "matthew_reference_links.md",
-      "MatthewSBLGNT.txt"
+      "MatthewSBLGNT.txt",
+      "MatthewWEB.txt"
     ]
   }
 }
