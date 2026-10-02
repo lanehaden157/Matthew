@@ -10,13 +10,13 @@ Consult it before building each unit's artifact.
 **How the artifact works, in one paragraph.** The artifact is a **site fragment**, not a
 standalone page — one `<article class="unit" data-unit="N">` with **no `<head>`, `<style>`,
 font links, or hand-picked colours**. It drops into the static site
-(`github.com/lanehaden157/Matthew`) via `pipeline/port_artifact.py`. It opens with a
+(`github.com/lanehaden157/Matthew`) when Lane runs `python -m biblecore port NN`. It opens with a
 machine-readable **`unit-meta` block** (§2) that drives the site's data files. Every
 coloured word is `<span class="r" data-root="X">…</span>` (counted) or `class="rl"`
 (root-linked, not counted) — no class names like `beget`, no inline `style`. The site
 resolves colour **two-tier**: a root that is a tracked cross-unit thread
 (`threads-digest.md`) gets that thread's fixed colour in every unit; any other root gets a
-hue the pipeline assigns into `data/units.json`. **The artifact never picks a hex.** The
+hue the build assigns. **The artifact never picks a hex.** The
 colour legend **is required** — include an empty `<ul></ul>`; the site fills in the
 `<li>`s and swatches from data, it does not build the section itself (§3;
 C6/B8, platform-design-review.md — unit 11 shipped with no legend precisely
@@ -53,8 +53,10 @@ it — **do not choose a colour, do not write a `<style>` block, do not invent `
   in the unit, even when it reads repetitively. The repetition is the point.
 - If a root is a **tracked cross-unit thread**, use *its* slug from `threads-digest.md`
   (the `data-root` column) so the site gives it the thread's global colour. Otherwise use
-  any sensible slug; the pipeline assigns a local hue and you tweak the hex in
-  `data/units.json` after porting if two land too close.
+  any sensible slug; the build assigns a local hue.
+- `roots[]` is for **local** roots. Don't re-declare a tracked thread there;
+  `data/threads.json` is its single source of truth (older units did, and it
+  does no harm, but new artifacts needn't).
 - A `data-root` that resolves to no colour anywhere is a hard verify failure — so every
   slug you tag **must** appear either in `threads-digest.md` or in the `roots` array.
 
@@ -82,8 +84,8 @@ This is different from the **OT citation pointer** (§ below): a pointer marks M
 written"). `echo` is for the quieter case — a word or image with a canon history that
 the verse doesn't cite outright: an allusion, a type-scene, a later reuse (including
 elsewhere in the NT). A verse can carry both. Echoes should come from the kept rows of
-the intertext pass's ledger (chat-side `instructions.md`, pass 3), not from memory at
-drafting time — `canon-leads/canon-leads-unit-NN.md` (`pipeline/canon_leads.py`) is the
+the intertext pass's ledger (`core-workflow.md`, pass 3), not from memory at
+drafting time — `canon-leads/canon-leads-unit-NN.md` (`python -m biblecore leads`) is the
 mechanical half of that pass: where the unit's rare Greek words and shared two-word
 phrases occur in the LXX and the rest of the NT. It's a word search, not a judgment.
 
@@ -116,7 +118,7 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
     ],
     "candidates": [
       { "root": "compassion", "why": "splanchnizomai — fires 9:36, again 14:14, 15:32; worth promoting",
-        "stems": ["σπλαγχ"] }
+        "ids": ["splanchnizomai"], "refs": ["9:36", "14:14", "15:32"] }
     ],
     "retro": [
       { "unit": "unit-06", "verse": 12, "text": "debts", "root": "release",
@@ -144,13 +146,16 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
 |---|---|---|
 | `unit` | ✓ | unit number (int) |
 | `passage` | ✓ | e.g. `"Matthew 9:1–34"` |
-| `title` | ✓ | working title from the Unit Map (§7), refined if needed |
+| `title` | ✓ | working title from the Unit Map (`matthew-literary-unit-map.md`), refined if needed |
 | `roots` | ✓ | every tracked root: `{root, translit, gloss, echo?}`. **No colour.** One Greek lexical root each — same-stem forms joined by `·` in `translit`; never a bundle of different words (§1). `echo` (§1a) is optional. |
-| `threads` | ✓ | `{opens, payoffs, candidates, retro}` — see below |
+| `threads` | ✓ | `{opens, payoffs, candidates, retro}` — all four present, each a list, empty is fine; see below |
 | `slug` | — | `"unit-09"`; derived if omitted |
 | `movement` | — | 1 / 2 / 3; looked up from the Unit Map if omitted |
 | `descriptor` | — | the masthead tail line |
 | `discourse` | — | `true` for the five discourse units |
+| `questions` | — | wording or data calls only Lane can make (below) |
+| `intertext` | — | cross-book links worth recording (below) |
+| `typescenes` | — | type-scene instances in this unit (below) |
 
 `threads.opens` / `threads.payoffs` — the tracked threads (by their `id` from
 `threads-digest.md`) that **begin** or **land** in this unit, each `{id, ref, note?}`.
@@ -158,19 +163,36 @@ Optional `note` is the one-line popover prose for that beat — the porter puts 
 into the ready `threads.json` entry, so write it here rather than only in the commentary.
 The porter turns these into a delta file for Lane to fold into `threads.json`.
 
-`threads.candidates` — roots recurring across units that should be *promoted* to tracked
-threads: `{root, why, stems?, exclude?}`. `why` is a one-line reason. `stems`/`exclude`
-are the accent-stripped Greek for `pipeline/thread-stems.json` if Lane promotes it —
-a stem is a substring, or `^αφι` for a word-start match; `exclude` lists whole
-accent-stripped forms a stem wrongly catches. Never assumed — surfaced for Lane.
+`threads.candidates` — roots recurring across units that could be *promoted* to tracked
+threads: `{root, why, ids?, refs?}`. `why` is a one-line reason. `ids` are the lemma ids
+you saw, copied as the word table spells them (`splanchnizomai`, never Greek script);
+a fixed phrase takes `seq` instead, the content words' lemma ids in order. `refs` are a
+few representative verses as bare `C:V`. Claude decides whether a candidate is promoted,
+biased toward book-wide, and asks Lane only when genuinely unsure; nothing is tagged
+until it is promoted.
 
 `threads.retro` — a fix-list for **earlier** units: things the close reading of *this*
 unit made you notice about a prior one. Entries are `retrofit-tags.json` shape —
 `{unit: "unit-06", verse, text, root, why}` (add the missing tag), or with
 `op: "retag"` / `from` / `to` to move a mis-tagged span. `root`/`to` must be a tracked
-thread or a declared root of that unit. The porter dry-checks each against the target
+thread or a declared root of that unit; `w` (the word id) is optional, since the
+porter fills it. The porter dry-checks each against the target
 fragment and merges the ones that apply. Use this instead of a prose "we should revisit
 Unit 6" note.
+
+### `questions[]`, `intertext[]`, `typescenes[]` (optional)
+
+- `questions[]` — `{topic, note, options?}`. A wording or data call only Lane can
+  make goes here **instead of** being asked in chat. Render your best provisional
+  choice so the draft keeps moving, and flag it. Claude Code asks Lane each one by
+  popup when the unit is ported.
+- `intertext[]` — `{ref, to, kind, note?}`: `ref` a bare `"C:V"` in Matthew, `to` a
+  reference like `"Isa 6:10"`, `kind` one of `quotation`, `allusion`, `echo`,
+  `type-scene`. An `aside.echo` or a root's `echo` is already harvested, so list
+  here only what those don't say.
+- `typescenes[]` — `{id, ref, note?, label?}`: `id` from the type-scene index
+  (`commissioning`, `water-crossing`, `mountain-theophany`, `annunciation`, ...). A
+  new `id` is fine; give it a `label`.
 
 ### Endnotes
 
@@ -183,7 +205,7 @@ to an `id` in the same fragment.
 ## 3. Component snippets
 
 All blocks live directly inside `<article>`. No colour vars — the classes below are styled
-by the site's one stylesheet (`css/styles.css`).
+by the site's stylesheets (`css/core.css`, `components.css`, and the book's `theme.css`).
 
 ### Colour legend (REQUIRED — include the empty `<ul></ul>`; the site fills it in,
 it does not create the section)
@@ -220,6 +242,14 @@ swatch dots or `style="background:…"`.
 Keep ring labels to a letter or two (`A`, `B′`, `C`). A long word in `.lab` gets squeezed;
 if you must, the porter tags it `lab-word` so CSS can shrink it.
 
+**`data-verses`** — a ring, table or other block that presents verses *in place of*
+verse-by-verse text (a prayer set as a block, a table that condenses a repeated
+formula) carries `data-verses="C:V–V"` (or `C:V–C:V`) naming exactly the verses it
+replaces. Tracked words in those verses are then reported as covered by the block,
+not as untagged gaps. The build fails if a declared verse is also written out as a
+`<p class="v">`, or if the range falls outside the unit's passage. Say in the
+pericope's gloss that the verses are condensed. Units 1–13 predate this check.
+
 ### Correspondence table (typology, Synoptic divergence, OT↔NT pairing)
 
 ```html
@@ -237,10 +267,14 @@ if you must, the porter tags it `lab-word` so CSS can shrink it.
 
 ```html
 <div class="itin">
-  <span class="stop">Place <sup>Prophet</sup></span><span class="arr">→</span>
-  <span class="stop">Place <sup>Prophet</sup></span>
+  <span class="stop">Place <sup>14:1–12</sup></span><span class="arr">→</span>
+  <span class="stop">Place <sup>14:13–21</sup></span>
 </div>
 ```
+
+A stop's `<sup>` is its **verse**, `C:V` or a range `C:V–V`, never a theme word
+(unit 14's first draft had "tripped up", "fear", "fed" there, and the port
+failed it).
 
 ### Section heading (one per pericope / passage-group)
 
@@ -369,7 +403,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 
 **Fragment structure**
 - [ ] The file is one `<article class="unit" data-unit="N">…</article>` and nothing else — no `<head>`, `<style>`, `<link>`, `<!doctype>`.
-- [ ] `<script type="application/json" id="unit-meta">` is the first child of `<article>` and is valid JSON with `unit`, `passage`, `title`, `roots`, `threads`.
+- [ ] `<script type="application/json" id="unit-meta">` is the first child of `<article>` and is valid JSON with `unit`, `passage`, `title`, `roots`, and `threads` (all four lists: `opens`, `payoffs`, `candidates`, `retro`).
 - [ ] No `roots` entry carries a colour. No `--c-*` vars anywhere. No inline `style="color:…"` / `style="background:…"`.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
@@ -378,6 +412,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Every `aside.echo` has a `data-anchor="C:V"` matching the verse it follows.
 - [ ] The translation is divided into passage groups by `<h3 class="pericope">Title <span>· C:V–V</span></h3>` — no other heading form.
 - [ ] Structural blocks (`.ring`, `table.exod`, `.itin`) come first, before the verses. The site also hoists them, but author them up top.
+- [ ] A block that stands in place of verses carries `data-verses`; every `.itin` stop's `<sup>` is `C:V` or `C:V–V`.
 
 **Translation & wording**
 - [ ] Plural "you" → **"y'all"** everywhere in the translation.
@@ -389,23 +424,24 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Compare box only at genuinely contested verses; include NASB, bring in Hart / Lattimore where their rendering is provocative.
 - [ ] Hyperlinks for significant LXX/OT citations and key terms (biblehub, Logeion, NETS, earlyjewishwritings).
 - [ ] Every `<p class="v">` that quotes/cites an OT text ends with a linked `(Book C:V)` Bible Hub pointer (§ OT citation pointer) — after the quote, before any `<sup>`; quoted words not themselves wrapped in the link.
-- [ ] Every word with a Torah/LXX or later-canon history gets an `echo` (§1a) — a local `roots[]` entry if nowhere else, or an `aside.echo` for a verse-level connection. Checked against `canon-leads/canon-leads-unit-NN.md` and the intertext pass's ledger (`instructions.md` pass 3), not from memory.
+- [ ] Every word with a Torah/LXX or later-canon history gets an `echo` (§1a) — a local `roots[]` entry if nowhere else, or an `aside.echo` for a verse-level connection. Checked against `canon-leads/canon-leads-unit-NN.md` and the intertext pass's ledger (`core-workflow.md` pass 3), not from memory.
 - [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described. These should be real and verifiable only, not loose made up connections forcing a pattern.
 - [ ] Repeated-word counts noted only where the frequency is theologically significant (3, 7, 10, 12, 40, 70…).
-- [ ] Transliteration only — zero native Greek or Hebrew script anywhere, except `threads.candidates[].stems`, which holds accent-stripped Greek for `pipeline/thread-stems.json` (§2).
+- [ ] Transliteration only — zero native Greek or Hebrew script anywhere, attribute values and `threads.candidates` included.
 - [ ] No named commentators in the artifact's prose (notes, glosses, compare boxes), from unit 13 on. Dissolve the attribution into the point: "a dispensational reading argues…", not "Constable argues…"; state a shared conclusion plainly rather than "(so France, Wright)". The research passes still name traditions; only the artifact drops the names. Units 1–12 are a separate tracked retrofit (`PLAN.md`).
 
 **Threads**
 - [ ] Checked `threads-digest.md`: **every** morphological occurrence of a tracked thread's Greek root in this passage is tagged with its thread `id` — even where the English renders it with a different word (*hamartōlos* → "sinner" still tags `sin`; *periballō* → "clothe" still tags `throw`). The tag follows the Greek lexeme, not the gloss. Threads that open or land here are also listed under `threads.opens` / `threads.payoffs`. The porter's coverage audit will list any you missed.
-- [ ] Any root recurring across units that isn't yet a thread → `threads.candidates` with a reason (+ `stems` if you can). Not tagged until Lane promotes it.
+- [ ] Any root recurring across units that isn't yet a thread → `threads.candidates` with a reason (+ `ids` or `seq`, `refs`). Not tagged until it is promoted.
+- [ ] Any call only Lane can make → `questions[]` with your best provisional choice rendered, not a question in chat.
 - [ ] Anything you noticed about an **earlier** unit (a missed tag, a mis-tag) → `threads.retro`, not a prose aside.
 
 **Ship**
 - [ ] Saved to `/mnt/user-data/outputs/matthew_NN_translation.html` (zero-padded), then `present_files`.
-- [ ] (Site side, Lane / Claude Code) `python pipeline/port_artifact.py NN`, review the thread delta, eyeball in the browser, commit.
+- [ ] (Site side, Lane / Claude Code) `python -m biblecore port NN`, review the thread delta and promotions, `data-w`, `build`, `test`, eyeball in the browser, commit.
 
 ### Chat-side conventions
-The research passes (briefing, commentary, intertext ledger) are governed by the project instructions (`instructions.md` in the site repo), not by this file.
+The research passes (briefing, commentary, intertext ledger) are governed by the project instructions (`CHAT_SIDE_INSTRUCTIONS.md`) and `core-workflow.md`, not by this file.
 
 ---
 
@@ -428,8 +464,8 @@ The research passes (briefing, commentary, intertext ledger) are governed by the
 
 The full annotated list (Dead Sea Scrolls, Didache, NETS, Allison's *New Moses*, and the rest) is `matthew_reference_links.md`.
 
-The commentary set, and how to weigh it, is in `instructions.md` (Lens); the annotated
-shelf is `matthew_reference_links.md`.
+The commentary set, and how to weigh it, is in `resources.md`; the lens is in
+`CHAT_SIDE_INSTRUCTIONS.md`; the annotated shelf is `matthew_reference_links.md`.
 
 ---
 
@@ -437,7 +473,7 @@ shelf is `matthew_reference_links.md`.
 
 This file is **not** a running log. To find which unit is next, check `PLAN.md` and
 `session_index.md` in the site repo (or ask Lane), then take the following row from the
-Literary Unit Map (§7). The map is the plan of record: passages and seams are settled;
+Literary Unit Map (`matthew-literary-unit-map.md`). The map is the plan of record: passages and seams are settled;
 titles are working titles. Which roots a unit traces is decided per unit (§1); colour is
 the site's job, and `data/units.json` records what each built unit tracks.
 
@@ -452,165 +488,19 @@ open/closed, per-thread note) is **`threads-digest.md`** in the site repo, gener
 When you build a unit: tag **every occurrence** of a tracked thread's Greek root with its
 `id` (follow the lexeme, not the English gloss); list threads that open or land under
 `threads.opens` / `threads.payoffs` with a one-line `note`; and close the loop in the
-commentary when a payoff lands. Propose new threads via `threads.candidates` (+ `stems`) —
-Lane promotes them; only then are they tagged. Flag anything you notice about an earlier
-unit in `threads.retro`. The site's coverage audit (`pipeline/audit_thread_coverage.py`)
-cross-checks every thread's Greek root against the built fragments and reports misses.
+commentary when a payoff lands. Propose new threads via `threads.candidates` (+ `ids` or
+`seq`) — Claude decides promotion, biased book-wide, and asks Lane when unsure; once a
+thread is promoted, `data-w` and `retrofit` tag it in every built unit. Flag anything you
+notice about an earlier unit in `threads.retro`. The coverage audit (`python -m biblecore
+audit`) cross-checks every thread's lemma ids against the built fragments and reports misses.
 
 ---
 
-## 7. Literary Unit Map (full gospel)
+---
 
-Twenty-eight units, each *roughly* chapter-length, cut along Matthew's own literary seams
-rather than the medieval chapter divisions. Where a unit's boundary diverges from a chapter
-boundary, the divergence is flagged. Confirm scope against this map before each walkthrough.
+## 7. Literary Unit Map
 
-### 7.1 The structural skeleton Matthew built in
-
-Four converging structural signals layer to define the seams:
-
-**(a) The two *apo tote* ("from that time") hinges (Kingsbury)** — *Apo tote ērxato ho
-Iēsous* at **4:17** ("began to proclaim") and **16:21** ("began to show" he must suffer) —
-carving three movements: **the person of the Messiah (1:1–4:16)**, **the proclamation in
-Galilee (4:17–16:20)**, **the road to the cross (16:21–28:20)**. France's "drama in three
-acts" maps onto the same skeleton.
-
-**(b) The five discourse formulas (Bacon)** — *kai egeneto hote etelesen ho Iēsous* at
-**7:28, 11:1, 13:53, 19:1, 26:1** — the Sermon on the Mount (5–7), the Mission charge (10),
-the Kingdom parables (13), the Community discourse (18), the Woes + Olivet discourse
-(23–25). Bacon's "new Pentateuch," Jesus as the new Moses — the Bible Project's "Messianic
-Torah" frame.
-
-**(c) Mackie / Bible Project macro-design** fuses (a) and (b): an **Introduction
-(1:1–4:17)** and matching **Conclusion (26:1–28:20)**, each saturated with formula
-quotations, framing a **three-part body (4:17–25:46)** — Kingdom *established* (4:17–11:1),
-Kingdom *resisted* (11:2–16:20), Kingdom *confronts Jerusalem* (16:21–25:46). The lens of
-record for the study.
-
-**(d) Davies & Allison's triads + the great inclusio** — Matthew composing in threes at
-every scale; and the **Emmanuel inclusio**, *meth' hēmōn ho theos* "God with us" (1:23)
-answered by *egō meth' hymōn eimi* "I am with y'all" (28:20). The `with` root is load-bearing
-across the whole gospel — worth tagging (thread id `emmanuel`) in any unit where it surfaces.
-
-### 7.2 The twenty-eight units
-
-Format: **Unit — passage — title.**
-
-**MOVEMENT ONE — The Person of the Messiah (1:1–4:16/17).**
-
-- **Unit 1 — 1:1–25 — The Book of the Genesis.** Genealogy + birth.
-- **Unit 2 — 2:1–23 — Out of Egypt I Called My Son.** Magi, flight, Nazareth.
-- **Unit 3 — 3:1–4:11 — Wilderness, Water, Wilderness.** John, baptism, temptation.
-  **Diverges:** runs past 3:17 to 4:11 — John → baptism → testing is one wilderness movement;
-  seam at 4:11, not the 3/4 line.
-- **Unit 4 — 4:12–25 — The Light Has Dawned.** Withdrawal to Capernaum, Isaiah 9, call of
-  the four, the 4:23 ministry summary. Short (14 vv), straddles the 4:17 hinge — built as a
-  standalone overture.
-
-**MOVEMENT TWO — The Kingdom Proclaimed in Galilee (4:17–16:20).**
-
-*Part A — Kingdom established in word and deed (4:17–11:1).*
-
-- **Unit 5 — 5:1–48 — The Greater Righteousness.** Beatitudes, salt & light, the six
-  contrasts.
-- **Unit 6 — 6:1–34 — Before Your Father Who Sees.** The three acts of piety with the
-  Lord's Prayer at the concentric centre, then treasure, the eye, mammon, anxiety.
-- **Unit 7 — 7:1–29 — The Two Ways.** Judging, the pearls, ask/seek/knock, the Golden
-  Rule, the three eschatological pairs, the crowd's astonishment (7:28).
-  - ⚑ **Discourse 1 = the Sermon on the Mount (5:1–7:29)**, split 5 / 6 / 7. **Watch across
-    the seam:** the *Law and the Prophets* inclusio — opened **5:17**, closed **7:12**. Open
-    scoping alternative: 5:1–48 / 6:1–7:12 / 7:13–29. Confirm at the Sermon.
-- **Unit 8 — 8:1–34 — The Deeds of the Messiah (I).** Leper, centurion, Peter's
-  mother-in-law + summary, would-be followers, the storm, the Gadarene demoniacs.
-- **Unit 9 — 9:1–34 — The Deeds of the Messiah (II).** Paralytic, call of Matthew, the
-  fasting question, Jairus's daughter + the haemorrhaging woman, two blind men, the mute
-  demoniac. Ch. 9 *minus* the harvest summary. **Watch across the seam:** chs. 8–9 are one
-  ten-miracle deed-block (three triads with interludes) answering chs. 5–7.
-- **Unit 10 — 9:35–11:1 — The Sending (Discourse 2).** The harvest/compassion summary
-  (9:35–38) as on-ramp, then the Mission charge, closed by the 11:1 formula. **Diverges:**
-  starts at 9:35.
-
-*Part B — Kingdom meets growing hostility (11:2–16:20).*
-
-- **Unit 11 — 11:2–30 — Are You the Coming One?** John's question, Jesus on John, woes on the
-  towns, the great invitation. 11:2–30 (11:1 belongs to the prior formula).
-- **Unit 12 — 12:1–50 — Master of the Sabbath, the Chosen Servant.** Two Sabbath conflicts,
-  Isaiah 42, Beelzebul, the sign of Jonah, the return of the unclean spirit, the true family.
-- **Unit 13 — 13:1–53 — The Parables of the Kingdom (Discourse 3).** Sower through the
-  householder's treasure; the pivot from crowds to disciples; closed at 13:53.
-- **Unit 14 — 13:54–14:36 — Rejection, a Beheading, Bread, and the Sea.** Nazareth, Herod
-  and John's death, the 5,000, the walking on water, Gennesaret. **Diverges:** starts 13:54.
-- **Unit 15 — 15:1–39 — Clean and Unclean; Bread for the Dogs.** The defilement controversy,
-  the Canaanite woman, the 4,000. Unified by clean/unclean, bread, and Israel → nations.
-- **Unit 16 — 16:1–20 — On This Rock.** The demand for a sign, the leaven, Peter's confession.
-  Ends **16:20** — the climax of Movement Two, before the 16:21 hinge.
-
-**MOVEMENT THREE — The Road to the Cross (16:21–28:20).**
-
-*Part A — The journey (16:21–20:34).*
-
-- **Unit 17 — 16:21–17:27 — The Road to the Cross Begins; Transfigured.** First passion
-  prediction (at the hinge), "take up your cross," the Transfiguration, the boy healed, the
-  second prediction, the temple tax. **Diverges:** opens at 16:21.
-- **Unit 18 — 18:1–35 — Life in the Community (Discourse 4).** Greatness as a child, the
-  little ones, the lost sheep, reproof in the *ekklēsia*, unlimited forgiveness, the
-  unforgiving servant; closed at 19:1.
-- **Unit 19 — 19:1–30 — Leaving Galilee: Marriage, Children, Riches.** The departure
-  (19:1–2 doubles as the formula), divorce and celibacy, the children, the rich young man,
-  "the first/last."
-- **Unit 20 — 20:1–34 — The Last Shall Be First.** The labourers in the vineyard, the third
-  passion prediction, the sons of Zebedee, the two blind men at Jericho. **Watch across the
-  seam:** **19:30 ↔ 20:16** first/last inclusio — read 19:16–20:16 as one arc.
-
-*Part B — Jerusalem (21:1–25:46).*
-
-- **Unit 21 — 21:1–46 — The King Enters; the Temple Judged.** Triumphal entry, the temple
-  action, the fig tree, the authority challenge, the two sons, the tenants.
-- **Unit 22 — 22:1–46 — The Banquet and the Four Questions.** The wedding banquet, then the
-  four controversy dialogues. **Watch across the seam:** the three judgment parables run
-  **21:28–22:14**.
-- **Unit 23 — 23:1–39 — Seven Woes and a Lament.** The indictment of the scribes and
-  Pharisees, the lament over Jerusalem.
-- **Unit 24 — 24:1–51 — The Olivet Discourse (I): Temple and Son of Man.** The temple's
-  fall, the birth-pangs, the abomination, the coming of the Son of Man, the fig tree, "this
-  generation," the first watchfulness parables.
-- **Unit 25 — 25:1–46 — The Olivet Discourse (II): Three Parables of the End (Discourse 5).**
-  Ten virgins, the talents, the sheep and the goats; closed at 26:1.
-  - ⚑ **Discourse 5 spans 23:1–25:46** in the Mackie scheme, split 23–25. Live debate
-    whether ch. 23 belongs with the Olivet Discourse — flag on arrival.
-
-*Part C — Conclusion (26:1–28:20).*
-
-- **Unit 26 — 26:1–75 — The Night of Betrayal.** Plot, the anointing, Judas's bargain, the
-  Last Supper, Gethsemane, the arrest, the Sanhedrin trial, Peter's denial. **Long (75 vv)**
-  — candidate to split (26:1–46 / 26:47–75); confirm with Lane.
-- **Unit 27 — 27:1–66 — The Crucifixion.** Pilate, the death of Judas, Barabbas, the mockery,
-  the crucifixion, the death with its signs, the burial, the guard.
-- **Unit 28 — 28:1–20 — The Mountain of Commission.** The empty tomb and the women, the
-  cover-up, the Great Commission. **Watch across the whole book:** closes the Emmanuel
-  inclusio (28:20 ↔ 1:23) and the mountain frame (4 / 5 / 28).
-
-### 7.3 Divergences from the chapter grid, at a glance
-
-| Unit | Passage | Why it's cut here |
-|---|---|---|
-| 3 | 3:1–4:11 | John + baptism + testing = one wilderness movement; seam is 4:11 |
-| 4 | 4:12–25 | overture to the public ministry; straddles the 4:17 hinge |
-| 9 | 9:1–34 | the 9:35–38 harvest summary is pulled into the Mission unit |
-| 10 | 9:35–11:1 | Mission Discourse + its harvest on-ramp + closing formula |
-| 11 | 11:2–30 | starts after the 11:1 formula |
-| 14 | 13:54–14:36 | starts after the 13:53 parables formula |
-| 16 | 16:1–20 | ends at 16:20, just before the 16:21 hinge |
-| 17 | 16:21–17:27 | opens at the 16:21 hinge |
-
-Inclusios/triads to read *across* unit seams: **5:17↔7:12** (Law & Prophets, Units 5–7),
-**19:30↔20:16** (first/last, Units 19–20), **21:28–22:14** (three judgment parables, Units
-21–22), **1:23↔28:20** (Emmanuel, Units 1 & 28).
-
-### 7.4 The five discourses (extra-scope flags)
-
-- **Discourse 1 — Sermon on the Mount (5–7)** → Units 5, 6, 7. Heavy rabbit-hole risk.
-- **Discourse 2 — Mission (10)** → Unit 10 (with 9:35–38 on-ramp).
-- **Discourse 3 — Kingdom Parables (13)** → Unit 13.
-- **Discourse 4 — Community (18)** → Unit 18.
-- **Discourse 5 — Woes + Olivet (23–25)** → Units 23, 24, 25. Heavy rabbit-hole risk.
+The 28-unit map lives in `matthew-literary-unit-map.md` (synced to the project): the
+structural skeleton, every unit's passage and title, the divergences from the chapter
+grid, and the five discourses with their extra-scope flags. Confirm scope against it
+before each walkthrough.
