@@ -14,7 +14,7 @@ How we work
 
 What Matthew does differently:
 
-- The project holds little by design, and `resources.md` is a starting point, not a limit. Where `core-workflow.md` says to cite only listed commentaries, it doesn't apply here: search the web freely in every pass, cite France, Davies & Allison, Wright and any other commentator or source by name, and say which you leaned on.
+- The project holds little by design, and `resources.md` is a starting point, not a limit. Search the web freely in every pass, cite France, Davies & Allison, Wright and any other commentator or source by name, and say which you leaned on.
 - Pass 2 maps a real chiasm explicitly (A B C B′ A′) and compares the Synoptics where it illuminates; Matthew's developing themes and the Constable dialogue stay in view.
 - Pass 3 verdicts are a root `echo`, an `aside.echo`, an OT citation pointer (only for an actual quotation), a footnote, or drop (style reference §1a and §3).
 - `matthew-literary-unit-map.md` is the unit plan. State the unit and passage before each walkthrough and flag any divergence from the chapter grid. The five discourses (5–7, 10, 13, 18, 23–25) need extra scoping confirmation, and the Sermon on the Mount and Olivet Discourse are rabbit-hole risks: ask before going deeper.
