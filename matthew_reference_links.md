@@ -28,15 +28,20 @@ uploaded (the `matthew.pdf` was removed): reach him on the web, below.
 
 ## Commentaries
 
-- **Constable's Notes on Matthew**, full PDF (not uploaded to the project; a large
-  fetch, so prefer the StudyLight chapter pages below):
-  https://soniclight.com/tcon/notes/pdf/matthew.pdf
-- **Constable's Notes, chapter by chapter on StudyLight**:
-  https://www.studylight.org/commentaries/eng/dcc/matthew.html
-- **Chrysostom, Homilies on Matthew** (New Advent, all 90):
-  https://www.newadvent.org/fathers/2001.htm. Homily N is `2001NN.htm` (200101.htm is
-  homily 1). The premier patristic Matthew commentary; Matthew is the most-cited gospel in
-  the patristic period.
+How to reach each of these (tested URL patterns, quirks) is in `resources.md` "On the web";
+this list only says what each voice is for.
+
+- **Constable, Expository Notes** (StudyLight `dcc`): the dispensational baseline. No longer
+  uploaded to the project. The full PDF exists (https://soniclight.com/tcon/notes/pdf/matthew.pdf)
+  but is a large fetch; the chapter pages are better.
+- **Barclay, Daily Study Bible** (StudyLight `dsb`): pastoral, Palestinian background.
+  Under copyright: paraphrase only.
+- **Ellicott, Commentary for English Readers** (StudyLight `ebc`): Anglican, verse by verse.
+- **Aquinas, Catena Aurea** (CCEL): the Fathers chained verse by verse.
+- **Chrysostom, Homilies on Matthew** (New Advent, all 90). The premier patristic Matthew
+  commentary; Matthew is the most-cited gospel in the patristic period.
+- **J. C. Ryle, Expository Thoughts on Matthew** (CCEL): evangelical, devotional.
+- **Edersheim, Life and Times of Jesus the Messiah** (CCEL): Jewish background, by event.
 
 ## Second Temple Jewish texts
 

@@ -919,3 +919,6 @@
 
 ## 2026-10-03 — Constable's matthew.pdf removed from the project
 - `resources.md` and `matthew_reference_links.md` now say Constable is web-only (StudyLight chapter pages); the stale pointer to `instructions.md` "Files" and "three .pdf files" in the links header is replaced. Bible Project teacher notes are the only uploaded PDFs left. `CHAT_SIDE_INSTRUCTIONS.md` unchanged (still names Constable as the baseline reading, which holds via the web).
+
+## 2026-10-03 — Commentary access from the research project's link test
+- `resources.md` "On the web" rewritten (tested 2026-10-03): fetch by URL pattern first (search-and-retry, then `curl`, as fallbacks); adds Barclay (`dsb`) and Ellicott (`ebc`) on StudyLight, Ryle and Edersheim on CCEL, the BibleProject guide. Ryle correction from testing: 14:1-21 and 22:34-46 aren't missing, they sit at the end of `xiv.iv` and `xxii.iii`. Montefiore left out (Lane). `matthew_reference_links.md` Commentaries is now a what-each-is-for list pointing to `resources.md`. Instruction field unchanged.

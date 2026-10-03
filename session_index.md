@@ -224,3 +224,6 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-03 — Synoptic panels stuck open
 - Cause: the component's `display:block` overrode `hidden`. Fixed in core 0.15.4 (`core.css`), vendored; build and test green. Lane to eyeball the ✧ chips live.
+
+## 2026-10-03 — Constable PDF gone; commentary access rewritten
+- `matthew.pdf` removed from the project: `resources.md`/`matthew_reference_links.md` say Constable is web-only. Then the research project's link test folded into `resources.md` "On the web" (direct fetch by pattern; Barclay, Ellicott, Ryle, Edersheim, BibleProject), every URL re-tested here (StudyLight 403s curl from this machine; fine in a browser).
