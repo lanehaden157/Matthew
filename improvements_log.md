@@ -913,3 +913,6 @@
 ## 2026-10-01 — Unit 14 and the chat side (pass 2)
 - `d82c32c`: `units/unit-14.html` (ported), `source-artifacts/matthew_14_translation.html` (itinerary sups as ranges), `book.json` `meta_keys: ["descriptor"]`, 7 promoted threads in `data/threads.json`/`roots.json` (88 total), 18 `add`s in `retrofit/retrofit-tags.json`, boxed units 3, 4, 7, 9-12 re-tagged (tags and `data-w` only). `9646e98`: core 0.15.2.
 - Chat side: `instructions.md` -> `CHAT_SIDE_INSTRUCTIONS.md` (~620 words), `resources.md` (new; `sync.skip` dropped), `matthew-literary-unit-map.md` (from style reference §7), style reference edits, CLAUDE.md (policy, retrofit recipe), `project-side/README.md`, `book.json` `paths` removed (default name), `template` base set.
+
+## 2026-10-03 — Synoptic ✧ panels collapse again
+- `.unit .synoptic { display: block }` beat the `hidden` attribute the chip toggles, so every synoptic panel sat open. Fixed in bible-core `core.css` (`.aside-box[hidden], .verse-note[hidden] { display: none }`), released as core 0.15.4 and vendored here.

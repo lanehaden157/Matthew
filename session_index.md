@@ -221,3 +221,6 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-01 — Unit 14 and the chat side (pass 2 of 2)
 - Unit 14 ported through core; seven threads promoted (grieve, waver, compassion, take-heart, bread, wilderness, astonish) and tagged into boxed units 3, 4, 7, 9-12 (tags only). Core 0.15.2 vendored. Chat side on the template: `CHAT_SIDE_INSTRUCTIONS.md` (needs re-paste), `resources.md`, `matthew-literary-unit-map.md`, style reference edited. Details: `../session_summary_2026-10-01_matthew-box-pass2.md`.
+
+## 2026-10-03 — Synoptic panels stuck open
+- Cause: the component's `display:block` overrode `hidden`. Fixed in core 0.15.4 (`core.css`), vendored; build and test green. Lane to eyeball the ✧ chips live.

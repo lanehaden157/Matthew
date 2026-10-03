@@ -27,7 +27,7 @@
     "opens_note_required": false,
     "colour_de_min": 7
   },
-  "core": "0.15.3",
+  "core": "0.15.4",
   "template": "d1fd3d6",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse",
