@@ -916,3 +916,6 @@
 
 ## 2026-10-03 — Synoptic ✧ panels collapse again
 - `.unit .synoptic { display: block }` beat the `hidden` attribute the chip toggles, so every synoptic panel sat open. Fixed in bible-core `core.css` (`.aside-box[hidden], .verse-note[hidden] { display: none }`), released as core 0.15.4 and vendored here.
+
+## 2026-10-03 — Constable's matthew.pdf removed from the project
+- `resources.md` and `matthew_reference_links.md` now say Constable is web-only (StudyLight chapter pages); the stale pointer to `instructions.md` "Files" and "three .pdf files" in the links header is replaced. Bible Project teacher notes are the only uploaded PDFs left. `CHAT_SIDE_INSTRUCTIONS.md` unchanged (still names Constable as the baseline reading, which holds via the web).

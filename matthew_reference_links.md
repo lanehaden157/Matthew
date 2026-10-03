@@ -4,10 +4,10 @@ The full annotated list of outside sources for the research passes. The quick-lo
 URL patterns used in artifacts live in `matthew_study_style_reference.md` §5; this file
 is the longer shelf behind them.
 
-What's uploaded to the research project itself (Greek and English texts, Constable, the
-Bible Project teacher notes), and how to read those files, is in `instructions.md` under
-"Files". Short version: the three `.pdf` files are plain text, so read them with
-`grep -a` / `sed`, and strip the NASB page markers.
+What's in the research project itself (the Greek and English texts, the Bible Project
+teacher notes), and how to read those files, is in `resources.md`. The two teacher-notes
+`.pdf` files are plain text, so read them with `grep -a` / `sed`. Constable is no longer
+uploaded (the `matthew.pdf` was removed): reach him on the web, below.
 
 ## Greek text and lexical tools
 
@@ -28,7 +28,8 @@ Bible Project teacher notes), and how to read those files, is in `instructions.m
 
 ## Commentaries
 
-- **Constable's Notes on Matthew**, full PDF (also uploaded as `matthew.pdf`):
+- **Constable's Notes on Matthew**, full PDF (not uploaded to the project; a large
+  fetch, so prefer the StudyLight chapter pages below):
   https://soniclight.com/tcon/notes/pdf/matthew.pdf
 - **Constable's Notes, chapter by chapter on StudyLight**:
   https://www.studylight.org/commentaries/eng/dcc/matthew.html
