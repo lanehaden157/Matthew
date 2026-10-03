@@ -6,8 +6,8 @@ is the longer shelf behind them.
 
 What's in the research project itself (the Greek and English texts, the Bible Project
 teacher notes), and how to read those files, is in `resources.md`. The two teacher-notes
-`.pdf` files are plain text, so read them with `grep -a` / `sed`. Constable is no longer
-uploaded (the `matthew.pdf` was removed): reach him on the web, below.
+`.pdf` files are plain text, so read them with `grep -a` / `sed`. Constable is in the
+project as `matthew.pdf` (plain text, 2026 edition); see `resources.md`.
 
 ## Greek text and lexical tools
 
@@ -28,12 +28,12 @@ uploaded (the `matthew.pdf` was removed): reach him on the web, below.
 
 ## Commentaries
 
-How to reach each of these (tested URL patterns, quirks) is in `resources.md` "On the web";
-this list only says what each voice is for.
+How to reach each of these (URL patterns, quirks, the fetch-tool rule) is in `resources.md`
+"On the web"; this list only says what each voice is for.
 
-- **Constable, Expository Notes** (StudyLight `dcc`): the dispensational baseline. No longer
-  uploaded to the project. The full PDF exists (https://soniclight.com/tcon/notes/pdf/matthew.pdf)
-  but is a large fetch; the chapter pages are better.
+- **Constable, Notes on Matthew**: the dispensational baseline. In the project as
+  `matthew.pdf` (plain text, 2026 edition); see `resources.md`. The upstream source is
+  https://soniclight.com/tcon/notes/pdf/matthew.pdf.
 - **Barclay, Daily Study Bible** (StudyLight `dsb`): pastoral, Palestinian background.
   Under copyright: paraphrase only.
 - **Ellicott, Commentary for English Readers** (StudyLight `ebc`): Anglican, verse by verse.

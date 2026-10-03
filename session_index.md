@@ -227,3 +227,6 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-03 — Constable PDF gone; commentary access rewritten
 - `matthew.pdf` removed from the project: `resources.md`/`matthew_reference_links.md` say Constable is web-only. Then the research project's link test folded into `resources.md` "On the web" (direct fetch by pattern; Barclay, Ellicott, Ryle, Edersheim, BibleProject), every URL re-tested here (StudyLight 403s curl from this machine; fine in a browser).
+
+## 2026-10-03 — Constable back in the project; tool rule fixed
+- `resources.md`: Constable (2026 ed.) moved to "In the project"; fetch-tool rule rewritten (search first, no pattern-built URLs, no `curl`); BibleHub Ellicott fallback checked; Ryle text-file grep dropped. Edition check on units 1-12 clean. `tools/constable_index.py` written; index waits on Lane's text copy. BibleProject guide link added to the instruction field (needs re-paste).

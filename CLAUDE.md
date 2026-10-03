@@ -43,6 +43,15 @@ state is at tag `pre-revert-2026-09-29`).
     python -m biblecore audit            # tracked-thread coverage (--ids ROOT to preview an id set)
     python -m biblecore test [--quick]   # check the book: pin, units, contracts, build idempotence
     python -m biblecore sync             # mirror chat-side files, commit and push (after Lane's OK)
+    python tools/constable_index.py      # constable-index.md from constable/matthew.txt (--check: stale?)
+
+The project's `matthew.pdf` is plain text there but a real PDF on disk, and a real PDF
+through pdftotext numbers its lines differently from what the chat sees. So the index is
+built where the file is plain text: attach `tools/constable_index.py` to a message in the
+research project and have it run `python constable_index.py /mnt/project/matthew.pdf
+/mnt/user-data/outputs/constable-index.md`, then save the output here. Redo that whenever
+the project's copy is replaced. (Given a plain-text copy at `constable/matthew.txt`
+(git-ignored), the script runs locally too, and `--check` compares its sha1.)
 
 `python -m biblecore` lists the rest: `colour` and `data-w` for promoting a
 thread, `retrofit`, `leads`, `corpus`, `fetch`, `migrate` after re-vendoring

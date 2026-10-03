@@ -922,3 +922,9 @@
 
 ## 2026-10-03 — Commentary access from the research project's link test
 - `resources.md` "On the web" rewritten (tested 2026-10-03): fetch by URL pattern first (search-and-retry, then `curl`, as fallbacks); adds Barclay (`dsb`) and Ellicott (`ebc`) on StudyLight, Ryle and Edersheim on CCEL, the BibleProject guide. Ryle correction from testing: 14:1-21 and 22:34-46 aren't missing, they sit at the end of `xiv.iv` and `xxii.iii`. Montefiore left out (Lane). `matthew_reference_links.md` Commentaries is now a what-each-is-for list pointing to `resources.md`. Instruction field unchanged.
+
+## 2026-10-03 — Constable back in the project; fetch-tool rule corrected
+- `resources.md`: Constable's Notes (2026 edition, `/mnt/project/matthew.pdf`, plain text, CRLF) moved from "On the web" to "In the project" with the grep/sed reading recipe; the StudyLight Constable paragraph is gone. The "On the web" tool rule now says the fetch tool opens only searched/linked/Lane-given URLs, `curl` doesn't work, StudyLight blocks intermittently; heading says the patterns were checked from Claude Code, not the chat project. Ellicott gets a BibleHub alternative (checked); Ryle's plain-text grep line removed; BibleProject guide marked as in the instruction field.
+- `matthew_reference_links.md`: two stale "no longer uploaded" lines fixed; Constable entry keeps the soniclight upstream link.
+- `CHAT_SIDE_INSTRUCTIONS.md`: BibleProject guide URL added (re-paste needed).
+- `tools/constable_index.py` (new): outline heading -> body line range from `constable/matthew.txt` (git-ignored) into `constable-index.md`; `--check` compares the source sha1. Tested on a pdftotext extraction, then run in the research project on the real file: `constable-index.md` (106 sections, none unlocated; 15:1-20 → 13311-13524), added to `sync.extra`, pointed at from `resources.md`.

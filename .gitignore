@@ -2,6 +2,9 @@
 corpus/morphgnt/
 corpus/lxx/
 
+# Constable's text, saved from the research project (see tools/constable_index.py)
+constable/
+
 # build scratch
 out/
 project-side/sync-state.json
