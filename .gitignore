@@ -25,3 +25,6 @@ __pycache__/
 
 # claude local settings
 .claude/settings.local.json
+
+# the research project's Constable PDF, kept loose in the repo root
+/matthew.pdf
