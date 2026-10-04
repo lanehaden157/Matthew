@@ -1,6 +1,6 @@
 # Cross-unit threads — canonical digest
 
-Generated from `data/threads.json` (version 1). 88 threads, 88 open.
+Generated from `data/threads.json` (version 1). 89 threads, 89 open.
 
 **This is the source of truth for thread tagging.** In a unit's fragment, a root that appears in the `id` column below is a *tracked thread*: tag every occurrence `<span class="r" data-root="<id>" data-w="<word id>">…</span>` (the word id from `Matthew-words.tsv`) and list it under `threads.opens` / `threads.payoffs` in the unit-meta block, with a matching id set in `data/roots.json`. A root that is recurring but *not* here is unit-local — tag it with its own name (no `data-w` needed) and just declare it in the unit's own `roots`. To propose promoting a local root to a tracked thread, add it to `threads.candidates` with a one-line reason (the Strong's/lemma `ids` you've actually observed in `Matthew-words.tsv`, plus a few representative `refs`, if you have them). **Claude decides, biased toward book-wide**: a local root that later pays off is worse than a tracked one that doesn't, so promote on a real second sighting. Ask Lane only when genuinely unsure.
 
@@ -91,8 +91,9 @@ Generated from `data/threads.json` (version 1). 88 threads, 88 open.
 | `permitted` | `permitted` | exestin · exon | it is permitted (the legal question) | 12 (12:2–12) | 14 (14:4) | open |
 | `sign` | `sign` | sēmeion | sign, token | 12 (12:38–39) | — | open |
 | `completion-of-age` | `completion-of-age` | synteleia tou aiōnos | "the completion of the age" | 13 (13:39) | 13 (13:40, 49) | open |
-| `understand` | `understand` | syniēmi | understand — literally 'throw together' | 13 (13:13) | 13 (13:13–15, 19, 23, 51) | open |
+| `understand` | `understand` | syniēmi · synetos · asynetos | understand — literally 'throw together' | 13 (13:13) | 13 (13:13–15, 19, 23, 51) | open |
 | `grieve` | `grieve` | lypeō | grieve, be sorrowful | 14 (14:9) | 14 (14:9) | open |
+| `send-away` | `send-away` | apolyō | send away, release, divorce | 14 (14:15) | 14 (14:15, 22–23) · 15 (15:23, 32, 39) | open |
 | `waver` | `waver` | distazō | waver, doubt | 14 (14:31) | 14 (14:31) | open |
 
 ## Notes per thread
@@ -160,6 +161,7 @@ Generated from `data/threads.json` (version 1). 88 threads, 88 open.
 - **`save`**: sōzō — 'he will save his people from their sins' (1:21) carries a heal/rescue double sense Matthew never forces apart, running to the irony at the cross.
 - **`sea`**: Sea/Galilee geography in Unit 4; in Unit 8 the sea becomes a chaos-and-authority stage.
 - **`seek`**: zēteō — Herod seeks the child to destroy him (2:13); the Sermon turns the same verb toward the kingdom (6:33) and toward prayer itself (7:7).
+- **`send-away`**: Promoted at the unit-15 port (2026-10-03): apolyō. Also divorce (1:19; 5:31–32; 19:3–9) and release (18:27; 27:15–26).
 - **`shake`**: The 'great seismos' on the sea (8:24) is the same word as the earthquakes at the cross and the tomb.
 - **`sign`**: Promoted at the unit-12 port (2026-09-20). The sign of Jonah; returns at 16:1–4, 24:3, 24:24, 24:30 and Judas's sign (26:48).
 - **`sin`**: hamartia / hamartōlos — named at 1:21 as the thing the whole rescue is aimed at ('he will save his people from their sins'), not political liberation. Runs through John's baptism of confession (3:6) to Unit 9, where releasing sins and healing a body are made one act (9:2-6) and the sinners themselves are who Jesus says he came to call (9:10-13), and lands at the cup (26:28). Pairs with save (1:21) and release (aphiēmi, 9:2).
@@ -174,7 +176,7 @@ Generated from `data/threads.json` (version 1). 88 threads, 88 open.
 - **`throw`**: Unit 8 cluster: the tormented servant thrown down (8:6), the sons of the kingdom cast out (8:12), the fever, the storm. Watch for the dragnet and the outer darkness later.
 - **`torment`**: Inclusio inside Unit 8 — the servant tormented by illness (8:6) and the demons fearing torment (8:29). Watch for eschatological torment later.
 - **`treasure`**: Promoted at the unit-12 port (2026-09-20): unit-06 local root recurring at 12:35.
-- **`understand`**: Promoted at the unit-13 port (2026-09-26): syniēmi. Matthew credits the learners with it where Mark stresses their confusion. Ahead: 15:10; 16:12; 17:13.
+- **`understand`**: Promoted at the unit-13 port (2026-09-26): syniēmi. Matthew credits the learners with it where Mark stresses their confusion. Ahead: 15:10; 16:12; 17:13. 2026-10-03: asynetos (15:16) added to the thread.
 - **`urge`**: The centurion entreats (8:5), the demons entreat (8:31), the town entreats him to go (8:34) — the same verb bends from faith to rejection.
 - **`wage`**: misthos — 'great is your wage in the skies' (5:12) sets the terms the Sermon keeps returning to: a wage that can be spent early (6:1-16) or never lost (10:42).
 - **`waver`**: Promoted at the unit-14 port (2026-10-01): distazō. Peter at 14:31 and the Eleven at 28:17, both beside worship. Ahead: 28:17.
