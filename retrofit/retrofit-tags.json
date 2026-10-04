@@ -387,6 +387,93 @@
       "root": "bread",
       "text": "loaf",
       "w": "01070912"
+    },
+    {
+      "_c": "2026-10-03, unit-15 port: send-away (apolyō) promoted book-wide; asynetos added to understand; plērēs tagged fulfill at 15:37."
+    },
+    {
+      "unit": "unit-01",
+      "verse": 19,
+      "root": "send-away",
+      "text": "release",
+      "w": "01011915"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 31,
+      "root": "send-away",
+      "text": "divorces",
+      "w": "01053105"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 32,
+      "root": "send-away",
+      "text": "divorces",
+      "w": "01053208"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 32,
+      "root": "send-away",
+      "text": "divorced",
+      "w": "01053221"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 15,
+      "root": "send-away",
+      "text": "Send",
+      "w": "01141518"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 15,
+      "root": "send-away",
+      "text": "away",
+      "w": "01141518"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 22,
+      "root": "send-away",
+      "text": "send",
+      "w": "01142217"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 22,
+      "root": "send-away",
+      "text": "away",
+      "w": "01142217"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 23,
+      "root": "send-away",
+      "text": "sent",
+      "w": "01142302"
+    },
+    {
+      "unit": "unit-14",
+      "verse": 23,
+      "root": "send-away",
+      "text": "away",
+      "w": "01142302"
+    },
+    {
+      "unit": "unit-15",
+      "verse": 37,
+      "root": "fulfill",
+      "text": "full",
+      "w": "01153714"
+    },
+    {
+      "unit": "unit-15",
+      "verse": 16,
+      "root": "understand",
+      "text": "without understanding",
+      "w": "01151607"
     }
   ]
 }

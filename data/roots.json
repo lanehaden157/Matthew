@@ -520,6 +520,7 @@
     },
     "understand": {
       "ids": [
+        "asynetos",
         "synetos",
         "syniēmi"
       ],
@@ -619,6 +620,12 @@
         "ekplēssomai"
       ],
       "note": "be struck out of oneself, astonished"
+    },
+    "send-away": {
+      "ids": [
+        "apolyō"
+      ],
+      "note": "send away / release / divorce"
     }
   }
 }

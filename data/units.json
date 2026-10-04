@@ -856,10 +856,77 @@
     {
       "n": 15,
       "slug": "unit-15",
-      "passage": "Matthew 15:1-39",
+      "passage": "Matthew 15:1–39",
       "title": "Clean and Unclean; Bread for the Dogs",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "handing-down": {
+          "color": "#b1481f",
+          "translit": "paradosis",
+          "gloss": "what is handed along; tradition",
+          "echo": "Col 2:8 speaks of 'the handing-down of humans'; 2 Thess 2:15 tells an assembly to hold fast the handings-down it was taught, so the word itself is neutral and the question is whose it is."
+        },
+        "overstep": {
+          "color": "#8c6d1f",
+          "translit": "parabainō",
+          "gloss": "step across, go beside the line"
+        },
+        "honor": {
+          "color": "#55642f",
+          "translit": "timaō",
+          "gloss": "set a value on, honor"
+        },
+        "precepts": {
+          "color": "#3d6b4a",
+          "translit": "entalma",
+          "gloss": "a thing commanded, a precept",
+          "echo": "Isa 29:13, quoted here; Col 2:22 turns the same phrase, 'the precepts and teachings of humans', on rules about handling and tasting."
+        },
+        "common": {
+          "color": "#7a3f5c",
+          "translit": "koinoō",
+          "gloss": "make common, the opposite of set apart",
+          "echo": "Acts 10:14–15, where Peter is told not to make common what God has cleansed; Rom 14:14, nothing is common in itself; Acts 21:28, the charge that Greeks made the holy place common."
+        },
+        "mouth": {
+          "color": "#1f6e7a",
+          "translit": "stoma",
+          "gloss": "mouth"
+        },
+        "planting": {
+          "color": "#9c5a1e",
+          "translit": "phyteia · phyteuō",
+          "gloss": "a planting; to plant",
+          "echo": "Psalms of Solomon 14:3–4, where the devout are the Lord's planting, 'rooted for ever' and never plucked up 'all the days of heaven'; Isa 60:21 and 61:3 call the restored people the Lord's planting."
+        },
+        "uproot": {
+          "color": "#8a2f3a",
+          "translit": "ekrizoō",
+          "gloss": "pull out by the root",
+          "echo": "Matt 13:29, where the householder forbids uprooting the weeds lest the wheat come out with them; Jer 1:10, the prophet set 'to uproot and to plant'."
+        },
+        "guide": {
+          "color": "#1e7a5c",
+          "translit": "hodēgos · hodēgeō",
+          "gloss": "one who leads along the road; to lead",
+          "echo": "Matt 23:16, 24, the 'blind guides' of the woes; Rom 2:19, the boast of being 'a guide of the blind'."
+        },
+        "blind": {
+          "color": "#005847",
+          "translit": "typhlos",
+          "gloss": "blind"
+        },
+        "canaanite": {
+          "color": "#006494",
+          "translit": "Chananaia",
+          "gloss": "a woman of Canaan",
+          "echo": "Matt 1:3, 5, where Tamar and Rahab, women of Canaan's world (Gen 38; Josh 2), stand in the Anointed's own line; Deut 7:1 lists the Canaanites among the seven nations to be driven out."
+        }
+      },
+      "contract": "0.15.4",
+      "discourse": false,
+      "descriptor": "hands, hearts, crumbs and seven loaves"
     },
     {
       "n": 16,

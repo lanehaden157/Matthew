@@ -230,3 +230,6 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-03 — Constable back in the project; tool rule fixed
 - `resources.md`: Constable (2026 ed.) moved to "In the project"; fetch-tool rule rewritten (search first, no pattern-built URLs, no `curl`); BibleHub Ellicott fallback checked; Ryle text-file grep dropped. Edition check on units 1-12 clean. `tools/constable_index.py` written; index waits on Lane's text copy. BibleProject guide link added to the instruction field (needs re-paste).
+
+## 2026-10-03 — Unit 15 ported
+- Ported unit 15 (Matt 15). Answers: make common, loaves of bread throughout, little dogs, fitting. Promoted `send-away` (apolyō) book-wide; asynetos added to `understand`; wilderness-provision type-scene kept. Retrofit tags in units 1, 5, 14; build, audit (0 gaps) and test green. Uncommitted.

@@ -2140,7 +2140,7 @@
     {
       "id": "understand",
       "root": "understand",
-      "translit": "syniēmi",
+      "translit": "syniēmi · synetos · asynetos",
       "gloss": "understand — literally 'throw together'",
       "color": "#d858a0",
       "status": "open",
@@ -2156,7 +2156,7 @@
           "note": "seeing they do not see, hearing they do not understand; the good soil 'understands'; 'Did y'all understand all these things? They say to him, Yes.'"
         }
       ],
-      "note": "Promoted at the unit-13 port (2026-09-26): syniēmi. Matthew credits the learners with it where Mark stresses their confusion. Ahead: 15:10; 16:12; 17:13."
+      "note": "Promoted at the unit-13 port (2026-09-26): syniēmi. Matthew credits the learners with it where Mark stresses their confusion. Ahead: 15:10; 16:12; 17:13. 2026-10-03: asynetos (15:16) added to the thread."
     },
     {
       "id": "gather",
@@ -2476,6 +2476,32 @@
         }
       ],
       "note": "Promoted at the unit-14 port (2026-10-01): ekplēssomai. The crowds’ astonishment at the Sermon (7:28) curdles into offense at Nazareth (13:54). Ahead: 19:25, 22:33."
+    },
+    {
+      "id": "send-away",
+      "root": "send-away",
+      "translit": "apolyō",
+      "gloss": "send away, release, divorce",
+      "color": "#3868f8",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 14,
+        "ref": "14:15"
+      },
+      "payoffs": [
+        {
+          "unit": 14,
+          "ref": "14:15, 22–23",
+          "note": "Jesus sends the crowds away; the disciples want them sent away"
+        },
+        {
+          "unit": 15,
+          "ref": "15:23, 32, 39",
+          "note": "the disciples ask him to send the Canaanite woman away; Jesus will not send the crowd away hungry"
+        }
+      ],
+      "note": "Promoted at the unit-15 port (2026-10-03): apolyō. Also divorce (1:19; 5:31–32; 19:3–9) and release (18:27; 27:15–26)."
     }
   ]
 }

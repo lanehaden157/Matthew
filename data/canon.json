@@ -360,7 +360,288 @@
       "unit": 14,
       "note": "",
       "source": "echo"
+    },
+    {
+      "from": "Matt 15:2",
+      "to": "2 Thess 2:15",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root handing-down",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:2",
+      "to": "Col 2:8",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root handing-down",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:4",
+      "to": "Exod 20:12",
+      "kind": "quotation",
+      "unit": 15,
+      "note": "",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 15:4",
+      "to": "Exod 21:17",
+      "kind": "quotation",
+      "unit": 15,
+      "note": "21:16 in the Greek numbering",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 15:8",
+      "to": "Isa 29:13",
+      "kind": "quotation",
+      "unit": 15,
+      "note": "follows the Greek form, with 'in vain'",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 15:9",
+      "to": "Col 2:22",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root precepts",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:9",
+      "to": "Isa 29:13",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root precepts",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:11",
+      "to": "Acts 10:14–15",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root common",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:11",
+      "to": "Acts 21:28",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root common",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:11",
+      "to": "Rom 14:14",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root common",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:13",
+      "to": "Isa 60:21",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root planting",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:13",
+      "to": "Jer 1:10",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root uproot",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:13",
+      "to": "Matt 13:29",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root uproot",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:14",
+      "to": "Matt 23:16",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root guide",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:14",
+      "to": "Matt 23:24",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root guide",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:14",
+      "to": "Rom 2:19",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root guide",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:19",
+      "to": "Hos 4:2",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:19",
+      "to": "Gen 6:5",
+      "kind": "allusion",
+      "unit": 15,
+      "note": "heart, thoughts, evil; also Gen 8:21",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 15:21",
+      "to": "1 Kgs 17:9",
+      "kind": "type-scene",
+      "unit": 15,
+      "note": "a prophet withdraws to Sidonian land: a foreign mother, bread, a child; not cited by Matthew",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 15:22",
+      "to": "Deut 7:1",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root canaanite",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:22",
+      "to": "Matt 1:3",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root canaanite",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:22",
+      "to": "Matt 1:5",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root canaanite",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:24",
+      "to": "Ezek 34:16",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:24",
+      "to": "Matt 10:6",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:26",
+      "to": "Exod 22:31",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:29",
+      "to": "Isa 25:6",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:29",
+      "to": "Isa 35:5–6",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:31",
+      "to": "Isa 29:18",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:31",
+      "to": "Isa 29:23",
+      "kind": "echo",
+      "unit": 15,
+      "note": "'the God of Israel', closing the chapter quoted at 15:8–9; a traditional phrase, so possible, not certain",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 15:33",
+      "to": "2 Kgs 4:43",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:33",
+      "to": "Num 11:13",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:33",
+      "to": "Ps 78:19–20",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:36",
+      "to": "1 Cor 11:23–24",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:36",
+      "to": "Matt 26:26–27",
+      "kind": "echo",
+      "unit": 15,
+      "note": "",
+      "source": "echo"
     }
   ],
-  "typescenes": []
+  "typescenes": [
+    {
+      "id": "wilderness-provision",
+      "ref": "Matt 15:32",
+      "unit": 15,
+      "note": "too little food, an objection, all eat, some is left: Exod 16; Num 11; 2 Kgs 4:42–44; Matt 14:13–21",
+      "source": "meta",
+      "label": "Wilderness provision"
+    }
+  ]
 }
