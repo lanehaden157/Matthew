@@ -233,3 +233,6 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-03 — Unit 15 ported
 - Ported unit 15 (Matt 15). Answers: make common, loaves of bread throughout, little dogs, fitting. Promoted `send-away` (apolyō) book-wide; asynetos added to `understand`; wilderness-provision type-scene kept. Retrofit tags in units 1, 5, 14; build, audit (0 gaps) and test green. Uncommitted.
+
+## 2026-10-07 — Interlinear rework (core 0.16.0)
+- Lane picked A+D: tap a verse number to fold its words open/shut; Plain / Notes / Greek pill in the top bar; Greek script above the translit (new `data/script/`, the one native-script exception); tracked English words light up with their column. "Every note open" became a settings switch; settings restyled (switches, segmented appearance). Vendored to all three books; not pushed.

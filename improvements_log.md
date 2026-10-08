@@ -930,3 +930,4 @@
 - `tools/constable_index.py` (new): outline heading -> body line range from `constable/matthew.txt` (git-ignored) into `constable-index.md`; `--check` compares the source sha1. Tested on a pdftotext extraction, then run in the research project on the real file: `constable-index.md` (106 sections, none unlocated; 15:1-20 → 13311-13524), added to `sync.extra`, pointed at from `resources.md`.
 
 - 2026-10-03: unit 15 ported; `send-away` thread promoted (roots.json, threads.json, retrofit-tags.json adds in units 1, 5, 14); asynetos added to `understand`; plērēs at 15:37 tagged fulfill.
+- 2026-10-07: core 0.16.0 vendored: interlinear rework (verse-number toggle, mode pill, original-script line from `data/script/`, cross-highlight, settings switches). Old stored mode "open" migrates to Notes + the open-notes switch.
