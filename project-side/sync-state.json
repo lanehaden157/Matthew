@@ -1,15 +1,15 @@
 {
   "Matthew-words.tsv": {
     "hash": "10abf7ff7509569ebf82977a7c1329a50d2c34ac",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "MatthewSBLGNT.txt": {
     "hash": "d19efbdff018c2bde83ba0fc01e0d8cb399b496b",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "MatthewWEB.txt": {
     "hash": "18e2a1260aad7b08f31164c6dc375eae4251a439",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "__pasted__": {
     "file": "CHAT_SIDE_INSTRUCTIONS.md",
@@ -18,110 +18,114 @@
   },
   "canon-conventions.md": {
     "hash": "745b5df7790bdda4b230f202e792ea015ffc9946",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-decisions.md": {
     "hash": "1a3477458c8bc956176810996f816b52876169d4",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-01.md": {
     "hash": "18c4bcf0926e03e659bea4ffe7cd0bddc274f4c0",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-02.md": {
     "hash": "57f6de66ff9d0bd70538b63c40b3230dd39f0a60",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-03.md": {
     "hash": "a17731daa7ce7696456fc51385842e2e6d33a92f",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-04.md": {
     "hash": "d4647f28f5e3f78dc97fc8575be689da298e2c00",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-05.md": {
     "hash": "525b362e1a49aeabc24691d591e2226a2bf85298",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-06.md": {
     "hash": "550c2c7c8b14038b5eb4b25c8a77f7dbec8bdd82",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-07.md": {
     "hash": "2e93bc926fc5fe4c8c35260c88f887262bf9e981",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-08.md": {
     "hash": "afc3c81cb2fec4c8c70a0e2b30ae02293c457ee5",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-09.md": {
     "hash": "838f0b3416de9ea549e5713576b6c98df02970f5",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-10.md": {
     "hash": "c57c7d4d65674f1eb199637e54fd954cdd683d8d",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-11.md": {
     "hash": "1719da9fe679c421b498633fe7e54b060fc448ea",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-12.md": {
     "hash": "f414003667a3ee246565d4d6c795555b7e34f7cc",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-13.md": {
     "hash": "8d5a121a0f613ecf01760e5b2c6c5dfe170e675a",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-14.md": {
     "hash": "ade2ccbadb9141c32beddf15ac2f3f53bcb0cb8e",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "canon-leads/canon-leads-unit-15.md": {
-    "hash": "400f72950ee36512b5e57a0dacc007e0fe52f334",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "hash": "11e336f536317b335fa0fb476ba6a76cc276f2ed",
+    "synced_at": "2026-10-08T15:00:49+00:00"
+  },
+  "canon-leads/canon-leads-unit-16.md": {
+    "hash": "85539dfec8dfeff3b21ba386fa842c6c2c58e720",
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "components-reference.md": {
     "hash": "ea3cc317b4d193a81b3632d939677adec156220e",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "constable-index.md": {
     "hash": "8a88b11928eafcd74827ee75d1170bc0b074a339",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "core-workflow.md": {
     "hash": "7040ab1e47becf487036275c79c69a0690792632",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "data/roots.json": {
-    "hash": "7ecea166d356842d0347b1cf0536d709623c2013",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "hash": "0788afff2ba1da41cb4a5735d54c4eec70974984",
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "matthew-literary-unit-map.md": {
     "hash": "95874dbcea1cf1d1019f9f55187ec5546f1890c6",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "matthew_reference_links.md": {
     "hash": "1673ae139efe41d474102579d5a46ba65fe1e3a3",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "matthew_study_style_reference.md": {
     "hash": "3bd7fd05a928e81b8966a2ed4335f0137771fb9d",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "resources.md": {
     "hash": "3121fbf0c6dd1fbd40157825e214d36e5c6b4d17",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "threads-digest.md": {
-    "hash": "310176ea0080437b33ae5074b2d8c4c7ce98b606",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "hash": "0138e3231c0520cebfc8ab00de38bc59d3403bce",
+    "synced_at": "2026-10-08T15:00:49+00:00"
   },
   "translation-choices.md": {
     "hash": "88ccfe369835d81471d3cded9f8679e7ad8e0292",
-    "synced_at": "2026-10-03T23:52:53+00:00"
+    "synced_at": "2026-10-08T15:00:49+00:00"
   }
 }
