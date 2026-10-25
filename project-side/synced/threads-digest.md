@@ -1,13 +1,13 @@
 # Cross-unit threads — canonical digest
 
-Generated from `data/threads.json` (version 1). 89 threads, 89 open.
+Generated from `data/threads.json` (version 1). 90 threads, 90 open.
 
 **This is the source of truth for thread tagging.** In a unit's fragment, a root that appears in the `id` column below is a *tracked thread*: tag every occurrence `<span class="r" data-root="<id>" data-w="<word id>">…</span>` (the word id from `Matthew-words.tsv`) and list it under `threads.opens` / `threads.payoffs` in the unit-meta block, with a matching id set in `data/roots.json`. A root that is recurring but *not* here is unit-local — tag it with its own name (no `data-w` needed) and just declare it in the unit's own `roots`. To propose promoting a local root to a tracked thread, add it to `threads.candidates` with a one-line reason (the Strong's/lemma `ids` you've actually observed in `Matthew-words.tsv`, plus a few representative `refs`, if you have them). **Claude decides, biased toward book-wide**: a local root that later pays off is worse than a tracked one that doesn't, so promote on a real second sighting. Ask Lane only when genuinely unsure.
 
 | id | root (data-root) | translit | gloss | opens | payoffs | status |
 |---|---|---|---|---|---|---|
 | `call` | `call` | kaleō | call, name | 1 (1:21) | 9 (9:13) · 22 (22:3-9) · 23 (23:8-10) | open |
-| `fulfill` | `fulfill` | plēroō | fill full / fulfill | 1 (1:22) | 3 (3:15) · 5 (5:17) · 12 (12:17) · 13 (13:35) | open |
+| `fulfill` | `fulfill` | plēroō | fill full / fulfill | 1 (1:22) | 3 (3:15) · 5 (5:17) · 12 (12:17) · 13 (13:35) · 14 (14:20) | open |
 | `raise` | `raise` | egeirō | raise up, rouse from lying down | 1 (1:24) | 8 (8:15) · 9 (9:25) · 17 (16:21) · 28 (28:6-7) · 14 (14:2) | open |
 | `righteous` | `righteous` | dikaios · dikaiosynē | righteous(ness) | 1 (1:19) | 3 (3:15) · 5 (5:6, 10, 20; 6:33) · 12 (12:37) · 13 (13:43) | open |
 | `save` | `save` | sōzō | save / heal / rescue | 1 (1:21) | 9 (9:21-22) · 10 (10:22) · 14 (14:30) · 27 (27:42) | open |
@@ -15,6 +15,7 @@ Generated from `data/threads.json` (version 1). 89 threads, 89 open.
 | `spirit` | `spirit` | pneuma | spirit | 1 (1:18) | 3 (3:16) · 5 (5:3) · 12 (12:28, 31-32) | open |
 | `house` | `house` | oikia · oikos | house, household | 2 (2:11) | 7 (7:24–27) · 10 (10:6) · 12 (12:25–29, 12:44) · 13 (13:1) · 14 (13:57) | open |
 | `joy` | `joy` | chara · chairō | joy; rejoice | 2 (2:10) | 13 (13:20, 44) | open |
+| `king` | `king` | basileus | king | 2 (2:1) | 14 (14:9) · 18 (18:23) · 22 (22:2–13) · 27 (27:11–42) | open |
 | `seek` | `seek` | zēteō | seek | 2 (2:13) | 6 (6:33) · 7 (7:7) · 13 (13:45) | open |
 | `treasure` | `treasure` | thēsauros · thēsaurizō | treasure, storehouse; store up | 2 (2:11) | 6 (6:19–21) · 12 (12:35) · 13 (13:44) | open |
 | `withdraw` | `withdraw` | anachōreō | withdraw | 2 (2:12) | 2 (2:13-14, 22) · 4 (4:12) · 9 (9:24) · 12 (12:15) · 14 (14:13) | open |
@@ -140,6 +141,7 @@ Generated from `data/threads.json` (version 1). 89 threads, 89 open.
 - **`immerse`**: Promoted from unit-03's local palette when the noun baptistēs ('Immerser') recurred as John's title at 11:11-12. Rendered 'immerse / Immerser' throughout — never 'baptize / Baptist' — to keep the ordinary washing-verb sense audible.
 - **`joy`**: Promoted at the unit-13 port (2026-09-26): chara and chairō ('rejoice'; also the 'Hail!' greetings at 26:49, 27:29). Rootless joy (13:20) against joy that sells everything (13:44). Ahead: 25:21, 23 and 28:8.
 - **`judge`**: Promoted at the unit-12 port (2026-09-20): a unit-07 local root that recurred through 10:15, 11:22–24 and all of 12. krinō · krisis · kritēs · katakrinō; 5:40 krithēnai is rendered 'sue' (go to law).
+- **`king`**: basileus — promoted at the unit-14 rebuild (2026-10-25): the Herods, the parable kings, and the king of the Jews. Distinct from the kingdom (basileia).
 - **`kingdom`**: basileia — 'the kingdom of the skies has drawn near' (3:2, 4:17) governs the Sermon's beatitudes and the parables to come. Distinct from basileus 'king' (10:18, 17:25, 18:23, 22:2), a different word not tracked here.
 - **`law-prophets`**: Frames the body of the Sermon, opened 5:17 and closed 7:12. Spanned Units 5-7; now closed.
 - **`lawlessness`**: Promoted at the unit-13 port (2026-09-26): anomia. Four occurrences, all at moments of judgment. Ahead: 23:28; 24:12.
