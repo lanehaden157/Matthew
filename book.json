@@ -21,7 +21,8 @@
     "echo",
     "itin",
     "compare",
-    "synoptic"
+    "synoptic",
+    "story"
   ],
   "checks": {
     "opens_note_required": false,
