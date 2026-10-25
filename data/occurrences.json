@@ -10115,33 +10115,33 @@
       "hits": [
         {
           "v": 14,
-          "pre": "…Leave them: they are ",
+          "pre": "…Leave them. They are ",
           "hit": "blind",
-          "post": " guides of the blind. And if a blind one guides a blind…"
+          "post": " guides of the blind. And if a blind man guides a blind…"
         },
         {
           "v": 14,
-          "pre": "…Leave them: they are ",
+          "pre": "…Leave them. They are ",
           "hit": "blind",
-          "post": " guides of the blind. And if a blind one guides a blind…"
+          "post": " guides of the blind. And if a blind man guides a blind…"
         },
         {
           "v": 14,
-          "pre": "…Leave them: they are ",
+          "pre": "…Leave them. They are ",
           "hit": "blind",
-          "post": " guides of the blind. And if a blind one guides a blind…"
+          "post": " guides of the blind. And if a blind man guides a blind…"
         },
         {
           "v": 14,
-          "pre": "…Leave them: they are ",
+          "pre": "…Leave them. They are ",
           "hit": "blind",
-          "post": " guides of the blind. And if a blind one guides a blind…"
+          "post": " guides of the blind. And if a blind man guides a blind…"
         },
         {
           "v": 30,
-          "pre": "…any crowds came to him, having with them the mute, the ",
+          "pre": "…crowds came up to him, having with them the mute, the ",
           "hit": "blind",
-          "post": ", the lame, the maimed, and many others, and they flung…"
+          "post": ", the lame, the maimed, and many others, and they tosse…"
         },
         {
           "v": 31,
@@ -10170,26 +10170,26 @@
         },
         {
           "v": 26,
-          "pre": "…ut he, answering, said, \"It is not fitting to take the ",
+          "pre": "…But he, answering, said, \"It is not good to take the ",
           "hit": "bread",
           "post": " of the children and throw it to the little dogs.\"…"
         },
         {
           "v": 33,
-          "pre": "…y to him, \"From where, for us in a wilderness, so many ",
-          "hit": "loaves of bread",
-          "post": " as to fill so great a crowd?\"…"
+          "pre": "…im, \"From where could we get, in a wilderness, so many ",
+          "hit": "loaves",
+          "post": " as to feed so large a crowd?\"…"
         },
         {
           "v": 34,
           "pre": "…And Jesus says to them, \"How many ",
-          "hit": "loaves of bread",
+          "hit": "loaves",
           "post": " do y'all have?\" And they said, \"Seven, and a few littl…"
         },
         {
           "v": 36,
           "pre": "…he took the seven ",
-          "hit": "loaves of bread",
+          "hit": "loaves",
           "post": " and the fish, and having given thanks he broke them an…"
         }
       ],
@@ -10220,32 +10220,32 @@
       "hits": [
         {
           "v": 11,
-          "pre": "…not what comes into the mouth ",
-          "hit": "makes the person common",
-          "post": ", but what goes out of the mouth, this makes the person…"
+          "pre": "…not what goes into the mouth makes the person ",
+          "hit": "common",
+          "post": ", but what comes out of the mouth, this makes the perso…"
         },
         {
           "v": 11,
-          "pre": "…not what comes into the mouth ",
-          "hit": "makes the person common",
-          "post": ", but what goes out of the mouth, this makes the person…"
+          "pre": "…not what goes into the mouth makes the person ",
+          "hit": "common",
+          "post": ", but what comes out of the mouth, this makes the perso…"
         },
         {
           "v": 18,
-          "pre": "…oing out of the mouth come out of the heart, and those ",
-          "hit": "make the person common",
+          "pre": "…s out from the heart, and those things make the person ",
+          "hit": "common",
           "post": ".…"
         },
         {
           "v": 20,
-          "pre": "…These are the things that ",
-          "hit": "make the person common",
+          "pre": "…These are the things that make the person ",
+          "hit": "common",
           "post": "; but to eat with unwashed hands does not make the pers…"
         },
         {
           "v": 20,
-          "pre": "…These are the things that ",
-          "hit": "make the person common",
+          "pre": "…These are the things that make the person ",
+          "hit": "common",
           "post": "; but to eat with unwashed hands does not make the pers…"
         }
       ],
@@ -10259,7 +10259,7 @@
       "hits": [
         {
           "v": 32,
-          "pre": "…But Jesus, summoning his learners, said, \"I am ",
+          "pre": "…And Jesus, calling his learners to him, said, \"I am ",
           "hit": "wrenched in the gut",
           "post": " over the crowd, because already three days they stay w…"
         }
@@ -10280,6 +10280,28 @@
         }
       ],
       "total": 1
+    },
+    "dog": {
+      "count": 2,
+      "verses": [
+        26,
+        27
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…e the bread of the children and throw it to the little ",
+          "hit": "dogs",
+          "post": ".\"…"
+        },
+        {
+          "v": 27,
+          "pre": "…But she said, \"Yes, Master, for even the little ",
+          "hit": "dogs",
+          "post": " eat from the crumbs that fall from the table of their…"
+        }
+      ],
+      "total": 2
     },
     "evil": {
       "count": 1,
@@ -10306,7 +10328,7 @@
           "v": 28,
           "pre": "…Jesus, answering, said to her, \"O woman, great is your ",
           "hit": "trust",
-          "post": "! Let it come to be for you as you want.\" And her daugh…"
+          "post": ". Let it come to be for you as you wish.\" And her daugh…"
         }
       ],
       "total": 1
@@ -10322,27 +10344,27 @@
       "hits": [
         {
           "v": 4,
-          "pre": "…For God said, 'Honor the ",
+          "pre": "…For God said, 'Honor your ",
           "hit": "father",
-          "post": " and the mother,' (Exod 20:12) and, 'The one speaking e…"
+          "post": " and your mother,' (Exod 20:12) and, 'The one who speak…"
         },
         {
           "v": 4,
-          "pre": "…For God said, 'Honor the ",
+          "pre": "…For God said, 'Honor your ",
           "hit": "father",
-          "post": " and the mother,' (Exod 20:12) and, 'The one speaking e…"
+          "post": " and your mother,' (Exod 20:12) and, 'The one who speak…"
         },
         {
           "v": 5,
-          "pre": "…But y'all say, 'Whoever says to the ",
+          "pre": "…But y'all say, 'Whoever says to his ",
           "hit": "father",
-          "post": " or the mother, \"A gift is whatever you might have been…"
+          "post": " or mother, \"A gift is whatever you might have been hel…"
         },
         {
           "v": 6,
-          "pre": "…he shall certainly not honor his ",
+          "pre": "…he shall by no means honor his ",
           "hit": "father",
-          "post": ".' And y'all voided the word of God for the sake of y'a…"
+          "post": ".' And y'all have made void the word of God because of…"
         },
         {
           "v": 13,
@@ -10361,7 +10383,7 @@
       "hits": [
         {
           "v": 37,
-          "pre": "…over of the broken pieces they took up: seven hampers ",
+          "pre": "…what was left over of the broken pieces, seven hampers ",
           "hit": "full",
           "post": ".…"
         }
@@ -10376,47 +10398,18 @@
       "hits": [
         {
           "v": 14,
-          "pre": "…Leave them: they are blind ",
+          "pre": "…Leave them. They are blind ",
           "hit": "guides",
-          "post": " of the blind. And if a blind one guides a blind one, b…"
+          "post": " of the blind. And if a blind man guides a blind man, b…"
         },
         {
           "v": 14,
-          "pre": "…Leave them: they are blind ",
+          "pre": "…Leave them. They are blind ",
           "hit": "guides",
-          "post": " of the blind. And if a blind one guides a blind one, b…"
+          "post": " of the blind. And if a blind man guides a blind man, b…"
         }
       ],
       "total": 2
-    },
-    "handing-down": {
-      "count": 3,
-      "verses": [
-        2,
-        3,
-        6
-      ],
-      "hits": [
-        {
-          "v": 2,
-          "pre": "…\"Why do your learners overstep the ",
-          "hit": "handing-down",
-          "post": " of the elders? For they do not wash their hands whenev…"
-        },
-        {
-          "v": 3,
-          "pre": "…verstep the commandment of God for the sake of y'all's ",
-          "hit": "handing-down",
-          "post": "?…"
-        },
-        {
-          "v": 6,
-          "pre": "…d y'all voided the word of God for the sake of y'all's ",
-          "hit": "handing-down",
-          "post": ".…"
-        }
-      ],
-      "total": 3
     },
     "heart": {
       "count": 3,
@@ -10430,48 +10423,19 @@
           "v": 8,
           "pre": "…'This people honors me with the lips, but their ",
           "hit": "heart",
-          "post": " keeps far off from me; (Isa 29:13)…"
+          "post": " holds far away from me;…"
         },
         {
           "v": 18,
-          "pre": "…But the things going out of the mouth come out of the ",
+          "pre": "…But what comes out of the mouth comes out from the ",
           "hit": "heart",
-          "post": ", and those make the person common.…"
+          "post": ", and those things make the person common.…"
         },
         {
           "v": 19,
           "pre": "…For out of the ",
           "hit": "heart",
           "post": " come evil reasonings, murders, adulteries, sexual immo…"
-        }
-      ],
-      "total": 3
-    },
-    "honor": {
-      "count": 3,
-      "verses": [
-        4,
-        6,
-        8
-      ],
-      "hits": [
-        {
-          "v": 4,
-          "pre": "…For God said, '",
-          "hit": "Honor",
-          "post": " the father and the mother,' (Exod 20:12) and, 'The one…"
-        },
-        {
-          "v": 6,
-          "pre": "…he shall certainly not ",
-          "hit": "honor",
-          "post": " his father.' And y'all voided the word of God for the…"
-        },
-        {
-          "v": 8,
-          "pre": "…'This people ",
-          "hit": "honors",
-          "post": " me with the lips, but their heart keeps far off from m…"
         }
       ],
       "total": 3
@@ -10484,7 +10448,7 @@
       "hits": [
         {
           "v": 24,
-          "pre": "…d, \"I was not sent out except to the lost sheep of the ",
+          "pre": "…said, \"I was not sent except to the lost sheep of the ",
           "hit": "house",
           "post": " of Israel.\"…"
         }
@@ -10506,7 +10470,7 @@
           "v": 2,
           "pre": "…\"Why do your ",
           "hit": "learners",
-          "post": " overstep the handing-down of the elders? For they do n…"
+          "post": " step across the tradition of the elders? For they do n…"
         },
         {
           "v": 12,
@@ -10522,25 +10486,25 @@
         },
         {
           "v": 32,
-          "pre": "…But Jesus, summoning his ",
+          "pre": "…And Jesus, calling his ",
           "hit": "learners",
-          "post": ", said, \"I am wrenched in the gut over the crowd, becau…"
+          "post": " to him, said, \"I am wrenched in the gut over the crowd…"
         },
         {
           "v": 33,
           "pre": "…And the ",
           "hit": "learners",
-          "post": " say to him, \"From where, for us in a wilderness, so ma…"
+          "post": " say to him, \"From where could we get, in a wilderness,…"
         },
         {
           "v": 36,
-          "pre": "…given thanks he broke them and was giving them to the ",
+          "pre": "…given thanks he broke them and kept giving them to the ",
           "hit": "learners",
           "post": ", and the learners to the crowds.…"
         },
         {
           "v": 36,
-          "pre": "…given thanks he broke them and was giving them to the ",
+          "pre": "…given thanks he broke them and kept giving them to the ",
           "hit": "learners",
           "post": ", and the learners to the crowds.…"
         }
@@ -10555,7 +10519,7 @@
       "hits": [
         {
           "v": 24,
-          "pre": "…he, answering, said, \"I was not sent out except to the ",
+          "pre": "…But he, answering, said, \"I was not sent except to the ",
           "hit": "lost",
           "post": " sheep of the house of Israel.\"…"
         }
@@ -10577,64 +10541,7 @@
       ],
       "total": 1
     },
-    "mouth": {
-      "count": 4,
-      "verses": [
-        11,
-        17,
-        18
-      ],
-      "hits": [
-        {
-          "v": 11,
-          "pre": "…not what comes into the ",
-          "hit": "mouth",
-          "post": " makes the person common, but what goes out of the mout…"
-        },
-        {
-          "v": 11,
-          "pre": "…not what comes into the ",
-          "hit": "mouth",
-          "post": " makes the person common, but what goes out of the mout…"
-        },
-        {
-          "v": 17,
-          "pre": "…Do y'all not grasp that everything going into the ",
-          "hit": "mouth",
-          "post": " makes its way into the belly and is thrown out into th…"
-        },
-        {
-          "v": 18,
-          "pre": "…But the things going out of the ",
-          "hit": "mouth",
-          "post": " come out of the heart, and those make the person commo…"
-        }
-      ],
-      "total": 4
-    },
-    "overstep": {
-      "count": 2,
-      "verses": [
-        2,
-        3
-      ],
-      "hits": [
-        {
-          "v": 2,
-          "pre": "…\"Why do your learners ",
-          "hit": "overstep",
-          "post": " the handing-down of the elders? For they do not wash t…"
-        },
-        {
-          "v": 3,
-          "pre": "…But he, answering, said to them, \"Why do y'all also ",
-          "hit": "overstep",
-          "post": " the commandment of God for the sake of y'all's handing…"
-        }
-      ],
-      "total": 2
-    },
-    "planting": {
+    "plant": {
       "count": 2,
       "verses": [
         13
@@ -10655,21 +10562,6 @@
       ],
       "total": 2
     },
-    "precepts": {
-      "count": 1,
-      "verses": [
-        9
-      ],
-      "hits": [
-        {
-          "v": 9,
-          "pre": "…and in vain they revere me, teaching as teachings the ",
-          "hit": "precepts",
-          "post": " of humans.'\" (Isa 29:13)…"
-        }
-      ],
-      "total": 1
-    },
     "release": {
       "count": 1,
       "verses": [
@@ -10680,7 +10572,7 @@
           "v": 14,
           "pre": "",
           "hit": "Leave",
-          "post": " them: they are blind guides of the blind. And if a bli…"
+          "post": " them. They are blind guides of the blind. And if a bli…"
         }
       ],
       "total": 1
@@ -10693,15 +10585,15 @@
       "hits": [
         {
           "v": 29,
-          "pre": "…And moving on from there Jesus came alongside the ",
-          "hit": "Sea",
-          "post": " of Galilee, and going up onto the mountain he was sitt…"
+          "pre": "…And moving on from there, Jesus came along the ",
+          "hit": "sea",
+          "post": " of Galilee, and going up onto the mountain he sat ther…"
         }
       ],
       "total": 1
     },
     "send-away": {
-      "count": 3,
+      "count": 5,
       "verses": [
         23,
         32,
@@ -10716,18 +10608,30 @@
         },
         {
           "v": 32,
-          "pre": "…y with me and they do not have anything to eat; and to ",
-          "hit": "send them away",
-          "post": " fasting I do not want, lest they give out on the road.…"
+          "pre": "…with me and have nothing to eat. And I do not wish to ",
+          "hit": "send",
+          "post": " them away fasting, lest they give out on the road.\"…"
+        },
+        {
+          "v": 32,
+          "pre": "…nd have nothing to eat. And I do not wish to send them ",
+          "hit": "away",
+          "post": " fasting, lest they give out on the road.\"…"
         },
         {
           "v": 39,
-          "pre": "…And having ",
-          "hit": "sent away",
-          "post": " the crowds he got into the boat and came into the bord…"
+          "pre": "…And ",
+          "hit": "sending",
+          "post": " the crowds away, he got into the boat and came into th…"
+        },
+        {
+          "v": 39,
+          "pre": "…And sending the crowds ",
+          "hit": "away",
+          "post": ", he got into the boat and came into the borders of Mag…"
         }
       ],
-      "total": 3
+      "total": 5
     },
     "skandalon": {
       "count": 1,
@@ -10737,7 +10641,7 @@
       "hits": [
         {
           "v": 12,
-          "pre": "…you know that the Pharisees, on hearing the word, were ",
+          "pre": "…you know that the Pharisees, hearing the saying, were ",
           "hit": "tripped up",
           "post": "?\"…"
         }
@@ -10759,6 +10663,21 @@
       ],
       "total": 1
     },
+    "stage-actor": {
+      "count": 1,
+      "verses": [
+        7
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "",
+          "hit": "Stage-actors",
+          "post": "! Isaiah prophesied well about y'all, saying,…"
+        }
+      ],
+      "total": 1
+    },
     "throw": {
       "count": 2,
       "verses": [
@@ -10768,18 +10687,47 @@
       "hits": [
         {
           "v": 17,
-          "pre": "…ing into the mouth makes its way into the belly and is ",
-          "hit": "thrown out",
-          "post": " into the latrine?…"
+          "pre": "…thing going into the mouth moves into the belly and is ",
+          "hit": "thrown",
+          "post": " out into the latrine?…"
         },
         {
           "v": 26,
-          "pre": "…t is not fitting to take the bread of the children and ",
+          "pre": "…\"It is not good to take the bread of the children and ",
           "hit": "throw",
           "post": " it to the little dogs.\"…"
         }
       ],
       "total": 2
+    },
+    "tradition": {
+      "count": 3,
+      "verses": [
+        2,
+        3,
+        6
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…\"Why do your learners step across the ",
+          "hit": "tradition",
+          "post": " of the elders? For they do not wash their hands whenev…"
+        },
+        {
+          "v": 3,
+          "pre": "…lso step across the commandment of God because of your ",
+          "hit": "tradition",
+          "post": "?…"
+        },
+        {
+          "v": 6,
+          "pre": "…d y'all have made void the word of God because of your ",
+          "hit": "tradition",
+          "post": ".…"
+        }
+      ],
+      "total": 3
     },
     "understand": {
       "count": 2,
@@ -10790,33 +10738,18 @@
       "hits": [
         {
           "v": 10,
-          "pre": "…And summoning the crowd he said to them, \"Hear and ",
+          "pre": "…d calling the crowd to him, he said to them, \"Hear and ",
           "hit": "understand",
           "post": ":…"
         },
         {
           "v": 16,
-          "pre": "…But he said, \"Are y'all too still ",
-          "hit": "without understanding",
+          "pre": "…And he said, \"Are y'all, too, still without ",
+          "hit": "understanding",
           "post": "?…"
         }
       ],
       "total": 2
-    },
-    "uproot": {
-      "count": 1,
-      "verses": [
-        13
-      ],
-      "hits": [
-        {
-          "v": 13,
-          "pre": "…ting that my Father in the skies did not plant will be ",
-          "hit": "uprooted",
-          "post": ".…"
-        }
-      ],
-      "total": 1
     },
     "wilderness": {
       "count": 1,
@@ -10826,9 +10759,9 @@
       "hits": [
         {
           "v": 33,
-          "pre": "…And the learners say to him, \"From where, for us in a ",
+          "pre": "…he learners say to him, \"From where could we get, in a ",
           "hit": "wilderness",
-          "post": ", so many loaves of bread as to fill so great a crowd?\"…"
+          "post": ", so many loaves as to feed so large a crowd?\"…"
         }
       ],
       "total": 1
@@ -10841,7 +10774,7 @@
       "hits": [
         {
           "v": 21,
-          "pre": "…And going out from there Jesus ",
+          "pre": "…And going out from there, Jesus ",
           "hit": "withdrew",
           "post": " into the parts of Tyre and Sidon.…"
         }
@@ -10856,9 +10789,9 @@
       "hits": [
         {
           "v": 25,
-          "pre": "…But she, coming, was ",
+          "pre": "…But she, coming, kept ",
           "hit": "bowing low",
-          "post": " to him, saying, \"Master, help me!\"…"
+          "post": " to him, saying, \"Master, help me.\"…"
         }
       ],
       "total": 1

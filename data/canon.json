@@ -362,22 +362,6 @@
       "source": "echo"
     },
     {
-      "from": "Matt 15:2",
-      "to": "2 Thess 2:15",
-      "kind": "echo",
-      "unit": 15,
-      "note": "root handing-down",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:2",
-      "to": "Col 2:8",
-      "kind": "echo",
-      "unit": 15,
-      "note": "root handing-down",
-      "source": "echo"
-    },
-    {
       "from": "Matt 15:4",
       "to": "Exod 20:12",
       "kind": "quotation",
@@ -402,22 +386,6 @@
       "source": "meta"
     },
     {
-      "from": "Matt 15:9",
-      "to": "Col 2:22",
-      "kind": "echo",
-      "unit": 15,
-      "note": "root precepts",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:9",
-      "to": "Isa 29:13",
-      "kind": "echo",
-      "unit": 15,
-      "note": "root precepts",
-      "source": "echo"
-    },
-    {
       "from": "Matt 15:11",
       "to": "Acts 10:14–15",
       "kind": "echo",
@@ -427,7 +395,15 @@
     },
     {
       "from": "Matt 15:11",
-      "to": "Acts 21:28",
+      "to": "Acts 10:28",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root common",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:11",
+      "to": "Mark 7:15",
       "kind": "echo",
       "unit": 15,
       "note": "root common",
@@ -443,10 +419,18 @@
     },
     {
       "from": "Matt 15:13",
+      "to": "Ezek 17:7",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root plant",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:13",
       "to": "Isa 60:21",
       "kind": "echo",
       "unit": 15,
-      "note": "root planting",
+      "note": "root plant",
       "source": "echo"
     },
     {
@@ -454,15 +438,31 @@
       "to": "Jer 1:10",
       "kind": "echo",
       "unit": 15,
-      "note": "root uproot",
+      "note": "root plant",
       "source": "echo"
     },
     {
-      "from": "Matt 15:13",
-      "to": "Matt 13:29",
+      "from": "Matt 15:14",
+      "to": "Isa 29:18",
       "kind": "echo",
       "unit": 15,
-      "note": "root uproot",
+      "note": "root blind",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:14",
+      "to": "Isa 35:5",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root blind",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:14",
+      "to": "Matt 11:5",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root blind",
       "source": "echo"
     },
     {
@@ -491,14 +491,6 @@
     },
     {
       "from": "Matt 15:19",
-      "to": "Hos 4:2",
-      "kind": "echo",
-      "unit": 15,
-      "note": "",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:19",
       "to": "Gen 6:5",
       "kind": "allusion",
       "unit": 15,
@@ -514,8 +506,32 @@
       "source": "meta"
     },
     {
+      "from": "Matt 15:21",
+      "to": "1 Kgs 17:8–24",
+      "kind": "story",
+      "unit": 15,
+      "note": "Elijah and the widow of Zarephath",
+      "source": "story"
+    },
+    {
       "from": "Matt 15:22",
       "to": "Deut 7:1",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root canaanite",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:22",
+      "to": "Gen 10:15",
+      "kind": "echo",
+      "unit": 15,
+      "note": "root canaanite",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 15:22",
+      "to": "Gen 10:19",
       "kind": "echo",
       "unit": 15,
       "note": "root canaanite",
@@ -538,52 +554,20 @@
       "source": "echo"
     },
     {
-      "from": "Matt 15:24",
-      "to": "Ezek 34:16",
-      "kind": "echo",
+      "from": "Matt 15:22",
+      "to": "Josh 2:1–21",
+      "kind": "character",
       "unit": 15,
-      "note": "",
-      "source": "echo"
+      "note": "Rahab of Jericho",
+      "source": "story"
     },
     {
-      "from": "Matt 15:24",
-      "to": "Matt 10:6",
-      "kind": "echo",
+      "from": "Matt 15:22",
+      "to": "Josh 6:22–25",
+      "kind": "character",
       "unit": 15,
-      "note": "",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:26",
-      "to": "Exod 22:31",
-      "kind": "echo",
-      "unit": 15,
-      "note": "",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:29",
-      "to": "Isa 25:6",
-      "kind": "echo",
-      "unit": 15,
-      "note": "",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:29",
-      "to": "Isa 35:5–6",
-      "kind": "echo",
-      "unit": 15,
-      "note": "",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:31",
-      "to": "Isa 29:18",
-      "kind": "echo",
-      "unit": 15,
-      "note": "",
-      "source": "echo"
+      "note": "Rahab of Jericho",
+      "source": "story"
     },
     {
       "from": "Matt 15:31",
@@ -595,43 +579,19 @@
     },
     {
       "from": "Matt 15:33",
-      "to": "2 Kgs 4:43",
-      "kind": "echo",
+      "to": "Num 11:4–23",
+      "kind": "story",
       "unit": 15,
-      "note": "",
-      "source": "echo"
+      "note": "Israel's wilderness question",
+      "source": "story"
     },
     {
       "from": "Matt 15:33",
-      "to": "Num 11:13",
-      "kind": "echo",
+      "to": "Ps 78:19–29",
+      "kind": "story",
       "unit": 15,
-      "note": "",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:33",
-      "to": "Ps 78:19–20",
-      "kind": "echo",
-      "unit": 15,
-      "note": "",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:36",
-      "to": "1 Cor 11:23–24",
-      "kind": "echo",
-      "unit": 15,
-      "note": "",
-      "source": "echo"
-    },
-    {
-      "from": "Matt 15:36",
-      "to": "Matt 26:26–27",
-      "kind": "echo",
-      "unit": 15,
-      "note": "",
-      "source": "echo"
+      "note": "Israel's wilderness question",
+      "source": "story"
     }
   ],
   "typescenes": [

@@ -35,6 +35,38 @@
       "to": "hand-over",
       "text": "over",
       "w": "01101903"
+    },
+    {
+      "unit": "unit-15",
+      "verse": 32,
+      "from": "send-away",
+      "to": "send-away",
+      "text": "send",
+      "w": "01153225"
+    },
+    {
+      "unit": "unit-15",
+      "verse": 32,
+      "from": "send-away",
+      "to": "send-away",
+      "text": "away",
+      "w": "01153225"
+    },
+    {
+      "unit": "unit-15",
+      "verse": 39,
+      "from": "send-away",
+      "to": "send-away",
+      "text": "sending",
+      "w": "01153902"
+    },
+    {
+      "unit": "unit-15",
+      "verse": 39,
+      "from": "send-away",
+      "to": "send-away",
+      "text": "away",
+      "w": "01153902"
     }
   ],
   "text": [
