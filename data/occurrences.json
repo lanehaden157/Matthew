@@ -10210,47 +10210,6 @@
       ],
       "total": 1
     },
-    "common": {
-      "count": 5,
-      "verses": [
-        11,
-        18,
-        20
-      ],
-      "hits": [
-        {
-          "v": 11,
-          "pre": "…not what goes into the mouth makes the person ",
-          "hit": "common",
-          "post": ", but what comes out of the mouth, this makes the perso…"
-        },
-        {
-          "v": 11,
-          "pre": "…not what goes into the mouth makes the person ",
-          "hit": "common",
-          "post": ", but what comes out of the mouth, this makes the perso…"
-        },
-        {
-          "v": 18,
-          "pre": "…s out from the heart, and those things make the person ",
-          "hit": "common",
-          "post": ".…"
-        },
-        {
-          "v": 20,
-          "pre": "…These are the things that make the person ",
-          "hit": "common",
-          "post": "; but to eat with unwashed hands does not make the pers…"
-        },
-        {
-          "v": 20,
-          "pre": "…These are the things that make the person ",
-          "hit": "common",
-          "post": "; but to eat with unwashed hands does not make the pers…"
-        }
-      ],
-      "total": 5
-    },
     "compassion": {
       "count": 1,
       "verses": [
@@ -10280,6 +10239,47 @@
         }
       ],
       "total": 1
+    },
+    "defile": {
+      "count": 5,
+      "verses": [
+        11,
+        18,
+        20
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…not what goes into the mouth ",
+          "hit": "defiles",
+          "post": " the person, but what comes out of the mouth, this defi…"
+        },
+        {
+          "v": 11,
+          "pre": "…not what goes into the mouth ",
+          "hit": "defiles",
+          "post": " the person, but what comes out of the mouth, this defi…"
+        },
+        {
+          "v": 18,
+          "pre": "…f the mouth comes out from the heart, and those things ",
+          "hit": "defile",
+          "post": " the person.…"
+        },
+        {
+          "v": 20,
+          "pre": "…These are the things that ",
+          "hit": "defile",
+          "post": " the person; but to eat with unwashed hands does not de…"
+        },
+        {
+          "v": 20,
+          "pre": "…These are the things that ",
+          "hit": "defile",
+          "post": " the person; but to eat with unwashed hands does not de…"
+        }
+      ],
+      "total": 5
     },
     "dog": {
       "count": 2,
@@ -10364,7 +10364,7 @@
           "v": 6,
           "pre": "…he shall by no means honor his ",
           "hit": "father",
-          "post": ".' And y'all have made void the word of God because of…"
+          "post": ".' And y'all have stripped the word of God of its autho…"
         },
         {
           "v": 13,
@@ -10411,6 +10411,35 @@
       ],
       "total": 2
     },
+    "handing-down": {
+      "count": 3,
+      "verses": [
+        2,
+        3,
+        6
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…\"Why do your learners step across the ",
+          "hit": "handing-down",
+          "post": " of the elders? For they do not wash their hands whenev…"
+        },
+        {
+          "v": 3,
+          "pre": "…lso step across the commandment of God because of your ",
+          "hit": "handing-down",
+          "post": "?…"
+        },
+        {
+          "v": 6,
+          "pre": "…ipped the word of God of its authority because of your ",
+          "hit": "handing-down",
+          "post": ".…"
+        }
+      ],
+      "total": 3
+    },
     "heart": {
       "count": 3,
       "verses": [
@@ -10429,7 +10458,7 @@
           "v": 18,
           "pre": "…But what comes out of the mouth comes out from the ",
           "hit": "heart",
-          "post": ", and those things make the person common.…"
+          "post": ", and those things defile the person.…"
         },
         {
           "v": 19,
@@ -10470,7 +10499,7 @@
           "v": 2,
           "pre": "…\"Why do your ",
           "hit": "learners",
-          "post": " step across the tradition of the elders? For they do n…"
+          "post": " step across the handing-down of the elders? For they d…"
         },
         {
           "v": 12,
@@ -10699,35 +10728,6 @@
         }
       ],
       "total": 2
-    },
-    "tradition": {
-      "count": 3,
-      "verses": [
-        2,
-        3,
-        6
-      ],
-      "hits": [
-        {
-          "v": 2,
-          "pre": "…\"Why do your learners step across the ",
-          "hit": "tradition",
-          "post": " of the elders? For they do not wash their hands whenev…"
-        },
-        {
-          "v": 3,
-          "pre": "…lso step across the commandment of God because of your ",
-          "hit": "tradition",
-          "post": "?…"
-        },
-        {
-          "v": 6,
-          "pre": "…d y'all have made void the word of God because of your ",
-          "hit": "tradition",
-          "post": ".…"
-        }
-      ],
-      "total": 3
     },
     "understand": {
       "count": 2,

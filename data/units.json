@@ -861,10 +861,10 @@
       "movement": 2,
       "built": true,
       "roots": {
-        "tradition": {
-          "color": "#5a5a9c",
+        "handing-down": {
+          "color": "#b1481f",
           "translit": "paradosis",
-          "gloss": "a handing-over; what is handed down, tradition"
+          "gloss": "a handing-over; what is handed down"
         },
         "stage-actor": {
           "color": "#7f5482",
@@ -884,15 +884,15 @@
           "echo": "Isa 29:18 (out of gloom the blind will see) and Isa 35:5; Matt 11:5 already gave the same list to John, and 15:30–31 pays it out."
         },
         "guide": {
-          "color": "#1e7a5c",
+          "color": "#0090c8",
           "translit": "hodēgos · hodēgeō",
           "gloss": "one who leads along the road; to lead",
           "echo": "Matt 23:16, 24 (the blind guides again, in the woes); Rom 2:19 (the boast of being 'a guide of the blind')."
         },
-        "common": {
-          "color": "#7a3f5c",
+        "defile": {
+          "color": "#8c6d1f",
           "translit": "koinoō",
-          "gloss": "make common, treat as ordinary (the word usually rendered 'defile')",
+          "gloss": "defile; literally, make common, treat as ordinary",
           "echo": "Acts 10:14–15, 28 and 11:8–9 (what God has cleansed, do not call common); Rom 14:14; Mark 7:15 has the same saying."
         },
         "canaanite": {
@@ -909,7 +909,7 @@
       },
       "contract": "0.17.0",
       "discourse": false,
-      "descriptor": "what makes a person common, an outsider's trust, and seven loaves in a wilderness"
+      "descriptor": "what defiles a person, an outsider's trust, and seven loaves in a wilderness"
     },
     {
       "n": 16,

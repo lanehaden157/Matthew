@@ -238,6 +238,18 @@ regardless of which Greek word is in play.
   ergon / `deeds` link audible. Fixed 2026-09-23.
 - **treat as common, not "profane"** — bebēloō (12:5), from bebēlos
   "trodden, open to all," the opposite of set apart. Fixed 2026-09-23.
+- **defile, not "make common"** — koinoō (15:11, 18, 20), literally "make common"
+  (koinos, set-apart lost). The gloss says so; the negative sense (loss of standing
+  before God) matters, so the verse renders "defile". bebēloō (12:5) stays "treat as
+  common". Fixed 2026-10-25.
+- **handing-down, not "tradition"** — paradosis (15:2, 3, 6). Keeps the stem audible
+  without reusing "hand over" (paradidōmi thread). Fixed 2026-10-25.
+- **speaks ill of, not "speaks evil of"** — kakologeō (15:4); "evil" is ponēros.
+  Fixed 2026-10-25.
+- **stripped of authority, not "made void"** — akyroō (15:6), a-kyros. Fixed 2026-10-25.
+- **to no purpose, not "in vain"** — matēn (15:9, Isa 29:13). Fixed 2026-10-25.
+- **show devotion to, not "revere"** — sebomai (15:9); not "worship" (proskyneō thread).
+  Fixed 2026-10-25.
 - **viper, not "snake"** — echidna is the viper; ophis is the general
   "snake" (7:10, 10:16), so "offspring of vipers" (3:7, 12:34, 23:33) keeps them
   apart. Open: whether gennēmata stays "offspring" (Lane looking again 2026-09-23).

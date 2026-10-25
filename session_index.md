@@ -240,3 +240,7 @@ Read this first. 3 lines max per session.
 ## 2026-10-25 — Earlier-story boxes, passes reordered (core 0.17.0)
 - Built `intertext-build-prompt.md`: core's new `aside.story` (◈ chip labelled "Type scene"/"Earlier story", slate-blue `--accent-olive`), story harvest into canon, Greek noun sweep on leads sheets (stoplist), workflow now briefing → research (notes file) → verse-by-verse → artifact; synoptic cap dropped.
 - Core 0.17.0 vendored into all three books; Matthew enables `story`; style reference §1a/§3/§4 + ruling, instruction field rewritten. Not pushed; field needs re-paste; unit 15 pilot waits on the chat side.
+
+## 2026-10-25 — Unit 15 rebuild and renderings
+- Forced re-port of unit 15; fixed send-away retrofit and the Rahab story ref; pushed.
+- Lane approved new renderings (handing-down, defile, speaks ill of, stripped of authority, to no purpose, show devotion to); guide recoloured.
