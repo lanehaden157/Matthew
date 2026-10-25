@@ -425,6 +425,14 @@
       ],
       "total": 4
     },
+    "king": {
+      "count": 1,
+      "verses": [
+        6
+      ],
+      "hits": [],
+      "total": 1
+    },
     "name": {
       "count": 3,
       "verses": [
@@ -849,11 +857,12 @@
       "total": 2
     },
     "king": {
-      "count": 3,
+      "count": 4,
       "verses": [
         1,
         2,
-        3
+        3,
+        9
       ],
       "hits": [
         {
@@ -873,9 +882,15 @@
           "pre": "…And hearing this, ",
           "hit": "Herod the king",
           "post": " was troubled, and all Jerusalem with him,…"
+        },
+        {
+          "v": 9,
+          "pre": "…And hearing the ",
+          "hit": "king",
+          "post": ", they went; and look, the star which they saw in its r…"
         }
       ],
-      "total": 3
+      "total": 4
     },
     "lose": {
       "count": 1,
@@ -2319,6 +2334,21 @@
         }
       ],
       "total": 5
+    },
+    "king": {
+      "count": 1,
+      "verses": [
+        35
+      ],
+      "hits": [
+        {
+          "v": 35,
+          "pre": "…nor toward Jerusalem, for it is the city of the great ",
+          "hit": "King",
+          "post": ";…"
+        }
+      ],
+      "total": 1
     },
     "kingdom": {
       "count": 5,
@@ -5669,6 +5699,21 @@
       ],
       "total": 1
     },
+    "king": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…and before governors and even ",
+          "hit": "kings",
+          "post": " y'all will be led, for my sake, as a testimony to them…"
+        }
+      ],
+      "total": 1
+    },
     "kingdom": {
       "count": 2,
       "verses": [
@@ -6456,6 +6501,21 @@
         }
       ],
       "total": 2
+    },
+    "king": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…soft things? Look — those who wear soft things are in ",
+          "hit": "kings",
+          "post": "' houses.…"
+        }
+      ],
+      "total": 1
     },
     "kingdom": {
       "count": 2,
@@ -9374,7 +9434,7 @@
       "hits": [
         {
           "v": 54,
-          "pre": "…ing, “From where does this man get this wisdom and the ",
+          "pre": "…aid, \"From where does this man get this wisdom and the ",
           "hit": "acts of power",
           "post": "?…"
         },
@@ -9386,9 +9446,9 @@
         },
         {
           "v": 2,
-          "pre": "…He has been raised from the dead, and that is why the ",
+          "pre": "…has been raised from the dead, and because of this the ",
           "hit": "acts of power",
-          "post": " are at work in him.”…"
+          "post": " are at work in him.\"…"
         }
       ],
       "total": 3
@@ -9403,7 +9463,22 @@
           "v": 54,
           "pre": "…ching them in their gathering-place, so that they were ",
           "hit": "struck out of themselves",
-          "post": " and were saying, “From where does this man get this wi…"
+          "post": " and said, \"From where does this man get this wisdom an…"
+        }
+      ],
+      "total": 1
+    },
+    "basket": {
+      "count": 1,
+      "verses": [
+        20
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…ook up what was left over of the broken pieces, twelve ",
+          "hit": "baskets",
+          "post": " full.…"
         }
       ],
       "total": 1
@@ -9417,9 +9492,15 @@
       "hits": [
         {
           "v": 17,
-          "pre": "…They say to him, “We have nothing here but five ",
+          "pre": "…They say to him, \"We have nothing here except five ",
           "hit": "loaves",
-          "post": " and two fish.”…"
+          "post": " and two fish.\"…"
+        },
+        {
+          "v": 19,
+          "pre": "…the crowds to lean back on the grass, taking the five ",
+          "hit": "loaves",
+          "post": " and the two fish, looking up into the sky, he spoke th…"
         },
         {
           "v": 19,
@@ -9441,13 +9522,13 @@
           "v": 19,
           "pre": "…h, looking up into the sky, he spoke the blessing, and ",
           "hit": "breaking",
-          "post": " the loaves he gave them to the learners, and the learn…"
+          "post": ", he gave the loaves to the learners, and the learners…"
         },
         {
           "v": 20,
-          "pre": "…and were fed full, and they took up the surplus of the ",
+          "pre": "…e fed full, and they took up what was left over of the ",
           "hit": "broken pieces",
-          "post": ": twelve baskets full.…"
+          "post": ", twelve baskets full.…"
         }
       ],
       "total": 2
@@ -9474,9 +9555,9 @@
         },
         {
           "v": 28,
-          "pre": "…Peter answered him and said, “Master, if it is you, ",
+          "pre": "…nd Peter answered him and said, \"Master, if it is you, ",
           "hit": "command",
-          "post": " me to come to you on the waters.”…"
+          "post": " me to come to you on the waters.\"…"
         }
       ],
       "total": 3
@@ -9522,27 +9603,27 @@
       "hits": [
         {
           "v": 5,
-          "pre": "…And though he wanted to kill him, he ",
+          "pre": "…And wanting to kill him, he ",
           "hit": "feared",
           "post": " the crowd, because they held him as a prophet.…"
         },
         {
           "v": 26,
-          "pre": "…n into turmoil, saying, “It’s an apparition!” and from ",
+          "pre": "…into turmoil, saying, \"It is an apparition!\" and from ",
           "hit": "fear",
           "post": " they cried out.…"
         },
         {
           "v": 27,
-          "pre": "…Jesus spoke to them, saying, “Take heart: I am. Do not ",
+          "pre": "…Jesus spoke to them, saying, \"Take heart: I am. Do not ",
           "hit": "fear",
-          "post": ".”…"
+          "post": ".\"…"
         },
         {
           "v": 30,
           "pre": "…But seeing the wind, strong, he was ",
           "hit": "afraid",
-          "post": ", and beginning to be swallowed by the deep, he cried o…"
+          "post": ", and beginning to sink into the deep, he cried out, sa…"
         }
       ],
       "total": 4
@@ -9555,7 +9636,7 @@
       "hits": [
         {
           "v": 13,
-          "pre": "…derness place privately; and the crowds, having heard, ",
+          "pre": "…erness place by himself; and the crowds, having heard, ",
           "hit": "followed",
           "post": " him on foot from the towns.…"
         }
@@ -9582,7 +9663,14 @@
       "verses": [
         20
       ],
-      "hits": [],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…And they all ate and were fed ",
+          "hit": "full",
+          "post": ", and they took up what was left over of the broken pie…"
+        }
+      ],
       "total": 1
     },
     "give": {
@@ -9598,15 +9686,15 @@
       "hits": [
         {
           "v": 7,
-          "pre": "…so that he declared with an oath to ",
+          "pre": "…so that with an oath he declared he would ",
           "hit": "give",
           "post": " her whatever she might ask.…"
         },
         {
           "v": 8,
-          "pre": "…And she, coached by her mother, says, “",
+          "pre": "…And she, coached by her mother, says, \"",
           "hit": "Give",
-          "post": " me, here, on a platter, the head of John the Immerser.…"
+          "post": " me here, on a platter, the head of John the Immerser.\"…"
         },
         {
           "v": 9,
@@ -9622,15 +9710,15 @@
         },
         {
           "v": 16,
-          "pre": "…them, “They have no need to go away. Y’all yourselves ",
+          "pre": "…o them, \"They have no need to go off. Y'all yourselves ",
           "hit": "give",
-          "post": " them something to eat.”…"
+          "post": " them something to eat.\"…"
         },
         {
           "v": 19,
-          "pre": "…sky, he spoke the blessing, and breaking the loaves he ",
+          "pre": "…into the sky, he spoke the blessing, and breaking, he ",
           "hit": "gave",
-          "post": " them to the learners, and the learners to the crowds.…"
+          "post": " the loaves to the learners, and the learners to the cr…"
         }
       ],
       "total": 6
@@ -9652,7 +9740,7 @@
           "v": 20,
           "pre": "…And they all ate and were ",
           "hit": "fed full",
-          "post": ", and they took up the surplus of the broken pieces: tw…"
+          "post": ", and they took up what was left over of the broken pie…"
         }
       ],
       "total": 2
@@ -9683,25 +9771,25 @@
           "v": 1,
           "pre": "…At that season Herod the quarter-ruler ",
           "hit": "heard",
-          "post": " the report about Jesus,…"
+          "post": " the report of Jesus,…"
         },
         {
           "v": 1,
           "pre": "…At that season Herod the quarter-ruler heard the ",
           "hit": "report",
-          "post": " about Jesus,…"
+          "post": " of Jesus,…"
         },
         {
           "v": 13,
-          "pre": "…And Jesus, having ",
+          "pre": "…Now Jesus, having ",
           "hit": "heard",
-          "post": ", withdrew from there in a boat to a wilderness place p…"
+          "post": ", withdrew from there in a boat to a wilderness place b…"
         },
         {
           "v": 13,
-          "pre": "…And Jesus, having ",
+          "pre": "…Now Jesus, having ",
           "hit": "heard",
-          "post": ", withdrew from there in a boat to a wilderness place p…"
+          "post": ", withdrew from there in a boat to a wilderness place b…"
         }
       ],
       "total": 4
@@ -9714,9 +9802,9 @@
       "hits": [
         {
           "v": 57,
-          "pre": "…ot without honor except in his hometown and in his own ",
+          "pre": "…ot without honor except in the hometown and in his own ",
           "hit": "house",
-          "post": ".”…"
+          "post": ".\"…"
         }
       ],
       "total": 1
@@ -9730,15 +9818,15 @@
       "hits": [
         {
           "v": 2,
-          "pre": "…and he said to his servants, “This is John the ",
+          "pre": "…and he said to his servants, \"This is John the ",
           "hit": "Immerser",
-          "post": ". He has been raised from the dead, and that is why the…"
+          "post": ". He has been raised from the dead, and because of this…"
         },
         {
           "v": 8,
-          "pre": "…ys, “Give me, here, on a platter, the head of John the ",
+          "pre": "…ays, \"Give me here, on a platter, the head of John the ",
           "hit": "Immerser",
-          "post": ".”…"
+          "post": ".\"…"
         }
       ],
       "total": 2
@@ -9778,17 +9866,17 @@
           "v": 15,
           "pre": "…When evening came, the ",
           "hit": "learners",
-          "post": " came to him saying, “The place is wilderness, and the…"
+          "post": " came to him saying, \"The place is a wilderness, and th…"
         },
         {
           "v": 19,
-          "pre": "…blessing, and breaking the loaves he gave them to the ",
+          "pre": "…the blessing, and breaking, he gave the loaves to the ",
           "hit": "learners",
           "post": ", and the learners to the crowds.…"
         },
         {
           "v": 19,
-          "pre": "…blessing, and breaking the loaves he gave them to the ",
+          "pre": "…the blessing, and breaking, he gave the loaves to the ",
           "hit": "learners",
           "post": ", and the learners to the crowds.…"
         },
@@ -9796,7 +9884,7 @@
           "v": 22,
           "pre": "…And at once he compelled the ",
           "hit": "learners",
-          "post": " to get into the boat and go ahead of him to the other…"
+          "post": " to get into a boat and go ahead of him to the other si…"
         },
         {
           "v": 26,
@@ -9815,9 +9903,9 @@
       "hits": [
         {
           "v": 31,
-          "pre": "…ching out his hand, took hold of him and says to him, “",
+          "pre": "…hing out his hand, took hold of him, and says to him, \"",
           "hit": "Little-faith",
-          "post": ", why did you waver?”…"
+          "post": ", why did you waver?\"…"
         }
       ],
       "total": 1
@@ -9830,9 +9918,9 @@
       "hits": [
         {
           "v": 4,
-          "pre": "…for John had been saying to him, “It is not ",
+          "pre": "…for John had been saying to him, \"It is not ",
           "hit": "permitted",
-          "post": " for you to have her.”…"
+          "post": " for you to have her.\"…"
         }
       ],
       "total": 1
@@ -9845,9 +9933,9 @@
       "hits": [
         {
           "v": 2,
-          "pre": "…his servants, “This is John the Immerser. He has been ",
+          "pre": "…his servants, \"This is John the Immerser. He has been ",
           "hit": "raised",
-          "post": " from the dead, and that is why the acts of power are a…"
+          "post": " from the dead, and because of this the acts of power a…"
         }
       ],
       "total": 1
@@ -9861,9 +9949,9 @@
       "hits": [
         {
           "v": 30,
-          "pre": "…swallowed by the deep, he cried out, saying, “Master, ",
+          "pre": "…to sink into the deep, he cried out, saying, \"Master, ",
           "hit": "save",
-          "post": " me!”…"
+          "post": " me!\"…"
         },
         {
           "v": 36,
@@ -9891,7 +9979,7 @@
           "v": 26,
           "pre": "…But the learners, seeing him walking on the ",
           "hit": "sea",
-          "post": ", were thrown into turmoil, saying, “It’s an apparition…"
+          "post": ", were thrown into turmoil, saying, \"It is an apparitio…"
         }
       ],
       "total": 2
@@ -9906,21 +9994,21 @@
       "hits": [
         {
           "v": 15,
-          "pre": "…place is wilderness, and the hour has already gone by. ",
-          "hit": "Send",
-          "post": " the crowds away, so that they can go into the villages…"
+          "pre": "…ace is a wilderness, and the hour has already gone by. ",
+          "hit": "Send away",
+          "post": " the crowds, so that they may go off into the villages…"
         },
         {
           "v": 22,
           "pre": "…and go ahead of him to the other side, until he should ",
-          "hit": "send",
-          "post": " the crowds away.…"
+          "hit": "send away",
+          "post": " the crowds.…"
         },
         {
           "v": 23,
           "pre": "…And having ",
-          "hit": "sent",
-          "post": " the crowds away, he went up into the mountain privatel…"
+          "hit": "sent away",
+          "post": " the crowds, he went up into the mountain by himself to…"
         }
       ],
       "total": 3
@@ -9933,9 +10021,9 @@
       "hits": [
         {
           "v": 57,
-          "pre": "…And they kept being ",
+          "pre": "…And they were ",
           "hit": "tripped up",
-          "post": " in him. But Jesus said to them, “A prophet is not with…"
+          "post": " in him. But Jesus said to them, \"A prophet is not with…"
         }
       ],
       "total": 1
@@ -9949,18 +10037,33 @@
       "hits": [
         {
           "v": 55,
-          "pre": "…Isn’t this the builder’s ",
+          "pre": "…Isn't this the builder's ",
           "hit": "son",
-          "post": "? Isn’t his mother called Mary, and his brothers James…"
+          "post": "? Isn't his mother called Mary, and his brothers James…"
         },
         {
           "v": 33,
-          "pre": "…n the boat worshiped him, saying, “Truly you are God’s ",
+          "pre": "…n the boat worshiped him, saying, \"Truly you are God's ",
           "hit": "Son",
-          "post": ".”…"
+          "post": ".\"…"
         }
       ],
       "total": 2
+    },
+    "stretch-out": {
+      "count": 1,
+      "verses": [
+        31
+      ],
+      "hits": [
+        {
+          "v": 31,
+          "pre": "…And at once Jesus, ",
+          "hit": "stretching out",
+          "post": " his hand, took hold of him, and says to him, \"Little-f…"
+        }
+      ],
+      "total": 1
     },
     "take-heart": {
       "count": 1,
@@ -9970,9 +10073,9 @@
       "hits": [
         {
           "v": 27,
-          "pre": "…But at once Jesus spoke to them, saying, “",
+          "pre": "…But at once Jesus spoke to them, saying, \"",
           "hit": "Take heart",
-          "post": ": I am. Do not fear.”…"
+          "post": ": I am. Do not fear.\"…"
         }
       ],
       "total": 1
@@ -9991,6 +10094,27 @@
         }
       ],
       "total": 1
+    },
+    "touch": {
+      "count": 2,
+      "verses": [
+        36
+      ],
+      "hits": [
+        {
+          "v": 36,
+          "pre": "…and they kept urging him that they might only ",
+          "hit": "touch",
+          "post": " the fringe of his cloak; and as many as touched were b…"
+        },
+        {
+          "v": 36,
+          "pre": "…ght only touch the fringe of his cloak; and as many as ",
+          "hit": "touched",
+          "post": " were brought safely through.…"
+        }
+      ],
+      "total": 2
     },
     "urge": {
       "count": 1,
@@ -10017,7 +10141,7 @@
       "hits": [
         {
           "v": 25,
-          "pre": "…In the fourth watch of the night he came toward them, ",
+          "pre": "…in the fourth watch of the night he came toward them, ",
           "hit": "walking",
           "post": " on the sea.…"
         },
@@ -10025,13 +10149,42 @@
           "v": 26,
           "pre": "…But the learners, seeing him ",
           "hit": "walking",
-          "post": " on the sea, were thrown into turmoil, saying, “It’s an…"
+          "post": " on the sea, were thrown into turmoil, saying, \"It is a…"
         },
         {
           "v": 29,
-          "pre": "…he said, “Come.” And Peter, going down from the boat, ",
+          "pre": "…d he said, \"Come.\" And going down from the boat, Peter ",
           "hit": "walked",
           "post": " on the waters and came toward Jesus.…"
+        }
+      ],
+      "total": 3
+    },
+    "watch": {
+      "count": 3,
+      "verses": [
+        3,
+        10,
+        25
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…rod, having seized John, bound him and put him away in ",
+          "hit": "prison",
+          "post": " because of Herodias, the wife of Philip his brother;…"
+        },
+        {
+          "v": 10,
+          "pre": "…and he sent and beheaded John in the ",
+          "hit": "prison",
+          "post": ".…"
+        },
+        {
+          "v": 25,
+          "pre": "…And in the fourth ",
+          "hit": "watch",
+          "post": " of the night he came toward them, walking on the sea.…"
         }
       ],
       "total": 3
@@ -10044,9 +10197,9 @@
       "hits": [
         {
           "v": 31,
-          "pre": "…old of him and says to him, “Little-faith, why did you ",
+          "pre": "…ld of him, and says to him, \"Little-faith, why did you ",
           "hit": "waver",
-          "post": "?”…"
+          "post": "?\"…"
         }
       ],
       "total": 1
@@ -10062,13 +10215,13 @@
           "v": 13,
           "pre": "…esus, having heard, withdrew from there in a boat to a ",
           "hit": "wilderness",
-          "post": " place privately; and the crowds, having heard, followe…"
+          "post": " place by himself; and the crowds, having heard, follow…"
         },
         {
           "v": 15,
-          "pre": "…g came, the learners came to him saying, “The place is ",
+          "pre": "…came, the learners came to him saying, \"The place is a ",
           "hit": "wilderness",
-          "post": ", and the hour has already gone by. Send the crowds awa…"
+          "post": ", and the hour has already gone by. Send away the crowd…"
         }
       ],
       "total": 2
@@ -10081,9 +10234,9 @@
       "hits": [
         {
           "v": 13,
-          "pre": "…And Jesus, having heard, ",
+          "pre": "…Now Jesus, having heard, ",
           "hit": "withdrew",
-          "post": " from there in a boat to a wilderness place privately;…"
+          "post": " from there in a boat to a wilderness place by himself;…"
         }
       ],
       "total": 1
@@ -10098,7 +10251,7 @@
           "v": 33,
           "pre": "…And those in the boat ",
           "hit": "worshiped",
-          "post": " him, saying, “Truly you are God’s Son.”…"
+          "post": " him, saying, \"Truly you are God's Son.\"…"
         }
       ],
       "total": 1

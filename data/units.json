@@ -808,12 +808,18 @@
         "hear": {
           "color": "#8c6d1f",
           "translit": "akouō · akoē",
-          "gloss": "hear; a hearing, report"
+          "gloss": "hear; a hearing, a report",
+          "echo": "Matt 2:3 and 4:12 — a Herod hears and is shaken; Jesus hears that John was handed over and withdraws. Both halves come back at 14:1 and 14:13."
         },
-        "king": {
-          "color": "#3d6b4a",
-          "translit": "basileus",
-          "gloss": "king"
+        "son": {
+          "color": "#005847",
+          "translit": "huios",
+          "gloss": "son"
+        },
+        "watch": {
+          "color": "#006494",
+          "translit": "phylakē",
+          "gloss": "guard; prison; a watch of the night"
         },
         "give": {
           "color": "#7a3f5c",
@@ -823,35 +829,46 @@
         "command": {
           "color": "#1f6e7a",
           "translit": "keleuō",
-          "gloss": "command, give an order"
+          "gloss": "command, order"
         },
         "grass": {
           "color": "#9c5a1e",
           "translit": "chortos · chortazō",
-          "gloss": "grass, fodder; fed full as on pasture",
-          "echo": "Ps 132:15 (131:15 in the Greek) — God promises to fill Zion’s poor with bread"
+          "gloss": "grass, pasture; to feed full, as on pasture",
+          "echo": "Ps 132:15 (131:15 in the Greek) — 'her poor I will feed full with bread': the same verb, with bread."
         },
         "break": {
           "color": "#8a2f3a",
           "translit": "klaō · klasma",
-          "gloss": "break (bread); broken pieces",
-          "echo": "Matt 26:26; Acts 2:46; 1 Cor 11:24 — the same breaking, at the table of the new covenant"
+          "gloss": "break; a broken piece",
+          "echo": "Matt 26:26 and 1 Cor 11:24 — the same breaking of bread at the last meal; Acts 2:46, the assembly 'breaking bread' house by house."
+        },
+        "basket": {
+          "color": "#5a5a9c",
+          "translit": "kophinos",
+          "gloss": "basket (a wicker hand-basket)",
+          "echo": "Matt 16:9 — 'how many baskets did y'all take up?'; the four thousand get a different word (spyris, 'hamper', 15:37; 16:10)."
         },
         "walk": {
           "color": "#1e7a5c",
           "translit": "peripateō",
           "gloss": "walk about",
-          "echo": "Job 9:8 (Greek) — God alone walks on the sea as on firm ground"
+          "echo": "Job 9:8 in the Greek — God 'who alone stretched out the sky and walks about on the sea as on solid ground'; Job 38:16, 'have you walked about in the tracks of the deep?'"
         },
-        "son": {
-          "color": "#005847",
-          "translit": "huios",
-          "gloss": "son"
+        "stretch-out": {
+          "color": "#7f5482",
+          "translit": "ekteinō",
+          "gloss": "stretch out"
+        },
+        "touch": {
+          "color": "#945042",
+          "translit": "haptomai",
+          "gloss": "touch, take hold of"
         }
       },
-      "contract": "0.15.1",
+      "contract": "0.17.0",
       "discourse": false,
-      "descriptor": "Nazareth stumbles, Herod feasts, Jesus feeds, and the sea is walked"
+      "descriptor": "a hometown trips, a king feasts, a wilderness is fed, and the sea is walked"
     },
     {
       "n": 15,

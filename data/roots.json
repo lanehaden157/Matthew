@@ -626,6 +626,12 @@
         "apolyō"
       ],
       "note": "send away / release / divorce"
+    },
+    "king": {
+      "ids": [
+        "basileus"
+      ],
+      "note": "king"
     }
   }
 }

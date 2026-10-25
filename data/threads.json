@@ -1456,6 +1456,11 @@
           "unit": 13,
           "ref": "13:35",
           "note": "The prophet's word is 'filled full' (13:35); thirteen verses later the dragnet is 'filled full' (13:48)."
+        },
+        {
+          "unit": 14,
+          "ref": "14:20",
+          "note": "'twelve baskets full': the fill-full word, at the level of leftovers"
         }
       ],
       "note": "plēroō — the formula-quotation verb (1:22 and on) becomes Jesus' own stated relationship to the Law and the Prophets (5:17).",
@@ -2502,6 +2507,43 @@
         }
       ],
       "note": "Promoted at the unit-15 port (2026-10-03): apolyō. Also divorce (1:19; 5:31–32; 19:3–9) and release (18:27; 27:15–26)."
+    },
+    {
+      "id": "king",
+      "root": "king",
+      "translit": "basileus",
+      "gloss": "king",
+      "color": "#788848",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 2,
+        "ref": "2:1",
+        "note": "King Herod hears of the child born king of the Jews"
+      },
+      "payoffs": [
+        {
+          "unit": 14,
+          "ref": "14:9",
+          "note": "Herod's son, 'the king' inside his own court, commands the Immerser's head given"
+        },
+        {
+          "unit": 18,
+          "ref": "18:23",
+          "note": "the king of the parables settles accounts"
+        },
+        {
+          "unit": 22,
+          "ref": "22:2–13",
+          "note": "the king who gives a wedding feast for his son"
+        },
+        {
+          "unit": 27,
+          "ref": "27:11–42",
+          "note": "'the king of the Jews' at the trial, as the magi named him at 2:2"
+        }
+      ],
+      "note": "basileus — promoted at the unit-14 rebuild (2026-10-25): the Herods, the parable kings, and the king of the Jews. Distinct from the kingdom (basileia)."
     }
   ]
 }

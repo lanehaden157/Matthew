@@ -314,3 +314,5 @@ regardless of which Greek word is in play.
 - 2026-09-23 (Lane) — 12:25 "laid waste" → "made a wilderness"; 12:26 and Mark 1:13
   "Satan" → "the Adversary" (+ a 12:26 gloss); 12:36 "idle" → "workless"; 12:5
   "profane" → "treat … as common". Offspring of vipers left as is, pending Lane's call.
+
+- 2026-10-25 (Lane) — `eulogeō` at 14:19 (and 26:26): "spoke the blessing", not "blessed" (which blurs into makarios).

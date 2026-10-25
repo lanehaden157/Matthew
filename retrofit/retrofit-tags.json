@@ -506,6 +506,41 @@
       "root": "understand",
       "text": "without understanding",
       "w": "01151607"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 6,
+      "root": "king",
+      "text": "king",
+      "w": "01010607"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 9,
+      "root": "king",
+      "text": "king",
+      "w": "01020905"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 35,
+      "root": "king",
+      "text": "King",
+      "w": "01053519"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 18,
+      "root": "king",
+      "text": "kings",
+      "w": "01101806"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 8,
+      "root": "king",
+      "text": "kings",
+      "w": "01110818"
     }
   ]
 }

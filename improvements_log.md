@@ -936,3 +936,7 @@
 ## 2026-10-25 — Unit 15 rebuilt, renderings revised
 - Forced re-port of unit 15; retrofit `data-w` for the split send-away spans (15:32, 15:39); Rahab story ref now "Josh 2:1–21; 6:22–25".
 - Renderings (Lane): paradosis → handing-down, kakologeō → speaks ill of, akyroō → stripped of authority, matēn → to no purpose, sebomai → show devotion to, koinoō → defile (gloss says "literally make common"). Local roots renamed `handing-down`, `defile`; `guide` recoloured #0090c8 (was too close to `blind`). Choices in `translation-choices.md`.
+
+## 2026-10-25 — Unit 14 rebuilt, `king` promoted
+- Forced re-port of unit 14 from the revised source; Pharaoh's-birthday box shipped as a plain story box (no `royal-birthday-feast` id); 14:12 burial echo kept; eulogeō "spoke the blessing" ruled.
+- `king` (basileus) promoted book-wide (#788848); retrofit adds in units 1, 2, 5, 10, 11 (tags only); `fulfill` payoff at 14:20. Build, audit (0 gaps), test green.

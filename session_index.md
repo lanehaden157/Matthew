@@ -244,3 +244,6 @@ Read this first. 3 lines max per session.
 ## 2026-10-25 — Unit 15 rebuild and renderings
 - Forced re-port of unit 15; fixed send-away retrofit and the Rahab story ref; pushed.
 - Lane approved new renderings (handing-down, defile, speaks ill of, stripped of authority, to no purpose, show devotion to); guide recoloured.
+
+## 2026-10-25 — Unit 14 rebuild
+- Forced re-port of unit 14; story box plain, eulogeō ruled, `king` promoted with retrofit in units 1/2/5/10/11.
