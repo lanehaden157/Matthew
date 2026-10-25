@@ -57,6 +57,8 @@
   --accent-slate: var(--accent-jordan);
   --accent-warm: var(--accent-olive);
   --accent-rust: var(--accent-wine);
+  /* aside.story's "What it does" label, said Matthew's way */
+  --story-does-label: "In Matthew";
 }
 
 .unit .mast .greek-title { font-size: 21px; color: var(--accent-gold); font-style: italic; margin-bottom: .2em; }
