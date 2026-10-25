@@ -236,3 +236,7 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-07 — Interlinear rework (core 0.16.0)
 - Lane picked A+D: tap a verse number to fold its words open/shut; Plain / Notes / Greek pill in the top bar; Greek script above the translit (new `data/script/`, the one native-script exception); tracked English words light up with their column. "Every note open" became a settings switch; settings restyled (switches, segmented appearance). Vendored to all three books; not pushed.
+
+## 2026-10-25 — Earlier-story boxes, passes reordered (core 0.17.0)
+- Built `intertext-build-prompt.md`: core's new `aside.story` (◈ chip labelled "Type scene"/"Earlier story", slate-blue `--accent-olive`), story harvest into canon, Greek noun sweep on leads sheets (stoplist), workflow now briefing → research (notes file) → verse-by-verse → artifact; synoptic cap dropped.
+- Core 0.17.0 vendored into all three books; Matthew enables `story`; style reference §1a/§3/§4 + ruling, instruction field rewritten. Not pushed; field needs re-paste; unit 15 pilot waits on the chat side.

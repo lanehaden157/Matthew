@@ -931,3 +931,4 @@
 
 - 2026-10-03: unit 15 ported; `send-away` thread promoted (roots.json, threads.json, retrofit-tags.json adds in units 1, 5, 14); asynetos added to `understand`; plērēs at 15:37 tagged fulfill.
 - 2026-10-07: core 0.16.0 vendored: interlinear rework (verse-number toggle, mode pill, original-script line from `data/script/`, cross-highlight, settings switches). Old stored mode "open" migrates to Notes + the open-notes switch.
+- 2026-10-25: core 0.17.0 vendored (aside.story component, labelled chips, story canon harvest, noun sweep on leads sheets, reordered workflow passes, no synoptic cap). `story` enabled in book.json. Style reference: §1a "What belongs where" table + 2026-10-25 ruling (endnote-marker point carried forward open), §3 `aside.story` section, synoptic norm, §4 story checks. `CHAT_SIDE_INSTRUCTIONS.md` rewritten for the new passes (re-paste). `theme.css`: `--story-does-label: "In Matthew"`.
