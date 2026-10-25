@@ -67,7 +67,7 @@ lists its same-stem forms joined by `·` (`baptizō · baptisma`, `pistis · pis
 `eleos · eleeō`); tag every form with the one slug. Different words are different roots
 (or not tracked) — see §1.
 
-### 1a. `echo` — the canon behind and after a word (intertext pass, pass 3)
+### 1a. `echo` — the canon behind and after a word (research pass, pass 2)
 
 **`echo`** — optional field on any `roots[]` entry: one line saying where the word has
 already appeared in the LXX (Matthew's own Old Testament, in Greek), or where it
@@ -84,10 +84,46 @@ This is different from the **OT citation pointer** (§ below): a pointer marks M
 written"). `echo` is for the quieter case — a word or image with a canon history that
 the verse doesn't cite outright: an allusion, a type-scene, a later reuse (including
 elsewhere in the NT). A verse can carry both. Echoes should come from the kept rows of
-the intertext pass's ledger (`core-workflow.md`, pass 3), not from memory at
+the research pass's notes file (`core-workflow.md`, pass 2), not from memory at
 drafting time — `canon-leads/canon-leads-unit-NN.md` (`python -m biblecore leads`) is the
 mechanical half of that pass: where the unit's rare Greek words and shared two-word
-phrases occur in the LXX and the rest of the NT. It's a word search, not a judgment.
+phrases occur in the LXX and the rest of the NT, plus a noun sweep of the unit's
+people, places and objects. It's a word search, not a judgment.
+
+#### What belongs where
+
+Each link lives in exactly one place. Pick by what the link *is*:
+
+| The link is… | It goes in | Shown |
+|---|---|---|
+| A word's history across books (a tracked root) | root `echo` (above) | the root's popover |
+| One verse or phrase elsewhere that sounds through this verse; one sentence says it | `aside.echo` (§3) | the verse note, behind `*` |
+| A *different* earlier event with the same shape, worth telling: its background, what's the same, what's different, what Matthew does with it | `aside.story` (§3) | its own ◈ chip |
+| The *same* event told by Mark, Luke or John, where Matthew's change is telling | `aside.synoptic` (§3) | its own ✧ chip |
+| A formula quotation | OT citation pointer (§3) | inline |
+| A contested reading, or a debate that needs room | footnote | the endnotes |
+
+How to choose:
+- The same event in another gospel → a synoptic, never a story box.
+- An earlier event → a story box if it needs telling (a reader would need the
+  background to see the point), an echo if one sentence carries it.
+- When a story box covers a link, its word-level evidence goes inside the box.
+  Don't also ship an echo for the same link.
+- An interpretive argument about a link → a footnote; the story box states only
+  what the parallel is.
+
+**Ruling (Lane, 2026-10-25).** Story boxes, the pass reorder and the synoptic norm.
+Lane's favourite intertext work was the Unit 14 scene walk: earlier stories told with
+their background (Herod's feast beside Pharaoh's birthday feast, Elisha's loaves,
+Exodus 14 at the sea), not word matches. The old loop couldn't produce that: the
+intertext pass started from the rare-word sheet, its output was a ledger of one-line
+links, and it ran after the verse-by-verse, so what it found never reached Lane, who
+learns by listening to passes 1 and 3. Synoptic boxes were capped at 0–3 a unit, and
+every unit hit the cap. So: a new `aside.story` component, research before the
+verse-by-verse (`core-workflow.md`), and no synoptic cap. **Open point, carried
+forward:** the endnote-marker rule (§4 says a marker sits at the end of the verse
+`<p>`, never inside a `.gloss`) and what §3's examples and Unit 14 actually do
+don't quite agree; Lane hasn't ruled.
 
 ---
 
@@ -188,8 +224,8 @@ Unit 6" note.
   popup when the unit is ported.
 - `intertext[]` — `{ref, to, kind, note?}`: `ref` a bare `"C:V"` in Matthew, `to` a
   reference like `"Isa 6:10"`, `kind` one of `quotation`, `allusion`, `echo`,
-  `type-scene`. An `aside.echo` or a root's `echo` is already harvested, so list
-  here only what those don't say.
+  `type-scene`, `story`, `character`, `reuse`. An `aside.echo`, a root's `echo` and
+  an `aside.story` box are already harvested, so list here only what those don't say.
 - `typescenes[]` — `{id, ref, note?, label?}`: `id` from the type-scene index
   (`commissioning`, `water-crossing`, `mountain-theophany`, `annunciation`, ...). A
   new `id` is fine; give it a `label`.
@@ -343,7 +379,44 @@ Isa 6:10…". `data-anchor` must match the `C:V` of the verse it's actually a si
 Translit only, no `data-root`/`class="r"`/`class="rl"` inside it. Use this for a
 verse-level connection (an allusion, a type-scene, a later reuse); use a root's `echo`
 (§1a) for a word-level one. Not for formula quotations — those get the OT citation
-pointer below.
+pointer below. Not for an earlier story that needs telling — that's an `aside.story`
+(below; §1a "What belongs where").
+
+### Earlier story (`aside.story` — a different, earlier event with the same shape)
+
+```html
+<p class="v"><span class="n">6</span>But when Herod's birthday came…</p>
+<aside class="story" data-anchor="14:6" data-kind="type-scene" data-scene="royal-birthday-feast" data-strength="strong">
+  <h4><span class="par-title">Pharaoh's birthday feast</span> <span class="par-ref">Gen 40:20–22</span></h4>
+  <p class="par-story">Two to four plain sentences telling the earlier story, with the background a reader needs.</p>
+  <ul class="par-match"><li>a king's birthday feast</li><li>a head lifted off</li></ul>
+  <p class="par-diff">What's different. Required: no box ships without one.</p>
+  <p class="par-does">What it does in Matthew: irony, reversal, identification, fulfilment, warning.</p>
+  <p class="par-later">Later reuse, only if there is one.</p>
+</aside>
+```
+
+`<aside class="story" data-anchor="C:V">` as a **following sibling** of the verse the
+story bears on, or of the last verse of the scene it covers (`data-span="14:3–12"`
+optional), after any `.gloss`/`.compare`/`aside.echo` on that verse. The site hides each
+one behind its own ◈ chip, labelled "Type scene" for `data-kind="type-scene"` and "Earlier
+story" otherwise; the chip carries no title. The site also supplies the part labels
+(Same, Different, In Matthew, Later), so don't write them.
+
+- `data-kind`: `type-scene`, `story`, `allusion`, `character` or `reuse`. A
+  `type-scene` box names its type-scene in `data-scene` (`[a-z0-9-]`). Check
+  `canon-decisions.md` first; a new id goes to Lane before it ships.
+- `data-strength`: `strong` or `possible`. A weak link never ships as a story box; it
+  stays in the notes or becomes a footnote.
+- Required: the `<h4>` with `par-title` and `par-ref`, then `par-story`, `par-diff` and
+  `par-does`. `par-match` and `par-later` are optional.
+- Read the target text before writing the box. Quote Matthew in the verse text's own
+  wording.
+- Transliteration only, and no `data-root`/`class="r"`/`class="rl"` inside (same reason
+  as the synoptic box). No named commentators.
+- No floor and no cap: as many as the unit's scenes earn. Each box is harvested into the
+  canon (an intertext row per reference, a type-scene row for `data-scene`), so don't
+  repeat it in `intertext[]` or `typescenes[]`.
 
 ### Compare box (contested verses only)
 
@@ -356,7 +429,7 @@ pointer below.
 </div>
 ```
 
-### Synoptic parallel (contested / illuminating divergences only)
+### Synoptic parallel (every telling divergence)
 
 ```html
 <aside class="synoptic" data-anchor="9:2">
@@ -371,14 +444,17 @@ pointer below.
 verse's `<p class="v">` — after any `.gloss`/`.compare` already attached to that verse, same
 placement rule as those. It is emitted whole, with its own `<h4>` header naming the
 parallel(s) — the app doesn't rewrite the header, it only hides the aside by default and
-adds its ✦-chip toggle (crimson accent, distinct from the gold "Rendering" chip; a separate
+adds its ✧-chip toggle (its own accent, distinct from the gold "Rendering" chip; a separate
 toggle per parallel, not merged the way multiple `.compare` boxes are). `data-anchor` is
 informational (matches the verse it sits after) — the app locates it by DOM position, not
 by the attribute. Never nest it inside the verse. Never put `data-root`/`class="r"`/
 `class="rl"` inside it — the occurrence scanner counts every `data-root` in the file and a
 coloured word here corrupts cross-unit thread counts. Greek inside a row is
-`<span class="translit">…</span>`, plain, uncoloured. Use sparingly — 0–3 per unit, only
-where the divergence does real exegetical work, not for every triple-tradition pericope.
+`<span class="translit">…</span>`, plain, uncoloured. **How many:** no cap (Lane,
+2026-10-25; it was 0–3, and every unit hit it). Every scene Mark, Luke or John tell gets
+checked, and every one where Matthew's change is telling (an addition, an omission, a
+reordering, a rewording that shifts the point) gets a box: expect roughly three to six a
+unit. The same event in another gospel is a synoptic, never an `aside.story`.
 
 ### Endnotes
 
@@ -407,9 +483,11 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] No `roots` entry carries a colour. No `--c-*` vars anywhere. No inline `style="color:…"` / `style="background:…"`.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
-- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo` as siblings, not nested. Endnote markers sit at the end of the verse `<p>`, never inside a `.gloss`.
-- [ ] No `aside.synoptic` or `aside.echo` block contains `data-root`, `class="r"`, or `class="rl"` — translit only.
-- [ ] Every `aside.echo` has a `data-anchor="C:V"` matching the verse it follows.
+- [ ] `<p class="v">` verses with `.gloss`/`.compare`/`aside.synoptic`/`aside.echo`/`aside.story` as siblings, not nested. Endnote markers sit at the end of the verse `<p>`, never inside a `.gloss`.
+- [ ] No `aside.synoptic`, `aside.echo` or `aside.story` block contains `data-root`, `class="r"`, or `class="rl"` — translit only.
+- [ ] Every `aside.echo` and `aside.story` has a `data-anchor="C:V"` matching the verse it follows.
+- [ ] Every `aside.story` states a difference (`par-diff`), tells the story (`par-story`) and says what it does in Matthew (`par-does`); its `data-strength` is `strong` or `possible`, never weak; a `type-scene` box has its `data-scene`.
+- [ ] Each link lives in one place (§1a "What belongs where"): no `aside.echo` for a link a story box already covers, no story box for the same event in another gospel.
 - [ ] The translation is divided into passage groups by `<h3 class="pericope">Title <span>· C:V–V</span></h3>` — no other heading form.
 - [ ] Structural blocks (`.ring`, `table.exod`, `.itin`) come first, before the verses. The site also hoists them, but author them up top.
 - [ ] A block that stands in place of verses carries `data-verses`; every `.itin` stop's `<sup>` is `C:V` or `C:V–V`.
@@ -424,7 +502,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] Compare box only at genuinely contested verses; include NASB, bring in Hart / Lattimore where their rendering is provocative.
 - [ ] Hyperlinks for significant LXX/OT citations and key terms (biblehub, Logeion, NETS, earlyjewishwritings).
 - [ ] Every `<p class="v">` that quotes/cites an OT text ends with a linked `(Book C:V)` Bible Hub pointer (§ OT citation pointer) — after the quote, before any `<sup>`; quoted words not themselves wrapped in the link.
-- [ ] Every word with a Torah/LXX or later-canon history gets an `echo` (§1a) — a local `roots[]` entry if nowhere else, or an `aside.echo` for a verse-level connection. Checked against `canon-leads/canon-leads-unit-NN.md` and the intertext pass's ledger (`core-workflow.md` pass 3), not from memory.
+- [ ] Every word with a Torah/LXX or later-canon history gets an `echo` (§1a) — a local `roots[]` entry if nowhere else, or an `aside.echo` for a verse-level connection. Checked against `canon-leads/canon-leads-unit-NN.md` and the research pass's notes file (`core-workflow.md` pass 2), not from memory.
 - [ ] Chiasms / concentric structures mapped in a `.ring` block, not just described. These should be real and verifiable only, not loose made up connections forcing a pattern.
 - [ ] Repeated-word counts noted only where the frequency is theologically significant (3, 7, 10, 12, 40, 70…).
 - [ ] Transliteration only — zero native Greek or Hebrew script anywhere, attribute values and `threads.candidates` included.
@@ -441,7 +519,7 @@ where the divergence does real exegetical work, not for every triple-tradition p
 - [ ] (Site side, Lane / Claude Code) `python -m biblecore port NN`, review the thread delta and promotions, `data-w`, `build`, `test`, eyeball in the browser, commit.
 
 ### Chat-side conventions
-The research passes (briefing, commentary, intertext ledger) are governed by the project instructions (`CHAT_SIDE_INSTRUCTIONS.md`) and `core-workflow.md`, not by this file.
+The research passes (briefing, research notes, verse-by-verse) are governed by the project instructions (`CHAT_SIDE_INSTRUCTIONS.md`) and `core-workflow.md`, not by this file.
 
 ---
 
