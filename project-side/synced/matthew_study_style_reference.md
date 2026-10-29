@@ -184,12 +184,13 @@ The whole artifact is one `<article>`, and nothing else — no `<!doctype>`, `<h
 | `passage` | ✓ | e.g. `"Matthew 9:1–34"` |
 | `title` | ✓ | working title from the Unit Map (`matthew-literary-unit-map.md`), refined if needed |
 | `roots` | ✓ | every tracked root: `{root, translit, gloss, echo?}`. **No colour.** One Greek lexical root each — same-stem forms joined by `·` in `translit`; never a bundle of different words (§1). `echo` (§1a) is optional. |
-| `threads` | ✓ | `{opens, payoffs, candidates, retro}` — all four present, each a list, empty is fine; see below |
+| `threads` | ✓ | `{opens, payoffs, candidates, retro, promote?}` — the first four present, each a list, empty is fine; `promote` optional; see below |
 | `slug` | — | `"unit-09"`; derived if omitted |
 | `movement` | — | 1 / 2 / 3; looked up from the Unit Map if omitted |
 | `descriptor` | — | the masthead tail line |
 | `discourse` | — | `true` for the five discourse units |
-| `questions` | — | wording or data calls only Lane can make (below) |
+| `questions` | — | calls only Lane can make, with a genuinely open alternative (below) |
+| `checks` | — | claims about other passages' text for the code side to verify (below) |
 | `intertext` | — | cross-book links worth recording (below) |
 | `typescenes` | — | type-scene instances in this unit (below) |
 
@@ -216,12 +217,27 @@ porter fills it. The porter dry-checks each against the target
 fragment and merges the ones that apply. Use this instead of a prose "we should revisit
 Unit 6" note.
 
-### `questions[]`, `intertext[]`, `typescenes[]` (optional)
+`threads.promote` (optional) — a new thread ready for `threads.json`, taken from the
+handoff: `{entry, reach, retrofit}`. `entry` is `{id, root, ids, gloss, opens: {unit, ref,
+note?}, payoffs: [{unit, ref, note?}], translit?, note?}` (`ids` the lemma ids; no colour,
+`python -m biblecore colour` assigns it), `reach` a sentence ("16 occurrences, retrofit in
+units 1, 2, 5"), `retrofit` the unit numbers that need tags added. Use it for a thread Lane
+has ruled on with the reach in view; `candidates` stays for a proposal that still needs an
+id set. The porter turns it into a ready delta.
 
-- `questions[]` — `{topic, note, options?}`. A wording or data call only Lane can
-  make goes here **instead of** being asked in chat. Render your best provisional
-  choice so the draft keeps moving, and flag it. Claude Code asks Lane each one by
-  popup when the unit is ported.
+### `questions[]`, `checks[]`, `intertext[]`, `typescenes[]` (optional)
+
+- `questions[]` — `{topic, note, options?}`. A call only Lane can make, with a
+  genuinely open alternative the unit's argument depends on. Read
+  `translation-choices.md` and the earlier units' meta first: a wording already ruled
+  is used, with a note in the artifact's prose, not a question. The build chat puts the
+  handoff's questions to Lane in chat first; only what's still open goes here. Render
+  your best provisional choice so the draft keeps moving, and flag it. Claude Code asks
+  Lane each one by popup when the unit is ported.
+- `checks[]` — `{ref, claim, expect}`. A claim about another passage's text that the
+  code side can verify against the corpus (`ref` like `"Isa 22:22"`, `claim` what the
+  artifact says, `expect` the lemma(s) it should find, a string or a list). Never a
+  question: the porter prints checks in their own section and Lane doesn't answer them.
 - `intertext[]` — `{ref, to, kind, note?}`: `ref` a bare `"C:V"` in Matthew, `to` a
   reference like `"Isa 6:10"`, `kind` one of `quotation`, `allusion`, `echo`,
   `type-scene`, `story`, `character`, `reuse`. An `aside.echo`, a root's `echo` and
@@ -479,7 +495,7 @@ unit. The same event in another gospel is a synoptic, never an `aside.story`.
 
 **Fragment structure**
 - [ ] The file is one `<article class="unit" data-unit="N">…</article>` and nothing else — no `<head>`, `<style>`, `<link>`, `<!doctype>`.
-- [ ] `<script type="application/json" id="unit-meta">` is the first child of `<article>` and is valid JSON with `unit`, `passage`, `title`, `roots`, and `threads` (all four lists: `opens`, `payoffs`, `candidates`, `retro`).
+- [ ] `<script type="application/json" id="unit-meta">` is the first child of `<article>` and is valid JSON with `unit`, `passage`, `title`, `roots`, and `threads` (the four lists `opens`, `payoffs`, `candidates`, `retro`; `promote` optional).
 - [ ] No `roots` entry carries a colour. No `--c-*` vars anywhere. No inline `style="color:…"` / `style="background:…"`.
 - [ ] Every coloured word is `<span class="r" data-root="X">` or `class="rl"`; every `X` appears in `threads-digest.md` **or** in the `roots` array.
 - [ ] Endnote `id`/`href` use bare `nK`; every `href="#nK"` resolves in-fragment.
@@ -511,7 +527,9 @@ unit. The same event in another gospel is a synoptic, never an `aside.story`.
 **Threads**
 - [ ] Checked `threads-digest.md`: **every** morphological occurrence of a tracked thread's Greek root in this passage is tagged with its thread `id` — even where the English renders it with a different word (*hamartōlos* → "sinner" still tags `sin`; *periballō* → "clothe" still tags `throw`). The tag follows the Greek lexeme, not the gloss. Threads that open or land here are also listed under `threads.opens` / `threads.payoffs`. The porter's coverage audit will list any you missed.
 - [ ] Any root recurring across units that isn't yet a thread → `threads.candidates` with a reason (+ `ids` or `seq`, `refs`). Not tagged until it is promoted.
-- [ ] Any call only Lane can make → `questions[]` with your best provisional choice rendered, not a question in chat.
+- [ ] A new thread Lane has ruled on, with its reach → `threads.promote` (`entry`, `reach`, `retrofit`), copied from the handoff.
+- [ ] Any call only Lane can make → `questions[]` with your best provisional choice rendered, not a question in chat after the handoff's questions have been asked. Only genuinely open calls, never a wording `translation-choices.md` or an earlier unit already rules.
+- [ ] Claims about other passages' text the code side can verify → `checks[]` (`ref`, `claim`, `expect`), never `questions[]`.
 - [ ] Anything you noticed about an **earlier** unit (a missed tag, a mis-tag) → `threads.retro`, not a prose aside.
 
 **Ship**
@@ -519,7 +537,7 @@ unit. The same event in another gospel is a synoptic, never an `aside.story`.
 - [ ] (Site side, Lane / Claude Code) `python -m biblecore port NN`, review the thread delta and promotions, `data-w`, `build`, `test`, eyeball in the browser, commit.
 
 ### Chat-side conventions
-The research passes (briefing, research notes, verse-by-verse) are governed by the project instructions (`CHAT_SIDE_INSTRUCTIONS.md`) and `core-workflow.md`, not by this file.
+The research passes (briefing, research notes, verse-by-verse) and the handoff are governed by the project instructions (`CHAT_SIDE_INSTRUCTIONS.md`), `core-workflow.md` and `canon-handoff-template.md`, not by this file. The artifact itself is built in a fresh build chat that opens with the pasted handoff; it builds from that, this file and the synced files without redoing the research.
 
 ---
 
