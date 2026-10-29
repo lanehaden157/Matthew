@@ -1,11 +1,12 @@
 # Cross-unit threads — canonical digest
 
-Generated from `data/threads.json` (version 1). 90 threads, 90 open.
+Generated from `data/threads.json` (version 1). 92 threads, 92 open.
 
 **This is the source of truth for thread tagging.** In a unit's fragment, a root that appears in the `id` column below is a *tracked thread*: tag every occurrence `<span class="r" data-root="<id>" data-w="<word id>">…</span>` (the word id from `Matthew-words.tsv`) and list it under `threads.opens` / `threads.payoffs` in the unit-meta block, with a matching id set in `data/roots.json`. A root that is recurring but *not* here is unit-local — tag it with its own name (no `data-w` needed) and just declare it in the unit's own `roots`. To propose promoting a local root to a tracked thread, add it to `threads.candidates` with a one-line reason (the Strong's/lemma `ids` you've actually observed in `Matthew-words.tsv`, plus a few representative `refs`, if you have them). **Claude decides, biased toward book-wide**: a local root that later pays off is worse than a tracked one that doesn't, so promote on a real second sighting. Ask Lane only when genuinely unsure.
 
 | id | root (data-root) | translit | gloss | opens | payoffs | status |
 |---|---|---|---|---|---|---|
+| `anointed` | `anointed` | christos | anointed one / Christ | 1 (1:1) | 2 (2:4) · 11 (11:2) · 16 (16:16, 20) · 22 (22:42) · 23 (23:10) · 24 (24:5, 23) · 26 (26:63, 68) · 27 (27:17, 22) | open |
 | `call` | `call` | kaleō | call, name | 1 (1:21) | 9 (9:13) · 22 (22:3-9) · 23 (23:8-10) | open |
 | `fulfill` | `fulfill` | plēroō | fill full / fulfill | 1 (1:22) | 3 (3:15) · 5 (5:17) · 12 (12:17) · 13 (13:35) · 14 (14:20) | open |
 | `raise` | `raise` | egeirō | raise up, rouse from lying down | 1 (1:24) | 8 (8:15) · 9 (9:25) · 17 (16:21) · 28 (28:6-7) · 14 (14:2) | open |
@@ -16,21 +17,21 @@ Generated from `data/threads.json` (version 1). 90 threads, 90 open.
 | `house` | `house` | oikia · oikos | house, household | 2 (2:11) | 7 (7:24–27) · 10 (10:6) · 12 (12:25–29, 12:44) · 13 (13:1) · 14 (13:57) | open |
 | `joy` | `joy` | chara · chairō | joy; rejoice | 2 (2:10) | 13 (13:20, 44) | open |
 | `king` | `king` | basileus | king | 2 (2:1) | 14 (14:9) · 18 (18:23) · 22 (22:2–13) · 27 (27:11–42) | open |
-| `seek` | `seek` | zēteō | seek | 2 (2:13) | 6 (6:33) · 7 (7:7) · 13 (13:45) | open |
+| `seek` | `seek` | zēteō | seek | 2 (2:13) | 6 (6:33) · 7 (7:7) · 13 (13:45) · 16 (16:4) | open |
 | `treasure` | `treasure` | thēsauros · thēsaurizō | treasure, storehouse; store up | 2 (2:11) | 6 (6:19–21) · 12 (12:35) · 13 (13:44) | open |
 | `withdraw` | `withdraw` | anachōreō | withdraw | 2 (2:12) | 2 (2:13-14, 22) · 4 (4:12) · 9 (9:24) · 12 (12:15) · 14 (14:13) | open |
 | `worship` | `worship` | proskyneō | worship, bow down | 2 (2:2) | 3 (4:9-10) · 28 (28:9, 17) · 14 (14:33) | open |
 | `fruit` | `fruit` | karpos | fruit | 3 (3:8–10) | 7 (7:16–20) · 12 (12:33) · 13 (13:8) | open |
 | `gather` | `gather` | synagō · episynagō | gather | 3 (3:12) | 6 (6:26) · 12 (12:30) · 13 (13:2, 30, 47) | open |
-| `immerse` | `immerse` | baptizō · baptisma · baptistēs | immerse (bapt-) | 3 (3:1) | 11 (11:11-12) · 14 (14:2) | open |
-| `kingdom` | `kingdom` | basileia | kingdom | 3 (3:2) | 4 (4:17) · 5 (5:3, 10, 19-20) · 13 (13:1-52) · 12 (12:28) | open |
+| `immerse` | `immerse` | baptizō · baptisma · baptistēs | immerse (bapt-) | 3 (3:1) | 11 (11:11-12) · 14 (14:2) · 16 (16:14) | open |
+| `kingdom` | `kingdom` | basileia | kingdom | 3 (3:2) | 4 (4:17) · 5 (5:3, 10, 19-20) · 13 (13:1-52) · 12 (12:28) · 16 (16:19) | open |
 | `metanoia` | `metanoia` | metanoia · metanoeō | repent, change one's mind | 3 (3:2) | 4 (4:17) · 11 (11:20) · 12 (12:41) | open |
 | `test` | `test` | peirazō | test / tempt | 3 (4:3) | 16 (16:1) · 19 (19:3) · 22 (22:18, 35) | open |
 | `well-pleased` | `well-pleased` | eudokeō | be well pleased, take delight in | 3 (3:17) | 11 (11:26) · 12 (12:18) | open |
 | `wilderness` | `wilderness` | erēmos | wilderness, desert place | 3 (3:1) | 14 (14:13–15) | open |
 | `worthy` | `worthy` | axios | worthy, of matching weight | 3 (3:8) | 10 (10:10-11, 37-38) · 22 (22:8) | open |
 | `apo-tote` | `apo-tote` | apo tote | "from that time" | 4 (4:17) | 17 (16:21) | open |
-| `bread` | `bread` | artos | bread | 4 (4:3–4) | 14 (14:17–19) | open |
+| `bread` | `bread` | artos | bread | 4 (4:3–4) | 14 (14:17–19) · 16 (16:5) | open |
 | `come-here` | `come-here` | deute | come here! (a summons) | 4 (4:19) | 11 (11:28) | open |
 | `fish` | `fish` | halieus | fisher | 4 (4:19) | 13 (13:47) | open |
 | `follow` | `follow` | akoloutheō | follow (after) | 4 (4:20) | 8 (8:23) · 9 (9:9, 19, 27) · 10 (10:38) · 14 (14:13) | open |
@@ -38,20 +39,21 @@ Generated from `data/threads.json` (version 1). 90 threads, 90 open.
 | `light` | `light` | phōs | light | 4 (4:16) | 5 (5:14) · 6 (6:23) | open |
 | `nations` | `nations` | ethnē | nations / Gentiles | 4 (4:15) | 10 (10:5, 18) · 28 (28:19) · 12 (12:18, 12:21) | open |
 | `sea` | `sea` | thalassa | sea | 4 (4:15) | 8 (8:24-32) · 13 (13:1) · 14 (14:25) | open |
+| `blessed` | `blessed` | makarios | blessed / fortunate | 5 (5:3-11) | 11 (11:6) · 13 (13:16) · 16 (16:17) · 24 (24:46) | open |
 | `enemy` | `enemy` | echthros | enemy | 5 (5:43–44) | 10 (10:36) · 13 (13:25, 28, 39) | open |
 | `eye` | `eye` | ophthalmos | eye | 5 (5:29) | 7 (7:3–5) · 13 (13:15–16) | open |
-| `father` | `father` | patēr | Father | 5 (5:16) | 6 (6:9) · 11 (11:25-27) · 13 (13:43) | open |
+| `father` | `father` | patēr | Father | 5 (5:16) | 6 (6:9) · 11 (11:25-27) · 13 (13:43) · 16 (16:17) | open |
 | `gehenna` | `gehenna` | geenna | Gehenna | 5 (5:22) | 10 (10:28) · 23 (23:15, 33) | open |
 | `gentle` | `gentle` | praus | gentle, humble | 5 (5:5) | 11 (11:29) | open |
 | `heart` | `heart` | kardia | heart | 5 (5:8) | 11 (11:29) · 12 (12:34) · 13 (13:15, 19) | open |
 | `judge` | `judge` | krinō · krisis · kritēs · katakrinō | judge; judgment; judge against | 5 (5:21–25) | 7 (7:1–2) · 10 (10:15) · 11 (11:22–24) · 12 (12:18–42) | open |
 | `law-prophets` | `law-prophets` | ho nomos kai hoi prophētai | the Law & the Prophets | 5 (5:17) | 7 (7:12) · 11 (11:13) | open |
-| `learn` | `learn` | mathētēs | learner | 5 (5:1) | 8 (8:23) · 9 (9:14) · 11 (11:2) · 12 (12:49) · 13 (13:52) · 14 (14:12) | open |
+| `learn` | `learn` | mathētēs | learner | 5 (5:1) | 8 (8:23) · 9 (9:14) · 11 (11:2) · 12 (12:49) · 13 (13:52) · 14 (14:12) · 16 (16:5) | open |
 | `peace` | `peace` | eirēnē | peace | 5 (5:9) | 10 (10:13, 34) | open |
 | `skandalon` | `skandalon` | skandalon · skandalizō | trip up / trap-trigger, cause to stumble | 5 (5:29) | 11 (11:6) · 26 (26:31-33) · 13 (13:21) · 14 (13:57) | open |
 | `wage` | `wage` | misthos | wage / reward | 5 (5:12) | 6 (6:1-16) · 10 (10:41-42) | open |
 | `anxious` | `anxious` | merimnaō | be pulled apart with care | 6 (6:25) | 10 (10:19) · 13 (13:22) | open |
-| `evil` | `evil` | ponēros | evil / the evil one | 6 (6:13) | 7 (7:11, 17-18) · 13 (13:19, 38) | open |
+| `evil` | `evil` | ponēros | evil / the evil one | 6 (6:13) | 7 (7:11, 17-18) · 13 (13:19, 38) · 16 (16:4) | open |
 | `hide` | `hide` | kryptō · apokryptō · kryptos | hide; hidden | 6 (6:4) | 11 (11:25) · 13 (13:33, 35, 44) | open |
 | `little-faith` | `little-faith` | oligopistoi | "little-faiths" | 6 (6:30) | 8 (8:26) · 14 (14:31) · 16 (16:8) | open |
 | `release` | `release` | aphiēmi | release / let go / leave | 6 (6:12) | 8 (8:15) · 9 (9:2) · 12 (12:31–32) · 13 (13:30) | open |
@@ -68,7 +70,7 @@ Generated from `data/threads.json` (version 1). 90 threads, 90 open.
 | `clean` | `clean` | katharizō | cleanse, make ritually pure | 8 (8:2-3) | 10 (10:8) | open |
 | `faith` | `faith` | pistis · pisteuō | trust, faith | 8 (8:10) | 9 (9:2, 22, 29) · 15 (15:28) · 17 (17:20) · 21 (21:21) · 14 (13:58) | open |
 | `shake` | `shake` | seismos | shaking / earthquake / storm | 8 (8:24) | 27 (27:51-54) · 28 (28:2) | open |
-| `son-of-man` | `son-of-man` | ho huios tou anthrōpou | the Son of Man | 8 (8:20) | 9 (9:6) · 10 (10:23) · 11 (11:19) · 17 (16:13, 16:27) · 17 (17:9, 17:22) · 19 (19:28) · 20 (20:18, 20:28) · 24 (24:27-44) · 25 (25:31) · 26 (26:24, 26:64) · 12 (12:8) · 13 (13:37) | open |
+| `son-of-man` | `son-of-man` | ho huios tou anthrōpou | the Son of Man | 8 (8:20) | 9 (9:6) · 10 (10:23) · 11 (11:19) · 17 (16:27) · 17 (17:9, 17:22) · 19 (19:28) · 20 (20:18, 20:28) · 24 (24:27-44) · 25 (25:31) · 26 (26:24, 26:64) · 12 (12:8) · 13 (13:37) · 16 (16:13) | open |
 | `throw` | `throw` | ballō | throw / cast / put / pour / clothe (broad range) | 8 (8:6) | 9 (9:2, 16-17, 25, 33-34) · 10 (9:38; 10:1, 8, 34) · 12 (12:20, 12:24–28, 12:35) · 13 (13:47) | open |
 | `torment` | `torment` | basanizō | torment | 8 (8:6) | 8 (8:29) · 14 (14:24) | open |
 | `urge` | `urge` | parakaleō | urge / entreat / call alongside | 8 (8:5) | 8 (8:31-34) · 14 (14:36) | open |
@@ -85,14 +87,14 @@ Generated from `data/threads.json` (version 1). 90 threads, 90 open.
 | `harvest` | `harvest` | therismos · theristēs · therizō | harvest; reaper; reap | 10 (9:37–38) | 13 (13:30) · 13 (13:39) | open |
 | `householder` | `householder` | oikodespotēs | master of the house | 10 (10:25) | 13 (13:27, 52) | open |
 | `lose` | `lose` | apollymi | lose, destroy, be lost | 10 (10:6) | 10 (10:28, 39, 42) · 15 (15:24) · 18 (18:11-14) · 12 (12:14) | open |
-| `generation` | `generation` | genea | generation; a class of people | 11 (11:16) | 12 (12:39–45) | open |
+| `generation` | `generation` | genea | generation; a class of people | 11 (11:16) | 12 (12:39–45) · 16 (16:4) | open |
 | `rest` | `rest` | anapausis · anapauō | rest, give rest | 11 (11:28–29) | 12 (12:43) | open |
 | `snatch` | `snatch` | harpazō | snatch, seize | 11 (11:12) | 12 (12:29) · 13 (13:19) | open |
 | `counsel` | `counsel` | symboulion | council, plot — 'take counsel' | 12 (12:14) | — | open |
 | `permitted` | `permitted` | exestin · exon | it is permitted (the legal question) | 12 (12:2–12) | 14 (14:4) | open |
-| `sign` | `sign` | sēmeion | sign, token | 12 (12:38–39) | — | open |
+| `sign` | `sign` | sēmeion | sign, token | 12 (12:38–39) | 16 (16:1) | open |
 | `completion-of-age` | `completion-of-age` | synteleia tou aiōnos | "the completion of the age" | 13 (13:39) | 13 (13:40, 49) | open |
-| `understand` | `understand` | syniēmi · synetos · asynetos | understand — literally 'throw together' | 13 (13:13) | 13 (13:13–15, 19, 23, 51) | open |
+| `understand` | `understand` | syniēmi · synetos · asynetos | understand — literally 'throw together' | 13 (13:13) | 13 (13:13–15, 19, 23, 51) · 16 (16:12) | open |
 | `grieve` | `grieve` | lypeō | grieve, be sorrowful | 14 (14:9) | 14 (14:9) | open |
 | `send-away` | `send-away` | apolyō | send away, release, divorce | 14 (14:15) | 14 (14:15, 22–23) · 15 (15:23, 32, 39) | open |
 | `waver` | `waver` | distazō | waver, doubt | 14 (14:31) | 14 (14:31) | open |
@@ -100,10 +102,12 @@ Generated from `data/threads.json` (version 1). 90 threads, 90 open.
 ## Notes per thread
 
 - **`acts-of-power`**: dynamis — 'act of power, mighty work.' Kept literal rather than 'miracle' (which implies a modern category of the supernatural Matthew doesn't use) or 'power' alone (which loses the countable, event-shaped sense — these are things done, plural).
+- **`anointed`**: christos — promoted at the unit-16 port (2026-10-28). Title, then name, then confession (16:16).
 - **`anxious`**: Promoted from unit-06's local palette when merimnaō recurred at 10:19. Related to merizō, 'to divide' — kept as the clumsier 'pulled apart with care' rather than smoother 'worry' or 'anxious,' to keep the division-sense visible.
 - **`apo-tote`**: Two 'from that time' hinges: 4:17 ('began to proclaim') <-> 16:21 ('began to show he must suffer'). Read the two together at Unit 17.
 - **`astonish`**: Promoted at the unit-14 port (2026-10-01): ekplēssomai. The crowds’ astonishment at the Sermon (7:28) curdles into offense at Nazareth (13:54). Ahead: 19:25, 22:33.
 - **`authority`**: The crowds marvel that he teaches with authority (7:29); it runs to the mountain of commission (28:18).
+- **`blessed`**: makarios — promoted at the unit-16 port (2026-10-28).
 - **`bread`**: Promoted at the unit-14 port (2026-10-01): artos. The wilderness refusal (4:3–4) becomes the wilderness feeding (14:17–19) and the table (26:26). Ahead: 15:26–36, 16:5–12, 26:26.
 - **`build`**: The wise builder builds on rock (7:24) -> 'I will build my assembly' (16:18).
 - **`call`**: kaleō — the naming at 1:21 ('you shall call his name Jesus') becomes the calling of the unworthy (9:13) and the vocabulary of the kingdom's invitations. Distinct from prefixed compounds (parakaleō 'urge', proskaleomai 'summon', ekklēsia 'assembly'), each its own word.

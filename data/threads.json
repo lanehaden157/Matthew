@@ -431,7 +431,7 @@
         },
         {
           "unit": 17,
-          "ref": "16:13, 16:27"
+          "ref": "16:27"
         },
         {
           "unit": 17,
@@ -466,6 +466,11 @@
           "unit": 13,
           "ref": "13:37",
           "note": "The sower of good seed is the Son of Man (13:37), who also sends 'his angels' to collect out of 'his kingdom' (13:41)."
+        },
+        {
+          "unit": 16,
+          "ref": "16:13",
+          "note": "Jesus asks about the Son of Man, his own title, before Simon answers with two others"
         }
       ],
       "note": "Daniel 7:13-14 — one like a son of man given everlasting dominion. Runs from 8:20 to the trial and the parousia."
@@ -996,6 +1001,11 @@
           "unit": 12,
           "ref": "12:39–45",
           "note": "the generation of 11:16 now named 'evil and adulterous,' judged by Ninevites and a southern queen."
+        },
+        {
+          "unit": 16,
+          "ref": "16:4",
+          "note": "the generation of 11:16 and 12:39–45, named again"
         }
       ],
       "note": "genea shifts from the literal genealogical generations of 1:17 to a moral class of people, opening its tracked sense at 11:16 ('this generation'). The 1:17 occurrence is tagged for lexical completeness, not claimed as the same sense."
@@ -1210,6 +1220,11 @@
           "unit": 13,
           "ref": "13:43",
           "note": "'The kingdom of their Father' — the only time Matthew says 'their' Father's kingdom."
+        },
+        {
+          "unit": 16,
+          "ref": "16:17",
+          "note": "my Father in the skies is the one who reveals, as in the thanksgiving of 11:25–27"
         }
       ],
       "note": "patēr — tagged at every occurrence including the ordinary human sense (2:22, Herod's father); the tracked thread proper opens at 5:16, 'your Father who is in the skies,' Matthew's characteristic address for God.",
@@ -1276,6 +1291,11 @@
           "unit": 13,
           "ref": "13:45",
           "note": "The Sermon's 'seek first the kingdom' (6:33) and 'seek and y'all will find' (7:7) acted out: the merchant seeks, finds, sells all."
+        },
+        {
+          "unit": 16,
+          "ref": "16:4",
+          "note": "this generation seeks a sign, as it did at 12:39"
         }
       ],
       "note": "zēteō — Herod seeks the child to destroy him (2:13); the Sermon turns the same verb toward the kingdom (6:33) and toward prayer itself (7:7).",
@@ -1341,6 +1361,11 @@
           "unit": 12,
           "ref": "12:28",
           "note": "'the kingdom of God has arrived upon y'all' — no longer only drawn near (3:2, 4:17), but arrived."
+        },
+        {
+          "unit": 16,
+          "ref": "16:19",
+          "note": "the kingdom of the skies, now with keys"
         }
       ],
       "note": "basileia — 'the kingdom of the skies has drawn near' (3:2, 4:17) governs the Sermon's beatitudes and the parables to come. Distinct from basileus 'king' (10:18, 17:25, 18:23, 22:2), a different word not tracked here.",
@@ -1367,6 +1392,11 @@
           "unit": 13,
           "ref": "13:19, 38",
           "note": "the evil one snatches the seed; the sons of the evil one"
+        },
+        {
+          "unit": 16,
+          "ref": "16:4",
+          "note": "'evil and adulterous generation': the label of 12:39 again"
         }
       ],
       "note": "ponēros — tagged from its first occurrence (5:11) but the tracked thread proper opens at the Lord's Prayer's 'deliver us from the evil one' (6:13), which the Sermon and the parables keep answering.",
@@ -1632,6 +1662,11 @@
           "unit": 14,
           "ref": "14:12",
           "note": "John’s own learners bury him and come to Jesus, as they did at 11:2"
+        },
+        {
+          "unit": 16,
+          "ref": "16:5",
+          "note": "the learners are the ones who forgot bread, and the ones who then understand (16:12)"
         }
       ],
       "note": "mathētēs — 'learner,' from manthanō, 'to learn.' Rendered 'learner' rather than the loan-word 'disciple' throughout the running translation, to keep the ordinary sense of the word audible."
@@ -1683,6 +1718,11 @@
         {
           "unit": 14,
           "ref": "14:2"
+        },
+        {
+          "unit": 16,
+          "ref": "16:14",
+          "note": "John the Immerser is still the first name on the list of who people think Jesus is (14:1–2)"
         }
       ],
       "note": "Promoted from unit-03's local palette when the noun baptistēs ('Immerser') recurred as John's title at 11:11-12. Rendered 'immerse / Immerser' throughout — never 'baptize / Baptist' — to keep the ordinary washing-verb sense audible."
@@ -1844,7 +1884,13 @@
         "unit": 12,
         "ref": "12:38–39"
       },
-      "payoffs": [],
+      "payoffs": [
+        {
+          "unit": 16,
+          "ref": "16:1",
+          "note": "the sign demanded in 12:38 is demanded again and refused in the same words; the sign of Jonah stays the one exception"
+        }
+      ],
       "note": "Promoted at the unit-12 port (2026-09-20). The sign of Jonah; returns at 16:1–4, 24:3, 24:24, 24:30 and Judas's sign (26:48)."
     },
     {
@@ -2159,6 +2205,11 @@
           "unit": 13,
           "ref": "13:13–15, 19, 23, 51",
           "note": "seeing they do not see, hearing they do not understand; the good soil 'understands'; 'Did y'all understand all these things? They say to him, Yes.'"
+        },
+        {
+          "unit": 16,
+          "ref": "16:12",
+          "note": "'then they understood': the learners do the thing Isaiah 6 said a hardened people would not (13:13–15)"
         }
       ],
       "note": "Promoted at the unit-13 port (2026-09-26): syniēmi. Matthew credits the learners with it where Mark stresses their confusion. Ahead: 15:10; 16:12; 17:13. 2026-10-03: asynetos (15:16) added to the thread."
@@ -2436,6 +2487,11 @@
           "unit": 14,
           "ref": "14:17–19",
           "note": "five breads: the wilderness refusal (4:3–4) becomes the wilderness feeding"
+        },
+        {
+          "unit": 16,
+          "ref": "16:5",
+          "note": "the bread the learners forgot is heard against the two feedings (14:17–21; 15:34–38)"
         }
       ],
       "note": "Promoted at the unit-14 port (2026-10-01): artos. The wilderness refusal (4:3–4) becomes the wilderness feeding (14:17–19) and the table (26:26). Ahead: 15:26–36, 16:5–12, 26:26."
@@ -2544,6 +2600,100 @@
         }
       ],
       "note": "basileus — promoted at the unit-14 rebuild (2026-10-25): the Herods, the parable kings, and the king of the Jews. Distinct from the kingdom (basileia)."
+    },
+    {
+      "id": "anointed",
+      "root": "anointed",
+      "translit": "christos",
+      "gloss": "anointed one / Christ",
+      "color": "#c85078",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 1,
+        "ref": "1:1",
+        "note": "the book's first noun-title: Jesus Anointed, son of David"
+      },
+      "payoffs": [
+        {
+          "unit": 2,
+          "ref": "2:4",
+          "note": "Herod asks where the Anointed One is to be born"
+        },
+        {
+          "unit": 11,
+          "ref": "11:2",
+          "note": "the works of the Anointed One, heard by John in prison"
+        },
+        {
+          "unit": 16,
+          "ref": "16:16, 20",
+          "note": "Simon: 'You are the Anointed One'; the learners are told to tell no one"
+        },
+        {
+          "unit": 22,
+          "ref": "22:42",
+          "note": "whose son is the Anointed One?"
+        },
+        {
+          "unit": 23,
+          "ref": "23:10",
+          "note": "one leader, the Anointed One"
+        },
+        {
+          "unit": 24,
+          "ref": "24:5, 23",
+          "note": "false anointed ones"
+        },
+        {
+          "unit": 26,
+          "ref": "26:63, 68",
+          "note": "the high priest adjures him; 'Prophesy to us, Anointed One'"
+        },
+        {
+          "unit": 27,
+          "ref": "27:17, 22",
+          "note": "'Jesus who is called Anointed' before Pilate"
+        }
+      ],
+      "note": "christos — promoted at the unit-16 port (2026-10-28). Title, then name, then confession (16:16)."
+    },
+    {
+      "id": "blessed",
+      "root": "blessed",
+      "translit": "makarios",
+      "gloss": "blessed / fortunate",
+      "color": "#a00020",
+      "status": "open",
+      "tagged": true,
+      "opens": {
+        "unit": 5,
+        "ref": "5:3-11",
+        "note": "the Beatitudes"
+      },
+      "payoffs": [
+        {
+          "unit": 11,
+          "ref": "11:6",
+          "note": "blessed is whoever is not tripped up over me"
+        },
+        {
+          "unit": 13,
+          "ref": "13:16",
+          "note": "blessed are your eyes, because they see"
+        },
+        {
+          "unit": 16,
+          "ref": "16:17",
+          "note": "blessed are you, Simon bar-Jonah: the Father revealed it"
+        },
+        {
+          "unit": 24,
+          "ref": "24:46",
+          "note": "blessed is that slave found doing so"
+        }
+      ],
+      "note": "makarios — promoted at the unit-16 port (2026-10-28)."
     }
   ]
 }

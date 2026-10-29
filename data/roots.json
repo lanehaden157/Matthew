@@ -632,6 +632,18 @@
         "basileus"
       ],
       "note": "king"
+    },
+    "anointed": {
+      "ids": [
+        "christos"
+      ],
+      "note": "anointed one / Christ"
+    },
+    "blessed": {
+      "ids": [
+        "makarios"
+      ],
+      "note": "blessed / fortunate"
     }
   }
 }

@@ -940,3 +940,6 @@
 ## 2026-10-25 — Unit 14 rebuilt, `king` promoted
 - Forced re-port of unit 14 from the revised source; Pharaoh's-birthday box shipped as a plain story box (no `royal-birthday-feast` id); 14:12 burial echo kept; eulogeō "spoke the blessing" ruled.
 - `king` (basileus) promoted book-wide (#788848); retrofit adds in units 1, 2, 5, 10, 11 (tags only); `fulfill` payoff at 14:20. Build, audit (0 gaps), test green.
+
+## 2026-10-28 — Unit 16 ported, `anointed` and `blessed` promoted
+- Ported unit 16; `anointed` (christos, #c85078) and `blessed` (makarios, #a00020) promoted book-wide; 17 retrofit `add` entries (units 1, 2, 5, 11, 13; tags only). Unit-16 payoffs added to sign, seek, evil, generation, bread, learn, understand, immerse, son-of-man, father, kingdom; son-of-man 16:13 moved off unit 17. Build, audit (0 gaps), test green.

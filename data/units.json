@@ -931,10 +931,39 @@
     {
       "n": 16,
       "slug": "unit-16",
-      "passage": "Matthew 16:1-20",
+      "passage": "Matthew 16:1–20",
       "title": "On This Rock",
       "movement": 2,
-      "built": false
+      "built": true,
+      "roots": {
+        "leaven": {
+          "color": "#b1481f",
+          "translit": "zymē",
+          "gloss": "leaven, the sour dough that works through a whole lump",
+          "echo": "Exod 12:15 and 13:7 (leaven cleared out for Passover, seven days); 1 Cor 5:6–8 and Gal 5:9 (a little leaven works through the whole lump). Matt 13:33 uses the same word of the kingdom, so the image itself is not bad; what is mixed in is."
+        },
+        "teaching": {
+          "color": "#8c6d1f",
+          "translit": "didachē",
+          "gloss": "teaching, what is taught",
+          "echo": "Matt 7:28 and 22:33 are the only other uses: the crowds astonished at his teaching. Here it is the Pharisees' and Sadducees' teaching that he warns against."
+        },
+        "assembly": {
+          "color": "#55642f",
+          "translit": "ekklēsia",
+          "gloss": "assembly, a gathering called out",
+          "echo": "Deut 4:10, 9:10 and 18:16 in the Greek Old Testament: 'the day of the assembly', Israel gathered before God at Horeb; Deut 23:2–9 'the assembly of Yahweh'. Matthew uses the word only here and at 18:17."
+        },
+        "key": {
+          "color": "#3d6b4a",
+          "translit": "kleis",
+          "gloss": "key",
+          "echo": "Rev 3:7 (the key of David) and Rev 1:18 (the risen Anointed One holds the keys of death and Hades). Isaiah 22:22 is told in the story box at 16:19."
+        }
+      },
+      "contract": "0.17.0",
+      "discourse": false,
+      "descriptor": "a sign refused, bread mistaken for leaven, and the rock Simon is named for"
     },
     {
       "n": 17,

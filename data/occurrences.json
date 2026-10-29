@@ -1,5 +1,41 @@
 {
   "unit-01": {
+    "anointed": {
+      "count": 4,
+      "verses": [
+        1,
+        16,
+        17,
+        18
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…Book of the genesis (biblos geneseōs) of Jesus ",
+          "hit": "Anointed",
+          "post": ", son of David, son of Abraham.…"
+        },
+        {
+          "v": 16,
+          "pre": "…of Mary, from whom was begotten Jesus, the one called ",
+          "hit": "Anointed",
+          "post": ".…"
+        },
+        {
+          "v": 17,
+          "pre": "…rations, and from the deportation of Babylon until the ",
+          "hit": "Anointed",
+          "post": " fourteen generations.…"
+        },
+        {
+          "v": 18,
+          "pre": "…Now of Jesus ",
+          "hit": "Anointed",
+          "post": " the genesis was thus. His mother Mary having been betr…"
+        }
+      ],
+      "total": 4
+    },
     "beget": {
       "count": 43,
       "verses": [
@@ -604,6 +640,21 @@
     }
   },
   "unit-02": {
+    "anointed": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…d scribes of the people, he inquired of them where the ",
+          "hit": "Anointed",
+          "post": " is begotten.…"
+        }
+      ],
+      "total": 1
+    },
     "beget": {
       "count": 2,
       "verses": [
@@ -1972,6 +2023,77 @@
     }
   },
   "unit-05": {
+    "blessed": {
+      "count": 9,
+      "verses": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are the poor in the spirit, for theirs is the kingdom…"
+        },
+        {
+          "v": 4,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are the mourning, for they shall be comforted.…"
+        },
+        {
+          "v": 5,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are the gentle, for they shall inherit the earth.…"
+        },
+        {
+          "v": 6,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are those hungering and thirsting for righteousness, f…"
+        },
+        {
+          "v": 7,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are the loyal-in-love, for they shall be shown loyal-l…"
+        },
+        {
+          "v": 8,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are the pure in heart, for they shall see God.…"
+        },
+        {
+          "v": 9,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are the peacemakers, for they shall be called sons of…"
+        },
+        {
+          "v": 10,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are those who have been persecuted for the sake of rig…"
+        },
+        {
+          "v": 11,
+          "pre": "",
+          "hit": "Blessed",
+          "post": " are y'all whenever they revile y'all and persecute and…"
+        }
+      ],
+      "total": 9
+    },
     "call": {
       "count": 3,
       "verses": [
@@ -6238,6 +6360,36 @@
       ],
       "total": 3
     },
+    "anointed": {
+      "count": 1,
+      "verses": [
+        2
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…ohn, having heard in the jailhouse of the deeds of the ",
+          "hit": "Anointed",
+          "post": " One, having sent through his learners,…"
+        }
+      ],
+      "total": 1
+    },
+    "blessed": {
+      "count": 1,
+      "verses": [
+        6
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…And ",
+          "hit": "blessed",
+          "post": " is whoever is not tripped up by me.\"…"
+        }
+      ],
+      "total": 1
+    },
     "burden": {
       "count": 2,
       "verses": [
@@ -7975,6 +8127,21 @@
         }
       ],
       "total": 3
+    },
+    "blessed": {
+      "count": 1,
+      "verses": [
+        16
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…But y'all's eyes are ",
+          "hit": "blessed",
+          "post": ", because they see, and y'all's ears, because they hear…"
+        }
+      ],
+      "total": 1
     },
     "collect": {
       "count": 6,
@@ -10945,6 +11112,426 @@
           "pre": "…But she, coming, kept ",
           "hit": "bowing low",
           "post": " to him, saying, \"Master, help me.\"…"
+        }
+      ],
+      "total": 1
+    }
+  },
+  "unit-16": {
+    "anointed": {
+      "count": 2,
+      "verses": [
+        16,
+        20
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…And Simon Peter, answering, said, \"You are the ",
+          "hit": "Anointed One",
+          "post": ", the Son of the living God.\"…"
+        },
+        {
+          "v": 20,
+          "pre": "…s to the learners that they tell no one that he is the ",
+          "hit": "Anointed One",
+          "post": ".…"
+        }
+      ],
+      "total": 2
+    },
+    "assembly": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…u that you are Peter, and on this rock I will build my ",
+          "hit": "assembly",
+          "post": ", and the gates of Hades will not prevail against it.…"
+        }
+      ],
+      "total": 1
+    },
+    "blessed": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…And Jesus, answering, said to him, \"",
+          "hit": "Blessed",
+          "post": " are you, Simon Bar-Jonah, because flesh and blood did…"
+        }
+      ],
+      "total": 1
+    },
+    "bread": {
+      "count": 7,
+      "verses": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…the learners, going to the other side, forgot to take ",
+          "hit": "bread",
+          "post": ".…"
+        },
+        {
+          "v": 7,
+          "pre": "…easoning among themselves, saying, \"Because we took no ",
+          "hit": "bread",
+          "post": ".\"…"
+        },
+        {
+          "v": 8,
+          "pre": "…among yourselves, little-faiths, because y'all took no ",
+          "hit": "bread",
+          "post": "?…"
+        },
+        {
+          "v": 9,
+          "pre": "…Do y'all not yet perceive, nor remember the five ",
+          "hit": "loaves",
+          "post": " of the five thousand, and how many baskets y'all took…"
+        },
+        {
+          "v": 10,
+          "pre": "…Nor the seven ",
+          "hit": "loaves",
+          "post": " of the four thousand, and how many hampers y'all took…"
+        },
+        {
+          "v": 11,
+          "pre": "…ll do not perceive that I did not speak to y'all about ",
+          "hit": "bread",
+          "post": "? But watch out for the leaven of the Pharisees and Sad…"
+        },
+        {
+          "v": 12,
+          "pre": "…that he did not say to watch out for the leaven of the ",
+          "hit": "loaves",
+          "post": ", but for the teaching of the Pharisees and Sadducees.…"
+        }
+      ],
+      "total": 7
+    },
+    "build": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…say to you that you are Peter, and on this rock I will ",
+          "hit": "build",
+          "post": " my assembly, and the gates of Hades will not prevail a…"
+        }
+      ],
+      "total": 1
+    },
+    "evil": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…\"An ",
+          "hit": "evil",
+          "post": " and adulterous generation seeks a sign, and a sign wil…"
+        }
+      ],
+      "total": 1
+    },
+    "father": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…cause flesh and blood did not reveal it to you, but my ",
+          "hit": "Father",
+          "post": " in the skies.…"
+        }
+      ],
+      "total": 1
+    },
+    "generation": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…\"An evil and adulterous ",
+          "hit": "generation",
+          "post": " seeks a sign, and a sign will not be given to it, exce…"
+        }
+      ],
+      "total": 1
+    },
+    "immerse": {
+      "count": 1,
+      "verses": [
+        14
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…And they said, \"Some say John the ",
+          "hit": "Immerser",
+          "post": "; others, Elijah; and others, Jeremiah or one of the pr…"
+        }
+      ],
+      "total": 1
+    },
+    "key": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…I will give you the ",
+          "hit": "keys",
+          "post": " of the kingdom of the skies, and whatever you bind on…"
+        }
+      ],
+      "total": 1
+    },
+    "kingdom": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…I will give you the keys of the ",
+          "hit": "kingdom",
+          "post": " of the skies, and whatever you bind on the earth will…"
+        }
+      ],
+      "total": 1
+    },
+    "learn": {
+      "count": 3,
+      "verses": [
+        5,
+        13,
+        20
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…And the ",
+          "hit": "learners",
+          "post": ", going to the other side, forgot to take bread.…"
+        },
+        {
+          "v": 13,
+          "pre": "…ng into the parts of Caesarea Philippi, was asking his ",
+          "hit": "learners",
+          "post": ", saying, \"Who do people say the Son of Man is?\"…"
+        },
+        {
+          "v": 20,
+          "pre": "…Then he gave strict orders to the ",
+          "hit": "learners",
+          "post": " that they tell no one that he is the Anointed One.…"
+        }
+      ],
+      "total": 3
+    },
+    "leaven": {
+      "count": 3,
+      "verses": [
+        6,
+        11,
+        12
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…But Jesus said to them, \"Look, and watch out for the ",
+          "hit": "leaven",
+          "post": " of the Pharisees and Sadducees.\"…"
+        },
+        {
+          "v": 11,
+          "pre": "…not speak to y'all about bread? But watch out for the ",
+          "hit": "leaven",
+          "post": " of the Pharisees and Sadducees.\"…"
+        },
+        {
+          "v": 12,
+          "pre": "…ey understood that he did not say to watch out for the ",
+          "hit": "leaven",
+          "post": " of the loaves, but for the teaching of the Pharisees a…"
+        }
+      ],
+      "total": 3
+    },
+    "little-faith": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…g it, said, \"Why are y'all reasoning among yourselves, ",
+          "hit": "little-faiths",
+          "post": ", because y'all took no bread?…"
+        }
+      ],
+      "total": 1
+    },
+    "rock": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…And I also say to you that you are Peter, and on this ",
+          "hit": "rock",
+          "post": " I will build my assembly, and the gates of Hades will…"
+        }
+      ],
+      "total": 1
+    },
+    "seek": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…\"An evil and adulterous generation ",
+          "hit": "seeks",
+          "post": " a sign, and a sign will not be given to it, except the…"
+        }
+      ],
+      "total": 1
+    },
+    "sign": {
+      "count": 5,
+      "verses": [
+        1,
+        3,
+        4
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…cees, coming up, testing him, asked him to show them a ",
+          "hit": "sign",
+          "post": " from the sky.…"
+        },
+        {
+          "v": 3,
+          "pre": "…The face of the sky y'all know how to discern, but the ",
+          "hit": "signs",
+          "post": " of the times y'all cannot.\"]…"
+        },
+        {
+          "v": 4,
+          "pre": "…\"An evil and adulterous generation seeks a ",
+          "hit": "sign",
+          "post": ", and a sign will not be given to it, except the sign o…"
+        },
+        {
+          "v": 4,
+          "pre": "…\"An evil and adulterous generation seeks a ",
+          "hit": "sign",
+          "post": ", and a sign will not be given to it, except the sign o…"
+        },
+        {
+          "v": 4,
+          "pre": "…\"An evil and adulterous generation seeks a ",
+          "hit": "sign",
+          "post": ", and a sign will not be given to it, except the sign o…"
+        }
+      ],
+      "total": 5
+    },
+    "son-of-man": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…i, was asking his learners, saying, \"Who do people say ",
+          "hit": "the Son of Man",
+          "post": " is?\"…"
+        }
+      ],
+      "total": 1
+    },
+    "teaching": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…to watch out for the leaven of the loaves, but for the ",
+          "hit": "teaching",
+          "post": " of the Pharisees and Sadducees.…"
+        }
+      ],
+      "total": 1
+    },
+    "test": {
+      "count": 1,
+      "verses": [
+        1
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…And the Pharisees and Sadducees, coming up, ",
+          "hit": "testing",
+          "post": " him, asked him to show them a sign from the sky.…"
+        }
+      ],
+      "total": 1
+    },
+    "understand": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…Then they ",
+          "hit": "understood",
+          "post": " that he did not say to watch out for the leaven of the…"
         }
       ],
       "total": 1

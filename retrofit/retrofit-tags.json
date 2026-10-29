@@ -541,6 +541,125 @@
       "root": "king",
       "text": "kings",
       "w": "01110818"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 1,
+      "root": "anointed",
+      "text": "Anointed",
+      "w": "01010104"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 16,
+      "root": "anointed",
+      "text": "Anointed",
+      "w": "01011615"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 17,
+      "root": "anointed",
+      "text": "Anointed",
+      "w": "01011727"
+    },
+    {
+      "unit": "unit-01",
+      "verse": 18,
+      "root": "anointed",
+      "text": "Anointed",
+      "w": "01011804"
+    },
+    {
+      "unit": "unit-02",
+      "verse": 4,
+      "root": "anointed",
+      "text": "Anointed",
+      "w": "01020415"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 2,
+      "root": "anointed",
+      "text": "Anointed",
+      "w": "01110211"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 6,
+      "root": "blessed",
+      "text": "blessed",
+      "w": "01110602"
+    },
+    {
+      "unit": "unit-13",
+      "verse": 16,
+      "root": "blessed",
+      "text": "blessed",
+      "w": "01131603"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 3,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01050301"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 4,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01050401"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 5,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01050501"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 6,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01050601"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 7,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01050701"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 8,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01050801"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 9,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01050901"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 10,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01051001"
+    },
+    {
+      "unit": "unit-05",
+      "verse": 11,
+      "root": "blessed",
+      "text": "Blessed",
+      "w": "01051101"
     }
   ]
 }

@@ -736,6 +736,174 @@
       "unit": 15,
       "note": "Israel's wilderness question",
       "source": "story"
+    },
+    {
+      "from": "Matt 16:1",
+      "to": "Exod 17:1–7",
+      "kind": "story",
+      "unit": 16,
+      "note": "Massah: the test at the rock",
+      "source": "story"
+    },
+    {
+      "from": "Matt 16:4",
+      "to": "Ezek 16:32",
+      "kind": "echo",
+      "unit": 16,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:4",
+      "to": "Hos 3:1",
+      "kind": "echo",
+      "unit": 16,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:6",
+      "to": "1 Cor 5:6–8",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root leaven",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:6",
+      "to": "Exod 12:15",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root leaven",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:6",
+      "to": "Gal 5:9",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root leaven",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:6",
+      "to": "Matt 13:33",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root leaven",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:12",
+      "to": "Matt 7:28",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root teaching",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:14",
+      "to": "Jer 31:15",
+      "kind": "echo",
+      "unit": 16,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:16",
+      "to": "Deut 5:26",
+      "kind": "echo",
+      "unit": 16,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:16",
+      "to": "Josh 3:10",
+      "kind": "echo",
+      "unit": 16,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:18",
+      "to": "1 Pet 2:4–5",
+      "kind": "echo",
+      "unit": 16,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:18",
+      "to": "Deut 23:2–9",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root assembly",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:18",
+      "to": "Deut 4:10",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root assembly",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:18",
+      "to": "Deut 9:10",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root assembly",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:18",
+      "to": "Isa 38:10",
+      "kind": "echo",
+      "unit": 16,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:18",
+      "to": "Gen 17:5",
+      "kind": "story",
+      "unit": 16,
+      "note": "The renaming of Abram and Jacob",
+      "source": "story"
+    },
+    {
+      "from": "Matt 16:18",
+      "to": "Gen 32:28",
+      "kind": "story",
+      "unit": 16,
+      "note": "The renaming of Abram and Jacob",
+      "source": "story"
+    },
+    {
+      "from": "Matt 16:19",
+      "to": "Rev 1:18",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root key",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:19",
+      "to": "Rev 3:7",
+      "kind": "echo",
+      "unit": 16,
+      "note": "root key",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:19",
+      "to": "Isa 22:15–25",
+      "kind": "story",
+      "unit": 16,
+      "note": "Eliakim installed over the house of David",
+      "source": "story"
     }
   ],
   "typescenes": [

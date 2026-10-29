@@ -247,3 +247,6 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-25 — Unit 14 rebuild
 - Forced re-port of unit 14; story box plain, eulogeō ruled, `king` promoted with retrofit in units 1/2/5/10/11.
+
+## 2026-10-28 — Unit 16 ported
+- Ported unit 16 (Matt 16:1–20). Rulings: Anointed One, will have been bound/loosed, baskets/hampers, Hades/adulterous kept. Promoted `anointed` and `blessed` book-wide with retrofit adds in units 1, 2, 5, 11, 13; payoffs added to 11 existing threads. LXX checks run. Findings for the chat side in `chat-side-findings-unit-16.md`. Uncommitted.
