@@ -23,6 +23,7 @@ should sync belongs in core's `DEFAULT_SYNC`, with a role in `ROLES`.
 |---|---|---|
 | `CHAT_SIDE_INSTRUCTIONS.md` (`book.json` `paths.chat_side`) | pasted by hand into the instruction field | the connector can't write the field. `sync-check` says when it needs re-pasting; run `sync-check --mark-pasted` after pasting |
 | `source-artifacts/matthew_NN_translation.html` | project → repo | each unit's artifact, saved into the repo before `port` |
+| `matthew_NN_handoff.md` | research chat → Lane → build chat | the research chat's output file, pasted by Lane into a fresh chat that builds the artifact. Not stored in the repo; what survives is in the artifact's meta (`checks[]`, `threads.promote[]`, `retro`) |
 
 **Matthew-only synced files** (`book.json` `sync.extra`): `matthew_reference_links.md`
 (the annotated shelf of outside sources) and `MatthewSBLGNT.txt` (the Greek, which

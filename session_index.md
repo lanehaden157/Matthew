@@ -250,3 +250,6 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-28 — Unit 16 ported
 - Ported unit 16 (Matt 16:1–20). Rulings: Anointed One, will have been bound/loosed, baskets/hampers, Hades/adulterous kept. Promoted `anointed` and `blessed` book-wide with retrofit adds in units 1, 2, 5, 11, 13; payoffs added to 11 existing threads. LXX checks run. Findings for the chat side in `chat-side-findings-unit-16.md`. Uncommitted.
+
+## 2026-10-28 — Core 0.18.0, two-chat workflow
+- Vendored core 0.18.0 (handoff template, `checks[]`, `threads.promote[]`); migrate refreshed unit metas; instruction field, style reference updated. Matthew consistency pass: CHAT_SIDE_INSTRUCTIONS, style reference, project-side/README, CLAUDE.md, resources.md updated for the two-chat flow. Build, test 9 ok.

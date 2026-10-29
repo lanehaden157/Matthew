@@ -4,7 +4,8 @@ How this repo behaves. The artifact contract lives in
 `matthew_study_style_reference.md` and is authoritative over this file. A
 28-unit literary-canonical study of Matthew, live at
 https://lanehaden157.github.io/Matthew/ . Research happens in a Claude.ai
-project; its output lands here.
+project, in two chats per unit (a research chat writes a handoff; a fresh build chat
+builds the artifact from it); the artifact lands here.
 
 Built on **bible-core** (vendored in `biblecore/`, version in
 `biblecore/CORE_VERSION`). The shared shape and the ways a book is expected to
@@ -122,9 +123,17 @@ reports as undecided):
    audits); every promoted root should report clean. In a boxed unit, diff
    it afterwards: only tag spans and `data-w` may differ.
 
+## What `port` prints besides questions
+
+A unit's meta may carry `checks[]` (claims about other passages' text, printed in their own
+section and listed in the thread delta; run them against the corpus, they aren't for Lane)
+and `threads.promote[]` (ready `threads.json` entries with reach and retrofit units, written
+into the thread delta). Neither is stored after the port. Check the delta's rows citing the
+unit's verses (`threads-digest.md`) against the unit map.
+
 ## Asking Lane
 
-Questions for Lane (the porter's `questions[]`, wording calls, thread
+Questions for Lane (the porter's `questions[]`, which are genuinely open calls only; wording calls, thread
 decisions) go through the **AskUserQuestion popup** with multiple-choice
 options, best provisional choice first and marked "(Recommended)", not as a
 list in chat. The tool takes 4 questions per call, so batch a longer list

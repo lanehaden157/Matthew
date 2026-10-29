@@ -943,3 +943,6 @@
 
 ## 2026-10-28 — Unit 16 ported, `anointed` and `blessed` promoted
 - Ported unit 16; `anointed` (christos, #c85078) and `blessed` (makarios, #a00020) promoted book-wide; 17 retrofit `add` entries (units 1, 2, 5, 11, 13; tags only). Unit-16 payoffs added to sign, seek, evil, generation, bread, learn, understand, immerse, son-of-man, father, kingdom; son-of-man 16:13 moved off unit 17. Build, audit (0 gaps), test green.
+
+## 2026-10-28 — Core 0.18.0
+- `core_sync` + `migrate` to 0.18.0; new synced `canon-handoff-template.md`; instruction field two-chat note; style reference: `checks`, `threads.promote`, §3a rewrite, checklist items for questions/checks/promote. Matthew consistency pass: CHAT_SIDE_INSTRUCTIONS, style reference, project-side/README, CLAUDE.md, resources.md updated for the two-chat flow.
