@@ -40,8 +40,12 @@ state is at tag `pre-revert-2026-09-29`).
 
     python -m biblecore book             # where the book stands (see State above)
     python -m biblecore port 15 [--dry]  # port source-artifacts/matthew_15_translation.html (--force re-ports)
+    python -m biblecore port 15 --answers a.json  # {question topic: answer}: a dry run's answers carry over to the real port
     python -m biblecore build            # everything downstream of units/*.html
-    python -m biblecore audit            # tracked-thread coverage (--ids ROOT to preview an id set)
+    python -m biblecore audit            # tracked-thread coverage (--ids ROOT to preview an id set);
+                                         # gaps end with ready `add` JSON for retrofit/retrofit-tags.json
+    python -m biblecore lxx Isa 22:22 [--expect petra '!kleis']  # an LXX verse's lemmas; '!x' = must be absent
+    python -m biblecore lxx --checks 17  # run a unit's checks[] (from its source artifact): confirmed / partial / not found
     python -m biblecore test [--quick]   # check the book: pin, units, contracts, build idempotence
     python -m biblecore sync             # mirror chat-side files, commit and push (after Lane's OK)
     python tools/constable_index.py      # constable-index.md from constable/matthew.txt (--check: stale?)
