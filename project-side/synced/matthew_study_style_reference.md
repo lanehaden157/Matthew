@@ -230,8 +230,9 @@ id set. The porter turns it into a ready delta.
 - `questions[]` — `{topic, note, options?}`. A call only Lane can make, with a
   genuinely open alternative the unit's argument depends on. Read
   `translation-choices.md` and the earlier units' meta first: a wording already ruled
-  is used, with a note in the artifact's prose, not a question. The build chat puts the
-  handoff's questions to Lane in chat first; only what's still open goes here. Render
+  is used, with a note in the artifact's prose, not a question. The build chat asks every
+  open call by popup before drafting (handoff calls, provisional renderings, conflicts
+  with synced rulings); only what Lane left open goes here. Render
   your best provisional choice so the draft keeps moving, and flag it. Claude Code asks
   Lane each one by popup when the unit is ported.
 - `checks[]` — `{ref, claim, expect}`. A claim about another passage's text that the
@@ -528,7 +529,8 @@ unit. The same event in another gospel is a synoptic, never an `aside.story`.
 - [ ] Checked `threads-digest.md`: **every** morphological occurrence of a tracked thread's Greek root in this passage is tagged with its thread `id` — even where the English renders it with a different word (*hamartōlos* → "sinner" still tags `sin`; *periballō* → "clothe" still tags `throw`). The tag follows the Greek lexeme, not the gloss. Threads that open or land here are also listed under `threads.opens` / `threads.payoffs`. The porter's coverage audit will list any you missed.
 - [ ] Any root recurring across units that isn't yet a thread → `threads.candidates` with a reason (+ `ids` or `seq`, `refs`). Not tagged until it is promoted.
 - [ ] A new thread Lane has ruled on, with its reach → `threads.promote` (`entry`, `reach`, `retrofit`), copied from the handoff.
-- [ ] Any call only Lane can make → `questions[]` with your best provisional choice rendered, not a question in chat after the handoff's questions have been asked. Only genuinely open calls, never a wording `translation-choices.md` or an earlier unit already rules.
+- [ ] Calls were asked in chat before drafting (handoff's Calls for Lane, provisional renderings, departures from synced rulings); `questions[]` holds only what Lane left open.
+- [ ] Any call only Lane can make → `questions[]` with your best provisional choice rendered, not a question in chat after the calls have been asked. Only genuinely open calls, never a wording `translation-choices.md` or an earlier unit already rules.
 - [ ] Claims about other passages' text the code side can verify → `checks[]` (`ref`, `claim`, `expect`), never `questions[]`.
 - [ ] Anything you noticed about an **earlier** unit (a missed tag, a mis-tag) → `threads.retro`, not a prose aside.
 
