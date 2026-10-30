@@ -95,8 +95,8 @@ id="unit-meta">` is its first child. Unknown top-level keys are an error.
   refs?}`. `ids` are lemma ids as the word table spells them; a fixed phrase takes `seq`
   (the content words' ids in order); `refs` are bare `C:V`. Nothing is tagged until promoted.
 - `promote`: a new thread ready for `threads.json`, from the handoff: `{entry, reach,
-  retrofit}`. `entry` is `{id, root, ids, gloss, opens: {unit, ref, note?}, payoffs:
-  [{unit, ref, note?}], translit?, note?}`, `reach` a sentence ("16 occurrences, retrofit
+  retrofit}`. `entry` is `{id, root?, ids, gloss, opens: {unit, ref, note?}, payoffs:
+  [{unit, ref, note?}], translit?, note?}` (`root` defaults to `id`; ASCII `[a-z0-9-]` only, e.g. `kerdaino`; a `retro[]` in the same unit may tag the promoted id, and `apply-delta` creates the `threads.json` and `roots.json` entries), `reach` a sentence ("16 occurrences, retrofit
   in units 1, 2, 5"), `retrofit` the unit numbers. **Claude decides promotion, biased toward
   book-wide**, and asks Lane only when genuinely unsure.
 - `retro`: fixes for **earlier** units, instead of a prose note: `{unit, verse, text, root,
