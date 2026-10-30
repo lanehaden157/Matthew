@@ -949,3 +949,8 @@
 
 ## 2026-10-28 — Core 0.19.0
 - Vendored 0.19.0: `python -m biblecore lxx` (verse lemmas, `--expect`, `--checks N`; `!lemma` = absent), `audit` ends with paste-ready retrofit `add` JSON, `port --answers FILE`, `biblecore test` notes CRLF policy files. `data/roots.json` and `retrofit/retrofit-tags.json` rewritten LF (the new check flagged them; no content change).
+
+## 2026-10-29 — Open calls asked before drafting (unit 17 gap)
+- Unit 17's handoff said "Questions for Lane: none" while listing six provisional wording calls; the build chat settled them and overrode two `translation-choices.md` rulings (Satan → Adversary, trustless → not-trusting) unasked.
+- bible-core: `workflow.md` pass 4 now asks every open call (handoff calls, provisional renderings, ruling conflicts, uncovered lexemes) by popup before drafting, "none" never a reason to skip; pass 3 scans Verse by verse for provisional/check/match and counts. `handoff-template.md`: one "Calls for Lane (N)" section, the only place provisional wording may appear. New `python -m biblecore handoff-check FILE` (warn-only lint) + test.
+- Matthew: CHAT_SIDE_INSTRUCTIONS build-chat sentence (re-paste needed), style reference §3a and checklist. Vendoring pending Lane's OK on the diffs.
