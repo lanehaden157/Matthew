@@ -31,7 +31,7 @@
       "style_reference": 18
     }
   },
-  "core": "0.22.1",
+  "core": "0.23.0",
   "template": "d1fd3d6",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse",
