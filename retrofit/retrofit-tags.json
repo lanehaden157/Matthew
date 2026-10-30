@@ -660,6 +660,34 @@
       "root": "blessed",
       "text": "Blessed",
       "w": "01051101"
+    },
+    {
+      "unit": "unit-10",
+      "verse": 42,
+      "root": "mikros",
+      "text": "small ones",
+      "w": "01104207"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 11,
+      "root": "mikros",
+      "text": "smaller-one",
+      "w": "01111115"
+    },
+    {
+      "unit": "unit-13",
+      "verse": 32,
+      "root": "mikros",
+      "text": "smaller",
+      "w": "01133202"
+    },
+    {
+      "unit": "unit-17",
+      "verse": "16:26",
+      "root": "gain",
+      "text": "gains",
+      "w": "01162609"
     }
   ]
 }

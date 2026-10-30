@@ -264,3 +264,6 @@ Read this first. 3 lines max per session.
 - Released as core 0.22.0, vendored, pushed and synced in all three books. Only the field re-paste is left.
 - Core 0.22.1: warn-only `docs` size budget in `biblecore test`; Matthew's style reference budget set to 18 KB.
 - `project-side/sync-state.json` untracked, as in Joshua and Numbers, so a sync no longer dirties the tree.
+## 2026-10-30 — Unit 18 port
+- Ported unit 18; promoted `debt`, `gain`, `mikros` (retrofit in units 6, 10, 11, 13, 17); applied the 28-entry thread delta. Build, audit (0 gaps), test (10 ok) green.
+- Source needed fixes (non-ASCII root `kerdainō`; promote[] vs retro[] ordering). Nothing committed.

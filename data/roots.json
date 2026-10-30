@@ -644,6 +644,27 @@
         "makarios"
       ],
       "note": "blessed / fortunate"
+    },
+    "debt": {
+      "ids": [
+        "opheilēma",
+        "opheiletēs",
+        "opheilē",
+        "opheilō"
+      ],
+      "note": "opheil- family — promoted at the unit-18 port (2026-10-30). Pairs with `release`. Every opheilō is tagged, the oath sense at 23:16 and 23:18 included (Lane)."
+    },
+    "gain": {
+      "ids": [
+        "kerdainō"
+      ],
+      "note": "kerdainō — promoted at the unit-18 port (2026-10-30). Ahead: 25:16-22."
+    },
+    "mikros": {
+      "ids": [
+        "mikros"
+      ],
+      "note": "mikros — promoted at the unit-18 port (2026-10-30). 26:39 'going ahead a little' is the unrelated adverb (mikron) and is left untagged."
     }
   }
 }

@@ -1080,6 +1080,78 @@
       "unit": 17,
       "note": "The half-shekel ransom",
       "source": "story"
+    },
+    {
+      "from": "Matt 18:6",
+      "to": "Deut 24:6",
+      "kind": "echo",
+      "unit": 18,
+      "note": "Possible: the millstone as a household's livelihood. Footnote only.",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 18:10",
+      "to": "Esth 1:14",
+      "kind": "echo",
+      "unit": 18,
+      "note": "Possible and conceptual: those who see the king's face. Footnote only.",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 18:14",
+      "to": "Ezek 34:4–16",
+      "kind": "allusion",
+      "unit": 18,
+      "note": "God against the shepherds who did not seek",
+      "source": "story"
+    },
+    {
+      "from": "Matt 18:15",
+      "to": "Lev 19:17",
+      "kind": "echo",
+      "unit": 18,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 18:16",
+      "to": "Deut 19:15",
+      "kind": "quotation",
+      "unit": 18,
+      "note": "Two or three witnesses; marked with an OT citation pointer.",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 18:17",
+      "to": "Deut 4:10",
+      "kind": "echo",
+      "unit": 18,
+      "note": "root assembly",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 18:20",
+      "to": "Exod 25:8",
+      "kind": "echo",
+      "unit": 18,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 18:22",
+      "to": "Gen 4:23–24",
+      "kind": "story",
+      "unit": 18,
+      "note": "Lamech's song of vengeance",
+      "source": "story"
+    },
+    {
+      "from": "Matt 18:26",
+      "to": "Exod 34:6",
+      "kind": "echo",
+      "unit": 18,
+      "note": "Possible: the long-tempered God. Footnote only.",
+      "source": "meta"
     }
   ],
   "typescenes": [

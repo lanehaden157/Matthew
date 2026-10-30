@@ -5964,6 +5964,21 @@
       ],
       "total": 5
     },
+    "mikros": {
+      "count": 1,
+      "verses": [
+        42
+      ],
+      "hits": [
+        {
+          "v": 42,
+          "pre": "…And whoever gives one of these ",
+          "hit": "small ones",
+          "post": " only a cup of cold water to drink, in the name of a le…"
+        }
+      ],
+      "total": 1
+    },
     "nations": {
       "count": 2,
       "verses": [
@@ -6749,6 +6764,21 @@
         }
       ],
       "total": 2
+    },
+    "mikros": {
+      "count": 1,
+      "verses": [
+        11
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…arisen anyone greater than John the Immerser; but the ",
+          "hit": "smaller-one",
+          "post": " in the kingdom of the skies is greater than he.…"
+        }
+      ],
+      "total": 1
     },
     "raise": {
       "count": 2,
@@ -8968,6 +8998,21 @@
         }
       ],
       "total": 4
+    },
+    "mikros": {
+      "count": 1,
+      "verses": [
+        32
+      ],
+      "hits": [
+        {
+          "v": 32,
+          "pre": "…which is ",
+          "hit": "smaller",
+          "post": " than all the seeds, but when it has grown it is greate…"
+        }
+      ],
+      "total": 1
     },
     "mystery": {
       "count": 1,
@@ -11702,6 +11747,21 @@
       ],
       "total": 1
     },
+    "gain": {
+      "count": 1,
+      "verses": [
+        26
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…For what will a person be profited if he ",
+          "hit": "gains",
+          "post": " the whole world but forfeits his life? Or what will a…"
+        }
+      ],
+      "total": 1
+    },
     "generation": {
       "count": 1,
       "verses": [
@@ -12209,6 +12269,903 @@
           "pre": "…cloud, saying, \"This is my Son, the beloved, in whom I ",
           "hit": "delighted",
           "post": ". Listen to him.\"…"
+        }
+      ],
+      "total": 1
+    }
+  },
+  "unit-18": {
+    "assembly": {
+      "count": 2,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…And if he refuses to hear them, tell it to the ",
+          "hit": "assembly",
+          "post": "; and if he refuses to hear even the assembly, let him…"
+        },
+        {
+          "v": 17,
+          "pre": "…And if he refuses to hear them, tell it to the ",
+          "hit": "assembly",
+          "post": "; and if he refuses to hear even the assembly, let him…"
+        }
+      ],
+      "total": 2
+    },
+    "bind": {
+      "count": 2,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…Amen I say to y'all, whatever y'all ",
+          "hit": "bind",
+          "post": " on the earth will have been bound in the sky, and what…"
+        },
+        {
+          "v": 18,
+          "pre": "…y'all, whatever y'all bind on the earth will have been ",
+          "hit": "bound",
+          "post": " in the sky, and whatever y'all loose on the earth will…"
+        }
+      ],
+      "total": 2
+    },
+    "child": {
+      "count": 4,
+      "verses": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…And having summoned a ",
+          "hit": "child",
+          "post": ", he stood it in their midst…"
+        },
+        {
+          "v": 3,
+          "pre": "…to y'all, unless y'all turn around and become like the ",
+          "hit": "children",
+          "post": ", y'all will never come into the kingdom of the skies.…"
+        },
+        {
+          "v": 4,
+          "pre": "…Whoever, then, will lower himself like this ",
+          "hit": "child",
+          "post": ", this one is the greater in the kingdom of the skies.…"
+        },
+        {
+          "v": 5,
+          "pre": "…And whoever receives one such ",
+          "hit": "child",
+          "post": " in my name receives me.…"
+        }
+      ],
+      "total": 4
+    },
+    "compassion": {
+      "count": 1,
+      "verses": [
+        27
+      ],
+      "hits": [
+        {
+          "v": 27,
+          "pre": "…And the Master of that slave, ",
+          "hit": "wrenched in the gut",
+          "post": ", released him, and the loan he let go for him.…"
+        }
+      ],
+      "total": 1
+    },
+    "debt": {
+      "count": 6,
+      "verses": [
+        24,
+        28,
+        30,
+        32,
+        34
+      ],
+      "hits": [
+        {
+          "v": 24,
+          "pre": "…When he began to settle them, one ",
+          "hit": "debtor",
+          "post": " of ten thousand talents was brought to him.…"
+        },
+        {
+          "v": 28,
+          "pre": "…slave went out and found one of his fellow slaves who ",
+          "hit": "owed",
+          "post": " him a hundred denarii, and seizing him he began to thr…"
+        },
+        {
+          "v": 28,
+          "pre": "…slave went out and found one of his fellow slaves who ",
+          "hit": "owe",
+          "post": "d him a hundred denarii, and seizing him he began to th…"
+        },
+        {
+          "v": 30,
+          "pre": "…d threw him into prison until he should repay what was ",
+          "hit": "owed",
+          "post": ".…"
+        },
+        {
+          "v": 32,
+          "pre": "…ned him, his Master says to him, 'Evil slave! All that ",
+          "hit": "debt",
+          "post": " I released to you, since you urged me.…"
+        },
+        {
+          "v": 34,
+          "pre": "…r to the tormentors until he should repay all that was ",
+          "hit": "owed",
+          "post": ".…"
+        }
+      ],
+      "total": 6
+    },
+    "enter": {
+      "count": 3,
+      "verses": [
+        3,
+        8,
+        9
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…around and become like the children, y'all will never ",
+          "hit": "come into",
+          "post": " the kingdom of the skies.…"
+        },
+        {
+          "v": 8,
+          "pre": "…it off and throw it from you; it is better for you to ",
+          "hit": "come into",
+          "post": " life maimed or lame than, having two hands or two feet…"
+        },
+        {
+          "v": 9,
+          "pre": "…it out and throw it from you; it is better for you to ",
+          "hit": "come into",
+          "post": " life one-eyed than, having two eyes, to be thrown into…"
+        }
+      ],
+      "total": 3
+    },
+    "evil": {
+      "count": 1,
+      "verses": [
+        32
+      ],
+      "hits": [
+        {
+          "v": 32,
+          "pre": "…Then, having summoned him, his Master says to him, '",
+          "hit": "Evil",
+          "post": " slave! All that debt I released to you, since you urge…"
+        }
+      ],
+      "total": 1
+    },
+    "eye": {
+      "count": 3,
+      "verses": [
+        9
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…And if your ",
+          "hit": "eye",
+          "post": " trips you up, pluck it out and throw it from you; it i…"
+        },
+        {
+          "v": 9,
+          "pre": "…ow it from you; it is better for you to come into life ",
+          "hit": "one-eyed",
+          "post": " than, having two eyes, to be thrown into the Gehenna o…"
+        },
+        {
+          "v": 9,
+          "pre": "…er for you to come into life one-eyed than, having two ",
+          "hit": "eyes",
+          "post": ", to be thrown into the Gehenna of fire.…"
+        }
+      ],
+      "total": 3
+    },
+    "faith": {
+      "count": 1,
+      "verses": [
+        6
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…\"But whoever trips up one of these little ones who ",
+          "hit": "trust",
+          "post": " in me, it would be better for him that a donkey's mill…"
+        }
+      ],
+      "total": 1
+    },
+    "father": {
+      "count": 4,
+      "verses": [
+        10,
+        14,
+        19,
+        35
+      ],
+      "hits": [
+        {
+          "v": 10,
+          "pre": "…at their angels in the skies always see the face of my ",
+          "hit": "Father",
+          "post": " in the skies.…"
+        },
+        {
+          "v": 14,
+          "pre": "…So it is not the will before y'all's ",
+          "hit": "Father",
+          "post": " in the skies that one of these little ones be lost.…"
+        },
+        {
+          "v": 19,
+          "pre": "…y matter they may ask, it will happen for them from my ",
+          "hit": "Father",
+          "post": " in the skies.…"
+        },
+        {
+          "v": 35,
+          "pre": "…So also my ",
+          "hit": "Father",
+          "post": " in the skies will do to y'all, if y'all do not release…"
+        }
+      ],
+      "total": 4
+    },
+    "gain": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…t between you and him alone. If he hears you, you have ",
+          "hit": "gained",
+          "post": " your brother.…"
+        }
+      ],
+      "total": 1
+    },
+    "gather": {
+      "count": 1,
+      "verses": [
+        20
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…For where two or three are ",
+          "hit": "gathered",
+          "post": " into my name, there I am in their midst.\"…"
+        }
+      ],
+      "total": 1
+    },
+    "gehenna": {
+      "count": 1,
+      "verses": [
+        9
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…one-eyed than, having two eyes, to be thrown into the ",
+          "hit": "Gehenna",
+          "post": " of fire.…"
+        }
+      ],
+      "total": 1
+    },
+    "grieve": {
+      "count": 1,
+      "verses": [
+        31
+      ],
+      "hits": [
+        {
+          "v": 31,
+          "pre": "…So his fellow slaves, seeing what had happened, were ",
+          "hit": "grieved",
+          "post": " exceedingly, and they came and made plain to their Mas…"
+        }
+      ],
+      "total": 1
+    },
+    "hand-over": {
+      "count": 1,
+      "verses": [
+        34
+      ],
+      "hits": [
+        {
+          "v": 34,
+          "pre": "…And in anger his Master ",
+          "hit": "handed him over",
+          "post": " to the tormentors until he should repay all that was o…"
+        }
+      ],
+      "total": 1
+    },
+    "heart": {
+      "count": 1,
+      "verses": [
+        35
+      ],
+      "hits": [
+        {
+          "v": 35,
+          "pre": "…all do not release, each one his brother, from y'all's ",
+          "hit": "hearts",
+          "post": ".\"…"
+        }
+      ],
+      "total": 1
+    },
+    "joy": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…And if he comes to find it, amen I say to y'all, he ",
+          "hit": "rejoices",
+          "post": " over it more than over the ninety-nine that have not w…"
+        }
+      ],
+      "total": 1
+    },
+    "king": {
+      "count": 1,
+      "verses": [
+        23
+      ],
+      "hits": [
+        {
+          "v": 23,
+          "pre": "…Because of this, the ",
+          "hit": "king",
+          "post": "dom of the skies has been likened to a man, a king, who…"
+        }
+      ],
+      "total": 1
+    },
+    "kingdom": {
+      "count": 4,
+      "verses": [
+        1,
+        3,
+        4,
+        23
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…ers came to Jesus, saying, \"Who then is greater in the ",
+          "hit": "kingdom",
+          "post": " of the skies?\"…"
+        },
+        {
+          "v": 3,
+          "pre": "…come like the children, y'all will never come into the ",
+          "hit": "kingdom",
+          "post": " of the skies.…"
+        },
+        {
+          "v": 4,
+          "pre": "…imself like this child, this one is the greater in the ",
+          "hit": "kingdom",
+          "post": " of the skies.…"
+        },
+        {
+          "v": 23,
+          "pre": "…Because of this, the ",
+          "hit": "kingdom",
+          "post": " of the skies has been likened to a man, a king, who wa…"
+        }
+      ],
+      "total": 4
+    },
+    "learn": {
+      "count": 1,
+      "verses": [
+        1
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…In that hour the ",
+          "hit": "learners",
+          "post": " came to Jesus, saying, \"Who then is greater in the kin…"
+        }
+      ],
+      "total": 1
+    },
+    "long-tempered": {
+      "count": 2,
+      "verses": [
+        26,
+        29
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…slave fell and kept bowing low before him, saying, 'Be ",
+          "hit": "long-tempered",
+          "post": " with me, and I will repay you everything.'…"
+        },
+        {
+          "v": 29,
+          "pre": "…his fellow slave fell and kept urging him, saying, 'Be ",
+          "hit": "long-tempered",
+          "post": " with me, and I will repay you.'…"
+        }
+      ],
+      "total": 2
+    },
+    "loose": {
+      "count": 2,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…th will have been bound in the sky, and whatever y'all ",
+          "hit": "loose",
+          "post": " on the earth will have been loosed in the sky.…"
+        },
+        {
+          "v": 18,
+          "pre": "…, and whatever y'all loose on the earth will have been ",
+          "hit": "loosed",
+          "post": " in the sky.…"
+        }
+      ],
+      "total": 2
+    },
+    "lose": {
+      "count": 1,
+      "verses": [
+        14
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…s Father in the skies that one of these little ones be ",
+          "hit": "lost",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
+    "lower": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…Whoever, then, will ",
+          "hit": "lower",
+          "post": " himself like this child, this one is the greater in th…"
+        }
+      ],
+      "total": 1
+    },
+    "mercy": {
+      "count": 2,
+      "verses": [
+        33
+      ],
+      "hits": [
+        {
+          "v": 33,
+          "pre": "…Was it not necessary for you, too, to show ",
+          "hit": "loyal-love",
+          "post": " to your fellow slave, as I also showed loyal-love to y…"
+        },
+        {
+          "v": 33,
+          "pre": "…Was it not necessary for you, too, to show ",
+          "hit": "loyal-love",
+          "post": " to your fellow slave, as I also showed loyal-love to y…"
+        }
+      ],
+      "total": 2
+    },
+    "mikros": {
+      "count": 3,
+      "verses": [
+        6,
+        10,
+        14
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…\"But whoever trips up one of these ",
+          "hit": "little ones",
+          "post": " who trust in me, it would be better for him that a don…"
+        },
+        {
+          "v": 10,
+          "pre": "…\"See that y'all do not look down on one of these ",
+          "hit": "little ones",
+          "post": ", for I say to y'all that their angels in the skies alw…"
+        },
+        {
+          "v": 14,
+          "pre": "…l before y'all's Father in the skies that one of these ",
+          "hit": "little ones",
+          "post": " be lost.…"
+        }
+      ],
+      "total": 3
+    },
+    "name": {
+      "count": 2,
+      "verses": [
+        5,
+        20
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…And whoever receives one such child in my ",
+          "hit": "name",
+          "post": " receives me.…"
+        },
+        {
+          "v": 20,
+          "pre": "…For where two or three are gathered into my ",
+          "hit": "name",
+          "post": ", there I am in their midst.\"…"
+        }
+      ],
+      "total": 2
+    },
+    "nations": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…es to hear even the assembly, let him be to you as the ",
+          "hit": "Gentile",
+          "post": " and the tax collector.…"
+        }
+      ],
+      "total": 1
+    },
+    "receive": {
+      "count": 2,
+      "verses": [
+        5
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…And whoever ",
+          "hit": "receives",
+          "post": " one such child in my name receives me.…"
+        },
+        {
+          "v": 5,
+          "pre": "…And whoever ",
+          "hit": "receives",
+          "post": " one such child in my name receives me.…"
+        }
+      ],
+      "total": 2
+    },
+    "release": {
+      "count": 5,
+      "verses": [
+        12,
+        21,
+        27,
+        32,
+        35
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…hundred sheep and one of them wanders off, will he not ",
+          "hit": "leave",
+          "post": " the ninety-nine on the mountains and go and seek the o…"
+        },
+        {
+          "v": 21,
+          "pre": "…r, how many times will my brother sin against me and I ",
+          "hit": "release",
+          "post": " him? Up to seven times?\"…"
+        },
+        {
+          "v": 27,
+          "pre": "…ve, wrenched in the gut, released him, and the loan he ",
+          "hit": "let go",
+          "post": " for him.…"
+        },
+        {
+          "v": 32,
+          "pre": "…, his Master says to him, 'Evil slave! All that debt I ",
+          "hit": "released",
+          "post": " to you, since you urged me.…"
+        },
+        {
+          "v": 35,
+          "pre": "…Father in the skies will do to y'all, if y'all do not ",
+          "hit": "release",
+          "post": ", each one his brother, from y'all's hearts.\"…"
+        }
+      ],
+      "total": 5
+    },
+    "sea": {
+      "count": 1,
+      "verses": [
+        6
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…e hung around his neck and that he be sunk in the open ",
+          "hit": "sea",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
+    "seek": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…not leave the ninety-nine on the mountains and go and ",
+          "hit": "seek",
+          "post": " the one wandering?…"
+        }
+      ],
+      "total": 1
+    },
+    "send-away": {
+      "count": 1,
+      "verses": [
+        27
+      ],
+      "hits": [
+        {
+          "v": 27,
+          "pre": "…And the Master of that slave, wrenched in the gut, ",
+          "hit": "released",
+          "post": " him, and the loan he let go for him.…"
+        }
+      ],
+      "total": 1
+    },
+    "sin": {
+      "count": 2,
+      "verses": [
+        15,
+        21
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…\"But if your brother ",
+          "hit": "sins",
+          "post": " against you, go, expose his fault between you and him…"
+        },
+        {
+          "v": 21,
+          "pre": "…d said to him, \"Master, how many times will my brother ",
+          "hit": "sin",
+          "post": " against me and I release him? Up to seven times?\"…"
+        }
+      ],
+      "total": 2
+    },
+    "skandalon": {
+      "count": 6,
+      "verses": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "hits": [
+        {
+          "v": 6,
+          "pre": "…\"But whoever ",
+          "hit": "trips up",
+          "post": " one of these little ones who trust in me, it would be…"
+        },
+        {
+          "v": 7,
+          "pre": "…Woe to the world because of the ",
+          "hit": "trip-ups",
+          "post": "! For the trip-ups must come, but woe to the man throug…"
+        },
+        {
+          "v": 7,
+          "pre": "…Woe to the world because of the ",
+          "hit": "trip-ups",
+          "post": "! For the trip-ups must come, but woe to the man throug…"
+        },
+        {
+          "v": 7,
+          "pre": "…Woe to the world because of the ",
+          "hit": "trip-up",
+          "post": "s! For the trip-ups must come, but woe to the man throu…"
+        },
+        {
+          "v": 8,
+          "pre": "…And if your hand or your foot ",
+          "hit": "trips you up",
+          "post": ", cut it off and throw it from you; it is better for yo…"
+        },
+        {
+          "v": 9,
+          "pre": "…And if your eye ",
+          "hit": "trips you up",
+          "post": ", pluck it out and throw it from you; it is better for…"
+        }
+      ],
+      "total": 6
+    },
+    "throw": {
+      "count": 5,
+      "verses": [
+        8,
+        9,
+        30
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…if your hand or your foot trips you up, cut it off and ",
+          "hit": "throw",
+          "post": " it from you; it is better for you to come into life ma…"
+        },
+        {
+          "v": 8,
+          "pre": "…imed or lame than, having two hands or two feet, to be ",
+          "hit": "thrown",
+          "post": " into the fire of the age.…"
+        },
+        {
+          "v": 9,
+          "pre": "…And if your eye trips you up, pluck it out and ",
+          "hit": "throw",
+          "post": " it from you; it is better for you to come into life on…"
+        },
+        {
+          "v": 9,
+          "pre": "…o come into life one-eyed than, having two eyes, to be ",
+          "hit": "thrown",
+          "post": " into the Gehenna of fire.…"
+        },
+        {
+          "v": 30,
+          "pre": "…But he would not; instead he went off and ",
+          "hit": "threw",
+          "post": " him into prison until he should repay what was owed.…"
+        }
+      ],
+      "total": 5
+    },
+    "torment": {
+      "count": 1,
+      "verses": [
+        34
+      ],
+      "hits": [
+        {
+          "v": 34,
+          "pre": "…And in anger his Master handed him over to the ",
+          "hit": "tormentors",
+          "post": " until he should repay all that was owed.…"
+        }
+      ],
+      "total": 1
+    },
+    "urge": {
+      "count": 2,
+      "verses": [
+        29,
+        32
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…So his fellow slave fell and kept ",
+          "hit": "urging",
+          "post": " him, saying, 'Be long-tempered with me, and I will rep…"
+        },
+        {
+          "v": 32,
+          "pre": "…Evil slave! All that debt I released to you, since you ",
+          "hit": "urged",
+          "post": " me.…"
+        }
+      ],
+      "total": 2
+    },
+    "wander": {
+      "count": 3,
+      "verses": [
+        12,
+        13
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…tain man comes to have a hundred sheep and one of them ",
+          "hit": "wanders off",
+          "post": ", will he not leave the ninety-nine on the mountains an…"
+        },
+        {
+          "v": 12,
+          "pre": "…e ninety-nine on the mountains and go and seek the one ",
+          "hit": "wandering",
+          "post": "?…"
+        },
+        {
+          "v": 13,
+          "pre": "…s over it more than over the ninety-nine that have not ",
+          "hit": "wandered off",
+          "post": ".…"
+        }
+      ],
+      "total": 3
+    },
+    "worship": {
+      "count": 1,
+      "verses": [
+        26
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…So the slave fell and kept ",
+          "hit": "bowing low",
+          "post": " before him, saying, 'Be long-tempered with me, and I w…"
         }
       ],
       "total": 1

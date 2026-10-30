@@ -963,3 +963,6 @@
 - Rewrote CHAT_SIDE_INSTRUCTIONS (lens + chat routing), style reference (core numbering, §8 example, markup left to components-reference, judgment-only checklist), CLAUDE.md (recipe to docs/retrofit.md, Constable steps to the tool docstring), translation-choices (log and fix history out, 23 thread rows and unit 15-16 rulings in), resources (merged reference links; dropped from book.json sync). Unit map: sections 3-4 cut, emmanuel tag removed.
 - Archived to archive/docs-2026-10-30/: PLAN.md, matthew_reference_links.md, intertext-build-prompt.md, intertext-redesign-handoff.md, chat-side-findings-unit-16.md, Project INstructions.txt, interlinear-prompt.md.
 - 2026-10-30: core 0.22.1 vendored (warn-only `docs` size budget in `biblecore test`); `book.json` sets style_reference to 18 KB.
+## 2026-10-30 — Unit 18 port
+- Added units/unit-18.html; promoted `debt`, `gain`, `mikros` in data/roots.json + threads.json (colours from `colour`); retrofit adds for mikros (10:42, 11:11, 13:32) and gain (16:26) in retrofit-tags.json; opens/tags in boxed units 6, 10, 11, 13 (tags only) and unit 17.
+- Source artifact edited by hand: root `kerdainō` → `kerdaino`; promote[] moved into payoffs[] after promoting by hand (retro[] needs tracked threads, promote[] rejects them); research chat's `skandalon` retro at 17:27 dropped (already tagged, produced a nested span).

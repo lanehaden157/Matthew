@@ -1021,11 +1021,66 @@
     {
       "n": 18,
       "slug": "unit-18",
-      "passage": "Matthew 18:1-35",
+      "passage": "Matthew 18:1–35",
       "title": "Life in the Community",
       "movement": 3,
-      "built": false,
-      "discourse": 4
+      "built": true,
+      "discourse": true,
+      "roots": {
+        "child": {
+          "color": "#b1481f",
+          "translit": "paidion",
+          "gloss": "child, little child"
+        },
+        "enter": {
+          "color": "#55642f",
+          "translit": "eiserchomai",
+          "gloss": "come in, come into"
+        },
+        "receive": {
+          "color": "#3d6b4a",
+          "translit": "dechomai",
+          "gloss": "receive, welcome"
+        },
+        "name": {
+          "color": "#7a3f5c",
+          "translit": "onoma",
+          "gloss": "name"
+        },
+        "lower": {
+          "color": "#1f6e7a",
+          "translit": "tapeinoō · tapeinos",
+          "gloss": "lower, bring low; lowly"
+        },
+        "wander": {
+          "color": "#9c5a1e",
+          "translit": "planaō",
+          "gloss": "wander off, go astray"
+        },
+        "assembly": {
+          "color": "#a67c1e",
+          "translit": "ekklēsia",
+          "gloss": "assembly, the gathered people",
+          "echo": "Deut 4:10: the Greek Old Testament's word for Israel gathered at Horeb (Hebrew qahal), the covenant people assembled before God."
+        },
+        "bind": {
+          "color": "#1e7a5c",
+          "translit": "deō",
+          "gloss": "bind, tie"
+        },
+        "loose": {
+          "color": "#5c3f7a",
+          "translit": "lyō",
+          "gloss": "loose, untie"
+        },
+        "long-tempered": {
+          "color": "#006494",
+          "translit": "makrothymeō",
+          "gloss": "be long-tempered, slow to anger"
+        }
+      },
+      "contract": "0.22.1",
+      "descriptor": "the fourth discourse: the little ones, the brother who sins, and release without a ceiling"
     },
     {
       "n": 19,
