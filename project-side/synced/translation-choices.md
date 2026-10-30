@@ -1,318 +1,180 @@
 # Translation Choices
 
-A working glossary of deliberate English renderings for this study's own
-translation — built from `data/threads.json` and `data/units.json` and
-**audited against the verse text of units 1–11** (2026-09-12), plus register
-decisions that aren't tracked as coloured `data-root` spans at all. **Not** a
-list of every English word in the fragments — just the ones where the choice
-was made on purpose and is worth carrying forward consistently.
+The study's deliberate English renderings, starting from `canon-conventions.md`. Check here
+before rendering a Greek word and match it. A different rendering for one verse goes to Lane
+as a call. Verse refs are Matthew.
 
-Verse refs below are Matthew chapter:verse.
+Claude Code updates this file in the same turn as any wording ruling. It's hand-maintained,
+so if a unit and this file disagree, flag the mismatch rather than trusting either.
 
-## How to use this file (for the Claude.ai research project)
-
-Before rendering a Greek word in a new unit's translation, check this file
-for a prior decision and match it. If a different rendering genuinely fits
-better in a specific verse, use it — but say so explicitly in the artifact
-(a note, or flagged in the thread-delta), rather than silently drifting.
-Lane reviews the flag and decides whether it's a one-off exception or a
-correction that should update this file everywhere.
-
-Claude Code keeps this file current as part of its normal workflow — any
-session that changes a rendering updates the relevant row/bullet and the Log
-section below in the same turn, without being asked separately. It's still
-hand-maintained prose, not generated from the fragments, so if a unit's
-actual text and this file ever disagree, the unit is more likely right;
-flag the mismatch rather than trusting the file blindly.
-
-## Tracked colour-thread words (global — same colour in every unit)
-
-Thread id, transliteration, the rendering(s) actually used, and why. Threads
-marked `(phrase)` are tracked by fixed phrase rather than lexical stem. A few
-of these words genuinely **drift with context** by Lane's standing call
-(mercy, righteous) — that's noted, not a bug.
+## Tracked threads
 
 | thread | Greek | rendering | note |
 |---|---|---|---|
-| acts-of-power | dynamis | acts of power (not "miracles") | New thread (2026-09-12). Opens 7:22 (the false claim); pays off 11:20–23 (Galilee's own unrepented evidence). Kept literal, countable, and plural — not the modern "miracle" category. |
-| apo-tote | apo tote | "from then" (phrase) | Two hinges: 4:17 ("began to proclaim") / 16:21 ("began to show he must suffer"). |
-| authority | exousia | authority | Runs 7:29 to 28:18. |
-| build | oikodomeō | build | 7:24–26 → "I will build my assembly" (16:18). |
-| call | kaleō | call; be called | 1:21–25, 2:15, 5:9, 9:13. Distinct from prefixed compounds (parakaleō "urge", proskaleomai "summon", ekklēsia "assembly") — separate words, not this thread. |
-| clean | katharizō | cleanse | Promoted from unit-08's local palette (2026-09-12) when it recurred at 10:8. Opens 8:2–3, pays off 10:8 (one of the Twelve's four powers). |
-| come-here | deute | "come here" (a summons) | 4:19, 11:28. |
-| counsel | symboulion | "took counsel" | New thread 2026-09-20. 12:14 → 22:15, 27:1, 27:7, 28:12 — the leaders' plot, Sabbath healing to bribed guards. |
-| cross | stauros | cross | First at 10:38, well before any passion prediction. |
-| defame | blasphēmeō · blasphēmia | **defame / defaming** (not "blaspheme", not "slander") | New thread 2026-09-20. 9:3 changed "blasphemes" → "defames" to match 12:31. "Slander" stays reserved for diabolos ("the slanderer"). |
-| evil | ponēros | evil; the evil one; evildoer | "evil one" 5:37, 6:13; "evildoer" 5:39; "evil" elsewhere. |
-| faith | pistis · pisteuō | **trust** (not "faith" or "believe") | Noun and verb both. "Faith"/"believe" appear nowhere in the verse text — only in compare-table citations of other translations. |
-| father | patēr | Father / father | Tagged at every occurrence, including the ordinary human sense (2:22, 4:21–22). "Father in the skies," not "heavenly Father" (5:48, 6:14, 6:26, 6:32 — fixed 2026-09-12; see sky/skies below). |
-| fear | phobeō | fear; be afraid | 1:20, 2:22, 9:8; saturates 10:26–31; recurs at 14:27 and 28:5, 10. |
-| fish | halieus | fishers | "fishers of men" (4:19). |
-| follow | akoloutheō | follow | A discipleship keyword from Unit 4 on. |
-| foolish | mōros · mōrainō | fool; made foolish; stupid | 5:13 salt "made foolish," 5:22 "Fool!", 7:26 "a stupid man" (the deliberate opposite of "shrewd" at 7:24 — Lane's call, keep). Returns 23:17; 25:2. |
-| fringe | kraspedon | fringe | 9:20 — the tzitzit of Numbers 15:38. |
-| fruit | karpos | fruit | Promoted from unit-07's local palette 2026-09-20. 3:8–10 → 7:16–20 → 12:33. |
-| fulfill | plēroō | "filled full" in the formula quotations; "fulfill" in speech | Formula-quotation instances are all now "filled full," unhyphenated: 1:22, 2:15, 2:17, 2:23, 4:14, 8:17 (2026-09-12 — was split between "fulfilled" and hyphenated "filled-full"). Jesus' own speech keeps "fulfill": 3:15, 5:17. **plērōma** (same family) is rendered contextually — "patch" at 9:16, tagged with this root. |
-| gehenna | geenna | Gehenna (not "hell") | 5:22 "the Gehenna of fire," 5:29–30, 10:28. |
-| generation | genea | generation | 1:17 (literal count) and 11:16 ("this generation," moral sense) — one colour, two senses, not conflated. (1:17 was briefly double-tagged beget+generation; fixed 2026-09-12 to generation alone.) |
-| gentle | praus | **gentle** (not "meek") | 5:5, 11:29 — unified 2026-09-12; Jesus claims it of himself at 11:29. Lane's call: gentle everywhere, may still drift by context if a future verse asks for it. |
-| good-news | euangelion | **good-news** (hyphenated) | 4:23, 9:35/10:35, 11:5 → 24:14 → 26:13. Hyphen kept throughout (2026-09-12) since it renders one Greek word. "Gospel" is not used in the verse text. |
-| hand-over | paradidōmi | hand over | 4:12, 5:25, 10:4 (Judas introduced by it), 10:17–21, 11:27; governs the passion from 17:22 on. |
-| house | oikia · oikos · oikiakos | house; household | New thread 2026-09-20. 2:11 → 7:24–27, 10:6, 12:25–29, 12:44. oikodespotēs ("master of the house", 10:25) is a different compound — untagged. |
-| immerse | baptizō · baptisma · baptistēs | **immerse / Immerser** (not "baptize" / "Baptist") | Promoted from unit-03's local palette (2026-09-12) when John's title recurred at 11:11–12 as "the Baptizer" — now "the Immerser" throughout. |
-| judge | krinō · krisis · kritēs · katakrinō | judge; judgment; judge against; **sue** (5:40, krithēnai) | Promoted from unit-07's local palette 2026-09-20. 5:21–25 → 7:1–2 → 10:15, 11:22–24 → 12:18–42. katadikazō "condemn" (12:7, 12:37) is a different root (local). Spelling: "judgment" (10:15 fixed from "judgement"). |
-| kingdom | basileia | kingdom | "kingdom of the skies" (see sky/skies), not "kingdom of heaven." Plural "kingdoms of the world" 4:8. Distinct from basileus, "king." |
-| law-prophets | ho nomos kai hoi prophētai | "the Law and the Prophets" (phrase) | 7:12; "the Law or the Prophets" 5:17; "the Prophets and the Law" 11:13 (follows the Greek word order there). Frames 5:17–7:12. |
-| learn | mathētēs · manthanō | **learner** (not "disciple") | Noun "learner" from 5:1; the verb "learn" now also tagged (9:13, 11:29 — added 2026-09-12, was untagged). "Disciple" appears nowhere in the verse text. |
-| light | phōs | light | 4:16 → 5:14, 6:22–23, 10:27. |
-| little-faith | oligopistoi | "little-faiths" (phrase) | 6:30, 8:26 — Matthew's near-nickname for the learners. The one place "faith" survives, deliberately: a distinct word from `faith` (pistis), own colour. |
-| lose | apollymi · apōleia | lose; destroy; perish; lost; ruin | "destroy" 2:13, 10:28; "we are being destroyed" 8:25; "perish" 5:29–30; "lost sheep" 10:6; "lose" 10:39, 42; "ruin" 7:13 (apōleia). |
-| mercy | eleos · eleeō | **loyal-love** (Hosea 6:6 sense — hesed, covenant loyalty) | 5:7 fixed 2026-09-12 to match 9:13, 9:27 ("Blessed are the loyal-in-love, for they shall be shown loyal-love"). Lane's call: loyal-love is the standing choice but may drift by context if a specific verse calls for it. "Mercy-deed" (eleēmosynē, almsgiving, 6:2–4) is a different word sharing the root — left as its own contextual rendering, not forced to "loyal-love." |
-| metanoia | metanoia · metanoeō | **turn** (not "repent") | Unified 2026-09-12: 3:2 "Turn!", 3:8/3:11 "turning" (unchanged), 4:17 "Turn" (was "Repent"), 11:20 "turn" and 11:21 "turned" (was "change/changed their minds"). |
-| nations | ethnē | nations; Gentiles | "Galilee of the nations" (4:15), 6:32, 10:5, 10:18; "Gentiles" 5:47 → "all the nations" (28:19). |
-| peace | eirēnē | peace | 5:9 "peacemakers" → 10:13, 10:34 ("not peace but a sword"). |
-| permitted | exestin · exon | "it is permitted" | New thread 2026-09-20. 12:2–12; every Matthean use is a dispute over what Torah allows. |
-| raise | egeirō | raise; get up; rise; rouse | Spans the mundane and the resurrection sense: "raised from sleep" 1:24, "rising" 2:13–21, "get up" 9:5–7, "roused him" 8:25, "the dead are raised" 11:5, "has not arisen" 11:11. |
-| release | aphiēmi | release; leave; let; permit | Not "forgive" — same verb for sins, a debt, a fever, nets, the dead: "release" 6:12–15, 8:15, 9:2–6; "leaving the nets" 4:20–22; "permit" 3:15; "let me" 7:4; "let him have" 5:40. The nouns "debts"/"debtors" at 6:12 (opheilēma, a different Greek root) were mistakenly tagged under this colour — untagged 2026-09-12. |
-| rest | anapausis · anapauō | rest; give rest | New thread 2026-09-20. 11:28–29 → 12:43. |
-| righteous | dikaios · dikaiosynē · dikaioō | righteous(ness); just; right-doing; upright; in the right | Deliberate drift by context (Lane's call, 2026-09-12 — all of these read better than a flattened "righteousness" everywhere): "righteous" 1:19; "righteousness" 3:15, 5:6–20; "right-doing" 6:1, 6:33; "just" 5:45, 10:41; "upright" 9:13; "shown to be in the right" 11:19. |
-| rock | petra | rock | Distinct from Petros, the name. 7:24–25 → 16:18. |
-| save | sōzō | save | 1:21, 8:25, 9:21–22, 10:22. Carries the heal/rescue sense on purpose (9:21–22); not forced apart. |
-| sea | thalassa | sea | Galilee geography (4:13–18) → chaos-and-authority stage (8:24–32). |
-| seek | zēteō · epizēteō | seek; seek after | 2:13, 2:20 (Herod) → 6:32–33 → 7:7–8. |
-| shake | seismos | shaking | 8:24 "a great shaking … in the sea" = the same word as the cross/tomb earthquakes. |
-| sign | sēmeion | sign | New thread 2026-09-20. 12:38–39 (the sign of Jonah) → 16:1–4, 24, 26:48. |
-| sin | hamartia · hamartōlos | sins; sinners | 1:21 → 3:6 → 9:2–13 → 11:19 → 26:28. Pairs with `save` and `release`. (paraptōma at 6:14–15 is "false steps" — a different word, untracked.) |
-| skandalon | skandalizō | trip up | 5:29–30 "trips you up", 11:6 "tripped up" → 26:31–33. |
-| son-of-david | huios Dauid | "Son of David" (phrase) | 9:27 on, always tied to healing. |
-| son-of-man | ho huios tou anthrōpou | "the Son of Man" (phrase) | Daniel 7:13–14. 8:20, 9:6, 10:23, 11:19 → trial → parousia. |
-| spirit | pneuma | spirit / Spirit; Holy Spirit | 1:18–20, 3:11, 3:16, 4:1; "poor in the spirit" 5:3; "unclean spirits" 8:16, 10:1. |
-| test | peirazō · ekpeirazō | test; tester; test out | 4:1 "tested", 4:3 "the tester", 4:7 "test out" (ekpeirazō), 6:13 "testing." "Tempt" is not used. |
-| throw | ballō (+ compounds) | throw (out/down); cast out; pour; put; wrap | Broad, contextual: ekballō "throw out" 7:4–5, 8:12, 10:1, 10:8; periballō "wrapped" 6:29, 6:31; "pour" 9:17; "puts" 9:16. |
-| torment | basanizō · basanos | torment | 4:24 → 8:6 ↔ 8:29 inclusio. |
-| treasure | thēsauros · thēsaurizō | treasure(s); treasure up | Promoted from unit-06's local palette 2026-09-20. 2:11 → 6:19–21 → 12:35. |
-| urge | parakaleō | urge; comfort | "urging" 8:5, 8:31, "urged" 8:34 — same verb bends from trust to rejection. Passive "comforted" 2:18, 5:4. |
-| wage | misthos | **wage** (not "reward") | Unified 2026-09-12: 5:12 and 5:46 changed from "reward" to match 6:1–16, 10:41–42. |
-| well-pleased | eudokeō · eudokia | delight; well-pleasing | 3:17 "in whom I delighted" → 11:26 "well-pleasing before you." |
-| wise | phronimos | **shrewd** (not "wise") | 7:24, 10:16 → 24:45, 25:2. ("Wise and perceptive" at 11:25 is sophos — a different word, untracked.) |
-| withdraw | anachōreō | withdraw; clear out | 2:12–22, 4:12 — Matthew's standing verb for tactical retreat. Imperative "clear out" 9:24. |
-| worship | proskyneō | worship; bow low; kneel low | "worship" for the magi and the tester (2:2–11, 4:9–10); "bowing low" 8:2 and "knelt low" 9:18 for suppliants → 28:9, 17. |
-| worthy | axios | worthy | 3:8 ("fruit worthy of the turning") → 10:10–38. |
+| acts-of-power | dynamis | acts of power (not "miracles") | plural and countable |
+| anointed | christos | **Anointed; the Anointed One** (not "Christ") | a title, not a surname: "Jesus Anointed" (1:1); "the Anointed One" stands from 11:2 and 16:16 |
+| anxious | merimnaō | **pulled apart with care** (not "anxious") | everywhere the verb appears |
+| apo-tote | apo tote | "from then" (phrase) | hinges 4:17, 16:21 |
+| astonish | ekplēssomai | knocked / struck clean out of themselves | bodily, not "amazed" |
+| authority | exousia | authority | |
+| blessed | makarios | blessed | see "spoke the blessing" for eulogeō |
+| bread | artos | loaves; loaves of bread; bread | "loaves of bread" through unit 15 |
+| build | oikodomeō | build | |
+| call | kaleō | call; be called | prefixed compounds (parakaleō, proskaleomai, ekklēsia) are separate words |
+| clean | katharizō | cleanse | |
+| come-here | deute | "come here" (a summons) | |
+| compassion | splanchnizomai | **wrenched in the gut** (not "moved with compassion") | deliberately bodily and blunt |
+| completion-of-age | synteleia tou aiōnos | completion of the age (phrase) | |
+| counsel | symboulion | "took counsel" | |
+| cross | stauros | cross | |
+| defame | blasphēmeō · blasphēmia | **defame / defaming** (not "blaspheme", not "slander") | "slander" is reserved for diabolos |
+| enemy | echthros | enemy | |
+| evil | ponēros | evil; the evil one; evildoer | |
+| eye | ophthalmos | eye | |
+| faith | pistis · pisteuō | **trust** (not "faith" or "believe") | noun and verb; those words appear only in cited translations |
+| father | patēr | Father / father | every occurrence, human sense included; "Father in the skies", not "heavenly Father" |
+| fear | phobeō | fear; be afraid | |
+| fish | halieus | fishers | "fishers of men" (4:19) |
+| follow | akoloutheō | follow | |
+| foolish | mōros · mōrainō | fool; made foolish; stupid | 7:26 "a stupid man" is the deliberate opposite of "shrewd" at 7:24 (Lane) |
+| fringe | kraspedon | fringe | the tzitzit of Num 15:38 |
+| fruit | karpos | fruit | |
+| fulfill | plēroō | "filled full" in formula quotations; "fulfill" in speech | plērōma is contextual: "patch" 9:16, same tag |
+| gather | synagō · episynagō | gather | |
+| gehenna | geenna | Gehenna (not "hell") | |
+| generation | genea | generation | one colour, two senses: 1:17 count, 11:16 moral |
+| gentle | praus | **gentle** (not "meek") | may drift by context (Lane) |
+| good-news | euangelion | **good-news**, hyphenated | one Greek word; "gospel" isn't used |
+| grieve | lypeō | grieved | |
+| hand-over | paradidōmi | hand over | |
+| harvest | therismos · theristēs · therizō | harvest; reapers; reap | |
+| heart | kardia | heart | |
+| hide | kryptō · apokryptō · kryptos | hide; hidden; "the hidden place" | |
+| house | oikia · oikos · oikiakos | house; household | |
+| householder | oikodespotēs | master of the house | |
+| immerse | baptizō · baptisma · baptistēs | **immerse / Immerser** (not "baptize", "Baptist") | |
+| joy | chara · chairō | joy; rejoice | |
+| judge | krinō · krisis · kritēs · katakrinō | judge; judgment; judge against; **sue** (5:40) | katadikazō "condemn" is local; spelling "judgment" |
+| king | basileus | king | distinct from basileia |
+| kingdom | basileia | kingdom | "kingdom of the skies" |
+| law-prophets | ho nomos kai hoi prophētai | "the Law and the Prophets" (phrase) | follows the Greek word order |
+| lawlessness | anomia | lawlessness | |
+| learn | mathētēs · manthanō | **learner** (not "disciple"); learn | |
+| light | phōs | light | |
+| little-faith | oligopistoi | "little-faiths" (phrase) | the one place "faith" survives |
+| lose | apollymi · apōleia | lose; destroy; perish; lost; ruin | |
+| mercy | eleos · eleeō | **loyal-love** | Hos 6:6 sense; may drift by context (Lane). eleēmosynē is "mercy-deed", a separate rendering |
+| metanoia | metanoia · metanoeō | **turn** (not "repent") | |
+| nations | ethnē | nations; Gentiles | |
+| peace | eirēnē | peace | |
+| permitted | exestin · exon | "it is permitted" | |
+| raise | egeirō | raise; get up; rise; rouse | mundane and resurrection senses together |
+| release | aphiēmi | **release**; leave; let; permit (not "forgive") | same verb for sins, debts, a fever, nets. opheilēma "debts" is a different root |
+| rest | anapausis · anapauō | rest; give rest | |
+| righteous | dikaios · dikaiosynē · dikaioō | righteous(ness); just; right-doing; upright; in the right | deliberate drift by context (Lane) |
+| rock | petra | rock | distinct from Petros |
+| rotten | sapros | rotten | |
+| save | sōzō | save | carries heal/rescue on purpose |
+| sea | thalassa | sea | |
+| seek | zēteō · epizēteō | seek; seek after | |
+| send-away | apolyō | send away; divorce; release | |
+| shake | seismos | shaking | same word as the cross and tomb earthquakes |
+| sign | sēmeion | sign | |
+| sin | hamartia · hamartōlos | sins; sinners | paraptōma is "false steps", untracked |
+| skandalon | skandalizō | trip up | |
+| snatch | harpazō | seize; snatch; plunder | biazomai 11:12 "is under assault" is local |
+| son-of-david | huios Dauid | "Son of David" (phrase) | |
+| son-of-man | ho huios tou anthrōpou | "the Son of Man" (phrase) | |
+| spirit | pneuma | spirit / Spirit; Holy Spirit | |
+| take-heart | tharseō | take heart | |
+| test | peirazō · ekpeirazō | test; tester; test out | "tempt" isn't used |
+| thorn | akantha | thorns; thornbushes | |
+| throw | ballō (+ compounds) | throw (out/down); cast out; pour; put; wrap | broad and contextual |
+| torment | basanizō · basanos | torment | |
+| treasure | thēsauros · thēsaurizō | treasure(s); treasure up | |
+| understand | syniēmi · synetos · asynetos | understand; understanding; perceptive | |
+| urge | parakaleō | urge; comfort | |
+| wage | misthos | **wage** (not "reward") | |
+| waver | distazō | waver | |
+| weeping-grinding | ho klauthmos kai ho brygmos tōn odontōn | "the weeping and the grinding of the teeth" (phrase) | |
+| well-pleased | eudokeō · eudokia | delight; well-pleasing | |
+| wilderness | erēmos | wilderness | erēmoō is "made a wilderness" (12:25), not "laid waste" |
+| wise | phronimos | **shrewd** (not "wise") | sophos is a different word, untracked |
+| withdraw | anachōreō | withdraw; clear out | |
+| worship | proskyneō | worship; bow low; kneel low | |
+| worthy | axios | worthy | |
 
-## Unit-local words (consistent so far, not yet promoted to a global colour)
+## Unit-local words
 
-Same idea, smaller stage — these haven't recurred across enough units to
-be tracked book-wide yet, but the rendering below is what's been used
-where they've appeared.
+Used consistently where they've appeared, not tracked book-wide.
 
-| root | Greek | rendering | first seen |
-|---|---|---|---|
-| anxious → **promoted to a global thread 2026-09-12** | — | — | see table above |
-| ask | aiteō | ask | unit-07 |
-| beget | gennaō · genesis | beget, begot; genesis | unit-01 ("Book of the genesis" 1:1, "the genesis was thus" 1:18) |
-| burden | phortion · phortizō | burden; burdened | unit-11 |
-| child | paidion | the child | unit-02 |
-| clean → **promoted to a global thread 2026-09-12** | — | — | see table above |
-| condemn | katadikazō | condemn | unit-12 (12:7, 12:37) — distinct from katakrinō "judge against" (the `judge` thread) |
-| dark | skotia · skotos | darkness; the dark | unit-04 |
-| david | Dauid | David | unit-01 |
-| deeds | ergon | deeds | unit-11 (11:2 ↔ 11:19 — both occurrences now tagged; 11:2's verse text was missing the tag until 2026-09-12) |
-| do | poieō | do, make | unit-07 ("make fruit" 7:17–19) |
-| dream | onar | dream | unit-01 |
-| enter | eiserchomai | come in, come into | unit-07 |
-| eye | ophthalmos | eye | unit-07 |
-| fruit → **promoted to a global thread 2026-09-20** | — | — | see table above |
-| gate | pylē | gate | unit-07 |
-| harvest | therismos | harvest | unit-10 ("the Master of the harvest" 9:38) |
-| hidden | kryptos · kryphaios | "the hidden place" | unit-06 |
-| hide-reveal | kryptō · apokalyptō | hide / reveal | unit-11 |
-| hunger | peinaō | be hungry | unit-12 (12:1, 12:3) — also 4:2, 5:6 (untagged; local) |
-| immerse → **promoted to a global thread 2026-09-12** | — | — | see table above |
-| judge → **promoted to a global thread 2026-09-20** | — | — | see table above |
-| king | basileus | king | unit-02 |
-| measure | metron · metreō | measure; measure out / back | unit-07 |
-| name | onoma | name | unit-01 |
-| **proclaim** | kēryssō | **proclaim** (not "herald" or "preach") | unit-04 (3:1, 4:17, 4:23, 9:35, 10:7, 10:27, 11:1) — see note below |
-| receive | dechomai | receive | unit-10 |
-| reed | kalamos | reed | unit-11 |
-| reproach | oneidizō | reproach | unit-11 |
-| sabbath | sabbaton | Sabbath; "the Sabbaths" where the Greek is plural | unit-12 |
-| seen | theaomai | gaze at | unit-06 ("to be gazed at" 6:1; "go out … to gaze at" 11:7) |
-| seize | harpazō · biazomai | is under assault; seize | unit-11 (11:12) |
-| send-out | apostellō · apostolos | send (out); **emissaries** (the Twelve, 10:2) | unit-10 |
-| shadow | skia | shadow | unit-04 |
-| slanderer | diabolos | the slanderer | unit-03 (4:1–11) |
-| son | huios | Son (of God) | unit-03 |
-| stretch-out | ekteinō | stretch out | unit-12 (12:10–13, 12:49) — same verb at 8:3 "stretching out the hand", untagged |
-| touch | haptomai | take hold of; touch | unit-08 ("took hold of" 8:3, 8:15; "touched" 9:29) |
-| treasure → **promoted to a global thread 2026-09-20** | — | — | see table above |
-| way | hodos | road | unit-07 ("the road that leads off" 7:13–14; "clear your road" 11:10) |
-| whole | holos · teleios | whole | unit-05 ("whole body" 5:29–30; "be whole as … Father is whole" 5:48) |
-| wilderness | erēmos | wilderness | unit-03 |
-| with | meta · meth' | with | unit-01 only (1:23 "God with us") — demoted from the `emmanuel` thread 2026-09-20; not tagged elsewhere, incl. 12:3–4, 12:30 and 28:20 |
-| yoke | zygos | yoke | unit-11 |
+| root | Greek | rendering |
+|---|---|---|
+| ask | aiteō | ask |
+| beget | gennaō · genesis | beget, begot; genesis |
+| burden | phortion · phortizō | burden; burdened |
+| child | paidion | the child |
+| condemn | katadikazō | condemn (distinct from katakrinō) |
+| dark | skotia · skotos | darkness; the dark |
+| david | Dauid | David |
+| deeds | ergon | deeds |
+| do | poieō | do, make |
+| dream | onar | dream |
+| enter | eiserchomai | come in, come into |
+| gate | pylē | gate |
+| hunger | peinaō | be hungry |
+| measure | metron · metreō | measure; measure out / back |
+| name | onoma | name |
+| proclaim | kēryssō | **proclaim** (not "herald" or "preach") |
+| receive | dechomai | receive |
+| reed | kalamos | reed |
+| reproach | oneidizō | reproach |
+| reveal | apokalyptō | reveal |
+| sabbath | sabbaton | Sabbath; "the Sabbaths" where the Greek is plural |
+| seen | theaomai | gaze at |
+| send-out | apostellō · apostolos | send (out); **emissaries** (the Twelve) |
+| shadow | skia | shadow |
+| slanderer | diabolos | the slanderer |
+| son | huios | Son (of God) |
+| stretch-out | ekteinō | stretch out |
+| touch | haptomai | take hold of; touch |
+| way | hodos | road |
+| whole | holos · teleios | whole |
+| with | meta · meth' | with. Tagged at 1:23 only: `emmanuel` is not a thread |
+| yoke | zygos | yoke |
 
-> **proclaim, not herald:** `data-root="proclaim"` had been introduced with
-> the gloss "proclaim, herald," and the running-translation word had
-> drifted to "herald" in several verses (3:1, 9:35, 10:7, 10:27, 11:1) before
-> being corrected. "Proclaim" is the standing choice; "herald" survives only
-> in commentary prose used descriptively (e.g. "the herald and the one
-> heralded"), never as translation. "Preach" is likewise not used as
-> translation (it appears only in commentary prose).
+## General conventions
 
-> **lepros, rendered literally:** "leprous" / "leprosy" (8:1–4), "lepers"
-> (11:5), and — fixed 2026-09-12 — 10:8's "skin-diseased" is now "cleanse
-> the leprous" to match. No euphemism; render the plain word.
-
-> **synagōgē, two acceptable renderings:** "synagogues" (4:23) and
-> "gathering-places" (9:35/10:35, 10:17) both stand — Lane's call: either
-> English rendering beats transliterating "synagogue," and there's no need
-> to force one everywhere.
-
-## General style conventions (not colour-tracked at all)
-
-Register and idiom decisions that apply across the whole translation,
-regardless of which Greek word is in play.
-
-- **y'all / y'all's** — the plural "you" (hymeis/hymin/hymas/hymōn), kept
-  distinct from singular "you" throughout; possessive is "y'all's." Fixed
-  2026-09-12: 11:17 "beat your chests" → "beat y'all's chests"; 11:29 "rest
-  for your souls" → "rest for y'all's beings" (see life/being, below). A
-  broad re-check of every other "your" in units 1–11 confirmed the rest are
-  correctly singular (Jesus or the Law addressing one person, or the Lord's
-  Prayer addressing God) — not errors, don't "fix" those.
-- **life / being, not soul** — psychē (2:20, 6:25, 10:28, 10:39, and now
-  11:29 "y'all's beings" — fixed 2026-09-12, was "your souls"). "Being" is
-  used for the plural (11:29); "life" for the singular elsewhere.
-- **sky/skies, not heaven(s)** — ouranos, including the adjective ouranios:
-  "Father in the skies," not "heavenly Father" (fixed 2026-09-12 at 5:48,
-  6:14, 6:26, 6:32). Applies everywhere: "kingdom of the skies," "birds of
-  the sky." (Swept book-wide by `pipeline/wording_skies.py` for units 1–5;
-  units 6+ were drafted with it already in place.)
-- **Master, not Lord** — kyrios addressing Jesus or a human master ("Master,
-  save" 8:25; "the Master of the harvest" 9:38; slave/master 6:24,
-  10:24–25). **Yahweh** — kyrios standing for the divine name: "an angel of
-  Yahweh" (1:20 etc.), OT quotations (3:3, 4:7, 4:10, 5:33), and Jesus'
-  address "Father, Yahweh of the sky and the earth" (11:25). "Lord"/"LORD"
-  does not appear in the verse text.
-- **Anointed, not "Christ"** — christos, kept as a title rather than a
-  surname: "Jesus Anointed" (1:1, 1:18), "the one called Anointed" (1:16),
-  "the Anointed" (1:17, 2:4, and the 11:2 ring-diagram label, fixed
-  2026-09-12 from "the Christ"), "the Anointed One" (11:2 verse text).
-- **look, not behold** — idou. Units 1–2 said "behold" at five places (1:20,
-  1:23, 2:1, 2:9, 2:13, 2:19); unified to "look" 2026-09-12 to match unit 3
-  onward.
-- **amen, not truly** — amēn as a transliterated oath-opener: "Amen I say to
-  y'all" (5:18, 6:2, 10:15…), "Amen I tell y'all" (8:10, and 11:11 — fixed
-  2026-09-12, was "Truly I tell y'all").
-- **"pulled apart with care," not "anxious"** — merimnaō, now the rendering
-  everywhere the verb appears, including 10:19 (fixed 2026-09-12, was "do
-  not be anxious"), matching 6:25–34.
-- **Immerser, not Baptist/Baptizer** — baptistēs, John's title (3:1, and now
-  11:11–12, fixed 2026-09-12 — see the `immerse` thread above).
-- **Adversary** — satanas, always rendered as the title, never the name "Satan":
-  "Go away, Adversary!" (4:10), "if the Adversary throws out the Adversary"
-  (12:26), and Mark 1:13 in the unit-03 comparison ("tested by the Adversary").
-  Fixed 2026-09-23 (12:26 and Mark 1:13 were "Satan"). Keep distinct from
-  diabolos, "the slanderer." Commentary prose may still say "Satan".
-- **wrenched in the gut, not "moved with compassion"** — splanchnizomai; a
-  deliberately bodily, blunt phrase (9:36), not a tender one.
-- **harassed, not harried** — eskylmenoi (9:36) — plainer diction, matches
-  the study's register.
-- **stage-actors, not hypocrites** — hypokritēs (6:2, 6:5, 6:16).
-- **sham-prophets, not false prophets** — pseudoprophētēs (7:15).
-- **demon; demon-possessed** — daimonion / daimonizomai (4:24 "demon-oppressed",
-  8:16, 8:28–33, 9:32–34, 10:8, 11:18).
-- **messenger vs. angel** — angelos is "angel" for heavenly beings (1:20,
-  4:6, 4:11) and "messenger" for the Malachi quotation about John (11:10).
-- **slave, not servant** — doulos (8:9, 10:24–25); "to slave for" (6:24).
-- **charge sharply, not rebuke** — epitimaō. "Charged them sharply" (12:16,
-  an order not to make him known) and, by Lane's ruling 2026-09-20, 8:26
-  "charged the winds and the sea sharply" (was "rebuked"; the Mark 4:39
-  parallel in the unit-08 notes follows). "Rebuke" survives only as
-  descriptive commentary prose.
-- **made a wilderness, not "laid waste"** — erēmoō (12:25), from erēmos
-  "wilderness" (the `wilderness` root, 3:1, 4:1). Fixed 2026-09-23.
-- **workless word, not "idle word"** — argos = a-ergos (12:36), keeping the
-  ergon / `deeds` link audible. Fixed 2026-09-23.
-- **treat as common, not "profane"** — bebēloō (12:5), from bebēlos
-  "trodden, open to all," the opposite of set apart. Fixed 2026-09-23.
-- **defile, not "make common"** — koinoō (15:11, 18, 20), literally "make common"
-  (koinos, set-apart lost). The gloss says so; the negative sense (loss of standing
-  before God) matters, so the verse renders "defile". bebēloō (12:5) stays "treat as
-  common". Fixed 2026-10-25.
-- **handing-down, not "tradition"** — paradosis (15:2, 3, 6). Keeps the stem audible
-  without reusing "hand over" (paradidōmi thread). Fixed 2026-10-25.
-- **speaks ill of, not "speaks evil of"** — kakologeō (15:4); "evil" is ponēros.
-  Fixed 2026-10-25.
-- **stripped of authority, not "made void"** — akyroō (15:6), a-kyros. Fixed 2026-10-25.
-- **to no purpose, not "in vain"** — matēn (15:9, Isa 29:13). Fixed 2026-10-25.
-- **show devotion to, not "revere"** — sebomai (15:9); not "worship" (proskyneō thread).
-  Fixed 2026-10-25.
-- **viper, not "snake"** — echidna is the viper; ophis is the general
-  "snake" (7:10, 10:16), so "offspring of vipers" (3:7, 12:34, 23:33) keeps them
-  apart. Open: whether gennēmata stays "offspring" (Lane looking again 2026-09-23).
-
-- **trust, not faith/believe** — see `faith` in the global table above;
-  called out again here because it's easy to slip back into "faith" from
-  habit.
-
-## Log
-
-- 2026-09-11 — added `learn` (learner, not disciple) as a new global thread;
-  fixed `fulfill` gap at 9:16; corrected `proclaim` (was drifting to
-  "herald"); fixed `harried` → `harassed` and two missed `lord` → `master`
-  instances in Unit 10.
-- 2026-09-12 (audit) — full audit against units 1–11 verse text; rewrote
-  rows to describe actual renderings; ~12 drifts surfaced under "Open calls"
-  for Lane's ruling. No unit text changed in this pass.
-- 2026-09-12 (rulings applied) — Lane ruled on every open call; changes made
-  to units 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and to data/threads.json:
-  - **Wording fixed to match the standing choice:** metanoia → turn (3:2 kept,
-    4:17/11:20/11:21 changed); mercy 5:7 → loyal-love; wage 5:12/5:46 → wage;
-    gentle 5:5 → gentle; "Father in the skies" (5:48, 6:14, 6:26, 6:32, was
-    "heavenly Father"); Immerser (11:11–12, was "Baptizer"); lepros 10:8 →
-    "cleanse the leprous" (was "skin-diseased"); fulfill formula unified to
-    "filled full" (1:22, 2:15, 2:17, 2:23, 4:14, 8:17); look (1:20, 1:23, 2:1,
-    2:9, 2:13, 2:19, was "behold"); amen 11:11 (was "Truly"); "pulled apart
-    with care" 10:19 (was "anxious"); good-news hyphenated everywhere (10:35,
-    11:5); y'all's for plural possessive (11:17 chests, 11:29 beings, was
-    "your … souls"); "the Anointed" in the unit-11 ring diagram (was "the
-    Christ").
-  - **Ruled to keep as intentional context-drift:** dikaios family (righteous
-    /just/right-doing/upright/in the right); 7:26 "stupid" (not "foolish");
-    synagōgē (both "synagogues" and "gathering-places" stand); mercy-deed
-    (eleēmosynē) stays a separate rendering from loyal-love.
-  - **New global thread:** acts-of-power (dynamis) — tagged at 7:22 and
-    11:20–23, replacing untagged "miracles."
-  - **Threads promoted from local to global** (recurred in a second unit):
-    immerse (unit-03 → 11), anxious (unit-06 → 10), clean (unit-08 → 10).
-  - **Tagging fixes:** untagged 6:12 "debts"/"debtors" (wrongly under
-    `release`, a different Greek root); consolidated 1:17's four
-    "generations" onto the `generation` root alone (was double-tagged
-    beget+generation on the first one, `beget` alone on the rest); tagged
-    the `learn` verb at 9:13 and 11:29 (was untagged); tagged `deeds` in
-    11:2's and 11:19's verse text (was tagged only in the structure ring,
-    not the running translation); updated three stale threads.json glosses
-    (release, gehenna, learn).
-  - Ran `pipeline/build.py` clean after every change (retrofit-tags.json's
-    recorded literal text updated to match 6 reworded verses so replay stays
-    idempotent; three new thread colours picked to clear the Lab-distance
-    check against every other colour active in their units).
-
-- 2026-09-20 (unit-12 port) — new global threads sign, defame, house,
-  permitted, counsel, rest; judge, fruit, treasure promoted from local
-  (each recurred in unit 12). Retro-tagged their earlier occurrences in
-  units 2–11. Wording: 9:3 "blasphemes" → "defames"; 8:26 "rebuked" →
-  "charged … sharply" (+ the 8:26 note label and Mark 4:39 row); 10:15
-  "judgement" → "judgment". New unit-local rows: condemn, hunger, sabbath,
-  speak, stretch-out.
-- 2026-09-20 (Lane) — `speak` removed entirely (untagged in unit 12; no root, no glossary row).
-  `with` demoted from the global `emmanuel` thread to a unit-01-only local root; its unit-12 tags removed.
-
-- 2026-09-23 (Lane) — 12:25 "laid waste" → "made a wilderness"; 12:26 and Mark 1:13
-  "Satan" → "the Adversary" (+ a 12:26 gloss); 12:36 "idle" → "workless"; 12:5
-  "profane" → "treat … as common". Offspring of vipers left as is, pending Lane's call.
-
-- 2026-10-25 (Lane) — `eulogeō` at 14:19 (and 26:26): "spoke the blessing", not "blessed" (which blurs into makarios).
+- **y'all / y'all's** — plural "you". Singular "you" stays unmarked, so don't "fix" a true singular.
+- **life / being, not soul** — psychē: "being" in the plural, "life" in the singular.
+- **sky/skies, not heaven(s)** — ouranos and ouranios, everywhere.
+- **Master, not Lord** — kyrios of Jesus or a human master. **Yahweh** where kyrios stands for the name, OT quotations included. "Lord" isn't used in verse text.
+- **look, not behold** — idou.
+- **amen, not truly** — "Amen I say to y'all", "Amen I tell y'all".
+- **the Adversary, not Satan** — satanas, as a title. Keep distinct from diabolos, "the slanderer". Commentary prose may still say "Satan".
+- **stage-actors, not hypocrites** — hypokritēs.
+- **sham-prophets, not false prophets** — pseudoprophētēs.
+- **harassed, not harried** — eskylmenoi.
+- **demon; demon-possessed** — daimonion / daimonizomai.
+- **angel / messenger** — angelos is "angel" for heavenly beings, "messenger" for the Malachi quotation (11:10).
+- **slave, not servant** — doulos; "to slave for" (6:24).
+- **charge sharply, not rebuke** — epitimaō, including 8:26.
+- **leprous, leprosy, lepers** — lepros, the plain word with no euphemism.
+- **synagogues or gathering-places** — synagōgē. Both stand, and neither is forced.
+- **spoke the blessing, not blessed** — eulogeō (14:19, 26:26), which would blur into makarios.
+- **workless word, not idle** — argos (12:36), keeping `deeds` audible.
+- **treat as common, not profane** — bebēloō (12:5).
+- **defile, not make common** — koinoō (15:11, 18, 20). The gloss says it's literally "make common".
+- **handing-down, not tradition** — paradosis, keeping the stem without reusing "hand over".
+- **speaks ill of, not speaks evil of** — kakologeō (15:4).
+- **stripped of authority, not made void** — akyroō (15:6).
+- **to no purpose, not in vain** — matēn (15:9).
+- **show devotion to, not revere** — sebomai (15:9).
+- **fitting** — kalon at 15:26.
+- **little dogs** — kynaria (15:26–27).
+- **baskets / hampers** — kophinos / spyris, kept distinct (14:20, 15:37, 16:9–10).
+- **Hades** — hadēs, left as the name (16:18).
+- **adulterous, not unfaithful** — moichalis (12:39, 16:4).
+- **will have been bound / loosed** — the perfects at 16:19.
+- **not-trusting** — as shipped in unit 17 (apistos). A "trustless" ruling is mentioned in the 2026-10-29 log: confirm with Lane.
+- **viper, not snake** — echidna, with ophis as "snake". Open: whether gennēmata stays "offspring".
