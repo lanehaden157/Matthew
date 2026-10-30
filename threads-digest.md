@@ -11,51 +11,51 @@ Generated from `data/threads.json` (version 1). 92 threads, 92 open.
 | `fulfill` | `fulfill` | plēroō | fill full / fulfill | 1 (1:22) | 3 (3:15) · 5 (5:17) · 12 (12:17) · 13 (13:35) · 14 (14:20) | open |
 | `raise` | `raise` | egeirō | raise up, rouse from lying down | 1 (1:24) | 8 (8:15) · 9 (9:25) · 17 (16:21) · 28 (28:6-7) · 14 (14:2) | open |
 | `righteous` | `righteous` | dikaios · dikaiosynē | righteous(ness) | 1 (1:19) | 3 (3:15) · 5 (5:6, 10, 20; 6:33) · 12 (12:37) · 13 (13:43) | open |
-| `save` | `save` | sōzō | save / heal / rescue | 1 (1:21) | 9 (9:21-22) · 10 (10:22) · 14 (14:30) · 27 (27:42) | open |
+| `save` | `save` | sōzō | save / heal / rescue | 1 (1:21) | 9 (9:21-22) · 10 (10:22) · 14 (14:30) · 27 (27:42) · 17 (16:25) | open |
 | `sin` | `sin` | hamartia · hamartanō | sin, failure to hit the mark | 1 (1:21) | 9 (9:2-6, 10-13) · 11 (11:19) · 26 (26:28) | open |
 | `spirit` | `spirit` | pneuma | spirit | 1 (1:18) | 3 (3:16) · 5 (5:3) · 12 (12:28, 31-32) | open |
-| `house` | `house` | oikia · oikos | house, household | 2 (2:11) | 7 (7:24–27) · 10 (10:6) · 12 (12:25–29, 12:44) · 13 (13:1) · 14 (13:57) | open |
+| `house` | `house` | oikia · oikos | house, household | 2 (2:11) | 7 (7:24–27) · 10 (10:6) · 12 (12:25–29, 12:44) · 13 (13:1) · 14 (13:57) · 17 (17:25) | open |
 | `joy` | `joy` | chara · chairō | joy; rejoice | 2 (2:10) | 13 (13:20, 44) | open |
-| `king` | `king` | basileus | king | 2 (2:1) | 14 (14:9) · 18 (18:23) · 22 (22:2–13) · 27 (27:11–42) | open |
+| `king` | `king` | basileus | king | 2 (2:1) | 14 (14:9) · 18 (18:23) · 22 (22:2–13) · 27 (27:11–42) · 17 (17:25) | open |
 | `seek` | `seek` | zēteō | seek | 2 (2:13) | 6 (6:33) · 7 (7:7) · 13 (13:45) · 16 (16:4) | open |
 | `treasure` | `treasure` | thēsauros · thēsaurizō | treasure, storehouse; store up | 2 (2:11) | 6 (6:19–21) · 12 (12:35) · 13 (13:44) | open |
 | `withdraw` | `withdraw` | anachōreō | withdraw | 2 (2:12) | 2 (2:13-14, 22) · 4 (4:12) · 9 (9:24) · 12 (12:15) · 14 (14:13) | open |
 | `worship` | `worship` | proskyneō | worship, bow down | 2 (2:2) | 3 (4:9-10) · 28 (28:9, 17) · 14 (14:33) | open |
 | `fruit` | `fruit` | karpos | fruit | 3 (3:8–10) | 7 (7:16–20) · 12 (12:33) · 13 (13:8) | open |
 | `gather` | `gather` | synagō · episynagō | gather | 3 (3:12) | 6 (6:26) · 12 (12:30) · 13 (13:2, 30, 47) | open |
-| `immerse` | `immerse` | baptizō · baptisma · baptistēs | immerse (bapt-) | 3 (3:1) | 11 (11:11-12) · 14 (14:2) · 16 (16:14) | open |
-| `kingdom` | `kingdom` | basileia | kingdom | 3 (3:2) | 4 (4:17) · 5 (5:3, 10, 19-20) · 13 (13:1-52) · 12 (12:28) · 16 (16:19) | open |
+| `immerse` | `immerse` | baptizō · baptisma · baptistēs | immerse (bapt-) | 3 (3:1) | 11 (11:11-12) · 14 (14:2) · 16 (16:14) · 17 (17:13) | open |
+| `kingdom` | `kingdom` | basileia | kingdom | 3 (3:2) | 4 (4:17) · 5 (5:3, 10, 19-20) · 13 (13:1-52) · 12 (12:28) · 16 (16:19) · 17 (16:28) | open |
 | `metanoia` | `metanoia` | metanoia · metanoeō | repent, change one's mind | 3 (3:2) | 4 (4:17) · 11 (11:20) · 12 (12:41) | open |
 | `test` | `test` | peirazō | test / tempt | 3 (4:3) | 16 (16:1) · 19 (19:3) · 22 (22:18, 35) | open |
-| `well-pleased` | `well-pleased` | eudokeō | be well pleased, take delight in | 3 (3:17) | 11 (11:26) · 12 (12:18) | open |
+| `well-pleased` | `well-pleased` | eudokeō | be well pleased, take delight in | 3 (3:17) | 11 (11:26) · 12 (12:18) · 17 (17:5) | open |
 | `wilderness` | `wilderness` | erēmos | wilderness, desert place | 3 (3:1) | 14 (14:13–15) | open |
 | `worthy` | `worthy` | axios | worthy, of matching weight | 3 (3:8) | 10 (10:10-11, 37-38) · 22 (22:8) | open |
 | `apo-tote` | `apo-tote` | apo tote | "from that time" | 4 (4:17) | 17 (16:21) | open |
 | `bread` | `bread` | artos | bread | 4 (4:3–4) | 14 (14:17–19) · 16 (16:5) | open |
 | `come-here` | `come-here` | deute | come here! (a summons) | 4 (4:19) | 11 (11:28) | open |
 | `fish` | `fish` | halieus | fisher | 4 (4:19) | 13 (13:47) | open |
-| `follow` | `follow` | akoloutheō | follow (after) | 4 (4:20) | 8 (8:23) · 9 (9:9, 19, 27) · 10 (10:38) · 14 (14:13) | open |
+| `follow` | `follow` | akoloutheō | follow (after) | 4 (4:20) | 8 (8:23) · 9 (9:9, 19, 27) · 10 (10:38) · 14 (14:13) · 17 (16:24) | open |
 | `good-news` | `good-news` | euangelion | good news / gospel | 4 (4:23) | 11 (11:5) · 24 (24:14) · 26 (26:13) | open |
-| `light` | `light` | phōs | light | 4 (4:16) | 5 (5:14) · 6 (6:23) | open |
+| `light` | `light` | phōs | light | 4 (4:16) | 5 (5:14) · 6 (6:23) · 17 (17:2) | open |
 | `nations` | `nations` | ethnē | nations / Gentiles | 4 (4:15) | 10 (10:5, 18) · 28 (28:19) · 12 (12:18, 12:21) | open |
-| `sea` | `sea` | thalassa | sea | 4 (4:15) | 8 (8:24-32) · 13 (13:1) · 14 (14:25) | open |
+| `sea` | `sea` | thalassa | sea | 4 (4:15) | 8 (8:24-32) · 13 (13:1) · 14 (14:25) · 17 (17:27) | open |
 | `blessed` | `blessed` | makarios | blessed / fortunate | 5 (5:3-11) | 11 (11:6) · 13 (13:16) · 16 (16:17) · 24 (24:46) | open |
 | `enemy` | `enemy` | echthros | enemy | 5 (5:43–44) | 10 (10:36) · 13 (13:25, 28, 39) | open |
-| `eye` | `eye` | ophthalmos | eye | 5 (5:29) | 7 (7:3–5) · 13 (13:15–16) | open |
-| `father` | `father` | patēr | Father | 5 (5:16) | 6 (6:9) · 11 (11:25-27) · 13 (13:43) · 16 (16:17) | open |
+| `eye` | `eye` | ophthalmos | eye | 5 (5:29) | 7 (7:3–5) · 13 (13:15–16) · 17 (17:8) | open |
+| `father` | `father` | patēr | Father | 5 (5:16) | 6 (6:9) · 11 (11:25-27) · 13 (13:43) · 16 (16:17) · 17 (16:27) | open |
 | `gehenna` | `gehenna` | geenna | Gehenna | 5 (5:22) | 10 (10:28) · 23 (23:15, 33) | open |
 | `gentle` | `gentle` | praus | gentle, humble | 5 (5:5) | 11 (11:29) | open |
 | `heart` | `heart` | kardia | heart | 5 (5:8) | 11 (11:29) · 12 (12:34) · 13 (13:15, 19) | open |
 | `judge` | `judge` | krinō · krisis · kritēs · katakrinō | judge; judgment; judge against | 5 (5:21–25) | 7 (7:1–2) · 10 (10:15) · 11 (11:22–24) · 12 (12:18–42) | open |
 | `law-prophets` | `law-prophets` | ho nomos kai hoi prophētai | the Law & the Prophets | 5 (5:17) | 7 (7:12) · 11 (11:13) | open |
-| `learn` | `learn` | mathētēs | learner | 5 (5:1) | 8 (8:23) · 9 (9:14) · 11 (11:2) · 12 (12:49) · 13 (13:52) · 14 (14:12) · 16 (16:5) | open |
+| `learn` | `learn` | mathētēs | learner | 5 (5:1) | 8 (8:23) · 9 (9:14) · 11 (11:2) · 12 (12:49) · 13 (13:52) · 14 (14:12) · 16 (16:5) · 17 (16:21) | open |
 | `peace` | `peace` | eirēnē | peace | 5 (5:9) | 10 (10:13, 34) | open |
-| `skandalon` | `skandalon` | skandalon · skandalizō | trip up / trap-trigger, cause to stumble | 5 (5:29) | 11 (11:6) · 26 (26:31-33) · 13 (13:21) · 14 (13:57) | open |
+| `skandalon` | `skandalon` | skandalon · skandalizō | trip up / trap-trigger, cause to stumble | 5 (5:29) | 11 (11:6) · 26 (26:31-33) · 13 (13:21) · 14 (13:57) · 17 (16:23) | open |
 | `wage` | `wage` | misthos | wage / reward | 5 (5:12) | 6 (6:1-16) · 10 (10:41-42) | open |
 | `anxious` | `anxious` | merimnaō | be pulled apart with care | 6 (6:25) | 10 (10:19) · 13 (13:22) | open |
 | `evil` | `evil` | ponēros | evil / the evil one | 6 (6:13) | 7 (7:11, 17-18) · 13 (13:19, 38) · 16 (16:4) | open |
 | `hide` | `hide` | kryptō · apokryptō · kryptos | hide; hidden | 6 (6:4) | 11 (11:25) · 13 (13:33, 35, 44) | open |
-| `little-faith` | `little-faith` | oligopistoi | "little-faiths" | 6 (6:30) | 8 (8:26) · 14 (14:31) · 16 (16:8) | open |
+| `little-faith` | `little-faith` | oligopistoi | "little-faiths" | 6 (6:30) | 8 (8:26) · 14 (14:31) · 16 (16:8) · 17 (17:20) | open |
 | `release` | `release` | aphiēmi | release / let go / leave | 6 (6:12) | 8 (8:15) · 9 (9:2) · 12 (12:31–32) · 13 (13:30) | open |
 | `acts-of-power` | `acts-of-power` | dynamis | acts of power | 7 (7:22) | 11 (11:20-23) · 14 (13:58) | open |
 | `astonish` | `astonish` | ekplēssomai | be struck out of oneself, astonished | 7 (7:28) | 14 (13:54) | open |
@@ -71,14 +71,14 @@ Generated from `data/threads.json` (version 1). 92 threads, 92 open.
 | `faith` | `faith` | pistis · pisteuō | trust, faith | 8 (8:10) | 9 (9:2, 22, 29) · 15 (15:28) · 17 (17:20) · 21 (21:21) · 14 (13:58) | open |
 | `shake` | `shake` | seismos | shaking / earthquake / storm | 8 (8:24) | 27 (27:51-54) · 28 (28:2) | open |
 | `son-of-man` | `son-of-man` | ho huios tou anthrōpou | the Son of Man | 8 (8:20) | 9 (9:6) · 10 (10:23) · 11 (11:19) · 17 (16:27) · 17 (17:9, 17:22) · 19 (19:28) · 20 (20:18, 20:28) · 24 (24:27-44) · 25 (25:31) · 26 (26:24, 26:64) · 12 (12:8) · 13 (13:37) · 16 (16:13) | open |
-| `throw` | `throw` | ballō | throw / cast / put / pour / clothe (broad range) | 8 (8:6) | 9 (9:2, 16-17, 25, 33-34) · 10 (9:38; 10:1, 8, 34) · 12 (12:20, 12:24–28, 12:35) · 13 (13:47) | open |
+| `throw` | `throw` | ballō | throw / cast / put / pour / clothe (broad range) | 8 (8:6) | 9 (9:2, 16-17, 25, 33-34) · 10 (9:38; 10:1, 8, 34) · 12 (12:20, 12:24–28, 12:35) · 13 (13:47) · 17 (17:19) | open |
 | `torment` | `torment` | basanizō | torment | 8 (8:6) | 8 (8:29) · 14 (14:24) | open |
 | `urge` | `urge` | parakaleō | urge / entreat / call alongside | 8 (8:5) | 8 (8:31-34) · 14 (14:36) | open |
 | `weeping-grinding` | `weeping-grinding` | ho klauthmos kai ho brygmos tōn odontōn | "the weeping and the grinding of the teeth" | 8 (8:12) | 13 (13:42, 50) | open |
 | `compassion` | `compassion` | splanchnizomai | compassion (gut-wrenched) | 9 (9:36) | 14 (14:14) | open |
 | `defame` | `defame` | blasphēmeō · blasphēmia | defame, speak injury against (blasphēm-) | 9 (9:3) | 12 (12:31) | open |
 | `fringe` | `fringe` | kraspedon | tassel / hem | 9 (9:20) | 14 (14:36) · 23 (23:5) | open |
-| `mercy` | `mercy` | eleos · eleeō | loyal-love, covenant-kindness | 9 (9:13) | 9 (9:27) · 12 (12:7) · 20 (20:30-31) | open |
+| `mercy` | `mercy` | eleos · eleeō | loyal-love, covenant-kindness | 9 (9:13) | 9 (9:27) · 12 (12:7) · 20 (20:30-31) · 17 (17:15) | open |
 | `son-of-david` | `son-of-david` | huios Dauid | Son of David | 9 (9:27) | 12 (12:23) · 15 (15:22) · 20 (20:30-31) · 21 (21:9, 21:15) | open |
 | `take-heart` | `take-heart` | tharseō | take heart | 9 (9:2) | 9 (9:22) · 14 (14:27) | open |
 | `cross` | `cross` | stauros | cross, execution-stake | 10 (10:38) | 17 (16:24) · 27 (27:32, 40, 42) | open |
@@ -86,16 +86,16 @@ Generated from `data/threads.json` (version 1). 92 threads, 92 open.
 | `hand-over` | `hand-over` | paradidōmi | hand over, deliver up, betray | 10 (10:4) | 10 (10:17, 19, 21) · 11 (11:27) · 17 (17:22) · 20 (20:18-19) · 26 (26:2, 15-16, 21-25, 45-48) · 27 (27:2, 18, 26) | open |
 | `harvest` | `harvest` | therismos · theristēs · therizō | harvest; reaper; reap | 10 (9:37–38) | 13 (13:30) · 13 (13:39) | open |
 | `householder` | `householder` | oikodespotēs | master of the house | 10 (10:25) | 13 (13:27, 52) | open |
-| `lose` | `lose` | apollymi | lose, destroy, be lost | 10 (10:6) | 10 (10:28, 39, 42) · 15 (15:24) · 18 (18:11-14) · 12 (12:14) | open |
-| `generation` | `generation` | genea | generation; a class of people | 11 (11:16) | 12 (12:39–45) · 16 (16:4) | open |
+| `lose` | `lose` | apollymi | lose, destroy, be lost | 10 (10:6) | 10 (10:28, 39, 42) · 15 (15:24) · 18 (18:11-14) · 12 (12:14) · 17 (16:25) | open |
+| `generation` | `generation` | genea | generation; a class of people | 11 (11:16) | 12 (12:39–45) · 16 (16:4) · 17 (17:17) | open |
 | `rest` | `rest` | anapausis · anapauō | rest, give rest | 11 (11:28–29) | 12 (12:43) | open |
 | `snatch` | `snatch` | harpazō | snatch, seize | 11 (11:12) | 12 (12:29) · 13 (13:19) | open |
 | `counsel` | `counsel` | symboulion | council, plot — 'take counsel' | 12 (12:14) | — | open |
 | `permitted` | `permitted` | exestin · exon | it is permitted (the legal question) | 12 (12:2–12) | 14 (14:4) | open |
 | `sign` | `sign` | sēmeion | sign, token | 12 (12:38–39) | 16 (16:1) | open |
 | `completion-of-age` | `completion-of-age` | synteleia tou aiōnos | "the completion of the age" | 13 (13:39) | 13 (13:40, 49) | open |
-| `understand` | `understand` | syniēmi · synetos · asynetos | understand — literally 'throw together' | 13 (13:13) | 13 (13:13–15, 19, 23, 51) · 16 (16:12) | open |
-| `grieve` | `grieve` | lypeō | grieve, be sorrowful | 14 (14:9) | 14 (14:9) | open |
+| `understand` | `understand` | syniēmi · synetos · asynetos | understand — literally 'throw together' | 13 (13:13) | 13 (13:13–15, 19, 23, 51) · 16 (16:12) · 17 (17:13) | open |
+| `grieve` | `grieve` | lypeō | grieve, be sorrowful | 14 (14:9) | 14 (14:9) · 17 (17:23) | open |
 | `send-away` | `send-away` | apolyō | send away, release, divorce | 14 (14:15) | 14 (14:15, 22–23) · 15 (15:23, 32, 39) | open |
 | `waver` | `waver` | distazō | waver, doubt | 14 (14:31) | 14 (14:31) | open |
 
