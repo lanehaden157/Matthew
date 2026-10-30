@@ -25,6 +25,5 @@ should sync belongs in core's `DEFAULT_SYNC`, with a role in `ROLES`.
 | `source-artifacts/matthew_NN_translation.html` | project → repo | each unit's artifact, saved into the repo before `port` |
 | `matthew_NN_handoff.md` | research chat → Lane → build chat | the research chat's output file, pasted by Lane into a fresh chat that builds the artifact. Not stored in the repo; what survives is in the artifact's meta (`checks[]`, `threads.promote[]`, `retro`) |
 
-**Matthew-only synced files** (`book.json` `sync.extra`): `matthew_reference_links.md`
-(the annotated shelf of outside sources) and `MatthewSBLGNT.txt` (the Greek, which
-the project's copy has to match byte for byte).
+**Matthew-only synced files** (`book.json` `sync.extra`): `MatthewSBLGNT.txt` (the Greek, which
+the project's copy has to match byte for byte), `MatthewWEB.txt` and `constable-index.md`.

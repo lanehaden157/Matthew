@@ -958,3 +958,7 @@
 ## 2026-10-29 — Unit 17 re-port and thread delta
 - `port 17 --force` from the updated source artifact; story box 17:1 par-ref "Exod 24; 34" -> "Exod 24:15–18; 34:29–35" (validator needs verses).
 - Applied 20 unit-17 payoffs to `data/threads.json` (learn, skandalon, follow, save, lose, father, kingdom, light, well-pleased, eye, understand, immerse, mercy, generation, little-faith, grieve, house, king, sea, throw). No promotions, none closed.
+
+## 2026-10-30 — Instruction trim
+- Rewrote CHAT_SIDE_INSTRUCTIONS (lens + chat routing), style reference (core numbering, §8 example, markup left to components-reference, judgment-only checklist), CLAUDE.md (recipe to docs/retrofit.md, Constable steps to the tool docstring), translation-choices (log and fix history out, 23 thread rows and unit 15-16 rulings in), resources (merged reference links; dropped from book.json sync). Unit map: sections 3-4 cut, emmanuel tag removed.
+- Archived to archive/docs-2026-10-30/: PLAN.md, matthew_reference_links.md, intertext-build-prompt.md, intertext-redesign-handoff.md, chat-side-findings-unit-16.md, Project INstructions.txt, interlinear-prompt.md.

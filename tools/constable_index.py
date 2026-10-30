@@ -9,6 +9,9 @@ SRC defaults to constable/matthew.txt: the plain-text copy of the project's
 through pdftotext numbers its lines differently, so the ranges wouldn't match
 what the research chat sees). Replace that file whenever the project's copy
 changes and re-run; the index records the source's sha1 and `--check` compares.
+Without a local copy, attach this script to a message in the research project, have
+it run `python constable_index.py /mnt/project/matthew.pdf
+/mnt/user-data/outputs/constable-index.md`, and save the output here.
 
 Each outline heading (it appears twice in the file: once in the outline, once in
 the body) maps to its body line range, from the body heading to the line before

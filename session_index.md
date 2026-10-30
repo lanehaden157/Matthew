@@ -257,3 +257,7 @@ Read this first. 3 lines max per session.
 
 ## 2026-10-29 — Unit 17 forced re-port
 - Re-ported unit 17 from the newer source artifact (fixed an Exod par-ref); applied the thread delta (20 payoffs). Build, test 9 ok. Uncommitted. Core fixes noted in `../bible-core/NOTES-from-matthew-unit17.md`.
+
+## 2026-10-30 — Instruction trim
+- Trimmed field, style reference (37 → 16 KB, core section numbering), CLAUDE.md, translation-choices (rulings added, history cut), resources (absorbed reference links), unit map. PLAN.md and one-offs archived. Core sources trimmed, uncommitted.
+- Needs: commit, core release, sync, field re-paste. See session_summary_2026-10-30_instructions-trim.md.

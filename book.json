@@ -34,7 +34,6 @@
   "overlay": "discourse",
   "sync": {
     "extra": [
-      "matthew_reference_links.md",
       "MatthewSBLGNT.txt",
       "MatthewWEB.txt",
       "constable-index.md"

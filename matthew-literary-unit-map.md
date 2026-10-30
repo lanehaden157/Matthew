@@ -1,11 +1,8 @@
 # Matthew — Literary Unit Map
 
-Twenty-eight units, the plan of record. Moved out of the style reference on 2026-10-01 so core syncs
-it as `matthew-literary-unit-map.md`; the content is unchanged.
-
-Twenty-eight units, each *roughly* chapter-length, cut along Matthew's own literary seams
-rather than the medieval chapter divisions. Where a unit's boundary diverges from a chapter
-boundary, the divergence is flagged. Confirm scope against this map before each walkthrough.
+Twenty-eight units, the plan of record, cut along Matthew's own literary seams rather than the
+chapter divisions. A unit that diverges from the chapter grid is flagged **Diverges**, a
+discourse with ⚑, and a seam to read across with **Watch across the seam**.
 
 ## 1. The structural skeleton Matthew built in
 
@@ -31,8 +28,7 @@ record for the study.
 
 **(d) Davies & Allison's triads + the great inclusio** — Matthew composing in threes at
 every scale; and the **Emmanuel inclusio**, *meth' hēmōn ho theos* "God with us" (1:23)
-answered by *egō meth' hymōn eimi* "I am with y'all" (28:20). The `with` root is load-bearing
-across the whole gospel — worth tagging (thread id `emmanuel`) in any unit where it surfaces.
+answered by *egō meth' hymōn eimi* "I am with y'all" (28:20).
 
 ## 2. The twenty-eight units
 
@@ -46,8 +42,7 @@ Format: **Unit — passage — title.**
   **Diverges:** runs past 3:17 to 4:11 — John → baptism → testing is one wilderness movement;
   seam at 4:11, not the 3/4 line.
 - **Unit 4 — 4:12–25 — The Light Has Dawned.** Withdrawal to Capernaum, Isaiah 9, call of
-  the four, the 4:23 ministry summary. Short (14 vv), straddles the 4:17 hinge — built as a
-  standalone overture.
+  the four, the 4:23 ministry summary. **Diverges:** straddles the 4:17 hinge, as a short overture.
 
 **MOVEMENT TWO — The Kingdom Proclaimed in Galilee (4:17–16:20).**
 
@@ -66,7 +61,7 @@ Format: **Unit — passage — title.**
   mother-in-law + summary, would-be followers, the storm, the Gadarene demoniacs.
 - **Unit 9 — 9:1–34 — The Deeds of the Messiah (II).** Paralytic, call of Matthew, the
   fasting question, Jairus's daughter + the haemorrhaging woman, two blind men, the mute
-  demoniac. Ch. 9 *minus* the harvest summary. **Watch across the seam:** chs. 8–9 are one
+  demoniac. **Diverges:** ch. 9 minus the harvest summary. **Watch across the seam:** chs. 8–9 are one
   ten-miracle deed-block (three triads with interludes) answering chs. 5–7.
 - **Unit 10 — 9:35–11:1 — The Sending (Discourse 2).** The harvest/compassion summary
   (9:35–38) as on-ramp, then the Mission charge, closed by the 11:1 formula. **Diverges:**
@@ -75,7 +70,7 @@ Format: **Unit — passage — title.**
 *Part B — Kingdom meets growing hostility (11:2–16:20).*
 
 - **Unit 11 — 11:2–30 — Are You the Coming One?** John's question, Jesus on John, woes on the
-  towns, the great invitation. 11:2–30 (11:1 belongs to the prior formula).
+  towns, the great invitation. **Diverges:** starts after the 11:1 formula.
 - **Unit 12 — 12:1–50 — Master of the Sabbath, the Chosen Servant.** Two Sabbath conflicts,
   Isaiah 42, Beelzebul, the sign of Jonah, the return of the unclean spirit, the true family.
 - **Unit 13 — 13:1–53 — The Parables of the Kingdom (Discourse 3).** Sower through the
@@ -85,7 +80,7 @@ Format: **Unit — passage — title.**
 - **Unit 15 — 15:1–39 — Clean and Unclean; Bread for the Dogs.** The defilement controversy,
   the Canaanite woman, the 4,000. Unified by clean/unclean, bread, and Israel → nations.
 - **Unit 16 — 16:1–20 — On This Rock.** The demand for a sign, the leaven, Peter's confession.
-  Ends **16:20** — the climax of Movement Two, before the 16:21 hinge.
+  **Diverges:** ends 16:20, the climax of Movement Two.
 
 **MOVEMENT THREE — The Road to the Cross (16:21–28:20).**
 
@@ -131,28 +126,3 @@ Format: **Unit — passage — title.**
 - **Unit 28 — 28:1–20 — The Mountain of Commission.** The empty tomb and the women, the
   cover-up, the Great Commission. **Watch across the whole book:** closes the Emmanuel
   inclusio (28:20 ↔ 1:23) and the mountain frame (4 / 5 / 28).
-
-## 3. Divergences from the chapter grid, at a glance
-
-| Unit | Passage | Why it's cut here |
-|---|---|---|
-| 3 | 3:1–4:11 | John + baptism + testing = one wilderness movement; seam is 4:11 |
-| 4 | 4:12–25 | overture to the public ministry; straddles the 4:17 hinge |
-| 9 | 9:1–34 | the 9:35–38 harvest summary is pulled into the Mission unit |
-| 10 | 9:35–11:1 | Mission Discourse + its harvest on-ramp + closing formula |
-| 11 | 11:2–30 | starts after the 11:1 formula |
-| 14 | 13:54–14:36 | starts after the 13:53 parables formula |
-| 16 | 16:1–20 | ends at 16:20, just before the 16:21 hinge |
-| 17 | 16:21–17:27 | opens at the 16:21 hinge |
-
-Inclusios/triads to read *across* unit seams: **5:17↔7:12** (Law & Prophets, Units 5–7),
-**19:30↔20:16** (first/last, Units 19–20), **21:28–22:14** (three judgment parables, Units
-21–22), **1:23↔28:20** (Emmanuel, Units 1 & 28).
-
-## 4. The five discourses (extra-scope flags)
-
-- **Discourse 1 — Sermon on the Mount (5–7)** → Units 5, 6, 7. Heavy rabbit-hole risk.
-- **Discourse 2 — Mission (10)** → Unit 10 (with 9:35–38 on-ramp).
-- **Discourse 3 — Kingdom Parables (13)** → Unit 13.
-- **Discourse 4 — Community (18)** → Unit 18.
-- **Discourse 5 — Woes + Olivet (23–25)** → Units 23, 24, 25. Heavy rabbit-hole risk.
