@@ -20,14 +20,13 @@ is lens plus chat routing. Lane sees Claude slip most in the build chat and long
 tallied from the units, and the unit 15-16 rulings that were never recorded (hampers, little
 dogs, fitting, Hades, adulterous, bound/loosed). Removed the dead `emmanuel` tag instruction.
 
-**Checks.** `biblecore test` 9/9, worked example valid. Core 379/380: the one failure is
-`test_numbers_passes_biblecore_test`, because Numbers' committed digest predates `digest.py`.
-A release rebuilds it.
+**Release.** Core 0.22.0 (`33bcacb`, tag pushed) vendored into all three books, pushed and
+synced (Matthew `f023508`, Numbers `2481ee5`, Joshua `0fb5ec8`). Cut with `--skip-tests`
+because the Numbers digest test could only pass after the rollout; core then ran 380/380.
+`threads-digest.md` came down 8% (28.5 → 26.4 KB), short of the 15-20% estimate.
 
 **Open.**
-- Commit, core release and `core_sync --all`, push, `sync` in each book, re-paste Matthew's
-  field. Until then the vendored `core-workflow.md`, handoff template and
-  `components-reference.md` in Matthew are still the old text.
+- Lane to re-paste `CHAT_SIDE_INSTRUCTIONS.md`, then `python -m biblecore sync-check --mark-pasted`.
 - apistos: unit 17 ships "not-trusting", but the 2026-10-29 log names "trustless" as a ruling
   that isn't recorded anywhere else. Marked for Lane in `translation-choices.md`.
 - Not yet tried on a real research or build chat.

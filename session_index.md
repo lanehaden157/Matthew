@@ -261,3 +261,4 @@ Read this first. 3 lines max per session.
 ## 2026-10-30 — Instruction trim
 - Trimmed field, style reference (37 → 16 KB, core section numbering), CLAUDE.md, translation-choices (rulings added, history cut), resources (absorbed reference links), unit map. PLAN.md and one-offs archived. Core sources trimmed, uncommitted.
 - Needs: commit, core release, sync, field re-paste. See session_summary_2026-10-30_instructions-trim.md.
+- Released as core 0.22.0, vendored, pushed and synced in all three books. Only the field re-paste is left.
