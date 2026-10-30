@@ -954,3 +954,7 @@
 - Unit 17's handoff said "Questions for Lane: none" while listing six provisional wording calls; the build chat settled them and overrode two `translation-choices.md` rulings (Satan → Adversary, trustless → not-trusting) unasked.
 - bible-core: `workflow.md` pass 4 now asks every open call (handoff calls, provisional renderings, ruling conflicts, uncovered lexemes) by popup before drafting, "none" never a reason to skip; pass 3 scans Verse by verse for provisional/check/match and counts. `handoff-template.md`: one "Calls for Lane (N)" section, the only place provisional wording may appear. New `python -m biblecore handoff-check FILE` (warn-only lint) + test.
 - Matthew: CHAT_SIDE_INSTRUCTIONS build-chat sentence (re-paste needed), style reference §3a and checklist. Vendoring pending Lane's OK on the diffs.
+
+## 2026-10-29 — Unit 17 re-port and thread delta
+- `port 17 --force` from the updated source artifact; story box 17:1 par-ref "Exod 24; 34" -> "Exod 24:15–18; 34:29–35" (validator needs verses).
+- Applied 20 unit-17 payoffs to `data/threads.json` (learn, skandalon, follow, save, lose, father, kingdom, light, well-pleased, eye, understand, immerse, mercy, generation, little-faith, grieve, house, king, sea, throw). No promotions, none closed.

@@ -254,3 +254,6 @@ Read this first. 3 lines max per session.
 ## 2026-10-28 — Core 0.18.0, two-chat workflow
 - Vendored core 0.18.0 (handoff template, `checks[]`, `threads.promote[]`); migrate refreshed unit metas; instruction field, style reference updated. Matthew consistency pass: CHAT_SIDE_INSTRUCTIONS, style reference, project-side/README, CLAUDE.md, resources.md updated for the two-chat flow. Build, test 9 ok.
 - **2026-10-28 (core 0.19.0)**: Vendored core 0.19.0 (`lxx` lookup and `checks[]` runner, `audit` ready retrofit `add` JSON, `port --answers`, CRLF note). See session_summary_2026-10-28_core-0.19.0.md.
+
+## 2026-10-29 — Unit 17 forced re-port
+- Re-ported unit 17 from the newer source artifact (fixed an Exod par-ref); applied the thread delta (20 payoffs). Build, test 9 ok. Uncommitted. Core fixes noted in `../bible-core/NOTES-from-matthew-unit17.md`.

@@ -968,10 +968,55 @@
     {
       "n": 17,
       "slug": "unit-17",
-      "passage": "Matthew 16:21-17:27",
+      "passage": "Matthew 16:21–17:27",
       "title": "The Road to the Cross Begins; Transfigured",
       "movement": 3,
-      "built": false
+      "built": true,
+      "roots": {
+        "disown": {
+          "color": "#8c6d1f",
+          "translit": "aparneomai",
+          "gloss": "disown, say 'I do not know him'",
+          "echo": "Matt 26:34–35, 75: Peter, told here to disown himself, disowns Jesus three times with the same verb."
+        },
+        "life": {
+          "color": "#3d6b4a",
+          "translit": "psychē",
+          "gloss": "life, the living self (not 'soul')"
+        },
+        "exchange-price": {
+          "color": "#7a3f5c",
+          "translit": "antallagma",
+          "gloss": "exchange-price, what is given in return for something",
+          "echo": "Ps 48:8–9 in the Greek numbering (49:7–8 in English): no one can ransom a brother or pay the price of ransoming a life; Exod 30:12, a ransom for each man's life. The two-drachma tax brings the idea back at 17:24."
+        },
+        "suffer": {
+          "color": "#1f6e7a",
+          "translit": "paschō",
+          "gloss": "suffer, undergo"
+        },
+        "change-form": {
+          "color": "#9c5a1e",
+          "translit": "metamorphoomai",
+          "gloss": "be changed in form",
+          "echo": "2 Cor 3:18, believers being changed in form from glory to glory, in the passage about Moses' veiled face; Rom 12:2, 'be changed in form by the renewing of the mind'."
+        },
+        "overshadow": {
+          "color": "#8a2f3a",
+          "translit": "episkiazō",
+          "gloss": "overshadow, cast a shadow over",
+          "echo": "Exod 40:35 in the Greek, where the cloud overshadows the tent of meeting and the glory fills it; Luke 1:35 (the power of the Most High will overshadow Mary); Acts 5:15 (Peter's shadow)."
+        },
+        "vision": {
+          "color": "#2f4f7a",
+          "translit": "horama",
+          "gloss": "vision, a thing seen",
+          "echo": "Dan 8:17–18 in the Greek, the vision after which Daniel falls on his face and is touched and raised; Gen 15:1, the word of Yahweh to Abram 'in a vision'. This is Matthew's only use."
+        }
+      },
+      "contract": "0.20.0",
+      "discourse": false,
+      "descriptor": "the first passion prediction, the mountain of the voice, the boy below, and the coin in the fish's mouth"
     },
     {
       "n": 18,

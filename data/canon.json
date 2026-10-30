@@ -904,6 +904,182 @@
       "unit": 16,
       "note": "Eliakim installed over the house of David",
       "source": "story"
+    },
+    {
+      "from": "Matt 16:23",
+      "to": "Matt 4:8–10",
+      "kind": "story",
+      "unit": 17,
+      "note": "The third testing in the wilderness",
+      "source": "story"
+    },
+    {
+      "from": "Matt 16:24",
+      "to": "Mark 15:21",
+      "kind": "echo",
+      "unit": 17,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:24",
+      "to": "Matt 26:34–35",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root disown",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:26",
+      "to": "Exod 30:12",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root exchange-price",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 16:26",
+      "to": "Ps 48:8–9",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root exchange-price",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:1",
+      "to": "Exod 24:15–18",
+      "kind": "type-scene",
+      "unit": 17,
+      "note": "Moses on Mount Sinai",
+      "source": "story"
+    },
+    {
+      "from": "Matt 17:1",
+      "to": "Exod 34:29–35",
+      "kind": "type-scene",
+      "unit": 17,
+      "note": "Moses on Mount Sinai",
+      "source": "story"
+    },
+    {
+      "from": "Matt 17:2",
+      "to": "2 Cor 3:18",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root change-form",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:2",
+      "to": "Rom 12:2",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root change-form",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:3",
+      "to": "1 Kgs 19:8–18",
+      "kind": "type-scene",
+      "unit": 17,
+      "note": "Elijah at Horeb",
+      "source": "story"
+    },
+    {
+      "from": "Matt 17:5",
+      "to": "Acts 5:15",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root overshadow",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:5",
+      "to": "Deut 18:15",
+      "kind": "echo",
+      "unit": 17,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:5",
+      "to": "Exod 40:35",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root overshadow",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:5",
+      "to": "Luke 1:35",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root overshadow",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:7",
+      "to": "Dan 10:9–19",
+      "kind": "story",
+      "unit": 17,
+      "note": "Daniel falls and is raised",
+      "source": "story"
+    },
+    {
+      "from": "Matt 17:7",
+      "to": "Dan 8:17–18",
+      "kind": "story",
+      "unit": 17,
+      "note": "Daniel falls and is raised",
+      "source": "story"
+    },
+    {
+      "from": "Matt 17:9",
+      "to": "Dan 8:17–18",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root vision",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:9",
+      "to": "Gen 15:1",
+      "kind": "echo",
+      "unit": 17,
+      "note": "root vision",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:11",
+      "to": "Mal 3:22–24",
+      "kind": "echo",
+      "unit": 17,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 17:18",
+      "to": "Deut 32:20",
+      "kind": "story",
+      "unit": 17,
+      "note": "Moses comes down to a faithless people",
+      "source": "story"
+    },
+    {
+      "from": "Matt 17:18",
+      "to": "Deut 32:5",
+      "kind": "story",
+      "unit": 17,
+      "note": "Moses comes down to a faithless people",
+      "source": "story"
+    },
+    {
+      "from": "Matt 17:24",
+      "to": "Exod 30:11–16",
+      "kind": "story",
+      "unit": 17,
+      "note": "The half-shekel ransom",
+      "source": "story"
     }
   ],
   "typescenes": [
@@ -921,6 +1097,20 @@
       "note": "too little food, an objection, all eat, some is left: Exod 16; Num 11; 2 Kgs 4:42–44; Matt 14:13–21",
       "source": "meta",
       "label": "Wilderness provision"
+    },
+    {
+      "id": "mountain-theophany",
+      "ref": "Matt 17:1–8",
+      "unit": 17,
+      "note": "Moses on Mount Sinai",
+      "source": "story"
+    },
+    {
+      "id": "mountain-theophany",
+      "ref": "Matt 17:3",
+      "unit": 17,
+      "note": "Elijah at Horeb",
+      "source": "story"
     }
   ]
 }
