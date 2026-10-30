@@ -263,3 +263,4 @@ Read this first. 3 lines max per session.
 - Needs: commit, core release, sync, field re-paste. See session_summary_2026-10-30_instructions-trim.md.
 - Released as core 0.22.0, vendored, pushed and synced in all three books. Only the field re-paste is left.
 - Core 0.22.1: warn-only `docs` size budget in `biblecore test`; Matthew's style reference budget set to 18 KB.
+- `project-side/sync-state.json` untracked, as in Joshua and Numbers, so a sync no longer dirties the tree.
