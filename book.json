@@ -26,7 +26,10 @@
   ],
   "checks": {
     "opens_note_required": false,
-    "colour_de_min": 7
+    "colour_de_min": 7,
+    "doc_budget_kb": {
+      "style_reference": 18
+    }
   },
   "core": "0.22.1",
   "template": "d1fd3d6",

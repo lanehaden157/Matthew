@@ -262,3 +262,4 @@ Read this first. 3 lines max per session.
 - Trimmed field, style reference (37 → 16 KB, core section numbering), CLAUDE.md, translation-choices (rulings added, history cut), resources (absorbed reference links), unit map. PLAN.md and one-offs archived. Core sources trimmed, uncommitted.
 - Needs: commit, core release, sync, field re-paste. See session_summary_2026-10-30_instructions-trim.md.
 - Released as core 0.22.0, vendored, pushed and synced in all three books. Only the field re-paste is left.
+- Core 0.22.1: warn-only `docs` size budget in `biblecore test`; Matthew's style reference budget set to 18 KB.
