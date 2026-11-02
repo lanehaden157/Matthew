@@ -259,7 +259,7 @@ The port catches structural errors. These are the ones it can't:
 - [ ] Glosses are short; longer material is in footnotes.
 - [ ] All calls were asked before drafting, and `questions[]` holds only what Lane left open.
 - [ ] Text claims are in `checks[]`, ready promotions in `threads.promote`, earlier-unit fixes in `threads.retro`.
-- [ ] Saved as `matthew_NN_translation.html`, zero-padded, in `/mnt/user-data/outputs/`, then `present_files`.
+- [ ] Saved as `matthew_NN_translation.html`, zero-padded, in `/mnt/user-data/outputs/`, handed over as a download.
 
 ---
 
