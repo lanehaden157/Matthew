@@ -4,7 +4,7 @@ The study's deliberate English renderings, starting from `canon-conventions.md`.
 before rendering a Greek word and match it. A different rendering for one verse goes to Lane
 as a call. Verse refs are Matthew.
 
-Claude Code updates this file in the same turn as any wording ruling. It's hand-maintained,
+A wording decided in a chat goes in the handoff's "Decisions" (chats can't write to the repo); Claude Code updates the row and the Log after the session, or in the same turn if it made the ruling. It's hand-maintained,
 so if a unit and this file disagree, flag the mismatch rather than trusting either.
 
 Native script: `Matthew-words.tsv` and `MatthewSBLGNT.txt` carry Greek letters. Do not copy native script from them into chat, handoffs or fragments; transliterate.

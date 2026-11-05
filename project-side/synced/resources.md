@@ -1,6 +1,6 @@
 # Matthew Study — Resources
 
-What's on hand for research, as a starting point. Edit this file in the repo, not on the project side. If a synced file and an uploaded copy disagree, the synced one wins; say so. Paraphrase, and keep any direct quote short.
+What's on hand for research, as a starting point, not a limit: search the web freely in every pass and say which source you leaned on, naming only sources listed here or found by search (core-workflow.md, "Citing"). Read the passage before attributing a view, and mark anything not read this chat as "recalled, unverified". Edit this file in the repo, not on the project side. If a synced file and an uploaded copy disagree, the synced one wins; say so. Paraphrase, and keep any direct quote short.
 
 ## In the project
 
