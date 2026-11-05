@@ -230,7 +230,7 @@ breathing and iota subscript dropped. A Hebrew word uses `ḥ ṭ ś`, `ʾ`/`ʿ`
 
 **Wording.** A wooden-but-readable rendering from the SBLGNT, not a polish of an English
 version. Check `translation-choices.md` before rendering a lexeme. A better verse-specific
-rendering is fine, but it goes to Lane as a call.
+rendering is fine, but it goes to Lane as a call. A chat records a wording decision in the handoff's "Decisions"; Claude Code updates `translation-choices.md` after the session.
 
 ---
 

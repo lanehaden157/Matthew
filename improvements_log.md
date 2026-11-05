@@ -971,3 +971,8 @@
 - Core 0.23.2 -> 0.24.0 (precedence ladder, single rules, Decisions section, warn-only logs check) -> 0.25.0 (paste tracking removed) vendored; `migrate` refreshed units 14-18 meta.
 - CHAT_SIDE_INSTRUCTIONS: precedence ladder replaces "wins over it"; core-workflow.md in the build list; "handoff lists none" = one line then draft; box list defined; cap wording "roughly three to six, no floor, no cap"; ch. 23 debate note.
 - Style ref: same cap wording; says the Greek letters in the scheme line are the only script exception. translation-choices and project-side/README: "do not copy native script" for Matthew-words.tsv and MatthewSBLGNT.txt.
+
+## 2026-11-05 — core 0.27.0
+- Three-chat loop (research, verse, build) in the field, from unit 19. Unit packs only from 19, not 14-18 (already ported). `lxx --checks` is the Greek counterpart to Numbers' Hebrew checks runner; no Greek runner built.
+- Template merge was by hand: Matthew's files had diverged too far for a 3-way merge (conflicts in all six). `unit-pack` works on Greek; tested on 19, output deleted so it's generated fresh at the unit's start.
+- Field is 5.2 KB (budget 5), core-workflow.md 12 KB (budget 9, shared with the other books).

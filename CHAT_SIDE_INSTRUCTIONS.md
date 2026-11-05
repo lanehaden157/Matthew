@@ -6,23 +6,25 @@ Lens: intertextuality first. Where Israel's Scriptures stand behind a line (quot
 
 Where things are
 
-You research and produce files here. Lane downloads them and copies them into the repo, where Claude Code ports and builds them. You can't see the repo's working copy or run its tools.
+You research and produce files here; Lane copies them into the repo, where Claude Code ports and builds them. You can't see the repo or run its tools.
 
-Synced files (`synced-index.md` lists them all) aren't on disk and don't appear in listings, and reading them by name fails. Download the ones you need whole at the start of a chat, the index first, and search large files with grep or sed:
+Synced files (`synced-index.md` lists them all) aren't on disk and don't appear in listings, and reading them by name fails. Download what you need at the start of a chat, the index first:
 `curl -sLO https://raw.githubusercontent.com/lanehaden157/Matthew/main/project-side/synced/<file>`
-If curl fails, use the fetch tool on the same address. If that fails too, use project search, whose results are excerpts only, and tell Lane which files you couldn't read whole.
+If curl fails, use the fetch tool; failing that, project search (excerpts only), and say which you couldn't read. For a file over ~20 KB (the word table especially), grep for the unit's lemma ids and verses.
 
-Commentaries are project docs: `project_info` lists them and you read them by exact name (if `/mnt/project/` exists they're there too). `resources.md` says which is which.
+Commentaries are project docs: read them by the exact name `project_info` lists (also in `/mnt/project/` if it exists). `resources.md` says which is which.
 
-Save files you produce in `/mnt/user-data/outputs/` and hand each one over as a download.
+Save files you produce in `/mnt/user-data/outputs/` as downloads.
 
 Which chat you are
 
-Each unit takes two chats. `core-workflow.md` holds the loop; read it at the start of every chat. Precedence: Lane in chat > this field > the style reference > `core-workflow.md` > the handoff > reference files; flag a conflict between two rungs to Lane.
+Precedence: Lane in chat > this field > the style reference > `core-workflow.md` > the handoff > reference files; flag a conflict between two rungs to Lane. Three chats per unit (`core-workflow.md`), from unit 19; every chat starts from the unit's pack (`unit-pack-NN.md`: rulings, threads, lemma ids, leads), and you copy ids from it rather than recall them.
 
-If a chat opens with a pasted handoff, you are the build chat (pass 4). Read the handoff, `core-workflow.md`, `matthew_study_style_reference.md`, `components-reference.md`, `translation-choices.md` and `threads-digest.md`. Ask Lane every open call by popup before drafting, as `core-workflow.md` pass 4 sets out; a handoff listing none gets one line saying so, then draft. Don't redo the research. Save the artifact as `matthew_NN_translation.html` (zero-padded) in `/mnt/user-data/outputs/` and hand it over as a download. It renders unstyled in this chat; that's expected.
+If a chat opens with a pasted handoff, you are the build chat (pass 4). Read the handoff, `core-workflow.md`, `matthew_study_style_reference.md`, `components-reference.md`, the pack, `translation-choices.md` and `threads-digest.md`. Ask Lane every open call by popup before drafting, as `core-workflow.md` pass 4 sets out; a handoff listing none gets one line saying so, then draft. Don't redo the research. Save the artifact as `matthew_NN_translation.html` (zero-padded) in `/mnt/user-data/outputs/` and hand it over as a download. It renders unstyled in this chat; that's expected.
 
-Otherwise you are the research chat (passes 1-3). Read `resources.md`, `translation-choices.md`, `threads-digest.md`, the unit's entry in `matthew-literary-unit-map.md`, its `canon-leads-unit-NN.md`, and the style reference's "What belongs where" table for verdicts. After Lane's yes on the box list (pass 3's closing spoken list), write `matthew_NN_handoff.md` from `canon-handoff-template.md` and save it the same way.
+If Lane gives you a notes file, you are the verse chat (pass 3). Take the research as written; don't redo it. After Lane's yes on the box list (pass 3's closing spoken list), write `matthew_NN_handoff.md` from `canon-handoff-template.md` and save it the same way.
+
+Otherwise you are the research chat (passes 1-2). Read `resources.md`, `translation-choices.md`, `threads-digest.md`, the unit's entry in `matthew-literary-unit-map.md`, the pack and the style reference's "What belongs where" table. Write the notes file as you go (row shape in `canon-ledger-template.md`).
 
 What Matthew adds to the loop
 

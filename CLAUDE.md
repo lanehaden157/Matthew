@@ -60,6 +60,14 @@ a book-local module that wraps a core function, not by editing `biblecore/`;
 | Promoting a thread into built units | `docs/retrofit.md` |
 | History | `archive/` and `docs/audit/`: not instructions |
 
+## Generated paths
+
+Commit `data/`, `css/`, `app/`, `index.html`, `units/`, `canon-leads/` and
+`threads-digest.md`: the build regenerates them and they are what the site and
+the hub serve, so a changed one belongs in the commit that caused it. `out/`
+is gitignored scratch (thread deltas, reports); never commit it. A tree that
+is dirty only in `out/` is clean.
+
 ## Threads
 
 `data/threads.json` and `data/roots.json` are policy: the porter proposes, and Claude Code
