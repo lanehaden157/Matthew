@@ -7,6 +7,8 @@ as a call. Verse refs are Matthew.
 Claude Code updates this file in the same turn as any wording ruling. It's hand-maintained,
 so if a unit and this file disagree, flag the mismatch rather than trusting either.
 
+Native script: `Matthew-words.tsv` and `MatthewSBLGNT.txt` carry Greek letters. Do not copy native script from them into chat, handoffs or fragments; transliterate.
+
 ## Tracked threads
 
 | thread | Greek | rendering | note |
