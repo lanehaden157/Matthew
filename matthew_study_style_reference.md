@@ -206,7 +206,7 @@ quotation. An example: at 11:29, "y'all will find rest for y'all's beings" sound
 
 **`aside.story`.** Read the target text before writing the box, and quote Matthew in the
 verse text's own wording. Check `canon-decisions.md` before naming a `data-scene`; a new id
-goes to Lane before it ships. No floor and no cap: as many as the unit's scenes earn.
+goes to Lane before it ships. Expect roughly three to six a unit; no floor and no cap.
 
 **`aside.synoptic`.** The take says what Matthew did with the parallel and why it matters,
 in two or three sentences, not a summary of it.
@@ -223,6 +223,7 @@ argues…". The research passes still name people; only the artifact drops them.
 ## 5. Greek in English
 
 **Transliteration only**, zero native Greek or Hebrew anywhere, attribute values included.
+The Greek letters in the next line only explain the scheme and are the one exception.
 Scheme: η → `ē`, ω → `ō`; `th ph ch ps` for θ φ χ ψ; `y` for υ except in `ou au eu`;
 γγ/γκ → `ng`/`nk`; rough breathing → initial `h`, initial ρ → `rh`; accents, smooth
 breathing and iota subscript dropped. A Hebrew word uses `ḥ ṭ ś`, `ʾ`/`ʿ`, no vowel length.

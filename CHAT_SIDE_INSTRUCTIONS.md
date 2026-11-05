@@ -18,15 +18,15 @@ Save files you produce in `/mnt/user-data/outputs/` and hand each one over as a 
 
 Which chat you are
 
-Each unit takes two chats. `core-workflow.md` holds the loop; read it at the start of every chat. This field wins over it for Matthew. The style reference owns the artifact rules; if this field and the style reference conflict, flag it to Lane rather than picking one.
+Each unit takes two chats. `core-workflow.md` holds the loop; read it at the start of every chat. Precedence: Lane in chat > this field > the style reference > `core-workflow.md` > the handoff > reference files; flag a conflict between two rungs to Lane.
 
-If a chat opens with a pasted handoff, you are the build chat (pass 4). Read the handoff, `matthew_study_style_reference.md`, `components-reference.md`, `translation-choices.md` and `threads-digest.md`. Ask Lane every open call by popup before drafting, as `core-workflow.md` pass 4 sets out, even if the handoff lists none. Don't redo the research. Save the artifact as `matthew_NN_translation.html` (zero-padded) in `/mnt/user-data/outputs/` and hand it over as a download. It renders unstyled in this chat; that's expected.
+If a chat opens with a pasted handoff, you are the build chat (pass 4). Read the handoff, `core-workflow.md`, `matthew_study_style_reference.md`, `components-reference.md`, `translation-choices.md` and `threads-digest.md`. Ask Lane every open call by popup before drafting, as `core-workflow.md` pass 4 sets out; a handoff listing none gets one line saying so, then draft. Don't redo the research. Save the artifact as `matthew_NN_translation.html` (zero-padded) in `/mnt/user-data/outputs/` and hand it over as a download. It renders unstyled in this chat; that's expected.
 
-Otherwise you are the research chat (passes 1-3). Read `resources.md`, `translation-choices.md`, `threads-digest.md`, the unit's entry in `matthew-literary-unit-map.md`, its `canon-leads-unit-NN.md`, and the style reference's "What belongs where" table for verdicts. After Lane's yes on the box list, write `matthew_NN_handoff.md` from `canon-handoff-template.md` and save it the same way.
+Otherwise you are the research chat (passes 1-3). Read `resources.md`, `translation-choices.md`, `threads-digest.md`, the unit's entry in `matthew-literary-unit-map.md`, its `canon-leads-unit-NN.md`, and the style reference's "What belongs where" table for verdicts. After Lane's yes on the box list (pass 3's closing spoken list), write `matthew_NN_handoff.md` from `canon-handoff-template.md` and save it the same way.
 
 What Matthew adds to the loop
 
 - The Bible Project's Matthew guide is given here because the fetch tool opens only URLs from a search result, a fetched page or Lane: https://bibleproject.com/guides/book-of-matthew/ (its links lead to the related articles and episodes).
-- Check every scene Mark, Luke or John tell, and box every one where Matthew's change is telling (an addition, omission, reordering, or rewording that shifts the point): roughly three to six a unit, with no cap.
+- Check every scene Mark, Luke or John tell, and box every one where Matthew's change is telling (an addition, omission, reordering, or rewording that shifts the point): expect roughly three to six a unit; no floor and no cap.
 - Pass 3 maps a real chiasm explicitly (A B C B′ A′) and keeps Matthew's developing themes and the Constable dialogue in view.
-- The five discourses (5–7, 10, 13, 18, 23–25) need extra scoping confirmation, and the Sermon on the Mount and Olivet Discourse are rabbit-hole risks: ask before going deeper.
+- The five discourses (5–7, 10, 13, 18, 23–25; whether ch. 23 belongs with Olivet is debated) need extra scoping confirmation, and the Sermon on the Mount and Olivet Discourse are rabbit-hole risks: ask before going deeper.

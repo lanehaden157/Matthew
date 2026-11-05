@@ -36,7 +36,7 @@ beyond tags is a stop. Units from 14 on go through core's loop. The pre-core sta
     python tools/constable_index.py      # constable-index.md (see the script's docstring)
 
 `python -m biblecore` lists the rest, including `colour` and `data-w` for promoting a thread,
-`retrofit`, `leads`, `sync-check --mark-pasted` after pasting the instruction field. **Fresh
+`retrofit`, `leads`, `migrate` after re-vendoring. **Fresh
 clone:** `python -m biblecore fetch` once, then `corpus`.
 
 `book.json` holds everything book-specific (closed keys). Change behaviour for this book with
@@ -91,4 +91,10 @@ printed SBLGNT if these drift. `Matthew-words.tsv` and `Matthew-reading.txt` are
 - Ask Lane about design or scope before going deep. It's cheaper than guessing.
 - Git Bash on Windows mangles inline Unicode in `bash -c`. Put regex and Unicode work in `.py`
   files.
-- Session context files follow Lane's global convention.
+- Session context files: see Session files below.
+
+## Session files
+
+`session_index.md` (read first: standing state plus one line per recent session; older
+lines go to `archive/`), `improvements_log.md` (only what git can't show: decisions, reverts,
+gotchas), and `session_summary_<date>.md` (only for substantial sessions with open questions).
