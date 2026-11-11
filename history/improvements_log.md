@@ -976,3 +976,7 @@
 - Three-chat loop (research, verse, build) in the field, from unit 19. Unit packs only from 19, not 14-18 (already ported). `lxx --checks` is the Greek counterpart to Numbers' Hebrew checks runner; no Greek runner built.
 - Template merge was by hand: Matthew's files had diverged too far for a 3-way merge (conflicts in all six). `unit-pack` works on Greek; tested on 19, output deleted so it's generated fresh at the unit's start.
 - Field is 5.2 KB (budget 5), core-workflow.md 12 KB (budget 9, shared with the other books).
+
+## 2026-11-11 — Lean instructions (core 0.30.0)
+- Layout: `CLAUDE.md` imports `biblecore/BOOK_CLAUDE.md`; `fragment-contract.md` is the shared contract and the style reference holds only this book's differences (it wins); each chat fetches one `card-*.md`. The pre-lean full style reference, CLAUDE.md and project-side README are in git history (the commit before this one).
+- The style reference already governed only units 14 on, so all of it moved; units 1-13 are untouched. Matthew keeps its own worked example (masthead `greek-title`, `descriptor`) and its `translit` rule (same-stem forms joined by `·`), which differs from the shared contract.

@@ -28,10 +28,11 @@
     "opens_note_required": false,
     "colour_de_min": 7,
     "doc_budget_kb": {
-      "style_reference": 18
+      "style_reference": 8,
+      "field": 4.5
     }
   },
-  "core": "0.28.0",
+  "core": "0.30.0",
   "template": "0e8e7a3",
   "hub": "https://lanehaden157.github.io/bible/",
   "overlay": "discourse",

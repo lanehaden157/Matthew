@@ -270,3 +270,5 @@ Read this first. 3 lines max per session.
 ## 2026-11-04 — Core 0.25.0 and consistency fixes
 - Core 0.23.2 -> 0.25.0 now vendored (precedence ladder, box list, popup-with-no-calls rule, logs check); migrate moved units 14-18 metas.
 - Field, style ref, translation-choices, project-side/README aligned with core (precedence, cap wording, script exception). See session_summary_2026-11-04_core-0.25.0.md.
+
+- 2026-10-30: Unit 18 ported (debt, gain, mikros promoted); instruction docs trimmed.
