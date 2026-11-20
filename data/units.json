@@ -403,7 +403,7 @@
           "translit": "patēr",
           "gloss": "Father"
         },
-        "whole": {
+        "holos": {
           "color": "#b1481f",
           "translit": "holos",
           "gloss": "whole"
@@ -826,7 +826,7 @@
           "translit": "didōmi",
           "gloss": "give"
         },
-        "command": {
+        "order": {
           "color": "#1f6e7a",
           "translit": "keleuō",
           "gloss": "command, order"
@@ -979,7 +979,7 @@
           "gloss": "disown, say 'I do not know him'",
           "echo": "Matt 26:34–35, 75: Peter, told here to disown himself, disowns Jesus three times with the same verb."
         },
-        "life": {
+        "psyche": {
           "color": "#3d6b4a",
           "translit": "psychē",
           "gloss": "life, the living self (not 'soul')"
@@ -1085,10 +1085,84 @@
     {
       "n": 19,
       "slug": "unit-19",
-      "passage": "Matthew 19:1-30",
+      "passage": "Matthew 19:1–30",
       "title": "Leaving Galilee: Marriage, Children, Riches",
       "movement": 3,
-      "built": false
+      "built": true,
+      "roots": {
+        "cause": {
+          "color": "#8c6d1f",
+          "translit": "aitia",
+          "gloss": "cause; charge",
+          "example": "for every cause"
+        },
+        "leave-behind": {
+          "color": "#55642f",
+          "translit": "kataleipō",
+          "gloss": "leave behind",
+          "example": "a person will leave behind the father and the mother"
+        },
+        "glue": {
+          "color": "#3d6b4a",
+          "translit": "kollaomai",
+          "gloss": "glue; be glued to, stick fast",
+          "example": "will be glued to his wife",
+          "echo": "Gen 2:24; 1 Cor 6:16–17 — the Greek of the one-flesh line uses a prefixed form of the verb, and Paul reuses the plain verb for the same union"
+        },
+        "porneia": {
+          "color": "#7a3f5c",
+          "translit": "porneia",
+          "gloss": "sexual immorality",
+          "example": "not for sexual immorality"
+        },
+        "adultery": {
+          "color": "#1f6e7a",
+          "translit": "moichaomai · moicheuō",
+          "gloss": "commit adultery; be guilty of adultery",
+          "example": "is guilty of adultery"
+        },
+        "make-room": {
+          "color": "#9c5a1e",
+          "translit": "chōreō",
+          "gloss": "make room for; have room",
+          "example": "Not all make room for this word"
+        },
+        "castrate": {
+          "color": "#8a2f3a",
+          "translit": "eunouchos · eunouchizō",
+          "gloss": "castrated man; castrate",
+          "example": "castrated men who castrated themselves"
+        },
+        "petition": {
+          "color": "#2f4f7a",
+          "translit": "proseuchomai",
+          "gloss": "pray; make a petition",
+          "example": "lay his hands on them and make a petition"
+        },
+        "age-long": {
+          "color": "#a67c1e",
+          "translit": "aiōnios",
+          "gloss": "age-long; belonging to the age to come",
+          "example": "age-long life"
+        },
+        "property": {
+          "color": "#005847",
+          "translit": "ktēma",
+          "gloss": "property, holding",
+          "example": "having many properties",
+          "echo": "Acts 2:45; 5:1 — the same word for the properties the first believers sold"
+        },
+        "new-genesis": {
+          "color": "#006494",
+          "translit": "palingenesia",
+          "gloss": "new genesis; the world born again",
+          "example": "in the new genesis",
+          "echo": "Titus 3:5 — the word's only other New Testament use"
+        }
+      },
+      "contract": "0.36.1",
+      "discourse": false,
+      "descriptor": "the last Galilean exit, and what following costs"
     },
     {
       "n": 20,

@@ -54,9 +54,10 @@
     },
     "come-here": {
       "ids": [
-        "deute"
+        "deute",
+        "deuro"
       ],
-      "note": "deute — 'come here, and I will make you fishers of men' (4:19) is the thread's true open; the invitation returns at 11:28 to all who labor."
+      "note": "deute — 'come here, and I will make you fishers of men' (4:19) is the thread's true open; the invitation returns at 11:28 to all who labor. deuro, the singular, joins at 19:21."
     },
     "completion-of-age": {
       "seq": [
@@ -665,6 +666,58 @@
         "mikros"
       ],
       "note": "mikros — promoted at the unit-18 port (2026-10-30). 26:39 'going ahead a little' is the unrelated adverb (mikron) and is left untagged."
+    },
+    "inherit": {
+      "ids": [
+        "klēronomeō",
+        "klēronomia",
+        "klēronomos"
+      ],
+      "note": "The book's inheritance thread, mapped to the canon thread of the same name. Rendering 'inherit' has no row in translation-choices.md yet: add it."
+    },
+    "rich": {
+      "ids": [
+        "ploutos",
+        "plousios"
+      ],
+      "note": "The arc runs from riches that choke the word to a rich man who becomes a learner (27:57)."
+    },
+    "good": {
+      "ids": [
+        "agathos"
+      ],
+      "note": "The counterpart of the tracked evil, and the subject of the man's question; the landowner returns to it at 20:15."
+    },
+    "charge-sharply": {
+      "ids": [
+        "epitimaō"
+      ],
+      "note": "The verb changes hands across the book: Jesus, Peter, the learners, the crowd."
+    },
+    "child": {
+      "ids": [
+        "paidion"
+      ],
+      "note": "A unit-local root carried across several units already; ruled 'the child'."
+    },
+    "whole": {
+      "ids": [
+        "teleios"
+      ],
+      "note": "Lane, Unit 19: teleios alone becomes the thread; holos leaves the old local 'whole' bundle for its own local root in Unit 5."
+    },
+    "command": {
+      "ids": [
+        "entolē",
+        "entellomai"
+      ],
+      "note": "Lane, Unit 19. Moses 'commanded' at 19:7; Jesus' commands close the book (28:20). May map to the canon thread 'charge': confirm in bible-core."
+    },
+    "life": {
+      "ids": [
+        "zōē"
+      ],
+      "note": "Lane, Unit 19. The tag follows the lexeme: psychē, also 'life' in the singular, stays untagged."
     }
   }
 }

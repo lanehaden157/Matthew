@@ -2385,6 +2385,28 @@
       ],
       "total": 1
     },
+    "holos": {
+      "count": 2,
+      "verses": [
+        29,
+        30
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…for you that one of your members perish than that your ",
+          "hit": "whole",
+          "post": " body be thrown into Gehenna.…"
+        },
+        {
+          "v": 30,
+          "pre": "…for you that one of your members perish than that your ",
+          "hit": "whole",
+          "post": " body go away into Gehenna.…"
+        }
+      ],
+      "total": 5
+    },
     "house": {
       "count": 1,
       "verses": [
@@ -2842,25 +2864,11 @@
       "total": 2
     },
     "whole": {
-      "count": 4,
+      "count": 2,
       "verses": [
-        29,
-        30,
         48
       ],
       "hits": [
-        {
-          "v": 29,
-          "pre": "…for you that one of your members perish than that your ",
-          "hit": "whole",
-          "post": " body be thrown into Gehenna.…"
-        },
-        {
-          "v": 30,
-          "pre": "…for you that one of your members perish than that your ",
-          "hit": "whole",
-          "post": " body go away into Gehenna.…"
-        },
         {
           "v": 48,
           "pre": "…Y'all therefore shall be ",
@@ -2874,7 +2882,7 @@
           "post": " as y'all's Father in the skies is whole.…"
         }
       ],
-      "total": 7
+      "total": 2
     }
   },
   "unit-06": {
@@ -9745,35 +9753,6 @@
       ],
       "total": 2
     },
-    "command": {
-      "count": 3,
-      "verses": [
-        9,
-        19,
-        28
-      ],
-      "hits": [
-        {
-          "v": 9,
-          "pre": "…se of the oaths and those reclining at table with him, ",
-          "hit": "commanded",
-          "post": " it to be given,…"
-        },
-        {
-          "v": 19,
-          "pre": "…And ",
-          "hit": "commanding",
-          "post": " the crowds to lean back on the grass, taking the five…"
-        },
-        {
-          "v": 28,
-          "pre": "…nd Peter answered him and said, \"Master, if it is you, ",
-          "hit": "command",
-          "post": " me to come to you on the waters.\"…"
-        }
-      ],
-      "total": 3
-    },
     "compassion": {
       "count": 1,
       "verses": [
@@ -10121,6 +10100,35 @@
         }
       ],
       "total": 1
+    },
+    "order": {
+      "count": 3,
+      "verses": [
+        9,
+        19,
+        28
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…se of the oaths and those reclining at table with him, ",
+          "hit": "commanded",
+          "post": " it to be given,…"
+        },
+        {
+          "v": 19,
+          "pre": "…And ",
+          "hit": "commanding",
+          "post": " the crowds to lean back on the grass, taking the five…"
+        },
+        {
+          "v": 28,
+          "pre": "…nd Peter answered him and said, \"Master, if it is you, ",
+          "hit": "command",
+          "post": " me to come to you on the waters.\"…"
+        }
+      ],
+      "total": 3
     },
     "permitted": {
       "count": 1,
@@ -11924,40 +11932,6 @@
       ],
       "total": 7
     },
-    "life": {
-      "count": 4,
-      "verses": [
-        25,
-        26
-      ],
-      "hits": [
-        {
-          "v": 25,
-          "pre": "…For whoever wants to save his ",
-          "hit": "life",
-          "post": " will lose it; but whoever loses his life for my sake w…"
-        },
-        {
-          "v": 25,
-          "pre": "…For whoever wants to save his ",
-          "hit": "life",
-          "post": " will lose it; but whoever loses his life for my sake w…"
-        },
-        {
-          "v": 26,
-          "pre": "…profited if he gains the whole world but forfeits his ",
-          "hit": "life",
-          "post": "? Or what will a person give as an exchange-price for h…"
-        },
-        {
-          "v": 26,
-          "pre": "…profited if he gains the whole world but forfeits his ",
-          "hit": "life",
-          "post": "? Or what will a person give as an exchange-price for h…"
-        }
-      ],
-      "total": 4
-    },
     "light": {
       "count": 2,
       "verses": [
@@ -12045,6 +12019,40 @@
         }
       ],
       "total": 1
+    },
+    "psyche": {
+      "count": 4,
+      "verses": [
+        25,
+        26
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…For whoever wants to save his ",
+          "hit": "life",
+          "post": " will lose it; but whoever loses his life for my sake w…"
+        },
+        {
+          "v": 25,
+          "pre": "…For whoever wants to save his ",
+          "hit": "life",
+          "post": " will lose it; but whoever loses his life for my sake w…"
+        },
+        {
+          "v": 26,
+          "pre": "…profited if he gains the whole world but forfeits his ",
+          "hit": "life",
+          "post": "? Or what will a person give as an exchange-price for h…"
+        },
+        {
+          "v": 26,
+          "pre": "…profited if he gains the whole world but forfeits his ",
+          "hit": "life",
+          "post": "? Or what will a person give as an exchange-price for h…"
+        }
+      ],
+      "total": 4
     },
     "raise": {
       "count": 4,
@@ -13166,6 +13174,778 @@
           "pre": "…So the slave fell and kept ",
           "hit": "bowing low",
           "post": " before him, saying, 'Be long-tempered with me, and I w…"
+        }
+      ],
+      "total": 1
+    }
+  },
+  "unit-19": {
+    "adultery": {
+      "count": 3,
+      "verses": [
+        9,
+        18
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…wife, not for sexual immorality, and marries another, ",
+          "hit": "is guilty of adultery",
+          "post": "; and the one who marries a sent-away woman is guilty o…"
+        },
+        {
+          "v": 9,
+          "pre": "…wife, not for sexual immorality, and marries another, ",
+          "hit": "is guilty of adultery",
+          "post": "; and the one who marries a sent-away woman is guilty o…"
+        },
+        {
+          "v": 18,
+          "pre": "…” And Jesus said, “You shall not murder; you shall not ",
+          "hit": "commit adultery",
+          "post": "; you shall not steal; you shall not bear false witness…"
+        }
+      ],
+      "total": 3
+    },
+    "age-long": {
+      "count": 2,
+      "verses": [
+        16,
+        29
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…Teacher, what good thing shall I do so that I may have ",
+          "hit": "age-long",
+          "post": " life?”…"
+        },
+        {
+          "v": 29,
+          "pre": "…of my name will receive a hundredfold and will inherit ",
+          "hit": "age-long",
+          "post": " life.…"
+        }
+      ],
+      "total": 2
+    },
+    "astonish": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…And hearing it, the learners were ",
+          "hit": "knocked clean out of themselves",
+          "post": ", exceedingly, saying, “Who then is able to be saved?”…"
+        }
+      ],
+      "total": 1
+    },
+    "castrate": {
+      "count": 5,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…For there are ",
+          "hit": "castrated men",
+          "post": " who were born so from a mother’s belly, and there are…"
+        },
+        {
+          "v": 12,
+          "pre": "…For there are ",
+          "hit": "castrated men",
+          "post": " who were born so from a mother’s belly, and there are…"
+        },
+        {
+          "v": 12,
+          "pre": "…from a mother’s belly, and there are castrated men who ",
+          "hit": "were castrated",
+          "post": " by people, and there are castrated men who castrated t…"
+        },
+        {
+          "v": 12,
+          "pre": "…For there are ",
+          "hit": "castrated men",
+          "post": " who were born so from a mother’s belly, and there are…"
+        },
+        {
+          "v": 12,
+          "pre": "…For there are ",
+          "hit": "castrated",
+          "post": " men who were born so from a mother’s belly, and there…"
+        }
+      ],
+      "total": 5
+    },
+    "cause": {
+      "count": 2,
+      "verses": [
+        3,
+        10
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…permitted for a person to send away his wife for every ",
+          "hit": "cause",
+          "post": "?”…"
+        },
+        {
+          "v": 10,
+          "pre": "…The learners say to him, “If such is the ",
+          "hit": "cause",
+          "post": " of the person with the woman, it is not worth marrying…"
+        }
+      ],
+      "total": 2
+    },
+    "charge-sharply": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…is hands on them and make a petition; but the learners ",
+          "hit": "sharply charged",
+          "post": " them.…"
+        }
+      ],
+      "total": 1
+    },
+    "child": {
+      "count": 2,
+      "verses": [
+        13,
+        14
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…Then ",
+          "hit": "children",
+          "post": " were brought to him so that he would lay his hands on…"
+        },
+        {
+          "v": 14,
+          "pre": "…But Jesus said, “Let the ",
+          "hit": "children",
+          "post": " alone, and do not hinder them from coming to me; for o…"
+        }
+      ],
+      "total": 2
+    },
+    "come-here": {
+      "count": 1,
+      "verses": [
+        21
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…the poor, and you will have treasure in the skies; and ",
+          "hit": "come here",
+          "post": ", follow me.”…"
+        }
+      ],
+      "total": 1
+    },
+    "command": {
+      "count": 2,
+      "verses": [
+        7,
+        17
+      ],
+      "hits": [
+        {
+          "v": 7,
+          "pre": "…They say to him, “Why then did Moses ",
+          "hit": "command",
+          "post": " to give a document of divorce and to send her away?” (…"
+        },
+        {
+          "v": 17,
+          "pre": "…the good. But if you want to come into life, keep the ",
+          "hit": "commandments",
+          "post": ".”…"
+        }
+      ],
+      "total": 2
+    },
+    "father": {
+      "count": 3,
+      "verses": [
+        5,
+        19,
+        29
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…id, ‘On account of this a person will leave behind the ",
+          "hit": "father",
+          "post": " and the mother and will be glued to his wife, and the…"
+        },
+        {
+          "v": 19,
+          "pre": "…honor the ",
+          "hit": "father",
+          "post": " and the mother, (Exod 20:12; Deut 5:16) and you shall…"
+        },
+        {
+          "v": 29,
+          "pre": "…And everyone who left houses or brothers or sisters or ",
+          "hit": "father",
+          "post": " or mother or wife or children or fields on account of…"
+        }
+      ],
+      "total": 3
+    },
+    "follow": {
+      "count": 4,
+      "verses": [
+        2,
+        21,
+        27,
+        28
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…And many crowds ",
+          "hit": "followed",
+          "post": " him, and he healed them there.…"
+        },
+        {
+          "v": 21,
+          "pre": "…nd you will have treasure in the skies; and come here, ",
+          "hit": "follow",
+          "post": " me.”…"
+        },
+        {
+          "v": 27,
+          "pre": "…nswered and said to him, “Look, we left all things and ",
+          "hit": "followed",
+          "post": " you; what then will there be for us?”…"
+        },
+        {
+          "v": 28,
+          "pre": "…esus said to them, “Amen I say to y’all that y’all who ",
+          "hit": "followed",
+          "post": " me, in the new genesis, when the Son of Man sits on th…"
+        }
+      ],
+      "total": 4
+    },
+    "glue": {
+      "count": 1,
+      "verses": [
+        5
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…ill leave behind the father and the mother and will be ",
+          "hit": "glued",
+          "post": " to his wife, and the two will become one flesh’? (Gen…"
+        }
+      ],
+      "total": 1
+    },
+    "good": {
+      "count": 3,
+      "verses": [
+        16,
+        17
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…And look, one came up to him and said, “Teacher, what ",
+          "hit": "good",
+          "post": " thing shall I do so that I may have age-long life?”…"
+        },
+        {
+          "v": 17,
+          "pre": "…And he said to him, “Why do you ask me about the ",
+          "hit": "good",
+          "post": "? One there is who is the good. But if you want to come…"
+        },
+        {
+          "v": 17,
+          "pre": "…And he said to him, “Why do you ask me about the ",
+          "hit": "good",
+          "post": "? One there is who is the good. But if you want to come…"
+        }
+      ],
+      "total": 3
+    },
+    "grieve": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…But the young man, hearing the word, went away ",
+          "hit": "grieving",
+          "post": "; for he was one having many properties.…"
+        }
+      ],
+      "total": 1
+    },
+    "heart": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…He says to them, “Moses, toward y’all’s ",
+          "hit": "heart",
+          "post": "-hardness, allowed y’all to send away y’all’s wives; bu…"
+        }
+      ],
+      "total": 1
+    },
+    "house": {
+      "count": 1,
+      "verses": [
+        29
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…And everyone who left ",
+          "hit": "houses",
+          "post": " or brothers or sisters or father or mother or wife or…"
+        }
+      ],
+      "total": 1
+    },
+    "inherit": {
+      "count": 1,
+      "verses": [
+        29
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…account of my name will receive a hundredfold and will ",
+          "hit": "inherit",
+          "post": " age-long life.…"
+        }
+      ],
+      "total": 1
+    },
+    "judge": {
+      "count": 1,
+      "verses": [
+        28
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "…ne of his glory, y’all too will sit on twelve thrones, ",
+          "hit": "judging",
+          "post": " the twelve tribes of Israel.…"
+        }
+      ],
+      "total": 1
+    },
+    "kingdom": {
+      "count": 4,
+      "verses": [
+        12,
+        14,
+        23,
+        24
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…rated men who castrated themselves for the sake of the ",
+          "hit": "kingdom",
+          "post": " of the skies. The one able to make room, let him make…"
+        },
+        {
+          "v": 14,
+          "pre": "…er them from coming to me; for of such as these is the ",
+          "hit": "kingdom",
+          "post": " of the skies.”…"
+        },
+        {
+          "v": 23,
+          "pre": "…Amen I say to y’all that a rich man will come into the ",
+          "hit": "kingdom",
+          "post": " of the skies with difficulty.…"
+        },
+        {
+          "v": 24,
+          "pre": "…f a sewing needle than for a rich man to come into the ",
+          "hit": "kingdom",
+          "post": " of God.”…"
+        }
+      ],
+      "total": 4
+    },
+    "learn": {
+      "count": 4,
+      "verses": [
+        10,
+        13,
+        23,
+        25
+      ],
+      "hits": [
+        {
+          "v": 10,
+          "pre": "…The ",
+          "hit": "learners",
+          "post": " say to him, “If such is the cause of the person with t…"
+        },
+        {
+          "v": 13,
+          "pre": "…uld lay his hands on them and make a petition; but the ",
+          "hit": "learners",
+          "post": " sharply charged them.…"
+        },
+        {
+          "v": 23,
+          "pre": "…And Jesus said to his ",
+          "hit": "learners",
+          "post": ", “Amen I say to y’all that a rich man will come into t…"
+        },
+        {
+          "v": 25,
+          "pre": "…And hearing it, the ",
+          "hit": "learners",
+          "post": " were knocked clean out of themselves, exceedingly, say…"
+        }
+      ],
+      "total": 4
+    },
+    "leave-behind": {
+      "count": 1,
+      "verses": [
+        5
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "…and said, ‘On account of this a person will ",
+          "hit": "leave behind",
+          "post": " the father and the mother and will be glued to his wif…"
+        }
+      ],
+      "total": 1
+    },
+    "life": {
+      "count": 3,
+      "verses": [
+        16,
+        17,
+        29
+      ],
+      "hits": [
+        {
+          "v": 16,
+          "pre": "…what good thing shall I do so that I may have age-long ",
+          "hit": "life",
+          "post": "?”…"
+        },
+        {
+          "v": 17,
+          "pre": "…there is who is the good. But if you want to come into ",
+          "hit": "life",
+          "post": ", keep the commandments.”…"
+        },
+        {
+          "v": 29,
+          "pre": "…e will receive a hundredfold and will inherit age-long ",
+          "hit": "life",
+          "post": ".…"
+        }
+      ],
+      "total": 3
+    },
+    "make-room": {
+      "count": 3,
+      "verses": [
+        11,
+        12
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…But he said to them, “Not all ",
+          "hit": "make room for",
+          "post": " this word, but those to whom it has been given.…"
+        },
+        {
+          "v": 12,
+          "pre": "…the sake of the kingdom of the skies. The one able to ",
+          "hit": "make room",
+          "post": ", let him make room.”…"
+        },
+        {
+          "v": 12,
+          "pre": "…the sake of the kingdom of the skies. The one able to ",
+          "hit": "make room",
+          "post": ", let him make room.”…"
+        }
+      ],
+      "total": 3
+    },
+    "new-genesis": {
+      "count": 1,
+      "verses": [
+        28
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "…Amen I say to y’all that y’all who followed me, in the ",
+          "hit": "new genesis",
+          "post": ", when the Son of Man sits on the throne of his glory,…"
+        }
+      ],
+      "total": 1
+    },
+    "permitted": {
+      "count": 1,
+      "verses": [
+        3
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…And Pharisees came to him, testing him and saying, “",
+          "hit": "Is it permitted",
+          "post": " for a person to send away his wife for every cause?”…"
+        }
+      ],
+      "total": 1
+    },
+    "petition": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…ught to him so that he would lay his hands on them and ",
+          "hit": "make a petition",
+          "post": "; but the learners sharply charged them.…"
+        }
+      ],
+      "total": 1
+    },
+    "porneia": {
+      "count": 1,
+      "verses": [
+        9
+      ],
+      "hits": [
+        {
+          "v": 9,
+          "pre": "…say to y’all that whoever sends away his wife, not for ",
+          "hit": "sexual immorality",
+          "post": ", and marries another, is guilty of adultery; and the o…"
+        }
+      ],
+      "total": 1
+    },
+    "property": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…e word, went away grieving; for he was one having many ",
+          "hit": "properties",
+          "post": ".…"
+        }
+      ],
+      "total": 1
+    },
+    "release": {
+      "count": 3,
+      "verses": [
+        14,
+        27,
+        29
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…But Jesus said, “",
+          "hit": "Let",
+          "post": " the children alone, and do not hinder them from coming…"
+        },
+        {
+          "v": 27,
+          "pre": "…Then Peter answered and said to him, “Look, we ",
+          "hit": "left",
+          "post": " all things and followed you; what then will there be f…"
+        },
+        {
+          "v": 29,
+          "pre": "…And everyone who ",
+          "hit": "left",
+          "post": " houses or brothers or sisters or father or mother or w…"
+        }
+      ],
+      "total": 3
+    },
+    "rich": {
+      "count": 2,
+      "verses": [
+        23,
+        24
+      ],
+      "hits": [
+        {
+          "v": 23,
+          "pre": "…esus said to his learners, “Amen I say to y’all that a ",
+          "hit": "rich",
+          "post": " man will come into the kingdom of the skies with diffi…"
+        },
+        {
+          "v": 24,
+          "pre": "…come in through the hole of a sewing needle than for a ",
+          "hit": "rich",
+          "post": " man to come into the kingdom of God.”…"
+        }
+      ],
+      "total": 2
+    },
+    "save": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…emselves, exceedingly, saying, “Who then is able to be ",
+          "hit": "saved",
+          "post": "?”…"
+        }
+      ],
+      "total": 1
+    },
+    "send-away": {
+      "count": 5,
+      "verses": [
+        3,
+        7,
+        8,
+        9
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…sting him and saying, “Is it permitted for a person to ",
+          "hit": "send away",
+          "post": " his wife for every cause?”…"
+        },
+        {
+          "v": 7,
+          "pre": "…did Moses command to give a document of divorce and to ",
+          "hit": "send her away",
+          "post": "?” (Deut 24:1)…"
+        },
+        {
+          "v": 8,
+          "pre": "…Moses, toward y’all’s heart-hardness, allowed y’all to ",
+          "hit": "send away",
+          "post": " y’all’s wives; but from the beginning it has not come…"
+        },
+        {
+          "v": 9,
+          "pre": "…And I say to y’all that whoever ",
+          "hit": "sends away",
+          "post": " his wife, not for sexual immorality, and marries anoth…"
+        },
+        {
+          "v": 9,
+          "pre": "…ther, is guilty of adultery; and the one who marries a ",
+          "hit": "sent-away",
+          "post": " woman is guilty of adultery.”…"
+        }
+      ],
+      "total": 5
+    },
+    "son-of-man": {
+      "count": 1,
+      "verses": [
+        28
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "…l that y’all who followed me, in the new genesis, when ",
+          "hit": "the Son of Man",
+          "post": " sits on the throne of his glory, y’all too will sit on…"
+        }
+      ],
+      "total": 1
+    },
+    "test": {
+      "count": 1,
+      "verses": [
+        3
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…And Pharisees came to him, ",
+          "hit": "testing",
+          "post": " him and saying, “Is it permitted for a person to send…"
+        }
+      ],
+      "total": 1
+    },
+    "treasure": {
+      "count": 1,
+      "verses": [
+        21
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…ur possessions and give to the poor, and you will have ",
+          "hit": "treasure",
+          "post": " in the skies; and come here, follow me.”…"
+        }
+      ],
+      "total": 1
+    },
+    "whole": {
+      "count": 1,
+      "verses": [
+        21
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…Jesus said to him, “If you want to be ",
+          "hit": "whole",
+          "post": ", go, sell your possessions and give to the poor, and y…"
         }
       ],
       "total": 1

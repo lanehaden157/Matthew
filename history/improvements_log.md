@@ -981,3 +981,8 @@
 - Layout: `CLAUDE.md` imports `biblecore/BOOK_CLAUDE.md`; `fragment-contract.md` is the shared contract and the style reference holds only this book's differences (it wins); each chat fetches one `card-*.md`. The pre-lean full style reference, CLAUDE.md and project-side README are in git history (the commit before this one).
 - The style reference already governed only units 14 on, so all of it moved; units 1-13 are untouched. Matthew keeps its own worked example (masthead `greek-title`, `descriptor`) and its `translit` rule (same-stem forms joined by `·`), which differs from the shared contract.
 - Core 0.30.1: doc budgets match the files' sizes; over budget means cut or move something, and raising one is Lane's call (`biblecore/BOOK_CLAUDE.md`, "Keeping instruction files lean").
+
+## 2026-11-19 — Unit 19 port (core 0.36.1)
+- Source artifact's `threads.promote[].entry` had `unit` as `"unit-05"` and `opens` without `ref`; `meta.py` wants int `unit`, and `opens` either `{unit, ref, note?}` or note-only. Fixed in the source (note-only `opens`; the code computes unit/ref). `fragment-contract.md` still says `{unit, note?}`: a core doc gap worth telling bible-core.
+- Promoting `command`, `life`, `whole` collided with older local roots of the same name (unit 14 keleuō, unit 17 psychē, unit 5 holos). Local roots can't shadow a thread, so renamed to `order`, `psyche`, `holos` in `data/units.json` (refresh regenerates fragment meta from there) and the spans; unit 5 touched in tags and meta only.
+- Lane ruled `deuro` joins `come-here` (LSJ pairing unchecked). The `Gen 2:24` check expected `proskollaomai`; the LXX lemma is `proskollaō`, claim holds. NT refs in checks[] can't run through `lxx` (LXX books only).

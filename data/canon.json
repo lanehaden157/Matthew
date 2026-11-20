@@ -1152,6 +1152,486 @@
       "unit": 18,
       "note": "Possible: the long-tempered God. Footnote only.",
       "source": "meta"
+    },
+    {
+      "from": "Matt 19:1",
+      "to": "Deut 1:1",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:1",
+      "to": "Matt 11:1",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:1",
+      "to": "Matt 13:53",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:1",
+      "to": "Matt 26:1",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:1",
+      "to": "Matt 4:15",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:1",
+      "to": "Matt 4:25",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:1",
+      "to": "Matt 7:28",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:4",
+      "to": "Matt 12:3",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:4",
+      "to": "Matt 12:5",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:4",
+      "to": "Matt 21:16",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:4",
+      "to": "Matt 21:42",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:4",
+      "to": "Matt 22:31",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:4",
+      "to": "Gen 1:27",
+      "kind": "quotation",
+      "unit": 19,
+      "note": "male and female; the line repeats at Gen 5:2",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 19:5",
+      "to": "1 Cor 6:16–17",
+      "kind": "echo",
+      "unit": 19,
+      "note": "root glue",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:5",
+      "to": "Gen 2:24",
+      "kind": "echo",
+      "unit": 19,
+      "note": "root glue",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:5",
+      "to": "Gen 2:24",
+      "kind": "quotation",
+      "unit": 19,
+      "note": "the narrator's comment in Genesis, here spoken by the Creator",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 19:6",
+      "to": "Ezek 1:11",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:6",
+      "to": "Ezek 1:23",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:6",
+      "to": "Matt 11:29–30",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:7",
+      "to": "Deut 24:1",
+      "kind": "law",
+      "unit": 19,
+      "note": "the law's document phrase, near verbatim on the Pharisees' lips",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 19:8",
+      "to": "Deut 10:16",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:8",
+      "to": "Deut 24:1",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:8",
+      "to": "Gen 1:27",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:8",
+      "to": "Gen 2:24",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:8",
+      "to": "Jer 4:4",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:9",
+      "to": "Mal 2:14–16",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:9",
+      "to": "Deut 24:1–4",
+      "kind": "story",
+      "unit": 19,
+      "note": "The divorce law turned on Israel",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:9",
+      "to": "Isa 50:1",
+      "kind": "story",
+      "unit": 19,
+      "note": "The divorce law turned on Israel",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:9",
+      "to": "Jer 3:1–8",
+      "kind": "story",
+      "unit": 19,
+      "note": "The divorce law turned on Israel",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:9",
+      "to": "Matt 1:18–25",
+      "kind": "story",
+      "unit": 19,
+      "note": "Joseph’s quiet divorce",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:12",
+      "to": "Deut 23:1–2",
+      "kind": "story",
+      "unit": 19,
+      "note": "Isaiah 56 and the eunuch",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:12",
+      "to": "Isa 56:3–5",
+      "kind": "story",
+      "unit": 19,
+      "note": "Isaiah 56 and the eunuch",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:12",
+      "to": "Lev 22:24",
+      "kind": "story",
+      "unit": 19,
+      "note": "Isaiah 56 and the eunuch",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:13",
+      "to": "Gen 48:14",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:13",
+      "to": "Num 27:18",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:17",
+      "to": "Dan 12:2",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:17",
+      "to": "Deut 30:15–20",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:17",
+      "to": "Lev 18:5",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:18",
+      "to": "Exod 20:13–16",
+      "kind": "quotation",
+      "unit": 19,
+      "note": "also Deut 5:17–20",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 19:19",
+      "to": "Exod 20:12",
+      "kind": "quotation",
+      "unit": 19,
+      "note": "also Deut 5:16",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 19:19",
+      "to": "Lev 19:18",
+      "kind": "quotation",
+      "unit": 19,
+      "note": "neighbor-love, the second great commandment at 22:39",
+      "source": "meta"
+    },
+    {
+      "from": "Matt 19:21",
+      "to": "Matt 13:44",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:21",
+      "to": "Matt 4:19",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:21",
+      "to": "Matt 9:9",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:22",
+      "to": "Acts 2:45",
+      "kind": "echo",
+      "unit": 19,
+      "note": "root property",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:22",
+      "to": "Acts 5:1",
+      "kind": "echo",
+      "unit": 19,
+      "note": "root property",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:24",
+      "to": "Matt 13:22",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:24",
+      "to": "Matt 23:24",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:24",
+      "to": "Matt 27:57",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:26",
+      "to": "Matt 26:39",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:26",
+      "to": "Gen 18:10–14",
+      "kind": "allusion",
+      "unit": 19,
+      "note": "Genesis 18 and “possible with God”",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:28",
+      "to": "Isa 65:17",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:28",
+      "to": "Isa 66:22",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:28",
+      "to": "Titus 3:5",
+      "kind": "echo",
+      "unit": 19,
+      "note": "root new-genesis",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:28",
+      "to": "Dan 7:9–27",
+      "kind": "allusion",
+      "unit": 19,
+      "note": "Daniel 7 and the thrones",
+      "source": "story"
+    },
+    {
+      "from": "Matt 19:29",
+      "to": "1 Chr 21:3",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:29",
+      "to": "2 Sam 24:3",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:29",
+      "to": "Matt 19:12",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:29",
+      "to": "Matt 19:19",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 19:29",
+      "to": "Matt 19:5",
+      "kind": "echo",
+      "unit": 19,
+      "note": "",
+      "source": "echo"
     }
   ],
   "typescenes": [
