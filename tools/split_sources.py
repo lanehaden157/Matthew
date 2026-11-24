@@ -141,9 +141,108 @@ def davies_allison():
     return chunks
 
 
+# ---- France, Tyndale (1985): pages by running head ----------------------
+def france():
+    f = SRC / "text" / "france.txt"
+    if not f.exists():
+        return []
+    pages = re.split(r"^=== page (\d+)\n", f.read_text("utf-8"), flags=re.M)[1:]
+    pages = [(int(pages[k]), pages[k + 1]) for k in range(0, len(pages), 2)]
+    heads = []
+    for n, t in pages:
+        m = re.match(r"\s*(?:\d+\s+)?MATTHEW\s+(\d+):(\d+)", t)
+        if m and n > 60:                       # skip the introduction's stray heads
+            heads.append((n, v(int(m.group(1)), int(m.group(2))), t))
+    chunks = []
+    for k, (n, start, t) in enumerate(heads):
+        end = heads[k + 1][1] if k + 1 < len(heads) else v(28, 20)
+        chunks.append(((start, max(start, end)), f"p. {n}", f"[pdf p. {n}] {t.strip()}"))
+    return chunks
+
+
+# ---- chapter-paged downloads (Catena Aurea, Ellicott) --------------------
+def by_chapter(folder):
+    def fn():
+        d = SRC / "text" / folder
+        return [((v(c, 1), v(c, 999)), f"chapter {c}", (d / f"ch{c:02d}.txt").read_text("utf-8"))
+                for c in range(1, 29) if (d / f"ch{c:02d}.txt").exists()]
+    return fn
+
+
+# ---- synoptic parallels: Constable's "(cf. ...)" refs, text from the WEB ---
+BOOKS = {"Matt": "MAT", "Mark": "MAR", "Luke": "LUK", "John": "JOH", "Acts": "ACT",
+         "1 Cor.": "1CO", "Rom.": "ROM", "Heb.": "HEB", "Gal.": "GAL"}
+
+
+def web_verses():
+    out = {}
+    for line in (SRC / "text" / "web-bible.txt").read_text("utf-8").splitlines():
+        m = re.match(r"(\w{3}) (\d+):(\d+) (.*)", line)
+        if m:
+            out[(m.group(1), int(m.group(2)), int(m.group(3)))] = m.group(4)
+    return out
+
+
+def cf_spans(cf):
+    """'Mark 11:11b, 15-18; Luke 19:45-48' -> [(code, label, [(c, v), ...])]."""
+    spans = []
+    for part in cf.split(";"):
+        m = re.match(r"\s*((?:\d )?[A-Z][a-z]+\.?)\s+(.*)", part.strip())
+        if not m or m.group(1) not in BOOKS:
+            continue
+        code, chap, verses = BOOKS[m.group(1)], None, []
+        for piece in m.group(2).split(","):
+            piece = re.sub(r"[ab]\b", "", piece.strip())
+            r = re.match(rf"(?:(\d+):)?(\d+)(?:\s*{DASH}\s*(?:(\d+):)?(\d+))?$", piece)
+            if not r:
+                continue
+            c1 = int(r.group(1)) if r.group(1) else chap
+            v1, c2 = int(r.group(2)), int(r.group(3)) if r.group(3) else c1
+            v2 = int(r.group(4)) if r.group(4) else v1
+            chap = c2
+            for c in range(c1, c2 + 1):
+                lo = v1 if c == c1 else 1
+                hi = v2 if c == c2 else 200
+                verses += [(c, x) for x in range(lo, hi + 1)]
+        spans.append((code, part.strip(), verses))
+    return spans
+
+
+def synoptic():
+    if not (SRC / "text" / "web-bible.txt").exists():
+        return []
+    web = web_verses()
+    lines = (SRC / "text" / "constable.txt").read_text("utf-8").split("\n")
+    chunks = []
+    for l in lines:
+        m = re.match(rf"^(?:\d+\.\s*)?(.+?)\s+(\d+:\d+(?:\s*{DASH}\s*\d+(?::\d+)?)?)\s*\(cf\.\s*(.+)\)\s*$", l.strip())
+        if not m or len(l) > 200:
+            continue
+        r = parse_range(m.group(2))
+        if not r:
+            continue
+        def text(code, vs):
+            return " ".join(f"[{c}:{x}] {web[(code, c, x)]}" for c, x in vs if (code, c, x) in web)
+        mt = [(c, x) for c in range(r[0] // 1000, r[1] // 1000 + 1) for x in range(1, 200)
+              if r[0] <= v(c, x) <= r[1]]
+        body = [f"### {m.group(1)}", f"**Matthew {m.group(2)}** {text('MAT', mt)}"]
+        for code, label, vs in cf_spans(m.group(3)):
+            body.append(f"**{label}** {text(code, vs)}")
+        chunks.append((r, f"{m.group(1)} {m.group(2)}", "\n\n".join(body)))
+    return chunks
+
+
 SOURCES = {
     "constable": ("Constable, Notes on Matthew (2026). Dispensational baseline.", constable),
     "chrysostom": ("Chrysostom, Homilies on Matthew (NPNF1 10, 1888). Patristic.", chrysostom),
+    "france": ("France, Matthew (Tyndale NTC, 1985), scanned text: odd spacing and stray characters. "
+               "Private copy: paraphrase.", france),
+    "catena": ("Aquinas, Catena Aurea (1842 tr.), the Fathers chained verse by verse; whole chapters.",
+               by_chapter("catena")),
+    "ellicott": ("Ellicott, Commentary for English Readers (1878); whole chapters, verse-marked.",
+                 by_chapter("ellicott")),
+    "synoptic": ("Parallel accounts (WEB text), from Constable's cf. references. Check Constable's "
+                 "list isn't the whole story: John and Luke-only parallels can be missing.", synoptic),
     "davies-allison": ("Davies & Allison, ICC Matthew vol. 3 (1997), OCR; check odd words against context. "
                        "Private copy: paraphrase, never quote at length.", davies_allison),
 }

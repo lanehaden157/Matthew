@@ -45,17 +45,21 @@ Things to avoid:
 
 ## Sources
 
-Per unit, already cut: `sources/units/NN/` (Constable, Chrysostom, Davies &
-Allison vol. 3 for 19-28; each file opens with the sections it holds). Whole
-texts: `sources/text/`, `sources/raw/`. Greek: `MatthewSBLGNT.txt`,
-`Matthew-words.tsv`; English comparison: `MatthewWEB.txt`,
-`sources/raw/MatthewNASB.txt`. LXX: `python -m biblecore lxx`. Web: search
-freely and cite what you read; `resources.md` lists tested sites (Catena Aurea,
-Chrysostom, Ryle, Edersheim, Ellicott, BibleProject). Bible Project teacher
-notes cover Matthew 1-7 only.
+Per unit, already cut, in `sources/units/NN/` (each file opens with the
+sections it holds): Constable, France (Tyndale 1985), Davies & Allison vol. 3
+(units 19-28), Chrysostom, Catena Aurea, Ellicott, and `synoptic.md` (Mark,
+Luke, John parallels in the WEB, from Constable's cross-references; it can
+miss a parallel he doesn't list).
 
-D&A is OCR: Greek and Hebrew in it come out garbled; read the argument, not
-the scanned Greek.
+Whole texts in `sources/text/`: any Bible verse in English `web-bible.txt`
+(lines `MAR 11:1 ...`), the LXX in English `brenton-lxx.txt`, Bible Project
+teacher notes `bp-rise.txt` and `bp-torah.txt` (Matthew 1-7 only). Greek:
+`MatthewSBLGNT.txt`, `Matthew-words.tsv`, LXX lemmas via `python -m
+biblecore lxx`. Web: search freely and cite what you opened; `resources.md`
+lists tested sites.
+
+D&A and France are scans: Greek and Hebrew in them come out garbled; read the
+argument, not the scanned Greek.
 
 ## Prose for the ear (briefing, verse by verse)
 
