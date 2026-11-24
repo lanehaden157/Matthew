@@ -1,41 +1,27 @@
 # Lens
 
-What the study looks for. Read by research, writing and checking agents.
-
 ## Reader
 
-Lane, in English. A little Greek and Hebrew: transliterate + gloss every Greek
-or Hebrew word, again at its first use in each unit. Never native script, in
-any file. Grammar that carries weight (aorist, participle, middle voice) →
-plain terms; no argument may depend on parsing the Greek.
+Lane, English. Little Greek/Hebrew: translit + gloss every Greek/Hebrew word, again at first use per unit. Never native script, any file. Grammar that matters (aorist, participle, middle) → plain words. No argument needs parsing.
 
-## What to look for, by weight
+## Look for, by weight
 
-1. Intertextuality: where Israel's Scriptures stand behind a line (quoted,
-   alluded to, echoed; usually via the LXX; name the Hebrew behind it where it
-   matters), where the line or word returns later in the NT, what the echo does.
-2. Narrative structure, keyword tracing, type-scenes, the creation, covenant,
-   exile, presence metanarrative, in the Bible Project's manner.
-3. Matthew's own markers: the five discourse formulas, the two *apo tote*
-   hinges, the formula quotations.
-4. Chiasms only when real and checkable; weigh them hard.
+1. Intertext: Israel's Scriptures behind a line (quote, allusion, echo; usually LXX; name the Hebrew when it matters); later NT return; what echo does.
+2. Narrative structure, keywords, type-scenes, creation-covenant-exile-presence arc (Bible Project style).
+3. Matthew's markers: five discourse formulas, two *apo tote* hinges, formula quotations.
+4. Chiasm only if real and checkable. Weigh hard.
 
-## Strong suggestions
+## Do
 
-- Constable is the baseline reading, in dialogue with France, Wright, Davies &
-  Allison, the Bible Project, Jewish (Second Temple, rabbinic) and patristic
-  voices, especially Chrysostom. Say where readings diverge and why.
-- Check every scene Mark, Luke or John tell; box the ones where Matthew's
-  change is telling: roughly three to six a unit.
-- Thin but plausible link → keep it, marked tentative, with why. Drop only
-  what the text doesn't bear out.
-- Grammar detail and any one tradition stay in proportion.
+- Constable = baseline, in dialogue with France, Wright, D&A, Bible Project, Jewish (Second Temple, rabbinic), Fathers (esp. Chrysostom). Say where they split and why.
+- Check every scene Mark/Luke/John tell. Box telling changes: ~3-6 a unit.
+- Thin but plausible → keep, tentative, say why. Drop only what text won't bear.
+- Grammar and any one tradition: in proportion.
 
-## Things to avoid
+## Don't
 
-- Quotation marks around wording not read in this unit's work.
-- Recalling ids, rulings or renderings: copy them from `work/NN/pack.md`.
-- Long quotes from copyrighted commentaries (D&A, France): paraphrase.
-- Going deep into the Sermon on the Mount or Olivet without flagging it.
-- Opening whole-book files in `sources/`: read through `python tools/kit.py`
-  (parts, range, bible, greek). Long command output → `| tail -40`.
+- Quote marks on wording not read this unit.
+- Recall ids, rulings, renderings: copy from `work/NN/pack.md`.
+- Long quotes from D&A, France: paraphrase.
+- Deep into Sermon on the Mount or Olivet without flagging.
+- Open whole-book files in `sources/`: use `python tools/kit.py`.

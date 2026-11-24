@@ -995,3 +995,4 @@
 - No agent reads more than ~100 KB: commentaries are cut into <=80 KB parts, each digested by its own agent; scene agents read digests, not commentaries; the unit session only coordinates. Aim: no agent ever compacts.
 - France: the NICNT (2007) replaced the Tyndale (1985) scan. Its endnotes sit at the back of the e-book, numbered and full of native Greek; left out.
 - Tried, then reverted the same day: ~30 small agents per unit (digest per commentary chunk, research/write/check/build per scene) to keep every context under ~100 KB. With a 1M context it bought nothing: the heaviest unit's sources are ~240k tokens, and each hand-off lost context plus paid a start-up cost. Now one session per unit + one fact-checker (separate on purpose, for fresh eyes).
+- Build split from study: page rules (~35 KB) and port noise only in the `builder` agent, which starts fresh after Lane's answers. Research and prose stay in one session; splitting there would lose what was read.

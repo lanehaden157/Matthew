@@ -1,47 +1,33 @@
 # Matthew (v2)
 
-28-unit study of Matthew, live at https://lanehaden157.github.io/Matthew/ .
-Everything runs in Claude Code; Lane's only part is answering calls.
+28-unit study, live https://lanehaden157.github.io/Matthew/ . All in Claude Code. Lane only answers calls.
 
-- Build units: `/finish` (many, one session each) or `/unit N` (one).
-- What to look for: `lens.md`. One session builds a unit; one
-  `fact-checker` agent checks it.
-- Fragment rules: `fragment-contract.md`, then `matthew_study_style_reference.md`
-  (wins); markup `components-reference.md`; renderings `translation-choices.md`.
-- Sources: `sources/` (gitignored), read through `python tools/kit.py`.
-  After adding a source: `python tools/split_sources.py`.
+- Units: `/finish` (many) or `/unit N` (one). Study = unit session; check = `fact-checker`; build = `builder`.
+- Lens: `lens.md`. Page rules (builder only): `fragment-contract.md`, `matthew_study_style_reference.md` (wins), `components-reference.md`, `translation-choices.md`.
+- Sources: `sources/` (gitignored), via `python tools/kit.py`. New source → `python tools/split_sources.py`.
 
-## Commands (book root)
+## Commands
 
-    python tools/unit_status.py [N]      # where units stand (all checkouts)
+    python tools/unit_status.py [N]
     python -m biblecore unit-pack N --out work/NN/pack.md
     python -m biblecore port N [--dry] [--promote]
     python -m biblecore lxx Isa 22:22 [--expect petra '!kleis'] | --checks N
     python -m biblecore audit | test [--quick] | build | data-w N
 
-## Strong suggestions
+## Do
 
-- Units 1-13 are boxed (`"contract": "legacy"`): tags only, through
-  `retrofit` and `data-w`, never a re-port. Diff a boxed unit before
-  committing; a change beyond tags is a stop.
-- Thread promotions: Claude decides, biased book-wide; close call → Lane.
-  Colours from `python -m biblecore colour`. Every occurrence in built units
-  needs `data-w`. Into built units: `docs/retrofit.md`.
-- Questions for Lane → AskUserQuestion popups, recommended first and marked,
-  four per call.
-- Lane doesn't run commands or do visual checks in the in-app browser.
+- Units 1-13 boxed (`"contract": "legacy"`): tags only via `retrofit` / `data-w`, never re-port. Diff before commit; change beyond tags = stop.
+- Promotions: Claude decides, book-wide bias; close call → Lane. Colours: `python -m biblecore colour`. Every occurrence in built units needs `data-w`. Into built units: `docs/retrofit.md`.
+- Lane questions → AskUserQuestion, recommended first, marked, four per popup.
+- Lane runs no commands, does no in-app browser checks.
 
-## Things to avoid
+## Don't
 
-- Native Greek from `Matthew-words.tsv` / `MatthewSBLGNT.txt` in chat or files
-  meant for reading.
-- Editing `biblecore/` or generated files (`index.html`, `app/*.js`,
-  `css/core.css`, `data/components.json`, `components-reference.md`,
-  `fragment-contract.md`, `canon-conventions.md`). Look = `css/theme.css`.
-- Inline Unicode in `bash -c` on Windows: put it in a `.py` file.
-- `git add -A`: other sessions may share the repo; stage explicit paths.
+- Native Greek from `Matthew-words.tsv` / `MatthewSBLGNT.txt` in chat or reader files.
+- Edit `biblecore/` or generated files (`index.html`, `app/*.js`, `css/core.css`, `data/components.json`, `components-reference.md`, `fragment-contract.md`, `canon-conventions.md`). Look = `css/theme.css`.
+- Inline Unicode in `bash -c` on Windows: use a `.py`.
+- `git add -A`: stage explicit paths.
 
 ## Session files
 
-`session_index.md`: read first; standing state + last three sessions.
-`history/`: past logs, read only if needed.
+`session_index.md` first. `history/` only if needed.
