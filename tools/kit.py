@@ -1,14 +1,10 @@
-"""Small, capped reads for unit agents, so no agent opens a big file whole.
+"""Verse-keyed reads of the sources, in pieces small enough to open.
 
-    python tools/kit.py scenes NN                 # suggested scenes (from D&A / Constable headings)
-    python tools/kit.py parts NN [--cap 80]       # cut the unit's sources into parts <= cap KB
-    python tools/kit.py range 20:1-16 [--source constable,france] [--cap 45]
+    python tools/kit.py parts NN [--cap 80]       # the unit's commentaries as files <= cap KB
+    python tools/kit.py range 20:1-16 [--source chrysostom,catena] [--cap 28] [--out FILE]
     python tools/kit.py bible MAR 10:17-31        # WEB text; --lxx for Brenton's LXX English
-    python tools/kit.py digest NN 20:1-16         # digest entries touching these verses
-    python tools/kit.py merge NN notes|verse|catches|factcheck
-    python tools/kit.py calls NN                  # the handoff's Calls for Lane section
     python tools/kit.py greek 20:1-16             # SBLGNT per verse + lemma(morph) list
-    python tools/kit.py assemble NN               # head + scene fragments -> source-artifacts/
+    python tools/kit.py calls NN                  # the Calls for Lane section of work/NN/calls.md
 
 Verse ranges: C:V, C:V-V, C:V-C:V. Book codes are the WEB's (GEN EXO ... ISA JER
 EZE DAN ... MAT MAR LUK JOH ACT ROM ... REV; PSA, SOL = Song, EZE = Ezekiel).
@@ -30,9 +26,10 @@ if not SEC.exists():   # inside a worktree without the copy: use the main checko
         if (up / "sources" / "sections").exists():
             SEC, TEXT = up / "sources" / "sections", up / "sources" / "text"
             break
-CAP_KB = 45          # range output
-PARTS_KB = 80        # one source-reader agent per part
+CAP_KB = 28          # range output (shell output stops near 30k characters)
+PARTS_KB = 80        # comfortably opened with Read
 COMMENTARIES = ["constable", "france", "davies-allison", "chrysostom", "catena", "ellicott"]
+CORE = ["constable", "france", "davies-allison"]   # read whole; the rest by range
 
 
 def rng(s):
@@ -84,28 +81,12 @@ def hits(key, r):
 
 
 # ---- commands -----------------------------------------------------------
-def cmd_scenes(n):
-    r = unit_range(n)
-    for key in ("davies-allison", "constable"):
-        seen = []
-        for x in hits(key, r):
-            title = re.sub(r", pdf p\. \d+$", "", x["title"])
-            if x["s"] >= r[0] and x["e"] <= r[1] and x["e"] < v(99, 0) and (title, x["s"]) not in [s[:2] for s in seen]:
-                seen.append((title, x["s"], x["e"]))
-        if seen:
-            print(f"# from {key}")
-            for title, s, e in seen:
-                print(f"{fmt((s, e))}  {title}")
-            return
-    print(f"no headings found; unit is {fmt(r)}")
-
-
 def cmd_parts(n, cap):
     r = unit_range(n)
     out = ROOT / "work" / f"{n:02d}" / "parts"
     out.mkdir(parents=True, exist_ok=True)
     lab = labels()
-    for key in COMMENTARIES:
+    for key in CORE:
         recs = hits(key, r)
         if not recs:
             continue
@@ -127,16 +108,19 @@ def cmd_parts(n, cap):
             print(f"{f.relative_to(ROOT).as_posix()}  {f.stat().st_size // 1000} KB")
 
 
-def cmd_range(r, sources, cap):
-    lab, total = labels(), 0
-    for key in sources:
-        for x in hits(key, r):
-            t = f"## {key}: {x['title']} [{fmt((x['s'], x['e']))}]\n\n{x['text']}\n\n"
-            if total + len(t.encode()) > cap * 1000:
-                print(f"\n[cut at {cap} KB: narrow the range or pass --source]")
-                return
-            total += len(t.encode())
-            print(t)
+def cmd_range(r, sources, cap, out=None):
+    """Print (or with --out, write to a file for Read) the sections touching r."""
+    text = "".join(f"## {key}: {x['title']} [{fmt((x['s'], x['e']))}]\n\n{x['text']}\n\n"
+                   for key in sources for x in hits(key, r))
+    if out:
+        Path(out).parent.mkdir(parents=True, exist_ok=True)
+        Path(out).write_text(text, "utf-8")
+        print(f"{out}  {len(text.encode()) // 1000} KB")
+        return
+    b = text.encode()
+    print(b[:cap * 1000].decode("utf-8", errors="ignore"))
+    if len(b) > cap * 1000:
+        print(f"\n[cut at {cap} KB of {len(b) // 1000}: narrow the range, pass --source, or --out FILE and Read it]")
 
 
 def cmd_bible(book, r, lxx):
@@ -147,34 +131,8 @@ def cmd_bible(book, r, lxx):
             print(line)
 
 
-def cmd_digest(n, r):
-    d = ROOT / "work" / f"{n:02d}" / "digests"
-    for f in sorted(d.glob("*.md")):
-        blocks = re.split(r"^(?=## )", f.read_text("utf-8"), flags=re.M)
-        for b in blocks:
-            m = re.match(rf"## (\d+:\d+(?:\s*{DASH}\s*(?:\d+:)?\d+)?)", b)
-            if m and overlaps(rng(m.group(1)), r):
-                print(f"[{f.stem}] {b.strip()}\n")
-
-
-MERGE = {"notes": "notes.md", "verse": "verse-by-verse.md", "catches": "catches.md",
-         "factcheck": "factcheck.md"}
-
-
-def cmd_merge(n, kind):
-    w = ROOT / "work" / f"{n:02d}"
-    files = sorted((w / "scenes").glob(f"*-{kind}.md"), key=lambda p: int(p.name.split("-")[0]))
-    body = "\n\n".join(f.read_text("utf-8").strip() for f in files)
-    if kind == "notes":
-        rows = len(re.findall(r"^\|\s*\d+:\d+", body, re.M))
-        head = f"Unit {n}, {fmt(unit_range(n))}, notes\n\n"
-        body = head + body + f"\n\nRows: Unit {n}: {rows} rows\n"
-    (w / MERGE[kind]).write_text(body + "\n", "utf-8")
-    print(f"{(w / MERGE[kind]).relative_to(ROOT).as_posix()}  {len(files)} scene files  {len(body.encode()) // 1000} KB")
-
-
 def cmd_calls(n):
-    h = ROOT / "work" / f"{n:02d}" / "handoff.md"
+    h = ROOT / "work" / f"{n:02d}" / "calls.md"
     m = re.search(r"^## Calls for Lane.*?(?=^## |\Z)", h.read_text("utf-8"), re.M | re.S)
     print(m.group(0).strip() if m else "no Calls for Lane section")
 
@@ -193,33 +151,6 @@ def cmd_greek(r):
             print("   " + " ".join(words.get(f"Matt.{m.group(1)}.{m.group(2)}", [])))
 
 
-def cmd_assemble(n):
-    w = ROOT / "work" / f"{n:02d}"
-    r = unit_range(n)
-    body, notes = [], []
-    for f in sorted((w / "scenes").glob("*-fragment.html"), key=lambda p: int(p.name.split("-")[0])):
-        part, _, ns = f.read_text("utf-8").partition("<!-- notes -->")
-        body.append(part.strip())
-        notes += re.findall(r"<li id=\"(s\d+-\d+)\">(.*?)</li>", ns, re.S)
-    html = (w / "fragment-head.html").read_text("utf-8").strip() + "\n\n" + "\n\n".join(body)
-    order = list(dict.fromkeys(re.findall(r'href="#(s\d+-\d+)"', html)))
-    num = {old: i for i, old in enumerate(order, 1)}
-    missing = [o for o in order if o not in dict(notes)] + [i for i, _ in notes if i not in num]
-    for old, i in num.items():
-        html = re.sub(rf'<a href="#{old}">[^<]*</a>', f'<a href="#n{i}">{i}</a>', html)
-    text = dict(notes)
-    ol = "\n".join(f'  <li id="n{num[i]}">{text[i]}</li>' for i in order if i in text)
-    passage = units()[n][1]
-    html += (f'\n\n<div class="notes">\n  <h2>Notes</h2>\n  <ol>\n{ol}\n  </ol>\n</div>\n\n'
-             f"<footer>Translation rendered from the SBLGNT Greek of Matthew {passage} · Unit {n} of the "
-             f"Matthew study · wooden to the Greek by design</footer>\n</article>\n")
-    out = ROOT / "source-artifacts" / f"matthew_{n:02d}_translation.html"
-    out.write_text(html, "utf-8")
-    print(f"{out.relative_to(ROOT).as_posix()}  {len(body)} scenes  {len(num)} notes  {len(html.encode()) // 1000} KB")
-    if missing:
-        print("unmatched note ids: " + ", ".join(missing))
-
-
 def main(a):
     if not a:
         sys.exit(__doc__)
@@ -227,23 +158,15 @@ def main(a):
     pos = [x for i, x in enumerate(a) if not x.startswith("--") and not (i and a[i - 1] in opt)]
     cap = int(opt.get("--cap", PARTS_KB if a[0] == "parts" else CAP_KB))
     c = pos[0]
-    if c == "scenes":
-        cmd_scenes(int(pos[1]))
-    elif c == "parts":
+    if c == "parts":
         cmd_parts(int(pos[1]), cap)
     elif c == "range":
         src = opt["--source"].split(",") if "--source" in opt else COMMENTARIES + ["synoptic"]
-        cmd_range(rng(pos[1]), src, cap)
+        cmd_range(rng(pos[1]), src, cap, opt.get("--out"))
     elif c == "bible":
         cmd_bible(pos[1], rng(pos[2]), "--lxx" in a)
-    elif c == "digest":
-        cmd_digest(int(pos[1]), rng(pos[2]))
-    elif c == "merge":
-        cmd_merge(int(pos[1]), pos[2])
     elif c == "greek":
         cmd_greek(rng(pos[1]))
-    elif c == "assemble":
-        cmd_assemble(int(pos[1]))
     elif c == "calls":
         cmd_calls(int(pos[1]))
     else:

@@ -4,8 +4,8 @@
 Everything runs in Claude Code; Lane's only part is answering calls.
 
 - Build units: `/finish` (many, one session each) or `/unit N` (one).
-- What to look for: `lens.md`. Who reads what: `.claude/agents/`; the unit
-  skill only coordinates, so no context fills up.
+- What to look for: `lens.md`. One session builds a unit; one
+  `fact-checker` agent checks it.
 - Fragment rules: `fragment-contract.md`, then `matthew_study_style_reference.md`
   (wins); markup `components-reference.md`; renderings `translation-choices.md`.
 - Sources: `sources/` (gitignored), read through `python tools/kit.py`.

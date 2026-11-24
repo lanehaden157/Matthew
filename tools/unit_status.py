@@ -19,6 +19,7 @@ if ROOT.parent.name == "worktrees" and ROOT.parent.parent.name == ".claude":
 
 STAGES = ["not started", "researched", "briefed", "verse by verse", "fact-checked",
           "awaiting calls", "calls answered", "built", "shipped"]
+# files per stage: notes.md, briefing.md, verse-by-verse.md, factcheck.md, calls.md
 
 
 def shipped(n):
@@ -30,7 +31,7 @@ def shipped(n):
 
 def stage(root, n):
     w = root / "work" / f"{n:02d}"
-    h = w / "handoff.md"
+    h = w / "calls.md"
     if (root / "units" / f"unit-{n:02d}.html").exists():
         return 7
     if h.exists():
@@ -44,7 +45,7 @@ def stage(root, n):
 
 
 def calls(root, n):
-    h = root / "work" / f"{n:02d}" / "handoff.md"
+    h = root / "work" / f"{n:02d}" / "calls.md"
     m = h.exists() and re.search(r"^## Calls for Lane \((\d+)\)", h.read_text("utf-8"), re.M)
     return m.group(1) if m else ""
 

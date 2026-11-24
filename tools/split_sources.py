@@ -137,13 +137,47 @@ def davies_allison():
     return chunks
 
 
-# ---- chapter-paged downloads (Catena Aurea, Ellicott) --------------------
-def by_chapter(folder):
-    def fn():
-        d = SRC / "text" / folder
-        return [((v(c, 1), v(c, 999)), f"chapter {c}", (d / f"ch{c:02d}.txt").read_text("utf-8"))
-                for c in range(1, 29) if (d / f"ch{c:02d}.txt").exists()]
-    return fn
+# ---- chapter-paged downloads (Catena Aurea, Ellicott), cut by verse -------
+def catena():
+    """Each block: a run of verse lines ("13. And ...") then the Fathers on them."""
+    out = []
+    for c in range(1, 29):
+        f = SRC / "text" / "catena" / f"ch{c:02d}.txt"
+        if not f.exists():
+            continue
+        lines = f.read_text("utf-8").split("\n")
+        starts = []                                  # (line, first verse, last verse)
+        i = 0
+        while i < len(lines):
+            m = re.match(r"^(\d+)\. \S", lines[i])
+            if m:
+                first = last = int(m.group(1))
+                j = i + 1
+                while j < len(lines) and (not lines[j].strip() or re.match(r"^\d+\. \S|^\d{3}$", lines[j])):
+                    if (mm := re.match(r"^(\d+)\. ", lines[j])):
+                        last = int(mm.group(1))
+                    j += 1
+                starts.append((i, first, last))
+                i = j
+            else:
+                i += 1
+        for k, (i, a, b) in enumerate(starts):
+            end = starts[k + 1][0] if k + 1 < len(starts) else len(lines)
+            out.append(((v(c, a), v(c, b)), f"chapter {c}, vv. {a}-{b}", "\n".join(lines[i:end]).strip()))
+    return out
+
+
+def ellicott():
+    out = []
+    for c in range(1, 29):
+        f = SRC / "text" / "ellicott" / f"ch{c:02d}.txt"
+        if not f.exists():
+            continue
+        parts = re.split(rf"^Matthew {c}:(\d+)\s*$", f.read_text("utf-8"), flags=re.M)
+        for k in range(1, len(parts) - 1, 2):
+            n = int(parts[k])
+            out.append(((v(c, n), v(c, n)), f"{c}:{n}", f"Matthew {c}:{n}\n{parts[k + 1].strip()}"))
+    return out
 
 
 # ---- synoptic parallels: Constable's "(cf. ...)" refs, text from the WEB ---
@@ -233,10 +267,10 @@ SOURCES = {
     "constable": ("Constable, Notes on Matthew (2026). Dispensational baseline.", constable),
     "chrysostom": ("Chrysostom, Homilies on Matthew (NPNF1 10, 1888). Patristic.", chrysostom),
     "france": ("France, The Gospel of Matthew (NICNT, 2007). Private copy: paraphrase.", france_nicnt),
-    "catena": ("Aquinas, Catena Aurea (1842 tr.), the Fathers chained verse by verse; whole chapters.",
-               by_chapter("catena")),
-    "ellicott": ("Ellicott, Commentary for English Readers (1878); whole chapters, verse-marked.",
-                 by_chapter("ellicott")),
+    "catena": ("Aquinas, Catena Aurea (1842 tr.), the Fathers chained verse by verse.",
+               catena),
+    "ellicott": ("Ellicott, Commentary for English Readers (1878).",
+                 ellicott),
     "synoptic": ("Parallel accounts (WEB text), from Constable's cf. references. Check Constable's "
                  "list isn't the whole story: John and Luke-only parallels can be missing.", synoptic),
     "davies-allison": ("Davies & Allison, ICC Matthew vol. 3 (1997), OCR; check odd words against context. "

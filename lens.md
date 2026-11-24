@@ -37,5 +37,5 @@ plain terms; no argument may depend on parsing the Greek.
 - Recalling ids, rulings or renderings: copy them from `work/NN/pack.md`.
 - Long quotes from copyrighted commentaries (D&A, France): paraphrase.
 - Going deep into the Sermon on the Mount or Olivet without flagging it.
-- Opening a file over 50 KB whole: use `python tools/kit.py` (range, bible,
-  digest). Long command output → `| tail -40`.
+- Opening whole-book files in `sources/`: read through `python tools/kit.py`
+  (parts, range, bible, greek). Long command output → `| tail -40`.
