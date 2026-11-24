@@ -1,20 +1,19 @@
-"""Cut the commentaries in sources/ into one file per unit.
+"""Index the commentaries in sources/ by verse range.
 
-    python tools/split_sources.py            # all units, all sources found
-    python tools/split_sources.py 20 21      # just these units
+    python tools/split_sources.py
 
-Reads sources/text/ (pdftotext / OCR output) and sources/raw/, writes
-sources/units/NN/<source>.md, each opening with what it covers. Unit ranges
-come from matthew-literary-unit-map.md. A section goes to every unit its verse
-range touches, so a parent section's intro can land in two units.
+Reads sources/text/ (pdftotext / OCR / downloads) and sources/raw/, writes
+sources/sections/<source>.jsonl: one record per section (D&A: per page) with
+its verse range. Run again after adding a source. `tools/kit.py` reads these.
 """
+import json
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "sources"
-OUT = SRC / "units"
+OUT = SRC / "sections"
 DASH = "[-–—]"
 
 
@@ -129,34 +128,12 @@ def davies_allison():
     chunks = []
     for k, (p1, title) in enumerate(covers):
         p2 = covers[k + 1][0] - 1 if k + 1 < len(covers) else d.page_count
-        r = da_range(title) or (v(99, 0), v(99, 0))   # retrospect: no unit, see BOOK
-        body = []
-        for p in range(p1 + 1, p2 + 1):
+        r = da_range(title) or (v(99, 0), v(99, 0))   # retrospect: no unit
+        for p in range(p1 + 1, p2 + 1):               # one record per page: parts stay small
             f = pages / f"page-{p:04d}.txt"
             if f.exists():
-                body.append(f"[pdf p. {p}]\n" + f.read_text("utf-8", errors="replace").strip())
-        missing = (p2 - p1) - len(body)
-        note = f" ({missing} pages not yet OCR'd)" if missing else ""
-        chunks.append((r, title + note, f"## {title}\n\n" + "\n\n".join(body)))
-    return chunks
-
-
-# ---- France, Tyndale (1985): pages by running head ----------------------
-def france():
-    f = SRC / "text" / "france.txt"
-    if not f.exists():
-        return []
-    pages = re.split(r"^=== page (\d+)\n", f.read_text("utf-8"), flags=re.M)[1:]
-    pages = [(int(pages[k]), pages[k + 1]) for k in range(0, len(pages), 2)]
-    heads = []
-    for n, t in pages:
-        m = re.match(r"\s*(?:\d+\s+)?MATTHEW\s+(\d+):(\d+)", t)
-        if m and n > 60:                       # skip the introduction's stray heads
-            heads.append((n, v(int(m.group(1)), int(m.group(2))), t))
-    chunks = []
-    for k, (n, start, t) in enumerate(heads):
-        end = heads[k + 1][1] if k + 1 < len(heads) else v(28, 20)
-        chunks.append(((start, max(start, end)), f"p. {n}", f"[pdf p. {n}] {t.strip()}"))
+                chunks.append((r, f"{title}, pdf p. {p}",
+                               f"[{title}, pdf p. {p}]\n" + f.read_text("utf-8", errors="replace").strip()))
     return chunks
 
 
@@ -232,11 +209,30 @@ def synoptic():
     return chunks
 
 
+# ---- France, NICNT (2007): headings "N. Title (C:V–V)" --------------------
+NICNT_HEAD = re.compile(rf"^(?:[IVX]+|[A-Z]|\d+|[a-z])\.\s+.{{3,140}}?\((\d+:\d+(?:\s*{DASH}\s*\d+(?::\d+)?)?)\)\s*$")
+
+
+def france_nicnt():
+    f = SRC / "text" / "france-nicnt.txt"
+    if not f.exists():
+        return []
+    lines = [l for l in f.read_text("utf-8").split("\n") if l.strip() != "OceanofPDF.com"]
+    stop = next(i for i, l in enumerate(lines) if i > 200 and l.strip() == "NOTES")
+    lines = lines[:stop]                     # endnotes (native Greek, by number) left out
+    heads = [(i, parse_range(m.group(1)), lines[i].strip()) for i, l in enumerate(lines)
+             if i > 200 and (m := NICNT_HEAD.match(l.strip())) and parse_range(m.group(1))]
+    chunks = []
+    for k, (i, r, title) in enumerate(heads):
+        end = heads[k + 1][0] if k + 1 < len(heads) else len(lines)
+        chunks.append((r, title, "\n".join(lines[i:end]).strip()))
+    return chunks
+
+
 SOURCES = {
     "constable": ("Constable, Notes on Matthew (2026). Dispensational baseline.", constable),
     "chrysostom": ("Chrysostom, Homilies on Matthew (NPNF1 10, 1888). Patristic.", chrysostom),
-    "france": ("France, Matthew (Tyndale NTC, 1985), scanned text: odd spacing and stray characters. "
-               "Private copy: paraphrase.", france),
+    "france": ("France, The Gospel of Matthew (NICNT, 2007). Private copy: paraphrase.", france_nicnt),
     "catena": ("Aquinas, Catena Aurea (1842 tr.), the Fathers chained verse by verse; whole chapters.",
                by_chapter("catena")),
     "ellicott": ("Ellicott, Commentary for English Readers (1878); whole chapters, verse-marked.",
@@ -248,33 +244,24 @@ SOURCES = {
 }
 
 
-def main(only):
-    us = units()
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    labels = {}
     for key, (label, fn) in SOURCES.items():
         try:
             chunks = fn()
         except FileNotFoundError:
-            print(f"{key}: source missing, skipped")
-            continue
+            chunks = []
         if not chunks:
-            print(f"{key}: nothing parsed, skipped")
+            print(f"{key}: source missing or nothing parsed, skipped")
             continue
-        for n, (r, ref, title) in us.items():
-            if only and n not in only:
-                continue
-            got = [c for c in chunks if overlaps(c[0], r)]
-            if not got:
-                continue
-            d = OUT / f"{n:02d}"
-            d.mkdir(parents=True, exist_ok=True)
-            head = (f"# Unit {n} ({ref}, {title}): {key}\n\n{label}\n\n"
-                    f"Sections ({len(got)}): " + "; ".join(f"{c[1]} [{fmt(c[0])}]" for c in got) + "\n\n---\n\n")
-            (d / f"{key}.md").write_text(head + "\n\n---\n\n".join(c[2] for c in got) + "\n", "utf-8")
-        book = [c for c in chunks if c[0][0] == v(99, 0)]
-        if book:
-            (OUT / f"book-{key}.md").write_text("\n\n".join(c[2] for c in book) + "\n", "utf-8")
-        print(f"{key}: {len(chunks)} sections -> units")
+        labels[key] = label
+        with open(OUT / f"{key}.jsonl", "w", encoding="utf-8") as fh:
+            for (s, e), title, text in chunks:
+                fh.write(json.dumps({"s": s, "e": e, "title": title, "text": text}, ensure_ascii=False) + "\n")
+        print(f"{key}: {len(chunks)} sections")
+    (OUT / "labels.json").write_text(json.dumps(labels, indent=1, ensure_ascii=False), "utf-8")
 
 
 if __name__ == "__main__":
-    main({int(a) for a in sys.argv[1:]})
+    main()

@@ -5,67 +5,75 @@ description: Build one Matthew unit end to end (research, briefing, verse by ver
 
 # One unit, end to end
 
-Work in `work/NN/` (NN zero-padded). `python tools/unit_status.py N` says
-where the unit stands; resume at the first step whose file is missing. Lane's
-only part is step 5. Everything else runs without asking.
+You only coordinate. Agents do the reading and writing; each one gets a small,
+named set of files, so none runs out of room. Things to avoid here: reading
+sources, parts, digests, notes, prose or the fragment yourself; pasting file
+contents into an agent prompt (give paths). Each agent returns one line; keep
+command output short (`| tail -40`).
 
-## 0. Start
+`python tools/unit_status.py N` says where the unit stands; resume at the
+first step whose output is missing. NN = zero-padded N.
 
-- `python -m biblecore unit-pack N --out work/NN/pack.md`. Ids, rulings,
-  threads, lemma table, leads: copy from it, never recall.
-- Read `study-lens.md`, the pack, the unit's map entry, the `Sections` line of
-  each `sources/units/NN/*.md`.
-- Scope: follow the unit map. A split or a scope doubt → a call (step 5),
-  not a stop.
+## 1. Prepare
 
-## 1. Research → `notes.md`
+- `python -m biblecore unit-pack N --out work/NN/pack.md`
+- `python tools/kit.py scenes N` → write `work/NN/scenes.md`, one line per
+  scene: `k | C:V-C:V | title`. Aim for scenes of 5-20 verses; merge tiny
+  ones. A scope doubt → note it for the handoff, don't stop.
+- `python tools/kit.py parts N`
 
-Split the unit into scenes. One `scene-researcher` agent per scene, in
-parallel; give each its verses, `work/NN/pack.md` and the paths of the source
-files. Merge their rows into `notes.md` (format: `formats.md`). Then work the
-pack's leads and parallel-account checks no scene covered.
+## 2. Digest (parallel)
 
-## 2. Briefing → `briefing.md`; 3. Verse by verse → `verse-by-verse.md`
+One `source-reader` per file in `work/NN/parts/`, given that path and N.
 
-Built on the notes; don't re-research. A gap → name it in the text as not
-researched. Prose rules: `study-lens.md`. While writing verse by verse, catch
-thread opens/payoffs, promotion candidates, local roots, retro entries and
-claims about other passages' Greek or Hebrew; they go in the handoff.
+## 3. Research (parallel)
 
-## 4. Fact-check → `factcheck.md`
+One `scene-researcher` per scene: N, k, range. Then
+`python tools/kit.py merge N notes` and `merge N catches`.
 
-One `fact-checker` agent over `notes.md`, `briefing.md`, `verse-by-verse.md`.
-Apply its fixes. What it can't settle becomes a call. Then write `handoff.md`
-(format and lint: `formats.md`). Promotions: decide them yourself, biased book-wide;
-only close calls go to Lane, retrofit cost in view.
+## 4. Write (parallel)
 
-## 5. Calls (Lane)
+One `writer` with job "briefing", and one `writer` per scene with job
+"verse k". Then `merge N verse`.
 
-If Lane isn't in the session: `PushNotification` "Unit N: K calls ready" and
-end the turn. When Lane is here: every item under `## Calls for Lane` via
-AskUserQuestion, four per popup, recommended first and marked. Tentative
-boxes = one yes/no each. Write the answers under `## Answers` in `handoff.md`.
+## 5. Fact-check (parallel)
 
-## 6. Build (in unit order)
+One `fact-checker` per scene (its notes + verse files) and one for the
+briefing. Then `merge N factcheck`. Fact-check cost: note the agent's token
+use in `work/NN/cost.md` so Lane can judge whether to keep this step.
 
-- Unit N-1 must be shipped (`unit_status`). If not, say so and stop; the
-  conductor resumes this session when it is.
-- `git fetch && git rebase origin/main`, then regenerate the pack: threads may
-  have changed. Re-check the handoff against it.
-- Draft `source-artifacts/matthew_NN_translation.html` from the handoff +
-  answers. Rules: `fragment-contract.md`, then `matthew_study_style_reference.md`
-  (wins), markup in `components-reference.md`. Handoff "Checks for code" →
-  `checks[]`; ready promotions → `threads.promote[]`.
-- `python -m biblecore port N --dry`, fix until clean. `python -m biblecore
-  lxx --checks N`: a failed check → fix the claim, not the check.
-- `python -m biblecore port N --promote`; check the thread delta's rows for
-  this unit's verses against the map; apply ready payoffs; `audit`; `test`.
-- Copy `briefing.md` and `verse-by-verse.md` to `readings/NN-briefing.md`,
-  `readings/NN-verse-by-verse.md`.
+## 6. Handoff
 
-## 7. Ship
+One `handoff-writer`. Then `python tools/kit.py calls N`.
 
-Commit `work/NN/`, `readings/`, `source-artifacts/`, `units/`, `data/`,
-`canon-leads/`, `threads-digest.md` and anything the build regenerated, with
-a message naming the unit and its promotions. `git push origin HEAD:main`.
-Add one line to `session_index.md`. Say "unit N pushed".
+## 7. Calls (Lane)
+
+Lane absent: `PushNotification` "Unit N: K calls ready" and end the turn.
+Lane here (or via Remote Control): each call through AskUserQuestion, four per
+popup, recommended first and marked; tentative boxes as yes/no. Append the
+answers under `## Answers` in `work/NN/handoff.md`, one line per call.
+
+## 8. Build (in unit order)
+
+- Unit N-1 must be shipped (`unit_status`). If not, say so and end the turn;
+  the conductor resumes you.
+- `git fetch -q && git rebase origin/main`; regenerate the pack (threads may
+  have changed since research).
+- One `head-builder`, and one `scene-builder` per scene (parallel). Then
+  `python tools/kit.py assemble N`.
+- `python -m biblecore port N --dry | tail -60`. Errors → a `scene-builder`
+  fix job for the scene that holds the verse (head errors → `head-builder`);
+  repeat. `python -m biblecore lxx --checks N | tail -20`: a failed check →
+  fix the claim, not the check.
+- `python -m biblecore port N --promote | tail -60`; apply the delta's ready
+  payoffs (`apply-delta N`); `audit | tail -20`; `test | tail -15`.
+- Copy `work/NN/briefing.md` and `work/NN/verse-by-verse.md` to
+  `readings/NN-briefing.md` and `readings/NN-verse-by-verse.md`.
+
+## 9. Ship
+
+Stage explicit paths: `work/NN/` (not `parts/`), `readings/`,
+`source-artifacts/`, `units/`, `data/`, `canon-leads/`, `threads-digest.md`,
+and whatever else `git status` shows the build regenerated. Commit naming the
+unit and its promotions; `git push origin HEAD:main`. One line in
+`session_index.md`. Say "unit N pushed".

@@ -992,3 +992,5 @@
 - Commentaries are cut per unit ahead of time (`tools/split_sources.py`) so no session re-finds sections. Constable's chiasm rows ("D ... vv. 24-33") look like section headings; the splitter skips lines with "vv.".
 - Chat cards were deleted from the vendored files; a future `core_sync` will bring them back until the loop is lifted into core.
 - Handoff keeps core's section names so `handoff-check` still lints it.
+- No agent reads more than ~100 KB: commentaries are cut into <=80 KB parts, each digested by its own agent; scene agents read digests, not commentaries; the unit session only coordinates. Aim: no agent ever compacts.
+- France: the NICNT (2007) replaced the Tyndale (1985) scan. Its endnotes sit at the back of the e-book, numbered and full of native Greek; left out.
