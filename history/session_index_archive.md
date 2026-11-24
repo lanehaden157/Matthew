@@ -272,3 +272,5 @@ Read this first. 3 lines max per session.
 - Field, style ref, translation-choices, project-side/README aligned with core (precedence, cap wording, script exception). See session_summary_2026-11-04_core-0.25.0.md.
 
 - 2026-10-30: Unit 18 ported (debt, gain, mikros promoted); instruction docs trimmed.
+- 2026-11-04: Core 0.25.0 vendored; field, style ref, translation-choices aligned.
+- 2026-11-05: Core 0.27.0 vendored (0.26.0 earlier); three-chat loop and template changes taken, base recorded. Packs from unit 19 only; `lxx --checks` covers Greek checks. Units 1-13 still boxed.

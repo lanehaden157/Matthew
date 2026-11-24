@@ -1,0 +1,6 @@
+# gitignored files copied into each new worktree (unit sessions need them)
+sources/units/
+sources/text/
+sources/raw/chrysostom-homilies-matthew.txt
+sources/raw/MatthewNASB.txt
+corpus/

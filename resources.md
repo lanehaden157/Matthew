@@ -1,20 +1,6 @@
-# Matthew Study — Resources
+# Web sources
 
-What's on hand for research, as a starting point, not a limit: search the web freely in every pass and say which source you leaned on, naming only sources listed here or found by search (core-workflow.md, "Citing"). Read the passage before attributing a view, and mark anything not read this chat as "recalled, unverified". Edit this file in the repo, not on the project side. If a synced file and an uploaded copy disagree, the synced one wins; say so. Paraphrase, and keep any direct quote short.
-
-## In the project
-
-- **`MatthewSBLGNT.txt`** (synced). The Greek, one verse per line: `Matt C:V<TAB>text`. Once it's downloaded, extract a passage: `sed -n '/^Matt 7:1	/,/^Matt 8:1	/p' MatthewSBLGNT.txt | sed '$d'`.
-- **`MatthewWEB.txt`** (synced). The World English Bible (public domain), same line format as the Greek: `Matt C:V<TAB>text`. It's an English comparison text, not the study's own translation. It keeps the WEB's verse numbering, so it has three verses the SBLGNT omits (17:21, 18:11, 23:14, marked `[not in the SBLGNT]`). Converted 2026-10-02 from ebible.org's `eng-web_usfm.zip` (Strong's tags and footnotes stripped).
-- **`translation-choices.md`** (synced). The agreed English renderings. Check before rendering a Greek word and match it; if a different rendering genuinely fits a verse better, use it but flag it in the artifact's prose so Lane can call it a one-off or a correction (a ruled rendering is never a `questions[]` entry).
-- **`canon-leads-unit-NN.md`** (synced). Pass 2's word leads for that unit. If the current unit's sheet isn't there, ask for it.
-- **`threads-digest.md`** (synced). The tracked threads: check roots against it as they surface.
-- **Constable, Notes on Matthew** (2026 edition; project doc `matthew.pdf`). The dispensational baseline. Plain text despite the `.pdf` extension, with CRLF line endings, so never use a PDF tool. Open it with `project_read`, then work from the result by line range, or with `grep -a` / `sed` where it's on disk. On disk, find a section by its outline heading, which appears twice (once in the outline near line 600, once in the body), and take the second hit: `grep -a -n 'withdrawal to Tyre and Sidon' matthew.pdf`, then `sed -n 'START,ENDp' matthew.pdf | tr -d ''`. Running page headers ("Dr. Constable's Notes on Matthew 2026 Edition" plus a page number) interrupt the text; strip them with `grep -a -v "Constable's Notes on Matthew"`. Read him here, don't recall him. `constable-index.md` (synced) lists every outline section with its body line range (for example 15:1-20 → 13311-13524): go straight to those lines with `sed -n`. StudyLight's copy is the 2012 edition and is usually bot-blocked; use it only as a fallback.
-- **Bible Project teacher notes** (`rise-of-the-messiah-teacher-notes.pdf` and `messianic-torah-teacher-notes.pdf`, project docs; plain text despite the extension, so open them with `project_read`, or use `grep -a`, `sed` and `awk` where they're on disk). They cover Matthew 1-8 only. From chapter 9 on, draw the literary-canonical side from the Bible Project podcast series and the web, and say which you leaned on.
-
-## On the web (URL patterns checked 2026-10-03 from Claude Code, not from the chat project)
-
-Tool rule: the fetch tool only opens a URL from a search result, an earlier fetched page, or Lane's message. A URL built from the patterns below is refused, so search for the exact page first; fetching a site's contents page also unlocks its chapter links. The patterns help you recognise the right result. `curl` does not work: the sandbox allowlist excludes these sites. StudyLight bot-blocks intermittently (the book index fetched on 2026-10-03, the chapter page did not); retry once in the `www.studylight.org` form before giving up. When a page can't be reached, say so and mark the source "recalled, unverified" rather than working from search excerpts as if they were the page.
+Tested sites for research beyond `sources/`. Search freely past these; cite what you opened. A page that will not load → say so, mark the source "recalled, unverified".
 
 **Other StudyLight commentaries: the same page pattern with a different code.** `https://www.studylight.org/commentaries/eng/<code>/matthew-N.html`
 - Barclay, Daily Study Bible (1956-59), code `dsb`: pastoral, strong on Palestinian background. Still under copyright, so paraphrase only.

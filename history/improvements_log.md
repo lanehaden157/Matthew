@@ -986,3 +986,9 @@
 - Source artifact's `threads.promote[].entry` had `unit` as `"unit-05"` and `opens` without `ref`; `meta.py` wants int `unit`, and `opens` either `{unit, ref, note?}` or note-only. Fixed in the source (note-only `opens`; the code computes unit/ref). `fragment-contract.md` still says `{unit, note?}`: a core doc gap worth telling bible-core.
 - Promoting `command`, `life`, `whole` collided with older local roots of the same name (unit 14 keleuō, unit 17 psychē, unit 5 holos). Local roots can't shadow a thread, so renamed to `order`, `psyche`, `holos` in `data/units.json` (refresh regenerates fragment meta from there) and the spans; unit 5 touched in tags and meta only.
 - Lane ruled `deuro` joins `come-here` (LSJ pairing unchecked). The `Gen 2:24` check expected `proskollaomai`; the LXX lemma is `proskollaō`, claim holds. NT refs in checks[] can't run through `lxx` (LXX books only).
+
+## 2026-11-24: v2, everything in Claude Code
+- Why: one unit cost Lane ~20 minutes across three Claude.ai chats (listening, go-aheads, box veto, copying files). Now Lane only answers calls; strong boxes ship on Claude's judgment, tentative ones go to Lane.
+- Commentaries are cut per unit ahead of time (`tools/split_sources.py`) so no session re-finds sections. Constable's chiasm rows ("D ... vv. 24-33") look like section headings; the splitter skips lines with "vv.".
+- Chat cards were deleted from the vendored files; a future `core_sync` will bring them back until the loop is lifted into core.
+- Handoff keeps core's section names so `handoff-check` still lints it.

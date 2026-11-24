@@ -28,3 +28,6 @@ __pycache__/
 
 # the research project's Constable PDF, kept loose in the repo root
 /matthew.pdf
+
+# research sources (private copies; never committed)
+sources/
