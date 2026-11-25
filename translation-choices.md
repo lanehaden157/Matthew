@@ -180,3 +180,6 @@ Used consistently where they've appeared, not tracked book-wide.
 - **will have been bound / loosed** — the perfects at 16:19.
 - **not-trusting** — as shipped in unit 17 (apistos). A "trustless" ruling is mentioned in the 2026-10-29 log: confirm with Lane.
 - **viper, not snake** — echidna, with ophis as "snake". Open: whether gennēmata stays "offspring".
+- **crucify** — stauroō (20:19), the verb of the thread `cross`; the gloss ties it to the noun stauros. Added with unit 20.
+- **master it down over, lord it over** — katakyrieuō (20:25), keeping "Master" for kyrios; the compound's "down" stays audible (France, D&A). Unit-local root `master-down`.
+- **hire** — misthoomai (20:1, 7), shown under the `wage` colour; the gloss explains the link to misthos. Added with unit 20.

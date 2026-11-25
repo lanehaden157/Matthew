@@ -136,4 +136,6 @@ Read: Constable, France, D&A (all three of the unit's pieces: Generous Employer,
 
 Secondhand: Sifra/Eccl Rab and Jerusalem Berakhot parable (via D&A; attribution checked, R. Zeira), Jer/Ezek/Lam/Hab cup texts, Isa 43:3-4, Mart. Isa. etc., Acts 12:2 and Rev 1:9 via commentators, Salome via Mark 15:40 (Catena, Ellicott, D&A).
 
-Unavailable: Wright's Matthew for Everyone on 19:30-20:34 (a search surfaced only his translation text, not his comment: say "Wright not reached"); Bible Project (no episode found on this passage); Barclay, Edersheim, Ryle not opened.
+Bible Project: the class notes in `sources/text/bp-rise.txt` and `bp-torah.txt` (found after the first pass) were read for this passage. They give the Matthew 20:25-28 'servant / ransom' lines in the instructor's translation and say the sayings about 'the many' (20:28 with 8:11) hook into the Isaiah 53 servant poem; they set 'the last will be first' under the upside-down-kingdom theme. No separate treatment of the vineyard parable or the blind men. Mark 10:34 Greek: read from MorphGNT (SBLGNT); it has 'after three days' (meta + treis + hemera), so the 20:19 box claim is now VERIFIED. (The WEB English in the synoptic file reads 'on the third day' there, from a later reading.)
+
+Unavailable: Wright's Matthew for Everyone on 19:30-20:34 (two searches surfaced only his translation text, not his comment); Barclay, Edersheim, Ryle not opened.
