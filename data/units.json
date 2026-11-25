@@ -1167,10 +1167,111 @@
     {
       "n": 20,
       "slug": "unit-20",
-      "passage": "Matthew 20:1-34",
+      "passage": "Matthew 20:1–34",
       "title": "The Last Shall Be First",
       "movement": 3,
-      "built": false
+      "built": true,
+      "roots": {
+        "vineyard": {
+          "color": "#b1481f",
+          "translit": "ampelōn",
+          "gloss": "vineyard",
+          "example": "to hire workers into his vineyard",
+          "echo": "Matt 21:28–41 — the word returns at once in the next chapter’s two vineyard parables, both aimed at Jerusalem’s leaders"
+        },
+        "worker": {
+          "color": "#8c6d1f",
+          "translit": "ergatēs",
+          "gloss": "worker, labourer",
+          "example": "Call the workers",
+          "echo": "Matt 9:37–38; 10:10 — the harvest is great and the workers few; the worker is worthy of his food"
+        },
+        "agree": {
+          "color": "#7a3f5c",
+          "translit": "symphōneō",
+          "gloss": "agree; sound together",
+          "example": "Did you not agree with me on a denarius?",
+          "echo": "Matt 18:19 — if two of y’all agree on the earth about any matter they may ask"
+        },
+        "workless": {
+          "color": "#1f6e7a",
+          "translit": "argos",
+          "gloss": "workless, without work",
+          "example": "standing workless in the marketplace",
+          "echo": "Matt 12:36 — every workless word people speak"
+        },
+        "grumble": {
+          "color": "#8a2f3a",
+          "translit": "gongyzō",
+          "gloss": "grumble, murmur",
+          "example": "they grumbled against the master of the house"
+        },
+        "scorching-heat": {
+          "color": "#a67c1e",
+          "translit": "kausōn",
+          "gloss": "scorching heat; burning wind",
+          "example": "the weight of the day and the scorching heat",
+          "echo": "Jas 1:11 — the sun rises with its scorching heat and withers the grass"
+        },
+        "friend": {
+          "color": "#1e7a5c",
+          "translit": "hetairos",
+          "gloss": "friend, companion",
+          "example": "Friend, I am not wronging you",
+          "echo": "Matt 22:12; 26:50 — the same cool address to the guest with no wedding clothes and to Judas at the arrest"
+        },
+        "last": {
+          "color": "#5c3f7a",
+          "translit": "eschatos",
+          "gloss": "last",
+          "example": "So the last will be first",
+          "echo": "Matt 19:30 — many first will be last, and last first: the saying that frames the parable"
+        },
+        "first": {
+          "color": "#005847",
+          "translit": "prōtos",
+          "gloss": "first",
+          "example": "and the first last",
+          "echo": "Matt 19:30 — the same pair, in the other order"
+        },
+        "want": {
+          "color": "#006494",
+          "translit": "thelō",
+          "gloss": "want, wish, will",
+          "example": "I want to give to this last one as also to you",
+          "echo": "Matt 26:39 — not as I want, but as you: the verb’s last turn in Gethsemane, beside the cup"
+        },
+        "left": {
+          "color": "#5a5a9c",
+          "translit": "euōnymos",
+          "gloss": "left (hand); literally “well-named”",
+          "example": "one at your right and one at your left",
+          "echo": "Matt 25:33, 41 — the goats stand at the left of the Son of Man’s throne"
+        },
+        "master-down": {
+          "color": "#945042",
+          "translit": "katakyrieuō",
+          "gloss": "master it down over, lord it over",
+          "example": "the rulers of the nations master it down over them",
+          "echo": "1 Pet 5:3 — elders are not to master it down over those in their charge"
+        },
+        "ransom": {
+          "color": "#a24860",
+          "translit": "lytron",
+          "gloss": "ransom; the price that frees",
+          "example": "a ransom in place of many",
+          "echo": "Exod 21:30 — a man liable to death may give a ransom for his life: give, ransom and life stand together in that Greek sentence"
+        },
+        "touch": {
+          "color": "#00807c",
+          "translit": "haptomai",
+          "gloss": "take hold of; touch",
+          "example": "Jesus touched their eyes"
+        }
+      },
+      "contract": "0.36.1",
+      "discourse": false,
+      "descriptor": "the vineyard wage, the cup, and two blind men who see"
     },
     {
       "n": 21,

@@ -1632,6 +1632,286 @@
       "unit": 19,
       "note": "",
       "source": "echo"
+    },
+    {
+      "from": "Matt 20:1",
+      "to": "Isa 5:1–7",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:1",
+      "to": "Jer 12:10",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:1",
+      "to": "Matt 10:10",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root worker",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:1",
+      "to": "Matt 21:28–41",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root vineyard",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:1",
+      "to": "Matt 9:37–38",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root worker",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:2",
+      "to": "Matt 18:19",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root agree",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:3",
+      "to": "Matt 12:36",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root workless",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:8",
+      "to": "Deut 24:14–15",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:8",
+      "to": "Lev 19:13",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:8",
+      "to": "Matt 19:30",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root first",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:11",
+      "to": "Exod 16:7–8",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:12",
+      "to": "Jas 1:11",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root scorching-heat",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:12",
+      "to": "Jonah 4:8–11",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:12",
+      "to": "1 Sam 30:21–25",
+      "kind": "story",
+      "unit": 20,
+      "note": "David’s equal share",
+      "source": "story"
+    },
+    {
+      "from": "Matt 20:13",
+      "to": "Matt 22:12",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root friend",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:13",
+      "to": "Matt 26:50",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root friend",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:13",
+      "to": "Luke 15:25–32",
+      "kind": "story",
+      "unit": 20,
+      "note": "The elder brother",
+      "source": "story"
+    },
+    {
+      "from": "Matt 20:14",
+      "to": "Matt 26:39",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root want",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:15",
+      "to": "Deut 15:9",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:15",
+      "to": "Matt 6:22–23",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:20",
+      "to": "Matt 15:22–25",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:20",
+      "to": "1 Kgs 1:11–40",
+      "kind": "story",
+      "unit": 20,
+      "note": "Bathsheba before David",
+      "source": "story"
+    },
+    {
+      "from": "Matt 20:21",
+      "to": "Matt 25:33",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root left",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:21",
+      "to": "Matt 25:41",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root left",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:21",
+      "to": "Matt 27:38",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:22",
+      "to": "Isa 51:17",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:22",
+      "to": "Ps 75:8",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:25",
+      "to": "1 Pet 5:3",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root master-down",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:25",
+      "to": "Gen 1:28",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:25",
+      "to": "Ps 10:10",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:28",
+      "to": "Dan 7:13–14",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:28",
+      "to": "Exod 21:30",
+      "kind": "echo",
+      "unit": 20,
+      "note": "root ransom",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:28",
+      "to": "Isa 53:10–12",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:32",
+      "to": "Matt 20:21",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
+    },
+    {
+      "from": "Matt 20:33",
+      "to": "Isa 35:5",
+      "kind": "echo",
+      "unit": 20,
+      "note": "",
+      "source": "echo"
     }
   ],
   "typescenes": [

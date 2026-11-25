@@ -688,6 +688,55 @@
       "root": "gain",
       "text": "gains",
       "w": "01162609"
+    },
+    {
+      "unit": "unit-03",
+      "verse": "4:11",
+      "root": "serve",
+      "text": "ministering",
+      "w": "01041111"
+    },
+    {
+      "unit": "unit-08",
+      "verse": 15,
+      "root": "serve",
+      "text": "waiting on",
+      "w": "01081514"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 27,
+      "root": "blind",
+      "text": "blind",
+      "w": "01092709"
+    },
+    {
+      "unit": "unit-09",
+      "verse": 28,
+      "root": "blind",
+      "text": "blind",
+      "w": "01092809"
+    },
+    {
+      "unit": "unit-10",
+      "verse": "10:42",
+      "root": "cup",
+      "text": "cup",
+      "w": "01104209"
+    },
+    {
+      "unit": "unit-11",
+      "verse": 5,
+      "root": "blind",
+      "text": "blind",
+      "w": "01110501"
+    },
+    {
+      "unit": "unit-12",
+      "verse": 22,
+      "root": "blind",
+      "text": "blind",
+      "w": "01122205"
     }
   ]
 }

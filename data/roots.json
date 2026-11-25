@@ -718,6 +718,25 @@
         "zōē"
       ],
       "note": "Lane, Unit 19. The tag follows the lexeme: psychē, also 'life' in the singular, stays untagged."
+    },
+    "cup": {
+      "ids": [
+        "potērion"
+      ],
+      "note": "Runs from a cup of cold water (10:42) through the woes (23:25–26) to the supper (26:27) and Gethsemane (26:39)."
+    },
+    "serve": {
+      "ids": [
+        "diakoneō",
+        "diakonos"
+      ],
+      "note": "Waiting on others, from the angels and Peter’s mother-in-law to the women at the cross (27:55). doulos stays ‘slave’, a separate word."
+    },
+    "blind": {
+      "ids": [
+        "typhlos"
+      ],
+      "note": "The blind healed (9, 11, 12, 15, 21) and the blind guides (15:14; 23)."
     }
   }
 }

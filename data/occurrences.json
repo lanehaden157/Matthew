@@ -1389,6 +1389,21 @@
       ],
       "total": 1
     },
+    "serve": {
+      "count": 1,
+      "verses": [
+        11
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…e slanderer leaves him, and look, angels came and were ",
+          "hit": "ministering",
+          "post": " to him.…"
+        }
+      ],
+      "total": 1
+    },
     "sin": {
       "count": 1,
       "verses": [
@@ -4577,6 +4592,21 @@
       ],
       "total": 4
     },
+    "serve": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…d the fever released her, and she was raised and began ",
+          "hit": "waiting on",
+          "post": " him.…"
+        }
+      ],
+      "total": 1
+    },
     "shake": {
       "count": 1,
       "verses": [
@@ -4791,6 +4821,28 @@
         }
       ],
       "total": 3
+    },
+    "blind": {
+      "count": 2,
+      "verses": [
+        27,
+        28
+      ],
+      "hits": [
+        {
+          "v": 27,
+          "pre": "…And as Jesus was passing on from there, two ",
+          "hit": "blind",
+          "post": " men followed him, crying out and saying: \"Have loyal-l…"
+        },
+        {
+          "v": 28,
+          "pre": "…And when he had come into the house, the ",
+          "hit": "blind",
+          "post": " men came up to him, and Jesus says to them: \"Do y'all…"
+        }
+      ],
+      "total": 2
     },
     "call": {
       "count": 1,
@@ -5502,6 +5554,21 @@
           "pre": "…and whoever does not take up his ",
           "hit": "cross",
           "post": " and follow behind me is not worthy of me.…"
+        }
+      ],
+      "total": 1
+    },
+    "cup": {
+      "count": 1,
+      "verses": [
+        42
+      ],
+      "hits": [
+        {
+          "v": 42,
+          "pre": "…And whoever gives one of these small ones only a ",
+          "hit": "cup",
+          "post": " of cold water to drink, in the name of a learner — ame…"
         }
       ],
       "total": 1
@@ -6413,6 +6480,21 @@
       ],
       "total": 1
     },
+    "blind": {
+      "count": 1,
+      "verses": [
+        5
+      ],
+      "hits": [
+        {
+          "v": 5,
+          "pre": "",
+          "hit": "blind",
+          "post": " people see again and lame people walk around, lepers a…"
+        }
+      ],
+      "total": 1
+    },
     "burden": {
       "count": 2,
       "verses": [
@@ -7042,6 +7124,21 @@
     }
   },
   "unit-12": {
+    "blind": {
+      "count": 1,
+      "verses": [
+        22
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…Then a demonized man, ",
+          "hit": "blind",
+          "post": " and mute, was brought to him; and he healed him, so th…"
+        }
+      ],
+      "total": 1
+    },
     "bread": {
       "count": 1,
       "verses": [
@@ -13946,6 +14043,857 @@
           "pre": "…Jesus said to him, “If you want to be ",
           "hit": "whole",
           "post": ", go, sell your possessions and give to the poor, and y…"
+        }
+      ],
+      "total": 1
+    }
+  },
+  "unit-20": {
+    "agree": {
+      "count": 2,
+      "verses": [
+        2,
+        13
+      ],
+      "hits": [
+        {
+          "v": 2,
+          "pre": "…And having ",
+          "hit": "agreed",
+          "post": " with the workers on a denarius for the day, he sent th…"
+        },
+        {
+          "v": 13,
+          "pre": "…and said, “Friend, I am not wronging you. Did you not ",
+          "hit": "agree",
+          "post": " with me on a denarius?…"
+        }
+      ],
+      "total": 2
+    },
+    "blind": {
+      "count": 1,
+      "verses": [
+        30
+      ],
+      "hits": [
+        {
+          "v": 30,
+          "pre": "…And look, two ",
+          "hit": "blind",
+          "post": " men sitting beside the road, hearing that Jesus was pa…"
+        }
+      ],
+      "total": 1
+    },
+    "call": {
+      "count": 1,
+      "verses": [
+        8
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…came, the master of the vineyard says to his steward, “",
+          "hit": "Call",
+          "post": " the workers and pay them the wage, beginning from the…"
+        }
+      ],
+      "total": 1
+    },
+    "charge-sharply": {
+      "count": 1,
+      "verses": [
+        31
+      ],
+      "hits": [
+        {
+          "v": 31,
+          "pre": "…But the crowd ",
+          "hit": "charged them sharply",
+          "post": ", so that they would be silent; but they cried out more…"
+        }
+      ],
+      "total": 1
+    },
+    "compassion": {
+      "count": 1,
+      "verses": [
+        34
+      ],
+      "hits": [
+        {
+          "v": 34,
+          "pre": "…And ",
+          "hit": "wrenched in the gut",
+          "post": ", Jesus touched their eyes, and at once they saw again,…"
+        }
+      ],
+      "total": 1
+    },
+    "cross": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…him over to the nations to mock and to scourge and to ",
+          "hit": "crucify",
+          "post": ", and on the third day he will be raised.”…"
+        }
+      ],
+      "total": 1
+    },
+    "cup": {
+      "count": 2,
+      "verses": [
+        22,
+        23
+      ],
+      "hits": [
+        {
+          "v": 22,
+          "pre": "…now what y’all are asking. Are y’all able to drink the ",
+          "hit": "cup",
+          "post": " that I am about to drink?” They say to him, “We are ab…"
+        },
+        {
+          "v": 23,
+          "pre": "…He says to them, “My ",
+          "hit": "cup",
+          "post": " y’all will drink; but to sit at my right and at my lef…"
+        }
+      ],
+      "total": 2
+    },
+    "evil": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…me to do what I want with what is mine? Or is your eye ",
+          "hit": "evil",
+          "post": " because I am good?”…"
+        }
+      ],
+      "total": 1
+    },
+    "eye": {
+      "count": 2,
+      "verses": [
+        15,
+        33
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…ted me to do what I want with what is mine? Or is your ",
+          "hit": "eye",
+          "post": " evil because I am good?”…"
+        },
+        {
+          "v": 33,
+          "pre": "…They say to him, “Master, that our ",
+          "hit": "eyes",
+          "post": " may be opened.”…"
+        }
+      ],
+      "total": 2
+    },
+    "father": {
+      "count": 1,
+      "verses": [
+        23
+      ],
+      "hits": [
+        {
+          "v": 23,
+          "pre": "…ut it is for those for whom it has been prepared by my ",
+          "hit": "Father",
+          "post": ".”…"
+        }
+      ],
+      "total": 1
+    },
+    "first": {
+      "count": 5,
+      "verses": [
+        8,
+        10,
+        16,
+        27
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…d pay them the wage, beginning from the last up to the ",
+          "hit": "first",
+          "post": ".”…"
+        },
+        {
+          "v": 10,
+          "pre": "…And when the ",
+          "hit": "first",
+          "post": " came, they supposed that they would receive more; and…"
+        },
+        {
+          "v": 16,
+          "pre": "…So the last will be ",
+          "hit": "first",
+          "post": " and the first last.…"
+        },
+        {
+          "v": 16,
+          "pre": "…So the last will be ",
+          "hit": "first",
+          "post": " and the first last.…"
+        },
+        {
+          "v": 27,
+          "pre": "…and whoever wants to be ",
+          "hit": "first",
+          "post": " among y’all will be y’all’s slave;…"
+        }
+      ],
+      "total": 5
+    },
+    "follow": {
+      "count": 2,
+      "verses": [
+        29,
+        34
+      ],
+      "hits": [
+        {
+          "v": 29,
+          "pre": "…And as they were going out from Jericho, a large crowd ",
+          "hit": "followed",
+          "post": " him.…"
+        },
+        {
+          "v": 34,
+          "pre": "…uched their eyes, and at once they saw again, and they ",
+          "hit": "followed",
+          "post": " him.…"
+        }
+      ],
+      "total": 2
+    },
+    "friend": {
+      "count": 1,
+      "verses": [
+        13
+      ],
+      "hits": [
+        {
+          "v": 13,
+          "pre": "…But he answered one of them and said, “",
+          "hit": "Friend",
+          "post": ", I am not wronging you. Did you not agree with me on a…"
+        }
+      ],
+      "total": 1
+    },
+    "good": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…nt with what is mine? Or is your eye evil because I am ",
+          "hit": "good",
+          "post": "?”…"
+        }
+      ],
+      "total": 1
+    },
+    "grumble": {
+      "count": 1,
+      "verses": [
+        11
+      ],
+      "hits": [
+        {
+          "v": 11,
+          "pre": "…And having received it, they ",
+          "hit": "grumbled",
+          "post": " against the master of the house,…"
+        }
+      ],
+      "total": 1
+    },
+    "hand-over": {
+      "count": 2,
+      "verses": [
+        18,
+        19
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…are going up to Jerusalem, and the Son of Man will be ",
+          "hit": "handed over",
+          "post": " to the chief priests and scribes, and they will judge…"
+        },
+        {
+          "v": 19,
+          "pre": "…and they will ",
+          "hit": "hand him over",
+          "post": " to the nations to mock and to scourge and to crucify,…"
+        }
+      ],
+      "total": 2
+    },
+    "householder": {
+      "count": 2,
+      "verses": [
+        1,
+        11
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…For the kingdom of the skies is like a man, a ",
+          "hit": "master of the house",
+          "post": ", who went out at first light to hire workers into his…"
+        },
+        {
+          "v": 11,
+          "pre": "…And having received it, they grumbled against the ",
+          "hit": "master of the house",
+          "post": ",…"
+        }
+      ],
+      "total": 2
+    },
+    "judge": {
+      "count": 1,
+      "verses": [
+        18
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…d over to the chief priests and scribes, and they will ",
+          "hit": "judge against",
+          "post": " him for death,…"
+        }
+      ],
+      "total": 1
+    },
+    "kingdom": {
+      "count": 2,
+      "verses": [
+        1,
+        21
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…For the ",
+          "hit": "kingdom",
+          "post": " of the skies is like a man, a master of the house, who…"
+        },
+        {
+          "v": 21,
+          "pre": "…y sit, one at your right and one at your left, in your ",
+          "hit": "kingdom",
+          "post": ".”…"
+        }
+      ],
+      "total": 2
+    },
+    "last": {
+      "count": 5,
+      "verses": [
+        8,
+        12,
+        14,
+        16
+      ],
+      "hits": [
+        {
+          "v": 8,
+          "pre": "…the workers and pay them the wage, beginning from the ",
+          "hit": "last",
+          "post": " up to the first.”…"
+        },
+        {
+          "v": 12,
+          "pre": "…saying, “These ",
+          "hit": "last",
+          "post": " did one hour, and you made them equal to us, who carri…"
+        },
+        {
+          "v": 14,
+          "pre": "…Take what is yours and go. But I want to give to this ",
+          "hit": "last",
+          "post": " one as also to you.…"
+        },
+        {
+          "v": 16,
+          "pre": "…So the ",
+          "hit": "last",
+          "post": " will be first and the first last.…"
+        },
+        {
+          "v": 16,
+          "pre": "…So the ",
+          "hit": "last",
+          "post": " will be first and the first last.…"
+        }
+      ],
+      "total": 5
+    },
+    "learn": {
+      "count": 1,
+      "verses": [
+        17
+      ],
+      "hits": [
+        {
+          "v": 17,
+          "pre": "…as Jesus was going up to Jerusalem, he took the twelve ",
+          "hit": "learners",
+          "post": " aside privately, and on the road he said to them,…"
+        }
+      ],
+      "total": 1
+    },
+    "left": {
+      "count": 2,
+      "verses": [
+        21,
+        23
+      ],
+      "hits": [
+        {
+          "v": 21,
+          "pre": "…ons of mine may sit, one at your right and one at your ",
+          "hit": "left",
+          "post": ", in your kingdom.”…"
+        },
+        {
+          "v": 23,
+          "pre": "…cup y’all will drink; but to sit at my right and at my ",
+          "hit": "left",
+          "post": " is not mine to give, but it is for those for whom it h…"
+        }
+      ],
+      "total": 2
+    },
+    "master-down": {
+      "count": 1,
+      "verses": [
+        25
+      ],
+      "hits": [
+        {
+          "v": 25,
+          "pre": "…them, said, “Y’all know that the rulers of the nations ",
+          "hit": "master it down",
+          "post": " over them, and the great ones wield authority down ove…"
+        }
+      ],
+      "total": 1
+    },
+    "mercy": {
+      "count": 2,
+      "verses": [
+        30,
+        31
+      ],
+      "hits": [
+        {
+          "v": 30,
+          "pre": "…us was passing by, cried out, saying, “Master, show us ",
+          "hit": "loyal-love",
+          "post": ", Son of David!”…"
+        },
+        {
+          "v": 31,
+          "pre": "…ent; but they cried out more, saying, “Master, show us ",
+          "hit": "loyal-love",
+          "post": ", Son of David!”…"
+        }
+      ],
+      "total": 2
+    },
+    "nations": {
+      "count": 2,
+      "verses": [
+        19,
+        25
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…and they will hand him over to the ",
+          "hit": "nations",
+          "post": " to mock and to scourge and to crucify, and on the thir…"
+        },
+        {
+          "v": 25,
+          "pre": "…mmoning them, said, “Y’all know that the rulers of the ",
+          "hit": "nations",
+          "post": " master it down over them, and the great ones wield aut…"
+        }
+      ],
+      "total": 2
+    },
+    "permitted": {
+      "count": 1,
+      "verses": [
+        15
+      ],
+      "hits": [
+        {
+          "v": 15,
+          "pre": "…Is it not ",
+          "hit": "permitted",
+          "post": " me to do what I want with what is mine? Or is your eye…"
+        }
+      ],
+      "total": 1
+    },
+    "raise": {
+      "count": 1,
+      "verses": [
+        19
+      ],
+      "hits": [
+        {
+          "v": 19,
+          "pre": "…courge and to crucify, and on the third day he will be ",
+          "hit": "raised",
+          "post": ".”…"
+        }
+      ],
+      "total": 1
+    },
+    "ransom": {
+      "count": 1,
+      "verses": [
+        28
+      ],
+      "hits": [
+        {
+          "v": 28,
+          "pre": "…e to be served but to serve, and to give his life as a ",
+          "hit": "ransom",
+          "post": " in place of many.”…"
+        }
+      ],
+      "total": 1
+    },
+    "righteous": {
+      "count": 1,
+      "verses": [
+        4
+      ],
+      "hits": [
+        {
+          "v": 4,
+          "pre": "…id, “Go, y’all too, into the vineyard, and whatever is ",
+          "hit": "right",
+          "post": " I will give y’all.”…"
+        }
+      ],
+      "total": 1
+    },
+    "scorching-heat": {
+      "count": 1,
+      "verses": [
+        12
+      ],
+      "hits": [
+        {
+          "v": 12,
+          "pre": "…equal to us, who carried the weight of the day and the ",
+          "hit": "scorching heat",
+          "post": ".”…"
+        }
+      ],
+      "total": 1
+    },
+    "serve": {
+      "count": 3,
+      "verses": [
+        26,
+        28
+      ],
+      "hits": [
+        {
+          "v": 26,
+          "pre": "…ever wants to become great among y’all will be y’all’s ",
+          "hit": "servant",
+          "post": ",…"
+        },
+        {
+          "v": 28,
+          "pre": "…just as the Son of Man did not come to be ",
+          "hit": "served",
+          "post": " but to serve, and to give his life as a ransom in plac…"
+        },
+        {
+          "v": 28,
+          "pre": "…just as the Son of Man did not come to be ",
+          "hit": "serve",
+          "post": "d but to serve, and to give his life as a ransom in pla…"
+        }
+      ],
+      "total": 3
+    },
+    "son-of-david": {
+      "count": 2,
+      "verses": [
+        30,
+        31
+      ],
+      "hits": [
+        {
+          "v": 30,
+          "pre": "…ng by, cried out, saying, “Master, show us loyal-love, ",
+          "hit": "Son of David",
+          "post": "!”…"
+        },
+        {
+          "v": 31,
+          "pre": "…y cried out more, saying, “Master, show us loyal-love, ",
+          "hit": "Son of David",
+          "post": "!”…"
+        }
+      ],
+      "total": 2
+    },
+    "son-of-man": {
+      "count": 2,
+      "verses": [
+        18,
+        28
+      ],
+      "hits": [
+        {
+          "v": 18,
+          "pre": "…“Look, we are going up to Jerusalem, and ",
+          "hit": "the Son of Man",
+          "post": " will be handed over to the chief priests and scribes,…"
+        },
+        {
+          "v": 28,
+          "pre": "…just as ",
+          "hit": "the Son of Man",
+          "post": " did not come to be served but to serve, and to give hi…"
+        }
+      ],
+      "total": 2
+    },
+    "touch": {
+      "count": 1,
+      "verses": [
+        34
+      ],
+      "hits": [
+        {
+          "v": 34,
+          "pre": "…And wrenched in the gut, Jesus ",
+          "hit": "touched",
+          "post": " their eyes, and at once they saw again, and they follo…"
+        }
+      ],
+      "total": 1
+    },
+    "vineyard": {
+      "count": 5,
+      "verses": [
+        1,
+        2,
+        4,
+        7,
+        8
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…, who went out at first light to hire workers into his ",
+          "hit": "vineyard",
+          "post": ".…"
+        },
+        {
+          "v": 2,
+          "pre": "…rkers on a denarius for the day, he sent them into his ",
+          "hit": "vineyard",
+          "post": ".…"
+        },
+        {
+          "v": 4,
+          "pre": "…and to those he said, “Go, y’all too, into the ",
+          "hit": "vineyard",
+          "post": ", and whatever is right I will give y’all.”…"
+        },
+        {
+          "v": 7,
+          "pre": "…e hired us.” He says to them, “Go, y’all too, into the ",
+          "hit": "vineyard",
+          "post": ".”…"
+        },
+        {
+          "v": 8,
+          "pre": "…And when evening came, the master of the ",
+          "hit": "vineyard",
+          "post": " says to his steward, “Call the workers and pay them th…"
+        }
+      ],
+      "total": 5
+    },
+    "wage": {
+      "count": 3,
+      "verses": [
+        1,
+        7,
+        8
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…a master of the house, who went out at first light to ",
+          "hit": "hire",
+          "post": " workers into his vineyard.…"
+        },
+        {
+          "v": 7,
+          "pre": "…They say to him, “Because no one ",
+          "hit": "hired",
+          "post": " us.” He says to them, “Go, y’all too, into the vineyar…"
+        },
+        {
+          "v": 8,
+          "pre": "…ays to his steward, “Call the workers and pay them the ",
+          "hit": "wage",
+          "post": ", beginning from the last up to the first.”…"
+        }
+      ],
+      "total": 3
+    },
+    "want": {
+      "count": 6,
+      "verses": [
+        14,
+        15,
+        21,
+        26,
+        27,
+        32
+      ],
+      "hits": [
+        {
+          "v": 14,
+          "pre": "…Take what is yours and go. But I ",
+          "hit": "want",
+          "post": " to give to this last one as also to you.…"
+        },
+        {
+          "v": 15,
+          "pre": "…Is it not permitted me to do what I ",
+          "hit": "want",
+          "post": " with what is mine? Or is your eye evil because I am go…"
+        },
+        {
+          "v": 21,
+          "pre": "…And he said to her, “What do you ",
+          "hit": "want",
+          "post": "?” She says to him, “Say that these two sons of mine ma…"
+        },
+        {
+          "v": 26,
+          "pre": "…It will not be so among y’all; but whoever ",
+          "hit": "wants",
+          "post": " to become great among y’all will be y’all’s servant,…"
+        },
+        {
+          "v": 27,
+          "pre": "…and whoever ",
+          "hit": "wants",
+          "post": " to be first among y’all will be y’all’s slave;…"
+        },
+        {
+          "v": 32,
+          "pre": "…ood still, called out to them and said, “What do y’all ",
+          "hit": "want",
+          "post": " me to do for y’all?”…"
+        }
+      ],
+      "total": 6
+    },
+    "worker": {
+      "count": 3,
+      "verses": [
+        1,
+        2,
+        8
+      ],
+      "hits": [
+        {
+          "v": 1,
+          "pre": "…ster of the house, who went out at first light to hire ",
+          "hit": "workers",
+          "post": " into his vineyard.…"
+        },
+        {
+          "v": 2,
+          "pre": "…And having agreed with the ",
+          "hit": "workers",
+          "post": " on a denarius for the day, he sent them into his viney…"
+        },
+        {
+          "v": 8,
+          "pre": "…master of the vineyard says to his steward, “Call the ",
+          "hit": "workers",
+          "post": " and pay them the wage, beginning from the last up to t…"
+        }
+      ],
+      "total": 3
+    },
+    "workless": {
+      "count": 2,
+      "verses": [
+        3,
+        6
+      ],
+      "hits": [
+        {
+          "v": 3,
+          "pre": "…going out about the third hour, he saw others standing ",
+          "hit": "workless",
+          "post": " in the marketplace;…"
+        },
+        {
+          "v": 6,
+          "pre": "…says to them, “Why have y’all stood here the whole day ",
+          "hit": "workless",
+          "post": "?”…"
+        }
+      ],
+      "total": 2
+    },
+    "worship": {
+      "count": 1,
+      "verses": [
+        20
+      ],
+      "hits": [
+        {
+          "v": 20,
+          "pre": "…ther of the sons of Zebedee came to him with her sons, ",
+          "hit": "kneeling low",
+          "post": " and asking something from him.…"
         }
       ],
       "total": 1
