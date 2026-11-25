@@ -17,7 +17,7 @@ Read: `fragment-contract.md`, `matthew_study_style_reference.md` (wins),
 3. `python -m biblecore port N --dry | tail -60` until clean.
 4. `python -m biblecore lxx --checks N | tail -20`. Fail → fix claim, not check.
 5. `port N --promote | tail -60`, `apply-delta N`, `audit | tail -20`, `test | tail -15`. Fail → fix, rerun.
-6. Copy `work/NN/briefing.md`, `verse-by-verse.md` → `readings/NN-briefing.md`, `readings/NN-verse-by-verse.md`.
-7. Stage explicit paths: `work/NN/` (not `parts/`, `extra/`), `readings/`, `source-artifacts/`, `units/`, `data/`, `canon-leads/`, `threads-digest.md`, other build output in `git status`. Commit: unit + promotions. `git push origin HEAD:main`. One line in `session_index.md`, commit, push.
+6. Copy `work/NN/briefing.md`, `verse-by-verse.md` → `readings/NN-briefing.md`, `readings/NN-verse-by-verse.md`, then `python tools/make_listen.py` (pages for Safari Read Aloud in `listen/`).
+7. Stage explicit paths: `work/NN/` (not `parts/`, `extra/`), `readings/`, `listen/`, `source-artifacts/`, `units/`, `data/`, `canon-leads/`, `threads-digest.md`, other build output in `git status`. Commit: unit + promotions. `git push origin HEAD:main`. One line in `session_index.md`, commit, push.
 
 Return: "unit N pushed", promotions, test result. Or the blocker.
